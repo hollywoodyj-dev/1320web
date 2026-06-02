@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "module": "Integrated Summary Templates",
+    "version": "1.0.0",
+    "updatedAt": "2026-05-29"
+  },
+  "default": {
+    "en": "Your blueprint suggests a soul that learns through depth, reflection, and conscious transformation. Your path is not about becoming someone else. It is about recognizing the patterns that have shaped you, reclaiming your inner authority, and choosing from a clearer place.",
+    "zh": "你的蓝图显示：这是一个通过深度、反思与有意识转化来学习的灵魂。你的道路不是成为别人，而是认出塑造你的模式，收回内在主权，并从更清晰的地方做出选择。"
+  },
+  "templates": [
+    {
+      "conditions": { "s1": 18 },
+      "summary": {
+        "en": "Your blueprint suggests a soul that learns through depth, reflection, and conscious transformation. As The Transformer, you carry the capacity to move through shadow and return with clarity. Your path is not about becoming someone else — it is about recognizing what keeps asking to be alchemized, and choosing integration over force.",
+        "zh": "你的蓝图显示：这是一个通过深度、反思与有意识转化来学习的灵魂。作为转化者，你具备穿越阴影并带回清晰的能力。你的道路不是成为别人——而是认出什么在持续请求被炼化，并选择整合而非强迫。"
+      }
+    },
+    {
+      "conditions": { "s1": 18, "s0": 7 },
+      "summary": {
+        "en": "Your blueprint suggests a soul that learns through depth, reflection, and conscious transformation. The Transformer meets the illusion of never being enough — inviting you to return worth inward while you alchemize old patterns. Awareness, not perfection, is the gate.",
+        "zh": "你的蓝图显示：这是一个通过深度、反思与有意识转化来学习的灵魂。转化者遇见「永远不够」的幻象——邀请你在炼化旧模式的同时，把价值收回内在。觉察，而非完美，才是入口。"
+      }
+    }
+  ]
+}

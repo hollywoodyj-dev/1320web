@@ -1,0 +1,122 @@
+{
+  "_meta": {
+    "module": "S3 Vibration Tier",
+    "version": "0.2.0",
+    "updatedAt": "2026-05-29",
+    "language": "bilingual",
+    "status": "12-tier-ranges-phase-a",
+    "note": "Phase A tier ranges for MVP lookup. Tier 4 covers canonical sample S3-110 (1980-05-22)."
+  },
+  "default": {
+    "id": "S3-DEFAULT",
+    "nameEn": "Vibration Expression",
+    "nameZh": "振动表达",
+    "essenceEn": "Your S3 number reflects how your energy expresses in the world.",
+    "essenceZh": "你的 S3 编号映照你的能量如何在现实中表达。",
+    "noteEn": "The full report expands your 12-tier vibration expression in depth.",
+    "noteZh": "更完整的 12 阶振动等级解读将在完整报告中展开。",
+    "displayRule": "Show raw S3 number first, then use tier when available."
+  },
+  "tiers": [
+    {
+      "id": "S3-T01",
+      "range": [1, 31],
+      "nameEn": "Grounded Pulse",
+      "nameZh": "扎根脉冲",
+      "essenceEn": "Your energy expresses through steady, foundational rhythms.",
+      "essenceZh": "你的能量通过稳定、扎根的节奏表达。"
+    },
+    {
+      "id": "S3-T02",
+      "range": [32, 62],
+      "nameEn": "Building Current",
+      "nameZh": "构建之流",
+      "essenceEn": "Your energy builds momentum through consistent expression.",
+      "essenceZh": "你的能量通过持续的表达积累动量。"
+    },
+    {
+      "id": "S3-T03",
+      "range": [63, 93],
+      "nameEn": "Expanding Wave",
+      "nameZh": "扩展之波",
+      "essenceEn": "Your energy expands outward as you find your expressive range.",
+      "essenceZh": "当你找到自己的表达幅度，能量向外扩展。"
+    },
+    {
+      "id": "S3-T04",
+      "range": [94, 124],
+      "nameEn": "Amplified Expression",
+      "nameZh": "放大表达",
+      "essenceEn": "Your energy expresses with amplified intensity — you feel life vividly and move through experience with depth. This tier invites conscious channeling rather than overwhelm.",
+      "essenceZh": "你的能量以放大的强度表达——你鲜活地感受生命，并深度经历体验。此层级邀请有意识引导，而非被淹没。",
+      "expressionEn": "Intensity, depth, and vivid emotional resonance.",
+      "expressionZh": "强度、深度与鲜活的情感共振。",
+      "growthEdgeEn": "Learning to channel intensity without burning out or dominating.",
+      "growthEdgeZh": "学习引导强度，而不耗尽或被强度支配。"
+    },
+    {
+      "id": "S3-T05",
+      "range": [125, 155],
+      "nameEn": "Radiant Flow",
+      "nameZh": "光辉流动",
+      "essenceEn": "Your energy radiates naturally when aligned with purpose.",
+      "essenceZh": "当与目的对齐，你的能量自然辐射。"
+    },
+    {
+      "id": "S3-T06",
+      "range": [156, 186],
+      "nameEn": "Harmonic Tier",
+      "nameZh": "谐振层级",
+      "essenceEn": "Your energy seeks harmony between inner truth and outer expression.",
+      "essenceZh": "你的能量寻求内在真实与外在表达之间的谐振。"
+    },
+    {
+      "id": "S3-T07",
+      "range": [187, 217],
+      "nameEn": "Dynamic Surge",
+      "nameZh": "动态涌流",
+      "essenceEn": "Your energy surges in cycles of activation and integration.",
+      "essenceZh": "你的能量在激活与整合的周期中涌流。"
+    },
+    {
+      "id": "S3-T08",
+      "range": [218, 248],
+      "nameEn": "Refined Frequency",
+      "nameZh": "精炼频率",
+      "essenceEn": "Your energy refines itself through discernment and selective expression.",
+      "essenceZh": "你的能量通过辨识与选择性表达而精炼。"
+    },
+    {
+      "id": "S3-T09",
+      "range": [249, 279],
+      "nameEn": "Elevated Current",
+      "nameZh": "提升之流",
+      "essenceEn": "Your energy lifts experience toward higher perspective.",
+      "essenceZh": "你的能量将体验提升至更高视角。"
+    },
+    {
+      "id": "S3-T10",
+      "range": [280, 310],
+      "nameEn": "Luminous Tier",
+      "nameZh": "光之层级",
+      "essenceEn": "Your energy illuminates paths for yourself and others.",
+      "essenceZh": "你的能量为自己与他人照亮道路。"
+    },
+    {
+      "id": "S3-T11",
+      "range": [311, 341],
+      "nameEn": "Transcendent Wave",
+      "nameZh": "超越之波",
+      "essenceEn": "Your energy moves beyond ordinary limits when consciously directed.",
+      "essenceZh": "当被有意识引导，你的能量超越寻常界限。"
+    },
+    {
+      "id": "S3-T12",
+      "range": [342, 372],
+      "nameEn": "Peak Resonance",
+      "nameZh": "峰值共振",
+      "essenceEn": "Your energy reaches peak expressive resonance — integration is essential.",
+      "essenceZh": "你的能量达到峰值表达共振——整合至关重要。"
+    }
+  ]
+}

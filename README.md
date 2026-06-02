@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 1320 Soul Origin Code — Phase 1 MVP
 
-## Getting Started
+Next.js 16 (App Router) marketing site + birth-date calculator funnel for the **1320 Soul Origin Code System**.
 
-First, run the development server:
+**Phase 1 scope:** Free result layer, sample report, full-report waitlist, booking request — no login, payments, or Soul Profile.
+
+## Quick start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Test on your phone (same Wi‑Fi)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Use the **Network** URL from `npm run dev` (e.g. `http://172.16.0.21:3000`). `next.config.ts` includes `allowedDevOrigins` for LAN IPs so the client router and HMR work. **Restart the dev server** after changing that config.
 
-## Learn More
+If you still see `Router action dispatched before initialization`, hard-refresh the page or use `localhost` via USB tunneling instead of the LAN IP.
 
-To learn more about Next.js, take a look at the following resources:
+### `ChunkLoadError` / Turbopack HMR (dev only)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Console error like `Failed to load chunk ... [turbopack]_browser_dev_hmr-client` is a **dev hot-reload** issue, not your app code. It usually means the browser is talking to a **stale or wrong dev server**.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Stop **all** `next dev` terminals (Ctrl+C). On Windows, only one server should own port 3000 — if you see “Port 3000 is in use, using 3001”, kill the old process or you will load chunks from the wrong port.
+2. Clear the dev cache and restart with webpack (more stable on Windows / LAN):
+   ```bash
+   npm run dev:fresh
+   ```
+3. Hard-refresh the browser (Ctrl+Shift+R) or close the tab and reopen the same URL shown in the terminal (`http://127.0.0.1:3000` or your Network URL).
 
-## Deploy on Vercel
+For day-to-day dev after a clean start, `npm run dev` is fine. Use `npm run dev:webpack` if Turbopack HMR errors keep coming back.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Command | Purpose |
+|---------|---------|
+| `npm run dev` | Local development server (Turbopack) |
+| `npm run dev:webpack` | Dev server using webpack (fewer HMR chunk errors) |
+| `npm run dev:fresh` | Delete `.next` then start webpack dev |
+| `npm run build` | Production build |
+| `npm run start` | Run production build |
+| `npm run lint` | ESLint |
+| `npm run smoke:content` | Canonical code content smoke (S1-18 / S3-110 / S2-27 / S0-07) |
+| `npm run smoke:funnel` | Phase 1 funnel + metadata/analytics checklist |
+
+## Primary funnel
+
+```
+/ → /your-code → /generating → /result → /full-report
+         ↘ /sample-report · /blueprint · /about-1320 · /booking · /faq
+```
+
+**Canonical test birth date:** `1980-05-22` → **S1-18 / S3-110 / S2-27 / S0-07**
+
+## Environment variables
+
+Copy `.env.example` to `.env.local` and adjust:
+
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `NEXT_PUBLIC_SITE_URL` | Recommended | Canonical site URL for metadata (`https://1320soulcode.com`) |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Optional | Google Analytics 4 measurement ID |
+| `NEXT_PUBLIC_ANALYTICS_DEBUG` | Optional | Log analytics events in production when `true` |
+| `LEADS_WEBHOOK_URL` | Optional | POST target for waitlist/email/booking payloads |
+
+Without `LEADS_WEBHOOK_URL`, form submissions show client success but are only logged in dev server output.
+
+## Deploy (Vercel)
+
+1. Import the repo; set **Root Directory** to `web` if the monorepo root is parent.
+2. Framework preset: **Next.js** (auto-detected).
+3. Add env vars from `.env.example`.
+4. Deploy — no database required for Phase 1.
+
+Build command: `npm run build`  
+Output: Next.js default (`.next`)
+
+## Before production launch
+
+1. Replace `[Insert Contact Email]` and `[Insert Date]` in `lib/legal-placeholders.ts`.
+2. Set `NEXT_PUBLIC_SITE_URL` to production domain.
+3. Run `npm run lint && npm run build && npm run smoke:content && npm run smoke:funnel`.
+4. Manual smoke: homepage calculator → generating chamber → result; `/sample-report`; `/full-report` waitlist; `/booking` form.
+
+## Public assets
+
+Required assets under `public/`:
+
+- `1320-logo.jpeg`, `1320-icon.svg`
+- `hero-banner-desktop-v1.png`, `hero-banner-v5.png` (mobile)
+- `homepage-ui.png`, `generating-ui.png`, `report-ui.jpeg` (reference mockups)
+- `report-bg-v3-1920x4048.png` — report page full-bleed background (1920×4048; see sizing below)
+- `card/s1.png` … `s0.png` (pillar backgrounds)
+- `how-1320-works/step-01.png` … `step-04.png`
+
+### Report background (`report-bg-v3-1920x4048.png`)
+
+Used with `background-size: cover` on `/result` and `/sample-report`. **Clarity depends on pixel width, not file size (MB).**
+
+| Asset | Size | Notes |
+|-------|------|--------|
+| **Current (v3)** | **1920 × 4048** | Sharp on 1080p desktop; good for phones @2x |
+| Legacy v2 | 864 × 1821 | Too small for wide screens — kept for reference only |
+
+To replace: drop new file in `public/` and update the URL in `globals.css` (`.page-shell-inner:has(.report-page)::before`).
+
+## Architecture
+
+```
+birth date → calculate1320Code() → get1320Content() → UI
+```
+
+Content lives in `data/1320/*.json` — do not hardcode interpretation copy in components.
+
+Implementation tracker: `IMPLEMENTATION_BATCHES.md` · Handoff: `PHASE1_HANDOFF.md`

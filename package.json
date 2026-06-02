@@ -4,9 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:webpack": "next dev --webpack",
+    "dev:fresh": "node scripts/clean-next-cache.mjs && next dev --webpack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "smoke:content": "npx tsx scripts/smoke-content.ts",
+    "smoke:funnel": "npx tsx scripts/smoke-funnel.ts",
+    "qa:baseline": "npx tsx scripts/qa-baseline.ts"
   },
   "dependencies": {
     "next": "16.2.6",

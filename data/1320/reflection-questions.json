@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "module": "Reflection Questions",
+    "version": "1.0.0",
+    "updatedAt": "2026-05-29"
+  },
+  "default": {
+    "en": "What part of yourself are you ready to see more clearly now?",
+    "zh": "你现在准备好更清楚地看见自己的哪一部分？"
+  },
+  "byCode": {
+    "18-110-27-07": {
+      "en": "Where in your life are you being asked to transform gently rather than through force?",
+      "zh": "在你生命中，哪里正在邀请你温柔地转化，而不是用力逼迫？"
+    }
+  },
+  "bySegment": {
+    "s1": {
+      "18": {
+        "en": "What pattern in your life keeps returning so you can transform it?",
+        "zh": "生命中什么模式反复出现，等待你去转化？"
+      }
+    },
+    "s2": {
+      "27": {
+        "en": "What relationship mirror is asking you to wake up rather than stay comfortable?",
+        "zh": "哪段关系镜像在邀请你觉醒，而不是停留在舒适？"
+      }
+    },
+    "s0": {
+      "7": {
+        "en": "Where do you still measure your worth by results instead of presence?",
+        "zh": "你还在哪里用结果，而不是存在本身来衡量价值？"
+      }
+    }
+  }
+}

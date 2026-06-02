@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "module": "Free Result Copy",
+    "version": "1.0.0",
+    "updatedAt": "2026-05-29"
+  },
+  "pageTitle": {
+    "en": "Your 1320 Soul Origin Code",
+    "zh": "你的 1320 灵魂本源编码"
+  },
+  "pageSubtitle": {
+    "en": "A four-part soul blueprint for awareness, reflection, and conscious integration.",
+    "zh": "四段式灵魂蓝图，用于觉察、反思与有意识整合。"
+  },
+  "boundaryNote": {
+    "en": "This is a first-layer reflection. Your code is a mirror, not fixed destiny.",
+    "zh": "这是第一层反思。你的编码是一面镜子，而非固定的命运。"
+  },
+  "integratedTitle": {
+    "en": "Integrated Soul Blueprint",
+    "zh": "整合灵魂蓝图"
+  },
+  "integratedLead": {
+    "en": "Your four codes weave into one mirror — for awareness, reflection, and conscious integration.",
+    "zh": "你的四段编码织成一面镜子——用于觉察、反思与有意识整合。"
+  },
+  "reflectionTitle": {
+    "en": "Reflection Question",
+    "zh": "反思问题"
+  },
+  "missingEntryFallback": {
+    "en": "This section is being prepared for the full report. Your current code still offers a meaningful first-layer reflection.",
+    "zh": "此部分正在完整报告中完善。你当前的编码仍可提供有意义的第一层反思。"
+  },
+  "lockedTeaserLabel": {
+    "en": "Available in the Full Soul Origin Report",
+    "zh": "完整灵魂本源报告中提供"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "_meta": {
+    "module": "English Field Overlays",
+    "version": "1.0.1",
+    "updatedAt": "2026-05-29",
+    "note": "Phase B English for canonical sample codes. Zh source fields remain in segment JSON."
+  },
+  "s1": {
+    "18": {
+      "essenceEn": "You carry the origin frequency of the Transformer — a soul wired for deep metamorphosis, shadow work, and rebirth through awareness rather than suffering.",
+      "strengthsEn": [
+        "You can move through low-frequency states and emerge with clarity.",
+        "You naturally guide others to face shadow material with honesty.",
+        "You hold an innate ability to reshape life structures when old forms no longer serve."
+      ],
+      "shadowsEn": [
+        "You may dive into emotional depths and mistake intensity for truth.",
+        "You can believe pain is the only path to growth.",
+        "You may place yourself under constant spiritual pressure to evolve."
+      ],
+      "lessonEn": "Learn to transform gently — alchemy through awareness, not through forcing yourself through pain.",
+      "directionEn": [
+        "Healing, shadow work, energy transformation, and life coaching paths align with your frequency.",
+        "You often function as an accelerator for soul evolution — for yourself and for others you guide."
+      ],
+      "guidanceEn": "You are not here to suffer — you are here to raise frequency. When you learn to transform with softness, your power becomes purer than fire. You walk through darkness carrying light.",
+      "colorEn": "Deep violet flame — the color of purification through passion.",
+      "totemEn": "Snake — the path of shedding, renewal, and conscious rebirth."
+    }
+  },
+  "s3": {
+    "110": {
+      "guidanceEn": "Channel amplified intensity through breath, boundaries, and creative expression — not through suppression or emotional overwhelm."
+    }
+  },
+  "s2": {
+    "27": {
+      "nameEn": "Soul Resonance Mirror",
+      "essenceEn": "Relationships carry a strong awakening effect for you.",
+      "relationshipDynamicEn": "Relationships carry a strong awakening effect.",
+      "lessonEn": "Triggers are doorways to awakening.",
+      "healingPathEn": "Allow the oscillation to become growth.",
+      "guidanceEn": "You did not meet to stay comfortable — you met to awaken."
+    }
+  },
+  "s0": {
+    "5": {
+      "nameEn": "The Emotional Illusion",
+      "essenceEn": "The belief that emotion equals truth.",
+      "coreIllusionEn": "The belief that emotion equals truth.",
+      "practiceEn": "Practice conscious breathing and separating from reactive emotion.",
+      "pathOfReturnEn": "Practice conscious breathing and separating from reactive emotion.",
+      "guidanceEn": "Emotion is speaking — but you are not the emotion."
+    },
+    "7": {
+      "nameEn": "The Illusion of Self-Worth",
+      "essenceEn": "The sense that you are never enough.",
+      "coreIllusionEn": "The sense that you are never enough.",
+      "practiceEn": "Practice gratitude and allowing.",
+      "pathOfReturnEn": "Practice gratitude and allowing.",
+      "guidanceEn": "Your worth is not your result — it is your essence."
+    }
+  }
+}

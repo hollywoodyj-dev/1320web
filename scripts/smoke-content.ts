@@ -23,7 +23,7 @@ function assertEnglish(text: string, label: string) {
 
 const s3Tier = getS3TierRecord(SAMPLE.s3);
 assert(s3Tier.tierMatched === true, "S3 tier 110 should match a range tier");
-assert(String(s3Tier.record?.id) === "S3-T04", "S3 tier 110 should resolve to S3-T04");
+assert(String(s3Tier.record?.id) === "S3-T03", "S3 tier 110 should resolve to S3-T03 (Explorer)");
 
 const content = get1320Content({ ...SAMPLE, locale: "en" });
 
@@ -31,12 +31,12 @@ assert(content.codes.codeString === "S1-18 / S3-110 / S2-27 / S0-07", "codeStrin
 assertEnglish(t(content.s1Content.title, "en"), "S1 title");
 assert(t(content.s1Content.title, "en") === "The Transformer", "S1 title should be The Transformer");
 assertEnglish(t(content.s1Content.freeEssence, "en"), "S1 freeEssence");
-assert(t(content.s3Content.title, "en") === "Amplified Expression", "S3 tier title mismatch");
+assert(t(content.s3Content.title, "en") === "Explorer", "S3 tier title mismatch");
 assertEnglish(t(content.s3Content.freeEssence, "en"), "S3 freeEssence");
-assert(t(content.s2Content.title, "en") === "Soul Resonance Mirror", "S2 title mismatch");
+assert(t(content.s2Content.title, "en") === "The Soul Shock Mirror", "S2 title mismatch");
 assertEnglish(t(content.s2Content.title, "en"), "S2 title");
 assertEnglish(t(content.s2Content.freeEssence, "en"), "S2 freeEssence");
-assert(t(content.s0Content.title, "en") === "The Illusion of Self-Worth", "S0 title mismatch");
+assert(t(content.s0Content.title, "en") === "Self-Worth Illusion", "S0 title mismatch");
 assertEnglish(t(content.s0Content.title, "en"), "S0 title");
 assertEnglish(t(content.s0Content.freeEssence, "en"), "S0 freeEssence");
 assert(
@@ -61,7 +61,7 @@ assertEnglish(t(content.s3Content.guidance!, "en"), "S3 guidance");
 
 const sampleReport = buildReportViewModel(content, { mode: "full", variant: "sample" });
 assert(getSegmentCardImageUrl("s1", SAMPLE.s1) === "/S1-44/S18.webp", "S1 card image path");
-assert(getSegmentCardImageUrl("s3", SAMPLE.s3) === "/S3-12/S04.webp", "S3 card image path (tier T04)");
+assert(getSegmentCardImageUrl("s3", SAMPLE.s3) === "/S3-12/S03.webp", "S3 card image path (tier T03)");
 assert(getSegmentCardImageUrl("s2", SAMPLE.s2) === "/S2-50/S2-27.webp", "S2 card image path");
 assert(getSegmentCardImageUrl("s0", SAMPLE.s0) === "/S0-19/S0-07.webp", "S0 card image path");
 
@@ -70,7 +70,7 @@ const s3Module = sampleReport.modules.find((m) => m.segmentId === "s3");
 const s2Module = sampleReport.modules.find((m) => m.segmentId === "s2");
 const s0Module = sampleReport.modules.find((m) => m.segmentId === "s0");
 assert(Boolean(s1Module), "sample report should include S1 module");
-assert(s3Module?.cardImageUrl === "/S3-12/S04.webp", "S3 module should include tier card art");
+assert(s3Module?.cardImageUrl === "/S3-12/S03.webp", "S3 module should include tier card art");
 assert(s2Module?.cardImageUrl === "/S2-50/S2-27.webp", "S2 module should include mirror card art");
 assert(s0Module?.cardImageUrl === "/S0-19/S0-07.webp", "S0 module should include void gate card art");
 assert(s1Module!.fields.length >= 8, "S1 full module should expose distinct premium fields");

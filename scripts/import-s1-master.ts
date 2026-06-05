@@ -65,6 +65,7 @@ function main() {
       updatedAt: new Date().toISOString().slice(0, 10),
       language: "zh-en-bilingual",
       source: "S1_Master_Database_canonical.json + S1_Master_OriginFrequency_EN.json",
+      note: "Lookup by code key S1-01 … S1-44 (sum of birth year digits).",
     },
   };
 
@@ -80,7 +81,7 @@ function main() {
     const nameEn = en.englishTitle ?? zh.englishTitle ?? key;
     const nameZh = zh.chineseTitle ?? en.chineseTitle ?? nameEn;
 
-    output[String(number)] = {
+    output[key] = {
       id: key,
       number,
       nameEn,

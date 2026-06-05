@@ -192,11 +192,30 @@ export function adaptS2(record: V1Record | null, s2: number): SegmentContent {
 
   if (!record) return content;
 
+  const nameEn = str(record, "nameEn") ?? content.title.en;
+  const nameZh = str(record, "nameZh");
+  const dynamicEn = str(record, "relationshipDynamicEn") ?? str(record, "essenceEn");
+  const dynamicZh = str(record, "relationshipDynamicZh") ?? str(record, "essenceZh");
+
+  const freeEssence = localizedFromStrings(
+    dynamicEn
+      ? `Your Mirror Path (${s2}) activates ${nameEn}. ${dynamicEn}`
+      : buildFreeEssenceEn("s2", record),
+    dynamicZh
+      ? `你的镜像路径（S2-${s2}）激活「${nameZh ?? nameEn}」。${dynamicZh}`
+      : str(record, "essenceZh"),
+    content.freeEssence,
+  );
+
   return {
     ...content,
-    relationshipPattern: localizedFromStrings(
-      str(record, "relationshipDynamicEn"),
-      str(record, "relationshipDynamicZh"),
+    title: localizedFromStrings(nameEn, nameZh, content.title),
+    freeEssence,
+    fullEssence: localizedFromStrings(dynamicEn, dynamicZh, freeEssence),
+    relationshipPattern: localizedFromStrings(dynamicEn, dynamicZh, { en: "", zh: "" }),
+    karmicLoop: localizedFromStrings(
+      str(record, "karmicLoopEn"),
+      str(record, "karmicLoopZh"),
       { en: "", zh: "" },
     ),
     mirrorLesson: localizedFromStrings(str(record, "lessonEn"), str(record, "lessonZh"), { en: "", zh: "" }),
@@ -215,18 +234,47 @@ export function adaptS0(record: V1Record | null, s0: number): SegmentContent {
 
   if (!record) return content;
 
-  const practice = localizedFromStrings(str(record, "practiceEn"), str(record, "practiceZh"), {
-    en: GENERIC_EN.s0.practice,
-    zh: str(record, "practiceZh") ?? GENERIC_EN.s0.practice,
-  });
+  const nameEn = str(record, "nameEn") ?? content.title.en;
+  const nameZh = str(record, "nameZh");
+  const illusionEn = str(record, "coreIllusionEn") ?? str(record, "essenceEn");
+  const illusionZh = str(record, "coreIllusionZh") ?? str(record, "essenceZh");
+
+  const practice = localizedFromStrings(
+    str(record, "practiceEn") ?? str(record, "pathOfReturnEn"),
+    str(record, "practiceZh") ?? str(record, "pathOfReturnZh"),
+    {
+      en: GENERIC_EN.s0.practice,
+      zh: str(record, "practiceZh") ?? GENERIC_EN.s0.practice,
+    },
+  );
+
+  const coreIllusion = localizedFromStrings(illusionEn, illusionZh, content.freeEssence);
+
+  const freeEssence = localizedFromStrings(
+    illusionEn
+      ? `Your Void Gate (S0-${String(s0).padStart(2, "0")}) works through ${nameEn}. ${illusionEn}`
+      : buildFreeEssenceEn("s0", record),
+    illusionZh
+      ? `你的空门（S0-${String(s0).padStart(2, "0")}）通过「${nameZh ?? nameEn}」运作。${illusionZh}`
+      : str(record, "essenceZh"),
+    content.freeEssence,
+  );
 
   return {
     ...content,
-    coreIllusion: localizedFromStrings(
-      str(record, "coreIllusionEn") ?? str(record, "essenceEn"),
-      str(record, "coreIllusionZh") ?? str(record, "essenceZh"),
-      content.freeEssence,
+    title: localizedFromStrings(nameEn, nameZh, content.title),
+    freeEssence,
+    fullEssence: coreIllusion,
+    coreIllusion,
+    voidChallenge: localizedFromStrings(
+      str(record, "voidChallengeEn"),
+      str(record, "voidChallengeZh"),
+      { en: "", zh: "" },
     ),
+    voidPower: localizedFromStrings(str(record, "voidPowerEn"), str(record, "voidPowerZh"), {
+      en: "",
+      zh: "",
+    }),
     awakeningPath: localizedFromStrings(
       str(record, "pathOfReturnEn"),
       str(record, "pathOfReturnZh"),
@@ -243,29 +291,47 @@ export function adaptS3(record: V1Record | null, s3Raw: number, tierMatched: boo
   const id = record?.id ? String(record.id) : `S3-${s3Raw}`;
   const content = baseSegment("s3", record, s3Raw, id, !record || !tierMatched);
 
+  const nameEn = str(safe, "nameEn") ?? `Tier ${s3Raw}`;
+  const nameZh = str(safe, "nameZh");
+  const soulTraitsEn = str(safe, "soulTraitsEn") ?? str(safe, "essenceEn");
+  const soulTraitsZh = str(safe, "soulTraitsZh") ?? str(safe, "essenceZh");
+
+  const title = localizedFromStrings(nameEn, nameZh, fromV1Fields(`S3-${s3Raw}`, `S3-${s3Raw}`));
+
+  const freeEssence = localizedFromStrings(
+    soulTraitsEn
+      ? `Your S3 number (${s3Raw}) expresses as ${nameEn}. ${soulTraitsEn}`
+      : (str(safe, "essenceEn") ?? buildFreeEssenceEn("s3", safe)),
+    soulTraitsZh
+      ? `你的 S3 编号（${s3Raw}）表达为「${nameZh ?? nameEn}」。${soulTraitsZh}`
+      : str(safe, "essenceZh"),
+    {
+      en: `Your S3 number (${s3Raw}) reflects how your energy expresses in the world.`,
+      zh: `你的 S3 编号（${s3Raw}）映照你的能量如何在现实中表达。`,
+    },
+  );
+
   return {
     ...content,
+    title,
+    freeEssence,
     s3Raw,
     number: s3Raw,
-    expressionPattern: localizedFromStrings(str(safe, "expressionEn"), str(safe, "expressionZh"), content.freeEssence),
-    growthEdge: localizedFromStrings(str(safe, "growthEdgeEn"), str(safe, "growthEdgeZh"), { en: "", zh: "" }),
+    fullEssence: localizedFromStrings(soulTraitsEn, soulTraitsZh, freeEssence),
+    expressionPattern: localizedFromStrings(
+      str(safe, "strengthsEn"),
+      str(safe, "strengthsZh"),
+      { en: "", zh: "" },
+    ),
+    growthEdge: localizedFromStrings(
+      str(safe, "challengesEn"),
+      str(safe, "challengesZh"),
+      { en: "", zh: "" },
+    ),
     guidance: localizedFromStrings(
       str(safe, "guidanceEn") ?? str(safe, "noteEn"),
       str(safe, "guidanceZh") ?? str(safe, "noteZh"),
       { en: "", zh: "" },
-    ),
-    title: localizedFromStrings(
-      str(safe, "nameEn") ?? `Tier ${s3Raw}`,
-      str(safe, "nameZh"),
-      fromV1Fields(`S3-${s3Raw}`, `S3-${s3Raw}`),
-    ),
-    freeEssence: localizedFromStrings(
-      str(safe, "essenceEn") ?? buildFreeEssenceEn("s3", safe),
-      str(safe, "essenceZh"),
-      {
-        en: `Your S3 number (${s3Raw}) reflects how your energy expresses in the world.`,
-        zh: `你的 S3 编号（${s3Raw}）映照你的能量如何在现实中表达。`,
-      },
     ),
   };
 }

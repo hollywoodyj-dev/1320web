@@ -1,0 +1,30 @@
+/** Stable segment code strings — always use these for JSON lookup keys. */
+
+export function formatS0Code(value: number): string {
+  return `S0-${String(value).padStart(2, "0")}`;
+}
+
+export function formatS1Code(value: number): string {
+  return `S1-${String(value).padStart(2, "0")}`;
+}
+
+export function formatS2Code(value: number): string {
+  return `S2-${String(value).padStart(2, "0")}`;
+}
+
+export function formatS3TierCode(tier: number): string {
+  return `S3-${String(tier).padStart(2, "0")}`;
+}
+
+export type SegmentCodePrefix = "S0" | "S1" | "S2";
+
+export function segmentCodeKey(prefix: SegmentCodePrefix, value: number): string {
+  switch (prefix) {
+    case "S0":
+      return formatS0Code(value);
+    case "S1":
+      return formatS1Code(value);
+    case "S2":
+      return formatS2Code(value);
+  }
+}

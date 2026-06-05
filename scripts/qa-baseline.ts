@@ -58,9 +58,9 @@ for (const route of ROUTES) {
 
 console.log("\n=== Card assets ===");
 assert(fileExists("/S1-44/S18.webp"), "S1-44/S18.webp missing");
-assert(fileExists("/S3-12/S04.webp"), "S3-12/S04.webp missing (tier T04)");
+assert(fileExists("/S3-12/S03.webp"), "S3-12/S03.webp missing (tier T03 for S3-110)");
 assert(getSegmentCardImageUrl("s1", 18) === "/S1-44/S18.webp", "S1 path");
-assert(getSegmentCardImageUrl("s3", 110) === "/S3-12/S04.webp", "S3 tier path");
+assert(getSegmentCardImageUrl("s3", 110) === "/S3-12/S03.webp", "S3 tier path");
 assert(fileExists("/S2-50/S2-27.webp"), "S2-50/S2-27.webp missing");
 assert(getSegmentCardImageUrl("s2", 27) === "/S2-50/S2-27.webp", "S2 path");
 assert(fileExists("/S0-19/S0-07.webp"), "S0-19/S0-07.webp missing");

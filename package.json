@@ -10,11 +10,15 @@
     "start": "next start",
     "lint": "eslint",
     "smoke:content": "npx tsx scripts/smoke-content.ts",
+    "smoke:canonical": "npx tsx scripts/smoke-canonical-rules.ts",
     "smoke:funnel": "npx tsx scripts/smoke-funnel.ts",
     "qa:baseline": "npx tsx scripts/qa-baseline.ts",
     "audit:assets": "npx tsx scripts/audit-assets.ts",
     "compress:assets": "npx tsx scripts/compress-assets.ts",
-    "import:s1-master": "npx tsx scripts/import-s1-master.ts"
+    "import:s1-master": "npx tsx scripts/import-s1-master.ts",
+    "import:s3-master": "npx tsx scripts/import-s3-master.ts",
+    "import:s2-master": "npx tsx scripts/import-s2-master.ts",
+    "import:s0-master": "npx tsx scripts/import-s0-master.ts"
   },
   "dependencies": {
     "next": "16.2.6",

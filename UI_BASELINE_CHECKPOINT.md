@@ -94,7 +94,7 @@ Code + build verified; visual sign-off recommended on real devices after pull.
 Canonical: `1980-05-22` → `S1-18 / S3-110 / S2-27 / S0-07`
 
 - S1 title: The Transformer  
-- S3 tier: Amplified Expression (T04) → `/S3-12/S04.webp`  
+- S3 tier: Explorer (T03) → `/S3-12/S03.webp` (S3-110 = 5×22)  
 - S2-45: asset file missing in pack (birth-date S2 is 2–43; only S2-45 affected)  
 - Free `/result`: locked teasers + waitlist CTA on modules  
 - CTAs: `/your-code`, `/full-report`, `/sample-report`, `/booking`, `/privacy` wired in components

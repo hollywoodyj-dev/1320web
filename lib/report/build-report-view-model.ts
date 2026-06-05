@@ -138,7 +138,7 @@ function buildS3Fields(
 ): ReportField[] {
   const all = [
     field(locale, "Overview", segment.fullEssence ?? segment.freeEssence),
-    field(locale, "Expression Pattern", segment.expressionPattern),
+    field(locale, "Core Strengths", segment.expressionPattern),
     field(locale, "Growth Edge", segment.growthEdge),
     field(locale, "Integration Guidance", segment.guidance ?? segment.integrationPrompt),
   ].filter((f): f is ReportField => Boolean(f));
@@ -155,9 +155,10 @@ function buildS2Fields(
 ): ReportField[] {
   const all = [
     field(locale, "Overview", segment.fullEssence ?? segment.freeEssence),
-    field(locale, "Relationship Pattern", segment.relationshipPattern),
+    field(locale, "Karmic Loop", segment.karmicLoop),
     field(locale, "Mirror Lesson", segment.mirrorLesson),
-    field(locale, "Integration Prompt", segment.integrationPrompt ?? segment.guidance),
+    field(locale, "Healing Path", segment.integrationPrompt),
+    field(locale, "Integration Guidance", segment.guidance),
   ].filter((f): f is ReportField => Boolean(f));
 
   if (mode === "full") return polishReportFields(all, { archetype });
@@ -171,10 +172,12 @@ function buildS0Fields(
   archetype: string,
 ): ReportField[] {
   const all = [
-    field(locale, "Overview", segment.fullEssence ?? segment.freeEssence),
+    field(locale, "Overview", segment.freeEssence),
     field(locale, "Core Illusion", segment.coreIllusion),
+    field(locale, "Void Challenge", segment.voidChallenge),
+    field(locale, "Void Power", segment.voidPower),
     field(locale, "Awakening Path", segment.awakeningPath),
-    field(locale, "Integration Practice", segment.practice ?? segment.integrationPrompt),
+    field(locale, "Integration Guidance", segment.guidance),
   ].filter((f): f is ReportField => Boolean(f));
 
   if (mode === "full") return polishReportFields(all, { archetype });

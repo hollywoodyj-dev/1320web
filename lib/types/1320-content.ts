@@ -31,9 +31,12 @@ export type SegmentContent = {
   color?: LocalizedText;
   totem?: LocalizedText;
   coreIllusion?: LocalizedText;
+  voidChallenge?: LocalizedText;
+  voidPower?: LocalizedText;
   awakeningPath?: LocalizedText;
   practice?: LocalizedText;
   relationshipPattern?: LocalizedText;
+  karmicLoop?: LocalizedText;
   mirrorLesson?: LocalizedText;
   expressionPattern?: LocalizedText;
   growthEdge?: LocalizedText;

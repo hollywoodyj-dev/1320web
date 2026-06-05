@@ -1,5 +1,13 @@
 {
-  "1": {
+  "_meta": {
+    "module": "S1 Origin Frequency",
+    "version": "2.0.0",
+    "updatedAt": "2026-06-05",
+    "language": "zh-en-bilingual",
+    "source": "S1_Master_Database_canonical.json + S1_Master_OriginFrequency_EN.json",
+    "note": "Lookup by code key S1-01 … S1-44 (sum of birth year digits)."
+  },
+  "S1-01": {
     "id": "S1-01",
     "number": 1,
     "nameEn": "The Initiator",
@@ -57,7 +65,7 @@
     "symbolicLink": "Atum / First Flame",
     "keywords": []
   },
-  "2": {
+  "S1-02": {
     "id": "S1-02",
     "number": 2,
     "nameEn": "The Bridge",
@@ -115,7 +123,7 @@
     "symbolicLink": "Hathor / Harmonic Weavers",
     "keywords": []
   },
-  "3": {
+  "S1-03": {
     "id": "S1-03",
     "number": 3,
     "nameEn": "The Seer",
@@ -173,7 +181,7 @@
     "symbolicLink": "Isis · The Vision Keepers",
     "keywords": []
   },
-  "4": {
+  "S1-04": {
     "id": "S1-04",
     "number": 4,
     "nameEn": "The Stabilizer",
@@ -231,7 +239,7 @@
     "symbolicLink": "Geb · Foundation Bearers",
     "keywords": []
   },
-  "5": {
+  "S1-05": {
     "id": "S1-05",
     "number": 5,
     "nameEn": "The Catalyst",
@@ -289,7 +297,7 @@
     "symbolicLink": "Sekhmet · Fire Transformations",
     "keywords": []
   },
-  "6": {
+  "S1-06": {
     "id": "S1-06",
     "number": 6,
     "nameEn": "The Healer",
@@ -347,7 +355,7 @@
     "symbolicLink": "Hathor · Emotional Resonance",
     "keywords": []
   },
-  "7": {
+  "S1-07": {
     "id": "S1-07",
     "number": 7,
     "nameEn": "The Warrior",
@@ -405,7 +413,7 @@
     "symbolicLink": "Anubis · Silent Strength",
     "keywords": []
   },
-  "8": {
+  "S1-08": {
     "id": "S1-08",
     "number": 8,
     "nameEn": "The Nurturer",
@@ -463,7 +471,7 @@
     "symbolicLink": "Isis · Sacred Mother Field",
     "keywords": []
   },
-  "9": {
+  "S1-09": {
     "id": "S1-09",
     "number": 9,
     "nameEn": "The Explorer",
@@ -521,7 +529,7 @@
     "symbolicLink": "Thoth · Pathfinders",
     "keywords": []
   },
-  "10": {
+  "S1-10": {
     "id": "S1-10",
     "number": 10,
     "nameEn": "The Guardian",
@@ -579,7 +587,7 @@
     "symbolicLink": "Horus · Guardianship Lineage",
     "keywords": []
   },
-  "11": {
+  "S1-11": {
     "id": "S1-11",
     "number": 11,
     "nameEn": "The Visionary",
@@ -637,7 +645,7 @@
     "symbolicLink": "Ptah · The Architects",
     "keywords": []
   },
-  "12": {
+  "S1-12": {
     "id": "S1-12",
     "number": 12,
     "nameEn": "The Empath",
@@ -695,7 +703,7 @@
     "symbolicLink": "Nephthys · Psychic Sensitivity",
     "keywords": []
   },
-  "13": {
+  "S1-13": {
     "id": "S1-13",
     "number": 13,
     "nameEn": "The Rebel",
@@ -753,7 +761,7 @@
     "symbolicLink": "Set · Disruptive Power",
     "keywords": []
   },
-  "14": {
+  "S1-14": {
     "id": "S1-14",
     "number": 14,
     "nameEn": "The Teacher",
@@ -811,7 +819,7 @@
     "symbolicLink": "Thoth · Knowledge Carriers",
     "keywords": []
   },
-  "15": {
+  "S1-15": {
     "id": "S1-15",
     "number": 15,
     "nameEn": "The Grounded Mystic",
@@ -869,7 +877,7 @@
     "symbolicLink": "Osiris · Embodied Spirit",
     "keywords": []
   },
-  "16": {
+  "S1-16": {
     "id": "S1-16",
     "number": 16,
     "nameEn": "The Harmonizer",
@@ -927,7 +935,7 @@
     "symbolicLink": "Ma’at · Balance Keepers",
     "keywords": []
   },
-  "17": {
+  "S1-17": {
     "id": "S1-17",
     "number": 17,
     "nameEn": "The Architect",
@@ -985,7 +993,7 @@
     "symbolicLink": "Ptah · Master Builders",
     "keywords": []
   },
-  "18": {
+  "S1-18": {
     "id": "S1-18",
     "number": 18,
     "nameEn": "The Transformer",
@@ -1043,7 +1051,7 @@
     "symbolicLink": "Sekhmet · Transformation Flame",
     "keywords": []
   },
-  "19": {
+  "S1-19": {
     "id": "S1-19",
     "number": 19,
     "nameEn": "The Communicator",
@@ -1101,7 +1109,7 @@
     "symbolicLink": "Thoth · Messenger Lines",
     "keywords": []
   },
-  "20": {
+  "S1-20": {
     "id": "S1-20",
     "number": 20,
     "nameEn": "The Heart-Centered",
@@ -1159,7 +1167,7 @@
     "symbolicLink": "Hathor · Heart Keepers",
     "keywords": []
   },
-  "21": {
+  "S1-21": {
     "id": "S1-21",
     "number": 21,
     "nameEn": "The Integrator",
@@ -1217,7 +1225,7 @@
     "symbolicLink": "Thoth · System Keepers",
     "keywords": []
   },
-  "22": {
+  "S1-22": {
     "id": "S1-22",
     "number": 22,
     "nameEn": "The Gentle Power",
@@ -1275,7 +1283,7 @@
     "symbolicLink": "Hathor · Soft Power Line",
     "keywords": []
   },
-  "23": {
+  "S1-23": {
     "id": "S1-23",
     "number": 23,
     "nameEn": "The Analyst",
@@ -1333,7 +1341,7 @@
     "symbolicLink": "Thoth · Mind Clarity Line",
     "keywords": []
   },
-  "24": {
+  "S1-24": {
     "id": "S1-24",
     "number": 24,
     "nameEn": "The Radiant Soul",
@@ -1391,7 +1399,7 @@
     "symbolicLink": "Ra · Sun Bearers",
     "keywords": []
   },
-  "25": {
+  "S1-25": {
     "id": "S1-25",
     "number": 25,
     "nameEn": "The Flow Walker",
@@ -1449,7 +1457,7 @@
     "symbolicLink": "Nun · Water Origin Line",
     "keywords": []
   },
-  "26": {
+  "S1-26": {
     "id": "S1-26",
     "number": 26,
     "nameEn": "The Visionary",
@@ -1507,7 +1515,7 @@
     "symbolicLink": "Horus · Vision Line",
     "keywords": []
   },
-  "27": {
+  "S1-27": {
     "id": "S1-27",
     "number": 27,
     "nameEn": "The Rebuilder",
@@ -1565,7 +1573,7 @@
     "symbolicLink": "Bennu · Rebirth Line",
     "keywords": []
   },
-  "28": {
+  "S1-28": {
     "id": "S1-28",
     "number": 28,
     "nameEn": "The Quantum Mind",
@@ -1623,7 +1631,7 @@
     "symbolicLink": "Metatron · Geometry Lines",
     "keywords": []
   },
-  "29": {
+  "S1-29": {
     "id": "S1-29",
     "number": 29,
     "nameEn": "The Innovator",
@@ -1681,7 +1689,7 @@
     "symbolicLink": "Ptah · Creator Line",
     "keywords": []
   },
-  "30": {
+  "S1-30": {
     "id": "S1-30",
     "number": 30,
     "nameEn": "The Soul Healer",
@@ -1739,7 +1747,7 @@
     "symbolicLink": "Isis · Healing Line",
     "keywords": []
   },
-  "31": {
+  "S1-31": {
     "id": "S1-31",
     "number": 31,
     "nameEn": "The Gatekeeper",
@@ -1797,7 +1805,7 @@
     "symbolicLink": "Anubis · Gate Keepers",
     "keywords": []
   },
-  "32": {
+  "S1-32": {
     "id": "S1-32",
     "number": 32,
     "nameEn": "The Illuminator",
@@ -1855,7 +1863,7 @@
     "symbolicLink": "Ra · Light Bringers",
     "keywords": []
   },
-  "33": {
+  "S1-33": {
     "id": "S1-33",
     "number": 33,
     "nameEn": "The Empath Oracle",
@@ -1913,7 +1921,7 @@
     "symbolicLink": "Hathor · Emotional Oracle Line",
     "keywords": []
   },
-  "34": {
+  "S1-34": {
     "id": "S1-34",
     "number": 34,
     "nameEn": "The Reformer",
@@ -1971,7 +1979,7 @@
     "symbolicLink": "Ma’at · Truth Restorers",
     "keywords": []
   },
-  "35": {
+  "S1-35": {
     "id": "S1-35",
     "number": 35,
     "nameEn": "The Soul Navigator",
@@ -2029,7 +2037,7 @@
     "symbolicLink": "Nut · Path Finders",
     "keywords": []
   },
-  "36": {
+  "S1-36": {
     "id": "S1-36",
     "number": 36,
     "nameEn": "The Frequency Weaver",
@@ -2087,7 +2095,7 @@
     "symbolicLink": "Metatron · Frequency Weavers",
     "keywords": []
   },
-  "37": {
+  "S1-37": {
     "id": "S1-37",
     "number": 37,
     "nameEn": "The Willpower Flame",
@@ -2145,7 +2153,7 @@
     "symbolicLink": "Sekhmet · Fire Line",
     "keywords": []
   },
-  "38": {
+  "S1-38": {
     "id": "S1-38",
     "number": 38,
     "nameEn": "The Soul Listener",
@@ -2203,7 +2211,7 @@
     "symbolicLink": "Isis · Sacred Listener Line",
     "keywords": []
   },
-  "39": {
+  "S1-39": {
     "id": "S1-39",
     "number": 39,
     "nameEn": "The Stabilizer",
@@ -2261,7 +2269,7 @@
     "symbolicLink": "Geb · Earth Keepers",
     "keywords": []
   },
-  "40": {
+  "S1-40": {
     "id": "S1-40",
     "number": 40,
     "nameEn": "The Inner Sage",
@@ -2319,7 +2327,7 @@
     "symbolicLink": "Thoth · Inner Sage Line",
     "keywords": []
   },
-  "41": {
+  "S1-41": {
     "id": "S1-41",
     "number": 41,
     "nameEn": "The Cosmic Bridge",
@@ -2377,7 +2385,7 @@
     "symbolicLink": "Amenti · Cosmic Translators",
     "keywords": []
   },
-  "42": {
+  "S1-42": {
     "id": "S1-42",
     "number": 42,
     "nameEn": "The Ascension Flame",
@@ -2435,7 +2443,7 @@
     "symbolicLink": "Seraphim · Light Flames",
     "keywords": []
   },
-  "43": {
+  "S1-43": {
     "id": "S1-43",
     "number": 43,
     "nameEn": "The Destiny Weaver",
@@ -2493,7 +2501,7 @@
     "symbolicLink": "Norns · Weavers of Fate",
     "keywords": []
   },
-  "44": {
+  "S1-44": {
     "id": "S1-44",
     "number": 44,
     "nameEn": "The Source Messenger",
@@ -2550,12 +2558,5 @@
     "totemZh": "白羽（来自源头的讯息）",
     "symbolicLink": "The Source · Primordial Messengers",
     "keywords": []
-  },
-  "_meta": {
-    "module": "S1 Origin Frequency",
-    "version": "2.0.0",
-    "updatedAt": "2026-06-05",
-    "language": "zh-en-bilingual",
-    "source": "S1_Master_Database_canonical.json + S1_Master_OriginFrequency_EN.json"
   }
 }

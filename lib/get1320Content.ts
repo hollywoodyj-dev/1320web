@@ -18,6 +18,12 @@ import {
   mergeEnOverlay,
 } from "@/lib/adapt1320V1";
 import { pickLocalized } from "@/lib/getLocalized";
+import {
+  lookupDefault,
+  lookupRecord,
+  lookupSegmentRecord,
+} from "@/lib/lookup-segment-record";
+import { segmentCodeKey } from "@/lib/segment-code";
 import type {
   FreeResultCopy,
   Get1320ContentInput,
@@ -63,12 +69,6 @@ export function formatCodeDisplay(s1: number, s3Raw: number, s2: number, s0: num
   const codeString = `S1-${s1} / S3-${s3Raw} / S2-${s2} / S0-${String(s0).padStart(2, "0")}`;
   const compactCode = `${s1}-${s3Raw}-${s2}-${String(s0).padStart(2, "0")}`;
   return { s1, s3Raw, s2, s0, codeString, compactCode };
-}
-
-function lookupRecord(data: Record<string, unknown>, key: string): V1Record | null {
-  const value = data[key];
-  if (!value || typeof value !== "object" || key === "_meta") return null;
-  return value as V1Record;
 }
 
 export function getS3TierRecord(s3Raw: number): { record: V1Record | null; tierMatched: boolean } {
@@ -132,20 +132,35 @@ export function get1320Content(input: Get1320ContentInput | LegacyCodeInput): Ge
   const locale: Locale = normalized.locale ?? "en";
   const codes = formatCodeDisplay(normalized.s1, normalized.s3, normalized.s2, normalized.s0);
 
+  const s1Code = segmentCodeKey("S1", normalized.s1);
+  const s2Code = segmentCodeKey("S2", normalized.s2);
+  const s0Code = segmentCodeKey("S0", normalized.s0);
+
   const s1Record = mergeEnOverlay(
-    lookupRecord(s1Data as Record<string, unknown>, String(normalized.s1)),
-    enOverlays.s1?.[String(normalized.s1)],
+    lookupSegmentRecord(s1Data as Record<string, unknown>, "S1", normalized.s1),
+    enOverlays.s1?.[s1Code] ?? enOverlays.s1?.[String(normalized.s1)],
   );
   const s2Record =
-    lookupRecord(s2Data as Record<string, unknown>, String(normalized.s2)) ??
-    lookupRecord(s2Data as Record<string, unknown>, "default");
-  const s0Record = lookupRecord(s0Data as Record<string, unknown>, String(normalized.s0));
-  const s2Merged = mergeEnOverlay(s2Record, enOverlays.s2?.[String(normalized.s2)]);
-  const s0Merged = mergeEnOverlay(s0Record, enOverlays.s0?.[String(normalized.s0)]);
+    lookupSegmentRecord(s2Data as Record<string, unknown>, "S2", normalized.s2) ??
+    lookupDefault(s2Data as Record<string, unknown>);
+  const s0Record = lookupSegmentRecord(s0Data as Record<string, unknown>, "S0", normalized.s0);
+  const s2Merged = mergeEnOverlay(
+    s2Record,
+    enOverlays.s2?.[s2Code] ?? enOverlays.s2?.[String(normalized.s2)],
+  );
+  const s0Merged = mergeEnOverlay(
+    s0Record,
+    enOverlays.s0?.[s0Code] ?? enOverlays.s0?.[String(normalized.s0)],
+  );
   const { record: s3Record, tierMatched } = getS3TierRecord(normalized.s3);
-  const s3Merged = mergeEnOverlay(s3Record, enOverlays.s3?.[String(normalized.s3)]);
+  const s3TierKey =
+    s3Record && typeof s3Record.code === "string" ? s3Record.code : String(normalized.s3);
+  const s3Merged = mergeEnOverlay(
+    s3Record,
+    enOverlays.s3?.[s3TierKey] ?? enOverlays.s3?.[String(normalized.s3)],
+  );
 
-  const s4Key = `S1-${String(normalized.s1).padStart(2, "0")}`;
+  const s4Key = segmentCodeKey("S1", normalized.s1);
   const s6Key = String(normalized.s1);
 
   const s1Content = adaptS1(s1Record, normalized.s1);
@@ -203,19 +218,16 @@ export function t(text: LocalizedText, locale: Locale): string {
 
 /** @deprecated Use get1320Content({ s1, s3, s2, s0 }) — kept for gradual migration. */
 export function get1320ContentRaw(code: LegacyCodeInput) {
-  const s1Key = String(code.s1);
-  const s2Key = String(code.s2);
-  const s0Key = String(code.s0);
-  const s4Key = `S1-${String(code.s1).padStart(2, "0")}`;
+  const s4Key = segmentCodeKey("S1", code.s1);
   const s6Key = String(code.s1);
 
   return {
-    s1: lookupRecord(s1Data as Record<string, unknown>, s1Key),
+    s1: lookupSegmentRecord(s1Data as Record<string, unknown>, "S1", code.s1),
     s3: getS3TierRecord(code.s3Raw).record,
     s2:
-      lookupRecord(s2Data as Record<string, unknown>, s2Key) ??
-      lookupRecord(s2Data as Record<string, unknown>, "default"),
-    s0: lookupRecord(s0Data as Record<string, unknown>, s0Key),
+      lookupSegmentRecord(s2Data as Record<string, unknown>, "S2", code.s2) ??
+      lookupDefault(s2Data as Record<string, unknown>),
+    s0: lookupSegmentRecord(s0Data as Record<string, unknown>, "S0", code.s0),
     s4: lookupRecord(s4Data as Record<string, unknown>, s4Key),
     s5: lookupRecord(s5Data as Record<string, unknown>, s4Key),
     s6: lookupRecord(s6Data as Record<string, unknown>, s6Key),

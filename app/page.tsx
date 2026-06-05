@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FooterSubscribe } from "@/components/footer-subscribe";
 import { HomeBirthdateEntry } from "@/components/home-birthdate-entry";
 import { HomeTopbar } from "@/components/home-topbar";
+import { SkipLink } from "@/components/skip-link";
 import {
   HOMEPAGE_ABOUT_PREVIEW,
   HOMEPAGE_BLUEPRINT_INTRO,
@@ -29,6 +30,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <main className="page-shell">
+      <SkipLink />
       <div className="page-stars" aria-hidden="true" />
       <div className="page-glow page-glow-left" aria-hidden="true" />
       <div className="page-glow page-glow-right" aria-hidden="true" />
@@ -36,10 +38,11 @@ export default function HomePage() {
       <div className="page-frame">
         <HomeTopbar />
 
+        <div id="main-content" tabIndex={-1}>
         <section className="hero-panel">
           <div className="hero-banner" aria-hidden="true">
             <Image
-              src="/hero-banner-desktop-v1.png"
+              src="/hero-banner-desktop-v1.webp"
               alt=""
               fill
               priority
@@ -47,7 +50,7 @@ export default function HomePage() {
               className="hero-banner-image hero-banner-image-desktop"
             />
             <Image
-              src="/hero-banner-v5.png"
+              src="/hero-banner-v5.webp"
               alt=""
               fill
               priority
@@ -236,6 +239,7 @@ export default function HomePage() {
           </Link>
           <p className="privacy-note">{HOMEPAGE_FINAL_CTA.trustNote}</p>
         </section>
+        </div>
 
         <footer className="site-footer">
           <div className="footer-brand">

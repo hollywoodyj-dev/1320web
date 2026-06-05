@@ -57,13 +57,16 @@ for (const route of ROUTES) {
 }
 
 console.log("\n=== Card assets ===");
-assert(fileExists("/S1-44/S18.png"), "S1-44/S18.png missing");
-assert(fileExists("/S3-12/S04.png"), "S3-12/S04.png missing (tier T04)");
-assert(getSegmentCardImageUrl("s1", 18) === "/S1-44/S18.png", "S1 path");
-assert(getSegmentCardImageUrl("s3", 110) === "/S3-12/S04.png", "S3 tier path");
-assert(getSegmentCardImageUrl("s2", 27) === undefined, "S2 should fallback (no pack)");
-assert(getSegmentCardImageUrl("s0", 7) === undefined, "S0 should fallback (no pack)");
-console.log("  OK S1/S3 card paths; S2/S0 fallback");
+assert(fileExists("/S1-44/S18.webp"), "S1-44/S18.webp missing");
+assert(fileExists("/S3-12/S04.webp"), "S3-12/S04.webp missing (tier T04)");
+assert(getSegmentCardImageUrl("s1", 18) === "/S1-44/S18.webp", "S1 path");
+assert(getSegmentCardImageUrl("s3", 110) === "/S3-12/S04.webp", "S3 tier path");
+assert(fileExists("/S2-50/S2-27.webp"), "S2-50/S2-27.webp missing");
+assert(getSegmentCardImageUrl("s2", 27) === "/S2-50/S2-27.webp", "S2 path");
+assert(fileExists("/S0-19/S0-07.webp"), "S0-19/S0-07.webp missing");
+assert(getSegmentCardImageUrl("s0", 7) === "/S0-19/S0-07.webp", "S0 path");
+assert(getSegmentCardImageUrl("s0", 0) === "/S0-19/S0-00.webp", "S0 zero path");
+console.log("  OK S1/S2/S3/S0 card paths");
 
 console.log("\n=== Report view model (sample full) ===");
 const content = get1320Content({ ...SAMPLE, locale: "en" });
@@ -75,8 +78,8 @@ const s2 = vm.modules.find((m) => m.segmentId === "s2");
 const s0 = vm.modules.find((m) => m.segmentId === "s0");
 assert(Boolean(s1?.cardImageUrl), "S1 card on module");
 assert(Boolean(s3?.cardImageUrl), "S3 card on module");
-assert(!s2?.cardImageUrl, "S2 no card");
-assert(!s0?.cardImageUrl, "S0 no card");
+assert(Boolean(s2?.cardImageUrl), "S2 card on module");
+assert(Boolean(s0?.cardImageUrl), "S0 card on module");
 for (const mod of vm.modules) {
   assert(mod.fields.length > 0, `${mod.segmentId} has fields`);
   assert(mod.codeLabel.length > 0, `${mod.segmentId} code label`);

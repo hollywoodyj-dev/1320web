@@ -13,7 +13,7 @@ export function IntegratedSummaryCard({ title, lead, body }: IntegratedSummaryCa
         <div className="report-integrated-ring-glow" />
         <div className="report-integrated-ring-art">
           <Image
-            src="/generating-1320-ring.png"
+            src="/generating-1320-ring.webp"
             alt=""
             width={1254}
             height={1254}

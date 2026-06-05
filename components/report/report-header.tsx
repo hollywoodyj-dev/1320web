@@ -48,7 +48,7 @@ export function ReportHeader({ title, subtitle, codeString, fictionBanner }: Rep
           <div className="report-header-ring-glow" />
           <div className="report-header-ring-art">
             <Image
-              src="/generating-1320-ring.png"
+              src="/generating-1320-ring.webp"
               alt=""
               width={1254}
               height={1254}

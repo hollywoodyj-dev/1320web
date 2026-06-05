@@ -23,7 +23,7 @@
 ### Report UI
 - Header: gold gradient title, code strip, generating ring art
 - Four-Part Blueprint row: compact pillar cards (`report-pillar-card`)
-- Segment modules: pillar hero + content; **S1 + S3 archetype card art** in hero
+- Segment modules: pillar hero + content; **S1 / S2 / S3 / S0 archetype card art** in hero
 - Integrated summary, practices, reflection (full sample)
 - Result extras: Share + Email **duo row**, gold pill buttons
 - Sticky sidebar (desktop); horizontal nav wrap (mobile ≤900px)
@@ -32,10 +32,10 @@
 ### Card packs
 | Segment | Folder | Mapping |
 |---------|--------|---------|
-| S1 | `public/S1-44/` | `S01.png` … `S44.png` by code number |
-| S3 | `public/S3-12/` | `S01.png` … `S12.png` by vibration **tier** (from `s3Raw` range) |
-| S2 | — | Pillar text hero (no pack yet) |
-| S0 | — | Pillar text hero (no pack yet) |
+| S1 | `public/S1-44/` | `S01.webp` … `S44.webp` by code number |
+| S3 | `public/S3-12/` | `S01.webp` … `S12.webp` by vibration **tier** (from `s3Raw` range) |
+| S2 | `public/S2-50/` | `S2-01.webp` … `S2-50.webp` by code number (`month + day`) |
+| S0 | `public/S0-19/` | `S0-00.webp` … `S0-19.webp` by void gate number (0–19) |
 
 ### Automation
 - `npm run smoke:content` — canonical codes + copy + card paths
@@ -44,16 +44,20 @@
 
 ---
 
-## Later polish (not blocking baseline)
+## Steps 4–5 (completed 2026-06-02)
 
-- **S2 / S0 card packs** — integrate when assets land (same pattern as S1/S3)
-- **Card PNG matte** — export transparent backgrounds; reduce reliance on `mix-blend-mode: screen`
-- **Image weight / LCP** — compress `report-bg-v3`, card packs, generating assets
-- **Accessibility pass** — focus rings, contrast audit on gold-on-dark, heading order review
-- **Fine mobile spacing** — segment module cards, inner-page hero gaps
-- **Per-segment bg tuning** — optional different mobile/desktop art per segment tone
-- **VIEW FULL INSIGHT** — placeholder button (no route yet)
-- **Phase 2 routes** — `/blueprint/s1-origin-frequency`, etc.
+- **Performance & a11y:** `PERFORMANCE_A11Y_AUDIT.md` — asset inventory, LCP notes, contrast checklist
+- **Code:** skip link, `:focus-visible`, `prefers-reduced-motion`, mobile `report-bg-v2`, report `h3` under section `h2`
+- **Assets:** WebP via `npm run compress:assets` (~174 MB → ~15 MB public images); `npm run audit:assets` PASS
+- **Backlog:** `PHASE2_QUEUE.md` — ticket IDs P2-001 … P2-042
+
+## Later polish (Phase 2 queue)
+
+See **`PHASE2_QUEUE.md`** for full tickets. Highlights:
+
+- S2 / S0 card packs, transparent PNGs, compress v3 + card packs
+- Contrast automation, generating live region
+- Mobile spacing, VIEW FULL INSIGHT route, blueprint segment pages
 
 ---
 
@@ -90,8 +94,8 @@ Code + build verified; visual sign-off recommended on real devices after pull.
 Canonical: `1980-05-22` → `S1-18 / S3-110 / S2-27 / S0-07`
 
 - S1 title: The Transformer  
-- S3 tier: Amplified Expression (T04) → `/S3-12/S04.png`  
-- S2/S0: English copy from JSON; no `cardImageUrl`  
+- S3 tier: Amplified Expression (T04) → `/S3-12/S04.webp`  
+- S2-45: asset file missing in pack (birth-date S2 is 2–43; only S2-45 affected)  
 - Free `/result`: locked teasers + waitlist CTA on modules  
 - CTAs: `/your-code`, `/full-report`, `/sample-report`, `/booking`, `/privacy` wired in components
 
@@ -104,6 +108,7 @@ cd web
 npm install
 npm run qa:baseline
 npm run smoke:content
+npm run audit:assets
 npm run build
 npm run dev:fresh
 ```

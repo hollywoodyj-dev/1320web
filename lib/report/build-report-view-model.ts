@@ -29,7 +29,7 @@ export type ReportModuleViewModel = {
   codeLabel: string;
   archetype: string;
   shortLabel: string;
-  /** Archetype card art in `public/` (S1 pack live; S3/S2/S0 when added). */
+  /** Archetype card art in `public/` (S1/S2/S3/S0 card packs). */
   cardImageUrl?: string;
   fields: ReportField[];
   reflectionQuestion?: string;

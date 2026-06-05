@@ -27,7 +27,7 @@ export function ReportModuleCard({ module }: ReportModuleCardProps) {
       >
         <p className="pillar-code">{module.codeLabel}</p>
         <div className="pillar-card-body report-module-pillar-head">
-          <h2>{meta.title.en.toUpperCase()}</h2>
+          <h3>{meta.title.en.toUpperCase()}</h3>
           <p className="pillar-headline">{module.shortLabel}</p>
           {showCard ? (
             <p className="report-module-pillar-archetype report-module-pillar-archetype--card">

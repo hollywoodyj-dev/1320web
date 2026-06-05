@@ -51,17 +51,17 @@ for (const route of ROUTES) {
 const REQUIRED_ASSETS = [
   "public/1320-logo.jpeg",
   "public/1320-icon.svg",
-  "public/hero-banner-desktop-v1.png",
-  "public/hero-banner-v5.png",
+  "public/hero-banner-desktop-v1.webp",
+  "public/hero-banner-v5.webp",
   "public/homepage-ui.png",
   "public/generating-ui.png",
   "public/report-ui.jpeg",
-  "public/card/s1.png",
-  "public/card/s3.png",
-  "public/card/s2.png",
-  "public/card/s0.png",
-  "public/how-1320-works/step-01.png",
-  "public/how-1320-works/step-04.png",
+  "public/card/s1.webp",
+  "public/card/s3.webp",
+  "public/card/s2.webp",
+  "public/card/s0.webp",
+  "public/how-1320-works/step-01.webp",
+  "public/how-1320-works/step-04.webp",
 ];
 
 for (const asset of REQUIRED_ASSETS) {

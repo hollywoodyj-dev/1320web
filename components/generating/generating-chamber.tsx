@@ -28,10 +28,10 @@ const TOTAL_MS =
   GENERATING_STEPS.length * GENERATING_STEP_MS + GENERATING_REDIRECT_DELAY_MS;
 
 const NODE_IMAGES = {
-  s1: "/generating-steps-s1.png",
-  s3: "/generating-steps-s3.png",
-  s2: "/generating-steps-s2.png",
-  s0: "/generating-steps-s0.png",
+  s1: "/generating-steps-s1.webp",
+  s3: "/generating-steps-s3.webp",
+  s2: "/generating-steps-s2.webp",
+  s0: "/generating-steps-s0.webp",
 } as const;
 
 export function GeneratingChamber({
@@ -168,7 +168,7 @@ export function GeneratingChamber({
           <div className="generating-portal-glow" />
           <div className="generating-portal-art">
             <Image
-              src="/generating-1320-ring.png"
+              src="/generating-1320-ring.webp"
               alt="1320 sacred geometry ring"
               width={1254}
               height={1254}

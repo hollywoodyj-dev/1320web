@@ -22,7 +22,7 @@ export function BlueprintOverviewRow({ cards }: BlueprintOverviewRowProps) {
             >
               <p className="pillar-code">{card.code}</p>
               <div className="pillar-card-body">
-                <h2>{meta.title.en.toUpperCase()}</h2>
+                <h3>{meta.title.en.toUpperCase()}</h3>
                 <p className="pillar-headline">{card.shortLabel}</p>
                 <p className="report-pillar-essence">{card.essence}</p>
                 <a href={`#${card.segmentId}`} className="report-pillar-link">

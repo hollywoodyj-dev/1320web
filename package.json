@@ -11,7 +11,9 @@
     "lint": "eslint",
     "smoke:content": "npx tsx scripts/smoke-content.ts",
     "smoke:funnel": "npx tsx scripts/smoke-funnel.ts",
-    "qa:baseline": "npx tsx scripts/qa-baseline.ts"
+    "qa:baseline": "npx tsx scripts/qa-baseline.ts",
+    "audit:assets": "npx tsx scripts/audit-assets.ts",
+    "compress:assets": "npx tsx scripts/compress-assets.ts"
   },
   "dependencies": {
     "next": "16.2.6",
@@ -25,6 +27,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

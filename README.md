@@ -67,15 +67,20 @@ Copy `.env.example` to `.env.local` and adjust:
 
 Without `LEADS_WEBHOOK_URL`, form submissions show client success but are only logged in dev server output.
 
-## Deploy (Vercel)
+## Deploy (GitHub + Vercel)
 
-1. Import the repo; set **Root Directory** to `web` if the monorepo root is parent.
-2. Framework preset: **Next.js** (auto-detected).
-3. Add env vars from `.env.example`.
+**Full checklist:** see [`DEPLOYMENT.md`](./DEPLOYMENT.md).
+
+Quick version:
+
+1. Push this folder (`web/`) to a new GitHub repo (git root = app root).
+2. [Import on Vercel](https://vercel.com/new) — Framework: **Next.js**, Root Directory: **`.`**
+3. Add env vars from `.env.example` (at minimum `NEXT_PUBLIC_SITE_URL`).
 4. Deploy — no database required for Phase 1.
 
-Build command: `npm run build`  
-Output: Next.js default (`.next`)
+CI: `.github/workflows/ci.yml` runs `qa:baseline`, `smoke:content`, and `build` on push/PR.
+
+Build command: `npm run build` · Output: Next.js default (`.next`)
 
 ## Before production launch
 
@@ -89,13 +94,16 @@ Output: Next.js default (`.next`)
 Required assets under `public/`:
 
 - `1320-logo.jpeg`, `1320-icon.svg`
-- `hero-banner-desktop-v1.png`, `hero-banner-v5.png` (mobile)
-- `homepage-ui.png`, `generating-ui.png`, `report-ui.jpeg` (reference mockups)
-- `report-bg-v3-1920x4048.png` — report page full-bleed background (1920×4048; see sizing below)
-- `card/s1.png` … `s0.png` (pillar backgrounds)
-- `how-1320-works/step-01.png` … `step-04.png`
+- `hero-banner-desktop-v1.webp`, `hero-banner-v5.webp` (mobile)
+- `homepage-ui.png`, `generating-ui.png`, `report-ui.jpeg` (reference mockups only — not loaded in prod)
+- `report-bg-v3-1920x4048.webp` — report page full-bleed background (1920×4048; see sizing below)
+- `card/s1.webp` … `s0.webp` (pillar backgrounds)
+- `how-1320-works/step-01.webp` … `step-04.webp`
+- `S1-44/S01.webp` … `S44.webp`, `S2-50/S2-01.webp` … `S2-50.webp`, `S3-12/S01.webp` … `S12.webp`, `S0-19/S0-00.webp` … `S0-19.webp` (segment card art)
 
-### Report background (`report-bg-v3-1920x4048.png`)
+Re-compress after replacing PNG sources: `npm run compress:assets` (requires `sharp`).
+
+### Report background (`report-bg-v3-1920x4048.webp`)
 
 Used with `background-size: cover` on `/result` and `/sample-report`. **Clarity depends on pixel width, not file size (MB).**
 

@@ -60,13 +60,19 @@ assertEnglish(t(content.s1Content.guidance!, "en"), "S1 guidance");
 assertEnglish(t(content.s3Content.guidance!, "en"), "S3 guidance");
 
 const sampleReport = buildReportViewModel(content, { mode: "full", variant: "sample" });
-assert(getSegmentCardImageUrl("s1", SAMPLE.s1) === "/S1-44/S18.png", "S1 card image path");
-assert(getSegmentCardImageUrl("s3", SAMPLE.s3) === "/S3-12/S04.png", "S3 card image path (tier T04)");
+assert(getSegmentCardImageUrl("s1", SAMPLE.s1) === "/S1-44/S18.webp", "S1 card image path");
+assert(getSegmentCardImageUrl("s3", SAMPLE.s3) === "/S3-12/S04.webp", "S3 card image path (tier T04)");
+assert(getSegmentCardImageUrl("s2", SAMPLE.s2) === "/S2-50/S2-27.webp", "S2 card image path");
+assert(getSegmentCardImageUrl("s0", SAMPLE.s0) === "/S0-19/S0-07.webp", "S0 card image path");
 
 const s1Module = sampleReport.modules.find((m) => m.segmentId === "s1");
 const s3Module = sampleReport.modules.find((m) => m.segmentId === "s3");
+const s2Module = sampleReport.modules.find((m) => m.segmentId === "s2");
+const s0Module = sampleReport.modules.find((m) => m.segmentId === "s0");
 assert(Boolean(s1Module), "sample report should include S1 module");
-assert(s3Module?.cardImageUrl === "/S3-12/S04.png", "S3 module should include tier card art");
+assert(s3Module?.cardImageUrl === "/S3-12/S04.webp", "S3 module should include tier card art");
+assert(s2Module?.cardImageUrl === "/S2-50/S2-27.webp", "S2 module should include mirror card art");
+assert(s0Module?.cardImageUrl === "/S0-19/S0-07.webp", "S0 module should include void gate card art");
 assert(s1Module!.fields.length >= 7, "S1 full module should expose distinct premium fields");
 const s1Values = s1Module!.fields.map((f) => f.value.trim());
 assert(new Set(s1Values).size === s1Values.length, "S1 module field values must be unique");

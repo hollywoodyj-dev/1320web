@@ -73,7 +73,7 @@ assert(Boolean(s1Module), "sample report should include S1 module");
 assert(s3Module?.cardImageUrl === "/S3-12/S04.webp", "S3 module should include tier card art");
 assert(s2Module?.cardImageUrl === "/S2-50/S2-27.webp", "S2 module should include mirror card art");
 assert(s0Module?.cardImageUrl === "/S0-19/S0-07.webp", "S0 module should include void gate card art");
-assert(s1Module!.fields.length >= 7, "S1 full module should expose distinct premium fields");
+assert(s1Module!.fields.length >= 8, "S1 full module should expose distinct premium fields");
 const s1Values = s1Module!.fields.map((f) => f.value.trim());
 assert(new Set(s1Values).size === s1Values.length, "S1 module field values must be unique");
 assert(

@@ -116,6 +116,7 @@ function buildS1Fields(
 ): ReportField[] {
   const all = [
     field(locale, "Overview", segment.fullEssence ?? segment.freeEssence),
+    joinFields(locale, "Soul Traits", segment.soulTraits),
     joinFields(locale, "Core Gifts", segment.coreGifts),
     joinFields(locale, "Shadow Pattern", segment.shadowPatterns),
     field(locale, "Soul Lesson", segment.lesson),

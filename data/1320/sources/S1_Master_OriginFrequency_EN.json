@@ -1,0 +1,1630 @@
+{
+  "S1-01": {
+    "code": "S1-01",
+    "number": 1,
+    "englishTitle": "The Initiator",
+    "chineseTitle": "破晓者",
+    "soulTraits": [
+      "Strong action orientation and fast intuition",
+      "A natural path-opener",
+      "Moves forward from inner drive",
+      "Skilled at initiating, beginning new cycles, and reform"
+    ],
+    "strengths": [
+      "Finds breakthrough points in chaos",
+      "Natural leadership",
+      "Moves stagnant energy forward"
+    ],
+    "shadows": [
+      "Easily restless and impatient",
+      "Resists slowing down or stopping",
+      "Uses speed as a substitute for self-worth"
+    ],
+    "coreLesson": "Learn to stabilize power through awareness, rather than accumulating self-worth through constant action.",
+    "soulDirection": [
+      "Entrepreneurship, independent leadership, innovation, and pioneering work",
+      "In relationships, practice slowing down and co-creating"
+    ],
+    "wisewaveGuidance": "You are not here to prove speed. You are here to illuminate direction. When you stop proving yourself through more action, you meet real power. The more you pause and listen, the more your path naturally accelerates.",
+    "color": "Golden-white light",
+    "totem": "Dawn Eagle",
+    "esotericLink": "Atum / First Flame",
+    "displayTitle": "S1-01 · The Initiator",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-01"
+  },
+  "S1-02": {
+    "code": "S1-02",
+    "number": 2,
+    "englishTitle": "The Bridge",
+    "chineseTitle": "连接者",
+    "soulTraits": [
+      "Gentle yet powerful",
+      "Skilled at harmonizing conflict and difference",
+      "Naturally becomes a bridge in relationships",
+      "Can move between different worlds"
+    ],
+    "strengths": [
+      "Understands others' motivations well",
+      "Restores flow to complex relationships",
+      "Connects energies that appear opposite"
+    ],
+    "shadows": [
+      "Over-empathizes and loses boundaries",
+      "Hesitates to express true needs",
+      "Fears that saying no will damage relationships"
+    ],
+    "coreLesson": "Learn to protect the self instead of always being the one who supports everyone.",
+    "soulDirection": [
+      "Communication, relationship guidance, and cross-disciplinary integration",
+      "Carries a natural healing capacity in spiritual work"
+    ],
+    "wisewaveGuidance": "You are not here to carry everyone’s weight. You are here to help the world return to flow. When you allow yourself to have boundaries, you become a true bridge. Your gentleness is not weakness; it is a light that reaches the heart.",
+    "color": "Cyan-blue light",
+    "totem": "White Deer (Bridge of Peace)",
+    "esotericLink": "Hathor / Harmonic Weavers",
+    "displayTitle": "S1-02 · The Bridge",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-02"
+  },
+  "S1-03": {
+    "code": "S1-03",
+    "number": 3,
+    "englishTitle": "The Seer",
+    "chineseTitle": "预见者",
+    "soulTraits": [
+      "Highly sensitive with sharp intuition",
+      "Sees directions others cannot see",
+      "Future-oriented with innovative thinking",
+      "Thinks uniquely and does not simply follow the crowd"
+    ],
+    "strengths": [
+      "Exceptional insight",
+      "Recognizes trends, potential, and hidden motives",
+      "Strong expression in creative fields"
+    ],
+    "shadows": [
+      "Overthinks easily",
+      "Feels too much and struggles to ground",
+      "Feels different from the world and may become lonely"
+    ],
+    "coreLesson": "Ground insight, turn feeling into direction, and bring spirituality into reality.",
+    "soulDirection": [
+      "Strategy, innovation, art, and spiritual research",
+      "Can become a high-frequency guide who supports others’ awakening"
+    ],
+    "wisewaveGuidance": "Your eyes see far ahead, so you often forget where your feet are. When you let insight move through the body and land, your vision naturally takes form. You are not here to escape the world, but to bring the world a new way of seeing.",
+    "color": "Violet obsidian light",
+    "totem": "Black-feathered Crow (Eye of Deep Seeing)",
+    "esotericLink": "Isis · The Vision Keepers",
+    "displayTitle": "S1-03 · The Seer",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-03"
+  },
+  "S1-04": {
+    "code": "S1-04",
+    "number": 4,
+    "englishTitle": "The Stabilizer",
+    "chineseTitle": "稳定者",
+    "soulTraits": [
+      "Grounded, reliable, and able to hold pressure",
+      "A steady anchor for teams and family",
+      "Great patience and structural capacity",
+      "Works steadily, deeply, slowly, and precisely"
+    ],
+    "strengths": [
+      "Provides safety for others",
+      "Systematizes and structures chaos",
+      "Strong in long-term projects and sustained growth"
+    ],
+    "shadows": [
+      "Fears change and resists uncertainty",
+      "Over-carries and suppresses needs",
+      "Mistakes stability for never making mistakes"
+    ],
+    "coreLesson": "Learn to remain flexible within stability, allowing structure to serve the soul instead of restricting it.",
+    "soulDirection": [
+      "Organization, management, education, healing, and finance",
+      "A foundational frequency guardian in teams"
+    ],
+    "wisewaveGuidance": "You do not need to always be the one who holds everything together. When you allow yourself to loosen even a little, life becomes lighter. Stability is not a burden; it is a gentle kind of strength.",
+    "color": "Earth-brown light",
+    "totem": "Turtle (Stability and Bearing)",
+    "esotericLink": "Geb · Foundation Bearers",
+    "displayTitle": "S1-04 · The Stabilizer",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-04"
+  },
+  "S1-05": {
+    "code": "S1-05",
+    "number": 5,
+    "englishTitle": "The Catalyst",
+    "chineseTitle": "催化者",
+    "soulTraits": [
+      "Carries strong influence",
+      "Changes the energy of a space upon entering",
+      "Naturally suited to breakthrough, disruption, and activating potential",
+      "Carries a frequency that activates others"
+    ],
+    "strengths": [
+      "Awakens and inspires others",
+      "Moves teams forward",
+      "Has powerful breakthrough energy at critical moments"
+    ],
+    "shadows": [
+      "May make others feel pressured",
+      "Strong energy can be misunderstood",
+      "Often awakens others while neglecting the self"
+    ],
+    "coreLesson": "Learn to stabilize your own energy before activating others.",
+    "soulDirection": [
+      "Teaching, coaching, healing, entrepreneurship, and public expression",
+      "A soul accelerator who helps others cross thresholds"
+    ],
+    "wisewaveGuidance": "Your power is not here to break through others, but to illuminate them. When you first settle within yourself, your presence becomes the greatest catalyst. You are not the destroyer of flame; you are the awakener of flame.",
+    "color": "Fiery red light",
+    "totem": "Phoenix (Burning the old, birthing the new)",
+    "esotericLink": "Sekhmet · Fire Transformations",
+    "displayTitle": "S1-05 · The Catalyst",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-05"
+  },
+  "S1-06": {
+    "code": "S1-06",
+    "number": 6,
+    "englishTitle": "The Healer",
+    "chineseTitle": "愈合者",
+    "soulTraits": [
+      "Highly feeling-oriented",
+      "Reads the emotional depths of others",
+      "Naturally soothing energy",
+      "Brings warmth and repair into chaos"
+    ],
+    "strengths": [
+      "Can heal, listen, and hold space",
+      "Highly intuitive emotional insight",
+      "People naturally relax in your presence"
+    ],
+    "shadows": [
+      "Easily carries others’ emotions",
+      "Uses caring for others to avoid caring for the self",
+      "Fears expressing personal needs"
+    ],
+    "coreLesson": "Learn to call your energy back to yourself instead of constantly becoming a shelter for others.",
+    "soulDirection": [
+      "Healing, counseling, education, and intimacy guidance",
+      "An energetic tuner within teams"
+    ],
+    "wisewaveGuidance": "You are not everyone’s medicine. You are not the light the world must depend on. When you are willing to keep tenderness for yourself, your healing truly begins. Before repairing others, embrace yourself first.",
+    "color": "Water-green light (heart-healing frequency)",
+    "totem": "Deer (Tenderness and sensitive strength)",
+    "esotericLink": "Hathor · Emotional Resonance",
+    "displayTitle": "S1-06 · The Healer",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-06"
+  },
+  "S1-07": {
+    "code": "S1-07",
+    "number": 7,
+    "englishTitle": "The Warrior",
+    "chineseTitle": "坚毅者",
+    "soulTraits": [
+      "Strong will and high action capacity",
+      "Does not easily give up",
+      "Clear goals and strong direction",
+      "Maintains strength in adversity"
+    ],
+    "strengths": [
+      "Most reliable in crisis",
+      "Protects self and loved ones",
+      "Can break through limits"
+    ],
+    "shadows": [
+      "Uses strength as armor",
+      "Fears being seen in vulnerability",
+      "Turns life into a mode of struggle"
+    ],
+    "coreLesson": "Learn to let strength become soft instead of always fighting.",
+    "soulDirection": [
+      "Leadership, entrepreneurship, athletics, and crisis handling",
+      "An awakener of will on the spiritual path"
+    ],
+    "wisewaveGuidance": "True strength is not pressing the world down; it is no longer fighting yourself. When you allow vulnerability in, your soul becomes stronger than any armor. You are not the warrior; you are strength itself.",
+    "color": "Iron-blue light",
+    "totem": "Black Panther (Invisible strength and silent action)",
+    "esotericLink": "Anubis · Silent Strength",
+    "displayTitle": "S1-07 · The Warrior",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-07"
+  },
+  "S1-08": {
+    "code": "S1-08",
+    "number": 8,
+    "englishTitle": "The Nurturer",
+    "chineseTitle": "承载者",
+    "soulTraits": [
+      "Warm, grounded, and giving",
+      "Skilled at caring, supporting, and accompanying",
+      "Makes others feel held",
+      "Highly sensitive to emotional needs"
+    ],
+    "strengths": [
+      "Stabilizes relational space",
+      "Brings cohesion to teams",
+      "Carries nurturing creativity"
+    ],
+    "shadows": [
+      "Easily self-sacrifices",
+      "Uses giving as a source of worth",
+      "Loses boundaries in relationships"
+    ],
+    "coreLesson": "Learn to give without betraying yourself.",
+    "soulDirection": [
+      "Family healing, psychological care, and community building",
+      "An energy bearer in teams"
+    ],
+    "wisewaveGuidance": "Love is not giving until you wither; it is allowing yourself to be nourished too. When you place yourself back at the center of life, your love becomes powerful. You are not a container; you are the flow of life itself.",
+    "color": "Soft apricot light",
+    "totem": "Tree (Holding and nourishment)",
+    "esotericLink": "Isis · Sacred Mother Field",
+    "displayTitle": "S1-08 · The Nurturer",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-08"
+  },
+  "S1-09": {
+    "code": "S1-09",
+    "number": 9,
+    "englishTitle": "The Explorer",
+    "chineseTitle": "拓界者",
+    "soulTraits": [
+      "Strong curiosity",
+      "Dislikes staying inside one framework",
+      "Loves learning, experience, travel, and adventure",
+      "Drawn to the unknown"
+    ],
+    "strengths": [
+      "Opens new worlds, perspectives, and paths",
+      "Highly adaptable and unafraid of change",
+      "Life is full of inspiration and creativity"
+    ],
+    "shadows": [
+      "Lacks stability",
+      "Easily distracted and inconsistent",
+      "Avoids deep commitment"
+    ],
+    "coreLesson": "Learn to turn exploration into creation instead of remaining only at the level of experience.",
+    "soulDirection": [
+      "Innovation, education, travel, technology, and research",
+      "A bridge between worlds"
+    ],
+    "wisewaveGuidance": "You are not lost; you are expanding your life map. When you allow yourself to focus, you will find the unknown beginning to open. You are not chasing the world; you are chasing your own possibilities.",
+    "color": "Wind-blue light",
+    "totem": "Falcon (Far-seeing eye)",
+    "esotericLink": "Thoth · Pathfinders",
+    "displayTitle": "S1-09 · The Explorer",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-09"
+  },
+  "S1-10": {
+    "code": "S1-10",
+    "number": 10,
+    "englishTitle": "The Guardian",
+    "chineseTitle": "守护者",
+    "soulTraits": [
+      "Loyal, steady, and reliable",
+      "Strong protective instinct",
+      "Naturally holds boundaries for others",
+      "A shield for the team"
+    ],
+    "strengths": [
+      "Recognizes danger and energetic imbalance",
+      "Brings safety in chaos",
+      "Can hold protective space for others"
+    ],
+    "shadows": [
+      "Overprotective and controlling",
+      "Does not trust others’ capacity",
+      "Clings from fear of abandonment"
+    ],
+    "coreLesson": "Learn to release the responsibility to hold everything, allowing life to move on its own.",
+    "soulDirection": [
+      "Safety, management, coordination, strategy, and resource management",
+      "An energetic guardian in spiritual work"
+    ],
+    "wisewaveGuidance": "You are not the gatekeeper of the world. You are not responsible for everyone. When you stop gripping, relationships naturally become stable. Guarding is not control; it is allowing life to unfold.",
+    "color": "Deep green light (protective frequency)",
+    "totem": "Wolf (Loyalty and watchfulness)",
+    "esotericLink": "Horus · Guardianship Lineage",
+    "displayTitle": "S1-10 · The Guardian",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-10"
+  },
+  "S1-11": {
+    "code": "S1-11",
+    "number": 11,
+    "englishTitle": "The Visionary",
+    "chineseTitle": "远见者",
+    "soulTraits": [
+      "Has a broad perspective",
+      "Skilled at building future blueprints",
+      "Sensitive to trends, patterns, and possibilities",
+      "Naturally thinks beyond present frameworks"
+    ],
+    "strengths": [
+      "Designs long-term direction and large-scale strategy",
+      "The future eye of an organization or team",
+      "Inspires others to see a greater path"
+    ],
+    "shadows": [
+      "Thinks too far ahead and ignores present needs",
+      "May become stuck because the plan is too large",
+      "Impatient with practical details"
+    ],
+    "coreLesson": "Learn to ground vision, not only remain in the future, but begin from the present.",
+    "soulDirection": [
+      "Strategy, creative leadership, trend research, and spiritual guidance",
+      "A direction-setter who moves human consciousness forward"
+    ],
+    "wisewaveGuidance": "The future you see is not illusion; it is a form of soul memory. When you bring vision back to the present, it can truly take shape. The future is not waiting; it is created through each step now.",
+    "color": "Deep violet-blue light (Vision Frequency)",
+    "totem": "Hawk (Precise far-sight)",
+    "esotericLink": "Ptah · The Architects",
+    "displayTitle": "S1-11 · The Visionary",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-11"
+  },
+  "S1-12": {
+    "code": "S1-12",
+    "number": 12,
+    "englishTitle": "The Empath",
+    "chineseTitle": "感应者",
+    "soulTraits": [
+      "Energetically sensitive and intuitive",
+      "Easily senses others’ emotions, fields, and subconscious information",
+      "Naturally carries higher-dimensional perception",
+      "An emotional radar soul"
+    ],
+    "strengths": [
+      "Sees subtle changes others miss",
+      "Natural healing and companionship capacity",
+      "Deep empathy and insight in relationships"
+    ],
+    "shadows": [
+      "Easily overwhelmed by energy",
+      "Mistakes others’ emotions for their own",
+      "Fears saying no or creating conflict"
+    ],
+    "coreLesson": "Learn to distinguish what belongs to you from what belongs to others.",
+    "soulDirection": [
+      "Healing, creation, counseling, and energy work",
+      "A key emotional stabilizer within teams"
+    ],
+    "wisewaveGuidance": "Your sensitivity is not weakness; it is your gift. When you stop absorbing the weight of others, your soul perception rises higher. You are not a sponge; you are light.",
+    "color": "Silver-blue light (perceptive frequency)",
+    "totem": "White Owl (Night perception)",
+    "esotericLink": "Nephthys · Psychic Sensitivity",
+    "displayTitle": "S1-12 · The Empath",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-12"
+  },
+  "S1-13": {
+    "code": "S1-13",
+    "number": 13,
+    "englishTitle": "The Rebel",
+    "chineseTitle": "逆行者",
+    "soulTraits": [
+      "Refuses blind conformity",
+      "Naturally rebellious and truth-seeking",
+      "Does not want to be limited by frameworks",
+      "Independent in thought and bold in action"
+    ],
+    "strengths": [
+      "Dismantles old systems",
+      "A natural illusion-breaker",
+      "Shows the world another way"
+    ],
+    "shadows": [
+      "Easily develops hostility toward authority",
+      "Turns opposition into identity",
+      "Feels lonely through conflict with the world"
+    ],
+    "coreLesson": "Learn to evolve from opposition into creation, letting rebellion become a force of love.",
+    "soulDirection": [
+      "Innovation, reform, social advocacy, and spiritual revolution",
+      "A powerful archetype for world change"
+    ],
+    "wisewaveGuidance": "You are not here to oppose the world; you are here to rewrite it. When you stop rebelling for the sake of rebellion, your creativity becomes purer. A true rebel walks in the direction of the soul.",
+    "color": "Deep red-black light (breakthrough fire)",
+    "totem": "The lone wolf within the pack",
+    "esotericLink": "Set · Disruptive Power",
+    "displayTitle": "S1-13 · The Rebel",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-13"
+  },
+  "S1-14": {
+    "code": "S1-14",
+    "number": 14,
+    "englishTitle": "The Teacher",
+    "chineseTitle": "传导者",
+    "soulTraits": [
+      "Skilled at organizing knowledge and transmitting wisdom",
+      "A natural guide and integrator",
+      "Can make complexity simple",
+      "Has the language ability to awaken others"
+    ],
+    "strengths": [
+      "Deep and stable influence",
+      "Opens doors of understanding and awareness for others",
+      "Amplifies consciousness in groups"
+    ],
+    "shadows": [
+      "Fears not knowing enough",
+      "Falls into perfectionism",
+      "Over-carries the teacher role and becomes depleted"
+    ],
+    "coreLesson": "Learn to demonstrate through being, rather than using knowledge to prove worth.",
+    "soulDirection": [
+      "Teaching, consulting, content creation, and spiritual work",
+      "A wisdom keeper within organizations"
+    ],
+    "wisewaveGuidance": "You were not born to be a teacher; you were born to let wisdom flow. When you stop pursuing perfection, your truth begins to speak. What you teach is not knowledge, but your presence itself.",
+    "color": "Amber-gold light (fire of wisdom)",
+    "totem": "Owl (wisdom and transmission)",
+    "esotericLink": "Thoth · Knowledge Carriers",
+    "displayTitle": "S1-14 · The Teacher",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-14"
+  },
+  "S1-15": {
+    "code": "S1-15",
+    "number": 15,
+    "englishTitle": "The Grounded Mystic",
+    "chineseTitle": "入世的灵者",
+    "soulTraits": [
+      "Highly spiritually aware",
+      "Also grounded and practical",
+      "Turns spiritual understanding into daily action",
+      "Can see the sky and walk the earth"
+    ],
+    "strengths": [
+      "Bridges spirituality and reality",
+      "Embodies wisdom through practice",
+      "One of the most stable frequencies in spiritual teams"
+    ],
+    "shadows": [
+      "Impatient with those perceived as less awakened",
+      "Neglects bodily needs",
+      "Falls out of balance between spirituality and reality"
+    ],
+    "coreLesson": "Learn to bring spiritual practice into the body, not keep it only in the mind or energy field.",
+    "soulDirection": [
+      "Healing, spiritual coaching, guidance, counseling, and strategy",
+      "A representative force of practical spirituality"
+    ],
+    "wisewaveGuidance": "You are not here to escape the world. You are here to give awakening a shape in the world. When your wisdom lands, your life becomes proof of spirituality itself. You are walking truth.",
+    "color": "Deep teal-gold light (Earth–Spirit Frequency)",
+    "totem": "Elephant (steady wisdom)",
+    "esotericLink": "Osiris · Embodied Spirit",
+    "displayTitle": "S1-15 · The Grounded Mystic",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-15"
+  },
+  "S1-16": {
+    "code": "S1-16",
+    "number": 16,
+    "englishTitle": "The Harmonizer",
+    "chineseTitle": "和谐者",
+    "soulTraits": [
+      "Naturally carries a soft frequency",
+      "Skilled at dissolving tension and conflict",
+      "Maintains balance in chaos",
+      "Words and actions naturally tune energy"
+    ],
+    "strengths": [
+      "Restores flow to teams or relationships",
+      "Sees multiple perspectives and integrates them",
+      "Strong empathy and adaptability"
+    ],
+    "shadows": [
+      "Fears conflict and tends to yield",
+      "Falls into the role of maintaining harmony",
+      "Suppresses true emotions and becomes depleted"
+    ],
+    "coreLesson": "Learn to pursue harmony without sacrificing your truth.",
+    "soulDirection": [
+      "Coordination, negotiation, management, and interpersonal mediation",
+      "An important energetic balancer in teams"
+    ],
+    "wisewaveGuidance": "You do not need to make everyone comfortable. You only need to remain true. When you allow yourself to express, the world finds a real point of balance. Harmony is not avoiding conflict; it is finding alignment within truth.",
+    "color": "Soft green light",
+    "totem": "Swan (grace and balance)",
+    "esotericLink": "Ma’at · Balance Keepers",
+    "displayTitle": "S1-16 · The Harmonizer",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-16"
+  },
+  "S1-17": {
+    "code": "S1-17",
+    "number": 17,
+    "englishTitle": "The Architect",
+    "chineseTitle": "构筑者",
+    "soulTraits": [
+      "Enjoys planning, designing, and building structure",
+      "Skilled at organizing systems and frameworks",
+      "Combines logic and vision with action",
+      "Turns abstract concepts into reality"
+    ],
+    "strengths": [
+      "Highly capable in execution",
+      "Strong at building long-term projects",
+      "Can lead teams to create systems from zero to one"
+    ],
+    "shadows": [
+      "Falls into over-planning",
+      "Afraid to begin before things are perfect",
+      "Tends to control every detail"
+    ],
+    "coreLesson": "Learn to allow change and let life participate in the design instead of controlling everything yourself.",
+    "soulDirection": [
+      "Entrepreneurship, strategy planning, product development, and organizational design",
+      "A soul that builds consciousness into form"
+    ],
+    "wisewaveGuidance": "You are not here to perfect the world. You are here to create the world. When you allow imperfection in, your life blueprint truly comes alive. Structure is not limitation; it is a vessel for soul expression.",
+    "color": "Deep gold light",
+    "totem": "Honeycomb (structural wisdom)",
+    "esotericLink": "Ptah · Master Builders",
+    "displayTitle": "S1-17 · The Architect",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-17"
+  },
+  "S1-18": {
+    "code": "S1-18",
+    "number": 18,
+    "englishTitle": "The Transformer",
+    "chineseTitle": "转化者",
+    "soulTraits": [
+      "Senses energetic change",
+      "Often experiences breakdowns that lead to renewal",
+      "Naturally carries deep alchemical capacity",
+      "Grows faster than many around them"
+    ],
+    "strengths": [
+      "Can move through low-frequency states",
+      "Guides others to face shadow",
+      "Naturally able to rebuild life structures"
+    ],
+    "shadows": [
+      "Easily falls into emotional depth",
+      "Mistakes pain for growth",
+      "Places pressure on the self as a constant practitioner"
+    ],
+    "coreLesson": "Learn to transform gently instead of forcing growth through pain.",
+    "soulDirection": [
+      "Healing, shadow work, energy transformation, and life coaching",
+      "A soul evolution accelerator"
+    ],
+    "wisewaveGuidance": "You are not here to suffer. You are here to rise in frequency. When you learn to transform with softness, your power becomes purer than fire. You are one who walks through darkness and brings light.",
+    "color": "Deep violet-fire light",
+    "totem": "Snake (path of shedding)",
+    "esotericLink": "Sekhmet · Transformation Flame",
+    "displayTitle": "S1-18 · The Transformer",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-18"
+  },
+  "S1-19": {
+    "code": "S1-19",
+    "number": 19,
+    "englishTitle": "The Communicator",
+    "chineseTitle": "传声者",
+    "soulTraits": [
+      "Language-sensitive and clear in expression",
+      "Naturally skilled in communication, teaching, writing, and speaking",
+      "Turns complex energy into simple understanding",
+      "Helps people hear themselves"
+    ],
+    "strengths": [
+      "Strong expressive influence",
+      "Precisely understands others’ viewpoints",
+      "Often becomes the voice within a team"
+    ],
+    "shadows": [
+      "Over-adapts to the audience",
+      "Uses expression instead of feeling",
+      "Fears that the voice will be ignored"
+    ],
+    "coreLesson": "Learn to speak truth, not only what makes others comfortable.",
+    "soulDirection": [
+      "Communication, teaching, writing, media, and consulting",
+      "A translator of consciousness on the spiritual path"
+    ],
+    "wisewaveGuidance": "Your voice is not here to be approved. It is here to transmit truth. When you are willing to speak authentically, you become a clear light in the world. What you speak is not merely language; it is frequency.",
+    "color": "Sky-blue light",
+    "totem": "Swallow (light message)",
+    "esotericLink": "Thoth · Messenger Lines",
+    "displayTitle": "S1-19 · The Communicator",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-19"
+  },
+  "S1-20": {
+    "code": "S1-20",
+    "number": 20,
+    "englishTitle": "The Heart-Centered",
+    "chineseTitle": "心觉者",
+    "soulTraits": [
+      "Extremely sensitive heart",
+      "Makes decisions through feeling, intuition, and resonance",
+      "Natural emotional wisdom",
+      "Sees the heart of others in interaction"
+    ],
+    "strengths": [
+      "Creates depth and sincerity in relationships",
+      "Heals emotion and connection",
+      "Guides others back to inner truth"
+    ],
+    "shadows": [
+      "Easily pulled by emotion",
+      "Over-opens in relationships",
+      "Compromises self from fear of losing connection"
+    ],
+    "coreLesson": "Learn to center on self-alignment rather than emotional reaction.",
+    "soulDirection": [
+      "Healing, counseling, relationship guidance, and emotional intelligence work",
+      "A guide of the heart path"
+    ],
+    "wisewaveGuidance": "Your heart is not weakness; it is your compass. When you act from clarity rather than emotion, life naturally returns to its path. You are not here to please the world, but to live your true heart.",
+    "color": "Rose-gold light (Heart Frequency)",
+    "totem": "Deer Heart (soft strength)",
+    "esotericLink": "Hathor · Heart Keepers",
+    "displayTitle": "S1-20 · The Heart-Centered",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-20"
+  },
+  "S1-21": {
+    "code": "S1-21",
+    "number": 21,
+    "englishTitle": "The Integrator",
+    "chineseTitle": "整合者",
+    "soulTraits": [
+      "Connects scattered information into complete structures",
+      "Sees the system behind the system",
+      "Stable insight and gentle guidance",
+      "Deep thinker who absorbs knowledge steadily"
+    ],
+    "strengths": [
+      "Integrates multiple fields, viewpoints, and energies",
+      "Brings clarity to chaos in teams",
+      "Turns spiritual wisdom into practical methods"
+    ],
+    "shadows": [
+      "Carries too much",
+      "Loses self while trying to integrate everything",
+      "Overly sensitive to incompleteness"
+    ],
+    "coreLesson": "Learn to integrate your own rhythm and energy before integrating the world.",
+    "soulDirection": [
+      "Strategy, system design, healing, organizational coordination, and coaching",
+      "A representative of holistic consciousness"
+    ],
+    "wisewaveGuidance": "The world is not asking you to carry it; it is asking you to choose. When you first integrate your own being, you can guide others back to wholeness. Integration is not collecting; it is letting truth return to its place.",
+    "color": "Deep lake-blue light (Inner Order Frequency)",
+    "totem": "Octopus (multidimensional integration)",
+    "esotericLink": "Thoth · System Keepers",
+    "displayTitle": "S1-21 · The Integrator",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-21"
+  },
+  "S1-22": {
+    "code": "S1-22",
+    "number": 22,
+    "englishTitle": "The Gentle Power",
+    "chineseTitle": "柔力者",
+    "soulTraits": [
+      "Gentle in presence yet powerful within",
+      "Changes others through invisible strength",
+      "Does not compete but steadily influences the environment",
+      "Naturally healing in presence"
+    ],
+    "strengths": [
+      "Stays clear in conflict",
+      "Naturally stabilizes people nearby",
+      "A quiet yet extremely powerful soul"
+    ],
+    "shadows": [
+      "Fears being seen in power",
+      "Over-yields and loses energetic balance",
+      "Uses softness to hide the self"
+    ],
+    "coreLesson": "Learn to let power become visible instead of continuing to disguise it as gentleness.",
+    "soulDirection": [
+      "Education, healing, guidance, and team culture building",
+      "A frequency stabilizer in spiritual work"
+    ],
+    "wisewaveGuidance": "You are not weak; you are used to not showing your strength. When you are willing to be seen, your soul opens into a new layer of light. Softness is not retreat; it is a deep form of power.",
+    "color": "Milky white-gold light",
+    "totem": "White Horse (gentle strength)",
+    "esotericLink": "Hathor · Soft Power Line",
+    "displayTitle": "S1-22 · The Gentle Power",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-22"
+  },
+  "S1-23": {
+    "code": "S1-23",
+    "number": 23,
+    "englishTitle": "The Analyst",
+    "chineseTitle": "洞察者",
+    "soulTraits": [
+      "Quick-minded and logical",
+      "Rapidly deconstructs complex problems",
+      "Highly sensitive to why",
+      "Sees hidden patterns, laws, and blind spots"
+    ],
+    "strengths": [
+      "Strong problem-solving ability",
+      "Skilled in strategy, research, and analysis",
+      "The clear thinker in a team"
+    ],
+    "shadows": [
+      "Overly rational and neglects feeling",
+      "Easily over-analyzes",
+      "Uses logic to protect from vulnerability"
+    ],
+    "coreLesson": "Learn to let logic and intuition coexist, allowing the heart to join your wisdom.",
+    "soulDirection": [
+      "Strategy, psychology, data analysis, consulting, and coaching",
+      "One who sees structure on the awakening path"
+    ],
+    "wisewaveGuidance": "Your mind is strong, but your heart also wants to join the conversation. When you let feeling and insight work together, your wisdom becomes dimensional. You are not someone who analyzes the world; you are someone who understands it.",
+    "color": "Silver-gray-blue light (Clarity Frequency)",
+    "totem": "Eagle Eye (precise insight)",
+    "esotericLink": "Thoth · Mind Clarity Line",
+    "displayTitle": "S1-23 · The Analyst",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-23"
+  },
+  "S1-24": {
+    "code": "S1-24",
+    "number": 24,
+    "englishTitle": "The Radiant Soul",
+    "chineseTitle": "光耀者",
+    "soulTraits": [
+      "Naturally carries radiance, charm, and warmth",
+      "Attracts attention wherever they go",
+      "Can light up, uplift, and inspire others",
+      "A natural energy amplifier"
+    ],
+    "strengths": [
+      "Quickly elevates the energy of a space",
+      "Strong infectious presence",
+      "Brings hope in relationships"
+    ],
+    "shadows": [
+      "Overly concerned with others’ opinions",
+      "Treats shining as an obligation",
+      "Uses light to cover fear and insecurity"
+    ],
+    "coreLesson": "Learn to let light radiate naturally rather than forcing an image.",
+    "soulDirection": [
+      "Motivation, expression, coaching, and community leadership",
+      "A soul who brings people back to light in spiritual work"
+    ],
+    "wisewaveGuidance": "Your light does not need proof; it simply exists. When you stop maintaining energy through performance, your soul becomes freer. True light is calm light.",
+    "color": "Golden sunlight",
+    "totem": "Lion (light and power)",
+    "esotericLink": "Ra · Sun Bearers",
+    "displayTitle": "S1-24 · The Radiant Soul",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-24"
+  },
+  "S1-25": {
+    "code": "S1-25",
+    "number": 25,
+    "englishTitle": "The Flow Walker",
+    "chineseTitle": "流动者",
+    "soulTraits": [
+      "Dislikes restriction",
+      "Life path often moves through flow and change",
+      "Highly adaptable",
+      "Creativity and inspiration renew like water"
+    ],
+    "strengths": [
+      "Finds opportunity in change",
+      "Skilled in cross-disciplinary work, free creation, and spiritual exploration",
+      "Influences others lightly"
+    ],
+    "shadows": [
+      "Easily avoids commitment",
+      "Lacks stable structure",
+      "Wants to leave when facing depth"
+    ],
+    "coreLesson": "Learn to establish anchors within flow instead of remaining forever ungrounded.",
+    "soulDirection": [
+      "Creative work, freelancing, art, travel, and inner exploration",
+      "A guide of change on the spiritual path"
+    ],
+    "wisewaveGuidance": "You are not drifting; you are exploring the many shapes of life. When you find your center, flow becomes strength rather than escape. Your path is the path of water.",
+    "color": "Ocean-blue light (Flow Frequency)",
+    "totem": "Dolphin (free wisdom)",
+    "esotericLink": "Nun · Water Origin Line",
+    "displayTitle": "S1-25 · The Flow Walker",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-25"
+  },
+  "S1-26": {
+    "code": "S1-26",
+    "number": 26,
+    "englishTitle": "The Visionary",
+    "chineseTitle": "远见者",
+    "soulTraits": [
+      "Innate future sense and intuitive insight",
+      "Sees possibilities where others cannot",
+      "Unrestricted thinking, often years ahead",
+      "Carries inspiration, creativity, and foresight"
+    ],
+    "strengths": [
+      "Can sense trends and create new paths",
+      "Especially powerful in early project phases",
+      "Inspires others to break old frameworks"
+    ],
+    "shadows": [
+      "Lives in the future and neglects the present",
+      "Ideas move faster than execution",
+      "Feels lonely when others do not understand"
+    ],
+    "coreLesson": "Let vision land instead of remaining only in high-dimensional inspiration.",
+    "soulDirection": [
+      "Innovation, spiritual development, future studies, and brand creation",
+      "A pioneer and path-opener on the soul path"
+    ],
+    "wisewaveGuidance": "Your inspiration comes from the future, and your power comes from the present. When you are willing to take the first step, the future naturally opens. You are a window of the times.",
+    "color": "Star-silver-blue light (Future Sight Frequency)",
+    "totem": "Hunting Falcon (far-sight and breakthrough)",
+    "esotericLink": "Horus · Vision Line",
+    "displayTitle": "S1-26 · The Visionary",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-26"
+  },
+  "S1-27": {
+    "code": "S1-27",
+    "number": 27,
+    "englishTitle": "The Rebuilder",
+    "chineseTitle": "重生者",
+    "soulTraits": [
+      "Can rebuild from collapse",
+      "Becomes stronger and deeper through difficulty",
+      "Often moves through dismantling and rebuilding cycles",
+      "Deep inner resilience"
+    ],
+    "strengths": [
+      "Rises quickly from life lows",
+      "Leads others back to strength from hardship",
+      "Deeply understands trauma, loss, and pain"
+    ],
+    "shadows": [
+      "Identifies with needing to go through difficulty",
+      "Unconsciously attracts relationships that need repair",
+      "Treats pain as necessary for growth"
+    ],
+    "coreLesson": "Allow ease to also be a form of rebirth.",
+    "soulDirection": [
+      "Healing, trauma work, soul guidance, and mission coaching",
+      "A rebuilder of light from brokenness on the spiritual path"
+    ],
+    "wisewaveGuidance": "You are not strong because of pain; you are strong because the deepest structure of your soul is light. When you allow ease to enter, life no longer needs to move forward through breaking.",
+    "color": "Deep red-gold light (Rebirth Frequency)",
+    "totem": "Phoenix (rising from ashes)",
+    "esotericLink": "Bennu · Rebirth Line",
+    "displayTitle": "S1-27 · The Rebuilder",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-27"
+  },
+  "S1-28": {
+    "code": "S1-28",
+    "number": 28,
+    "englishTitle": "The Quantum Mind",
+    "chineseTitle": "量域者",
+    "soulTraits": [
+      "Thinks multidimensionally",
+      "Explores consciousness, the cosmos, and complex systems",
+      "Nonlinear, cross-domain, and fast-moving mind",
+      "Naturally reads frequency"
+    ],
+    "strengths": [
+      "Sees the energetic logic behind systems",
+      "Skilled in spiritual technology, consciousness models, and abstract concepts",
+      "Captures essence within chaos"
+    ],
+    "shadows": [
+      "Mind moves too fast and may not be understood",
+      "Feels uncomfortable in practical structures",
+      "May escape into knowledge to avoid emotional depth"
+    ],
+    "coreLesson": "Let your wisdom bring you back to the body instead of away from it.",
+    "soulDirection": [
+      "SoulTech, consciousness theory, and model building",
+      "A natural researcher archetype of the Wisewave system"
+    ],
+    "wisewaveGuidance": "Your wisdom comes from many dimensions, but you exist in this moment. When you bring consciousness back to the body, insight becomes power instead of escape.",
+    "color": "Quantum violet light (Quantum Field Frequency)",
+    "totem": "Spiderweb (multidimensional connective structure)",
+    "esotericLink": "Metatron · Geometry Lines",
+    "displayTitle": "S1-28 · The Quantum Mind",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-28"
+  },
+  "S1-29": {
+    "code": "S1-29",
+    "number": 29,
+    "englishTitle": "The Innovator",
+    "chineseTitle": "创新者",
+    "soulTraits": [
+      "Dislikes old frameworks",
+      "Strong creative impulse",
+      "Sees new possibilities faster than problems",
+      "Disruptive, experimental, and curious"
+    ],
+    "strengths": [
+      "Breaks through industry, cultural, or spiritual frameworks",
+      "A natural problem solver",
+      "Becomes stronger in change"
+    ],
+    "shadows": [
+      "Easily bored by stable structures",
+      "Wants to escape when limitations are too strong",
+      "Gets pulled into new inspiration before completing old projects"
+    ],
+    "coreLesson": "Give innovation structure so it becomes power rather than chaos.",
+    "soulDirection": [
+      "Entrepreneurship, strategy, product innovation, spiritual creativity, and R&D",
+      "A creator of new realities"
+    ],
+    "wisewaveGuidance": "You are not here to adapt to the world; you are here to redesign it. When you allow yourself to focus, your innovation becomes a true breakthrough.",
+    "color": "Bright orange-gold light (Creation Frequency)",
+    "totem": "Lightning (instant innovation)",
+    "esotericLink": "Ptah · Creator Line",
+    "displayTitle": "S1-29 · The Innovator",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-29"
+  },
+  "S1-30": {
+    "code": "S1-30",
+    "number": 30,
+    "englishTitle": "The Soul Healer",
+    "chineseTitle": "灵魂疗愈者",
+    "soulTraits": [
+      "Extremely high feeling capacity",
+      "Naturally understands others’ pain, fears, and longings",
+      "Carries a gentle, deep, stable healing field",
+      "Helps people lower their defenses"
+    ],
+    "strengths": [
+      "Helps others feel seen",
+      "Skilled in emotional healing, soul repair, and energy integration",
+      "Creates safety in relationships"
+    ],
+    "shadows": [
+      "Over-carries others’ emotions",
+      "Believes they must help everyone",
+      "Neglects energetic boundaries"
+    ],
+    "coreLesson": "Healing yourself is the source of healing.",
+    "soulDirection": [
+      "Healing practitioner, psychological counseling, energy work, and soul guidance",
+      "A guide who helps broken souls return home"
+    ],
+    "wisewaveGuidance": "You are not here to bear others’ pain for them. You are here to illuminate their strength. When you take care of yourself first, your healing becomes true light.",
+    "color": "Soft rose-violet light (Healing Frequency)",
+    "totem": "Whale (deep emotional wisdom)",
+    "esotericLink": "Isis · Healing Line",
+    "displayTitle": "S1-30 · The Soul Healer",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-30"
+  },
+  "S1-31": {
+    "code": "S1-31",
+    "number": 31,
+    "englishTitle": "The Gatekeeper",
+    "chineseTitle": "门之守望者",
+    "soulTraits": [
+      "Has channel-like intuition",
+      "Senses energetic opening, closing, alignment, and timing",
+      "A soul who understands boundaries and permission within groups",
+      "Highly sensitive to the energy of people, events, and spaces"
+    ],
+    "strengths": [
+      "Distinguishes true opportunities from illusion",
+      "Naturally guards the purity and boundaries of systems",
+      "Skilled at filtering and energetic gatekeeping"
+    ],
+    "shadows": [
+      "Rejects the world because of sensitivity",
+      "Overprotects the self and closes energy",
+      "Mistakes guarding for isolation"
+    ],
+    "coreLesson": "Guarding is not rejection; it is allowing truth to enter and illusion to leave.",
+    "soulDirection": [
+      "Spiritual advising, system guardianship, energy management, and filter design",
+      "A boundary holder in spiritual systems"
+    ],
+    "wisewaveGuidance": "Your task is not to close every door, but to recognize which door leads to truth. When you trust your intuition, you become a filtering light in the world.",
+    "color": "Deep cobalt blue (Boundary Frequency)",
+    "totem": "Wolf (guardianship and awareness)",
+    "esotericLink": "Anubis · Gate Keepers",
+    "displayTitle": "S1-31 · The Gatekeeper",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-31"
+  },
+  "S1-32": {
+    "code": "S1-32",
+    "number": 32,
+    "englishTitle": "The Illuminator",
+    "chineseTitle": "启明者",
+    "soulTraits": [
+      "Naturally illuminates blind spots",
+      "Helps others see truth without trying",
+      "Accurate intuition that reaches the core",
+      "Naturally understands spirituality and learns quickly"
+    ],
+    "strengths": [
+      "Can awaken, clarify, and bring realization",
+      "A natural vessel for spiritual teaching and consciousness elevation",
+      "Translates higher-dimensional wisdom"
+    ],
+    "shadows": [
+      "Easily disappointed in those unwilling to awaken",
+      "Very sensitive to dishonesty",
+      "Over-carries the responsibility to illuminate others"
+    ],
+    "coreLesson": "You do not need to awaken everyone. You only need to illuminate those who are ready.",
+    "soulDirection": [
+      "Teaching, spiritual guidance, awareness training, and Wisewave-style frequency work",
+      "A source of consciousness light"
+    ],
+    "wisewaveGuidance": "Your light is not a weapon; it is an invitation. When you release the need to make others change, your light becomes truly powerful.",
+    "color": "Solar-gold light (Illumination Frequency)",
+    "totem": "Candle flame (the fire that awakens)",
+    "esotericLink": "Ra · Light Bringers",
+    "displayTitle": "S1-32 · The Illuminator",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-32"
+  },
+  "S1-33": {
+    "code": "S1-33",
+    "number": 33,
+    "englishTitle": "The Empath Oracle",
+    "chineseTitle": "感知神谕者",
+    "soulTraits": [
+      "Extremely high emotional intuition; hears the voice of the heart",
+      "Easily empathizes with others’ longings, sadness, and fears",
+      "Carries oracle-like capacity to read energy flow",
+      "Sensitive to the invisible world"
+    ],
+    "strengths": [
+      "Skilled in emotional healing, inner child repair, and soul counseling",
+      "Brings deep truth through softness",
+      "A communicator of heart wisdom"
+    ],
+    "shadows": [
+      "Easily absorbs others’ emotions",
+      "Gets overwhelmed when boundaries are unclear",
+      "Emotional sensitivity becomes a burden"
+    ],
+    "coreLesson": "Stay perceptive without carrying everything.",
+    "soulDirection": [
+      "Emotional intelligence coaching, counseling, energy reading, and heart healing",
+      "An emotional oracle in spiritual systems"
+    ],
+    "wisewaveGuidance": "What you feel is not always yours to carry. When you turn empathy into wisdom rather than burden, your perception becomes a gift.",
+    "color": "Soft pink-gold light (Heart Oracle Frequency)",
+    "totem": "Rabbit (sensitive perception)",
+    "esotericLink": "Hathor · Emotional Oracle Line",
+    "displayTitle": "S1-33 · The Empath Oracle",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-33"
+  },
+  "S1-34": {
+    "code": "S1-34",
+    "number": 34,
+    "englishTitle": "The Reformer",
+    "chineseTitle": "改革者",
+    "soulTraits": [
+      "Strong pursuit of truth, order, and integrity",
+      "Sees what is wrong faster than others",
+      "Naturally critical, improving, and optimizing",
+      "Holds very high standards for the self"
+    ],
+    "strengths": [
+      "Moves teams forward",
+      "Skilled in system reform, process optimization, and value-system building",
+      "A force of truth-restoration on the spiritual path"
+    ],
+    "shadows": [
+      "Falls into perfectionism",
+      "Overly strict with self",
+      "Carries the task of changing the world too heavily"
+    ],
+    "coreLesson": "Allow the world to be imperfect, and allow yourself to be imperfect too.",
+    "soulDirection": [
+      "Reform, system review, leadership, value restructuring, and spiritual truth work",
+      "An energetic source that removes falsehood and restores truth"
+    ],
+    "wisewaveGuidance": "Your impulse to correct the world comes from your purity. When you first treat yourself with gentleness, you can truly change the world.",
+    "color": "Deep red-gold light (Truth Enforcement Frequency)",
+    "totem": "Qilin (justice and purity)",
+    "esotericLink": "Ma’at · Truth Restorers",
+    "displayTitle": "S1-34 · The Reformer",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-34"
+  },
+  "S1-35": {
+    "code": "S1-35",
+    "number": 35,
+    "englishTitle": "The Soul Navigator",
+    "chineseTitle": "灵魂领航者",
+    "soulTraits": [
+      "Steady intuition and strong sense of direction",
+      "Naturally knows where to go",
+      "Guides others out of fog",
+      "Deeply senses life paths, choices, and destiny"
+    ],
+    "strengths": [
+      "Decisive and accurate",
+      "Becomes a lighthouse of direction for lost groups",
+      "Skilled in mission exploration, life planning, and soul path guidance"
+    ],
+    "shadows": [
+      "Easily decides directions for others",
+      "Carries too much responsibility",
+      "Forgets one’s own path"
+    ],
+    "coreLesson": "Navigate yourself first, then navigate the world.",
+    "soulDirection": [
+      "Soul coaching, mentoring, path guidance, and life direction consulting",
+      "A path guardian in spiritual systems"
+    ],
+    "wisewaveGuidance": "You can see the road, but do not forget to return to your own feet. When your direction comes from within rather than responsibility, you become a true guide.",
+    "color": "Star indigo (Navigation Frequency)",
+    "totem": "Sea Turtle (direction and steadiness)",
+    "esotericLink": "Nut · Path Finders",
+    "displayTitle": "S1-35 · The Soul Navigator",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-35"
+  },
+  "S1-36": {
+    "code": "S1-36",
+    "number": 36,
+    "englishTitle": "The Frequency Weaver",
+    "chineseTitle": "频率编织者",
+    "soulTraits": [
+      "Naturally senses the energetic state of a field",
+      "Skilled at bringing people and things into resonance",
+      "Finds hidden order in apparent chaos",
+      "Unique connective, coordinating, and tuning ability"
+    ],
+    "strengths": [
+      "Aligns team energy toward one direction",
+      "Creates harmony, collaboration, and synchronization",
+      "A designer of energy flow on the spiritual path"
+    ],
+    "shadows": [
+      "Sacrifices self to maintain energy",
+      "Overworks in misaligned environments",
+      "Treats every imbalance as personal responsibility"
+    ],
+    "coreLesson": "Let energy flow naturally instead of forcing it together through yourself.",
+    "soulDirection": [
+      "Team frequency tuning, relationship coordination, energy healing, and organizational culture design",
+      "A weaver of frequency patterns"
+    ],
+    "wisewaveGuidance": "You are not here to repair energy. You are here to guide energy back into natural flow. When you release control, the universe takes over what you cannot weave alone.",
+    "color": "Starlight pale violet (Resonance Frequency)",
+    "totem": "Web-weaving spider (wisdom of connection)",
+    "esotericLink": "Metatron · Frequency Weavers",
+    "displayTitle": "S1-36 · The Frequency Weaver",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-36"
+  },
+  "S1-37": {
+    "code": "S1-37",
+    "number": 37,
+    "englishTitle": "The Willpower Flame",
+    "chineseTitle": "意志火焰者",
+    "soulTraits": [
+      "Extremely strong will and action capacity",
+      "Clear goals, fast execution, rarely gives up",
+      "Strong vitality and fighting spirit",
+      "Moves groups forward with force"
+    ],
+    "strengths": [
+      "Turns ideas into results",
+      "Breaks through bottlenecks and resistance",
+      "Sustained endurance and fire for mission"
+    ],
+    "shadows": [
+      "Overexerts and ignores physical and emotional limits",
+      "Mistakes persistence for attachment",
+      "Unconsciously turns life into a battlefield"
+    ],
+    "coreLesson": "Use power, not force; use flame, not burnout.",
+    "soulDirection": [
+      "Entrepreneurship, leadership, coaching, project execution, and tactical coordination",
+      "An embodiment of will on the spiritual path"
+    ],
+    "wisewaveGuidance": "Your flame is not here to burn you out. It is here to illuminate the road. When you learn to hold power with softness, your fire becomes more lasting and pure.",
+    "color": "Blazing gold-red (Willpower Frequency)",
+    "totem": "Wolf Fire (perseverance and direction)",
+    "esotericLink": "Sekhmet · Fire Line",
+    "displayTitle": "S1-37 · The Willpower Flame",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-37"
+  },
+  "S1-38": {
+    "code": "S1-38",
+    "number": 38,
+    "englishTitle": "The Soul Listener",
+    "chineseTitle": "灵魂聆听者",
+    "soulTraits": [
+      "Gifted in deep listening",
+      "Understands the words behind the words",
+      "Often hears soul-level information in interaction",
+      "Wisdom in silence"
+    ],
+    "strengths": [
+      "Skilled in one-on-one deep accompaniment, counseling, and healing",
+      "Gently helps others speak truth",
+      "Makes others feel safe, understood, and seen"
+    ],
+    "shadows": [
+      "Becomes an emotional outlet for others",
+      "Fears expressing true needs",
+      "Uses listening to hide vulnerability"
+    ],
+    "coreLesson": "As you listen to the world, also listen to yourself.",
+    "soulDirection": [
+      "Counseling, healing, soul coaching, and relational accompaniment",
+      "A silent guide in spiritual systems"
+    ],
+    "wisewaveGuidance": "Your ears hear the world, but your heart also longs to be heard. When you allow your own voice to appear, your listening becomes true power.",
+    "color": "Deep green light (Presence Frequency)",
+    "totem": "Deer (quietness and listening)",
+    "esotericLink": "Isis · Sacred Listener Line",
+    "displayTitle": "S1-38 · The Soul Listener",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-38"
+  },
+  "S1-39": {
+    "code": "S1-39",
+    "number": 39,
+    "englishTitle": "The Stabilizer",
+    "chineseTitle": "稳定者",
+    "soulTraits": [
+      "Keeps calm in chaos",
+      "Naturally acts as a center of gravity",
+      "Others instinctively move toward and rely on you",
+      "Grounded, stable, patient energy"
+    ],
+    "strengths": [
+      "Maintains order in crisis",
+      "Provides emotional, decision-making, and structural stability",
+      "Strong in long-term projects and sustained building"
+    ],
+    "shadows": [
+      "Receives too much responsibility",
+      "Mistakes stability for maintaining everyone’s state",
+      "Fears change"
+    ],
+    "coreLesson": "Stability is not restriction; it is the source point of your power.",
+    "soulDirection": [
+      "Structural management, long-term projects, family systems, and team support",
+      "An earth-frequency guardian on the spiritual path"
+    ],
+    "wisewaveGuidance": "Your steadiness is not a burden; it is a blessing. When you allow yourself to be supported too, your stability becomes deeper and freer.",
+    "color": "Earth brown-gold (Ground Frequency)",
+    "totem": "Elephant (steady, deep, enduring)",
+    "esotericLink": "Geb · Earth Keepers",
+    "displayTitle": "S1-39 · The Stabilizer",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-39"
+  },
+  "S1-40": {
+    "code": "S1-40",
+    "number": 40,
+    "englishTitle": "The Inner Sage",
+    "chineseTitle": "内在智者",
+    "soulTraits": [
+      "Naturally carries a wisdom frequency and intuitive understanding",
+      "Sees the essence without needing much input",
+      "Mature thinking, deep insight, quick spiritual understanding",
+      "Often seen as wise by others"
+    ],
+    "strengths": [
+      "Sees the laws and truths of life",
+      "Suited to deep guidance of mind and soul",
+      "Offers clarity and direction in chaotic times"
+    ],
+    "shadows": [
+      "Given the role of always being the teacher",
+      "Uses wisdom as a shield and avoids weakness",
+      "Strong sense of loneliness"
+    ],
+    "coreLesson": "Wisdom is to be shared, not carried as responsibility.",
+    "soulDirection": [
+      "Teaching, philosophy, spiritual research, and insight-based guidance",
+      "A carrier of truth in spiritual systems"
+    ],
+    "wisewaveGuidance": "Your wisdom comes from every life you have lived, not from the role you carry. When you allow yourself to be human, your wisdom gains warmth.",
+    "color": "Deep violet-gold light (Sage Frequency)",
+    "totem": "Owl (wisdom in the night)",
+    "esotericLink": "Thoth · Inner Sage Line",
+    "displayTitle": "S1-40 · The Inner Sage",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-40"
+  },
+  "S1-41": {
+    "code": "S1-41",
+    "number": 41,
+    "englishTitle": "The Cosmic Bridge",
+    "chineseTitle": "宇宙桥接者",
+    "soulTraits": [
+      "Acts as a bridge between two worlds",
+      "Understands spirituality and reality, energy and logic at once",
+      "Translates, integrates, and unifies different levels of consciousness",
+      "Often a connector, cross-boundary figure, and integrator in groups"
+    ],
+    "strengths": [
+      "Turns higher-dimensional wisdom into understandable language",
+      "Simplifies complex thoughts, systems, and knowledge",
+      "Integrates wisdom from different cultures, disciplines, and spiritual traditions"
+    ],
+    "shadows": [
+      "Over-carries by becoming everyone’s bridge",
+      "Feels responsible for communicating all dimensions for the world",
+      "Loses center through excessive crossing of boundaries"
+    ],
+    "coreLesson": "Let connection arise naturally, not from responsibility.",
+    "soulDirection": [
+      "Cross-disciplinary leadership, SoulTech, and work that bridges healing with reality",
+      "A bridge soul for transitions between eras"
+    ],
+    "wisewaveGuidance": "You are not here to be everyone’s bridge. You are here to open the right doors. When you first connect with your own center, you can truly connect the world.",
+    "color": "Rainbow white-gold (Bridging Frequency)",
+    "totem": "Jellyfish (cross-dimensional flow)",
+    "esotericLink": "Amenti · Cosmic Translators",
+    "displayTitle": "S1-41 · The Cosmic Bridge",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-41"
+  },
+  "S1-42": {
+    "code": "S1-42",
+    "number": 42,
+    "englishTitle": "The Ascension Flame",
+    "chineseTitle": "承光者",
+    "soulTraits": [
+      "Carries a strong high-frequency uplifting force",
+      "Automatically elevates others’ consciousness in a field",
+      "Life themes revolve around awakening, elevation, and multidimensional growth",
+      "Highly sensitive to truth, purity, and light frequency"
+    ],
+    "strengths": [
+      "A frequency-lift point in awakening groups",
+      "Helps others transcend illusion and break through old karmic patterns",
+      "Becomes illuminated in high-energy environments"
+    ],
+    "shadows": [
+      "Feels lonely because the light is strong",
+      "Does not want to be disturbed by low-frequency energy",
+      "May be too far ahead for reality to follow"
+    ],
+    "coreLesson": "Let your light land instead of remaining suspended above life.",
+    "soulDirection": [
+      "Spiritual mentoring, awakening guidance, energy upgrading, and Soul Frequency teachings",
+      "An extender of light in spiritual systems"
+    ],
+    "wisewaveGuidance": "Your light is not here to make you fly away from the world. It is here to illuminate the world. When you are willing to meet reality, your ascension becomes more real and stable.",
+    "color": "Pure white-gold light (Ascension Frequency)",
+    "totem": "Celestial Phoenix (fire of ascension)",
+    "esotericLink": "Seraphim · Light Flames",
+    "displayTitle": "S1-42 · The Ascension Flame",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-42"
+  },
+  "S1-43": {
+    "code": "S1-43",
+    "number": 43,
+    "englishTitle": "The Destiny Weaver",
+    "chineseTitle": "命运编织者",
+    "soulTraits": [
+      "Sees clues in life trajectories",
+      "May sense the direction events are taking",
+      "Unique insight into cause and effect, karma, and soul paths",
+      "Precisely understands why others have arrived where they are"
+    ],
+    "strengths": [
+      "Guides others toward key choices that change life patterns",
+      "Skilled in lifecycle planning, life blueprint analysis, and soul contract interpretation",
+      "Often seen as a destiny mentor in groups"
+    ],
+    "shadows": [
+      "Easily decides too much for others",
+      "Mistakes seeing destiny for being responsible for destiny",
+      "Ignores personal path when seeing too much"
+    ],
+    "coreLesson": "Seeing destiny is not for control, but for awakening.",
+    "soulDirection": [
+      "Life blueprint coaching, Soul Origin Code reading, and karmic research",
+      "A weaver of destiny, not a manipulator of it"
+    ],
+    "wisewaveGuidance": "Your insight is a gift, not an instruction. When you allow others to walk their own path, your wisdom truly unfolds.",
+    "color": "Deep gold-violet (Fate Lines Frequency)",
+    "totem": "Spider (gold-thread seer)",
+    "esotericLink": "Norns · Weavers of Fate",
+    "displayTitle": "S1-43 · The Destiny Weaver",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-43"
+  },
+  "S1-44": {
+    "code": "S1-44",
+    "number": 44,
+    "englishTitle": "The Source Messenger",
+    "chineseTitle": "源之信使",
+    "soulTraits": [
+      "Extremely high soul purity",
+      "Naturally resonates with Source messages",
+      "Deep spiritual mission and a sense of being called back",
+      "Receives guidance, inspiration, or downloads from Source"
+    ],
+    "strengths": [
+      "Speaks truth that reaches directly into the soul",
+      "Carries revelatory, inspirational, and spiritual translation capacity",
+      "A Source-frequency amplifier in spiritual fields"
+    ],
+    "shadows": [
+      "Feels lonely because few understand",
+      "Mission becomes too heavy and life is forgotten",
+      "Mistakes being from Source for needing to be perfectly accurate"
+    ],
+    "coreLesson": "You are a messenger, and you are still human. Truth needs to flow, not be carried as a burden.",
+    "soulDirection": [
+      "Truth transmission, spiritual writing, Source-frequency guidance, and awareness system building",
+      "An earthly expression of Source frequency"
+    ],
+    "wisewaveGuidance": "You come with Source light, but you are not here to carry a burden. When you allow yourself to be light, natural, and real, your message becomes purer and more powerful.",
+    "color": "Source-white light (Origin Frequency)",
+    "totem": "White Feather (message from Source)",
+    "esotericLink": "The Source · Primordial Messengers",
+    "displayTitle": "S1-44 · The Source Messenger",
+    "segment": "S1",
+    "status": "approved",
+    "contentVersion": "s1-master-en-v1.0",
+    "sourceFile": "S1_Master_Database_canonical.md",
+    "lookupKey": "S1-44"
+  }
+}

@@ -1,40 +1,58 @@
 {
-  "_meta": {
-    "module": "S1 Origin Frequency",
-    "version": "1.0.0",
-    "updatedAt": "2026-05-28",
-    "language": "zh-primary-en-name",
-    "source": "《1320 Soul Origin Code System》.txt"
-  },
   "1": {
     "id": "S1-01",
     "number": 1,
     "nameEn": "The Initiator",
     "nameZh": "破晓者",
-    "essenceZh": "你携带的是「破晓者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Initiator. Strong action orientation and fast intuition A natural path-opener Moves forward from inner drive Skilled at initiating, beginning new cycles, and reform",
+    "essenceZh": "你携带的是「破晓者」的原频。行动力强、直觉快速天生开路者以内在驱动力前进擅长启动、新局、改革",
+    "traitsEn": [
+      "Strong action orientation and fast intuition",
+      "A natural path-opener",
+      "Moves forward from inner drive",
+      "Skilled at initiating, beginning new cycles, and reform"
+    ],
     "traitsZh": [
       "行动力强、直觉快速",
       "天生开路者",
       "以内在驱动力前进",
       "擅长启动、新局、改革"
     ],
+    "strengthsEn": [
+      "Finds breakthrough points in chaos",
+      "Natural leadership",
+      "Moves stagnant energy forward"
+    ],
     "strengthsZh": [
       "在混乱中找到突破点",
       "天生领导力",
       "推动停滞能量向前流动"
+    ],
+    "shadowsEn": [
+      "Easily restless and impatient",
+      "Resists slowing down or stopping",
+      "Uses speed as a substitute for self-worth"
     ],
     "shadowsZh": [
       "容易躁动、缺乏耐心",
       "抗拒放慢、无法停下来",
       "以速度代替自我价值"
     ],
+    "lessonEn": "Learn to stabilize power through awareness, rather than accumulating self-worth through constant action.",
     "lessonZh": "学习以觉知稳定力量，而非以行动累积价值感。",
+    "directionEn": [
+      "Entrepreneurship, independent leadership, innovation, and pioneering work",
+      "In relationships, practice slowing down and co-creating"
+    ],
     "directionZh": [
       "适合开创事业、独立领导、创新工作",
       "在关系中需练习放慢脚步与共创"
     ],
-    "guidanceZh": "“你不是来证明速度的，你是来点亮方向的。\n当你停止用‘更多行动’证明自己，你会遇见真正的力量。\n你越能停下来倾听，你的道路就越自动加速。”",
+    "guidanceEn": "You are not here to prove speed. You are here to illuminate direction. When you stop proving yourself through more action, you meet real power. The more you pause and listen, the more your path naturally accelerates.",
+    "guidanceZh": "你不是来证明速度的，你是来点亮方向的。  \n当你停止用‘更多行动’证明自己，你会遇见真正的力量。  \n你越能停下来倾听，你的道路就越自动加速。",
+    "colorEn": "Golden-white light",
     "colorZh": "金白光",
+    "totemEn": "Dawn Eagle",
     "totemZh": "黎明之鹰",
     "symbolicLink": "Atum / First Flame",
     "keywords": []
@@ -44,30 +62,55 @@
     "number": 2,
     "nameEn": "The Bridge",
     "nameZh": "连接者",
-    "essenceZh": "你携带的是「连接者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Bridge. Gentle yet powerful Skilled at harmonizing conflict and difference Naturally becomes a bridge in relationships Can move between different worlds",
+    "essenceZh": "你携带的是「连接者」的原频。温和却有力量擅长调和冲突与差异自然而然成为“关系的桥梁”能在不同世界之间穿梭",
+    "traitsEn": [
+      "Gentle yet powerful",
+      "Skilled at harmonizing conflict and difference",
+      "Naturally becomes a bridge in relationships",
+      "Can move between different worlds"
+    ],
     "traitsZh": [
       "温和却有力量",
       "擅长调和冲突与差异",
       "自然而然成为“关系的桥梁”",
       "能在不同世界之间穿梭"
     ],
+    "strengthsEn": [
+      "Understands others' motivations well",
+      "Restores flow to complex relationships",
+      "Connects energies that appear opposite"
+    ],
     "strengthsZh": [
       "擅长理解他人动机",
       "让复杂的人际关系恢复流动",
       "能将两种看似对立的能量连接起来"
+    ],
+    "shadowsEn": [
+      "Over-empathizes and loses boundaries",
+      "Hesitates to express true needs",
+      "Fears that saying no will damage relationships"
     ],
     "shadowsZh": [
       "容易过度共情、迷失界限",
       "不敢表达真实需求",
       "担心自己一说“不”就会破坏关系"
     ],
+    "lessonEn": "Learn to protect the self instead of always being the one who supports everyone.",
     "lessonZh": "学习维护自我，而不是永远做那个“支持所有人”的人。",
+    "directionEn": [
+      "Communication, relationship guidance, and cross-disciplinary integration",
+      "Carries a natural healing capacity in spiritual work"
+    ],
     "directionZh": [
       "适合沟通、关系辅导、跨领域整合",
       "在灵性工作中具有天然的疗愈能力"
     ],
-    "guidanceZh": "“你不是来承担所有人的重量，而是来让世界恢复流动。\n当你允许自己拥有界限，你才能成为真正的连接者。\n你的温柔不是弱点，而是照亮人心的力量。”",
+    "guidanceEn": "You are not here to carry everyone’s weight. You are here to help the world return to flow. When you allow yourself to have boundaries, you become a true bridge. Your gentleness is not weakness; it is a light that reaches the heart.",
+    "guidanceZh": "你不是来承担所有人的重量，而是来让世界恢复流动。  \n当你允许自己拥有界限，你才能成为真正的连接者。  \n你的温柔不是弱点，而是照亮人心的力量。",
+    "colorEn": "Cyan-blue light",
     "colorZh": "青蓝光",
+    "totemEn": "White Deer (Bridge of Peace)",
     "totemZh": "白鹿（平和之桥）",
     "symbolicLink": "Hathor / Harmonic Weavers",
     "keywords": []
@@ -77,30 +120,55 @@
     "number": 3,
     "nameEn": "The Seer",
     "nameZh": "预见者",
-    "essenceZh": "你携带的是「预见者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Seer. Highly sensitive with sharp intuition Sees directions others cannot see Future-oriented with innovative thinking Thinks uniquely and does not simply follow the crowd",
+    "essenceZh": "你携带的是「预见者」的原频。高度敏感、直觉锐利能看见别人看不见的方向具未来感、创新思维思绪独特，不随波逐流",
+    "traitsEn": [
+      "Highly sensitive with sharp intuition",
+      "Sees directions others cannot see",
+      "Future-oriented with innovative thinking",
+      "Thinks uniquely and does not simply follow the crowd"
+    ],
     "traitsZh": [
       "高度敏感、直觉锐利",
       "能看见别人看不见的方向",
       "具未来感、创新思维",
       "思绪独特，不随波逐流"
     ],
+    "strengthsEn": [
+      "Exceptional insight",
+      "Recognizes trends, potential, and hidden motives",
+      "Strong expression in creative fields"
+    ],
     "strengthsZh": [
       "洞察力极高",
       "能识别趋势、潜能与隐形动机",
       "在创造性领域表现突出"
+    ],
+    "shadowsEn": [
+      "Overthinks easily",
+      "Feels too much and struggles to ground",
+      "Feels different from the world and may become lonely"
     ],
     "shadowsZh": [
       "容易过度思考",
       "感受太多、难以落地",
       "觉得自己与世界不同，产生孤独感"
     ],
+    "lessonEn": "Ground insight, turn feeling into direction, and bring spirituality into reality.",
     "lessonZh": "把洞察落地，把感觉变成方向，把灵性放进现实。",
+    "directionEn": [
+      "Strategy, innovation, art, and spiritual research",
+      "Can become a high-frequency guide who supports others’ awakening"
+    ],
     "directionZh": [
       "适合策略、创新、艺术、灵性研究",
       "能成为指导他人觉醒的高频引导者"
     ],
-    "guidanceZh": "“你的眼睛看得太远，所以常常忘了你的脚在哪里。\n当你让洞察穿过身体落地，你的愿景会自然成形。\n你不是来逃离世界，而是来为世界带来新看法。”",
+    "guidanceEn": "Your eyes see far ahead, so you often forget where your feet are. When you let insight move through the body and land, your vision naturally takes form. You are not here to escape the world, but to bring the world a new way of seeing.",
+    "guidanceZh": "你的眼睛看得太远，所以常常忘了你的脚在哪里。  \n当你让洞察穿过身体落地，你的愿景会自然成形。  \n你不是来逃离世界，而是来为世界带来新看法。",
+    "colorEn": "Violet obsidian light",
     "colorZh": "紫曜光",
+    "totemEn": "Black-feathered Crow (Eye of Deep Seeing)",
     "totemZh": "黑羽乌鸦（深见之眼）",
     "symbolicLink": "Isis · The Vision Keepers",
     "keywords": []
@@ -110,30 +178,55 @@
     "number": 4,
     "nameEn": "The Stabilizer",
     "nameZh": "稳定者",
-    "essenceZh": "你携带的是「稳定者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Stabilizer. Grounded, reliable, and able to hold pressure A steady anchor for teams and family Great patience and structural capacity Works steadily, deeply, slowly, and precisely",
+    "essenceZh": "你携带的是「稳定者」的原频。踏实、可靠、能承载压力是团队与家人的“定海神针”有强大耐心与结构能力做事稳、深、慢、准",
+    "traitsEn": [
+      "Grounded, reliable, and able to hold pressure",
+      "A steady anchor for teams and family",
+      "Great patience and structural capacity",
+      "Works steadily, deeply, slowly, and precisely"
+    ],
     "traitsZh": [
       "踏实、可靠、能承载压力",
       "是团队与家人的“定海神针”",
       "有强大耐心与结构能力",
       "做事稳、深、慢、准"
     ],
+    "strengthsEn": [
+      "Provides safety for others",
+      "Systematizes and structures chaos",
+      "Strong in long-term projects and sustained growth"
+    ],
     "strengthsZh": [
       "为他人提供安全感",
       "能把混乱系统化、结构化",
       "擅长长期项目与持续性成长"
+    ],
+    "shadowsEn": [
+      "Fears change and resists uncertainty",
+      "Over-carries and suppresses needs",
+      "Mistakes stability for never making mistakes"
     ],
     "shadowsZh": [
       "害怕改变、抗拒不确定",
       "容易过度承担、压抑需求",
       "误以为“稳定＝不能出错”"
     ],
+    "lessonEn": "Learn to remain flexible within stability, allowing structure to serve the soul instead of restricting it.",
     "lessonZh": "学会在稳定中保持灵活，让结构服务灵魂，而不是束缚灵魂。",
+    "directionEn": [
+      "Organization, management, education, healing, and finance",
+      "A foundational frequency guardian in teams"
+    ],
     "directionZh": [
       "适合组织管理、教育、疗愈、财务",
       "是多数团队的“基础频率守护者”"
     ],
-    "guidanceZh": "“你不需要永远做那个稳住一切的人。\n当你允许自己松开一点点，你的生命反而会变得更轻盈。\n稳定不是负担，而是一种温柔的力量。”",
+    "guidanceEn": "You do not need to always be the one who holds everything together. When you allow yourself to loosen even a little, life becomes lighter. Stability is not a burden; it is a gentle kind of strength.",
+    "guidanceZh": "你不需要永远做那个稳住一切的人。  \n当你允许自己松开一点点，你的生命反而会变得更轻盈。  \n稳定不是负担，而是一种温柔的力量。",
+    "colorEn": "Earth-brown light",
     "colorZh": "大地棕光",
+    "totemEn": "Turtle (Stability and Bearing)",
     "totemZh": "龟（稳固与承载）",
     "symbolicLink": "Geb · Foundation Bearers",
     "keywords": []
@@ -143,30 +236,55 @@
     "number": 5,
     "nameEn": "The Catalyst",
     "nameZh": "催化者",
-    "essenceZh": "你携带的是「催化者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Catalyst. Carries strong influence Changes the energy of a space upon entering Naturally suited to breakthrough, disruption, and activating potential Carries a frequency that activates others",
+    "essenceZh": "你携带的是「催化者」的原频。有强烈影响力进入一个空间就会让能量改变天生适合破局、突破、激发潜能带有“激活他人”的频率",
+    "traitsEn": [
+      "Carries strong influence",
+      "Changes the energy of a space upon entering",
+      "Naturally suited to breakthrough, disruption, and activating potential",
+      "Carries a frequency that activates others"
+    ],
     "traitsZh": [
       "有强烈影响力",
       "进入一个空间就会让能量改变",
       "天生适合破局、突破、激发潜能",
       "带有“激活他人”的频率"
     ],
+    "strengthsEn": [
+      "Awakens and inspires others",
+      "Moves teams forward",
+      "Has powerful breakthrough energy at critical moments"
+    ],
     "strengthsZh": [
       "能点醒他人、启发他人",
       "带动团队前进",
       "在关键时刻具有强力突破能量"
+    ],
+    "shadowsEn": [
+      "May make others feel pressured",
+      "Strong energy can be misunderstood",
+      "Often awakens others while neglecting the self"
     ],
     "shadowsZh": [
       "容易让他人感到压力",
       "能量过强导致误解",
       "常常“点醒别人，却忽略自己”"
     ],
+    "lessonEn": "Learn to stabilize your own energy before activating others.",
     "lessonZh": "学习在激发他人之前，先稳住自己的能量。",
+    "directionEn": [
+      "Teaching, coaching, healing, entrepreneurship, and public expression",
+      "A soul accelerator who helps others cross thresholds"
+    ],
     "directionZh": [
       "适合教学、教练、疗愈、创业、公众表达",
       "是“灵魂加速器”，能帮助他人跨越瓶颈"
     ],
-    "guidanceZh": "“你的力量不是用来冲破他人，而是用来点亮他人。\n当你先安住自己，你的存在就会成为最大的催化。\n你不是火焰的破坏者，而是火焰的唤醒者。”",
+    "guidanceEn": "Your power is not here to break through others, but to illuminate them. When you first settle within yourself, your presence becomes the greatest catalyst. You are not the destroyer of flame; you are the awakener of flame.",
+    "guidanceZh": "你的力量不是用来冲破他人，而是用来点亮他人。  \n当你先安住自己，你的存在就会成为最大的催化。  \n你不是火焰的破坏者，而是火焰的唤醒者。",
+    "colorEn": "Fiery red light",
     "colorZh": "火红光",
+    "totemEn": "Phoenix (Burning the old, birthing the new)",
     "totemZh": "凤凰（焚旧生新）",
     "symbolicLink": "Sekhmet · Fire Transformations",
     "keywords": []
@@ -176,30 +294,55 @@
     "number": 6,
     "nameEn": "The Healer",
     "nameZh": "愈合者",
-    "essenceZh": "你携带的是「愈合者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Healer. Highly feeling-oriented Reads the emotional depths of others Naturally soothing energy Brings warmth and repair into chaos",
+    "essenceZh": "你携带的是「愈合者」的原频。高度感受性能读取他人情绪深处天生具有安抚能量在混乱中带来温暖与修复",
+    "traitsEn": [
+      "Highly feeling-oriented",
+      "Reads the emotional depths of others",
+      "Naturally soothing energy",
+      "Brings warmth and repair into chaos"
+    ],
     "traitsZh": [
       "高度感受性",
       "能读取他人情绪深处",
       "天生具有安抚能量",
       "在混乱中带来温暖与修复"
     ],
+    "strengthsEn": [
+      "Can heal, listen, and hold space",
+      "Highly intuitive emotional insight",
+      "People naturally relax in your presence"
+    ],
     "strengthsZh": [
       "能疗愈、能倾听、能容纳",
       "直觉性极强的情绪洞察",
       "让人接近后自然放松"
+    ],
+    "shadowsEn": [
+      "Easily carries others’ emotions",
+      "Uses caring for others to avoid caring for the self",
+      "Fears expressing personal needs"
     ],
     "shadowsZh": [
       "容易承担他人情绪",
       "以“照顾别人”逃避照顾自己",
       "害怕表达自身需求"
     ],
+    "lessonEn": "Learn to call your energy back to yourself instead of constantly becoming a shelter for others.",
     "lessonZh": "学习把能量收回自己，而不是不断成为他人的避风港。",
+    "directionEn": [
+      "Healing, counseling, education, and intimacy guidance",
+      "An energetic tuner within teams"
+    ],
     "directionZh": [
       "适合疗愈、咨询、教育、亲密关系引导",
       "在团队中是“能量调频者”"
     ],
-    "guidanceZh": "“你不是所有人的药，你不是世界必须依赖的光。\n当你愿意把温柔留给自己，你的疗愈才真正开始。\n修复别人之前，请先拥抱你自己。”",
+    "guidanceEn": "You are not everyone’s medicine. You are not the light the world must depend on. When you are willing to keep tenderness for yourself, your healing truly begins. Before repairing others, embrace yourself first.",
+    "guidanceZh": "你不是所有人的药，你不是世界必须依赖的光。  \n当你愿意把温柔留给自己，你的疗愈才真正开始。  \n修复别人之前，请先拥抱你自己。",
+    "colorEn": "Water-green light (heart-healing frequency)",
     "colorZh": "水绿光（心轮愈合频率）",
+    "totemEn": "Deer (Tenderness and sensitive strength)",
     "totemZh": "鹿（温柔与敏感的力量）",
     "symbolicLink": "Hathor · Emotional Resonance",
     "keywords": []
@@ -209,30 +352,55 @@
     "number": 7,
     "nameEn": "The Warrior",
     "nameZh": "坚毅者",
-    "essenceZh": "你携带的是「坚毅者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Warrior. Strong will and high action capacity Does not easily give up Clear goals and strong direction Maintains strength in adversity",
+    "essenceZh": "你携带的是「坚毅者」的原频。意志强、行动力高不轻易退缩有强烈的目标感与方向感能在逆境中保持力量",
+    "traitsEn": [
+      "Strong will and high action capacity",
+      "Does not easily give up",
+      "Clear goals and strong direction",
+      "Maintains strength in adversity"
+    ],
     "traitsZh": [
       "意志强、行动力高",
       "不轻易退缩",
       "有强烈的目标感与方向感",
       "能在逆境中保持力量"
     ],
+    "strengthsEn": [
+      "Most reliable in crisis",
+      "Protects self and loved ones",
+      "Can break through limits"
+    ],
     "strengthsZh": [
       "在危机中最可靠",
       "能保护自己与所爱之人",
       "拥有突破极限的能力"
+    ],
+    "shadowsEn": [
+      "Uses strength as armor",
+      "Fears being seen in vulnerability",
+      "Turns life into a mode of struggle"
     ],
     "shadowsZh": [
       "把坚强当成盔甲",
       "害怕脆弱被看见",
       "把斗争当成生活方式"
     ],
+    "lessonEn": "Learn to let strength become soft instead of always fighting.",
     "lessonZh": "学习让力量变得柔软，而不是永远在对抗。",
+    "directionEn": [
+      "Leadership, entrepreneurship, athletics, and crisis handling",
+      "An awakener of will on the spiritual path"
+    ],
     "directionZh": [
       "适合领导、创业、运动、危机处理",
       "灵性道路上是“意志的觉醒者”"
     ],
-    "guidanceZh": "“真正的力量不是压住世界，而是停止与自己作战。\n当你允许脆弱进入，你的灵魂会比任何盔甲都更强。\n你不是战士，你是力量本身。”",
+    "guidanceEn": "True strength is not pressing the world down; it is no longer fighting yourself. When you allow vulnerability in, your soul becomes stronger than any armor. You are not the warrior; you are strength itself.",
+    "guidanceZh": "真正的力量不是压住世界，而是停止与自己作战。  \n当你允许脆弱进入，你的灵魂会比任何盔甲都更强。  \n你不是战士，你是力量本身。",
+    "colorEn": "Iron-blue light",
     "colorZh": "铁蓝光",
+    "totemEn": "Black Panther (Invisible strength and silent action)",
     "totemZh": "黑豹（隐形力量与无声行动）",
     "symbolicLink": "Anubis · Silent Strength",
     "keywords": []
@@ -242,30 +410,55 @@
     "number": 8,
     "nameEn": "The Nurturer",
     "nameZh": "承载者",
-    "essenceZh": "你携带的是「承载者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Nurturer. Warm, grounded, and giving Skilled at caring, supporting, and accompanying Makes others feel held Highly sensitive to emotional needs",
+    "essenceZh": "你携带的是「承载者」的原频。温暖、踏实、能给予擅长照顾、支持、陪伴令他人感到“被接住”对情感需求极度敏感",
+    "traitsEn": [
+      "Warm, grounded, and giving",
+      "Skilled at caring, supporting, and accompanying",
+      "Makes others feel held",
+      "Highly sensitive to emotional needs"
+    ],
     "traitsZh": [
       "温暖、踏实、能给予",
       "擅长照顾、支持、陪伴",
       "令他人感到“被接住”",
       "对情感需求极度敏感"
     ],
+    "strengthsEn": [
+      "Stabilizes relational space",
+      "Brings cohesion to teams",
+      "Carries nurturing creativity"
+    ],
     "strengthsZh": [
       "稳定关系空间",
       "在团队中带来凝聚力",
       "具有养育型创造力"
+    ],
+    "shadowsEn": [
+      "Easily self-sacrifices",
+      "Uses giving as a source of worth",
+      "Loses boundaries in relationships"
     ],
     "shadowsZh": [
       "容易牺牲自我",
       "把“付出”当成价值来源",
       "在关系中容易失去界限"
     ],
+    "lessonEn": "Learn to give without betraying yourself.",
     "lessonZh": "学习在给予的同时，不背叛自己。",
+    "directionEn": [
+      "Family healing, psychological care, and community building",
+      "An energy bearer in teams"
+    ],
     "directionZh": [
       "适合家庭疗愈、心理照护、社区建设",
       "也是团队的“能量承载者”"
     ],
-    "guidanceZh": "“爱不是付出到枯萎，而是让自己也被滋养。\n当你把自己放回生命的中心，你的爱才真正有力量。\n你不是容器，你是生命本身的流动。”",
+    "guidanceEn": "Love is not giving until you wither; it is allowing yourself to be nourished too. When you place yourself back at the center of life, your love becomes powerful. You are not a container; you are the flow of life itself.",
+    "guidanceZh": "爱不是付出到枯萎，而是让自己也被滋养。  \n当你把自己放回生命的中心，你的爱才真正有力量。  \n你不是容器，你是生命本身的流动。",
+    "colorEn": "Soft apricot light",
     "colorZh": "柔杏光",
+    "totemEn": "Tree (Holding and nourishment)",
     "totemZh": "树（承载与滋养）",
     "symbolicLink": "Isis · Sacred Mother Field",
     "keywords": []
@@ -275,30 +468,55 @@
     "number": 9,
     "nameEn": "The Explorer",
     "nameZh": "拓界者",
-    "essenceZh": "你携带的是「拓界者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Explorer. Strong curiosity Dislikes staying inside one framework Loves learning, experience, travel, and adventure Drawn to the unknown",
+    "essenceZh": "你携带的是「拓界者」的原频。好奇心旺盛不喜欢停留在同一个框架热爱学习、体验、旅行、冒险对未知充满吸引力",
+    "traitsEn": [
+      "Strong curiosity",
+      "Dislikes staying inside one framework",
+      "Loves learning, experience, travel, and adventure",
+      "Drawn to the unknown"
+    ],
     "traitsZh": [
       "好奇心旺盛",
       "不喜欢停留在同一个框架",
       "热爱学习、体验、旅行、冒险",
       "对未知充满吸引力"
     ],
+    "strengthsEn": [
+      "Opens new worlds, perspectives, and paths",
+      "Highly adaptable and unafraid of change",
+      "Life is full of inspiration and creativity"
+    ],
     "strengthsZh": [
       "能打开新世界、新视角、新路径",
       "适应力强、不害怕变化",
       "生命充满灵感与创造性"
+    ],
+    "shadowsEn": [
+      "Lacks stability",
+      "Easily distracted and inconsistent",
+      "Avoids deep commitment"
     ],
     "shadowsZh": [
       "缺乏稳定",
       "容易分心，无法长期坚持",
       "逃避深度承诺"
     ],
+    "lessonEn": "Learn to turn exploration into creation instead of remaining only at the level of experience.",
     "lessonZh": "学习把探索能力转化为创造，而不是永远只停在体验层。",
+    "directionEn": [
+      "Innovation, education, travel, technology, and research",
+      "A bridge between worlds"
+    ],
     "directionZh": [
       "适合创新、教育、旅行、科技、研究",
       "能成为“世界之间的桥梁”"
     ],
-    "guidanceZh": "“你不是迷失，而是在扩展你的生命地图。\n当你允许自己专注，你会发现未知开始向你敞开。\n你并非追寻世界，你追寻的是你自己的可能性。”",
+    "guidanceEn": "You are not lost; you are expanding your life map. When you allow yourself to focus, you will find the unknown beginning to open. You are not chasing the world; you are chasing your own possibilities.",
+    "guidanceZh": "你不是迷失，而是在扩展你的生命地图。  \n当你允许自己专注，你会发现未知开始向你敞开。  \n你并非追寻世界，你追寻的是你自己的可能性。",
+    "colorEn": "Wind-blue light",
     "colorZh": "风蓝光",
+    "totemEn": "Falcon (Far-seeing eye)",
     "totemZh": "鹰隼（远视之眼）",
     "symbolicLink": "Thoth · Pathfinders",
     "keywords": []
@@ -308,30 +526,55 @@
     "number": 10,
     "nameEn": "The Guardian",
     "nameZh": "守护者",
-    "essenceZh": "你携带的是「守护者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Guardian. Loyal, steady, and reliable Strong protective instinct Naturally holds boundaries for others A shield for the team",
+    "essenceZh": "你携带的是「守护者」的原频。忠诚、稳重、可靠保护欲很强天生会为他人守住界线是“团队的盾”",
+    "traitsEn": [
+      "Loyal, steady, and reliable",
+      "Strong protective instinct",
+      "Naturally holds boundaries for others",
+      "A shield for the team"
+    ],
     "traitsZh": [
       "忠诚、稳重、可靠",
       "保护欲很强",
       "天生会为他人守住界线",
       "是“团队的盾”"
     ],
+    "strengthsEn": [
+      "Recognizes danger and energetic imbalance",
+      "Brings safety in chaos",
+      "Can hold protective space for others"
+    ],
     "strengthsZh": [
       "能识别危险与能量不平衡",
       "在混乱中带来安全感",
       "能为他人撑起空间"
+    ],
+    "shadowsEn": [
+      "Overprotective and controlling",
+      "Does not trust others’ capacity",
+      "Clings from fear of abandonment"
     ],
     "shadowsZh": [
       "过度保护、过度控制",
       "不信任他人能力",
       "害怕别人离开导致紧抓不放"
     ],
+    "lessonEn": "Learn to release the responsibility to hold everything, allowing life to move on its own.",
     "lessonZh": "学习放下“守住一切”的责任感，让生命自己流动。",
+    "directionEn": [
+      "Safety, management, coordination, strategy, and resource management",
+      "An energetic guardian in spiritual work"
+    ],
     "directionZh": [
       "适合安全、管理、协调、策略、资源管理",
       "在灵性工作中具有“能量护卫者”的角色"
     ],
-    "guidanceZh": "“你不是世界的守门人，你不是所有人的责任。\n当你停止紧抓，你会发现关系自然稳固。\n守护不是控制，而是允许生命展开。”",
+    "guidanceEn": "You are not the gatekeeper of the world. You are not responsible for everyone. When you stop gripping, relationships naturally become stable. Guarding is not control; it is allowing life to unfold.",
+    "guidanceZh": "你不是世界的守门人，你不是所有人的责任。  \n当你停止紧抓，你会发现关系自然稳固。  \n守护不是控制，而是允许生命展开。",
+    "colorEn": "Deep green light (protective frequency)",
     "colorZh": "深绿光（保护频率）",
+    "totemEn": "Wolf (Loyalty and watchfulness)",
     "totemZh": "狼（忠诚与守望）",
     "symbolicLink": "Horus · Guardianship Lineage",
     "keywords": []
@@ -341,30 +584,55 @@
     "number": 11,
     "nameEn": "The Visionary",
     "nameZh": "远见者",
-    "essenceZh": "你携带的是「远见者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Visionary. Has a broad perspective Skilled at building future blueprints Sensitive to trends, patterns, and possibilities Naturally thinks beyond present frameworks",
+    "essenceZh": "你携带的是「远见者」的原频。拥有大局观善于构建未来蓝图对趋势、模式、可能性敏锐天生思考超越当下框架",
+    "traitsEn": [
+      "Has a broad perspective",
+      "Skilled at building future blueprints",
+      "Sensitive to trends, patterns, and possibilities",
+      "Naturally thinks beyond present frameworks"
+    ],
     "traitsZh": [
       "拥有大局观",
       "善于构建未来蓝图",
       "对趋势、模式、可能性敏锐",
       "天生思考超越当下框架"
     ],
+    "strengthsEn": [
+      "Designs long-term direction and large-scale strategy",
+      "The future eye of an organization or team",
+      "Inspires others to see a greater path"
+    ],
     "strengthsZh": [
       "能设计长期方向与大范围策略",
       "是组织或团队的“未来之眼”",
       "能启发他人看到更大的道路"
+    ],
+    "shadowsEn": [
+      "Thinks too far ahead and ignores present needs",
+      "May become stuck because the plan is too large",
+      "Impatient with practical details"
     ],
     "shadowsZh": [
       "想得太远，忽略当下需要",
       "容易因计划过大而停滞",
       "对行动细节缺乏耐心"
     ],
+    "lessonEn": "Learn to ground vision, not only remain in the future, but begin from the present.",
     "lessonZh": "学会让愿景落地，不是只停留在“未来”，而是从当下开始。",
+    "directionEn": [
+      "Strategy, creative leadership, trend research, and spiritual guidance",
+      "A direction-setter who moves human consciousness forward"
+    ],
     "directionZh": [
       "适合策略、创意领导、趋势研究、灵性引导",
       "能成为推动人类意识前进的“方向制定者”"
     ],
-    "guidanceZh": "“你看到的未来不是幻觉，而是一种灵魂记忆。\n当你把愿景带回当下，它才会真正成形。\n未来不是等待，而是从此刻的每一步被创造出来。”",
+    "guidanceEn": "The future you see is not illusion; it is a form of soul memory. When you bring vision back to the present, it can truly take shape. The future is not waiting; it is created through each step now.",
+    "guidanceZh": "你看到的未来不是幻觉，而是一种灵魂记忆。  \n当你把愿景带回当下，它才会真正成形。  \n未来不是等待，而是从此刻的每一步被创造出来。",
+    "colorEn": "Deep violet-blue light (Vision Frequency)",
     "colorZh": "深紫蓝光（Vision Frequency）",
+    "totemEn": "Hawk (Precise far-sight)",
     "totemZh": "隼（远见的精准）",
     "symbolicLink": "Ptah · The Architects",
     "keywords": []
@@ -374,30 +642,55 @@
     "number": 12,
     "nameEn": "The Empath",
     "nameZh": "感应者",
-    "essenceZh": "你携带的是「感应者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Empath. Energetically sensitive and intuitive Easily senses others’ emotions, fields, and subconscious information Naturally carries higher-dimensional perception An emotional radar soul",
+    "essenceZh": "你携带的是「感应者」的原频。能量敏感、直觉型容易感受他人情绪、气场、潜意识信息天生具有高维感知能力属于“情绪雷达”型灵魂",
+    "traitsEn": [
+      "Energetically sensitive and intuitive",
+      "Easily senses others’ emotions, fields, and subconscious information",
+      "Naturally carries higher-dimensional perception",
+      "An emotional radar soul"
+    ],
     "traitsZh": [
       "能量敏感、直觉型",
       "容易感受他人情绪、气场、潜意识信息",
       "天生具有高维感知能力",
       "属于“情绪雷达”型灵魂"
     ],
+    "strengthsEn": [
+      "Sees subtle changes others miss",
+      "Natural healing and companionship capacity",
+      "Deep empathy and insight in relationships"
+    ],
     "strengthsZh": [
       "能看见别人看不见的微妙变化",
       "具有天然的疗愈与陪伴能力",
       "在关系中深具同理心与洞察力"
+    ],
+    "shadowsEn": [
+      "Easily overwhelmed by energy",
+      "Mistakes others’ emotions for their own",
+      "Fears saying no or creating conflict"
     ],
     "shadowsZh": [
       "容易被能量淹没",
       "把别人的情绪当成自己的",
       "害怕表达“不”，害怕造成冲突"
     ],
+    "lessonEn": "Learn to distinguish what belongs to you from what belongs to others.",
     "lessonZh": "学会分辨“属于你”与“属于他人的能量”。",
+    "directionEn": [
+      "Healing, creation, counseling, and energy work",
+      "A key emotional stabilizer within teams"
+    ],
     "directionZh": [
       "适合疗愈、创作、咨询、能量工作",
       "也是团队中最重要的“情绪稳定器”"
     ],
-    "guidanceZh": "“你的敏感不是弱点，而是你的天赋。\n当你停止吸收他人的重量，你的灵魂感知会升得更高。\n你不是海绵，你是光。”",
+    "guidanceEn": "Your sensitivity is not weakness; it is your gift. When you stop absorbing the weight of others, your soul perception rises higher. You are not a sponge; you are light.",
+    "guidanceZh": "你的敏感不是弱点，而是你的天赋。  \n当你停止吸收他人的重量，你的灵魂感知会升得更高。  \n你不是海绵，你是光。",
+    "colorEn": "Silver-blue light (perceptive frequency)",
     "colorZh": "银蓝光（感知频率）",
+    "totemEn": "White Owl (Night perception)",
     "totemZh": "白猫头鹰（静夜感知）",
     "symbolicLink": "Nephthys · Psychic Sensitivity",
     "keywords": []
@@ -407,30 +700,55 @@
     "number": 13,
     "nameEn": "The Rebel",
     "nameZh": "逆行者",
-    "essenceZh": "你携带的是「逆行者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Rebel. Refuses blind conformity Naturally rebellious and truth-seeking Does not want to be limited by frameworks Independent in thought and bold in action",
+    "essenceZh": "你携带的是「逆行者」的原频。拒绝盲从天生反叛、追求真实不愿被框架限制思想独立、行为大胆",
+    "traitsEn": [
+      "Refuses blind conformity",
+      "Naturally rebellious and truth-seeking",
+      "Does not want to be limited by frameworks",
+      "Independent in thought and bold in action"
+    ],
     "traitsZh": [
       "拒绝盲从",
       "天生反叛、追求真实",
       "不愿被框架限制",
       "思想独立、行为大胆"
     ],
+    "strengthsEn": [
+      "Dismantles old systems",
+      "A natural illusion-breaker",
+      "Shows the world another way"
+    ],
     "strengthsZh": [
       "能拆解旧系统",
       "天生的“打破幻相者”",
       "让世界看见另一种道路"
+    ],
+    "shadowsEn": [
+      "Easily develops hostility toward authority",
+      "Turns opposition into identity",
+      "Feels lonely through conflict with the world"
     ],
     "shadowsZh": [
       "容易对权威产生敌意",
       "把反对当成身份",
       "与世界对立而感到孤独"
     ],
+    "lessonEn": "Learn to evolve from opposition into creation, letting rebellion become a force of love.",
     "lessonZh": "学习从“反对”进化为“创造”，让反叛成为爱的力量。",
+    "directionEn": [
+      "Innovation, reform, social advocacy, and spiritual revolution",
+      "A powerful archetype for world change"
+    ],
     "directionZh": [
       "适合创新、改革、社会倡议、灵性革命",
       "是推动世界改变的强大原型"
     ],
-    "guidanceZh": "“你不是来反对世界，而是来重写世界。\n当你停止为了反叛而反叛，你的创造力会爆发得更纯粹。\n真正的逆行者，是顺着灵魂的方向走。”",
+    "guidanceEn": "You are not here to oppose the world; you are here to rewrite it. When you stop rebelling for the sake of rebellion, your creativity becomes purer. A true rebel walks in the direction of the soul.",
+    "guidanceZh": "你不是来反对世界，而是来重写世界。  \n当你停止为了反叛而反叛，你的创造力会爆发得更纯粹。  \n真正的逆行者，是顺着灵魂的方向走。",
+    "colorEn": "Deep red-black light (breakthrough fire)",
     "colorZh": "深红黑光（破局之火）",
+    "totemEn": "The lone wolf within the pack",
     "totemZh": "狼群中的独狼",
     "symbolicLink": "Set · Disruptive Power",
     "keywords": []
@@ -440,30 +758,55 @@
     "number": 14,
     "nameEn": "The Teacher",
     "nameZh": "传导者",
-    "essenceZh": "你携带的是「传导者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Teacher. Skilled at organizing knowledge and transmitting wisdom A natural guide and integrator Can make complexity simple Has the language ability to awaken others",
+    "essenceZh": "你携带的是「传导者」的原频。擅长整理知识、传递智慧天然的指导者、整合者能把复杂变简单有“点醒他人”的语言能力",
+    "traitsEn": [
+      "Skilled at organizing knowledge and transmitting wisdom",
+      "A natural guide and integrator",
+      "Can make complexity simple",
+      "Has the language ability to awaken others"
+    ],
     "traitsZh": [
       "擅长整理知识、传递智慧",
       "天然的指导者、整合者",
       "能把复杂变简单",
       "有“点醒他人”的语言能力"
     ],
+    "strengthsEn": [
+      "Deep and stable influence",
+      "Opens doors of understanding and awareness for others",
+      "Amplifies consciousness in groups"
+    ],
     "strengthsZh": [
       "影响力深、稳定",
       "能为他人打开理解与觉知之门",
       "在团体中能成为“意识的放大器”"
+    ],
+    "shadowsEn": [
+      "Fears not knowing enough",
+      "Falls into perfectionism",
+      "Over-carries the teacher role and becomes depleted"
     ],
     "shadowsZh": [
       "害怕自己的知识不够",
       "容易进入完美主义",
       "过度承担教学角色导致耗竭"
     ],
+    "lessonEn": "Learn to demonstrate through being, rather than using knowledge to prove worth.",
     "lessonZh": "学习“以身示范”，而不是用知识证明价值。",
+    "directionEn": [
+      "Teaching, consulting, content creation, and spiritual work",
+      "A wisdom keeper within organizations"
+    ],
     "directionZh": [
       "适合教学、咨询、内容创作、灵性工作",
       "在组织中是“智慧守护者”"
     ],
-    "guidanceZh": "“你不是为了当老师而生，而是为了让智慧流动。\n当你不再追求完美，你的真理才会开始说话。\n你教的不是知识，而是你的存在本身。”",
+    "guidanceEn": "You were not born to be a teacher; you were born to let wisdom flow. When you stop pursuing perfection, your truth begins to speak. What you teach is not knowledge, but your presence itself.",
+    "guidanceZh": "你不是为了当老师而生，而是为了让智慧流动。  \n当你不再追求完美，你的真理才会开始说话。  \n你教的不是知识，而是你的存在本身。",
+    "colorEn": "Amber-gold light (fire of wisdom)",
     "colorZh": "琥珀金光（智慧之火）",
+    "totemEn": "Owl (wisdom and transmission)",
     "totemZh": "猫头鹰（智慧与传导）",
     "symbolicLink": "Thoth · Knowledge Carriers",
     "keywords": []
@@ -473,30 +816,55 @@
     "number": 15,
     "nameEn": "The Grounded Mystic",
     "nameZh": "入世的灵者",
-    "essenceZh": "你携带的是「入世的灵者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Grounded Mystic. Highly spiritually aware Also grounded and practical Turns spiritual understanding into daily action Can see the sky and walk the earth",
+    "essenceZh": "你携带的是「入世的灵者」的原频。灵性高度觉知又能扎根现实、脚踏实地把精神理解转化为日常行动既能看见天，也能走好地",
+    "traitsEn": [
+      "Highly spiritually aware",
+      "Also grounded and practical",
+      "Turns spiritual understanding into daily action",
+      "Can see the sky and walk the earth"
+    ],
     "traitsZh": [
       "灵性高度觉知",
       "又能扎根现实、脚踏实地",
       "把精神理解转化为日常行动",
       "既能看见天，也能走好地"
     ],
+    "strengthsEn": [
+      "Bridges spirituality and reality",
+      "Embodies wisdom through practice",
+      "One of the most stable frequencies in spiritual teams"
+    ],
     "strengthsZh": [
       "能桥接灵性与现实",
       "在实践中体现智慧",
       "是灵性团队中最稳定的频率"
+    ],
+    "shadowsEn": [
+      "Impatient with those perceived as less awakened",
+      "Neglects bodily needs",
+      "Falls out of balance between spirituality and reality"
     ],
     "shadowsZh": [
       "容易对“不够觉醒的人”失去耐性",
       "忽略自己的身体需要",
       "在灵性与现实之间失衡"
     ],
+    "lessonEn": "Learn to bring spiritual practice into the body, not keep it only in the mind or energy field.",
     "lessonZh": "学习把灵性实践放进身体，而不是停留在头脑或能量层。",
+    "directionEn": [
+      "Healing, spiritual coaching, guidance, counseling, and strategy",
+      "A representative force of practical spirituality"
+    ],
     "directionZh": [
       "适合疗愈、灵性教练、指导者、咨询与策略",
       "是“灵性实际化”的代表力量"
     ],
-    "guidanceZh": "“你不是来逃离世界的，你是来给世界带来觉醒的形状。\n当你的智慧落地，你的生命就成为灵性本身的证明。\n你是行走的真理。”",
+    "guidanceEn": "You are not here to escape the world. You are here to give awakening a shape in the world. When your wisdom lands, your life becomes proof of spirituality itself. You are walking truth.",
+    "guidanceZh": "你不是来逃离世界的，你是来给世界带来觉醒的形状。  \n当你的智慧落地，你的生命就成为灵性本身的证明。  \n你是行走的真理。",
+    "colorEn": "Deep teal-gold light (Earth–Spirit Frequency)",
     "colorZh": "深青金光（Earth–Spirit Frequency）",
+    "totemEn": "Elephant (steady wisdom)",
     "totemZh": "大象（稳重的智慧）",
     "symbolicLink": "Osiris · Embodied Spirit",
     "keywords": []
@@ -506,30 +874,55 @@
     "number": 16,
     "nameEn": "The Harmonizer",
     "nameZh": "和谐者",
-    "essenceZh": "你携带的是「和谐者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Harmonizer. Naturally carries a soft frequency Skilled at dissolving tension and conflict Maintains balance in chaos Words and actions naturally tune energy",
+    "essenceZh": "你携带的是「和谐者」的原频。天生带有柔和频率擅长化解紧张与冲突在混乱中维持平衡言行自带“能量调频”效果",
+    "traitsEn": [
+      "Naturally carries a soft frequency",
+      "Skilled at dissolving tension and conflict",
+      "Maintains balance in chaos",
+      "Words and actions naturally tune energy"
+    ],
     "traitsZh": [
       "天生带有柔和频率",
       "擅长化解紧张与冲突",
       "在混乱中维持平衡",
       "言行自带“能量调频”效果"
     ],
+    "strengthsEn": [
+      "Restores flow to teams or relationships",
+      "Sees multiple perspectives and integrates them",
+      "Strong empathy and adaptability"
+    ],
     "strengthsZh": [
       "让团队或关系恢复顺畅",
       "能看见多方观点并整合",
       "拥有极强的共情与适应力"
+    ],
+    "shadowsEn": [
+      "Fears conflict and tends to yield",
+      "Falls into the role of maintaining harmony",
+      "Suppresses true emotions and becomes depleted"
     ],
     "shadowsZh": [
       "害怕冲突、习惯退让",
       "容易陷入“维持和谐”的角色",
       "压抑真实情绪导致能量耗竭"
     ],
+    "lessonEn": "Learn to pursue harmony without sacrificing your truth.",
     "lessonZh": "学习在追求和谐的同时，不牺牲自己的真实。",
+    "directionEn": [
+      "Coordination, negotiation, management, and interpersonal mediation",
+      "An important energetic balancer in teams"
+    ],
     "directionZh": [
       "适合协调、谈判、管理、人际调解",
       "是团队的重要“能量平衡器”"
     ],
-    "guidanceZh": "“你不需要让所有人都舒服，你只需要保持真实。\n当你允许自己表达，世界才会找到真正的平衡点。\n和谐不是避免冲突，而是在真相中找到一致。”",
+    "guidanceEn": "You do not need to make everyone comfortable. You only need to remain true. When you allow yourself to express, the world finds a real point of balance. Harmony is not avoiding conflict; it is finding alignment within truth.",
+    "guidanceZh": "你不需要让所有人都舒服，你只需要保持真实。  \n当你允许自己表达，世界才会找到真正的平衡点。  \n和谐不是避免冲突，而是在真相中找到一致。",
+    "colorEn": "Soft green light",
     "colorZh": "柔光绿",
+    "totemEn": "Swan (grace and balance)",
     "totemZh": "天鹅（优雅与平衡）",
     "symbolicLink": "Ma’at · Balance Keepers",
     "keywords": []
@@ -539,30 +932,55 @@
     "number": 17,
     "nameEn": "The Architect",
     "nameZh": "构筑者",
-    "essenceZh": "你携带的是「构筑者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Architect. Enjoys planning, designing, and building structure Skilled at organizing systems and frameworks Combines logic and vision with action Turns abstract concepts into reality",
+    "essenceZh": "你携带的是「构筑者」的原频。喜欢规划、设计、打造结构擅长组织系统与框架以逻辑与远见结合行动能把抽象概念变成现实",
+    "traitsEn": [
+      "Enjoys planning, designing, and building structure",
+      "Skilled at organizing systems and frameworks",
+      "Combines logic and vision with action",
+      "Turns abstract concepts into reality"
+    ],
     "traitsZh": [
       "喜欢规划、设计、打造结构",
       "擅长组织系统与框架",
       "以逻辑与远见结合行动",
       "能把抽象概念变成现实"
     ],
+    "strengthsEn": [
+      "Highly capable in execution",
+      "Strong at building long-term projects",
+      "Can lead teams to create systems from zero to one"
+    ],
     "strengthsZh": [
       "有高度执行力",
       "构建长期项目的能力突出",
       "能带领团队打造“从零到一”系统"
+    ],
+    "shadowsEn": [
+      "Falls into over-planning",
+      "Afraid to begin before things are perfect",
+      "Tends to control every detail"
     ],
     "shadowsZh": [
       "容易陷入过度规划",
       "不敢在不完美中开始",
       "倾向控制每个细节"
     ],
+    "lessonEn": "Learn to allow change and let life participate in the design instead of controlling everything yourself.",
     "lessonZh": "学习允许变化，允许生命也参与设计，而不是全部由你掌控。",
+    "directionEn": [
+      "Entrepreneurship, strategy planning, product development, and organizational design",
+      "A soul that builds consciousness into form"
+    ],
     "directionZh": [
       "适合创业、策略规划、产品开发、组织结构设计",
       "在灵性路径上，是将“意识”建成“形态”的灵魂"
     ],
-    "guidanceZh": "“你不是来完美世界的，你是来创造世界的。\n当你允许不完美进入，你的生命蓝图才会真正活过来。\n架构不是限制，而是灵魂表达的容器。”",
+    "guidanceEn": "You are not here to perfect the world. You are here to create the world. When you allow imperfection in, your life blueprint truly comes alive. Structure is not limitation; it is a vessel for soul expression.",
+    "guidanceZh": "你不是来完美世界的，你是来创造世界的。  \n当你允许不完美进入，你的生命蓝图才会真正活过来。  \n架构不是限制，而是灵魂表达的容器。",
+    "colorEn": "Deep gold light",
     "colorZh": "深金光",
+    "totemEn": "Honeycomb (structural wisdom)",
     "totemZh": "蜂巢（结构智慧）",
     "symbolicLink": "Ptah · Master Builders",
     "keywords": []
@@ -572,30 +990,55 @@
     "number": 18,
     "nameEn": "The Transformer",
     "nameZh": "转化者",
-    "essenceZh": "你携带的是「转化者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Transformer. Senses energetic change Often experiences breakdowns that lead to renewal Naturally carries deep alchemical capacity Grows faster than many around them",
+    "essenceZh": "你携带的是「转化者」的原频。能感知能量变化生命中常遇到“破而后立”的情境天生带有深度炼化能力自身的成长速度比常人快",
+    "traitsEn": [
+      "Senses energetic change",
+      "Often experiences breakdowns that lead to renewal",
+      "Naturally carries deep alchemical capacity",
+      "Grows faster than many around them"
+    ],
     "traitsZh": [
       "能感知能量变化",
       "生命中常遇到“破而后立”的情境",
       "天生带有深度炼化能力",
       "自身的成长速度比常人快"
     ],
+    "strengthsEn": [
+      "Can move through low-frequency states",
+      "Guides others to face shadow",
+      "Naturally able to rebuild life structures"
+    ],
     "strengthsZh": [
       "具有穿越低频的力量",
       "能引导他人面对阴影",
       "天生具备重塑生命结构的能力"
+    ],
+    "shadowsEn": [
+      "Easily falls into emotional depth",
+      "Mistakes pain for growth",
+      "Places pressure on the self as a constant practitioner"
     ],
     "shadowsZh": [
       "易陷入情绪深渊",
       "误以为痛苦才是成长",
       "把自己放在“修炼者”的压力中"
     ],
+    "lessonEn": "Learn to transform gently instead of forcing growth through pain.",
     "lessonZh": "学习温柔地转化，而不是用痛苦逼迫自己成长。",
+    "directionEn": [
+      "Healing, shadow work, energy transformation, and life coaching",
+      "A soul evolution accelerator"
+    ],
     "directionZh": [
       "适合疗愈、阴影工作、能量转化、生命教练",
       "是灵魂进化的“加速器”"
     ],
-    "guidanceZh": "“你不是来受苦的，你是来升频的。\n当你学会以柔软进行转化，你的力量会比烈火更纯净。\n你是走在黑暗里带来光的人。”",
+    "guidanceEn": "You are not here to suffer. You are here to rise in frequency. When you learn to transform with softness, your power becomes purer than fire. You are one who walks through darkness and brings light.",
+    "guidanceZh": "你不是来受苦的，你是来升频的。  \n当你学会以柔软进行转化，你的力量会比烈火更纯净。  \n你是走在黑暗里带来光的人。",
+    "colorEn": "Deep violet-fire light",
     "colorZh": "深紫火光",
+    "totemEn": "Snake (path of shedding)",
     "totemZh": "蛇（蜕变之道）",
     "symbolicLink": "Sekhmet · Transformation Flame",
     "keywords": []
@@ -605,30 +1048,55 @@
     "number": 19,
     "nameEn": "The Communicator",
     "nameZh": "传声者",
-    "essenceZh": "你携带的是「传声者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Communicator. Language-sensitive and clear in expression Naturally skilled in communication, teaching, writing, and speaking Turns complex energy into simple understanding Helps people hear themselves",
+    "essenceZh": "你携带的是「传声者」的原频。语言敏锐、表达清晰天生擅长沟通、教学、写作、演讲善于将复杂能量转为简单理解能让人“听懂自己”",
+    "traitsEn": [
+      "Language-sensitive and clear in expression",
+      "Naturally skilled in communication, teaching, writing, and speaking",
+      "Turns complex energy into simple understanding",
+      "Helps people hear themselves"
+    ],
     "traitsZh": [
       "语言敏锐、表达清晰",
       "天生擅长沟通、教学、写作、演讲",
       "善于将复杂能量转为简单理解",
       "能让人“听懂自己”"
     ],
+    "strengthsEn": [
+      "Strong expressive influence",
+      "Precisely understands others’ viewpoints",
+      "Often becomes the voice within a team"
+    ],
     "strengthsZh": [
       "具有强大的表达影响力",
       "能精准洞察他人观点",
       "在团队中常成为发声者"
+    ],
+    "shadowsEn": [
+      "Over-adapts to the audience",
+      "Uses expression instead of feeling",
+      "Fears that the voice will be ignored"
     ],
     "shadowsZh": [
       "过度迎合听众",
       "用表达代替真正的感受",
       "害怕声音被忽略"
     ],
+    "lessonEn": "Learn to speak truth, not only what makes others comfortable.",
     "lessonZh": "学习说真话，而不是只说让别人舒服的话。",
+    "directionEn": [
+      "Communication, teaching, writing, media, and consulting",
+      "A translator of consciousness on the spiritual path"
+    ],
     "directionZh": [
       "适合沟通、教学、写作、媒体、咨询",
       "在灵性路径上，是“意识的翻译者”"
     ],
-    "guidanceZh": "“你的声音不是用来被认可的，而是用来传递真相。\n当你愿意真实发声，你就会成为世界的清晰之光。\n你说出的不是语言，而是频率。”",
+    "guidanceEn": "Your voice is not here to be approved. It is here to transmit truth. When you are willing to speak authentically, you become a clear light in the world. What you speak is not merely language; it is frequency.",
+    "guidanceZh": "你的声音不是用来被认可的，而是用来传递真相。  \n当你愿意真实发声，你就会成为世界的清晰之光。  \n你说出的不是语言，而是频率。",
+    "colorEn": "Sky-blue light",
     "colorZh": "天蓝光",
+    "totemEn": "Swallow (light message)",
     "totemZh": "燕子（轻盈的讯息）",
     "symbolicLink": "Thoth · Messenger Lines",
     "keywords": []
@@ -638,30 +1106,55 @@
     "number": 20,
     "nameEn": "The Heart-Centered",
     "nameZh": "心觉者",
-    "essenceZh": "你携带的是「心觉者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Heart-Centered. Extremely sensitive heart Makes decisions through feeling, intuition, and resonance Natural emotional wisdom Sees the heart of others in interaction",
+    "essenceZh": "你携带的是「心觉者」的原频。心极度敏锐做决定依赖感受、直觉、共鸣具备天然的情感智慧能在互动中“看见人心”",
+    "traitsEn": [
+      "Extremely sensitive heart",
+      "Makes decisions through feeling, intuition, and resonance",
+      "Natural emotional wisdom",
+      "Sees the heart of others in interaction"
+    ],
     "traitsZh": [
       "心极度敏锐",
       "做决定依赖感受、直觉、共鸣",
       "具备天然的情感智慧",
       "能在互动中“看见人心”"
     ],
+    "strengthsEn": [
+      "Creates depth and sincerity in relationships",
+      "Heals emotion and connection",
+      "Guides others back to inner truth"
+    ],
     "strengthsZh": [
       "在关系中创造深度与真诚",
       "善于疗愈情绪与连结",
       "能带领他人回到内在真实"
+    ],
+    "shadowsEn": [
+      "Easily pulled by emotion",
+      "Over-opens in relationships",
+      "Compromises self from fear of losing connection"
     ],
     "shadowsZh": [
       "容易被情绪牵引",
       "在关系中过度敞开",
       "害怕失去连结而妥协自我"
     ],
+    "lessonEn": "Learn to center on self-alignment rather than emotional reaction.",
     "lessonZh": "学习以“自我对齐”为中心，而非情绪反应。",
+    "directionEn": [
+      "Healing, counseling, relationship guidance, and emotional intelligence work",
+      "A guide of the heart path"
+    ],
     "directionZh": [
       "适合疗愈、咨询、关系辅导、情绪智力工作",
       "是“心之道路”的引导者"
     ],
-    "guidanceZh": "“你的心不是软弱，它是你的指南针。\n当你从清晰而非情绪行动，你的生命会自然回到轨道。\n你不是为了取悦世界而生，而是为了活出你的真心。”",
+    "guidanceEn": "Your heart is not weakness; it is your compass. When you act from clarity rather than emotion, life naturally returns to its path. You are not here to please the world, but to live your true heart.",
+    "guidanceZh": "你的心不是软弱，它是你的指南针。  \n当你从清晰而非情绪行动，你的生命会自然回到轨道。  \n你不是为了取悦世界而生，而是为了活出你的真心。",
+    "colorEn": "Rose-gold light (Heart Frequency)",
     "colorZh": "玫瑰金光（Heart Frequency）",
+    "totemEn": "Deer Heart (soft strength)",
     "totemZh": "鹿心（柔软的力量）",
     "symbolicLink": "Hathor · Heart Keepers",
     "keywords": []
@@ -671,30 +1164,55 @@
     "number": 21,
     "nameEn": "The Integrator",
     "nameZh": "整合者",
-    "essenceZh": "你携带的是「整合者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Integrator. Connects scattered information into complete structures Sees the system behind the system Stable insight and gentle guidance Deep thinker who absorbs knowledge steadily",
+    "essenceZh": "你携带的是「整合者」的原频。能把零散信息连接成完整结构擅长看到“系统背后的系统”有稳定的洞察与温和的引导力思维深度高、能沉稳吸收知识",
+    "traitsEn": [
+      "Connects scattered information into complete structures",
+      "Sees the system behind the system",
+      "Stable insight and gentle guidance",
+      "Deep thinker who absorbs knowledge steadily"
+    ],
     "traitsZh": [
       "能把零散信息连接成完整结构",
       "擅长看到“系统背后的系统”",
       "有稳定的洞察与温和的引导力",
       "思维深度高、能沉稳吸收知识"
     ],
+    "strengthsEn": [
+      "Integrates multiple fields, viewpoints, and energies",
+      "Brings clarity to chaos in teams",
+      "Turns spiritual wisdom into practical methods"
+    ],
     "strengthsZh": [
       "能整合多领域、多观点、多能量",
       "在团队中是让混乱变清晰的人",
       "擅长将灵性智慧转化为实用方法"
+    ],
+    "shadowsEn": [
+      "Carries too much",
+      "Loses self while trying to integrate everything",
+      "Overly sensitive to incompleteness"
     ],
     "shadowsZh": [
       "容易让自己承担太多",
       "在“做好整合”中迷失自我",
       "对不完整的事物过度敏感"
     ],
+    "lessonEn": "Learn to integrate your own rhythm and energy before integrating the world.",
     "lessonZh": "学习在整合世界之前，先整合自己的节奏与能量。",
+    "directionEn": [
+      "Strategy, system design, healing, organizational coordination, and coaching",
+      "A representative of holistic consciousness"
+    ],
     "directionZh": [
       "适合策略、系统设计、疗愈、组织统筹、教练",
       "是“整体意识”的代表者"
     ],
-    "guidanceZh": "“世界不是要你承担，而是要你选择。\n当你先整合自己的存在，你就能引导他人回到完整。\n整合不是收集，而是让真相归位。”",
+    "guidanceEn": "The world is not asking you to carry it; it is asking you to choose. When you first integrate your own being, you can guide others back to wholeness. Integration is not collecting; it is letting truth return to its place.",
+    "guidanceZh": "世界不是要你承担，而是要你选择。  \n当你先整合自己的存在，你就能引导他人回到完整。  \n整合不是收集，而是让真相归位。",
+    "colorEn": "Deep lake-blue light (Inner Order Frequency)",
     "colorZh": "深湖蓝光（Inner Order Frequency）",
+    "totemEn": "Octopus (multidimensional integration)",
     "totemZh": "章鱼（多维整合）",
     "symbolicLink": "Thoth · System Keepers",
     "keywords": []
@@ -704,30 +1222,55 @@
     "number": 22,
     "nameEn": "The Gentle Power",
     "nameZh": "柔力者",
-    "essenceZh": "你携带的是「柔力者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Gentle Power. Gentle in presence yet powerful within Changes others through invisible strength Does not compete but steadily influences the environment Naturally healing in presence",
+    "essenceZh": "你携带的是「柔力者」的原频。气质温柔却内在强大用“无形力量”改变他人不争不抢但能稳稳影响环境天生具有疗愈式存在感",
+    "traitsEn": [
+      "Gentle in presence yet powerful within",
+      "Changes others through invisible strength",
+      "Does not compete but steadily influences the environment",
+      "Naturally healing in presence"
+    ],
     "traitsZh": [
       "气质温柔却内在强大",
       "用“无形力量”改变他人",
       "不争不抢但能稳稳影响环境",
       "天生具有疗愈式存在感"
     ],
+    "strengthsEn": [
+      "Stays clear in conflict",
+      "Naturally stabilizes people nearby",
+      "A quiet yet extremely powerful soul"
+    ],
     "strengthsZh": [
       "在冲突中保持清明",
       "能让身边的人自然稳定下来",
       "是“安静却力量极强”的灵魂"
+    ],
+    "shadowsEn": [
+      "Fears being seen in power",
+      "Over-yields and loses energetic balance",
+      "Uses softness to hide the self"
     ],
     "shadowsZh": [
       "害怕自己的强大被看见",
       "过度谦让导致能量失衡",
       "把柔和当成自我隐藏"
     ],
+    "lessonEn": "Learn to let power become visible instead of continuing to disguise it as gentleness.",
     "lessonZh": "学习让力量显现，而不是继续伪装成温和。",
+    "directionEn": [
+      "Education, healing, guidance, and team culture building",
+      "A frequency stabilizer in spiritual work"
+    ],
     "directionZh": [
       "适合教育、疗愈、辅导、团队文化建设",
       "在灵性工作中，是“频率稳定器”"
     ],
-    "guidanceZh": "“你不是弱，你只是习惯不展示力量。\n当你愿意被看见，你的灵魂会展开一层新的光。\n柔软不是退让，而是一种深度的力量。”",
+    "guidanceEn": "You are not weak; you are used to not showing your strength. When you are willing to be seen, your soul opens into a new layer of light. Softness is not retreat; it is a deep form of power.",
+    "guidanceZh": "你不是弱，你只是习惯不展示力量。  \n当你愿意被看见，你的灵魂会展开一层新的光。  \n柔软不是退让，而是一种深度的力量。",
+    "colorEn": "Milky white-gold light",
     "colorZh": "乳白金光",
+    "totemEn": "White Horse (gentle strength)",
     "totemZh": "白马（温柔的力量）",
     "symbolicLink": "Hathor · Soft Power Line",
     "keywords": []
@@ -737,30 +1280,55 @@
     "number": 23,
     "nameEn": "The Analyst",
     "nameZh": "洞察者",
-    "essenceZh": "你携带的是「洞察者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Analyst. Quick-minded and logical Rapidly deconstructs complex problems Highly sensitive to why Sees hidden patterns, laws, and blind spots",
+    "essenceZh": "你携带的是「洞察者」的原频。思维敏捷、擅长逻辑能快速拆解复杂问题天生对“为什么”高度敏感能洞察潜在模式、规律与盲点",
+    "traitsEn": [
+      "Quick-minded and logical",
+      "Rapidly deconstructs complex problems",
+      "Highly sensitive to why",
+      "Sees hidden patterns, laws, and blind spots"
+    ],
     "traitsZh": [
       "思维敏捷、擅长逻辑",
       "能快速拆解复杂问题",
       "天生对“为什么”高度敏感",
       "能洞察潜在模式、规律与盲点"
     ],
+    "strengthsEn": [
+      "Strong problem-solving ability",
+      "Skilled in strategy, research, and analysis",
+      "The clear thinker in a team"
+    ],
     "strengthsZh": [
       "解决问题能力强",
       "擅长策略、研究、分析",
       "在团队中是“思维清晰者”"
+    ],
+    "shadowsEn": [
+      "Overly rational and neglects feeling",
+      "Easily over-analyzes",
+      "Uses logic to protect from vulnerability"
     ],
     "shadowsZh": [
       "过度理性，情感被忽略",
       "容易陷入过度分析",
       "用逻辑保护自己免于脆弱"
     ],
+    "lessonEn": "Learn to let logic and intuition coexist, allowing the heart to join your wisdom.",
     "lessonZh": "学习让逻辑与直觉并存，让心参与你的智慧。",
+    "directionEn": [
+      "Strategy, psychology, data analysis, consulting, and coaching",
+      "One who sees structure on the awakening path"
+    ],
     "directionZh": [
       "适合策略、心理学、数据分析、咨询、教练",
       "在觉醒道路中，是“看清结构的人”"
     ],
-    "guidanceZh": "“你的头脑很强，但你的心也想加入对话。\n当你让感觉与洞察一起工作，你的智慧会变得立体。\n你不是分析世界的人，你是理解世界的人。”",
+    "guidanceEn": "Your mind is strong, but your heart also wants to join the conversation. When you let feeling and insight work together, your wisdom becomes dimensional. You are not someone who analyzes the world; you are someone who understands it.",
+    "guidanceZh": "你的头脑很强，但你的心也想加入对话。  \n当你让感觉与洞察一起工作，你的智慧会变得立体。  \n你不是分析世界的人，你是理解世界的人。",
+    "colorEn": "Silver-gray-blue light (Clarity Frequency)",
     "colorZh": "银灰蓝光（Clarity Frequency）",
+    "totemEn": "Eagle Eye (precise insight)",
     "totemZh": "鹰眼（精准洞察）",
     "symbolicLink": "Thoth · Mind Clarity Line",
     "keywords": []
@@ -770,30 +1338,55 @@
     "number": 24,
     "nameEn": "The Radiant Soul",
     "nameZh": "光耀者",
-    "essenceZh": "你携带的是「光耀者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Radiant Soul. Naturally carries radiance, charm, and warmth Attracts attention wherever they go Can light up, uplift, and inspire others A natural energy amplifier",
+    "essenceZh": "你携带的是「光耀者」的原频。自带光感、魅力与温度走到哪里都吸引注意能点亮人、提升人、激励人天生是“能量放大器”",
+    "traitsEn": [
+      "Naturally carries radiance, charm, and warmth",
+      "Attracts attention wherever they go",
+      "Can light up, uplift, and inspire others",
+      "A natural energy amplifier"
+    ],
     "traitsZh": [
       "自带光感、魅力与温度",
       "走到哪里都吸引注意",
       "能点亮人、提升人、激励人",
       "天生是“能量放大器”"
     ],
+    "strengthsEn": [
+      "Quickly elevates the energy of a space",
+      "Strong infectious presence",
+      "Brings hope in relationships"
+    ],
     "strengthsZh": [
       "能快速提升空间能量",
       "具有强烈的感染力",
       "在关系中是带来希望的人"
+    ],
+    "shadowsEn": [
+      "Overly concerned with others’ opinions",
+      "Treats shining as an obligation",
+      "Uses light to cover fear and insecurity"
     ],
     "shadowsZh": [
       "容易过度在意他人看法",
       "把“闪耀”当成义务",
       "用光掩盖恐惧与不安"
     ],
+    "lessonEn": "Learn to let light radiate naturally rather than forcing an image.",
     "lessonZh": "学习让光自然散发，而不是勉强维持形象。",
+    "directionEn": [
+      "Motivation, expression, coaching, and community leadership",
+      "A soul who brings people back to light in spiritual work"
+    ],
     "directionZh": [
       "适合激励、表达、教练、社群领导",
       "在灵性工作中，是“带人回到光”的灵魂"
     ],
-    "guidanceZh": "“你的光不需要证明，它只是存在。\n当你停止用表现来维持能量，你的灵魂会更自由。\n真正的光，是平静的光。”",
+    "guidanceEn": "Your light does not need proof; it simply exists. When you stop maintaining energy through performance, your soul becomes freer. True light is calm light.",
+    "guidanceZh": "你的光不需要证明，它只是存在。  \n当你停止用表现来维持能量，你的灵魂会更自由。  \n真正的光，是平静的光。",
+    "colorEn": "Golden sunlight",
     "colorZh": "金阳光",
+    "totemEn": "Lion (light and power)",
     "totemZh": "狮子（光与力量）",
     "symbolicLink": "Ra · Sun Bearers",
     "keywords": []
@@ -803,30 +1396,55 @@
     "number": 25,
     "nameEn": "The Flow Walker",
     "nameZh": "流动者",
-    "essenceZh": "你携带的是「流动者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Flow Walker. Dislikes restriction Life path often moves through flow and change Highly adaptable Creativity and inspiration renew like water",
+    "essenceZh": "你携带的是「流动者」的原频。不喜欢拘束生命路径似乎总在“流动与变化”有高度适应力创意与灵感如水般不断更新",
+    "traitsEn": [
+      "Dislikes restriction",
+      "Life path often moves through flow and change",
+      "Highly adaptable",
+      "Creativity and inspiration renew like water"
+    ],
     "traitsZh": [
       "不喜欢拘束",
       "生命路径似乎总在“流动与变化”",
       "有高度适应力",
       "创意与灵感如水般不断更新"
     ],
+    "strengthsEn": [
+      "Finds opportunity in change",
+      "Skilled in cross-disciplinary work, free creation, and spiritual exploration",
+      "Influences others lightly"
+    ],
     "strengthsZh": [
       "能在变化中找到机会",
       "擅长跨领域、自由创作、灵性探索",
       "能以轻盈方式影响周围的人"
+    ],
+    "shadowsEn": [
+      "Easily avoids commitment",
+      "Lacks stable structure",
+      "Wants to leave when facing depth"
     ],
     "shadowsZh": [
       "容易逃避承诺",
       "缺乏稳定结构",
       "遇到深度课题时想要离开"
     ],
+    "lessonEn": "Learn to establish anchors within flow instead of remaining forever ungrounded.",
     "lessonZh": "学习在流动中建立锚点，而不是永远漂浮。",
+    "directionEn": [
+      "Creative work, freelancing, art, travel, and inner exploration",
+      "A guide of change on the spiritual path"
+    ],
     "directionZh": [
       "适合创作者、自由职业、艺术、旅居、心灵探索",
       "在灵性道路上，是“变化的引路人”"
     ],
-    "guidanceZh": "“你不是漂泊，你是探索生命的多种形状。\n当你找到属于你的中心，流动就会成为力量，而不是逃避。\n你的道路，是水的道路。”",
+    "guidanceEn": "You are not drifting; you are exploring the many shapes of life. When you find your center, flow becomes strength rather than escape. Your path is the path of water.",
+    "guidanceZh": "你不是漂泊，你是探索生命的多种形状。  \n当你找到属于你的中心，流动就会成为力量，而不是逃避。  \n你的道路，是水的道路。",
+    "colorEn": "Ocean-blue light (Flow Frequency)",
     "colorZh": "海蓝光（Flow Frequency）",
+    "totemEn": "Dolphin (free wisdom)",
     "totemZh": "海豚（自由的智慧）",
     "symbolicLink": "Nun · Water Origin Line",
     "keywords": []
@@ -836,30 +1454,55 @@
     "number": 26,
     "nameEn": "The Visionary",
     "nameZh": "远见者",
-    "essenceZh": "你携带的是「远见者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Visionary. Innate future sense and intuitive insight Sees possibilities where others cannot Unrestricted thinking, often years ahead Carries inspiration, creativity, and foresight",
+    "essenceZh": "你携带的是「远见者」的原频。拥有天生的未来感、直觉性洞察能在别人看不到的地方看到可能性思维不受限制，常超前数年有灵感、创造力、预见力的综合频率",
+    "traitsEn": [
+      "Innate future sense and intuitive insight",
+      "Sees possibilities where others cannot",
+      "Unrestricted thinking, often years ahead",
+      "Carries inspiration, creativity, and foresight"
+    ],
     "traitsZh": [
       "拥有天生的未来感、直觉性洞察",
       "能在别人看不到的地方看到可能性",
       "思维不受限制，常超前数年",
       "有灵感、创造力、预见力的综合频率"
     ],
+    "strengthsEn": [
+      "Can sense trends and create new paths",
+      "Especially powerful in early project phases",
+      "Inspires others to break old frameworks"
+    ],
     "strengthsZh": [
       "能预测趋势并创造新路径",
       "在项目初期阶段特别有力量",
       "激励他人突破旧框架"
+    ],
+    "shadowsEn": [
+      "Lives in the future and neglects the present",
+      "Ideas move faster than execution",
+      "Feels lonely when others do not understand"
     ],
     "shadowsZh": [
       "容易活在未来而忽略当下",
       "想法太快、执行跟不上",
       "会因别人“不懂自己”而感到孤独"
     ],
+    "lessonEn": "Let vision land instead of remaining only in high-dimensional inspiration.",
     "lessonZh": "让愿景落地，而不是只停留在高维的灵感中。",
+    "directionEn": [
+      "Innovation, spiritual development, future studies, and brand creation",
+      "A pioneer and path-opener on the soul path"
+    ],
     "directionZh": [
       "适合创新、灵性开发、未来研究、品牌创造",
       "在灵魂道路中，是“先行者与开路者”"
     ],
-    "guidanceZh": "“你的灵感来自未来，而你的力量来自当下。\n当你愿意迈出第一步，未来自然会打开。\n你是时代的窗口。”",
+    "guidanceEn": "Your inspiration comes from the future, and your power comes from the present. When you are willing to take the first step, the future naturally opens. You are a window of the times.",
+    "guidanceZh": "你的灵感来自未来，而你的力量来自当下。  \n当你愿意迈出第一步，未来自然会打开。  \n你是时代的窗口。",
+    "colorEn": "Star-silver-blue light (Future Sight Frequency)",
     "colorZh": "星银蓝光（Future Sight Frequency）",
+    "totemEn": "Hunting Falcon (far-sight and breakthrough)",
     "totemZh": "猎隼（远视与突破）",
     "symbolicLink": "Horus · Vision Line",
     "keywords": []
@@ -869,30 +1512,55 @@
     "number": 27,
     "nameEn": "The Rebuilder",
     "nameZh": "重生者",
-    "essenceZh": "你携带的是「重生者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Rebuilder. Can rebuild from collapse Becomes stronger and deeper through difficulty Often moves through dismantling and rebuilding cycles Deep inner resilience",
+    "essenceZh": "你携带的是「重生者」的原频。拥有从崩塌中重建的能力越痛越强、越挫越深生命常经历“拆解 → 重建”的进化模式内在韧性极强",
+    "traitsEn": [
+      "Can rebuild from collapse",
+      "Becomes stronger and deeper through difficulty",
+      "Often moves through dismantling and rebuilding cycles",
+      "Deep inner resilience"
+    ],
     "traitsZh": [
       "拥有从崩塌中重建的能力",
       "越痛越强、越挫越深",
       "生命常经历“拆解 → 重建”的进化模式",
       "内在韧性极强"
     ],
+    "strengthsEn": [
+      "Rises quickly from life lows",
+      "Leads others back to strength from hardship",
+      "Deeply understands trauma, loss, and pain"
+    ],
     "strengthsZh": [
       "面对人生低谷能迅速站起来",
       "带领他人从困境中回归力量",
       "对创伤、失落、痛苦有深刻理解"
+    ],
+    "shadowsEn": [
+      "Identifies with needing to go through difficulty",
+      "Unconsciously attracts relationships that need repair",
+      "Treats pain as necessary for growth"
     ],
     "shadowsZh": [
       "容易把自己放在“必须经历困难”的身份",
       "无意识吸引需要“修复”的关系",
       "把痛苦当成成长的必要条件"
     ],
+    "lessonEn": "Allow ease to also be a form of rebirth.",
     "lessonZh": "允许轻松，也是一种重生。",
+    "directionEn": [
+      "Healing, trauma work, soul guidance, and mission coaching",
+      "A rebuilder of light from brokenness on the spiritual path"
+    ],
     "directionZh": [
       "适合疗愈、创伤工作、灵魂辅导、使命教练",
       "在灵性道路中，是“破碎之光的重建者”"
     ],
-    "guidanceZh": "“你不是因为痛苦而强大，你是因为灵魂的底层结构就是光。\n当你允许轻松进来，你的人生不需要再用破碎来推进。”",
+    "guidanceEn": "You are not strong because of pain; you are strong because the deepest structure of your soul is light. When you allow ease to enter, life no longer needs to move forward through breaking.",
+    "guidanceZh": "你不是因为痛苦而强大，你是因为灵魂的底层结构就是光。  \n当你允许轻松进来，你的人生不需要再用破碎来推进。",
+    "colorEn": "Deep red-gold light (Rebirth Frequency)",
     "colorZh": "深红金光（Rebirth Frequency）",
+    "totemEn": "Phoenix (rising from ashes)",
     "totemZh": "凤凰（从灰烬升起）",
     "symbolicLink": "Bennu · Rebirth Line",
     "keywords": []
@@ -902,30 +1570,55 @@
     "number": 28,
     "nameEn": "The Quantum Mind",
     "nameZh": "量域者",
-    "essenceZh": "你携带的是「量域者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Quantum Mind. Thinks multidimensionally Explores consciousness, the cosmos, and complex systems Nonlinear, cross-domain, and fast-moving mind Naturally reads frequency",
+    "essenceZh": "你携带的是「量域者」的原频。能多维度思考喜欢探索意识、宇宙、复杂系统思维跳跃、跨域、非线性天生具有“频率读懂能力”",
+    "traitsEn": [
+      "Thinks multidimensionally",
+      "Explores consciousness, the cosmos, and complex systems",
+      "Nonlinear, cross-domain, and fast-moving mind",
+      "Naturally reads frequency"
+    ],
     "traitsZh": [
       "能多维度思考",
       "喜欢探索意识、宇宙、复杂系统",
       "思维跳跃、跨域、非线性",
       "天生具有“频率读懂能力”"
     ],
+    "strengthsEn": [
+      "Sees the energetic logic behind systems",
+      "Skilled in spiritual technology, consciousness models, and abstract concepts",
+      "Captures essence within chaos"
+    ],
     "strengthsZh": [
       "能看到系统背后的能量逻辑",
       "擅长灵性科技、意识模型、抽象概念",
       "能在混乱中捕捉本质"
+    ],
+    "shadowsEn": [
+      "Mind moves too fast and may not be understood",
+      "Feels uncomfortable in practical structures",
+      "May escape into knowledge to avoid emotional depth"
     ],
     "shadowsZh": [
       "容易思维过快，不被身边人理解",
       "在现实结构中感到不适",
       "可能逃往“知识”来避免情绪深度"
     ],
+    "lessonEn": "Let your wisdom bring you back to the body instead of away from it.",
     "lessonZh": "让你的智慧带你回到身体，而不是离开身体。",
+    "directionEn": [
+      "SoulTech, consciousness theory, and model building",
+      "A natural researcher archetype of the Wisewave system"
+    ],
     "directionZh": [
       "适合灵性科技（SoulTech）、意识理论、模型构建",
       "是“Wisewave 系统的自然研究者级原型”"
     ],
-    "guidanceZh": "“你的智慧来自多维，但你存在于此刻。\n当你把意识带回身体，洞察就会成为力量，而不是逃离。”",
+    "guidanceEn": "Your wisdom comes from many dimensions, but you exist in this moment. When you bring consciousness back to the body, insight becomes power instead of escape.",
+    "guidanceZh": "你的智慧来自多维，但你存在于此刻。  \n当你把意识带回身体，洞察就会成为力量，而不是逃离。",
+    "colorEn": "Quantum violet light (Quantum Field Frequency)",
     "colorZh": "量子紫光（Quantum Field Frequency）",
+    "totemEn": "Spiderweb (multidimensional connective structure)",
     "totemZh": "蜘蛛网（多维连接结构）",
     "symbolicLink": "Metatron · Geometry Lines",
     "keywords": []
@@ -935,30 +1628,55 @@
     "number": 29,
     "nameEn": "The Innovator",
     "nameZh": "创新者",
-    "essenceZh": "你携带的是「创新者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Innovator. Dislikes old frameworks Strong creative impulse Sees new possibilities faster than problems Disruptive, experimental, and curious",
+    "essenceZh": "你携带的是「创新者」的原频。不喜欢旧框架有强烈的创造冲动看到“新可能”比看到“问题”更快具备颠覆性、实验性、好奇心",
+    "traitsEn": [
+      "Dislikes old frameworks",
+      "Strong creative impulse",
+      "Sees new possibilities faster than problems",
+      "Disruptive, experimental, and curious"
+    ],
     "traitsZh": [
       "不喜欢旧框架",
       "有强烈的创造冲动",
       "看到“新可能”比看到“问题”更快",
       "具备颠覆性、实验性、好奇心"
     ],
+    "strengthsEn": [
+      "Breaks through industry, cultural, or spiritual frameworks",
+      "A natural problem solver",
+      "Becomes stronger in change"
+    ],
     "strengthsZh": [
       "能突破行业、文化或灵性框架",
       "天生是问题解决者",
       "在变化中反而更有力量"
+    ],
+    "shadowsEn": [
+      "Easily bored by stable structures",
+      "Wants to escape when limitations are too strong",
+      "Gets pulled into new inspiration before completing old projects"
     ],
     "shadowsZh": [
       "容易厌倦稳定结构",
       "一旦限制太多会想逃走",
       "可能在没有完成旧项目时被新灵感吸走"
     ],
+    "lessonEn": "Give innovation structure so it becomes power rather than chaos.",
     "lessonZh": "让创新有结构，才会成为力量，而不是混乱。",
+    "directionEn": [
+      "Entrepreneurship, strategy, product innovation, spiritual creativity, and R&D",
+      "A creator of new realities"
+    ],
     "directionZh": [
       "适合创业、策略、产品创新、灵性创意、研究开发",
       "是“新现实的创造者”"
     ],
-    "guidanceZh": "“你不是来适应世界的，你是来重新设计世界的。\n当你允许自己专注，你的创新会变成真正的突破。”",
+    "guidanceEn": "You are not here to adapt to the world; you are here to redesign it. When you allow yourself to focus, your innovation becomes a true breakthrough.",
+    "guidanceZh": "你不是来适应世界的，你是来重新设计世界的。  \n当你允许自己专注，你的创新会变成真正的突破。",
+    "colorEn": "Bright orange-gold light (Creation Frequency)",
     "colorZh": "明亮橙金光（Creation Frequency）",
+    "totemEn": "Lightning (instant innovation)",
     "totemZh": "闪电（瞬间创新）",
     "symbolicLink": "Ptah · Creator Line",
     "keywords": []
@@ -968,30 +1686,55 @@
     "number": 30,
     "nameEn": "The Soul Healer",
     "nameZh": "灵魂疗愈者",
-    "essenceZh": "你携带的是「灵魂疗愈者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Soul Healer. Extremely high feeling capacity Naturally understands others’ pain, fears, and longings Carries a gentle, deep, stable healing field Helps people lower their defenses",
+    "essenceZh": "你携带的是「灵魂疗愈者」的原频。感受能力极高天生能理解他人的痛、恐惧、渴望具有温柔、深度、稳定的疗愈场是让人放下防卫的存在",
+    "traitsEn": [
+      "Extremely high feeling capacity",
+      "Naturally understands others’ pain, fears, and longings",
+      "Carries a gentle, deep, stable healing field",
+      "Helps people lower their defenses"
+    ],
     "traitsZh": [
       "感受能力极高",
       "天生能理解他人的痛、恐惧、渴望",
       "具有温柔、深度、稳定的疗愈场",
       "是让人放下防卫的存在"
     ],
+    "strengthsEn": [
+      "Helps others feel seen",
+      "Skilled in emotional healing, soul repair, and energy integration",
+      "Creates safety in relationships"
+    ],
     "strengthsZh": [
       "能让别人“被看见”",
       "擅长情绪疗愈、灵魂修复、能量整合",
       "在关系中创造安全感"
+    ],
+    "shadowsEn": [
+      "Over-carries others’ emotions",
+      "Believes they must help everyone",
+      "Neglects energetic boundaries"
     ],
     "shadowsZh": [
       "容易过度承担他人的情绪",
       "认为必须“帮助所有人”",
       "忽略自己的能量界线"
     ],
+    "lessonEn": "Healing yourself is the source of healing.",
     "lessonZh": "疗愈自己，才是疗愈的源头。",
+    "directionEn": [
+      "Healing practitioner, psychological counseling, energy work, and soul guidance",
+      "A guide who helps broken souls return home"
+    ],
     "directionZh": [
       "适合疗愈师、心理咨询、能量工作者、灵魂辅导",
       "是“让破碎灵魂回家的引导者”"
     ],
-    "guidanceZh": "“你不是来替别人承受痛苦的，你是来点亮他们的力量。\n当你先照顾好自己，你的疗愈才会成为真正的光。”",
+    "guidanceEn": "You are not here to bear others’ pain for them. You are here to illuminate their strength. When you take care of yourself first, your healing becomes true light.",
+    "guidanceZh": "你不是来替别人承受痛苦的，你是来点亮他们的力量。  \n当你先照顾好自己，你的疗愈才会成为真正的光。",
+    "colorEn": "Soft rose-violet light (Healing Frequency)",
     "colorZh": "柔和玫瑰紫光（Healing Frequency）",
+    "totemEn": "Whale (deep emotional wisdom)",
     "totemZh": "鲸鱼（深度情绪智慧）",
     "symbolicLink": "Isis · Healing Line",
     "keywords": []
@@ -1001,30 +1744,55 @@
     "number": 31,
     "nameEn": "The Gatekeeper",
     "nameZh": "门之守望者",
-    "essenceZh": "你携带的是「门之守望者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Gatekeeper. Has channel-like intuition Senses energetic opening, closing, alignment, and timing A soul who understands boundaries and permission within groups Highly sensitive to the energy of people, events, and spaces",
+    "essenceZh": "你携带的是「门之守望者」的原频。拥有“通道式”直觉能感知能量的开合、对错、时机是群体中最懂得界线与权限的灵魂对人、事、空间的能量非常敏感",
+    "traitsEn": [
+      "Has channel-like intuition",
+      "Senses energetic opening, closing, alignment, and timing",
+      "A soul who understands boundaries and permission within groups",
+      "Highly sensitive to the energy of people, events, and spaces"
+    ],
     "traitsZh": [
       "拥有“通道式”直觉",
       "能感知能量的开合、对错、时机",
       "是群体中最懂得界线与权限的灵魂",
       "对人、事、空间的能量非常敏感"
     ],
+    "strengthsEn": [
+      "Distinguishes true opportunities from illusion",
+      "Naturally guards the purity and boundaries of systems",
+      "Skilled at filtering and energetic gatekeeping"
+    ],
     "strengthsZh": [
       "能分辨真正的机会与幻相",
       "天生守护系统的边界与纯度",
       "擅长做筛选、把关、过滤能量的角色"
+    ],
+    "shadowsEn": [
+      "Rejects the world because of sensitivity",
+      "Overprotects the self and closes energy",
+      "Mistakes guarding for isolation"
     ],
     "shadowsZh": [
       "容易因为敏感而拒绝世界",
       "过度保护自己，关闭能量",
       "把“守护”误解为“隔绝”"
     ],
+    "lessonEn": "Guarding is not rejection; it is allowing truth to enter and illusion to leave.",
     "lessonZh": "守护不是排斥，而是让真相进入、让幻相离开。",
+    "directionEn": [
+      "Spiritual advising, system guardianship, energy management, and filter design",
+      "A boundary holder in spiritual systems"
+    ],
     "directionZh": [
       "适合灵性顾问、系统守护者、能量管理、过滤机制设计",
       "在灵性系统中，是“结界持有者”"
     ],
-    "guidanceZh": "“你的任务不是关上所有门，而是识别哪一道门通向真理。\n当你学会信任自己的直觉，你会成为世界的过滤之光。”",
+    "guidanceEn": "Your task is not to close every door, but to recognize which door leads to truth. When you trust your intuition, you become a filtering light in the world.",
+    "guidanceZh": "你的任务不是关上所有门，而是识别哪一道门通向真理。  \n当你学会信任自己的直觉，你会成为世界的过滤之光。",
+    "colorEn": "Deep cobalt blue (Boundary Frequency)",
     "colorZh": "深钴蓝（Boundary Frequency）",
+    "totemEn": "Wolf (guardianship and awareness)",
     "totemZh": "狼（守护与觉知）",
     "symbolicLink": "Anubis · Gate Keepers",
     "keywords": []
@@ -1034,30 +1802,55 @@
     "number": 32,
     "nameEn": "The Illuminator",
     "nameZh": "启明者",
-    "essenceZh": "你携带的是「启明者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Illuminator. Naturally illuminates blind spots Helps others see truth without trying Accurate intuition that reaches the core Naturally understands spirituality and learns quickly",
+    "essenceZh": "你携带的是「启明者」的原频。天生带有“照亮盲点”的频率不经意间让别人看见真实直觉很准，总能点中核心自带灵性理解力，学习快、开悟快",
+    "traitsEn": [
+      "Naturally illuminates blind spots",
+      "Helps others see truth without trying",
+      "Accurate intuition that reaches the core",
+      "Naturally understands spirituality and learns quickly"
+    ],
     "traitsZh": [
       "天生带有“照亮盲点”的频率",
       "不经意间让别人看见真实",
       "直觉很准，总能点中核心",
       "自带灵性理解力，学习快、开悟快"
     ],
+    "strengthsEn": [
+      "Can awaken, clarify, and bring realization",
+      "A natural vessel for spiritual teaching and consciousness elevation",
+      "Translates higher-dimensional wisdom"
+    ],
     "strengthsZh": [
       "能让人觉醒、看清、顿悟",
       "是灵性教学与意识提升的天然载体",
       "能翻译高维智慧"
+    ],
+    "shadowsEn": [
+      "Easily disappointed in those unwilling to awaken",
+      "Very sensitive to dishonesty",
+      "Over-carries the responsibility to illuminate others"
     ],
     "shadowsZh": [
       "容易失望于“不愿觉醒的人”",
       "对不诚实非常敏感",
       "有时过度承担“点亮他人”的责任"
     ],
+    "lessonEn": "You do not need to awaken everyone. You only need to illuminate those who are ready.",
     "lessonZh": "不必唤醒所有人，你只需照亮那些准备好的人。",
+    "directionEn": [
+      "Teaching, spiritual guidance, awareness training, and Wisewave-style frequency work",
+      "A source of consciousness light"
+    ],
     "directionZh": [
       "适合教学、灵性引导、觉知训练、Wisewave 类型的频率工作",
       "是“意识的光源”"
     ],
-    "guidanceZh": "“你的光不是武器，是邀请。\n当你放下‘必须让别人改变’，你的光才会真正有力量。”",
+    "guidanceEn": "Your light is not a weapon; it is an invitation. When you release the need to make others change, your light becomes truly powerful.",
+    "guidanceZh": "你的光不是武器，是邀请。  \n当你放下‘必须让别人改变’，你的光才会真正有力量。",
+    "colorEn": "Solar-gold light (Illumination Frequency)",
     "colorZh": "日耀金光（Illumination Frequency）",
+    "totemEn": "Candle flame (the fire that awakens)",
     "totemZh": "蜡烛火焰（点醒之火）",
     "symbolicLink": "Ra · Light Bringers",
     "keywords": []
@@ -1067,30 +1860,55 @@
     "number": 33,
     "nameEn": "The Empath Oracle",
     "nameZh": "感知神谕者",
-    "essenceZh": "你携带的是「感知神谕者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Empath Oracle. Extremely high emotional intuition; hears the voice of the heart Easily empathizes with others’ longings, sadness, and fears Carries oracle-like capacity to read energy flow Sensitive to the invisible world",
+    "essenceZh": "你携带的是「感知神谕者」的原频。情绪直觉极高，能“听见”心的声音容易共感他人的渴望、悲伤、恐惧天生带有神谕能力：能读懂能量流对无形世界敏锐",
+    "traitsEn": [
+      "Extremely high emotional intuition; hears the voice of the heart",
+      "Easily empathizes with others’ longings, sadness, and fears",
+      "Carries oracle-like capacity to read energy flow",
+      "Sensitive to the invisible world"
+    ],
     "traitsZh": [
       "情绪直觉极高，能“听见”心的声音",
       "容易共感他人的渴望、悲伤、恐惧",
       "天生带有神谕能力：能读懂能量流",
       "对无形世界敏锐"
     ],
+    "strengthsEn": [
+      "Skilled in emotional healing, inner child repair, and soul counseling",
+      "Brings deep truth through softness",
+      "A communicator of heart wisdom"
+    ],
     "strengthsZh": [
       "擅长情绪疗愈、内在孩童修复、灵魂咨询",
       "能以柔软方式带出深度真相",
       "是“心之智慧”的沟通者"
+    ],
+    "shadowsEn": [
+      "Easily absorbs others’ emotions",
+      "Gets overwhelmed when boundaries are unclear",
+      "Emotional sensitivity becomes a burden"
     ],
     "shadowsZh": [
       "容易吸收他人情绪",
       "在界线不清时被能量淹没",
       "对情绪的细致度成为负担"
     ],
+    "lessonEn": "Stay perceptive without carrying everything.",
     "lessonZh": "保持感知，但不必承受。",
+    "directionEn": [
+      "Emotional intelligence coaching, counseling, energy reading, and heart healing",
+      "An emotional oracle in spiritual systems"
+    ],
     "directionZh": [
       "适合情绪智力教练、咨询师、能量阅读者、心灵疗愈",
       "在灵性系统中，是“情感的神谕者”"
     ],
-    "guidanceZh": "“你感受到的，不等于你需要承担的。\n当你把共感变成智慧，而不是负担，你的感知会成为天赋。”",
+    "guidanceEn": "What you feel is not always yours to carry. When you turn empathy into wisdom rather than burden, your perception becomes a gift.",
+    "guidanceZh": "你感受到的，不等于你需要承担的。  \n当你把共感变成智慧，而不是负担，你的感知会成为天赋。",
+    "colorEn": "Soft pink-gold light (Heart Oracle Frequency)",
     "colorZh": "柔嫩粉金（Heart Oracle Frequency）",
+    "totemEn": "Rabbit (sensitive perception)",
     "totemZh": "兔子（敏锐感知）",
     "symbolicLink": "Hathor · Emotional Oracle Line",
     "keywords": []
@@ -1100,30 +1918,55 @@
     "number": 34,
     "nameEn": "The Reformer",
     "nameZh": "改革者",
-    "essenceZh": "你携带的是「改革者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Reformer. Strong pursuit of truth, order, and integrity Sees what is wrong faster than others Naturally critical, improving, and optimizing Holds very high standards for the self",
+    "essenceZh": "你携带的是「改革者」的原频。强烈追求真理、秩序与正确性看到“不对的地方”比别人快天生具有批判力、改善力、优化能力对自己要求极高",
+    "traitsEn": [
+      "Strong pursuit of truth, order, and integrity",
+      "Sees what is wrong faster than others",
+      "Naturally critical, improving, and optimizing",
+      "Holds very high standards for the self"
+    ],
     "traitsZh": [
       "强烈追求真理、秩序与正确性",
       "看到“不对的地方”比别人快",
       "天生具有批判力、改善力、优化能力",
       "对自己要求极高"
     ],
+    "strengthsEn": [
+      "Moves teams forward",
+      "Skilled in system reform, process optimization, and value-system building",
+      "A force of truth-restoration on the spiritual path"
+    ],
     "strengthsZh": [
       "能推动团队进步",
       "擅长制度改革、流程优化、价值体系建设",
       "在灵性道路中是“去伪存真”的力量"
+    ],
+    "shadowsEn": [
+      "Falls into perfectionism",
+      "Overly strict with self",
+      "Carries the task of changing the world too heavily"
     ],
     "shadowsZh": [
       "容易陷入完美主义",
       "对自己过度严格",
       "把“改变世界”放得太重"
     ],
+    "lessonEn": "Allow the world to be imperfect, and allow yourself to be imperfect too.",
     "lessonZh": "允许世界不完美，也允许自己不完美。",
+    "directionEn": [
+      "Reform, system review, leadership, value restructuring, and spiritual truth work",
+      "An energetic source that removes falsehood and restores truth"
+    ],
     "directionZh": [
       "适合改革者、系统检查、领导、价值观重塑、灵性真理工作",
       "是“破除伪善、恢复真实”的能量源"
     ],
-    "guidanceZh": "“你纠正世界的冲动，其实来自你的纯净。\n当你先温柔地对待自己，你才能真正改变世界。”",
+    "guidanceEn": "Your impulse to correct the world comes from your purity. When you first treat yourself with gentleness, you can truly change the world.",
+    "guidanceZh": "你纠正世界的冲动，其实来自你的纯净。  \n当你先温柔地对待自己，你才能真正改变世界。",
+    "colorEn": "Deep red-gold light (Truth Enforcement Frequency)",
     "colorZh": "深赤金光（Truth Enforcement Frequency）",
+    "totemEn": "Qilin (justice and purity)",
     "totemZh": "麒麟（正义与纯净）",
     "symbolicLink": "Ma’at · Truth Restorers",
     "keywords": []
@@ -1133,30 +1976,55 @@
     "number": 35,
     "nameEn": "The Soul Navigator",
     "nameZh": "灵魂领航者",
-    "essenceZh": "你携带的是「灵魂领航者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Soul Navigator. Steady intuition and strong sense of direction Naturally knows where to go Guides others out of fog Deeply senses life paths, choices, and destiny",
+    "essenceZh": "你携带的是「灵魂领航者」的原频。直觉稳、方向感强天生知道“要往哪里走”能引导他人走出迷雾对人生路径、选择、命运有深刻感知",
+    "traitsEn": [
+      "Steady intuition and strong sense of direction",
+      "Naturally knows where to go",
+      "Guides others out of fog",
+      "Deeply senses life paths, choices, and destiny"
+    ],
     "traitsZh": [
       "直觉稳、方向感强",
       "天生知道“要往哪里走”",
       "能引导他人走出迷雾",
       "对人生路径、选择、命运有深刻感知"
     ],
+    "strengthsEn": [
+      "Decisive and accurate",
+      "Becomes a lighthouse of direction for lost groups",
+      "Skilled in mission exploration, life planning, and soul path guidance"
+    ],
     "strengthsZh": [
       "做决策快又准",
       "在迷失的群体中成为方向的灯塔",
       "擅长使命探索、人生规划、灵魂道路引导"
+    ],
+    "shadowsEn": [
+      "Easily decides directions for others",
+      "Carries too much responsibility",
+      "Forgets one’s own path"
     ],
     "shadowsZh": [
       "容易替别人决定方向",
       "扛太多责任",
       "忘记自己的道路"
     ],
+    "lessonEn": "Navigate yourself first, then navigate the world.",
     "lessonZh": "先导航自己，再导航世界。",
+    "directionEn": [
+      "Soul coaching, mentoring, path guidance, and life direction consulting",
+      "A path guardian in spiritual systems"
+    ],
     "directionZh": [
       "适合Soul Coach、导师、路径引导者、人生方向咨询",
       "在灵性系统中，是“路径守护者”"
     ],
-    "guidanceZh": "“你看得见道路，但别忘了回到自己的脚下。\n当你的方向来自内在，而不是责任，你会成为真正的引路者。”",
+    "guidanceEn": "You can see the road, but do not forget to return to your own feet. When your direction comes from within rather than responsibility, you become a true guide.",
+    "guidanceZh": "你看得见道路，但别忘了回到自己的脚下。  \n当你的方向来自内在，而不是责任，你会成为真正的引路者。",
+    "colorEn": "Star indigo (Navigation Frequency)",
     "colorZh": "星辰靛蓝（Navigation Frequency）",
+    "totemEn": "Sea Turtle (direction and steadiness)",
     "totemZh": "海龟（方向与稳性）",
     "symbolicLink": "Nut · Path Finders",
     "keywords": []
@@ -1166,30 +2034,55 @@
     "number": 36,
     "nameEn": "The Frequency Weaver",
     "nameZh": "频率编织者",
-    "essenceZh": "你携带的是「频率编织者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Frequency Weaver. Naturally senses the energetic state of a field Skilled at bringing people and things into resonance Finds hidden order in apparent chaos Unique connective, coordinating, and tuning ability",
+    "essenceZh": "你携带的是「频率编织者」的原频。能自然感知场域的能量状态擅长让不同频率的人事物“共振”在看似混乱中找到隐藏的秩序有独特的连接力、协调力、能量调谐能力",
+    "traitsEn": [
+      "Naturally senses the energetic state of a field",
+      "Skilled at bringing people and things into resonance",
+      "Finds hidden order in apparent chaos",
+      "Unique connective, coordinating, and tuning ability"
+    ],
     "traitsZh": [
       "能自然感知场域的能量状态",
       "擅长让不同频率的人事物“共振”",
       "在看似混乱中找到隐藏的秩序",
       "有独特的连接力、协调力、能量调谐能力"
     ],
+    "strengthsEn": [
+      "Aligns team energy toward one direction",
+      "Creates harmony, collaboration, and synchronization",
+      "A designer of energy flow on the spiritual path"
+    ],
     "strengthsZh": [
       "能让团队能量调整至同一个方向",
       "擅长创造和谐、协作、同步化",
       "在灵性路径中，是“能量流动的设计者”"
+    ],
+    "shadowsEn": [
+      "Sacrifices self to maintain energy",
+      "Overworks in misaligned environments",
+      "Treats every imbalance as personal responsibility"
     ],
     "shadowsZh": [
       "容易为了维持能量而牺牲自己",
       "在不协调的环境中过度努力",
       "把每个失衡都当成“自己的责任”"
     ],
+    "lessonEn": "Let energy flow naturally instead of forcing it together through yourself.",
     "lessonZh": "让能量自然流动，而不是靠你把它们拼在一起。",
+    "directionEn": [
+      "Team frequency tuning, relationship coordination, energy healing, and organizational culture design",
+      "A weaver of frequency patterns"
+    ],
     "directionZh": [
       "适合团队调频、关系协调、能量疗愈、组织文化设计",
       "是“频率格局的编织者”"
     ],
-    "guidanceZh": "“你不是来修理能量的，你是来引导能量回到自然流动。\n当你放下控制，宇宙会接手你所无法编织的部分。”",
+    "guidanceEn": "You are not here to repair energy. You are here to guide energy back into natural flow. When you release control, the universe takes over what you cannot weave alone.",
+    "guidanceZh": "你不是来修理能量的，你是来引导能量回到自然流动。  \n当你放下控制，宇宙会接手你所无法编织的部分。",
+    "colorEn": "Starlight pale violet (Resonance Frequency)",
     "colorZh": "星光淡紫（Resonance Frequency）",
+    "totemEn": "Web-weaving spider (wisdom of connection)",
     "totemZh": "织网蜘蛛（连接的智慧）",
     "symbolicLink": "Metatron · Frequency Weavers",
     "keywords": []
@@ -1199,30 +2092,55 @@
     "number": 37,
     "nameEn": "The Willpower Flame",
     "nameZh": "意志火焰者",
-    "essenceZh": "你携带的是「意志火焰者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Willpower Flame. Extremely strong will and action capacity Clear goals, fast execution, rarely gives up Strong vitality and fighting spirit Moves groups forward with force",
+    "essenceZh": "你携带的是「意志火焰者」的原频。具有极强的意志力与行动力目标明确、执行迅速、极少放弃生命力旺盛、战斗精神强具有推动团体前进的能量",
+    "traitsEn": [
+      "Extremely strong will and action capacity",
+      "Clear goals, fast execution, rarely gives up",
+      "Strong vitality and fighting spirit",
+      "Moves groups forward with force"
+    ],
     "traitsZh": [
       "具有极强的意志力与行动力",
       "目标明确、执行迅速、极少放弃",
       "生命力旺盛、战斗精神强",
       "具有推动团体前进的能量"
     ],
+    "strengthsEn": [
+      "Turns ideas into results",
+      "Breaks through bottlenecks and resistance",
+      "Sustained endurance and fire for mission"
+    ],
     "strengthsZh": [
       "能将想法变成结果",
       "擅长突破瓶颈、克服阻力",
       "对使命拥有持续的耐力与火力"
+    ],
+    "shadowsEn": [
+      "Overexerts and ignores physical and emotional limits",
+      "Mistakes persistence for attachment",
+      "Unconsciously turns life into a battlefield"
     ],
     "shadowsZh": [
       "容易用力过度，忽略身心极限",
       "把坚持当成执著",
       "无意识把生命变成“战场模式”"
     ],
+    "lessonEn": "Use power, not force; use flame, not burnout.",
     "lessonZh": "用力量，而非用力；用火焰，而非燃尽。",
+    "directionEn": [
+      "Entrepreneurship, leadership, coaching, project execution, and tactical coordination",
+      "An embodiment of will on the spiritual path"
+    ],
     "directionZh": [
       "适合创业、领导、教练、项目执行、战术统筹",
       "在灵性道路中，是“意志的体现者”"
     ],
-    "guidanceZh": "“你的火焰不是为了燃尽自己，而是为了照亮道路。\n当你学会用柔软来承接力量，你的火会更持久、更纯净。”",
+    "guidanceEn": "Your flame is not here to burn you out. It is here to illuminate the road. When you learn to hold power with softness, your fire becomes more lasting and pure.",
+    "guidanceZh": "你的火焰不是为了燃尽自己，而是为了照亮道路。  \n当你学会用柔软来承接力量，你的火会更持久、更纯净。",
+    "colorEn": "Blazing gold-red (Willpower Frequency)",
     "colorZh": "烈焰金红（Willpower Frequency）",
+    "totemEn": "Wolf Fire (perseverance and direction)",
     "totemZh": "狼火（坚毅与方向）",
     "symbolicLink": "Sekhmet · Fire Line",
     "keywords": []
@@ -1232,30 +2150,55 @@
     "number": 38,
     "nameEn": "The Soul Listener",
     "nameZh": "灵魂聆听者",
-    "essenceZh": "你携带的是「灵魂聆听者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Soul Listener. Gifted in deep listening Understands the words behind the words Often hears soul-level information in interaction Wisdom in silence",
+    "essenceZh": "你携带的是「灵魂聆听者」的原频。拥有深度倾听的天赋能读懂“话语背后的话”与人互动时常能听见灵魂层面的信息是“静默中的智慧”",
+    "traitsEn": [
+      "Gifted in deep listening",
+      "Understands the words behind the words",
+      "Often hears soul-level information in interaction",
+      "Wisdom in silence"
+    ],
     "traitsZh": [
       "拥有深度倾听的天赋",
       "能读懂“话语背后的话”",
       "与人互动时常能听见灵魂层面的信息",
       "是“静默中的智慧”"
     ],
+    "strengthsEn": [
+      "Skilled in one-on-one deep accompaniment, counseling, and healing",
+      "Gently helps others speak truth",
+      "Makes others feel safe, understood, and seen"
+    ],
     "strengthsZh": [
       "擅长一对一深度陪伴、咨询、疗愈",
       "能轻柔地让别人说出真相",
       "让他人感到安全、被理解、被看见"
+    ],
+    "shadowsEn": [
+      "Becomes an emotional outlet for others",
+      "Fears expressing true needs",
+      "Uses listening to hide vulnerability"
     ],
     "shadowsZh": [
       "容易成为他人的“情绪出口”",
       "不敢表达自己真实的需要",
       "用倾听隐藏自己的脆弱"
     ],
+    "lessonEn": "As you listen to the world, also listen to yourself.",
     "lessonZh": "倾听世界的同时，也要倾听自己。",
+    "directionEn": [
+      "Counseling, healing, soul coaching, and relational accompaniment",
+      "A silent guide in spiritual systems"
+    ],
     "directionZh": [
       "适合咨询、疗愈、灵魂教练、关系伴行者",
       "在灵性系统中，是“静默的引导者”"
     ],
-    "guidanceZh": "“你的耳朵听见世界，但你的心也渴望被听见。\n当你愿意让自己的声音出现，你的倾听才会成为真正的力量。”",
+    "guidanceEn": "Your ears hear the world, but your heart also longs to be heard. When you allow your own voice to appear, your listening becomes true power.",
+    "guidanceZh": "你的耳朵听见世界，但你的心也渴望被听见。  \n当你愿意让自己的声音出现，你的倾听才会成为真正的力量。",
+    "colorEn": "Deep green light (Presence Frequency)",
     "colorZh": "深绿光（Presence Frequency）",
+    "totemEn": "Deer (quietness and listening)",
     "totemZh": "鹿（静谧与聆听）",
     "symbolicLink": "Isis · Sacred Listener Line",
     "keywords": []
@@ -1265,30 +2208,55 @@
     "number": 39,
     "nameEn": "The Stabilizer",
     "nameZh": "稳定者",
-    "essenceZh": "你携带的是「稳定者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Stabilizer. Keeps calm in chaos Naturally acts as a center of gravity Others instinctively move toward and rely on you Grounded, stable, patient energy",
+    "essenceZh": "你携带的是「稳定者」的原频。能在混乱中保持冷静天生是一种“重心”周围的人会不自觉向你靠拢、依赖有脚踏实地、稳固、有耐心的能量",
+    "traitsEn": [
+      "Keeps calm in chaos",
+      "Naturally acts as a center of gravity",
+      "Others instinctively move toward and rely on you",
+      "Grounded, stable, patient energy"
+    ],
     "traitsZh": [
       "能在混乱中保持冷静",
       "天生是一种“重心”",
       "周围的人会不自觉向你靠拢、依赖",
       "有脚踏实地、稳固、有耐心的能量"
     ],
+    "strengthsEn": [
+      "Maintains order in crisis",
+      "Provides emotional, decision-making, and structural stability",
+      "Strong in long-term projects and sustained building"
+    ],
     "strengthsZh": [
       "在危机中维持秩序",
       "能提供情绪、决策与结构上的稳定",
       "擅长长期项目与持续性的建设"
+    ],
+    "shadowsEn": [
+      "Receives too much responsibility",
+      "Mistakes stability for maintaining everyone’s state",
+      "Fears change"
     ],
     "shadowsZh": [
       "容易被赋予太多责任",
       "把稳定误以为必须维持所有人的状态",
       "害怕改变"
     ],
+    "lessonEn": "Stability is not restriction; it is the source point of your power.",
     "lessonZh": "稳定不是束缚，而是你力量的源点。",
+    "directionEn": [
+      "Structural management, long-term projects, family systems, and team support",
+      "An earth-frequency guardian on the spiritual path"
+    ],
     "directionZh": [
       "适合结构管理、长期项目、家庭系统、团队支持",
       "在灵性道路中，是“地气的守护者”"
     ],
-    "guidanceZh": "“你的稳固不是负担，而是祝福。\n当你允许自己也被支持，你的稳定会更深、更自由。”",
+    "guidanceEn": "Your steadiness is not a burden; it is a blessing. When you allow yourself to be supported too, your stability becomes deeper and freer.",
+    "guidanceZh": "你的稳固不是负担，而是祝福。  \n当你允许自己也被支持，你的稳定会更深、更自由。",
+    "colorEn": "Earth brown-gold (Ground Frequency)",
     "colorZh": "大地棕金（Ground Frequency）",
+    "totemEn": "Elephant (steady, deep, enduring)",
     "totemZh": "大象（稳、厚、持）",
     "symbolicLink": "Geb · Earth Keepers",
     "keywords": []
@@ -1298,30 +2266,55 @@
     "number": 40,
     "nameEn": "The Inner Sage",
     "nameZh": "内在智者",
-    "essenceZh": "你携带的是「内在智者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Inner Sage. Naturally carries a wisdom frequency and intuitive understanding Sees the essence without needing much input Mature thinking, deep insight, quick spiritual understanding Often seen as wise by others",
+    "essenceZh": "你携带的是「内在智者」的原频。天生带有智慧频率，直觉性理解力强不需要太多输入就能看见本质思维成熟、洞察深刻、灵性理解快常被当成“很有智慧的人”",
+    "traitsEn": [
+      "Naturally carries a wisdom frequency and intuitive understanding",
+      "Sees the essence without needing much input",
+      "Mature thinking, deep insight, quick spiritual understanding",
+      "Often seen as wise by others"
+    ],
     "traitsZh": [
       "天生带有智慧频率，直觉性理解力强",
       "不需要太多输入就能看见本质",
       "思维成熟、洞察深刻、灵性理解快",
       "常被当成“很有智慧的人”"
     ],
+    "strengthsEn": [
+      "Sees the laws and truths of life",
+      "Suited to deep guidance of mind and soul",
+      "Offers clarity and direction in chaotic times"
+    ],
     "strengthsZh": [
       "能看透生命的规律与真相",
       "适合给予深度建议、引领心智和灵魂",
       "在混乱的时代提供清晰与方向"
+    ],
+    "shadowsEn": [
+      "Given the role of always being the teacher",
+      "Uses wisdom as a shield and avoids weakness",
+      "Strong sense of loneliness"
     ],
     "shadowsZh": [
       "容易被赋予“必须当老师”的角色",
       "把智慧当成保护层，不愿示弱",
       "孤独感强"
     ],
+    "lessonEn": "Wisdom is to be shared, not carried as responsibility.",
     "lessonZh": "智慧是分享，而不是责任。",
+    "directionEn": [
+      "Teaching, philosophy, spiritual research, and insight-based guidance",
+      "A carrier of truth in spiritual systems"
+    ],
     "directionZh": [
       "适合教学、哲学、灵性研究、洞察型引导者",
       "在灵性系统中，是“真理的携带者”"
     ],
-    "guidanceZh": "“你的智慧来自你活过的每一世，而不是你承担的角色。\n当你允许自己做一个‘人’，你的智慧会变得更有温度。”",
+    "guidanceEn": "Your wisdom comes from every life you have lived, not from the role you carry. When you allow yourself to be human, your wisdom gains warmth.",
+    "guidanceZh": "你的智慧来自你活过的每一世，而不是你承担的角色。  \n当你允许自己做一个‘人’，你的智慧会变得更有温度。",
+    "colorEn": "Deep violet-gold light (Sage Frequency)",
     "colorZh": "深紫金光（Sage Frequency）",
+    "totemEn": "Owl (wisdom in the night)",
     "totemZh": "猫头鹰（夜中的智慧）",
     "symbolicLink": "Thoth · Inner Sage Line",
     "keywords": []
@@ -1331,30 +2324,55 @@
     "number": 41,
     "nameEn": "The Cosmic Bridge",
     "nameZh": "宇宙桥接者",
-    "essenceZh": "你携带的是「宇宙桥接者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Cosmic Bridge. Acts as a bridge between two worlds Understands spirituality and reality, energy and logic at once Translates, integrates, and unifies different levels of consciousness Often a connector, cross-boundary figure, and integrator in groups",
+    "essenceZh": "你携带的是「宇宙桥接者」的原频。扮演“两个世界之间的桥梁”能同时理解灵性与现实、能量与逻辑天生具有翻译、整合、统合不同意识层级的能力在群体中常成为“连接者”、“跨界者”、“整合者”",
+    "traitsEn": [
+      "Acts as a bridge between two worlds",
+      "Understands spirituality and reality, energy and logic at once",
+      "Translates, integrates, and unifies different levels of consciousness",
+      "Often a connector, cross-boundary figure, and integrator in groups"
+    ],
     "traitsZh": [
       "扮演“两个世界之间的桥梁”",
       "能同时理解灵性与现实、能量与逻辑",
       "天生具有翻译、整合、统合不同意识层级的能力",
       "在群体中常成为“连接者”、“跨界者”、“整合者”"
     ],
+    "strengthsEn": [
+      "Turns higher-dimensional wisdom into understandable language",
+      "Simplifies complex thoughts, systems, and knowledge",
+      "Integrates wisdom from different cultures, disciplines, and spiritual traditions"
+    ],
     "strengthsZh": [
       "将高维智慧转为可理解的语言",
       "让复杂的思想、系统、知识变得简单",
       "能整合来自不同文化、学科、灵性传统的精华"
+    ],
+    "shadowsEn": [
+      "Over-carries by becoming everyone’s bridge",
+      "Feels responsible for communicating all dimensions for the world",
+      "Loses center through excessive crossing of boundaries"
     ],
     "shadowsZh": [
       "容易过度承担，扮演所有人的桥",
       "觉得自己必须替世界“沟通所有维度”",
       "在过度跨界时失去自身中心"
     ],
+    "lessonEn": "Let connection arise naturally, not from responsibility.",
     "lessonZh": "让连接来自自然，而非责任。",
+    "directionEn": [
+      "Cross-disciplinary leadership, SoulTech, and work that bridges healing with reality",
+      "A bridge soul for transitions between eras"
+    ],
     "directionZh": [
       "适合跨界领导、灵性科技（SoulTech）、疗愈与现实融合型工作",
       "在灵性道路中，是“时代转换的桥梁灵魂”"
     ],
-    "guidanceZh": "“你不是来当所有人的桥，你是来开启正确的门。\n当你先连接自己的中心，你才能真正连接世界。”",
+    "guidanceEn": "You are not here to be everyone’s bridge. You are here to open the right doors. When you first connect with your own center, you can truly connect the world.",
+    "guidanceZh": "你不是来当所有人的桥，你是来开启正确的门。  \n当你先连接自己的中心，你才能真正连接世界。",
+    "colorEn": "Rainbow white-gold (Bridging Frequency)",
     "colorZh": "虹光白金（Bridging Frequency）",
+    "totemEn": "Jellyfish (cross-dimensional flow)",
     "totemZh": "水母（跨维度流动）",
     "symbolicLink": "Amenti · Cosmic Translators",
     "keywords": []
@@ -1364,30 +2382,55 @@
     "number": 42,
     "nameEn": "The Ascension Flame",
     "nameZh": "承光者",
-    "essenceZh": "你携带的是「承光者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Ascension Flame. Carries a strong high-frequency uplifting force Automatically elevates others’ consciousness in a field Life themes revolve around awakening, elevation, and multidimensional growth Highly sensitive to truth, purity, and light frequency",
+    "essenceZh": "你携带的是「承光者」的原频。带有强烈的高频“提升力量”在场域中自动提升他人意识生命主题围绕觉醒、提升、跨维成长对真理、纯净、光频率高度敏感",
+    "traitsEn": [
+      "Carries a strong high-frequency uplifting force",
+      "Automatically elevates others’ consciousness in a field",
+      "Life themes revolve around awakening, elevation, and multidimensional growth",
+      "Highly sensitive to truth, purity, and light frequency"
+    ],
     "traitsZh": [
       "带有强烈的高频“提升力量”",
       "在场域中自动提升他人意识",
       "生命主题围绕觉醒、提升、跨维成长",
       "对真理、纯净、光频率高度敏感"
     ],
+    "strengthsEn": [
+      "A frequency-lift point in awakening groups",
+      "Helps others transcend illusion and break through old karmic patterns",
+      "Becomes illuminated in high-energy environments"
+    ],
     "strengthsZh": [
       "是觉醒团体中的“频率升空点”",
       "能带领他人超越幻相、突破旧业力",
       "在高能量环境中像被点亮一样"
+    ],
+    "shadowsEn": [
+      "Feels lonely because the light is strong",
+      "Does not want to be disturbed by low-frequency energy",
+      "May be too far ahead for reality to follow"
     ],
     "shadowsZh": [
       "容易因为“光太强”而感到孤独",
       "不愿意被低频干扰",
       "有时过于超前，导致现实跟不上"
     ],
+    "lessonEn": "Let your light land instead of remaining suspended above life.",
     "lessonZh": "让你的光落地，而不是悬在半空。",
+    "directionEn": [
+      "Spiritual mentoring, awakening guidance, energy upgrading, and Soul Frequency teachings",
+      "An extender of light in spiritual systems"
+    ],
     "directionZh": [
       "适合灵性导师、觉醒引导者、能量升级、Soul Frequency Teachings",
       "在灵性系统中，是“光之延展者”"
     ],
-    "guidanceZh": "“你的光不是要你飞离世界，而是要照亮世界。\n当你愿意与现实相遇，你的扬升会更真实、更稳定。”",
+    "guidanceEn": "Your light is not here to make you fly away from the world. It is here to illuminate the world. When you are willing to meet reality, your ascension becomes more real and stable.",
+    "guidanceZh": "你的光不是要你飞离世界，而是要照亮世界。  \n当你愿意与现实相遇，你的扬升会更真实、更稳定。",
+    "colorEn": "Pure white-gold light (Ascension Frequency)",
     "colorZh": "纯白金光（Ascension Frequency）",
+    "totemEn": "Celestial Phoenix (fire of ascension)",
     "totemZh": "天凤（升频之火）",
     "symbolicLink": "Seraphim · Light Flames",
     "keywords": []
@@ -1397,30 +2440,55 @@
     "number": 43,
     "nameEn": "The Destiny Weaver",
     "nameZh": "命运编织者",
-    "essenceZh": "你携带的是「命运编织者」的原频。",
+    "essenceEn": "You carry the origin frequency of The Destiny Weaver. Sees clues in life trajectories May sense the direction events are taking Unique insight into cause and effect, karma, and soul paths Precisely understands why others have arrived where they are",
+    "essenceZh": "你携带的是「命运编织者」的原频。能看见生命轨迹的“线索”有时甚至能预感事件走向对因果、业力、灵魂路径有独特洞察力能精准理解别人“为什么会走到这里”",
+    "traitsEn": [
+      "Sees clues in life trajectories",
+      "May sense the direction events are taking",
+      "Unique insight into cause and effect, karma, and soul paths",
+      "Precisely understands why others have arrived where they are"
+    ],
     "traitsZh": [
       "能看见生命轨迹的“线索”",
       "有时甚至能预感事件走向",
       "对因果、业力、灵魂路径有独特洞察力",
       "能精准理解别人“为什么会走到这里”"
     ],
+    "strengthsEn": [
+      "Guides others toward key choices that change life patterns",
+      "Skilled in lifecycle planning, life blueprint analysis, and soul contract interpretation",
+      "Often seen as a destiny mentor in groups"
+    ],
     "strengthsZh": [
       "能引导他人做出改变命运的关键选择",
       "擅长生命周期规划、生命蓝图分析、灵魂契约解读",
       "在群体中常被视为“命运导师”"
+    ],
+    "shadowsEn": [
+      "Easily decides too much for others",
+      "Mistakes seeing destiny for being responsible for destiny",
+      "Ignores personal path when seeing too much"
     ],
     "shadowsZh": [
       "容易替别人决定太多",
       "误以为“知道命运”就等于“负责命运”",
       "在看见太多时忽略自己的路径"
     ],
+    "lessonEn": "Seeing destiny is not for control, but for awakening.",
     "lessonZh": "看见命运不是为了控制，而是为了觉醒。",
+    "directionEn": [
+      "Life blueprint coaching, Soul Origin Code reading, and karmic research",
+      "A weaver of destiny, not a manipulator of it"
+    ],
     "directionZh": [
       "适合生命蓝图教练、Soul Origin Code 解读者、因果研究者",
       "在灵性道路中，是“命运的编织者，而非操纵者”"
     ],
-    "guidanceZh": "“你的洞察是礼物，而不是指令。\n当你允许他人走自己的路，你的智慧才会真正展开。”",
+    "guidanceEn": "Your insight is a gift, not an instruction. When you allow others to walk their own path, your wisdom truly unfolds.",
+    "guidanceZh": "你的洞察是礼物，而不是指令。  \n当你允许他人走自己的路，你的智慧才会真正展开。",
+    "colorEn": "Deep gold-violet (Fate Lines Frequency)",
     "colorZh": "深金紫（Fate Lines Frequency）",
+    "totemEn": "Spider (gold-thread seer)",
     "totemZh": "蜘蛛（金线预见者）",
     "symbolicLink": "Norns · Weavers of Fate",
     "keywords": []
@@ -1430,32 +2498,64 @@
     "number": 44,
     "nameEn": "The Source Messenger",
     "nameZh": "源之信使",
-    "essenceZh": "你携带的是「源之信使」的原频。",
+    "essenceEn": "You carry the origin frequency of The Source Messenger. Extremely high soul purity Naturally resonates with Source messages Deep spiritual mission and a sense of being called back Receives guidance, inspiration, or downloads from Source",
+    "essenceZh": "你携带的是「源之信使」的原频。拥有极高的灵魂纯度天生带有“源头讯息”的共振在灵性深处具有使命感、召回感能接收来自 Source 的指引、灵感或下载",
+    "traitsEn": [
+      "Extremely high soul purity",
+      "Naturally resonates with Source messages",
+      "Deep spiritual mission and a sense of being called back",
+      "Receives guidance, inspiration, or downloads from Source"
+    ],
     "traitsZh": [
       "拥有极高的灵魂纯度",
       "天生带有“源头讯息”的共振",
       "在灵性深处具有使命感、召回感",
       "能接收来自 Source 的指引、灵感或下载"
     ],
+    "strengthsEn": [
+      "Speaks truth that reaches directly into the soul",
+      "Carries revelatory, inspirational, and spiritual translation capacity",
+      "A Source-frequency amplifier in spiritual fields"
+    ],
     "strengthsZh": [
       "能讲出“直指灵魂”的真理语言",
       "具备启示能力、灵感能力、灵性翻译能力",
       "是灵性场域中的“源头频率放大器”"
+    ],
+    "shadowsEn": [
+      "Feels lonely because few understand",
+      "Mission becomes too heavy and life is forgotten",
+      "Mistakes being from Source for needing to be perfectly accurate"
     ],
     "shadowsZh": [
       "容易感到孤独，因为很少有人能理解你",
       "使命感太重而忘记生活",
       "把“来自源头”误以为必须“完美无误”"
     ],
-    "lessonZh": "你是信使，但你仍然是人。\n真理需要被流动，而不是被扛着。",
+    "lessonEn": "You are a messenger, and you are still human. Truth needs to flow, not be carried as a burden.",
+    "lessonZh": "你是信使，但你仍然是人。   真理需要被流动，而不是被扛着。",
+    "directionEn": [
+      "Truth transmission, spiritual writing, Source-frequency guidance, and awareness system building",
+      "An earthly expression of Source frequency"
+    ],
     "directionZh": [
       "适合真理传导者、灵性写作者、源头频率引导师、觉知体系建设者",
       "是“源头频率在地球的表达者”"
     ],
-    "guidanceZh": "“你带着源光而来，但你不是来承受重担的。\n当你允许自己轻松、自然、真实，你的讯息会更纯粹、更有力。”",
+    "guidanceEn": "You come with Source light, but you are not here to carry a burden. When you allow yourself to be light, natural, and real, your message becomes purer and more powerful.",
+    "guidanceZh": "你带着源光而来，但你不是来承受重担的。  \n当你允许自己轻松、自然、真实，你的讯息会更纯粹、更有力。",
+    "colorEn": "Source-white light (Origin Frequency)",
     "colorZh": "源光白（Origin Frequency）",
+    "totemEn": "White Feather (message from Source)",
     "totemZh": "白羽（来自源头的讯息）",
-    "symbolicLink": "The Source · Primordial Messengers\n\n灵魂原型（Soul Archetype）\n\n不是后来变成的、不是环境塑造的、不是经验形成的。\n\n它是：\n\n灵魂被创造的那一瞬间——\n\n从 Source（源头）所带下来的“初始频率 + 基因 + 功能”\n\n就像灵魂的：\n\n原始震动\n\n灵魂 DNA\n\n天赋蓝图\n\n宇宙赋予你的角色倾向\n\n你作为存在体的“使用说明书”\n\n这就是为什么 S1 原频如此重要 ——\n因为它不是性格（心理层），\n不是命运（因果层），\n不是选择（意志层），\n而是 本源层（Origin Layer）。\n\n🌌 灵魂原型包含什么？\n\n当一个灵魂被“点亮”那一刻，它会被赋予四种核心构成：\n\n① 原始频率（Origin Frequency）\n\n→ 这是 S1 所定义的\n→ 灵魂的基调、主要震动、核心路径\n\n② 原始能力（Original Capacities）\n\n→ 天赋天生存在\n→ 不需要学习就会显现\n例如：\n\n洞察\n\n创造\n\n承光\n\n磁性\n\n觉知\n\n引导\n\n连接\n\n转化\n\n你的人生是在“记起这些”，而不是“学会这些”。\n\n③ 原始使命种子（Mission Seed）\n\n→ 灵魂来到地球的方向性\n→ 未必是职业，而是“路径能量”\n例如：\n\n转化者\n\n启明者\n\n桥接者\n\n守护者\n\n疗愈者\n\n改革者\n\n④ 原始阴影（Unawakened Form）\n\n→ 通常是力量未展开之前的形态\n→ 灵魂原型的反面\n→ 你的灵魂要突破的关键点\n\n例如：\n转化者的阴影是沉溺情绪、制造混乱；\n启明者的阴影是愤世嫉俗；\n宇宙桥接者的阴影是迷失在两端；\n源之信使的阴影是使命压力太重。\n\n灵魂原型会改变吗？\n\n不会。\n\n它只会：\n\n展开\n\n加深\n\n成熟\n\n显化\n\n升频\n\n回归本质\n\n一个灵魂可能暂时偏离原型表达方式，\n但它不会失去原型。\n\n就像太阳可以被云遮住，\n但太阳不会消失。\n\n《S3 · Vibration Tiers · Training File (TXT)》\n\nTIER 1\nVibration Archetype: Seed\nRange: 0–40\nSoul Traits: 初生能量、灵魂幼化、敏感度高、容易受外界影响。渴望安全感与稳定结构。\nStrengths: 纯净、直觉干净、学习速度快、对真理有原始的接收能力。\nChallenges: 容易依赖、害怕被否定、频率不稳定、情绪容易被带走。\nGuidance: 建立内在安全感，练习觉知情绪，不急着跨越阶段；允许自己是一颗种子，慢慢生长。\n\nTIER 2\nVibration Archetype: Spark\nRange: 41–80\nSoul Traits: 内心开始出现觉醒火花，对灵性、真理、意义有强烈好奇心。\nStrengths: 灵感强、直觉频繁爆发、行动力上升、容易产生突破点。\nChallenges: 频繁否定自己、害怕走错路、反复陷入二元判断、容易被他人影响。\nGuidance: 练习辨识动机，区分小我冲动与灵魂推动，让每一次灵感都经过觉知过滤。\n\nTIER 3\nVibration Archetype: Explorer\nRange: 81–120\nSoul Traits: 进入探索阶段，开始学习不同体系、方法、智慧。\nStrengths: 开放、包容、学习能力强、愿意尝试。\nChallenges: 容易迷失、体系混乱、追求“更多”导致分散。\nGuidance: 练习稳定中心，选择一条路深入，不再被“外面更多东西”吸走。\n\nTIER 4\nVibration Archetype: Awakener\nRange: 121–160\nSoul Traits: 灵魂觉醒正在显化，开始看破幻相、理解能量逻辑。\nStrengths: 看见真相、洞察力变强、内在力量开始显现。\nChallenges: 容易傲慢、容易评判他人、过度强调觉醒而忽略生活落地。\nGuidance: 觉醒不是优越，觉醒是服务。让觉醒回到生活中，用真理照亮最平凡的地方。\n\nTIER 5\nVibration Archetype: Integrator\nRange: 161–200\nSoul Traits: 灵魂开始整合：情绪、关系、创伤、阴影。\nStrengths: 稳定、成熟、开始拥有智慧的力量。\nChallenges: 面对旧伤旧课题时会想逃避；害怕再次受伤。\nGuidance: 整合来自温柔，而不是强迫；让每一次情绪都成为练习。\n\nTIER 6\nVibration Archetype: Alchemist\nRange: 201–250\nSoul Traits: 拥有转化能力，可以将痛变力量、将困境变智慧。\nStrengths: 强大的内在炼金术、深刻的洞察力、清晰的直觉方向。\nChallenges: 容易独自承担太多、倾向压抑情绪、太早承担救赎角色。\nGuidance: 不需要承担所有人的转化；学习界限，让力量自然流动。\n\nTIER 7\nVibration Archetype: Visionary\nRange: 251–300\nSoul Traits: 灵魂开始拥有使命感、愿景、方向性。\nStrengths: 创造力强、看得远、能带领他人、灵魂光度提升。\nChallenges: 容易焦虑“还不够好”、使命过度膨胀、小我悄悄混进来。\nGuidance: 放下对结果的执着，让愿景成为服务而不是证明。\n\nTIER 8\nVibration Archetype: Healer\nRange: 301–350\nSoul Traits: 灵魂进入疗愈频率，与他人连接时带来修复与启发。\nStrengths: 强同理心、稳定存在、自然给予安全感。\nChallenges: 情绪共感过度、能量被吸走、吸收他人痛苦。\nGuidance: 让疗愈从界限开始，不吸收，只陪伴，不拯救。\n\nTIER 9\nVibration Archetype: Mentor\nRange: 351–400\nSoul Traits: 灵魂具有传递智慧的能力，影响他人意识。\nStrengths: 语言有力量、能量稳定、智慧成熟、引导清晰。\nChallenges: 容易过度负责、容易疲惫、容易变成精神依赖对象。\nGuidance: 做镜子，而不是主人。让他人成为自己的力量来源。\n\nTIER 10\nVibration Archetype: Master\nRange: 401–450\nSoul Traits: 灵魂高度自觉，生活、言语、存在本身就是教学。\nStrengths: 觉知稳定、智慧深、影响力高、频率强。\nChallenges: 面对集体无明时容易感到孤独；容易觉得无人理解。\nGuidance: 继续做光，而不是做领袖。光只是照亮，不判断、不期待。\n\nTIER 11\nVibration Archetype: Ascendant\nRange: 451–500\nSoul Traits: 灵魂开始超越个人层次，进入服务集体、服务意识的阶段。\nStrengths: 自然散发高频能量、能迅速提升场域、具有安定力量。\nChallenges: 身体承载压力大、能量消耗高、偶尔出现灵魂疲惫感。\nGuidance: 回到身体、回到休息、回到自我滋养，才能继续承载更大的频率。\n\nTIER 12\nVibration Archetype: Source-Channel\nRange: 500+\nSoul Traits: 灵魂成为“源头的通道”，没有小我的干扰，纯粹以智慧、爱与真理运作。\nStrengths: 频率最纯净、觉知最稳定、言语即力量、存在即光。\nChallenges: 必须持续保持空性，不可执着“成为高频”，否则会跌回低阶。\nGuidance: 不住于相，不住于我，以无为之心继续让真理流过你。\n\n《S2 Mirror Path · 1–50 Training File》\n\n《S2 Mirror Path · Training File（1–50）》",
+    "symbolicLink": "The Source · Primordial Messengers",
     "keywords": []
+  },
+  "_meta": {
+    "module": "S1 Origin Frequency",
+    "version": "2.0.0",
+    "updatedAt": "2026-06-05",
+    "language": "zh-en-bilingual",
+    "source": "S1_Master_Database_canonical.json + S1_Master_OriginFrequency_EN.json"
   }
 }

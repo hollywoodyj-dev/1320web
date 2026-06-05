@@ -47,7 +47,7 @@ export default async function ResultPage({ searchParams }: { searchParams: Promi
   });
 
   const viewModel = buildReportViewModel(content, {
-    mode: "free",
+    mode: "full",
     variant: "result",
     birthDateLabel: `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`,
   });

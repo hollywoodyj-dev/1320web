@@ -22,6 +22,7 @@ export type SegmentContent = {
   s3Raw?: number;
   /** Full report — optional until paid layer renders them. */
   fullEssence?: LocalizedText;
+  soulTraits?: LocalizedText[];
   coreGifts?: LocalizedText[];
   shadowPatterns?: LocalizedText[];
   lesson?: LocalizedText;

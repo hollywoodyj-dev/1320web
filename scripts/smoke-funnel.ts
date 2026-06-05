@@ -100,6 +100,11 @@ const content = get1320Content({ s1: 18, s3: 110, s2: 27, s0: 7, locale: "en" })
 const freeVm = buildReportViewModel(content, { mode: "free", variant: "result" });
 assert(freeVm.mode === "free" && freeVm.modules.every((m) => m.showLocked), "Free result should lock modules");
 
+const fullResultVm = buildReportViewModel(content, { mode: "full", variant: "result" });
+const s1Full = fullResultVm.modules.find((m) => m.segmentId === "s1");
+assert(Boolean(s1Full && s1Full.fields.length >= 8), "Full /result S1 should match sample detail");
+assert(fullResultVm.modules.every((m) => !m.showLocked), "Full /result should not lock modules");
+
 console.log("PASS: Batch 10 funnel smoke");
 console.log("  routes:", ROUTES.length, "page files found");
 console.log("  assets:", REQUIRED_ASSETS.length, "required files present");

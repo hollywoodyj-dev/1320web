@@ -158,6 +158,9 @@ export function adaptS1(record: V1Record | null, s1: number): SegmentContent {
   return {
     ...content,
     fullEssence: localizedFromStrings(str(record, "essenceEn"), str(record, "essenceZh"), content.freeEssence),
+    soulTraits: strArray(record, "traitsEn").length
+      ? strArray(record, "traitsEn").map((en, i) => fromV1Fields(en, strArray(record, "traitsZh")[i]))
+      : strArray(record, "traitsZh").map((zh) => fromV1Fields(undefined, zh)),
     coreGifts: strArray(record, "strengthsEn").length
       ? strArray(record, "strengthsEn").map((en, i) =>
           fromV1Fields(en, strArray(record, "strengthsZh")[i]),

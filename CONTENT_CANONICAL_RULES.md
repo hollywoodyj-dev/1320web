@@ -116,7 +116,7 @@ Debug: `NEXT_PUBLIC_REPORT_DEBUG=true` on `/result`.
 | Vibration Carrier | `S3-XX` | 12 |
 | Void Challenge | `S0-XX` | 20 |
 
-**Data:** `data/1320/s5-seed-database.json` (import: `npm run import:s5-seeds`)
+**Data:** `data/1320/s5-seed-database.json` (canonical workbook: `data/1320/sources/S5_Seed_Database_Bilingual.xlsx`; import: `npm run import:s5-seeds`)
 
 **Assembly:** `lib/assemble-s5-soul-mission.ts` → `get1320Content().s5Content`
 
@@ -129,6 +129,25 @@ Debug: `NEXT_PUBLIC_REPORT_DEBUG=true` on `/result`.
 - Missing seed: dev throws; production sets `s5AssemblyError` (no generic fallback).
 
 Verify: `npm run smoke:s5-assembly`
+
+---
+
+## S6 — Money Frequency (bilingual master)
+
+**S6 is not financial advice.** It reflects symbolic patterns around worth, receiving, value expression, visibility, and resource flow.
+
+| Rule | Detail |
+|------|--------|
+| MVP mapping | `S1-NN` → `S6-NN` (base archetype follows S1 number) |
+| Lookup key | `S6-01` … `S6-44` — not titles or bare numbers |
+| Records | 44 bilingual archetypes |
+| Missing record | No generic wealth fallback |
+
+**Data:** `data/1320/s6-money-frequency.json` (import: `npm run import:s6-master`)
+
+**Adapter:** `lib/adapt1320V1.ts` → `adaptS6()` → `get1320Content().s6Content`
+
+Verify: `npm run smoke:s6-master` (canonical: `1980-05-22` → S1-18 → S6-18)
 
 ---
 
@@ -151,3 +170,4 @@ Verify: `npm run smoke:content`, `npm run smoke:result-1977`, `npm run smoke:can
 | S1 | `npm run import:s1-master` | `S1_Master_*` |
 | S2 | `npm run import:s2-master` | `S2_Master_MirrorPath_Bilingual.json` |
 | S3 | `npm run import:s3-master` | `S3_Master_VibrationTier_Bilingual.json` |
+| S6 | `npm run import:s6-master` | `S6_Master_MoneyFrequency_Bilingual.json` |

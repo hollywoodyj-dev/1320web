@@ -7,6 +7,7 @@
     "language": "en+zh",
     "purpose": "Deterministic seed database for S5 Soul Mission assembly. This prevents drift by deriving S5 from approved S1/S2/S3/S0 canonical data.",
     "rule": "S5 is not randomly generated. S5 is assembled from approved seeds and fixed templates. AI may only polish approved content without changing meaning.",
+    "sourceWorkbook": "S5_Seed_Database_Bilingual.xlsx",
     "recordCounts": {
       "S1_primaryMissionSeeds": 44,
       "S2_mirrorTaskSeeds": 50,
@@ -3086,7 +3087,6 @@
         "S5-5"
       ],
       "reachableByCurrentFormula": false,
-      "currentFormulaReachableRawRange": "",
       "status": "approved_seed_v1",
       "contentVersion": "s5-seeds-bilingual-v1.0",
       "generatedFrom": "S3_Master_VibrationTier_Bilingual",
@@ -3113,7 +3113,6 @@
         "S5-5"
       ],
       "reachableByCurrentFormula": false,
-      "currentFormulaReachableRawRange": "",
       "status": "approved_seed_v1",
       "contentVersion": "s5-seeds-bilingual-v1.0",
       "generatedFrom": "S3_Master_VibrationTier_Bilingual",
@@ -3140,7 +3139,6 @@
         "S5-5"
       ],
       "reachableByCurrentFormula": false,
-      "currentFormulaReachableRawRange": "",
       "status": "approved_seed_v1",
       "contentVersion": "s5-seeds-bilingual-v1.0",
       "generatedFrom": "S3_Master_VibrationTier_Bilingual",

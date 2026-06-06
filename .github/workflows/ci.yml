@@ -39,5 +39,8 @@ jobs:
       - name: S5 seed assembly smoke
         run: npm run smoke:s5-assembly
 
+      - name: S6 money frequency smoke
+        run: npm run smoke:s6-master
+
       - name: Production build
         run: npm run build

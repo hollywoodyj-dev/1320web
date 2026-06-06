@@ -1,4 +1,4 @@
-import { segmentCodeKey, type SegmentCodePrefix } from "@/lib/segment-code";
+import { formatS6Code, segmentCodeKey, type SegmentCodePrefix } from "@/lib/segment-code";
 import type { V1Record } from "@/lib/types/1320-content";
 
 const RESERVED = new Set(["_meta", "default", "tiers"]);
@@ -28,4 +28,16 @@ export function lookupRecord(data: Record<string, unknown>, key: string): V1Reco
 
 export function lookupDefault(data: Record<string, unknown>): V1Record | null {
   return lookupRecord(data, "default");
+}
+
+/**
+ * Lookup S6 by S1-derived code (`S6-18`) with legacy numeric fallback (`"18"`).
+ * MVP mapping: S1-NN → S6-NN.
+ */
+export function lookupS6Record(
+  data: Record<string, unknown>,
+  s1Number: number,
+): V1Record | null {
+  const codeKey = formatS6Code(s1Number);
+  return lookupRecord(data, codeKey) ?? lookupRecord(data, String(s1Number));
 }

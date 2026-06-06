@@ -16,6 +16,10 @@ export function formatS3TierCode(tier: number): string {
   return `S3-${String(tier).padStart(2, "0")}`;
 }
 
+export function formatS6Code(value: number): string {
+  return `S6-${String(value).padStart(2, "0")}`;
+}
+
 export type SegmentCodePrefix = "S0" | "S1" | "S2";
 
 export function segmentCodeKey(prefix: SegmentCodePrefix, value: number): string {

@@ -16,6 +16,7 @@ import {
   adaptS1,
   adaptS2,
   adaptS3,
+  adaptS6,
   mergeEnOverlay,
 } from "@/lib/adapt1320V1";
 import { MissingS5SeedError } from "@/lib/load-s5-seeds";
@@ -27,6 +28,7 @@ import { pickLocalized } from "@/lib/getLocalized";
 import {
   lookupDefault,
   lookupRecord,
+  lookupS6Record,
   lookupSegmentRecord,
 } from "@/lib/lookup-segment-record";
 import { resolveAllSegmentReflections } from "@/lib/resolve-segment-reflection";
@@ -242,12 +244,9 @@ export function get1320Content(
       ),
       s5Content: s5Resolved.content,
       s5AssemblyError: s5Resolved.error,
-      s6Content: adaptPremiumSegment(
-        lookupRecord(s6Data as Record<string, unknown>, String(normalized.s1)),
-        `S6-${normalized.s1}`,
+      s6Content: adaptS6(
+        lookupS6Record(s6Data as Record<string, unknown>, normalized.s1),
         normalized.s1,
-        "Money Frequency",
-        "金钱频率",
       ),
       synthesisError: message,
     };
@@ -289,12 +288,9 @@ export function get1320Content(
     ),
     s5Content: s5Resolved.content,
     s5AssemblyError: s5Resolved.error,
-    s6Content: adaptPremiumSegment(
-      lookupRecord(s6Data as Record<string, unknown>, String(normalized.s1)),
-      `S6-${normalized.s1}`,
+    s6Content: adaptS6(
+      lookupS6Record(s6Data as Record<string, unknown>, normalized.s1),
       normalized.s1,
-      "Money Frequency",
-      "金钱频率",
     ),
     integratedSoulBlueprint,
     integratedFreeSummary,
@@ -321,8 +317,6 @@ export function t(text: LocalizedText, locale: Locale): string {
 /** @deprecated Use get1320Content({ s1, s3, s2, s0 }) — kept for gradual migration. */
 export function get1320ContentRaw(code: LegacyCodeInput) {
   const s1Key = segmentCodeKey("S1", code.s1);
-  const s6Key = String(code.s1);
-
   return {
     s1: lookupSegmentRecord(s1Data as Record<string, unknown>, "S1", code.s1),
     s3: resolveS3Tier(code.s3Raw).record,
@@ -333,6 +327,6 @@ export function get1320ContentRaw(code: LegacyCodeInput) {
     s4: lookupRecord(s4Data as Record<string, unknown>, s1Key),
     s5: (s5SeedDatabase as { S5_PrimaryMissionSeeds_From_S1: Record<string, unknown> })
       .S5_PrimaryMissionSeeds_From_S1[s1Key] ?? null,
-    s6: lookupRecord(s6Data as Record<string, unknown>, s6Key),
+    s6: lookupS6Record(s6Data as Record<string, unknown>, code.s1),
   };
 }

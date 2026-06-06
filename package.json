@@ -21,7 +21,10 @@
     "import:s3-master": "npx tsx scripts/import-s3-master.ts",
     "import:s2-master": "npx tsx scripts/import-s2-master.ts",
     "import:s0-master": "npx tsx scripts/import-s0-master.ts",
-    "import:s5-seeds": "npx tsx scripts/import-s5-seeds.ts"
+    "import:s5-seeds": "npx tsx scripts/import:s5-seeds.ts",
+    "build:s5-from-xlsx": "npx tsx scripts/build-s5-json-from-xlsx.ts",
+    "import:s6-master": "npx tsx scripts/import-s6-master.ts",
+    "smoke:s6-master": "npx tsx scripts/smoke-s6-master.ts"
   },
   "dependencies": {
     "next": "16.2.6",
@@ -37,6 +40,7 @@
     "eslint-config-next": "16.2.6",
     "sharp": "^0.34.5",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "xlsx": "^0.18.5"
   }
 }

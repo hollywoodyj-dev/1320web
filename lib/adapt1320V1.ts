@@ -373,4 +373,60 @@ export function adaptPremiumSegment(
   };
 }
 
+export function adaptS6(record: V1Record | null, s1Number: number): SegmentContent | null {
+  if (!record) return null;
+
+  const id = str(record, "code") ?? str(record, "id") ?? `S6-${String(s1Number).padStart(2, "0")}`;
+  const nameEn = str(record, "nameEn") ?? "Money Frequency";
+  const nameZh = str(record, "nameZh") ?? "金钱频率";
+  const fallbackEssence = {
+    en: "Content is being prepared for this section.",
+    zh: "内容准备中。",
+  };
+
+  return {
+    ...baseSegment("s1", record, s1Number, id, false),
+    segmentCode: id,
+    title: localizedFromStrings(nameEn, nameZh, { en: nameEn, zh: nameZh }),
+    freeEssence: localizedFromStrings(
+      str(record, "moneyCoreFrequencyEn"),
+      str(record, "moneyCoreFrequencyZh"),
+      fallbackEssence,
+    ),
+    fullEssence: localizedFromStrings(
+      str(record, "moneyCoreFrequencyEn"),
+      str(record, "moneyCoreFrequencyZh"),
+      fallbackEssence,
+    ),
+    growthEdge: localizedFromStrings(
+      str(record, "shadowFrequencyEn"),
+      str(record, "shadowFrequencyZh"),
+      { en: "", zh: "" },
+    ),
+    expressionPattern: localizedFromStrings(
+      str(record, "soulWealthRelationshipEn"),
+      str(record, "soulWealthRelationshipZh"),
+      { en: "", zh: "" },
+    ),
+    lesson: localizedFromStrings(
+      str(record, "karmicMoneyLessonEn"),
+      str(record, "karmicMoneyLessonZh"),
+      { en: "", zh: "" },
+    ),
+    guidance: localizedFromStrings(
+      str(record, "wisewaveGuidanceEn"),
+      str(record, "wisewaveGuidanceZh"),
+      { en: "", zh: "" },
+    ),
+    lockedPreview: localizedFromStrings(
+      str(record, "safetyDisclaimerEn"),
+      str(record, "safetyDisclaimerZh"),
+      {
+        en: "This section is not financial advice.",
+        zh: "此部分不是财务建议。",
+      },
+    ),
+  };
+}
+
 // Locale export reserved for future adapter paths — see lib/types/1320-content.ts

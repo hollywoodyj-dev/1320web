@@ -4,7 +4,7 @@
 **Scope:** Post-Wisewave refinement (data accuracy, conversion polish, report depth)  
 **Build:** commit `1be54d6` and later on `master`  
 **Audience:** Lumen (manual QA)  
-**Last updated:** 2026-06-02
+**Last updated:** 2026-06-06
 
 **Prerequisite:** Prior birth-date funnel sign-off in `QA_BIRTHDATE_LUMEN.md` still applies. This plan adds **what changed** in Phases A–C and what must be re-checked on **production** after deploy.
 
@@ -145,22 +145,37 @@ One happy path on **mobile Safari** + **desktop**:
 
 ---
 
-## Sign-off record (fill in)
+## Lumen sign-off — **PASS** (2026-06-06)
+
+**Environment:** production `https://www.thesoulprofile.com`  
+**Deploy verified:** `b2ab836` (blocker retest)  
+**Tester:** Lumen  
+**Log:** `2026-06-06.md` (Lumen)
+
+| Area | Status |
+|------|--------|
+| Phase A (W1, A, stale regression, sample report depth) | ✅ Pass (prior pass + retest) |
+| Phase B **B1** (single homepage gold CTA) | ✅ Pass |
+| Phase C **C1–C3** (title-case labels on `/sample-report`) | ✅ Pass |
+| Production funnel + legal routes | ✅ Pass (prior pass) |
+| Physical phone Safari + Chrome | ⏳ Not re-run this cycle — optional final sign-off |
+
+**Overall:** **PASS** — production QA blockers cleared.
+
+**Post-retest deploy note:** `0dbbb3a` fixes overview pillar card copy (removed `Raw Value`, template wrappers like `Your Mirror Path (5)`). Quick spot-check on **Your Four-Part Blueprint** after that deploy is recommended; not a blocker for B1/C1–C3.
 
 ```
-Lumen QA — Wisewave Phases A · B · C
-Date: ___________
+Lumen QA — Wisewave Phases A · B · C (retest)
+Date: 2026-06-06
 Environment: production https://www.thesoulprofile.com
-Tester: Lumen
-Commit / deploy: ___________
+Commit: b2ab836
 
-Phase A (A1–A7):  PASS / FAIL — notes: ___________
-Phase B (B1–B11): PASS / FAIL — notes: ___________
-Phase C (C1–C6):  PASS / FAIL — notes: ___________
-Funnel E2E:       PASS / FAIL — notes: ___________
+Phase A: PASS (carried from prior pass)
+Phase B B1: PASS
+Phase C C1–C3: PASS
+Blockers: none
 
-Overall: PASS / FAIL
-Blockers: ___________
+Caveat: fresh physical-phone Safari + Chrome pass not re-run this cycle.
 ```
 
 ---

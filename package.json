@@ -12,6 +12,7 @@
     "smoke:content": "npx tsx scripts/smoke-content.ts",
     "smoke:canonical": "npx tsx scripts/smoke-canonical-rules.ts",
     "smoke:result-1977": "npx tsx scripts/smoke-result-1977.ts",
+    "smoke:s5-assembly": "npx tsx scripts/smoke-s5-assembly.ts",
     "smoke:funnel": "npx tsx scripts/smoke-funnel.ts",
     "qa:baseline": "npx tsx scripts/qa-baseline.ts",
     "audit:assets": "npx tsx scripts/audit-assets.ts",
@@ -19,7 +20,8 @@
     "import:s1-master": "npx tsx scripts/import-s1-master.ts",
     "import:s3-master": "npx tsx scripts/import-s3-master.ts",
     "import:s2-master": "npx tsx scripts/import-s2-master.ts",
-    "import:s0-master": "npx tsx scripts/import-s0-master.ts"
+    "import:s0-master": "npx tsx scripts/import-s0-master.ts",
+    "import:s5-seeds": "npx tsx scripts/import-s5-seeds.ts"
   },
   "dependencies": {
     "next": "16.2.6",

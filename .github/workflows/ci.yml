@@ -36,5 +36,8 @@ jobs:
       - name: Wisewave result smoke (1977-11-12)
         run: npm run smoke:result-1977
 
+      - name: S5 seed assembly smoke
+        run: npm run smoke:s5-assembly
+
       - name: Production build
         run: npm run build

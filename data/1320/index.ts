@@ -3,6 +3,7 @@ import s2MirrorPath from "./s2-mirror-path.json";
 import s3VibrationTier from "./s3-vibration-tier.json";
 import s0VoidGate from "./s0-void-gate.json";
 import s4ShadowPatterns from "./s4-shadow-patterns.json";
+import s5SeedDatabase from "./s5-seed-database.json";
 import s5SoulMission from "./s5-soul-mission.json";
 import s6MoneyFrequency from "./s6-money-frequency.json";
 import reflectionQuestions from "./reflection-questions.json";
@@ -16,6 +17,7 @@ export {
   s3VibrationTier,
   s0VoidGate,
   s4ShadowPatterns,
+  s5SeedDatabase,
   s5SoulMission,
   s6MoneyFrequency,
   reflectionQuestions,

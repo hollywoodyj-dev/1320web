@@ -1,4 +1,5 @@
 import type { IntegratedSoulBlueprint } from "@/lib/types/integrated-soul-blueprint";
+import type { SoulMissionSection } from "@/lib/types/s5-soul-mission";
 
 export type Locale = "en" | "zh";
 
@@ -46,6 +47,10 @@ export type SegmentContent = {
   mirrorLesson?: LocalizedText;
   expressionPattern?: LocalizedText;
   growthEdge?: LocalizedText;
+  /** S5 Soul Mission — deterministic seed assembly (premium). */
+  soulMissionSections?: SoulMissionSection[];
+  assemblySignature?: string;
+  s5SeedVersion?: string;
 };
 
 export type Get1320ContentInput = {
@@ -99,6 +104,7 @@ export type Get1320ContentResult = {
   reflectionQuestion: LocalizedText;
   segmentReflections: Record<"s1" | "s3" | "s2" | "s0", LocalizedText>;
   synthesisError?: string;
+  s5AssemblyError?: string;
   freeResultCopy: FreeResultCopy;
 };
 

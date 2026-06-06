@@ -105,6 +105,33 @@ Debug: `NEXT_PUBLIC_REPORT_DEBUG=true` on `/result`.
 
 ---
 
+## S5 — Soul Mission (deterministic seed assembly)
+
+**S5 is not randomly generated.** It is assembled from four approved bilingual seeds:
+
+| Seed | Source code key | Count |
+|------|-----------------|-------|
+| Primary Mission | `S1-XX` | 44 |
+| Mirror Task | `S2-XX` | 50 |
+| Vibration Carrier | `S3-XX` | 12 |
+| Void Challenge | `S0-XX` | 20 |
+
+**Data:** `data/1320/s5-seed-database.json` (import: `npm run import:s5-seeds`)
+
+**Assembly:** `lib/assemble-s5-soul-mission.ts` → `get1320Content().s5Content`
+
+**Signature (internal):** `combinationSignature` e.g. `S1-24|S3-04|S2-23|S0-09` — **not** `S5-24` or title-based keys.
+
+**Rules:**
+
+- AI may only polish approved seed text; it may not invent mission meaning.
+- No deterministic life-purpose or destiny claims.
+- Missing seed: dev throws; production sets `s5AssemblyError` (no generic fallback).
+
+Verify: `npm run smoke:s5-assembly`
+
+---
+
 ## Canonical sample birth dates
 
 | Birth date | Codes |

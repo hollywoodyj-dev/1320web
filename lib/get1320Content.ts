@@ -6,8 +6,10 @@ import s1Data from "@/data/1320/s1-origin-frequency.json";
 import s2Data from "@/data/1320/s2-mirror-path.json";
 import s3Data from "@/data/1320/s3-vibration-tier.json";
 import s4Data from "@/data/1320/s4-shadow-patterns.json";
-import s5Data from "@/data/1320/s5-soul-mission.json";
+import s5SeedDatabase from "@/data/1320/s5-seed-database.json";
 import s6Data from "@/data/1320/s6-money-frequency.json";
+import { adaptAssembledS5 } from "@/lib/adapt-assembled-s5";
+import { assembleS5SoulMission } from "@/lib/assemble-s5-soul-mission";
 import {
   adaptPremiumSegment,
   adaptS0,
@@ -16,6 +18,7 @@ import {
   adaptS3,
   mergeEnOverlay,
 } from "@/lib/adapt1320V1";
+import { MissingS5SeedError } from "@/lib/load-s5-seeds";
 import { buildSynthesisLayerInput, validateSynthesisLayerInput } from "@/lib/build-synthesis-input";
 import { buildCombinationSignature } from "@/lib/combination-signature";
 import { deriveIntegratedFreeSummary } from "@/lib/derive-integrated-free-summary";
@@ -67,6 +70,33 @@ const enOverlays = enOverlaysData as EnOverlaysFile & { _meta?: unknown };
 
 const SYNTHESIS_ERROR_MESSAGE =
   "Your Integrated Soul Blueprint could not be generated because one or more code layers are incomplete. Please contact support.";
+
+const S5_ASSEMBLY_ERROR_MESSAGE =
+  "Your Soul Mission module could not be assembled because one or more approved seeds are missing. Please contact support.";
+
+function resolveS5Content(codes: {
+  s1Code: string;
+  s2Code: string;
+  s3Code: string;
+  s0Code: string;
+  combinationSignature: string;
+}): { content: Get1320ContentResult["s5Content"]; error?: string } {
+  try {
+    const assembled = assembleS5SoulMission({
+      s1Code: codes.s1Code,
+      s2Code: codes.s2Code,
+      s3Code: codes.s3Code,
+      s0Code: codes.s0Code,
+      combinationSignature: codes.combinationSignature,
+    });
+    return { content: adaptAssembledS5(assembled) };
+  } catch (error) {
+    if (process.env.NODE_ENV === "development" && error instanceof MissingS5SeedError) {
+      throw error;
+    }
+    return { content: null, error: S5_ASSEMBLY_ERROR_MESSAGE };
+  }
+}
 
 export { formatCodeDisplay } from "@/lib/format-code-display";
 
@@ -188,6 +218,13 @@ export function get1320Content(
     { birthDate: options?.birthDate, locale },
   );
   const missingFields = validateSynthesisLayerInput(synthesisInput);
+  const s5Resolved = resolveS5Content({
+    s1Code: codes.s1Code,
+    s2Code: codes.s2Code,
+    s3Code: codes.s3Code,
+    s0Code: codes.s0Code,
+    combinationSignature,
+  });
 
   if (missingFields.length > 0) {
     const message = `${SYNTHESIS_ERROR_MESSAGE} (missing: ${missingFields.join(", ")})`;
@@ -203,13 +240,8 @@ export function get1320Content(
         "Shadow Pattern Module",
         "阴影模式模块",
       ),
-      s5Content: adaptPremiumSegment(
-        lookupRecord(s5Data as Record<string, unknown>, s1Code),
-        s1Code,
-        normalized.s1,
-        "Soul Mission",
-        "灵魂使命",
-      ),
+      s5Content: s5Resolved.content,
+      s5AssemblyError: s5Resolved.error,
       s6Content: adaptPremiumSegment(
         lookupRecord(s6Data as Record<string, unknown>, String(normalized.s1)),
         `S6-${normalized.s1}`,
@@ -255,13 +287,8 @@ export function get1320Content(
       "Shadow Pattern Module",
       "阴影模式模块",
     ),
-    s5Content: adaptPremiumSegment(
-      lookupRecord(s5Data as Record<string, unknown>, s1Code),
-      s1Code,
-      normalized.s1,
-      "Soul Mission",
-      "灵魂使命",
-    ),
+    s5Content: s5Resolved.content,
+    s5AssemblyError: s5Resolved.error,
     s6Content: adaptPremiumSegment(
       lookupRecord(s6Data as Record<string, unknown>, String(normalized.s1)),
       `S6-${normalized.s1}`,
@@ -304,7 +331,8 @@ export function get1320ContentRaw(code: LegacyCodeInput) {
       lookupDefault(s2Data as Record<string, unknown>),
     s0: lookupSegmentRecord(s0Data as Record<string, unknown>, "S0", code.s0),
     s4: lookupRecord(s4Data as Record<string, unknown>, s1Key),
-    s5: lookupRecord(s5Data as Record<string, unknown>, s1Key),
+    s5: (s5SeedDatabase as { S5_PrimaryMissionSeeds_From_S1: Record<string, unknown> })
+      .S5_PrimaryMissionSeeds_From_S1[s1Key] ?? null,
     s6: lookupRecord(s6Data as Record<string, unknown>, s6Key),
   };
 }

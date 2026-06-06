@@ -4,8 +4,8 @@
     "version": "0.1.0",
     "updatedAt": "2026-05-28",
     "language": "zh",
-    "status": "derived-from-s1",
-    "note": "MVP mission module generated from S1 direction/lesson. Full S5 generator can later integrate S1+S2+S3+S0."
+    "status": "deprecated",
+    "note": "DEPRECATED — replaced by s5-seed-database.json + assembleS5SoulMission(). Do not use for runtime lookup."
   },
   "S1-01": {
     "id": "S5-S1-01",

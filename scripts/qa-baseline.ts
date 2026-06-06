@@ -92,6 +92,13 @@ assert(
   Boolean(s0?.fields.some((f) => f.label === "Core Illusion Mechanism")),
   "S0 full report includes Core Illusion Mechanism",
 );
+const s3Overview = vm.overviewCards.find((c) => c.segmentId === "s3");
+assert(!s3Overview?.metaNote, "S3 overview must not show raw value");
+assert(!s3Overview?.essence.includes("S3-"), "S3 overview essence must not repeat code prefix");
+assert(
+  !vm.overviewCards.some((c) => /Your Mirror Path \(|Your Void Gate \(S0-/i.test(c.essence)),
+  "overview essence must not use template wrappers",
+);
 console.log("  OK modules + fields");
 
 console.log("\n=== Report view model (result free) ===");

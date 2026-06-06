@@ -11,6 +11,7 @@ import {
   coreIllusionMechanismField,
   relationshipTriggerPatternField,
 } from "@/lib/report/format-depth-fields";
+import { buildOverviewEssence, truncateOverview } from "@/lib/report/overview-essence";
 import {
   REFLECTION_JOURNAL_PROMPTS,
   REPORT_FINAL_CTA,
@@ -315,11 +316,7 @@ export function buildReportViewModel(
       code,
       title: meta.title.en,
       shortLabel: meta.shortLabel.en,
-      essence: pickLocalized(seg.freeEssence, locale),
-      metaNote:
-        id === "s3"
-          ? `Raw Value: ${content.codes.s3Raw}`
-          : undefined,
+      essence: truncateOverview(buildOverviewEssence(id, seg, locale)),
     };
   });
 

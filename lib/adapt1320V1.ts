@@ -167,12 +167,24 @@ export function adaptS1(record: V1Record | null, s1: number): SegmentContent {
       ? `你携带的是「${str(record, "nameZh") ?? nameEn}」的原频。${traitsZh.join("。")}。`
       : undefined;
 
+  const freeEssenceFromTraits =
+    traitsEn.length > 0
+      ? localizedFromStrings(
+          `${traitsEn.map((t) => t.trim()).filter(Boolean).join(". ")}.`,
+          traitsZh.length > 0
+            ? `${traitsZh.map((t) => t.trim()).filter(Boolean).join("。")}。`
+            : undefined,
+          content.freeEssence,
+        )
+      : content.freeEssence;
+
   return {
     ...content,
+    freeEssence: freeEssenceFromTraits,
     fullEssence: localizedFromStrings(
       essenceFromTraits ?? str(record, "essenceEn"),
       essenceZhFromTraits ?? str(record, "essenceZh"),
-      content.freeEssence,
+      freeEssenceFromTraits,
     ),
     soulTraits: strArray(record, "traitsEn").length
       ? strArray(record, "traitsEn").map((en, i) => fromV1Fields(en, strArray(record, "traitsZh")[i]))
@@ -213,15 +225,7 @@ export function adaptS2(record: V1Record | null, s2: number): SegmentContent {
   const dynamicEn = str(record, "relationshipDynamicEn") ?? str(record, "essenceEn");
   const dynamicZh = str(record, "relationshipDynamicZh") ?? str(record, "essenceZh");
 
-  const freeEssence = localizedFromStrings(
-    dynamicEn
-      ? `Your Mirror Path (${s2}) activates ${nameEn}. ${dynamicEn}`
-      : buildFreeEssenceEn("s2", record),
-    dynamicZh
-      ? `你的镜像路径（S2-${s2}）激活「${nameZh ?? nameEn}」。${dynamicZh}`
-      : str(record, "essenceZh"),
-    content.freeEssence,
-  );
+  const freeEssence = localizedFromStrings(dynamicEn, dynamicZh, content.freeEssence);
 
   return {
     ...content,
@@ -266,15 +270,7 @@ export function adaptS0(record: V1Record | null, s0: number): SegmentContent {
 
   const coreIllusion = localizedFromStrings(illusionEn, illusionZh, content.freeEssence);
 
-  const freeEssence = localizedFromStrings(
-    illusionEn
-      ? `Your Void Gate (S0-${String(s0).padStart(2, "0")}) works through ${nameEn}. ${illusionEn}`
-      : buildFreeEssenceEn("s0", record),
-    illusionZh
-      ? `你的空门（S0-${String(s0).padStart(2, "0")}）通过「${nameZh ?? nameEn}」运作。${illusionZh}`
-      : str(record, "essenceZh"),
-    content.freeEssence,
-  );
+  const freeEssence = coreIllusion;
 
   return {
     ...content,
@@ -321,15 +317,11 @@ export function adaptS3(record: V1Record | null, s3Raw: number, tierMatched: boo
   const title = localizedFromStrings(nameEn, nameZh, fromV1Fields(tierCode ?? "S3", tierCode ?? "S3"));
 
   const freeEssence = localizedFromStrings(
-    soulTraitsEn
-      ? `${tierCode ? `${tierCode} · ` : ""}${nameEn}. ${soulTraitsEn}`
-      : (str(safe, "essenceEn") ?? buildFreeEssenceEn("s3", safe)),
-    soulTraitsZh
-      ? `${tierCode ? `${tierCode} · ` : ""}${nameZh ?? nameEn}。${soulTraitsZh}`
-      : str(safe, "essenceZh"),
+    soulTraitsEn ?? str(safe, "essenceEn") ?? buildFreeEssenceEn("s3", safe),
+    soulTraitsZh ?? str(safe, "essenceZh"),
     {
-      en: `${tierCode ? `${tierCode} · ` : ""}${nameEn} reflects how your energy expresses in the world.`,
-      zh: `${tierCode ? `${tierCode} · ` : ""}${nameZh ?? nameEn}映照你的能量如何在现实中表达。`,
+      en: `${nameEn} reflects how your energy expresses in the world.`,
+      zh: `${nameZh ?? nameEn}映照你的能量如何在现实中表达。`,
     },
   );
 

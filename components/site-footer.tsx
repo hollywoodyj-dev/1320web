@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FooterSubscribe } from "@/components/footer-subscribe";
+import { FooterSubscribeSlot } from "@/components/footer-subscribe-slot";
 import { FOOTER_COLUMNS, FOOTER_LEGAL_LINKS } from "@/lib/site-nav";
 
 export function SiteFooter() {
@@ -53,7 +53,7 @@ export function SiteFooter() {
         </div>
       ))}
 
-      <FooterSubscribe variant="inner" />
+      <FooterSubscribeSlot variant="inner" />
 
       <p className="footer-mantra inner-footer-mantra">
         YOUR CODE IS A MIRROR — NOT A SENTENCE.

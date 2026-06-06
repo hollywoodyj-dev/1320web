@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { FooterSubscribe } from "@/components/footer-subscribe";
+import { FooterSubscribeSlot } from "@/components/footer-subscribe-slot";
 import { HomeBirthdateEntry } from "@/components/home-birthdate-entry";
 import { HomeTopbar } from "@/components/home-topbar";
 import { SkipLink } from "@/components/skip-link";
@@ -215,11 +215,14 @@ export default function HomePage() {
                 <li key={item}>{item}</li>
               ))}
             </ul>
-            <div className="homepage-preview-actions homepage-preview-actions--secondary">
-              <Link href={HOMEPAGE_FULL_REPORT_PREVIEW.waitlistHref} className="hero-secondary-link">
+            <div className="homepage-preview-actions">
+              <Link href={HOMEPAGE_FULL_REPORT_PREVIEW.waitlistHref} className="gold-button">
                 {HOMEPAGE_FULL_REPORT_PREVIEW.waitlistCta}
               </Link>
-              <Link href={HOMEPAGE_FULL_REPORT_PREVIEW.readingHref} className="hero-secondary-link">
+              <Link
+                href={HOMEPAGE_FULL_REPORT_PREVIEW.readingHref}
+                className="hero-secondary-link hero-secondary-link--muted"
+              >
                 {HOMEPAGE_FULL_REPORT_PREVIEW.readingCta}
               </Link>
             </div>
@@ -295,7 +298,7 @@ export default function HomePage() {
             </div>
           ))}
 
-          <FooterSubscribe variant="homepage" />
+          <FooterSubscribeSlot variant="homepage" />
         </footer>
 
         <p className="footer-mantra">{HOMEPAGE_FINAL_CTA.mantra}</p>

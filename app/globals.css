@@ -16,7 +16,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -29,7 +29,9 @@ body {
   min-height: 100vh;
   background: radial-gradient(circle at top, #15153a 0%, #01010a 48%, #01010a 100%);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  line-height: 1.65;
+  font-weight: 400;
 }
 
 a {
@@ -270,7 +272,7 @@ button {
   box-shadow:
     0 0 0 1px rgba(216, 177, 92, 0.12) inset,
     0 0 24px rgba(242, 188, 95, 0.2);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-marcellus), Georgia, "Times New Roman", serif;
   font-size: 0.95rem;
 }
 
@@ -282,7 +284,7 @@ button {
 .brand-number {
   margin: 0;
   color: #f0c36f;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-marcellus), Georgia, "Times New Roman", serif;
   font-size: 2.1rem;
   line-height: 1;
 }
@@ -291,7 +293,7 @@ button {
   margin: 6px 0 0;
   max-width: 240px;
   color: #e0bb74;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-marcellus), Georgia, "Times New Roman", serif;
   font-size: 0.95rem;
   letter-spacing: 0.08em;
   line-height: 1.14;
@@ -440,10 +442,13 @@ button {
 
 .eyebrow {
   margin: 0;
-  color: rgba(248, 244, 234, 0.92);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.05rem, 3.2vw, 3.2rem);
-  line-height: 1.1;
+  color: #efc36f;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+  text-transform: uppercase;
 }
 
 .text-gold-gradient {
@@ -458,10 +463,11 @@ button {
   margin: 10px 0 0;
   display: flex;
   flex-direction: column;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-marcellus), Georgia, "Times New Roman", serif;
   font-size: clamp(3.45rem, 6.1vw, 5.45rem);
+  font-weight: 400;
   line-height: 0.92;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.04em;
   background: linear-gradient(180deg, #f7dfad 0%, #e7b557 34%, #b87720 72%, #f0d18d 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -651,7 +657,7 @@ button {
   width: min(52vw, 640px);
   margin: 0;
   color: #efc36f;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-marcellus), Georgia, "Times New Roman", serif;
   font-size: clamp(1.5rem, 2vw, 2rem);
   line-height: 1.25;
   letter-spacing: 0.08em;
@@ -869,7 +875,7 @@ button {
 .entry-title {
   margin: 0;
   color: #efc46d;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-marcellus), Georgia, "Times New Roman", serif;
   font-size: 1.42rem;
   line-height: 1.16;
   letter-spacing: 0.065em;
@@ -1042,7 +1048,7 @@ button {
 .footer-mantra,
 .footer-subscribe h3,
 .footer-column h3 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-marcellus), Georgia, "Times New Roman", serif;
 }
 
 .pillar-code {
@@ -1222,7 +1228,7 @@ button {
 
 .step-number {
   margin: 14px 0 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-marcellus), Georgia, "Times New Roman", serif;
   font-size: 2rem;
 }
 
@@ -1332,6 +1338,17 @@ button {
   color: #f8f4ea;
 }
 
+.hero-secondary-link--muted {
+  color: rgba(248, 244, 234, 0.58);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+.hero-secondary-link--muted:hover {
+  color: rgba(248, 244, 234, 0.82);
+}
+
 .hero-actions--primary-only {
   align-items: flex-start;
 }
@@ -1358,8 +1375,11 @@ button {
 .entry-eyebrow {
   margin: 0 0 6px;
   color: #efc36f;
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .homepage-blueprint-intro {
@@ -1371,14 +1391,16 @@ button {
 .homepage-section-eyebrow {
   margin: 0 0 8px;
   color: #efc36f;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.85rem;
-  letter-spacing: 0.14em;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .homepage-section-title {
   margin: 0 0 12px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-marcellus), Georgia, "Times New Roman", serif;
   font-size: clamp(1.35rem, 2.5vw, 1.85rem);
   color: #f8f4ea;
 }
@@ -1430,7 +1452,7 @@ button {
 
 .homepage-mid-cta h3 {
   margin: 0 0 12px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-marcellus), Georgia, "Times New Roman", serif;
   font-size: clamp(1.2rem, 2.2vw, 1.65rem);
   line-height: 1.35;
   color: #f8f4ea;
@@ -2201,15 +2223,20 @@ button {
 .blueprint-eyebrow {
   margin: 0 0 12px;
   color: #efc36f;
-  font-size: 0.78rem;
-  letter-spacing: 0.2em;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .blueprint-title {
   margin: 0 0 16px;
+  font-family: var(--font-marcellus), Georgia, "Times New Roman", serif;
   font-size: clamp(2rem, 5vw, 2.75rem);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.15;
+  letter-spacing: 0.04em;
   color: #f8f4ea;
 }
 
@@ -2903,7 +2930,7 @@ button {
 
 .generating-title {
   margin: 0 0 14px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-marcellus), Georgia, "Times New Roman", serif;
   font-size: clamp(2.9rem, 6.4vw, 4.3rem);
   font-weight: 500;
   line-height: 0.98;
@@ -3131,7 +3158,7 @@ button {
 
 .generating-status-title {
   margin: 0 0 8px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-marcellus), Georgia, "Times New Roman", serif;
   font-size: clamp(1.1rem, 3vw, 1.45rem);
   font-weight: 500;
   color: #f8f4ea;
@@ -3679,11 +3706,11 @@ button {
 
 .report-header-title {
   margin: 0 0 10px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-marcellus), Georgia, "Times New Roman", serif;
   font-size: clamp(1.5rem, 3.2vw, 2.15rem);
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.08;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.04em;
   filter: drop-shadow(0 0 16px rgba(219, 161, 62, 0.14));
 }
 
@@ -3728,8 +3755,9 @@ button {
 .report-code-strip {
   margin: 0;
   /* +30% vs prior clamp(0.95rem, 2.2vw, 1.15rem) */
+  font-family: var(--font-inter), system-ui, sans-serif;
   font-size: clamp(1.24rem, 2.86vw, 1.5rem);
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.04em;
   line-height: 1.2;
 }
@@ -3765,7 +3793,17 @@ button {
 }
 
 .report-pillar-card .pillar-code {
-  font-size: clamp(2.2rem, 3.6vw, 3.2rem);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-shadow: none;
+}
+
+.report-module-card .pillar-code {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
 }
 
 .report-pillar-card .pillar-card-body {
@@ -3815,9 +3853,10 @@ button {
 
 .report-section-title {
   margin: 0 0 16px;
+  font-family: var(--font-marcellus), Georgia, "Times New Roman", serif;
   font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
+  font-weight: 400;
+  letter-spacing: 0.04em;
 }
 
 .report-overview-grid {

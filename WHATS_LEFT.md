@@ -19,7 +19,7 @@
 | Full sample report (fictional) | ✅ | `/sample-report` |
 | Blueprint education + anchors | ✅ | `/blueprint#s1` … `#s0` |
 | Waitlist + booking forms | ✅ | Client success; optional webhook |
-| Legal + footer | ✅ | MVP copy; steward placeholders remain |
+| Legal + footer | ✅ | Placeholders filled; footer subscribe hidden until webhook |
 
 **Not the “full” product** — that’s Phase 2 (Soul Profile, save code, timeline, membership, payments). Phase 1 is **discover → calculate → free mirror → waitlist / book**.
 
@@ -44,6 +44,9 @@
 
 ### C. Optional polish (Phase 1 — nice to have)
 
+- [x] **Marcellus + Inter** typography (display headings, sans body/UI)
+- [x] Homepage Full Report: gold waitlist CTA + demoted reading link
+- [x] Footer **SUBSCRIBE** hidden until `LEADS_WEBHOOK_URL` is set
 - [ ] Wire **SAVE REPORT** / **EMAIL ME** on report header to lead capture (buttons exist; no action today)
 - [ ] Connect `LEADS_WEBHOOK_URL` to Zapier / Make / CRM so waitlist & booking emails are stored
 - [ ] Desktop pass on all routes (mobile funnel is done)

@@ -1,23 +1,21 @@
-/** Homepage copy — 2/15 English source of truth (layout/images unchanged). */
+/** Homepage copy — brand-led Soul Code default (Wisewave SEO spec). */
 
 import { SEGMENTS } from "@/lib/segments";
 
 export const HOMEPAGE_META = {
-  title: "1320 Soul Code | Discover Your Soul Origin Code",
+  title: "1320 Soul Code | Discover the Pattern You Keep Repeating",
   description:
-    "Discover your 1320 Soul Code through a four-part soul blueprint: Origin Frequency, Vibration Tier, Mirror Path, and Void Gate. A self-awareness system for remembering your gifts, patterns, and path of conscious evolution.",
+    "Discover your 1320 Soul Code and see the patterns, gifts, and relational mirrors shaping your life. Private, reflective, and not fortune-telling.",
 };
 
 export const HOMEPAGE_HERO = {
-  eyebrow: "CODE YOUR ORIGIN",
-  titleLines: ["REMEMBER", "YOUR SOUL"] as const,
+  titleLines: ["Discover Your", "Soul Code"] as const,
   subheadline:
-    "1320 Soul Origin Code System reveals your soul's original frequency, your gifts, your relational mirrors, and the awakening path within your life.",
-  primaryCta: "GENERATE MY CODE",
+    "See the pattern you keep repeating through a reflective profile of your gifts, relational mirrors, and choices.",
+  trustMicroLine: "Not your fate. Your mirror.",
+  primaryCta: "See My Pattern",
   primaryHref: "#entry-panel",
-  trustNote: "Your data is private and secure.",
-  groundedNote:
-    "1320 is a frequency-based self-awareness framework built around S1, S3, S2, and S0 — not astrology, tarot, religion, or deterministic fortune-telling.",
+  ctaSupportLine: "Your Soul Code begins with your birth date.",
   miniLabels: [
     { digit: "ORIGIN", label: "Who You Are" },
     { digit: "TRINITY", label: "How You Express" },

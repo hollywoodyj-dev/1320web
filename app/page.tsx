@@ -61,7 +61,6 @@ export default function HomePage() {
           </div>
 
           <div className="hero-copy">
-            <p className="eyebrow">{HOMEPAGE_HERO.eyebrow}</p>
             <h1>
               <span className="hero-title-line">{HOMEPAGE_HERO.titleLines[0]}</span>
               <span className="hero-title-line">{HOMEPAGE_HERO.titleLines[1]}</span>
@@ -76,12 +75,12 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <p className="hero-grounded-note">{HOMEPAGE_HERO.groundedNote}</p>
+              <p className="hero-trust-micro">{HOMEPAGE_HERO.trustMicroLine}</p>
               <div className="hero-actions hero-actions--primary-only">
                 <Link href={HOMEPAGE_HERO.primaryHref} className="gold-button">
                   {HOMEPAGE_HERO.primaryCta}
                 </Link>
-                <p className="privacy-note">{HOMEPAGE_HERO.trustNote}</p>
+                <p className="hero-cta-support">{HOMEPAGE_HERO.ctaSupportLine}</p>
               </div>
             </div>
           </div>

@@ -52,7 +52,15 @@ export function ReportModuleCard({ module }: ReportModuleCardProps) {
           {module.fields.map((f) => (
             <div key={f.label} className="report-module-field">
               <h4>{f.label}</h4>
-              <p>{f.value}</p>
+              {f.items?.length ? (
+                <ul className="report-module-list">
+                  {f.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p>{f.value}</p>
+              )}
             </div>
           ))}
         </div>

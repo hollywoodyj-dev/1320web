@@ -1,6 +1,5 @@
 import enOverlaysData from "@/data/1320/en-field-overlays.json";
 import freeResultCopyData from "@/data/1320/free-result-copy.json";
-import integratedSummaryData from "@/data/1320/integrated-summary-templates.json";
 import reflectionQuestionsData from "@/data/1320/reflection-questions.json";
 import s0Data from "@/data/1320/s0-void-gate.json";
 import s1Data from "@/data/1320/s1-origin-frequency.json";
@@ -17,12 +16,19 @@ import {
   adaptS3,
   mergeEnOverlay,
 } from "@/lib/adapt1320V1";
+import { buildSynthesisLayerInput, validateSynthesisLayerInput } from "@/lib/build-synthesis-input";
+import { buildCombinationSignature } from "@/lib/combination-signature";
+import { deriveIntegratedFreeSummary } from "@/lib/derive-integrated-free-summary";
+import { generateIntegratedSoulBlueprint } from "@/lib/generate-integrated-blueprint";
 import { pickLocalized } from "@/lib/getLocalized";
 import {
   lookupDefault,
   lookupRecord,
   lookupSegmentRecord,
 } from "@/lib/lookup-segment-record";
+import { resolveAllSegmentReflections } from "@/lib/resolve-segment-reflection";
+import { resolveS3Tier } from "@/lib/s3-tier";
+import { formatCodeDisplay } from "@/lib/format-code-display";
 import { segmentCodeKey } from "@/lib/segment-code";
 import type {
   FreeResultCopy,
@@ -30,9 +36,10 @@ import type {
   Get1320ContentResult,
   Locale,
   LocalizedText,
-  S3TierRecord,
   V1Record,
 } from "@/lib/types/1320-content";
+
+export { getS3TierRecord, resolveS3Tier } from "@/lib/s3-tier";
 
 type LegacyCodeInput = {
   s1: number;
@@ -45,12 +52,6 @@ type LegacyCodeInput = {
 type ReflectionQuestionsFile = {
   default: LocalizedText;
   byCode?: Record<string, LocalizedText>;
-  bySegment?: Partial<Record<"s1" | "s2" | "s3" | "s0", Record<string, LocalizedText>>>;
-};
-
-type IntegratedSummaryFile = {
-  default: LocalizedText;
-  templates?: Array<{ conditions: Record<string, number>; summary: LocalizedText }>;
 };
 
 type EnOverlaysFile = {
@@ -62,75 +63,30 @@ type EnOverlaysFile = {
 
 const freeResultCopy = freeResultCopyData as FreeResultCopy & { _meta?: unknown };
 const reflectionQuestions = reflectionQuestionsData as ReflectionQuestionsFile & { _meta?: unknown };
-const integratedSummary = integratedSummaryData as IntegratedSummaryFile & { _meta?: unknown };
 const enOverlays = enOverlaysData as EnOverlaysFile & { _meta?: unknown };
 
-export function formatCodeDisplay(s1: number, s3Raw: number, s2: number, s0: number) {
-  const codeString = `S1-${s1} / S3-${s3Raw} / S2-${s2} / S0-${String(s0).padStart(2, "0")}`;
-  const compactCode = `${s1}-${s3Raw}-${s2}-${String(s0).padStart(2, "0")}`;
-  return { s1, s3Raw, s2, s0, codeString, compactCode };
+const SYNTHESIS_ERROR_MESSAGE =
+  "Your Integrated Soul Blueprint could not be generated because one or more code layers are incomplete. Please contact support.";
+
+export { formatCodeDisplay } from "@/lib/format-code-display";
+
+function attachReflection(
+  content: Get1320ContentResult["s1Content"],
+  reflection: LocalizedText,
+): Get1320ContentResult["s1Content"] {
+  return { ...content, reflectionQuestion: reflection };
 }
 
-export function getS3TierRecord(s3Raw: number): { record: V1Record | null; tierMatched: boolean } {
-  const typed = s3Data as unknown as {
-    default?: V1Record;
-    tiers?: S3TierRecord[];
-  };
-
-  const tiers = typed.tiers;
-  if (Array.isArray(tiers) && tiers.length > 0) {
-    const matched = tiers.find((tier) => {
-      const range = tier.range ?? (tier.min != null && tier.max != null ? [tier.min, tier.max] : null);
-      if (!range || range.length !== 2) return false;
-      const [min, max] = range;
-      return s3Raw >= min && s3Raw <= max;
-    });
-    if (matched) return { record: matched, tierMatched: true };
-  }
-
-  return { record: typed.default ?? null, tierMatched: false };
-}
-
-function resolveIntegratedSummary(input: Get1320ContentInput): LocalizedText {
-  const templates = integratedSummary.templates ?? [];
-  let best: { score: number; summary: LocalizedText } | null = null;
-
-  for (const template of templates) {
-    const entries = Object.entries(template.conditions);
-    const matches = entries.every(([key, value]) => {
-      if (key === "s1") return input.s1 === value;
-      if (key === "s3") return input.s3 === value;
-      if (key === "s2") return input.s2 === value;
-      if (key === "s0") return input.s0 === value;
-      return false;
-    });
-    if (matches && entries.length > 0 && (!best || entries.length > best.score)) {
-      best = { score: entries.length, summary: template.summary };
-    }
-  }
-
-  return best?.summary ?? integratedSummary.default;
-}
-
-function resolveReflectionQuestion(input: Get1320ContentInput): LocalizedText {
-  const compact = `${input.s1}-${input.s3}-${input.s2}-${String(input.s0).padStart(2, "0")}`;
-  const byCode = reflectionQuestions.byCode?.[compact];
-  if (byCode) return byCode;
-
-  const s1Q = reflectionQuestions.bySegment?.s1?.[String(input.s1)];
-  if (s1Q) return s1Q;
-
-  return reflectionQuestions.default;
-}
-
-export function get1320Content(input: Get1320ContentInput | LegacyCodeInput): Get1320ContentResult {
+export function get1320Content(
+  input: Get1320ContentInput | LegacyCodeInput,
+  options?: { birthDate?: string },
+): Get1320ContentResult {
   const normalized: Get1320ContentInput =
     "s3Raw" in input
       ? { s1: input.s1, s3: input.s3Raw, s2: input.s2, s0: input.s0, locale: input.locale }
       : input;
 
   const locale: Locale = normalized.locale ?? "en";
-  const codes = formatCodeDisplay(normalized.s1, normalized.s3, normalized.s2, normalized.s0);
 
   const s1Code = segmentCodeKey("S1", normalized.s1);
   const s2Code = segmentCodeKey("S2", normalized.s2);
@@ -152,52 +108,171 @@ export function get1320Content(input: Get1320ContentInput | LegacyCodeInput): Ge
     s0Record,
     enOverlays.s0?.[s0Code] ?? enOverlays.s0?.[String(normalized.s0)],
   );
-  const { record: s3Record, tierMatched } = getS3TierRecord(normalized.s3);
+
+  const s3Resolved = resolveS3Tier(normalized.s3);
   const s3TierKey =
-    s3Record && typeof s3Record.code === "string" ? s3Record.code : String(normalized.s3);
+    s3Resolved.s3Code ??
+    (s3Resolved.record && typeof s3Resolved.record.code === "string"
+      ? s3Resolved.record.code
+      : String(normalized.s3));
   const s3Merged = mergeEnOverlay(
-    s3Record,
+    s3Resolved.record,
     enOverlays.s3?.[s3TierKey] ?? enOverlays.s3?.[String(normalized.s3)],
   );
 
-  const s4Key = segmentCodeKey("S1", normalized.s1);
-  const s6Key = String(normalized.s1);
+  const codes = formatCodeDisplay(
+    normalized.s1,
+    normalized.s3,
+    normalized.s2,
+    normalized.s0,
+    s3Resolved.s3Code,
+    s3Resolved.s3Title,
+  );
+  const combinationSignature = buildCombinationSignature({
+    s1Code: codes.s1Code,
+    s3Code: codes.s3Code,
+    s2Code: codes.s2Code,
+    s0Code: codes.s0Code,
+  });
 
-  const s1Content = adaptS1(s1Record, normalized.s1);
-  const s2Content = adaptS2(s2Merged, normalized.s2);
-  const s0Content = adaptS0(s0Merged, normalized.s0);
-  const s3Content = adaptS3(s3Merged, normalized.s3, tierMatched);
+  let s1Content = adaptS1(s1Record, normalized.s1);
+  let s2Content = adaptS2(s2Merged, normalized.s2);
+  let s0Content = adaptS0(s0Merged, normalized.s0);
+  let s3Content = adaptS3(s3Merged, normalized.s3, s3Resolved.tierMatched);
+
+  s1Content = { ...s1Content, segmentCode: codes.s1Code };
+  s2Content = { ...s2Content, segmentCode: codes.s2Code };
+  s0Content = { ...s0Content, segmentCode: codes.s0Code };
+  s3Content = {
+    ...s3Content,
+    segmentCode: codes.s3Code,
+    s3Code: codes.s3Code,
+    s3Raw: normalized.s3,
+  };
+
+  const partialResult: Get1320ContentResult = {
+    locale,
+    codes,
+    combinationSignature,
+    s1Content,
+    s3Content,
+    s2Content,
+    s0Content,
+    s4Content: null,
+    s5Content: null,
+    s6Content: null,
+    integratedSoulBlueprint: null,
+    integratedFreeSummary: { en: "", zh: "" },
+    reflectionQuestion: reflectionQuestions.default,
+    segmentReflections: {
+      s1: reflectionQuestions.default,
+      s3: reflectionQuestions.default,
+      s2: reflectionQuestions.default,
+      s0: reflectionQuestions.default,
+    },
+    freeResultCopy: {
+      pageTitle: freeResultCopy.pageTitle,
+      pageSubtitle: freeResultCopy.pageSubtitle,
+      boundaryNote: freeResultCopy.boundaryNote,
+      integratedTitle: freeResultCopy.integratedTitle,
+      integratedLead: freeResultCopy.integratedLead,
+      reflectionTitle: freeResultCopy.reflectionTitle,
+      missingEntryFallback: freeResultCopy.missingEntryFallback,
+      lockedTeaserLabel: freeResultCopy.lockedTeaserLabel,
+    },
+  };
+
+  const synthesisInput = buildSynthesisLayerInput(
+    partialResult,
+    { s1: s1Record, s3: s3Merged, s2: s2Merged, s0: s0Merged },
+    { birthDate: options?.birthDate, locale },
+  );
+  const missingFields = validateSynthesisLayerInput(synthesisInput);
+
+  if (missingFields.length > 0) {
+    const message = `${SYNTHESIS_ERROR_MESSAGE} (missing: ${missingFields.join(", ")})`;
+    if (process.env.NODE_ENV === "development") {
+      throw new Error(message);
+    }
+    return {
+      ...partialResult,
+      s4Content: adaptPremiumSegment(
+        lookupRecord(s4Data as Record<string, unknown>, s1Code),
+        s1Code,
+        normalized.s1,
+        "Shadow Pattern Module",
+        "阴影模式模块",
+      ),
+      s5Content: adaptPremiumSegment(
+        lookupRecord(s5Data as Record<string, unknown>, s1Code),
+        s1Code,
+        normalized.s1,
+        "Soul Mission",
+        "灵魂使命",
+      ),
+      s6Content: adaptPremiumSegment(
+        lookupRecord(s6Data as Record<string, unknown>, String(normalized.s1)),
+        `S6-${normalized.s1}`,
+        normalized.s1,
+        "Money Frequency",
+        "金钱频率",
+      ),
+      synthesisError: message,
+    };
+  }
+
+  const integratedSoulBlueprint = generateIntegratedSoulBlueprint(synthesisInput, missingFields);
+  const segmentReflections = resolveAllSegmentReflections(
+    synthesisInput,
+    {
+      s1Code: codes.s1Code,
+      s3Code: codes.s3Code,
+      s2Code: codes.s2Code,
+      s0Code: codes.s0Code,
+    },
+    locale,
+  );
+
+  s1Content = attachReflection(s1Content, segmentReflections.s1);
+  s2Content = attachReflection(s2Content, segmentReflections.s2);
+  s0Content = attachReflection(s0Content, segmentReflections.s0);
+  s3Content = attachReflection(s3Content, segmentReflections.s3);
+
+  const integratedFreeSummary = deriveIntegratedFreeSummary(integratedSoulBlueprint);
 
   return {
     locale,
     codes,
+    combinationSignature,
     s1Content,
     s3Content,
     s2Content,
     s0Content,
     s4Content: adaptPremiumSegment(
-      lookupRecord(s4Data as Record<string, unknown>, s4Key),
-      s4Key,
+      lookupRecord(s4Data as Record<string, unknown>, s1Code),
+      s1Code,
       normalized.s1,
-      "Shadow Patterns",
-      "阴影模式",
+      "Shadow Pattern Module",
+      "阴影模式模块",
     ),
     s5Content: adaptPremiumSegment(
-      lookupRecord(s5Data as Record<string, unknown>, s4Key),
-      s4Key,
+      lookupRecord(s5Data as Record<string, unknown>, s1Code),
+      s1Code,
       normalized.s1,
       "Soul Mission",
       "灵魂使命",
     ),
     s6Content: adaptPremiumSegment(
-      lookupRecord(s6Data as Record<string, unknown>, s6Key),
-      `S6-${s6Key}`,
+      lookupRecord(s6Data as Record<string, unknown>, String(normalized.s1)),
+      `S6-${normalized.s1}`,
       normalized.s1,
       "Money Frequency",
       "金钱频率",
     ),
-    integratedFreeSummary: resolveIntegratedSummary(normalized),
-    reflectionQuestion: resolveReflectionQuestion(normalized),
+    integratedSoulBlueprint,
+    integratedFreeSummary,
+    reflectionQuestion: segmentReflections.s1,
+    segmentReflections,
     freeResultCopy: {
       pageTitle: freeResultCopy.pageTitle,
       pageSubtitle: freeResultCopy.pageSubtitle,
@@ -218,18 +293,18 @@ export function t(text: LocalizedText, locale: Locale): string {
 
 /** @deprecated Use get1320Content({ s1, s3, s2, s0 }) — kept for gradual migration. */
 export function get1320ContentRaw(code: LegacyCodeInput) {
-  const s4Key = segmentCodeKey("S1", code.s1);
+  const s1Key = segmentCodeKey("S1", code.s1);
   const s6Key = String(code.s1);
 
   return {
     s1: lookupSegmentRecord(s1Data as Record<string, unknown>, "S1", code.s1),
-    s3: getS3TierRecord(code.s3Raw).record,
+    s3: resolveS3Tier(code.s3Raw).record,
     s2:
       lookupSegmentRecord(s2Data as Record<string, unknown>, "S2", code.s2) ??
       lookupDefault(s2Data as Record<string, unknown>),
     s0: lookupSegmentRecord(s0Data as Record<string, unknown>, "S0", code.s0),
-    s4: lookupRecord(s4Data as Record<string, unknown>, s4Key),
-    s5: lookupRecord(s5Data as Record<string, unknown>, s4Key),
+    s4: lookupRecord(s4Data as Record<string, unknown>, s1Key),
+    s5: lookupRecord(s5Data as Record<string, unknown>, s1Key),
     s6: lookupRecord(s6Data as Record<string, unknown>, s6Key),
   };
 }

@@ -8,9 +8,11 @@ import { IntegratedSummaryCard } from "@/components/report/integrated-summary-ca
 import { IntegrationPracticeGrid } from "@/components/report/integration-practice-grid";
 import { ReflectionJournal } from "@/components/report/reflection-journal";
 import { ReportFinalCta } from "@/components/report/report-final-cta";
+import { ReportFullUpsell } from "@/components/report/report-full-upsell";
 import { ReportHeader } from "@/components/report/report-header";
 import { ReportModuleCard } from "@/components/report/report-module-card";
 import { ReportSidebar, useReportScrollSpy } from "@/components/report/report-sidebar";
+import { ReportDebugPanel } from "@/components/report/report-debug-panel";
 import { ResultExtras } from "@/components/report/result-extras";
 import { trackEvent } from "@/lib/analytics";
 
@@ -57,6 +59,9 @@ export function ReportDashboard({ viewModel, analyticsEvent }: ReportDashboardPr
           title={viewModel.integratedTitle}
           lead={viewModel.integratedLead}
           body={viewModel.integratedSummary}
+          sections={viewModel.integratedSections}
+          integrationTheme={viewModel.integrationTheme}
+          error={viewModel.synthesisError}
         />
 
         <section className="report-modules-section">
@@ -83,16 +88,22 @@ export function ReportDashboard({ viewModel, analyticsEvent }: ReportDashboardPr
           </section>
         )}
 
+        {viewModel.showFullUpsell ? <ReportFullUpsell /> : null}
+
         <ReportFinalCta
           title={viewModel.finalCta.title}
           body={viewModel.finalCta.body}
+          unlock={viewModel.finalCta.unlock}
+          unlockHref={viewModel.finalCta.unlockHref}
           book={viewModel.finalCta.book}
-          waitlist={viewModel.finalCta.waitlist}
+          bookHref={viewModel.finalCta.bookHref}
           profile={viewModel.finalCta.profile}
           profileNote={viewModel.finalCta.profileNote}
         />
 
         {viewModel.mode === "free" ? <ResultExtras codeString={viewModel.codeString} /> : null}
+
+        {viewModel.debug ? <ReportDebugPanel debug={viewModel.debug} /> : null}
       </div>
     </div>
   );

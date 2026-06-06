@@ -84,6 +84,14 @@ for (const mod of vm.modules) {
   assert(mod.fields.length > 0, `${mod.segmentId} has fields`);
   assert(mod.codeLabel.length > 0, `${mod.segmentId} code label`);
 }
+assert(
+  Boolean(s2?.fields.some((f) => f.label === "Relationship Trigger Pattern")),
+  "S2 full report includes Relationship Trigger Pattern",
+);
+assert(
+  Boolean(s0?.fields.some((f) => f.label === "Core Illusion Mechanism")),
+  "S0 full report includes Core Illusion Mechanism",
+);
 console.log("  OK modules + fields");
 
 console.log("\n=== Report view model (result free) ===");

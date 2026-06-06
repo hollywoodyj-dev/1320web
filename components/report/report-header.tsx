@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { REPORT_HEADER_ACTIONS } from "@/lib/report/report-static-content";
 
 type ReportHeaderProps = {
@@ -14,19 +13,16 @@ export function ReportHeader({ title, subtitle, codeString, fictionBanner }: Rep
 
   return (
     <header className="report-header" id="overview">
-      <div className="report-header-actions">
-        <button type="button" className="report-action-btn">
-          {REPORT_HEADER_ACTIONS.save}
-        </button>
-        <button type="button" className="report-action-btn">
+      <div className="report-header-actions report-header-actions--utility">
+        <button type="button" className="report-action-btn report-action-btn--quiet">
           {REPORT_HEADER_ACTIONS.email}
         </button>
-        <button type="button" className="report-action-btn" disabled title="Coming soon">
+        <button type="button" className="report-action-btn report-action-btn--quiet" disabled title="Coming soon">
           {REPORT_HEADER_ACTIONS.download}
         </button>
-        <Link href="/booking" className="gold-button report-action-primary">
-          {REPORT_HEADER_ACTIONS.book}
-        </Link>
+        <button type="button" className="report-action-btn report-action-btn--quiet">
+          {REPORT_HEADER_ACTIONS.save}
+        </button>
       </div>
 
       {fictionBanner ? <p className="report-fiction-banner">{fictionBanner}</p> : null}

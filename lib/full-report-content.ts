@@ -1,15 +1,17 @@
 /** English copy for `/full-report` — structure per 5/15 handoff. */
 
+export type AdvancedModuleSymbolId = "s5" | "s6" | "shadow";
+
 export const FULL_REPORT_META = {
   title: "Full 1320 Soul Origin Report",
   description:
-    "Join the waitlist for the Full 1320 Soul Origin Report — deeper S1–S0 layers plus S4, S5, and S6 modules. Phase 1: waitlist only, no checkout.",
+    "Join the waitlist for the Full 1320 Soul Origin Report — deeper S1–S0 layers plus Shadow Pattern, Soul Mission, and Money Frequency modules. Phase 1: waitlist only, no checkout.",
 };
 
 export const FULL_REPORT_HERO = {
   eyebrow: "FULL SOUL ORIGIN REPORT",
   title: "Go Deeper Into Your Code",
-  body: "Your free result opens the first layer. The Full Report is a deeper map — for seeing patterns, integrating mirrors, and choosing from awareness.",
+  body: "Your free code gives you the doorway. The Full Report gives you the map — how your code moves through identity, relationships, shadows, mission, and money patterns.",
   boundary:
     "1320 is a mirror for reflection and integration — not prediction, fate, or professional advice.",
   trust: "Phase 1: join the waitlist. No payment or checkout on this site yet.",
@@ -17,7 +19,7 @@ export const FULL_REPORT_HERO = {
 
 export const REPORT_PROMISE = {
   title: "A Deeper Map — Not a Sentence",
-  body: "Your code describes frequency patterns and symbolic mirrors. It is not a verdict on who you must become. The Full Report helps you read the mirror with more depth, context, and integration guidance.",
+  body: "This is not more information. It is deeper integration — a symbolic map you can return to as awareness grows, not a verdict on who you must become.",
 };
 
 export const FREE_VS_FULL = {
@@ -37,11 +39,11 @@ export const FREE_VS_FULL = {
     items: [
       "Expanded S1 Origin Frequency — gifts, shadow, lesson, direction, color, totem",
       "Expanded S3 Vibration Tier — expression, rhythm, growth edge",
-      "Expanded S2 Mirror Path — relationship pattern, mirror lesson, integration",
-      "Expanded S0 Void Gate — illusion, awakening path, practice",
+      "Expanded S2 Mirror Path — relationship trigger pattern, mirror lesson, integration",
+      "Expanded S0 Void Gate — core illusion mechanism, awakening path, practice",
       "Integrated blueprint summary with deeper synthesis",
       "Reflection journal prompts and integration practices",
-      "S4 Shadow Patterns module",
+      "Shadow Pattern Module (derived from your origin frequency)",
       "S5 Soul Mission module",
       "S6 Money Frequency module (self-awareness only)",
       "Designed for slow reading, integration, and return visits",
@@ -85,20 +87,34 @@ export const FULL_INCLUDES = {
   ],
 };
 
-export const ADVANCED_MODULES = {
+export type AdvancedModulePreview = {
+  symbol: AdvancedModuleSymbolId;
+  code: string;
+  title: string;
+  text: string;
+};
+
+export const ADVANCED_MODULES: {
+  title: string;
+  items: AdvancedModulePreview[];
+  s6Disclaimer: string;
+} = {
   title: "Advanced Modules Preview",
   items: [
     {
-      code: "S4",
-      title: "Shadow Patterns",
+      symbol: "shadow",
+      code: "SHADOW",
+      title: "Shadow Pattern Module",
       text: "Deeper shadow frequencies linked to your origin code — patterns that repeat until seen with compassion.",
     },
     {
+      symbol: "s5",
       code: "S5",
       title: "Soul Mission",
       text: "Directional themes for contribution and purpose — symbolic orientation, not a fixed career command.",
     },
     {
+      symbol: "s6",
       code: "S6",
       title: "Money Frequency",
       text: "How your energy relates to worth, receiving, and resource flow — self-awareness only.",
@@ -182,5 +198,5 @@ export const FULL_REPORT_DISCLAIMER =
 
 export const FULL_REPORT_FINAL_CTA = {
   title: "Ready to Go Deeper?",
-  body: "Join the waitlist for the Full Soul Origin Report — or book a live reading for integration support.",
+  body: "Your free code opens the doorway. Join the waitlist for the Full Soul Origin Report — or book a live reading for integration support.",
 };

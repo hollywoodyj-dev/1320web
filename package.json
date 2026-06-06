@@ -11,6 +11,7 @@
     "lint": "eslint",
     "smoke:content": "npx tsx scripts/smoke-content.ts",
     "smoke:canonical": "npx tsx scripts/smoke-canonical-rules.ts",
+    "smoke:result-1977": "npx tsx scripts/smoke-result-1977.ts",
     "smoke:funnel": "npx tsx scripts/smoke-funnel.ts",
     "qa:baseline": "npx tsx scripts/qa-baseline.ts",
     "audit:assets": "npx tsx scripts/audit-assets.ts",

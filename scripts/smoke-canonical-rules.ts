@@ -26,7 +26,8 @@ assert(code.s1 === 18, `S1 expected 18, got ${code.s1}`);
 assert(code.s3Raw === 110, `S3 raw expected 110, got ${code.s3Raw}`);
 assert(code.s2 === 27, `S2 expected 27, got ${code.s2}`);
 assert(code.s0 === 7, `S0 expected 7, got ${code.s0}`);
-assert(code.codeString === "S1-18 / S3-110 / S2-27 / S0-07", "codeString mismatch");
+assert(code.codeString === "S1-18 / S3-03 / S2-27 / S0-07", "codeString mismatch");
+assert(code.s3Code === "S3-03", "S3 code for raw 110 should be S3-03");
 
 console.log("\n=== Lookup keys must be segment codes (not titles or bare numbers) ===");
 assert(Boolean(lookupRecord(s0Data as Record<string, unknown>, "S0-07")), "S0-07 must exist as JSON key");

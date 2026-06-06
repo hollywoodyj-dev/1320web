@@ -155,9 +155,25 @@ export function adaptS1(record: V1Record | null, s1: number): SegmentContent {
 
   if (!record) return content;
 
+  const nameEn = str(record, "nameEn") ?? content.title.en;
+  const traitsEn = strArray(record, "traitsEn");
+  const traitsZh = strArray(record, "traitsZh");
+  const essenceFromTraits =
+    traitsEn.length > 0
+      ? `You carry the origin frequency of ${nameEn}. ${traitsEn.join(". ")}.`
+      : undefined;
+  const essenceZhFromTraits =
+    traitsZh.length > 0
+      ? `你携带的是「${str(record, "nameZh") ?? nameEn}」的原频。${traitsZh.join("。")}。`
+      : undefined;
+
   return {
     ...content,
-    fullEssence: localizedFromStrings(str(record, "essenceEn"), str(record, "essenceZh"), content.freeEssence),
+    fullEssence: localizedFromStrings(
+      essenceFromTraits ?? str(record, "essenceEn"),
+      essenceZhFromTraits ?? str(record, "essenceZh"),
+      content.freeEssence,
+    ),
     soulTraits: strArray(record, "traitsEn").length
       ? strArray(record, "traitsEn").map((en, i) => fromV1Fields(en, strArray(record, "traitsZh")[i]))
       : strArray(record, "traitsZh").map((zh) => fromV1Fields(undefined, zh)),
@@ -296,18 +312,24 @@ export function adaptS3(record: V1Record | null, s3Raw: number, tierMatched: boo
   const soulTraitsEn = str(safe, "soulTraitsEn") ?? str(safe, "essenceEn");
   const soulTraitsZh = str(safe, "soulTraitsZh") ?? str(safe, "essenceZh");
 
-  const title = localizedFromStrings(nameEn, nameZh, fromV1Fields(`S3-${s3Raw}`, `S3-${s3Raw}`));
+  const tierCode =
+    typeof safe.code === "string"
+      ? safe.code
+      : typeof safe.tierNumber === "number"
+        ? `S3-${String(safe.tierNumber).padStart(2, "0")}`
+        : null;
+  const title = localizedFromStrings(nameEn, nameZh, fromV1Fields(tierCode ?? "S3", tierCode ?? "S3"));
 
   const freeEssence = localizedFromStrings(
     soulTraitsEn
-      ? `Your S3 number (${s3Raw}) expresses as ${nameEn}. ${soulTraitsEn}`
+      ? `${tierCode ? `${tierCode} · ` : ""}${nameEn}. ${soulTraitsEn}`
       : (str(safe, "essenceEn") ?? buildFreeEssenceEn("s3", safe)),
     soulTraitsZh
-      ? `你的 S3 编号（${s3Raw}）表达为「${nameZh ?? nameEn}」。${soulTraitsZh}`
+      ? `${tierCode ? `${tierCode} · ` : ""}${nameZh ?? nameEn}。${soulTraitsZh}`
       : str(safe, "essenceZh"),
     {
-      en: `Your S3 number (${s3Raw}) reflects how your energy expresses in the world.`,
-      zh: `你的 S3 编号（${s3Raw}）映照你的能量如何在现实中表达。`,
+      en: `${tierCode ? `${tierCode} · ` : ""}${nameEn} reflects how your energy expresses in the world.`,
+      zh: `${tierCode ? `${tierCode} · ` : ""}${nameZh ?? nameEn}映照你的能量如何在现实中表达。`,
     },
   );
 
@@ -316,6 +338,8 @@ export function adaptS3(record: V1Record | null, s3Raw: number, tierMatched: boo
     title,
     freeEssence,
     s3Raw,
+    s3Code: tierCode ?? undefined,
+    segmentCode: tierCode ?? undefined,
     number: s3Raw,
     fullEssence: localizedFromStrings(soulTraitsEn, soulTraitsZh, freeEssence),
     expressionPattern: localizedFromStrings(

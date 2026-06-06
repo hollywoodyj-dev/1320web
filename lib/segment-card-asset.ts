@@ -1,4 +1,4 @@
-import { getS3TierRecord } from "@/lib/get1320Content";
+import { getS3TierRecord } from "@/lib/s3-tier";
 import type { SegmentId } from "@/lib/segments";
 
 /**

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ModuleSymbol } from "@/components/conversion/module-symbol";
 import { FaqSection } from "@/components/conversion/faq-section";
 import { WaitlistForm } from "@/components/waitlist-form";
 import { SectionCard } from "@/components/section-card";
@@ -35,7 +36,7 @@ export default function FullReportPage() {
         <p className="conversion-trust">{FULL_REPORT_HERO.trust}</p>
         <div className="blueprint-hero-actions">
           <a href="#waitlist" className="gold-button">
-            JOIN THE WAITLIST
+            UNLOCK MY FULL BLUEPRINT
           </a>
           <Link href="/booking" className="blueprint-secondary-link">
             BOOK A 1320 READING
@@ -86,7 +87,8 @@ export default function FullReportPage() {
       <SectionCard title={ADVANCED_MODULES.title}>
         <div className="conversion-module-grid">
           {ADVANCED_MODULES.items.map((item) => (
-            <article key={item.code} className="conversion-module-card">
+            <article key={item.code} className="conversion-module-card conversion-module-card--advanced">
+              <ModuleSymbol id={item.symbol} className="conversion-module-symbol" />
               <p className="conversion-module-code">{item.code}</p>
               <h3>{item.title}</h3>
               <p>{item.text}</p>

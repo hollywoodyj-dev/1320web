@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { HOMEPAGE_HERO, HOMEPAGE_NAV } from "@/lib/homepage-content";
+import { HOMEPAGE_HERO } from "@/lib/homepage-content";
+import { CONVERSION_NAV } from "@/lib/site-nav";
 import { TopbarShell } from "@/components/topbar-shell";
 
 export function HomeTopbar() {
@@ -29,7 +30,7 @@ export function HomeTopbar() {
           </div>
         </div>
       }
-      nav={HOMEPAGE_NAV}
+      nav={CONVERSION_NAV}
       linkClassName={(item) =>
         item.href === "/" && item.label === "HOME" ? "active" : undefined
       }

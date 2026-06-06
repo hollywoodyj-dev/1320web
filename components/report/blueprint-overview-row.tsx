@@ -24,6 +24,7 @@ export function BlueprintOverviewRow({ cards }: BlueprintOverviewRowProps) {
               <div className="pillar-card-body">
                 <h3>{meta.title.en.toUpperCase()}</h3>
                 <p className="pillar-headline">{card.shortLabel}</p>
+                {card.metaNote ? <p className="report-pillar-meta">{card.metaNote}</p> : null}
                 <p className="report-pillar-essence">{card.essence}</p>
                 <a href={`#${card.segmentId}`} className="report-pillar-link">
                   VIEW SECTION

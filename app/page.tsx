@@ -13,6 +13,7 @@ import {
   HOMEPAGE_FOOTER_BRAND,
   HOMEPAGE_FULL_REPORT_PREVIEW,
   HOMEPAGE_HERO,
+  HOMEPAGE_SECONDARY_LINKS,
   HOMEPAGE_HOW,
   HOMEPAGE_META,
   HOMEPAGE_MID_CTA,
@@ -76,12 +77,9 @@ export default function HomePage() {
                 ))}
               </ul>
               <p className="hero-grounded-note">{HOMEPAGE_HERO.groundedNote}</p>
-              <div className="hero-actions">
-                <Link href="/your-code" className="gold-button">
+              <div className="hero-actions hero-actions--primary-only">
+                <Link href={HOMEPAGE_HERO.primaryHref} className="gold-button">
                   {HOMEPAGE_HERO.primaryCta}
-                </Link>
-                <Link href={HOMEPAGE_HERO.secondaryHref} className="hero-secondary-link">
-                  {HOMEPAGE_HERO.secondaryCta}
                 </Link>
                 <p className="privacy-note">{HOMEPAGE_HERO.trustNote}</p>
               </div>
@@ -89,7 +87,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="entry-panel">
+        <section className="entry-panel" id="entry-panel">
           <div className="entry-intro">
             <div className="entry-icon" aria-hidden="true">
               <div className="entry-icon-inner">
@@ -121,6 +119,14 @@ export default function HomePage() {
             <HomeBirthdateEntry />
           </div>
         </section>
+
+        <nav className="homepage-secondary-links" aria-label="Explore 1320">
+          {HOMEPAGE_SECONDARY_LINKS.map((link) => (
+            <Link key={link.href} href={link.href} className="hero-secondary-link">
+              {link.label}
+            </Link>
+          ))}
+        </nav>
 
         <section className="homepage-blueprint-intro">
           <p className="homepage-section-eyebrow">{HOMEPAGE_BLUEPRINT_INTRO.eyebrow}</p>
@@ -200,18 +206,21 @@ export default function HomePage() {
           <article className="homepage-preview-card">
             <p className="homepage-section-eyebrow">{HOMEPAGE_FULL_REPORT_PREVIEW.eyebrow}</p>
             <h2 className="homepage-section-title">{HOMEPAGE_FULL_REPORT_PREVIEW.title}</h2>
+            <p className="homepage-section-body homepage-section-body--emphasis">
+              {HOMEPAGE_FULL_REPORT_PREVIEW.transition}
+            </p>
             <p className="homepage-section-body">{HOMEPAGE_FULL_REPORT_PREVIEW.body}</p>
             <ul className="homepage-preview-list">
               {HOMEPAGE_FULL_REPORT_PREVIEW.includes.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
-            <div className="homepage-preview-actions">
-              <Link href={HOMEPAGE_FULL_REPORT_PREVIEW.primaryHref} className="gold-button">
-                {HOMEPAGE_FULL_REPORT_PREVIEW.primaryCta}
+            <div className="homepage-preview-actions homepage-preview-actions--secondary">
+              <Link href={HOMEPAGE_FULL_REPORT_PREVIEW.waitlistHref} className="hero-secondary-link">
+                {HOMEPAGE_FULL_REPORT_PREVIEW.waitlistCta}
               </Link>
-              <Link href={HOMEPAGE_FULL_REPORT_PREVIEW.secondaryHref} className="hero-secondary-link">
-                {HOMEPAGE_FULL_REPORT_PREVIEW.secondaryCta}
+              <Link href={HOMEPAGE_FULL_REPORT_PREVIEW.readingHref} className="hero-secondary-link">
+                {HOMEPAGE_FULL_REPORT_PREVIEW.readingCta}
               </Link>
             </div>
           </article>

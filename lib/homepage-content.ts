@@ -8,23 +8,13 @@ export const HOMEPAGE_META = {
     "Discover your 1320 Soul Code through a four-part soul blueprint: Origin Frequency, Vibration Tier, Mirror Path, and Void Gate. A self-awareness system for remembering your gifts, patterns, and path of conscious evolution.",
 };
 
-export const HOMEPAGE_NAV = [
-  { href: "/", label: "HOME" },
-  { href: "/about-1320", label: "ABOUT 1320" },
-  { href: "/your-code", label: "YOUR CODE" },
-  { href: "/blueprint", label: "BLUEPRINT" },
-  { href: "/faq", label: "RESOURCES" },
-  { href: "/about-1320", label: "ABOUT US" },
-] as const;
-
 export const HOMEPAGE_HERO = {
   eyebrow: "CODE YOUR ORIGIN",
   titleLines: ["REMEMBER", "YOUR SOUL"] as const,
   subheadline:
     "1320 Soul Origin Code System reveals your soul's original frequency, your gifts, your relational mirrors, and the awakening path within your life.",
   primaryCta: "GENERATE MY CODE",
-  secondaryCta: "EXPLORE THE BLUEPRINT",
-  secondaryHref: "/blueprint",
+  primaryHref: "#entry-panel",
   trustNote: "Your data is private and secure.",
   groundedNote:
     "1320 is a frequency-based self-awareness framework built around S1, S3, S2, and S0 — not astrology, tarot, religion, or deterministic fortune-telling.",
@@ -40,7 +30,7 @@ export const HOMEPAGE_CALCULATOR = {
   eyebrow: "START YOUR JOURNEY",
   titleLines: ["Discover Your", "1320 Soul Code"] as const,
   body: "Enter your birth date to unlock your four-part soul blueprint.",
-  formLabel: "ENTER YOUR BIRTH DATE",
+  formLabel: "Enter your birth date",
   cta: "GENERATE MY CODE",
   trustNote: "Your data is private and secure.",
 };
@@ -158,23 +148,32 @@ export const HOMEPAGE_STATS = {
   supporting: "A symbolic system for self-awareness, relationship reflection, and conscious evolution.",
 };
 
+export const HOMEPAGE_SECONDARY_LINKS = [
+  { href: "/blueprint", label: "Explore the Blueprint" },
+  { href: "/sample-report", label: "View Sample Report" },
+] as const;
+
 export const HOMEPAGE_FULL_REPORT_PREVIEW = {
   eyebrow: "GO DEEPER",
   title: "Unlock Your Full 1320 Soul Origin Report",
-  body: "The free result gives you a first glimpse of your four-part code. The full report expands your blueprint into deeper interpretation, reflection prompts, relationship insight, and integration guidance.",
+  transition:
+    "Your free result shows your code. The Full Report shows how your code moves through your identity, relationships, shadows, mission, and money patterns.",
+  body: "This is not more information. It is deeper integration — a map you can return to as awareness grows.",
   includes: [
-    "Full S1 Origin Frequency Interpretation",
-    "S3 Vibration Tier Reading",
-    "S2 Mirror Path Relationship Analysis",
-    "S0 Void Gate Awakening Pattern",
-    "Integrated Soul Blueprint Summary",
-    "Reflection Prompts",
-    "Integration Guidance",
+    "Expanded S1 Origin Frequency",
+    "S3 Vibration Expression",
+    "S2 Relationship Mirror",
+    "S0 Awakening Gate",
+    "Integrated Soul Blueprint",
+    "Shadow Pattern Module",
+    "Soul Mission",
+    "Money Frequency",
+    "7-Day Integration Practice",
   ],
-  primaryCta: "JOIN THE FULL REPORT WAITLIST",
-  primaryHref: "/full-report",
-  secondaryCta: "BOOK A 1320 READING",
-  secondaryHref: "/booking",
+  waitlistCta: "JOIN FULL REPORT WAITLIST",
+  waitlistHref: "/full-report",
+  readingCta: "BOOK A 1320 READING",
+  readingHref: "/booking",
 };
 
 export const HOMEPAGE_ABOUT_PREVIEW = {

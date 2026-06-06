@@ -112,58 +112,69 @@ export function BirthDateForm({ variant = "default", idPrefix }: BirthDateFormPr
     </button>
   );
 
+  const fieldGrid = (
+    <div className="birthdate-field-grid">
+      <label className="birthdate-field" htmlFor={`${prefix}-month`}>
+        <span className="birthdate-field-label">{BIRTH_FORM.labels.month}</span>
+        <input
+          id={`${prefix}-month`}
+          name="month"
+          aria-label={BIRTH_FORM.labels.month}
+          placeholder="MM"
+          type="text"
+          inputMode="numeric"
+          pattern="[0-9]*"
+          autoComplete="bday-month"
+          value={month}
+          onChange={(e) => setMonth(e.target.value)}
+          onInput={(e) => setMonth(e.currentTarget.value)}
+        />
+      </label>
+      <label className="birthdate-field" htmlFor={`${prefix}-day`}>
+        <span className="birthdate-field-label">{BIRTH_FORM.labels.day}</span>
+        <input
+          id={`${prefix}-day`}
+          name="day"
+          aria-label={BIRTH_FORM.labels.day}
+          placeholder="DD"
+          type="text"
+          inputMode="numeric"
+          pattern="[0-9]*"
+          autoComplete="bday-day"
+          value={day}
+          onChange={(e) => setDay(e.target.value)}
+          onInput={(e) => setDay(e.currentTarget.value)}
+        />
+      </label>
+      <label className="birthdate-field birthdate-field-year" htmlFor={`${prefix}-year`}>
+        <span className="birthdate-field-label">{BIRTH_FORM.labels.year}</span>
+        <input
+          id={`${prefix}-year`}
+          name="year"
+          aria-label={BIRTH_FORM.labels.year}
+          placeholder="YYYY"
+          type="text"
+          inputMode="numeric"
+          pattern="[0-9]*"
+          autoComplete="bday-year"
+          value={year}
+          onChange={(e) => setYear(e.target.value)}
+          onInput={(e) => setYear(e.currentTarget.value)}
+          onBlur={(e) => {
+            const parsed = parseBirthDateInput(e.target.value, month, day);
+            setYear(parsed.year);
+            setMonth(parsed.month);
+            setDay(parsed.day);
+          }}
+        />
+      </label>
+    </div>
+  );
+
   if (variant === "homepage") {
     return (
       <form {...formProps} className="entry-form">
-        <div className="date-fields">
-          <input
-            id={`${prefix}-year`}
-            name="year"
-            aria-label={BIRTH_FORM.labels.year}
-            placeholder="YYYY"
-            type="text"
-            inputMode="numeric"
-            pattern="[0-9./-]*"
-            autoComplete="bday-year"
-            value={year}
-            onChange={(e) => setYear(e.target.value)}
-            onInput={(e) => setYear(e.currentTarget.value)}
-            onBlur={(e) => {
-              const parsed = parseBirthDateInput(e.target.value, month, day);
-              setYear(parsed.year);
-              setMonth(parsed.month);
-              setDay(parsed.day);
-            }}
-          />
-          <span>/</span>
-          <input
-            id={`${prefix}-month`}
-            name="month"
-            aria-label={BIRTH_FORM.labels.month}
-            placeholder="MM"
-            type="text"
-            inputMode="numeric"
-            pattern="[0-9./-]*"
-            autoComplete="bday-month"
-            value={month}
-            onChange={(e) => setMonth(e.target.value)}
-            onInput={(e) => setMonth(e.currentTarget.value)}
-          />
-          <span>/</span>
-          <input
-            id={`${prefix}-day`}
-            name="day"
-            aria-label={BIRTH_FORM.labels.day}
-            placeholder="DD"
-            type="text"
-            inputMode="numeric"
-            pattern="[0-9./-]*"
-            autoComplete="bday-day"
-            value={day}
-            onChange={(e) => setDay(e.target.value)}
-            onInput={(e) => setDay(e.currentTarget.value)}
-          />
-        </div>
+        {fieldGrid}
         <div className="entry-form-actions">
           {error ? (
             <p className="entry-form-error" role="alert">
@@ -184,50 +195,7 @@ export function BirthDateForm({ variant = "default", idPrefix }: BirthDateFormPr
 
   return (
     <form {...formProps} className="birthdate-form space-y-4">
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-        <label className="text-sm text-[#F8F4EA]" htmlFor={`${prefix}-year`}>
-          {BIRTH_FORM.labels.year}
-          <input
-            id={`${prefix}-year`}
-            name="year"
-            type="text"
-            inputMode="numeric"
-            autoComplete="bday-year"
-            value={year}
-            onChange={(e) => setYear(e.target.value)}
-            onInput={(e) => setYear(e.currentTarget.value)}
-            className="mt-1 w-full rounded-lg border border-[#2A3551] bg-[#040813] px-3 py-2"
-          />
-        </label>
-        <label className="text-sm text-[#F8F4EA]" htmlFor={`${prefix}-month`}>
-          {BIRTH_FORM.labels.month}
-          <input
-            id={`${prefix}-month`}
-            name="month"
-            type="text"
-            inputMode="numeric"
-            autoComplete="bday-month"
-            value={month}
-            onChange={(e) => setMonth(e.target.value)}
-            onInput={(e) => setMonth(e.currentTarget.value)}
-            className="mt-1 w-full rounded-lg border border-[#2A3551] bg-[#040813] px-3 py-2"
-          />
-        </label>
-        <label className="text-sm text-[#F8F4EA]" htmlFor={`${prefix}-day`}>
-          {BIRTH_FORM.labels.day}
-          <input
-            id={`${prefix}-day`}
-            name="day"
-            type="text"
-            inputMode="numeric"
-            autoComplete="bday-day"
-            value={day}
-            onChange={(e) => setDay(e.target.value)}
-            onInput={(e) => setDay(e.currentTarget.value)}
-            className="mt-1 w-full rounded-lg border border-[#2A3551] bg-[#040813] px-3 py-2"
-          />
-        </label>
-      </div>
+      {fieldGrid}
       {error ? <p className="text-sm text-red-300" role="alert">{error}</p> : null}
       {submitButton}
       <p className="text-xs text-[#B9C1D0]">

@@ -11,13 +11,16 @@ export const metadata: Metadata = {
 
 /** Canonical sample: 1980-05-22 → S1-18 / S3-110 / S2-27 / S0-07 */
 export default function SampleReportPage() {
-  const content = get1320Content({
-    s1: 18,
-    s3: 110,
-    s2: 27,
-    s0: 7,
-    locale: "en",
-  });
+  const content = get1320Content(
+    {
+      s1: 18,
+      s3: 110,
+      s2: 27,
+      s0: 7,
+      locale: "en",
+    },
+    { birthDate: "1980-05-22" },
+  );
 
   const viewModel = buildReportViewModel(content, {
     mode: "full",

@@ -1,9 +1,17 @@
 import type { Get1320ContentResult, Locale, LocalizedText, SegmentContent } from "@/lib/types/1320-content";
+import type { ReportDebugInfo } from "@/lib/types/integrated-soul-blueprint";
+import { buildReportDebugInfo } from "@/lib/build-report-debug";
+import { generateIntegrationPractices } from "@/lib/generate-integration-practices";
+import { buildSynthesisLayerInput } from "@/lib/build-synthesis-input";
 import { pickLocalized } from "@/lib/getLocalized";
 import { getSegmentCardImageUrl } from "@/lib/segment-card-asset";
-import { formatSegmentCode, getSegment, type SegmentId } from "@/lib/segments";
+import { getSegment, type SegmentId } from "@/lib/segments";
+import type { IntegratedSummarySection } from "@/components/report/integrated-summary-card";
 import {
-  INTEGRATION_PRACTICES,
+  coreIllusionMechanismField,
+  relationshipTriggerPatternField,
+} from "@/lib/report/format-depth-fields";
+import {
   REFLECTION_JOURNAL_PROMPTS,
   REPORT_FINAL_CTA,
   SAMPLE_REPORT_META,
@@ -14,6 +22,7 @@ export type ReportMode = "full" | "free";
 export type ReportField = {
   label: string;
   value: string;
+  items?: string[];
 };
 
 export type ReportOverviewCard = {
@@ -22,6 +31,7 @@ export type ReportOverviewCard = {
   title: string;
   shortLabel: string;
   essence: string;
+  metaNote?: string;
 };
 
 export type ReportModuleViewModel = {
@@ -29,7 +39,6 @@ export type ReportModuleViewModel = {
   codeLabel: string;
   archetype: string;
   shortLabel: string;
-  /** Archetype card art in `public/` (S1/S2/S3/S0 card packs). */
   cardImageUrl?: string;
   fields: ReportField[];
   reflectionQuestion?: string;
@@ -43,17 +52,23 @@ export type ReportViewModel = {
   headerTitle: string;
   headerSubtitle: string;
   codeString: string;
+  combinationSignature: string;
   boundaryNote: string;
   fictionBanner?: string;
+  synthesisError?: string;
   integratedTitle: string;
   integratedLead: string;
   integratedSummary: string;
+  integratedSections?: IntegratedSummarySection[];
+  integrationTheme?: string;
+  showFullUpsell: boolean;
   overviewCards: ReportOverviewCard[];
   modules: ReportModuleViewModel[];
   reflectionQuestion: string;
   journalPrompts: string[];
-  practices: typeof INTEGRATION_PRACTICES;
+  practices: ReturnType<typeof generateIntegrationPractices>;
   finalCta: typeof REPORT_FINAL_CTA;
+  debug?: ReportDebugInfo;
 };
 
 function field(
@@ -66,14 +81,15 @@ function field(
   return { label, value };
 }
 
-function joinFields(locale: Locale, label: string, items: LocalizedText[] | undefined): ReportField | null {
+function listField(
+  locale: Locale,
+  label: string,
+  items: LocalizedText[] | undefined,
+): ReportField | null {
   if (!items?.length) return null;
-  const value = items
-    .map((item) => pickLocalized(item, locale))
-    .filter(Boolean)
-    .join(" ");
-  if (!value.trim()) return null;
-  return { label, value };
+  const values = items.map((item) => pickLocalized(item, locale)).filter(Boolean);
+  if (!values.length) return null;
+  return { label, value: values.join("\n"), items: values };
 }
 
 const PLACEHOLDER_SNIPPETS = [
@@ -87,7 +103,6 @@ function isPlaceholderCopy(value: string): boolean {
   return PLACEHOLDER_SNIPPETS.some((snippet) => lower.includes(snippet));
 }
 
-/** Drop empty, duplicate-overview, title-echo, and generic placeholder lines from full modules. */
 function polishReportFields(
   fields: ReportField[],
   options?: { archetype?: string },
@@ -116,11 +131,11 @@ function buildS1Fields(
 ): ReportField[] {
   const all = [
     field(locale, "Overview", segment.fullEssence ?? segment.freeEssence),
-    joinFields(locale, "Soul Traits", segment.soulTraits),
-    joinFields(locale, "Core Gifts", segment.coreGifts),
-    joinFields(locale, "Shadow Pattern", segment.shadowPatterns),
+    listField(locale, "Soul Traits", segment.soulTraits),
+    listField(locale, "Core Gifts", segment.coreGifts),
+    listField(locale, "Shadow Pattern", segment.shadowPatterns),
     field(locale, "Soul Lesson", segment.lesson),
-    joinFields(locale, "Direction", segment.direction),
+    listField(locale, "Direction", segment.direction),
     field(locale, "Color Frequency", segment.color),
     field(locale, "Totem", segment.totem),
     field(locale, "Integration Guidance", segment.guidance),
@@ -135,16 +150,18 @@ function buildS3Fields(
   locale: Locale,
   mode: ReportMode,
   archetype: string,
+  s3Raw: number,
 ): ReportField[] {
   const all = [
     field(locale, "Overview", segment.fullEssence ?? segment.freeEssence),
+    field(locale, "Raw Value", { en: String(s3Raw), zh: String(s3Raw) }),
     field(locale, "Core Strengths", segment.expressionPattern),
     field(locale, "Growth Edge", segment.growthEdge),
     field(locale, "Integration Guidance", segment.guidance ?? segment.integrationPrompt),
   ].filter((f): f is ReportField => Boolean(f));
 
   if (mode === "full") return polishReportFields(all, { archetype });
-  return all.filter((f) => f.label === "Overview");
+  return all.filter((f) => f.label === "Overview" || f.label === "Raw Value");
 }
 
 function buildS2Fields(
@@ -155,6 +172,7 @@ function buildS2Fields(
 ): ReportField[] {
   const all = [
     field(locale, "Overview", segment.fullEssence ?? segment.freeEssence),
+    relationshipTriggerPatternField(locale, segment),
     field(locale, "Karmic Loop", segment.karmicLoop),
     field(locale, "Mirror Lesson", segment.mirrorLesson),
     field(locale, "Healing Path", segment.integrationPrompt),
@@ -174,7 +192,7 @@ function buildS0Fields(
   const all = [
     field(locale, "Overview", segment.freeEssence),
     field(locale, "Core Illusion", segment.coreIllusion),
-    field(locale, "Void Challenge", segment.voidChallenge),
+    coreIllusionMechanismField(locale, segment),
     field(locale, "Void Power", segment.voidPower),
     field(locale, "Awakening Path", segment.awakeningPath),
     field(locale, "Integration Guidance", segment.guidance),
@@ -200,12 +218,13 @@ function buildModuleFields(
   locale: Locale,
   mode: ReportMode,
   archetype: string,
+  s3Raw: number,
 ): ReportField[] {
   switch (segmentId) {
     case "s1":
       return buildS1Fields(segment, locale, mode, archetype);
     case "s3":
-      return buildS3Fields(segment, locale, mode, archetype);
+      return buildS3Fields(segment, locale, mode, archetype, s3Raw);
     case "s2":
       return buildS2Fields(segment, locale, mode, archetype);
     case "s0":
@@ -215,12 +234,39 @@ function buildModuleFields(
   }
 }
 
+function segmentCodeLabel(content: Get1320ContentResult, id: SegmentId): string {
+  switch (id) {
+    case "s1":
+      return content.codes.s1Code;
+    case "s3":
+      return content.codes.s3Code;
+    case "s2":
+      return content.codes.s2Code;
+    case "s0":
+      return content.codes.s0Code;
+  }
+}
+
+function segmentCardCodeNum(content: Get1320ContentResult, id: SegmentId): number {
+  switch (id) {
+    case "s1":
+      return content.codes.s1;
+    case "s3":
+      return content.codes.s3Raw;
+    case "s2":
+      return content.codes.s2;
+    case "s0":
+      return content.codes.s0;
+  }
+}
+
 export function buildReportViewModel(
   content: Get1320ContentResult,
   options: {
     mode: ReportMode;
     variant: "sample" | "result";
     birthDateLabel?: string;
+    includeDebug?: boolean;
   },
 ): ReportViewModel {
   const { locale } = content;
@@ -233,53 +279,67 @@ export function buildReportViewModel(
     s0: content.s0Content,
   };
 
+  const blueprint = content.integratedSoulBlueprint;
+  const integratedSections: IntegratedSummarySection[] | undefined =
+    mode === "full" && blueprint
+      ? [
+          { label: "Core Essence", body: blueprint.coreEssenceSummary },
+          { label: "Energy Expression", body: blueprint.energyExpressionSummary },
+          { label: "Relationship Mirror", body: blueprint.relationshipMirrorSummary },
+          { label: "Awakening Path", body: blueprint.awakeningPathSummary },
+          { label: "Main Inner Conflict", body: blueprint.mainInnerConflict },
+          { label: "Embodiment Practice", body: blueprint.embodimentPractice },
+        ].filter((section) => section.body.trim().length > 0)
+      : undefined;
+
+  const integratedSummary =
+    mode === "free" && blueprint
+      ? [blueprint.coreEssenceSummary, blueprint.relationshipMirrorSummary].filter(Boolean).join("\n\n")
+      : mode === "full" && blueprint
+        ? blueprint.integratedSummary
+        : blueprint?.integratedSummary ?? pickLocalized(content.integratedFreeSummary, locale);
+
+  const synthesisInput = buildSynthesisLayerInput(
+    content,
+    { s1: null, s3: null, s2: null, s0: null },
+    { birthDate: options.birthDateLabel, locale },
+  );
+  const practicesResolved = generateIntegrationPractices(synthesisInput, locale);
+
   const overviewCards: ReportOverviewCard[] = segments.map((id) => {
     const meta = getSegment(id);
     const seg = segmentContent[id];
-    const codeNum =
-      id === "s1"
-        ? content.codes.s1
-        : id === "s3"
-          ? content.codes.s3Raw
-          : id === "s2"
-            ? content.codes.s2
-            : content.codes.s0;
-    const prefix = meta.code as "S1" | "S3" | "S2" | "S0";
+    const code = segmentCodeLabel(content, id);
     return {
       segmentId: id,
-      code: formatSegmentCode(prefix, codeNum),
+      code,
       title: meta.title.en,
       shortLabel: meta.shortLabel.en,
       essence: pickLocalized(seg.freeEssence, locale),
+      metaNote:
+        id === "s3"
+          ? `Raw Value: ${content.codes.s3Raw}`
+          : undefined,
     };
   });
 
   const modules: ReportModuleViewModel[] = segments.map((id) => {
-    const meta = getSegment(id);
     const seg = segmentContent[id];
-    const codeNum =
-      id === "s1"
-        ? content.codes.s1
-        : id === "s3"
-          ? content.codes.s3Raw
-          : id === "s2"
-            ? content.codes.s2
-            : content.codes.s0;
-    const prefix = meta.code as "S1" | "S3" | "S2" | "S0";
     const reflection =
       mode === "free"
         ? ""
-        : pickLocalized(seg.reflectionQuestion ?? content.reflectionQuestion, locale);
+        : pickLocalized(content.segmentReflections[id], locale);
 
     const archetype = pickLocalized(seg.title, locale);
+    const codeNum = segmentCardCodeNum(content, id);
 
     return {
       segmentId: id,
-      codeLabel: formatSegmentCode(prefix, codeNum),
+      codeLabel: segmentCodeLabel(content, id),
       archetype,
       shortLabel: pickLocalized(seg.shortLabel, locale),
       cardImageUrl: getSegmentCardImageUrl(id, codeNum),
-      fields: buildModuleFields(id, seg, locale, mode, archetype),
+      fields: buildModuleFields(id, seg, locale, mode, archetype, content.codes.s3Raw),
       reflectionQuestion: reflection || undefined,
       showLocked: mode === "free",
       lockedTeaser: mode === "free" ? pickLocalized(seg.lockedPreview, locale) : undefined,
@@ -296,22 +356,38 @@ export function buildReportViewModel(
       ? SAMPLE_REPORT_META.headerSubtitle
       : pickLocalized(content.freeResultCopy.pageSubtitle, locale);
 
+  const journalPrompts =
+    blueprint?.reflectionQuestions?.length && mode === "full"
+      ? blueprint.reflectionQuestions
+      : REFLECTION_JOURNAL_PROMPTS;
+
+  const debug =
+    options.includeDebug || process.env.NEXT_PUBLIC_REPORT_DEBUG === "true"
+      ? buildReportDebugInfo(content, blueprint, options.birthDateLabel)
+      : undefined;
+
   return {
     locale,
     mode,
     headerTitle,
     headerSubtitle,
     codeString: content.codes.codeString,
+    combinationSignature: content.combinationSignature,
     boundaryNote: pickLocalized(content.freeResultCopy.boundaryNote, locale),
     fictionBanner: variant === "sample" ? SAMPLE_REPORT_META.fictionBanner : undefined,
+    synthesisError: content.synthesisError,
     integratedTitle: pickLocalized(content.freeResultCopy.integratedTitle, locale),
     integratedLead: pickLocalized(content.freeResultCopy.integratedLead, locale),
-    integratedSummary: pickLocalized(content.integratedFreeSummary, locale),
+    integratedSummary,
+    integratedSections,
+    integrationTheme: blueprint?.integrationTheme,
+    showFullUpsell: variant === "result",
     overviewCards,
     modules,
     reflectionQuestion: pickLocalized(content.reflectionQuestion, locale),
-    journalPrompts: REFLECTION_JOURNAL_PROMPTS,
-    practices: INTEGRATION_PRACTICES,
+    journalPrompts,
+    practices: practicesResolved,
     finalCta: REPORT_FINAL_CTA,
+    debug,
   };
 }

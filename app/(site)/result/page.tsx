@@ -38,18 +38,22 @@ export default async function ResultPage({ searchParams }: { searchParams: Promi
 
   const { year, month, day } = birth;
   const code = calculate1320Code(year, month, day);
-  const content = get1320Content({
-    s1: code.s1,
-    s3: code.s3Raw,
-    s2: code.s2,
-    s0: code.s0,
-    locale: "en",
-  });
+  const birthDateLabel = `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+  const content = get1320Content(
+    {
+      s1: code.s1,
+      s3: code.s3Raw,
+      s2: code.s2,
+      s0: code.s0,
+      locale: "en",
+    },
+    { birthDate: birthDateLabel },
+  );
 
   const viewModel = buildReportViewModel(content, {
     mode: "full",
     variant: "result",
-    birthDateLabel: `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`,
+    birthDateLabel,
   });
 
   return (

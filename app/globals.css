@@ -887,6 +887,40 @@ button {
   margin-top: 16px;
 }
 
+.birthdate-field-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+.birthdate-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.birthdate-field-label {
+  color: rgba(241, 236, 226, 0.72);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.birthdate-field input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid rgba(216, 177, 92, 0.14);
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: rgba(8, 14, 28, 0.95);
+  color: #f8f4ea;
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
 .date-fields {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) auto minmax(0, 1fr) auto minmax(0, 0.9fr);
@@ -1269,6 +1303,29 @@ button {
 .hero-secondary-link:hover,
 .blueprint-secondary-link:hover {
   color: #f8f4ea;
+}
+
+.hero-actions--primary-only {
+  align-items: flex-start;
+}
+
+.homepage-secondary-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px 28px;
+  margin-top: 18px;
+  padding: 0 8px;
+}
+
+.homepage-section-body--emphasis {
+  margin-bottom: 10px;
+  color: rgba(248, 244, 234, 0.94);
+  font-size: 1.02rem;
+}
+
+.homepage-preview-actions--secondary {
+  margin-top: 4px;
 }
 
 .entry-eyebrow {
@@ -2466,6 +2523,20 @@ button {
   background: rgba(4, 8, 19, 0.35);
 }
 
+.conversion-module-symbol {
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 10px;
+  color: #efc36f;
+}
+
+.conversion-module-card--advanced .conversion-module-code {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  opacity: 0.82;
+}
+
 .conversion-module-code {
   margin: 0 0 6px;
   color: #efc36f;
@@ -3467,9 +3538,83 @@ button {
   cursor: not-allowed;
 }
 
-.report-action-primary {
-  padding: 10px 18px;
-  font-size: 0.72rem;
+.report-action-btn--quiet {
+  opacity: 0.72;
+  font-size: 0.68rem;
+}
+
+.report-header-actions--utility {
+  justify-content: flex-end;
+}
+
+.report-cta-outline {
+  padding: 12px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(216, 177, 92, 0.35);
+  background: transparent;
+  color: #efc36f;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.report-cta-outline:hover {
+  color: #f8f4ea;
+  border-color: rgba(248, 244, 234, 0.45);
+}
+
+.report-full-upsell {
+  padding: 24px 22px;
+  margin-top: 8px;
+}
+
+.report-full-upsell-lead {
+  margin: 0 0 8px;
+  color: rgba(248, 244, 234, 0.92);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.report-full-upsell-body {
+  margin: 0 0 10px;
+  color: var(--muted-foreground);
+}
+
+.report-full-upsell-list {
+  margin: 0 0 18px;
+  padding-left: 1.2rem;
+  color: rgba(248, 244, 234, 0.86);
+  line-height: 1.55;
+}
+
+.report-full-upsell-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.report-integrated-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.report-integrated-section h3 {
+  margin: 0 0 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.report-integrated-section p {
+  margin: 0;
+  line-height: 1.6;
+  color: rgba(248, 244, 234, 0.88);
 }
 
 .report-fiction-banner {
@@ -3827,6 +3972,49 @@ button {
   font-size: 0.88rem;
   line-height: 1.55;
   color: rgba(248, 244, 234, 0.88);
+}
+
+.report-module-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: rgba(248, 244, 234, 0.88);
+}
+
+.report-module-list li + li {
+  margin-top: 0.35rem;
+}
+
+.report-pillar-meta {
+  margin: 0 0 0.35rem;
+  font-size: 0.78rem;
+  color: rgba(248, 244, 234, 0.62);
+}
+
+.report-integration-theme {
+  margin: 1rem 0 0;
+  font-size: 0.92rem;
+  color: rgba(248, 244, 234, 0.9);
+}
+
+.report-synthesis-error {
+  margin: 0.75rem 0;
+  color: #f5b8b8;
+  font-size: 0.9rem;
+}
+
+.report-debug-panel {
+  margin-top: 1.5rem;
+  padding: 1rem;
+}
+
+.report-debug-pre {
+  margin: 0;
+  overflow-x: auto;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: rgba(248, 244, 234, 0.85);
 }
 
 .report-module-insight {

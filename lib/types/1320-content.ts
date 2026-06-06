@@ -1,3 +1,5 @@
+import type { IntegratedSoulBlueprint } from "@/lib/types/integrated-soul-blueprint";
+
 export type Locale = "en" | "zh";
 
 export type LocalizedText = {
@@ -18,8 +20,12 @@ export type SegmentContent = {
   integrationPrompt?: LocalizedText;
   /** True when no JSON entry matched and fallback copy is used. */
   missing?: boolean;
+  /** Canonical segment code, e.g. S1-24 or S3-04. */
+  segmentCode?: string;
   /** S3 raw value (month × day). */
   s3Raw?: number;
+  /** S3 canonical tier code (not raw value). */
+  s3Code?: string;
   /** Full report — optional until paid layer renders them. */
   fullEssence?: LocalizedText;
   soulTraits?: LocalizedText[];
@@ -55,6 +61,11 @@ export type CodeDisplay = {
   s3Raw: number;
   s2: number;
   s0: number;
+  s1Code: string;
+  s3Code: string;
+  s3Title: string;
+  s2Code: string;
+  s0Code: string;
   codeString: string;
   compactCode: string;
 };
@@ -73,15 +84,21 @@ export type FreeResultCopy = {
 export type Get1320ContentResult = {
   locale: Locale;
   codes: CodeDisplay;
+  combinationSignature: string;
   s1Content: SegmentContent;
   s3Content: SegmentContent;
   s2Content: SegmentContent;
   s0Content: SegmentContent;
+  /** Shadow Patterns premium module — not the Integrated Soul Blueprint synthesis layer. */
   s4Content: SegmentContent | null;
   s5Content: SegmentContent | null;
   s6Content: SegmentContent | null;
+  integratedSoulBlueprint: IntegratedSoulBlueprint | null;
+  /** Short synthesis paragraph for free result — derived from `integratedSoulBlueprint`. */
   integratedFreeSummary: LocalizedText;
   reflectionQuestion: LocalizedText;
+  segmentReflections: Record<"s1" | "s3" | "s2" | "s0", LocalizedText>;
+  synthesisError?: string;
   freeResultCopy: FreeResultCopy;
 };
 

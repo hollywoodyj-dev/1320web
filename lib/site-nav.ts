@@ -1,4 +1,4 @@
-/** Primary navigation — 11/15 canonical routes (English labels). */
+/** Primary navigation — conversion-oriented journey (Wisewave Phase B). */
 
 export type NavLink = {
   href: string;
@@ -7,13 +7,19 @@ export type NavLink = {
   matchPrefix?: boolean;
 };
 
-export const PRIMARY_NAV: NavLink[] = [
+/** Shared top nav for homepage + inner site. Blueprint lives in footer. */
+export const CONVERSION_NAV: NavLink[] = [
   { href: "/", label: "HOME" },
   { href: "/about-1320", label: "ABOUT 1320", matchPrefix: true },
-  { href: "/blueprint", label: "BLUEPRINT", matchPrefix: true },
   { href: "/your-code", label: "YOUR CODE", matchPrefix: true },
-  { href: "/faq", label: "RESOURCES", matchPrefix: true },
+  { href: "/sample-report", label: "SAMPLE REPORT", matchPrefix: true },
+  { href: "/full-report", label: "FULL REPORT", matchPrefix: true },
+  { href: "/booking", label: "READING", matchPrefix: true },
 ];
+
+export const PRIMARY_NAV: NavLink[] = CONVERSION_NAV;
+
+export const HOMEPAGE_NAV = CONVERSION_NAV;
 
 export const GENERATE_CODE_CTA = {
   href: "/your-code",

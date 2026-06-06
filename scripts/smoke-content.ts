@@ -27,7 +27,10 @@ assert(String(s3Tier.record?.id) === "S3-T03", "S3 tier 110 should resolve to S3
 
 const content = get1320Content({ ...SAMPLE, locale: "en" });
 
-assert(content.codes.codeString === "S1-18 / S3-110 / S2-27 / S0-07", "codeString mismatch");
+assert(content.codes.codeString === "S1-18 / S3-03 / S2-27 / S0-07", "codeString mismatch");
+assert(content.codes.s3Code === "S3-03", "S3 tier code should be S3-03 for raw 110");
+assert(content.combinationSignature === "S1-18|S3-03|S2-27|S0-07", "combination signature mismatch");
+assert(content.integratedSoulBlueprint !== null, "integrated soul blueprint should be generated");
 assertEnglish(t(content.s1Content.title, "en"), "S1 title");
 assert(t(content.s1Content.title, "en") === "The Transformer", "S1 title should be The Transformer");
 assertEnglish(t(content.s1Content.freeEssence, "en"), "S1 freeEssence");
@@ -43,6 +46,9 @@ assert(
   t(content.s0Content.practice!, "en") === "Practice gratitude and allowing.",
   "S0 practice mismatch",
 );
+const s1Reflection = t(content.segmentReflections.s1, "en");
+const s3Reflection = t(content.segmentReflections.s3, "en");
+assert(s1Reflection !== s3Reflection, "segment reflection questions must differ");
 assertEnglish(t(content.s0Content.practice!, "en"), "S0 practice");
 assertEnglish(t(content.integratedFreeSummary, "en"), "integrated summary");
 assert(t(content.integratedFreeSummary, "en").includes("Transformer"), "integrated summary should reference Transformer");

@@ -2,7 +2,7 @@
 
 export const SAMPLE_REPORT_META = {
   title: "Sample 1320 Soul Origin Report",
-  description: "Preview the full Sacred Report Dashboard with fictional sample code S1-18 / S3-110 / S2-27 / S0-07.",
+  description: "Preview the full Sacred Report Dashboard with fictional sample code S1-18 / S3-03 / S2-27 / S0-07.",
   fictionBanner:
     "Sample report only — birth date May 22, 1980 is fictional. Your personal report is generated from your own birth date.",
   headerTitle: "YOUR 1320 SOUL ORIGIN REPORT",
@@ -13,7 +13,26 @@ export const REPORT_HEADER_ACTIONS = {
   save: "SAVE REPORT",
   email: "EMAIL ME",
   download: "DOWNLOAD PDF",
-  book: "BOOK A READING",
+};
+
+export const REPORT_FULL_UPSELL = {
+  lead: "This free result gives you the first layer of your code.",
+  body: "The Full Report expands:",
+  items: [
+    "Your full S1 Origin Frequency",
+    "Your S3 expression pattern",
+    "Your S2 relationship mirror",
+    "Your S0 awakening gate",
+    "Your Integrated Soul Blueprint",
+    "Shadow Pattern Module",
+    "Soul Mission",
+    "Money Frequency",
+    "Your 7-Day Integration Practice",
+  ],
+  primaryCta: "UNLOCK MY FULL BLUEPRINT",
+  primaryHref: "/full-report",
+  secondaryCta: "BOOK A 1320 READING",
+  secondaryHref: "/booking",
 };
 
 export const INTEGRATION_PRACTICES = [
@@ -43,8 +62,10 @@ export const REFLECTION_JOURNAL_PROMPTS = [
 export const REPORT_FINAL_CTA = {
   title: "Your Code Is Only the Beginning",
   body: "A report can show you the mirror. Your life changes when awareness becomes action.",
+  unlock: "UNLOCK MY FULL BLUEPRINT",
+  unlockHref: "/full-report",
   book: "BOOK A 1320 READING",
-  waitlist: "JOIN THE SOUL PROFILE WAITLIST",
+  bookHref: "/booking",
   profile: "SAVE TO MY SOUL PROFILE",
   profileNote: "COMING SOON",
 };
@@ -52,7 +73,7 @@ export const REPORT_FINAL_CTA = {
 export const RESULT_EXTRAS = {
   goDeeperTitle: "Go Deeper",
   goDeeperBody:
-    "Your free result reveals the first layer. The full report expands S1–S0 and unlocks S4 Shadow Patterns, S5 Soul Mission, and S6 Money Frequency (self-awareness only — not financial advice).",
+    "Your free result reveals the first layer. The full report expands S1–S0 and unlocks the Shadow Pattern Module, Soul Mission, and Money Frequency (self-awareness only — not financial advice).",
   shareTitle: "Share Your Code",
   shareCopyLabel: "COPY MY CODE",
   shareHint: "Share your code as a mirror for conversation — not as a fixed identity.",
@@ -73,7 +94,7 @@ export const RESULT_EXTRAS = {
     },
     {
       q: "What should I do next?",
-      a: "Sit with your reflection question, explore the sample report, or join the full report waitlist for deeper layers.",
+      a: "Sit with your reflection question, explore the sample report, or unlock the full report for deeper layers.",
     },
     {
       q: "How is S3 different from a score?",

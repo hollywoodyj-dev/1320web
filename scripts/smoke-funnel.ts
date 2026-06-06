@@ -50,7 +50,7 @@ for (const route of ROUTES) {
 
 const REQUIRED_ASSETS = [
   "public/1320-logo.jpeg",
-  "public/1320-logo-report.webp",
+  "public/1320-logo-report-v3.webp",
   "public/1320-icon.svg",
   "public/hero-banner-desktop-v1.webp",
   "public/hero-banner-v5.webp",

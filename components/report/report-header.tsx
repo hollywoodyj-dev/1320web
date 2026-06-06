@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { REPORT_SEAL_LOGO } from "@/lib/brand-assets";
 import { REPORT_HEADER_ACTIONS } from "@/lib/report/report-static-content";
 
 type ReportHeaderProps = {
@@ -44,7 +45,7 @@ export function ReportHeader({ title, subtitle, codeString, fictionBanner }: Rep
           <div className="report-header-ring-glow" />
           <div className="report-header-ring-art">
             <Image
-              src="/generating-1320-ring.webp"
+              src={REPORT_SEAL_LOGO}
               alt=""
               width={1254}
               height={1254}

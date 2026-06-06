@@ -17,6 +17,7 @@
     "qa:baseline": "npx tsx scripts/qa-baseline.ts",
     "audit:assets": "npx tsx scripts/audit-assets.ts",
     "compress:assets": "npx tsx scripts/compress-assets.ts",
+    "build:report-logo": "npx tsx scripts/build-report-logo.ts",
     "import:s1-master": "npx tsx scripts/import-s1-master.ts",
     "import:s3-master": "npx tsx scripts/import-s3-master.ts",
     "import:s2-master": "npx tsx scripts/import-s2-master.ts",

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { REPORT_SEAL_LOGO } from "@/lib/brand-assets";
 
 export type IntegratedSummarySection = {
   label: string;
@@ -28,7 +29,7 @@ export function IntegratedSummaryCard({
         <div className="report-integrated-ring-glow" />
         <div className="report-integrated-ring-art">
           <Image
-            src="/generating-1320-ring.webp"
+            src={REPORT_SEAL_LOGO}
             alt=""
             width={1254}
             height={1254}

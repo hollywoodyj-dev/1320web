@@ -1,6 +1,6 @@
 # What’s Left — 1320 Phase 1 → Launch → Phase 2
 
-**Last updated:** 2026-06-06  
+**Last updated:** 2026-06-07  
 **Workspace:** `web/`  
 **Status:** Wisewave Phases A–C shipped. **Lumen production QA blockers cleared** (`b2ab836` retest) — see `QA_WISEWAVE_ABC_LUMEN.md`. Optional: fresh physical-phone Safari + Chrome pass. Prior birth-date sign-off: `QA_BIRTHDATE_LUMEN.md`.
 
@@ -18,7 +18,7 @@
 | Free result report UI | ✅ | Locked teasers → `/full-report` waitlist |
 | Full sample report (fictional) | ✅ | `/sample-report` |
 | Blueprint education + anchors | ✅ | `/blueprint#s1` … `#s0` |
-| Waitlist + booking forms | ✅ | Client success; optional webhook |
+| Waitlist + booking forms | ✅ | Client success; Phase 1 stub (`/api/leads`) until Phase 2 DB |
 | Legal + footer | ✅ | Placeholders filled; footer subscribe hidden until webhook |
 
 **Not the “full” product** — that’s Phase 2 (Soul Profile, save code, timeline, membership, payments). Phase 1 is **discover → calculate → free mirror → waitlist / book**.
@@ -30,7 +30,8 @@
 ### A. Launch / ops (no new features)
 
 - [ ] **Deploy** to Vercel (root directory = `web`)
-- [ ] Set env: `NEXT_PUBLIC_SITE_URL`, optional `NEXT_PUBLIC_GA_MEASUREMENT_ID`, `LEADS_WEBHOOK_URL`
+- [ ] Set env: `NEXT_PUBLIC_SITE_URL`, optional `NEXT_PUBLIC_GA_MEASUREMENT_ID`
+- [ ] ~~`LEADS_WEBHOOK_URL`~~ **skipped** — Phase 2 uses own database (see `PHASE2_SPEC.md`)
 - [x] **Lumen QA:** `QA_WISEWAVE_ABC_LUMEN.md` on production (Phases A–C) — **PASS** 2026-06-06 (`b2ab836`)
 - [ ] **Optional:** physical-phone Safari + Chrome production pass (Lumen)
 - [ ] **Production smoke:** full funnel + legal links + blueprint anchors
@@ -44,11 +45,11 @@
 
 ### C. Optional polish (Phase 1 — nice to have)
 
-- [x] **Marcellus + Inter** typography (display headings, sans body/UI)
+- [x] ~~**Marcellus + Inter** typography~~ **rolled back** — Geist + Georgia restored
 - [x] Homepage Full Report: gold waitlist CTA + demoted reading link
-- [x] Footer **SUBSCRIBE** hidden until `LEADS_WEBHOOK_URL` is set
+- [x] Footer **SUBSCRIBE** hidden until leads persist (webhook today; DB in Phase 2A)
 - [ ] Wire **SAVE REPORT** / **EMAIL ME** on report header to lead capture (buttons exist; no action today)
-- [ ] Connect `LEADS_WEBHOOK_URL` to Zapier / Make / CRM so waitlist & booking emails are stored
+- [ ] ~~Webhook to Zapier/Make~~ → **Phase 2A:** product database for waitlist, booking, newsletter
 - [ ] Desktop pass on all routes (mobile funnel is done)
 - [ ] Sync doc checkboxes: `IMPLEMENTATION_BATCHES.md`, `PHASE1_HANDOFF.md` → match repo
 
@@ -68,31 +69,41 @@ These appear in UI as disabled or “Coming soon” — **by design**:
 
 ---
 
-## Phase 2 — Yes, it exists (planned, not started)
+## Phase 2 — Spec locked (Wisewave 2026-06-06)
 
-From **11/15** and `PHASE1_HANDOFF.md` — **do not build in Phase 1**.
+**Full spec:** `PHASE2_SPEC.md` — **do not build in Phase 1**.
 
-| Theme | Phase 2 intent (high level) |
-|-------|-----------------------------|
-| **Product home** | **TheSoulProfile.com** (separate from marketing site) |
-| **Soul Profile** | Save code, return visits, personal dashboard |
-| **Persistence** | Saved birth code, history, re-read report |
-| **Engagement** | Check-ins, evolution timeline |
-| **Monetization** | Membership tiers, payments |
-| **Full report delivery** | PDF backend, deeper S4/S5/S6 modules, paid full report |
-| **Routes** | `/blueprint/s1-origin-frequency` and sibling per-S pages (slugs already stubbed) |
-| **Report actions** | Working SAVE TO SOUL PROFILE, PDF download |
-| **i18n** | EN/ZH toggle (JSON already bilingual-ready) |
+### Launch product
 
-Phase 2 needs its own spec, design, and batch plan — **not** in the current `IMPLEMENTATION_BATCHES.md` (Batches 0–10 = Phase 1 only).
+```
+Free Soul Code → Paid Full Report (one-time) → Magic-link return → Optional Reading
+```
+
+| Decision | Phase 2 launch |
+|----------|----------------|
+| **Access** | Free recognition layer + locked preview; paid unlocks full depth + S4/S5/S6 |
+| **Pricing** | One-time **Unlock My Full Blueprint** — no subscription yet |
+| **Delivery** | In-browser first (2A); PDF on-demand later (2B) |
+| **Identity** | Email magic link — no password accounts at launch |
+| **Data** | Own database (waitlist, booking, purchases, entitlements, saved reports) |
+| **S4** | Core Shadow Pattern module — after Integrated Soul Blueprint, not the same thing |
+| **Soul Profile / membership** | Phase 2C — not initial launch |
+
+### Build tracks
+
+- **2A** — DB, Stripe, entitlements, magic link, paid route, access gate  
+- **2B** — Expanded report UI (S1–S0, synthesis, S4, S5, S6, 7-day practice)  
+- **2C** — Soul Profile dashboard, timeline, journal, membership (later)  
+
+`IMPLEMENTATION_BATCHES.md` (Batches 0–10) remains Phase 1 only.
 
 ---
 
 ## Quick reference — you are here
 
 ```
-[✅ Phase 1 build]  →  [→ You are here: launch prep]  →  [ Phase 2 TBD ]
-     Batches 0–10         A + B (+ optional C)            Soul Profile / etc.
+[✅ Phase 1 build]  →  [→ You are here: launch prep]  →  [ Phase 2A spec locked ]
+     Batches 0–10         A + B (+ optional C)            see PHASE2_SPEC.md
 ```
 
 ---
@@ -101,6 +112,7 @@ Phase 2 needs its own spec, design, and batch plan — **not** in the current `I
 
 | File | Purpose |
 |------|---------|
+| `PHASE2_SPEC.md` | **Phase 2 platform + product spec lock (Wisewave)** |
 | `IMPLEMENTATION_BATCHES.md` | Phase 1 batch checklist (needs checkbox sync) |
 | `PHASE1_HANDOFF.md` | Full 15-doc handoff + architecture (status table stale) |
 | `README.md` | Dev, deploy, env, smoke commands |
@@ -114,6 +126,6 @@ Phase 2 needs its own spec, design, and batch plan — **not** in the current `I
 2. Steward fills legal placeholders  
 3. Deploy to staging/production URL  
 4. Production smoke (repeat key cases A + B on prod URL)  
-5. Optional: `LEADS_WEBHOOK_URL` + report header email hook  
+5. Report header email hook (defer to Phase 2A DB)  
 6. Update tracker markdown checkboxes (`IMPLEMENTATION_BATCHES.md`)  
-7. **Phase 2 kickoff** — separate planning doc when steward is ready  
+7. **Phase 2A kickoff** — DB + Stripe + magic link per `PHASE2_SPEC.md`  

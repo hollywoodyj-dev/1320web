@@ -313,6 +313,19 @@ button {
   background: linear-gradient(90deg, transparent, #f3c46d, transparent);
 }
 
+.gold-button--secondary {
+  border: 1px solid rgba(216, 177, 92, 0.38);
+  background: rgba(8, 14, 28, 0.55);
+  color: #efc36f;
+  box-shadow: none;
+}
+
+.gold-button--secondary:hover {
+  color: #f8f4ea;
+  border-color: rgba(248, 244, 234, 0.45);
+  background: rgba(12, 20, 38, 0.75);
+}
+
 .gold-button {
   display: inline-flex;
   align-items: center;
@@ -3602,13 +3615,17 @@ button {
   margin-top: 12px;
 }
 
-.report-integrated-section h3 {
+.report-field-label {
   margin: 0 0 6px;
-  font-size: 0.78rem;
+  font-size: 0.84rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--accent);
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: #efc36f;
+}
+
+.report-integrated-section .report-field-label {
+  margin-bottom: 8px;
 }
 
 .report-integrated-section p {
@@ -3958,13 +3975,9 @@ button {
   margin-bottom: 16px;
 }
 
-.report-module-field h4 {
+.report-module-field .report-field-label,
+.report-module-reflection .report-field-label {
   margin: 0 0 6px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--accent);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
 }
 
 .report-module-field p {

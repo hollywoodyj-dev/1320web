@@ -51,7 +51,7 @@ export function ReportModuleCard({ module }: ReportModuleCardProps) {
         <div className="report-module-fields">
           {module.fields.map((f) => (
             <div key={f.label} className="report-module-field">
-              <h4>{f.label}</h4>
+              <h4 className="report-field-label">{f.label}</h4>
               {f.items?.length ? (
                 <ul className="report-module-list">
                   {f.items.map((item) => (
@@ -81,7 +81,7 @@ export function ReportModuleCard({ module }: ReportModuleCardProps) {
 
         {module.reflectionQuestion ? (
           <div className="report-module-reflection">
-            <h4>Reflection Question</h4>
+            <h4 className="report-field-label">Reflection Question</h4>
             <p>{module.reflectionQuestion}</p>
           </div>
         ) : null}

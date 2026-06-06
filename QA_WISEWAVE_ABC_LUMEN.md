@@ -100,7 +100,7 @@ Run on **Case W1** and **Case A** (desktop + one mobile browser).
 
 | ID | Page | Steps | Pass criteria |
 |----|------|-------|---------------|
-| B1 | `/` homepage | Hero first screen | **One** gold primary CTA (**Generate My Code**); no competing gold button in hero |
+| B1 | `/` homepage | Hero first screen (desktop) | **One** gold primary CTA (**Generate My Code** → `#entry-panel`); no topbar gold; entry-panel submit is outline/secondary |
 | B2 | `/` homepage | Below entry panel | Secondary text links (Blueprint, Sample Report) — lower visual weight |
 | B3 | `/` homepage | Full Report preview section | **No** gold waitlist button; text links only for waitlist / reading |
 | B4 | Nav (all pages) | Top bar | **Home · About 1320 · Your Code · Sample Report · Full Report · Reading** |

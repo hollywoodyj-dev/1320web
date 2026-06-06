@@ -45,7 +45,7 @@ export function IntegratedSummaryCard({
           <div className="report-integrated-sections">
             {sections.map((section) => (
               <div key={section.label} className="report-integrated-section">
-                <h3>{section.label}</h3>
+                <h3 className="report-field-label">{section.label}</h3>
                 <p>{section.body}</p>
               </div>
             ))}

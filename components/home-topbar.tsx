@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { HOMEPAGE_HERO } from "@/lib/homepage-content";
 import { CONVERSION_NAV } from "@/lib/site-nav";
 import { TopbarShell } from "@/components/topbar-shell";
 
@@ -34,8 +33,6 @@ export function HomeTopbar() {
       linkClassName={(item) =>
         item.href === "/" && item.label === "HOME" ? "active" : undefined
       }
-      ctaHref="/your-code"
-      ctaLabel={HOMEPAGE_HERO.primaryCta}
     />
   );
 }

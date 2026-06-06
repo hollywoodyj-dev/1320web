@@ -104,7 +104,11 @@ export function BirthDateForm({ variant = "default", idPrefix }: BirthDateFormPr
   const submitButton = (
     <button
       type="submit"
-      className={variant === "homepage" ? "gold-button" : "gold-button inline-flex"}
+      className={
+        variant === "homepage"
+          ? "gold-button gold-button--secondary"
+          : "gold-button inline-flex"
+      }
       disabled={submitting}
       onPointerUp={onGeneratePointer}
     >

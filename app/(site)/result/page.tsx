@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ReportDashboard } from "@/components/report/report-dashboard";
 import { SectionCard } from "@/components/section-card";
+import { resolveResultReportMode } from "@/lib/auth/access";
 import { buildReportViewModel } from "@/lib/report/build-report-view-model";
 import { calculate1320Code } from "@/lib/calculate1320Code";
 import { get1320Content } from "@/lib/get1320Content";
@@ -50,8 +51,10 @@ export default async function ResultPage({ searchParams }: { searchParams: Promi
     { birthDate: birthDateLabel },
   );
 
+  const reportMode = await resolveResultReportMode(content.combinationSignature);
+
   const viewModel = buildReportViewModel(content, {
-    mode: "full",
+    mode: reportMode,
     variant: "result",
     birthDateLabel,
   });

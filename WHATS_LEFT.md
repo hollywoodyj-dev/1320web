@@ -1,8 +1,8 @@
 # What’s Left — 1320 Phase 1 → Launch → Phase 2
 
-**Last updated:** 2026-06-07  
+**Last updated:** 2026-06-08  
 **Workspace:** `web/`  
-**Status:** Wisewave Phases A–C shipped. **Lumen production QA blockers cleared** (`b2ab836` retest) — see `QA_WISEWAVE_ABC_LUMEN.md`. Optional: fresh physical-phone Safari + Chrome pass. Prior birth-date sign-off: `QA_BIRTHDATE_LUMEN.md`.
+**Status:** Phase 1 launch ops cleared for Phase 2 handoff. Wisewave Phases A–C shipped; Lumen production QA **PASS** (`QA_WISEWAVE_ABC_LUMEN.md`). Post-deploy legal + W1/Case A spot-check done. Optional: physical-phone Safari + Chrome pass; legal counsel review deferred.
 
 ---
 
@@ -18,8 +18,8 @@
 | Free result report UI | ✅ | Locked teasers → `/full-report` waitlist |
 | Full sample report (fictional) | ✅ | `/sample-report` |
 | Blueprint education + anchors | ✅ | `/blueprint#s1` … `#s0` |
-| Waitlist + booking forms | ✅ | Client success; Phase 1 stub (`/api/leads`) until Phase 2 DB |
-| Legal + footer | ✅ | Placeholders filled; footer subscribe hidden until webhook |
+| Waitlist + booking forms | ✅ | Persist to DB when `POSTGRES_URL` set (Phase 2A) |
+| Legal + footer | ✅ | Live legal copy (`info@1320soulcode.com`, June 6, 2026); footer subscribe hidden until Phase 2A DB |
 
 **Not the “full” product** — that’s Phase 2 (Soul Profile, save code, timeline, membership, payments). Phase 1 is **discover → calculate → free mirror → waitlist / book**.
 
@@ -31,16 +31,18 @@
 
 - [ ] **Deploy** to Vercel (root directory = `web`)
 - [ ] Set env: `NEXT_PUBLIC_SITE_URL`, optional `NEXT_PUBLIC_GA_MEASUREMENT_ID`
-- [ ] ~~`LEADS_WEBHOOK_URL`~~ **skipped** — Phase 2 uses own database (see `PHASE2_SPEC.md`)
+- [x] ~~`LEADS_WEBHOOK_URL`~~ **skipped** — Phase 2A uses `POSTGRES_URL` (see `PHASE2_SPEC.md`)
 - [x] **Lumen QA:** `QA_WISEWAVE_ABC_LUMEN.md` on production (Phases A–C) — **PASS** 2026-06-06 (`b2ab836`)
 - [ ] **Optional:** physical-phone Safari + Chrome production pass (Lumen)
-- [ ] **Production smoke:** full funnel + legal links + blueprint anchors
+- [x] **Post-deploy spot-check:** hard refresh `/privacy`, `/terms`, `/disclaimer`; W1 (`1977-11-12`) + Case A (`1980-05-22`) on `/result`
+- [ ] **Production smoke:** full funnel + blueprint anchors (legal spot-check done above)
 - [ ] Run: `npm run lint` · `npm run build` · `npm run smoke:content` · `npm run smoke:canonical` · `npm run smoke:result-1977`
 
 ### B. Steward / content (before public marketing)
 
 - [x] Replace `[Insert Contact Email]` and `[Insert Date]` in `lib/legal-placeholders.ts` (`info@1320soulcode.com`, June 6, 2026)
-- [ ] Legal review of `/privacy`, `/terms`, `/disclaimer` (placeholders cleared; counsel review still optional)
+- [x] Legal pages live on production — not MVP placeholders (`lib/legal-placeholders.ts`)
+- [ ] ~~Legal counsel review~~ **optional / deferred** — copy is live; counsel pass before Phase 2 payments if desired
 - [ ] Confirm booking testimonial placeholders stay generic (no fabricated clients)
 
 ### C. Optional polish (Phase 1 — nice to have)
@@ -91,9 +93,18 @@ Free Soul Code → Paid Full Report (one-time) → Magic-link return → Optiona
 
 ### Build tracks
 
-- **2A** — DB, Stripe, entitlements, magic link, paid route, access gate  
+- **2A** — ✅ **Foundation shipped in repo** — needs ops env (see below)  
 - **2B** — Expanded report UI (S1–S0, synthesis, S4, S5, S6, 7-day practice)  
 - **2C** — Soul Profile dashboard, timeline, journal, membership (later)  
+
+#### Phase 2A ops checklist (steward)
+
+1. Create Postgres (Neon / Vercel Postgres) → set `POSTGRES_URL` on Vercel  
+2. Run `npm run db:migrate` against production DB  
+3. Stripe: `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `STRIPE_FULL_REPORT_AMOUNT_CENTS` or `STRIPE_FULL_REPORT_PRICE_ID`  
+4. Webhook endpoint: `https://www.thesoulprofile.com/api/webhooks/stripe` → `checkout.session.completed`  
+5. Optional email: `RESEND_API_KEY` + `EMAIL_FROM` (dev logs magic link if unset)  
+6. Smoke: `npm run smoke:phase2a` · test `/checkout` → pay → `/my-report/[id]`
 
 `IMPLEMENTATION_BATCHES.md` (Batches 0–10) remains Phase 1 only.
 
@@ -102,8 +113,8 @@ Free Soul Code → Paid Full Report (one-time) → Magic-link return → Optiona
 ## Quick reference — you are here
 
 ```
-[✅ Phase 1 build]  →  [→ You are here: launch prep]  →  [ Phase 2A spec locked ]
-     Batches 0–10         A + B (+ optional C)            see PHASE2_SPEC.md
+[✅ Phase 1 build]  →  [✅ Launch ops cleared]  →  [ Phase 2A code shipped — ops env next ]
+     Batches 0–10         legal + W1/Case A spot-check    PHASE2_SPEC.md
 ```
 
 ---
@@ -123,9 +134,10 @@ Free Soul Code → Paid Full Report (one-time) → Magic-link return → Optiona
 ## Suggested “next session” order
 
 1. ~~Lumen local QA (birth dates + funnel)~~ ✅ **2026-05-31**  
-2. Steward fills legal placeholders  
-3. Deploy to staging/production URL  
-4. Production smoke (repeat key cases A + B on prod URL)  
+2. ~~Steward fills legal placeholders~~ ✅ **2026-06-06**  
+3. ~~Deploy to production~~ ✅ `thesoulprofile.com`  
+4. ~~Post-deploy spot-check (legal + W1 + Case A)~~ ✅ **2026-06-07**  
 5. Report header email hook (defer to Phase 2A DB)  
 6. Update tracker markdown checkboxes (`IMPLEMENTATION_BATCHES.md`)  
-7. **Phase 2A kickoff** — DB + Stripe + magic link per `PHASE2_SPEC.md`  
+7. **Phase 2A ops** — configure `POSTGRES_URL` + Stripe on Vercel, run `db:migrate`, test checkout  
+8. **Phase 2B** — S4/S5/S6 report depth UI per `PHASE2_SPEC.md`  

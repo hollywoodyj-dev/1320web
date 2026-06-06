@@ -35,9 +35,9 @@ export default function FullReportPage() {
         <p className="conversion-boundary">{FULL_REPORT_HERO.boundary}</p>
         <p className="conversion-trust">{FULL_REPORT_HERO.trust}</p>
         <div className="blueprint-hero-actions">
-          <a href="#waitlist" className="gold-button">
+          <Link href="/checkout" className="gold-button">
             UNLOCK MY FULL BLUEPRINT
-          </a>
+          </Link>
           <Link href="/booking" className="blueprint-secondary-link">
             BOOK A 1320 READING
           </Link>
@@ -109,12 +109,20 @@ export default function FullReportPage() {
         </div>
       </SectionCard>
 
-      <SectionCard title="Join the Full Report Waitlist" id="waitlist">
+      <SectionCard title="Unlock Your Full Report" id="waitlist">
         <p className="mb-4">
-          Phase 1 is waitlist only — no payment on this site. Be first to know when the Full Soul
-          Origin Report opens.
+          Purchase the Full Soul Origin Report once, then return anytime via magic link. You can also
+          join the waitlist for launch updates.
         </p>
-        <WaitlistForm source="full_report_waitlist" />
+        <div className="flex flex-wrap gap-3 mb-5">
+          <Link href="/checkout" className="gold-button inline-flex">
+            GO TO CHECKOUT
+          </Link>
+          <Link href="/my-report" className="blueprint-secondary-link">
+            ALREADY PURCHASED?
+          </Link>
+        </div>
+        <WaitlistForm source="full_report_waitlist" buttonText="JOIN LAUNCH UPDATES" />
       </SectionCard>
 
       <section className="blueprint-final-cta glass-card">

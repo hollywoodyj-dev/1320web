@@ -41,3 +41,6 @@ next-env.d.ts
 /.b*.png
 /qa-*.png
 /b[0-9]*.png
+
+.vercel
+.env*

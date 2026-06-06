@@ -1,6 +1,6 @@
 /**
- * Build transparent `public/1320-logo-report-v2.webp` from source JPEG.
- * Feathered white-matte removal keeps gold glow without a visible square halo.
+ * Build transparent `public/1320-logo-report-v5.webp` from source PNG/JPEG.
+ * Source ships with a white matte (not real alpha) — we feather it out in build.
  * Run: npm run build:report-logo
  */
 import fs from "node:fs";
@@ -8,10 +8,11 @@ import path from "node:path";
 import sharp from "sharp";
 
 const ROOT = process.cwd();
-const SOURCE = path.join(ROOT, "data/1320/sources/1320-logo-report.jpeg");
-const OUTPUT = path.join(ROOT, "public/1320-logo-report-v3.webp");
+const SOURCE_PNG = path.join(ROOT, "data/1320/sources/1320-logo-report.png");
+const SOURCE_JPEG = path.join(ROOT, "data/1320/sources/1320-logo-report.jpeg");
+const OUTPUT = path.join(ROOT, "public/1320-logo-report-v5.webp");
 
-/** White JPEG matte → premultiplied alpha (keeps saturated gold, drops flat white). */
+/** White matte → premultiplied alpha (keeps saturated gold, drops flat white). */
 function applyWhiteMatte(data: Buffer) {
   for (let i = 0; i < data.length; i += 4) {
     const r = data[i];
@@ -26,7 +27,6 @@ function applyWhiteMatte(data: Buffer) {
     if (minC >= 252) {
       alpha = 0;
     } else if (saturation < 0.12 && minC >= 200) {
-      // Near-white, low-saturation glow fringe from the JPEG matte.
       alpha = Math.round((252 - minC) * (255 / 52));
     } else if (saturation < 0.06 && minC >= 170) {
       alpha = Math.round((220 - minC) * (255 / 50));
@@ -41,12 +41,13 @@ function applyWhiteMatte(data: Buffer) {
 }
 
 async function main() {
-  if (!fs.existsSync(SOURCE)) {
-    console.error("Missing source:", SOURCE);
+  const source = fs.existsSync(SOURCE_PNG) ? SOURCE_PNG : SOURCE_JPEG;
+  if (!fs.existsSync(source)) {
+    console.error("Missing source:", SOURCE_PNG, "or", SOURCE_JPEG);
     process.exit(1);
   }
 
-  const { data, info } = await sharp(SOURCE)
+  const { data, info } = await sharp(source)
     .resize(1254, 1254, { fit: "contain", background: { r: 255, g: 255, b: 255, alpha: 1 } })
     .ensureAlpha()
     .raw()
@@ -59,7 +60,7 @@ async function main() {
     .toFile(OUTPUT);
 
   const sizeKb = (fs.statSync(OUTPUT).size / 1024).toFixed(1);
-  console.log(`Wrote ${path.relative(ROOT, OUTPUT)} (${info.width}x${info.height}, ${sizeKb} KB)`);
+  console.log(`Wrote ${path.relative(ROOT, OUTPUT)} from ${path.basename(source)} (${info.width}x${info.height}, ${sizeKb} KB)`);
 }
 
 main().catch((err) => {

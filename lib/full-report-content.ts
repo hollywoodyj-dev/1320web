@@ -5,7 +5,7 @@ export type AdvancedModuleSymbolId = "s5" | "s6" | "shadow";
 export const FULL_REPORT_META = {
   title: "Full 1320 Soul Origin Report",
   description:
-    "Join the waitlist for the Full 1320 Soul Origin Report — deeper S1–S0 layers plus Shadow Pattern, Soul Mission, and Money Frequency modules. Phase 1: waitlist only, no checkout.",
+    "Unlock the Full 1320 Soul Origin Report — deeper S1–S0 layers plus Shadow Pattern, Soul Mission, and Money Frequency modules. One-time purchase with magic-link return access.",
 };
 
 export const FULL_REPORT_HERO = {
@@ -14,7 +14,7 @@ export const FULL_REPORT_HERO = {
   body: "Your free code gives you the doorway. The Full Report gives you the map — how your code moves through identity, relationships, shadows, mission, and money patterns.",
   boundary:
     "1320 is a mirror for reflection and integration — not prediction, fate, or professional advice.",
-  trust: "Phase 1: join the waitlist. No payment or checkout on this site yet.",
+  trust: "One-time purchase. Magic-link return access after checkout.",
 };
 
 export const REPORT_PROMISE = {
@@ -161,7 +161,7 @@ export const WHO_NOT_FOR = {
 export const FULL_REPORT_FAQ = [
   {
     q: "Can I buy the Full Report now?",
-    a: "Not in Phase 1. Join the waitlist — we will notify you when the full report experience opens. There is no checkout on this site.",
+    a: "Use checkout to unlock the Full Report in-browser. After purchase, you receive a magic link to return anytime.",
   },
   {
     q: "What do I get on the free result?",
@@ -177,7 +177,7 @@ export const FULL_REPORT_FAQ = [
   },
   {
     q: "Will my birth date be stored?",
-    a: "Phase 1 uses your birth date to calculate your code. Waitlist and booking forms collect only what you submit — see our privacy policy for details.",
+    a: "Your birth date calculates your code. Checkout, waitlist, and booking forms collect only what you submit — see our privacy policy for details.",
   },
   {
     q: "Can I see a preview before joining?",

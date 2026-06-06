@@ -88,7 +88,7 @@ Build command: `npm run build` · Output: Next.js default (`.next`)
 
 ## Before production launch
 
-1. Replace `[Insert Contact Email]` and `[Insert Date]` in `lib/legal-placeholders.ts`.
+1. Confirm `lib/legal-placeholders.ts` on production (`info@1320soulcode.com`, June 6, 2026).
 2. Set `NEXT_PUBLIC_SITE_URL` to production domain.
 3. Run `npm run lint && npm run build && npm run smoke:content && npm run smoke:funnel`.
 4. Manual smoke: homepage calculator → generating chamber → result; `/sample-report`; `/full-report` waitlist; `/booking` form.

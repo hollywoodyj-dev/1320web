@@ -30,7 +30,7 @@ export const REPORT_FULL_UPSELL = {
     "Your 7-Day Integration Practice",
   ],
   primaryCta: "UNLOCK MY FULL BLUEPRINT",
-  primaryHref: "/full-report",
+  primaryHref: "/checkout",
   secondaryCta: "BOOK A 1320 READING",
   secondaryHref: "/booking",
 };
@@ -63,7 +63,7 @@ export const REPORT_FINAL_CTA = {
   title: "Your Code Is Only the Beginning",
   body: "A report can show you the mirror. Your life changes when awareness becomes action.",
   unlock: "UNLOCK MY FULL BLUEPRINT",
-  unlockHref: "/full-report",
+  unlockHref: "/checkout",
   book: "BOOK A 1320 READING",
   bookHref: "/booking",
   profile: "SAVE TO MY SOUL PROFILE",

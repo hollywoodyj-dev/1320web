@@ -237,9 +237,9 @@ Optional later: CRM sync, email marketing sync, analytics export, admin dashboar
 | S5 seed database + assembly | ✅ data layer (`npm run smoke:s5-assembly`) |
 | S6 money frequency master | ✅ data layer (`npm run smoke:s6-master`) |
 | Free report UI + locked teasers | ✅ Phase 1 |
-| Payments / DB / magic link | ❌ not built |
+| Payments / DB / magic link | ✅ Phase 2A foundation (needs `POSTGRES_URL` + Stripe env) |
 | S5/S6/S4 in report UI | ❌ Phase 2B |
-| Access gate / entitlements | ❌ Phase 2A |
+| Access gate / entitlements | ✅ `/result` free layer + `/my-report/[id]` paid route |
 
 ---
 

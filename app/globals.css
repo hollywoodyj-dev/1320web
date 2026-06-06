@@ -1349,6 +1349,13 @@ button {
   align-items: flex-start;
 }
 
+.checkout-form-note {
+  margin: 12px 0 0;
+  color: rgba(240, 236, 227, 0.72);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
 .homepage-secondary-links {
   display: flex;
   flex-wrap: wrap;
@@ -3700,7 +3707,7 @@ button {
   filter: drop-shadow(0 0 16px rgba(219, 161, 62, 0.14));
 }
 
-/* Report seal mark (1320-logo-report-v3.webp, transparent) with gold glow */
+/* Report seal mark (1320-logo-report-v5.webp, transparent) with gold glow */
 .report-header-ring {
   position: relative;
   z-index: 1;

@@ -49,7 +49,15 @@ export function UnlockCheckoutForm({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, firstName, year, month, day }),
       });
-      const json = (await response.json()) as { ok?: boolean; url?: string; error?: string };
+
+      let json: { ok?: boolean; url?: string; error?: string } = {};
+      try {
+        json = (await response.json()) as { ok?: boolean; url?: string; error?: string };
+      } catch {
+        setStatus("Checkout could not be started. Please try again.");
+        setLoading(false);
+        return;
+      }
 
       if (!response.ok || !json.ok || !json.url) {
         setStatus(json.error ?? "Checkout could not be started. Please try again.");

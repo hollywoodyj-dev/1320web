@@ -9,11 +9,7 @@ export function getDatabaseUrl(): string | null {
 }
 
 export function isStripeConfigured(): boolean {
-  return Boolean(
-    process.env.STRIPE_SECRET_KEY?.trim() &&
-      (process.env.STRIPE_FULL_REPORT_PRICE_ID?.trim() ||
-        process.env.STRIPE_FULL_REPORT_AMOUNT_CENTS?.trim()),
-  );
+  return Boolean(process.env.STRIPE_SECRET_KEY?.trim());
 }
 
 export function isLeadsPersistenceConfigured(): boolean {

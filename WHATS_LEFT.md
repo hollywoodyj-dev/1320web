@@ -38,8 +38,8 @@
 
 ### B. Steward / content (before public marketing)
 
-- [ ] Replace `[Insert Contact Email]` and `[Insert Date]` in `lib/legal-placeholders.ts`
-- [ ] Legal review of `/privacy`, `/terms`, `/disclaimer` (currently flagged as MVP placeholders)
+- [x] Replace `[Insert Contact Email]` and `[Insert Date]` in `lib/legal-placeholders.ts` (`info@1320soulcode.com`, June 6, 2026)
+- [ ] Legal review of `/privacy`, `/terms`, `/disclaimer` (placeholders cleared; counsel review still optional)
 - [ ] Confirm booking testimonial placeholders stay generic (no fabricated clients)
 
 ### C. Optional polish (Phase 1 — nice to have)

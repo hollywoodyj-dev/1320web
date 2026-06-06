@@ -93,5 +93,3 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
   },
 ];
 
-export const PRIVACY_NOTICE =
-  "MVP placeholder — not final legal counsel. Steward: replace [Insert Contact Email] and [Insert Date] before production launch.";

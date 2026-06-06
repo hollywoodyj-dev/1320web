@@ -1,3 +1,5 @@
+import { LEGAL_PLACEHOLDERS } from "@/lib/legal-placeholders";
+
 /** Global FAQ — 10/15 handoff. */
 
 export const FAQ_META = {
@@ -129,7 +131,7 @@ export const FAQ_SECTIONS: FaqSection[] = [
       },
       {
         q: "How do I unsubscribe from emails?",
-        a: "Use the unsubscribe option in our emails when available, or contact us at [Insert Contact Email].",
+        a: `Use the unsubscribe option in our emails when available, or contact us at ${LEGAL_PLACEHOLDERS.contactEmail}.`,
       },
       {
         q: "Where is the full privacy policy?",

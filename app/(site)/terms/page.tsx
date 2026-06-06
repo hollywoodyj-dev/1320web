@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { LegalDocument } from "@/components/legal/legal-document";
-import { TERMS_META, TERMS_NOTICE, TERMS_SECTIONS } from "@/lib/terms-content";
+import { TERMS_META, TERMS_SECTIONS } from "@/lib/terms-content";
 
 export const metadata: Metadata = {
   title: TERMS_META.title,
@@ -18,7 +18,7 @@ export default function TermsPage() {
           only, no checkout.
         </p>
       </header>
-      <LegalDocument sections={TERMS_SECTIONS} notice={TERMS_NOTICE} />
+      <LegalDocument sections={TERMS_SECTIONS} />
     </div>
   );
 }

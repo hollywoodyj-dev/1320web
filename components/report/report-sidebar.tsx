@@ -16,15 +16,15 @@ export function ReportSidebar({ navItems, activeSection, onNavigate }: ReportSid
     <aside className="report-sidebar report-sidebar--desktop glass-card">
       <div className="report-sidebar-brand">
         <Link href="/" className="brand-lockup-link">
-          <div className="brand-image-shell brand-image-shell-small">
+          <div className="brand-image-shell brand-image-shell-small brand-image-shell--report">
             <Image
-              src="/1320-logo.jpeg"
+              src="/1320-logo-report.webp"
               alt="1320 Soul Origin Code System"
               width={72}
               height={72}
-              className="brand-image brand-image-small"
+              className="brand-image brand-image-small brand-image--report"
+              priority
             />
-            <span className="brand-image-cover" aria-hidden="true" />
           </div>
           <div className="entry-copy">
             <p className="brand-number">1320</p>

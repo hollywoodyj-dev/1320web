@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import { LegalDocument } from "@/components/legal/legal-document";
-import {
-  PRIVACY_META,
-  PRIVACY_NOTICE,
-  PRIVACY_SECTIONS,
-} from "@/lib/privacy-content";
+import { PRIVACY_META, PRIVACY_SECTIONS } from "@/lib/privacy-content";
 
 export const metadata: Metadata = {
   title: PRIVACY_META.title,
@@ -21,7 +17,7 @@ export default function PrivacyPage() {
           How we collect, use, and protect information on the 1320 Soul Origin Code site.
         </p>
       </header>
-      <LegalDocument sections={PRIVACY_SECTIONS} notice={PRIVACY_NOTICE} />
+      <LegalDocument sections={PRIVACY_SECTIONS} />
     </div>
   );
 }

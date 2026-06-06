@@ -214,6 +214,20 @@ button {
   height: 72px;
 }
 
+.brand-image-shell--report {
+  border-radius: 50%;
+  background: #01010a;
+  box-shadow:
+    inset 0 0 0 1px rgba(216, 177, 92, 0.18),
+    0 0 20px rgba(242, 188, 95, 0.12);
+}
+
+.brand-image--report {
+  object-fit: contain;
+  transform: none;
+  filter: none;
+}
+
 .brand-image {
   display: block;
   width: 100%;

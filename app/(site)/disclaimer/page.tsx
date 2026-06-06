@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalDocument } from "@/components/legal/legal-document";
-import {
-  DISCLAIMER_META,
-  DISCLAIMER_NOTICE,
-  DISCLAIMER_SECTIONS,
-} from "@/lib/disclaimer-content";
+import { DISCLAIMER_META, DISCLAIMER_SECTIONS } from "@/lib/disclaimer-content";
 import { GENERATE_CODE_CTA } from "@/lib/site-nav";
 
 export const metadata: Metadata = {
@@ -23,7 +19,7 @@ export default function DisclaimerPage() {
           Important boundaries for using 1320 — self-awareness and reflection only.
         </p>
       </header>
-      <LegalDocument sections={DISCLAIMER_SECTIONS} notice={DISCLAIMER_NOTICE} />
+      <LegalDocument sections={DISCLAIMER_SECTIONS} />
       <section className="blueprint-final-cta glass-card">
         <Link href={GENERATE_CODE_CTA.href} className="gold-button">
           {GENERATE_CODE_CTA.label}

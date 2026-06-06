@@ -66,5 +66,3 @@ export const DISCLAIMER_SECTIONS: LegalSection[] = [
   },
 ];
 
-export const DISCLAIMER_NOTICE =
-  "MVP placeholder — not final legal counsel. Replace steward placeholders before production launch.";

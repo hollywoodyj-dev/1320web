@@ -1,8 +1,8 @@
-/** Steward placeholders — replace when final legal details are confirmed. */
+/** Steward contact and effective date for legal pages and footer. */
 
 export const LEGAL_PLACEHOLDERS = {
-  contactEmail: "[Insert Contact Email]",
-  effectiveDate: "[Insert Date]",
+  contactEmail: "info@1320soulcode.com",
+  effectiveDate: "June 6, 2026",
   companyName: "1320 Soul Origin Code System",
 } as const;
 

@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { setUserSession } from "@/lib/auth/session";
 import { fulfillCheckoutSession } from "@/lib/stripe/fulfill-checkout";
 import { getPurchaseBySessionId } from "@/lib/db/purchases";
 import { isDatabaseConfigured } from "@/lib/platform-config";
@@ -22,16 +23,21 @@ export async function GET(request: Request) {
       if (session.payment_status === "paid") {
         const fulfilled = await fulfillCheckoutSession(session);
         if (fulfilled) {
+          await setUserSession(fulfilled.userId);
           purchase = await getPurchaseBySessionId(sessionId);
         }
       }
-    } catch {
-      // Stripe may be unavailable; fall through to current DB state.
+    } catch (error) {
+      console.error("GET /api/checkout/status fulfillment failed:", error);
     }
   }
 
   if (!purchase) {
     return NextResponse.json({ ok: false, status: "pending" });
+  }
+
+  if (purchase.status === "completed") {
+    await setUserSession(purchase.user_id);
   }
 
   return NextResponse.json({

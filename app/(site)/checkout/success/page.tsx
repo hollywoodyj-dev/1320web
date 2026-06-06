@@ -22,8 +22,8 @@ export default async function CheckoutSuccessPage({
     <div className="conversion-page space-y-5">
       <SectionCard title="Thank You — Full Report Unlock In Progress">
         <p>
-          We are confirming your purchase. Check your email for a magic link to return to your Full
-          Report anytime.
+          We are confirming your purchase and signing you in. You will be redirected to your Full
+          Report shortly. A magic link email is also sent when email is configured.
         </p>
         {sessionId ? <CheckoutSuccessClient sessionId={sessionId} /> : null}
         <div className="mt-4 flex flex-wrap gap-3">

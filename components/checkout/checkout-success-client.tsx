@@ -21,7 +21,10 @@ export function CheckoutSuccessClient({ sessionId }: { sessionId: string }) {
 
       if (json.ok && json.reportId) {
         setReportId(json.reportId);
-        setStatus("Purchase confirmed. Your magic link email is on its way.");
+        setStatus("Purchase confirmed. Opening your Full Report…");
+        window.setTimeout(() => {
+          window.location.href = `/my-report/${json.reportId}`;
+        }, 800);
         return;
       }
 

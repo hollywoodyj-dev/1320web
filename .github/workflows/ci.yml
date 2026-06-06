@@ -30,5 +30,11 @@ jobs:
       - name: Content smoke
         run: npm run smoke:content
 
+      - name: Canonical rules smoke
+        run: npm run smoke:canonical
+
+      - name: Wisewave result smoke (1977-11-12)
+        run: npm run smoke:result-1977
+
       - name: Production build
         run: npm run build

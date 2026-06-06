@@ -1,8 +1,8 @@
 # What’s Left — 1320 Phase 1 → Launch → Phase 2
 
-**Last updated:** 2026-05-31  
+**Last updated:** 2026-06-02  
 **Workspace:** `web/`  
-**Status:** Core Soul Code funnel is **Lumen QA sign-off (local)** — **ready for deploy / production smoke**. See `QA_BIRTHDATE_LUMEN.md`.
+**Status:** Wisewave Phases A–C shipped (`1be54d6`). **Lumen production QA** pending — see `QA_WISEWAVE_ABC_LUMEN.md` (prior birth-date sign-off: `QA_BIRTHDATE_LUMEN.md`).
 
 ---
 
@@ -31,8 +31,9 @@
 
 - [ ] **Deploy** to Vercel (root directory = `web`)
 - [ ] Set env: `NEXT_PUBLIC_SITE_URL`, optional `NEXT_PUBLIC_GA_MEASUREMENT_ID`, `LEADS_WEBHOOK_URL`
+- [ ] **Lumen QA:** `QA_WISEWAVE_ABC_LUMEN.md` on production (Phases A–C)
 - [ ] **Production smoke:** full funnel + legal links + blueprint anchors
-- [ ] Run: `npm run lint` · `npm run build` · `npm run smoke:content` · `npm run smoke:funnel`
+- [ ] Run: `npm run lint` · `npm run build` · `npm run smoke:content` · `npm run smoke:canonical` · `npm run smoke:result-1977`
 
 ### B. Steward / content (before public marketing)
 

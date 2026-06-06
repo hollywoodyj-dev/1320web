@@ -206,6 +206,7 @@ Blockers: none
 
 ## Related docs
 
+- `QA_WISEWAVE_ABC_LUMEN.md` — **Phases A–C** production QA (post-Wisewave; run after deploy)  
 - `WHATS_LEFT.md` — launch vs Phase 2  
 - `README.md` — dev commands  
 - `PHASE1_HANDOFF.md` — product scope  

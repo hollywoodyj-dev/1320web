@@ -42,7 +42,9 @@ For day-to-day dev after a clean start, `npm run dev` is fine. Use `npm run dev:
 | `npm run build` | Production build |
 | `npm run start` | Run production build |
 | `npm run lint` | ESLint |
-| `npm run smoke:content` | Canonical code content smoke (S1-18 / S3-110 / S2-27 / S0-07) |
+| `npm run smoke:content` | Canonical code content smoke (S1-18 / S3-03 / S2-27 / S0-07) |
+| `npm run smoke:canonical` | Code-key lookup rules (S0-07 ≠ Warrior, formula reachability) |
+| `npm run smoke:result-1977` | Wisewave QA sample (1977-11-12 → S1-24 / S3-04 / S2-23 / S0-09) |
 | `npm run smoke:funnel` | Phase 1 funnel + metadata/analytics checklist |
 
 ## Primary funnel
@@ -78,7 +80,9 @@ Quick version:
 3. Add env vars from `.env.example` (at minimum `NEXT_PUBLIC_SITE_URL`).
 4. Deploy — no database required for Phase 1.
 
-CI: `.github/workflows/ci.yml` runs `qa:baseline`, `smoke:content`, and `build` on push/PR.
+CI: `.github/workflows/ci.yml` runs `qa:baseline`, `smoke:content`, `smoke:canonical`, `smoke:result-1977`, and `build` on push/PR.
+
+**Manual QA (Lumen):** `QA_WISEWAVE_ABC_LUMEN.md` (Phases A–C) · `QA_BIRTHDATE_LUMEN.md` (birth-date matrix).
 
 Build command: `npm run build` · Output: Next.js default (`.next`)
 

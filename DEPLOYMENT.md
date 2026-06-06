@@ -9,7 +9,7 @@
 
 | File | Purpose |
 |------|---------|
-| `.github/workflows/ci.yml` | Runs `qa:baseline`, `smoke:content`, `build` on push/PR |
+| `.github/workflows/ci.yml` | Runs `qa:baseline`, `smoke:content`, `smoke:canonical`, `smoke:result-1977`, `build` on push/PR |
 | `.env.example` | Env vars to copy into Vercel |
 | `DEPLOYMENT.md` | This guide |
 

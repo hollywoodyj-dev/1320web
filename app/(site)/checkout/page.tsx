@@ -21,6 +21,14 @@ export default async function CheckoutPage({
   const params = await searchParams;
   const birth = await resolveBirthDateFromRequest(params);
   const configured = isDatabaseConfigured() && isStripeConfigured();
+  const authError =
+    typeof params.error === "string"
+      ? {
+          expired: "That magic link is invalid, already used, or expired. Request a new one below.",
+          token: "That sign-in link was incomplete. Request a new magic link below.",
+          db: "Report access is temporarily unavailable. Please try again shortly.",
+        }[params.error]
+      : undefined;
 
   return (
     <div className="conversion-page space-y-5">
@@ -32,6 +40,12 @@ export default async function CheckoutPage({
           Integrated Soul Blueprint, and return access via magic link.
         </p>
       </header>
+
+      {authError ? (
+        <SectionCard title="Sign-In Link Issue">
+          <p>{authError}</p>
+        </SectionCard>
+      ) : null}
 
       {!configured ? (
         <SectionCard title="Checkout Not Yet Live">

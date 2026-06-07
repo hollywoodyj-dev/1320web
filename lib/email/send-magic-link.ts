@@ -13,10 +13,12 @@ export async function sendMagicLinkEmail(input: MagicLinkEmailInput): Promise<{ 
   const text = [
     "Your Full Soul Origin Report is ready.",
     "",
-    "Use this secure link to return to your report anytime:",
+    "Open this secure link, then tap Continue to sign in:",
     input.magicLinkUrl,
     "",
-    "This link expires in 24 hours. If you did not request this, you can ignore this email.",
+    "This link expires in 24 hours and can be used once. If it stops working, request a new link from checkout.",
+    "",
+    "If you did not request this, you can ignore this email.",
   ].join("\n");
 
   if (process.env.NODE_ENV !== "production" || process.env.NEXT_PUBLIC_ANALYTICS_DEBUG === "true") {

@@ -3707,7 +3707,7 @@ button {
   filter: drop-shadow(0 0 16px rgba(219, 161, 62, 0.14));
 }
 
-/* Report seal mark (1320-logo-report-v5.webp, transparent) with gold glow */
+/* Report seal mark (generating-1320-ring.webp) with gold glow */
 .report-header-ring {
   position: relative;
   z-index: 1;

@@ -55,19 +55,20 @@ export function ReportDashboard({ viewModel, analyticsEvent }: ReportDashboardPr
 
         {viewModel.mode === "free" && viewModel.showFullUpsell ? (
           <p className="report-free-layer-note glass-card">
-            This page shows your <strong>free first layer</strong> — overview fields only. The{" "}
-            <a href="/sample-report" className="blueprint-secondary-link">
-              sample report
-            </a>{" "}
-            previews the full report structure with a fictional birth date.{" "}
+            This page shows your <strong>free first layer</strong> — overview fields only. The paid{" "}
+            <strong>Full Soul Origin Report</strong> (~32 pages) unlocks at checkout.{" "}
             <a href="/checkout" className="blueprint-secondary-link">
-              Unlock checkout
+              Unlock my full blueprint
             </a>{" "}
-            for your personal full blueprint, or{" "}
+            or{" "}
             <a href="/my-report" className="blueprint-secondary-link">
               open My Report
             </a>{" "}
-            if you already purchased.
+            if you already purchased. See the{" "}
+            <a href="/sample-report" className="blueprint-secondary-link">
+              sample report
+            </a>{" "}
+            for the same free layer with a fictional code.
           </p>
         ) : null}
 

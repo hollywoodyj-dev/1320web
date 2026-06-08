@@ -23,7 +23,7 @@ export default function SampleReportPage() {
   );
 
   const viewModel = buildReportViewModel(content, {
-    mode: "full",
+    mode: "free",
     variant: "sample",
   });
 

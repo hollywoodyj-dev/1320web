@@ -16,7 +16,7 @@
 | Content from founder JSON (EN) | ✅ | `get1320Content()` + `data/1320/*.json` — do not rewrite interpretation copy in components |
 | Funnel: `/` → `/your-code` → `/generating` → `/result` | ✅ | Mobile + desktop verified (incl. cookie / meta refresh fixes) |
 | Free result report UI | ✅ | Locked teasers → `/full-report` waitlist |
-| Full sample report (fictional) | ✅ | `/sample-report` |
+| Sample report (free layer, fictional) | ✅ | `/sample-report` — same depth as `/result`, not the ~32-page Full Report |
 | Blueprint education + anchors | ✅ | `/blueprint#s1` … `#s0` |
 | Waitlist + booking forms | ✅ | Persist to DB when `POSTGRES_URL` set (Phase 2A) |
 | Legal + footer | ✅ | Live legal copy (`info@1320soulcode.com`, June 6, 2026); footer subscribe hidden until Phase 2A DB |
@@ -140,4 +140,4 @@ Free Soul Code → Paid Full Report (one-time) → Magic-link return → Optiona
 5. Report header email hook (defer to Phase 2A DB)  
 6. Update tracker markdown checkboxes (`IMPLEMENTATION_BATCHES.md`)  
 7. **Phase 2A ops** — configure `POSTGRES_URL` + Stripe on Vercel, run `db:migrate`, test checkout  
-8. **Phase 2B** — S4/S5/S6 report depth UI per `PHASE2_SPEC.md`  
+8. **Phase 2B** — ~32-page Full Report spec (from Wisewave) + S4/S5/S6 depth UI per `PHASE2_SPEC.md`  

@@ -2,11 +2,12 @@
 
 export const SAMPLE_REPORT_META = {
   title: "Sample 1320 Soul Origin Report",
-  description: "Preview the full Sacred Report Dashboard with fictional sample code S1-18 / S3-03 / S2-27 / S0-07.",
+  description:
+    "Free-layer sample with fictional code S1-18 / S3-03 / S2-27 / S0-07. The paid Full Soul Origin Report (~32 pages) ships in a later release.",
   fictionBanner:
-    "Sample report only — birth date May 22, 1980 is fictional. Your personal report is generated from your own birth date.",
-  headerTitle: "YOUR 1320 SOUL ORIGIN REPORT",
-  headerSubtitle: "Sample Soul Blueprint — for structure and tone preview only.",
+    "Sample only — fictional birth date May 22, 1980. This shows the same free first layer as your personal /result page, not the paid ~32-page Full Report.",
+  headerTitle: "YOUR 1320 SOUL ORIGIN CODE",
+  headerSubtitle: "Free-layer sample — fictional code for layout and tone preview.",
 };
 
 export const REPORT_HEADER_ACTIONS = {

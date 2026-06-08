@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { LeadCaptureForm } from "@/components/lead-capture-form";
-import { RESULT_EXTRAS } from "@/lib/report/report-static-content";
+import { REPORT_FULL_UPSELL, RESULT_EXTRAS } from "@/lib/report/report-static-content";
 
 type ResultExtrasProps = {
   codeString: string;
@@ -18,8 +18,8 @@ export function ResultExtras({ codeString }: ResultExtrasProps) {
       <section className="glass-card report-extras-card">
         <h2 className="report-section-title">{RESULT_EXTRAS.goDeeperTitle}</h2>
         <p>{RESULT_EXTRAS.goDeeperBody}</p>
-        <Link href="/full-report" className="gold-button mt-4 inline-flex">
-          JOIN THE FULL REPORT WAITLIST
+        <Link href={REPORT_FULL_UPSELL.primaryHref} className="gold-button mt-4 inline-flex">
+          {REPORT_FULL_UPSELL.primaryCta}
         </Link>
         <Link href="/sample-report" className="blueprint-secondary-link block mt-3">
           VIEW SAMPLE REPORT

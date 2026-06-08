@@ -53,6 +53,24 @@ export function ReportDashboard({ viewModel, analyticsEvent }: ReportDashboardPr
 
         <p className="report-boundary-note">{viewModel.boundaryNote}</p>
 
+        {viewModel.mode === "free" && viewModel.showFullUpsell ? (
+          <p className="report-free-layer-note glass-card">
+            This page shows your <strong>free first layer</strong> — overview fields only. The{" "}
+            <a href="/sample-report" className="blueprint-secondary-link">
+              sample report
+            </a>{" "}
+            previews the full report structure with a fictional birth date.{" "}
+            <a href="/checkout" className="blueprint-secondary-link">
+              Unlock checkout
+            </a>{" "}
+            for your personal full blueprint, or{" "}
+            <a href="/my-report" className="blueprint-secondary-link">
+              open My Report
+            </a>{" "}
+            if you already purchased.
+          </p>
+        ) : null}
+
         <BlueprintOverviewRow cards={viewModel.overviewCards} />
 
         <IntegratedSummaryCard

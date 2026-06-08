@@ -3775,6 +3775,14 @@ button {
   line-height: 1.55;
 }
 
+.report-free-layer-note {
+  margin: 0;
+  padding: 14px 18px;
+  color: var(--muted-foreground);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
 /* Four-Part Blueprint row (top 4 nodes) — keep compact report sizing */
 .report-pillar-grid {
   margin-top: 0;

@@ -1,6 +1,6 @@
 # 1320 v2 implementation phases
 
-**Status:** Phase 0–3 complete in repo. Phases 4–6 not started.
+**Status:** Phase 0–4 complete in repo. Phases 5–6 pending (Lumen S7–S9 art, QA checklist).
 
 ## Phase 0 — Spec lock (done)
 

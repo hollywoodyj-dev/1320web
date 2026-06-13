@@ -16,10 +16,10 @@ import {
 } from "@/lib/full-report/full-report-static";
 import {
   formatBirthDateLabel,
-  formatCodeStrip,
+  formatFullReportCodeStrip,
   formatS3RawLine,
 } from "@/lib/full-report/format-display";
-import { FULL_REPORT_ATTRIBUTION, FULL_REPORT_SCREENS, type FullReportScreenDef } from "@/lib/full-report/screen-manifest";
+import { getFullReportScreensForTier, FULL_REPORT_ATTRIBUTION, type FullReportScreenDef } from "@/lib/full-report/screen-manifest";
 
 export type FullReportBlock =
   | {
@@ -108,6 +108,16 @@ function moduleSectionFields(
     .filter((f): f is NonNullable<typeof f> => Boolean(f));
 }
 
+function moduleSectionSlice(
+  sections: SoulMissionSection[] | undefined,
+  locale: Locale,
+  start: number,
+  end?: number,
+): ({ label: string; value: string; items?: string[] } | null)[] {
+  if (!sections?.length) return [];
+  return moduleSectionFields(sections.slice(start, end), locale);
+}
+
 function buildSevenDays(
   content: Get1320ContentResult,
   blueprint: IntegratedSoulBlueprint | null,
@@ -166,10 +176,15 @@ export function buildFullReportPayload(
   const s4 = content.s4Content;
   const s5 = content.s5Content;
   const s6 = content.s6Content;
+  const s7 = content.s7Content;
+  const s8 = content.s8Content;
+  const s9 = content.s9Content;
+  const reportTier = content.reportTier ?? "full";
   const bp = content.integratedSoulBlueprint;
   const birthLabel = options.birthDate ? formatBirthDateLabel(options.birthDate) : undefined;
   const preparedFor = options.preparedFor ?? "You";
   const sevenDays = buildSevenDays(content, bp, locale);
+  const sealCode = formatFullReportCodeStrip(codes, reportTier);
 
   const dashboardCards = (["s1", "s3", "s2", "s0"] as const).map((id) => {
     const meta = getSegment(id);
@@ -202,13 +217,13 @@ export function buildFullReportPayload(
       { type: "text", variant: "label", text: FULL_REPORT_ATTRIBUTION },
       { type: "text", variant: "subtitle", text: `Prepared for ${preparedFor}` },
       ...(birthLabel ? [{ type: "text" as const, variant: "subtitle" as const, text: `Birth Date: ${birthLabel}` }] : []),
-      { type: "text", variant: "code", text: formatCodeStrip(codes) },
+      { type: "text", variant: "code", text: sealCode },
     ],
     dashboard: [
       {
         type: "dashboard",
         cards: dashboardCards,
-        sealCode: formatCodeStrip(codes),
+        sealCode,
       },
     ],
     "how-to-read": [
@@ -441,6 +456,87 @@ export function buildFullReportPayload(
           { type: "text", variant: "disclaimer", text: pickLocalized(s6.lockedPreview, locale) },
         ]
       : [],
+    "s7-divider": s7 ? [] : [],
+    "s7-overview": s7
+      ? [
+          { type: "text", variant: "title", text: "Soul Sovereignty S7" },
+          { type: "text", variant: "subtitle", text: pickLocalized(s7.title, locale) },
+          { type: "text", variant: "code", text: s7.segmentCode ?? codes.s7Code ?? "" },
+          fieldsBlock(...moduleSectionSlice(s7.soulMissionSections, locale, 0, 2)),
+          { type: "text", variant: "disclaimer", text: pickLocalized(s7.lockedPreview, locale) },
+        ]
+      : [],
+    "s7-patterns": s7
+      ? [
+          ...sectionHeaderBlocks("S7 Reclaim · Power · Fields", s7.segmentCode),
+          fieldsBlock(...moduleSectionSlice(s7.soulMissionSections, locale, 2, 5)),
+        ]
+      : [],
+    "s7-integration": s7
+      ? [
+          ...sectionHeaderBlocks("S7 Shadow · Mature Expression", s7.segmentCode),
+          fieldsBlock(...moduleSectionSlice(s7.soulMissionSections, locale, 5)),
+          ...(s7.guidance
+            ? [
+                {
+                  type: "text" as const,
+                  variant: "guidance" as const,
+                  text: pickLocalized(s7.guidance, locale),
+                },
+              ]
+            : []),
+        ]
+      : [],
+    "s8-divider": s8 ? [] : [],
+    "s8-overview": s8
+      ? [
+          { type: "text", variant: "title", text: "Soul Contribution S8" },
+          { type: "text", variant: "subtitle", text: pickLocalized(s8.title, locale) },
+          { type: "text", variant: "code", text: s8.segmentCode ?? codes.s8Code ?? "" },
+          fieldsBlock(...moduleSectionSlice(s8.soulMissionSections, locale, 0, 3)),
+          { type: "text", variant: "disclaimer", text: pickLocalized(s8.lockedPreview, locale) },
+        ]
+      : [],
+    "s8-alignment": s8
+      ? [
+          ...sectionHeaderBlocks("S8 Gifts · Shadow · Alignment", s8.segmentCode),
+          fieldsBlock(...moduleSectionSlice(s8.soulMissionSections, locale, 3)),
+          ...(s8.guidance
+            ? [
+                {
+                  type: "text" as const,
+                  variant: "guidance" as const,
+                  text: pickLocalized(s8.guidance, locale),
+                },
+              ]
+            : []),
+        ]
+      : [],
+    "s9-divider": s9 ? [] : [],
+    "s9-overview": s9
+      ? [
+          { type: "text", variant: "title", text: "Return to Source S9" },
+          { type: "text", variant: "subtitle", text: pickLocalized(s9.title, locale) },
+          { type: "text", variant: "code", text: s9.segmentCode ?? codes.s9Code ?? "" },
+          fieldsBlock(...moduleSectionSlice(s9.soulMissionSections, locale, 0, 3)),
+          { type: "text", variant: "disclaimer", text: pickLocalized(s9.lockedPreview, locale) },
+        ]
+      : [],
+    "s9-integration": s9
+      ? [
+          ...sectionHeaderBlocks("S9 Shadow · Mature Return", s9.segmentCode),
+          fieldsBlock(...moduleSectionSlice(s9.soulMissionSections, locale, 3)),
+          ...(s9.guidance
+            ? [
+                {
+                  type: "text" as const,
+                  variant: "guidance" as const,
+                  text: pickLocalized(s9.guidance, locale),
+                },
+              ]
+            : []),
+        ]
+      : [],
     "practice-divider": [],
     "practice-overview": [
       ...sectionHeaderBlocks("7-Day Practice Overview"),
@@ -528,5 +624,7 @@ export function buildFullReportPayload(
     ],
   };
 
-  return FULL_REPORT_SCREENS.map((screen) => screenPayload(screen, byId[screen.id] ?? []));
+  return getFullReportScreensForTier(reportTier).map((screen) =>
+    screenPayload(screen, byId[screen.id] ?? []),
+  );
 }

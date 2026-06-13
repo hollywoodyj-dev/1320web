@@ -14,6 +14,7 @@
     "smoke:v2-calculation": "npx tsx scripts/smoke-v2-calculation.ts",
     "smoke:v2-content": "npx tsx scripts/smoke-v2-content.ts",
     "smoke:v2-get-content": "npx tsx scripts/smoke-v2-get-content.ts",
+    "smoke:full-report-payload": "npx tsx scripts/smoke-full-report-payload.ts",
     "import:v2-databases": "npx tsx scripts/build-bilingual-v2-databases.ts",
     "build:bilingual-v2": "npx tsx scripts/build-bilingual-v2-databases.ts",
     "audit:bilingual-v2": "npx tsx scripts/audit-bilingual-v2-locale.ts",

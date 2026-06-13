@@ -1,4 +1,4 @@
-import type { CodeDisplay } from "@/lib/types/1320-content";
+import type { CodeDisplay, ReportProductTier } from "@/lib/types/1320-content";
 
 export function formatBirthDateLabel(isoDate: string): string {
   const [y, m, d] = isoDate.split("-").map(Number);
@@ -14,6 +14,22 @@ export function formatBirthDateLabel(isoDate: string): string {
 
 export function formatCodeStrip(codes: CodeDisplay): string {
   return `${codes.s1Code} · ${codes.s3Code} · ${codes.s2Code} · ${codes.s0Code}`;
+}
+
+/** Full-report dashboard seal — awareness chain plus S4–S7 (S8/S9 when Advanced). */
+export function formatFullReportCodeStrip(
+  codes: CodeDisplay,
+  tier: ReportProductTier = "full",
+): string {
+  const parts = [codes.s1Code, codes.s3Code, codes.s2Code, codes.s0Code];
+  if (codes.s4Code) parts.push(codes.s4Code);
+  if (codes.s5Code) parts.push(codes.s5Code);
+  if (codes.s6Code) parts.push(codes.s6Code);
+  if (codes.s7Code) parts.push(codes.s7Code);
+  if (tier === "advanced" && codes.s8Code && codes.s9Code) {
+    parts.push(codes.s8Code, codes.s9Code);
+  }
+  return parts.join(" · ");
 }
 
 /** S3 code is never the raw month×day value. */

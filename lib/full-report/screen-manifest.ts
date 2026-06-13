@@ -1,4 +1,5 @@
 import { fullReportBackgroundSrc } from "@/lib/full-report/backgrounds";
+import type { ReportProductTier } from "@/lib/types/1320-content";
 
 /** Where dynamic copy sits relative to the art safe zones. */
 export type FullReportLayout =
@@ -316,6 +317,96 @@ export const FULL_REPORT_SCREENS: FullReportScreenDef[] = [
     navGroup: "s6",
   },
   {
+    id: "s7-divider",
+    artPage: 38,
+    title: "S7 Soul Sovereignty",
+    background: "27-s6-divider.png",
+    layout: "divider",
+    aspectRatio: "16/9",
+    navGroup: "s7",
+  },
+  {
+    id: "s7-overview",
+    artPage: 39,
+    title: "S7 Sovereignty Overview",
+    background: "28-s6-value-receiving-overview.png",
+    layout: "content-left",
+    aspectRatio: "16/9",
+    navGroup: "s7",
+  },
+  {
+    id: "s7-patterns",
+    artPage: 40,
+    title: "S7 Reclaim · Power · Fields",
+    background: "29-s6-gifts-shadow-alignment.png",
+    layout: "content-left",
+    aspectRatio: "16/9",
+    navGroup: "s7",
+  },
+  {
+    id: "s7-integration",
+    artPage: 41,
+    title: "S7 Shadow · Mature Expression",
+    background: "28-s6-value-receiving-overview.png",
+    layout: "content-left",
+    aspectRatio: "16/9",
+    navGroup: "s7",
+  },
+  {
+    id: "s8-divider",
+    artPage: 42,
+    title: "S8 Soul Contribution",
+    background: "30-7-day-integration-practice.png",
+    layout: "divider",
+    aspectRatio: "16/9",
+    navGroup: "s8",
+  },
+  {
+    id: "s8-overview",
+    artPage: 43,
+    title: "S8 Contribution Overview",
+    background: "28-s6-value-receiving-overview.png",
+    layout: "content-left",
+    aspectRatio: "16/9",
+    navGroup: "s8",
+  },
+  {
+    id: "s8-alignment",
+    artPage: 44,
+    title: "S8 Gifts · Shadow · Alignment",
+    background: "29-s6-gifts-shadow-alignment.png",
+    layout: "content-left",
+    aspectRatio: "16/9",
+    navGroup: "s8",
+  },
+  {
+    id: "s9-divider",
+    artPage: 45,
+    title: "S9 Return to Source",
+    background: "30-7-day-integration-practice.png",
+    layout: "divider",
+    aspectRatio: "16/9",
+    navGroup: "s9",
+  },
+  {
+    id: "s9-overview",
+    artPage: 46,
+    title: "S9 Return Overview",
+    background: "28-s6-value-receiving-overview.png",
+    layout: "content-left",
+    aspectRatio: "16/9",
+    navGroup: "s9",
+  },
+  {
+    id: "s9-integration",
+    artPage: 47,
+    title: "S9 Shadow · Mature Return",
+    background: "29-s6-gifts-shadow-alignment.png",
+    layout: "content-left",
+    aspectRatio: "16/9",
+    navGroup: "s9",
+  },
+  {
     id: "practice-divider",
     artPage: 31,
     title: "7-Day Integration",
@@ -380,6 +471,16 @@ export const FULL_REPORT_SCREENS: FullReportScreenDef[] = [
   },
 ];
 
+/** Production screens for paid tier — S8/S9 only when Advanced. */
+export function getFullReportScreensForTier(tier: ReportProductTier = "full"): FullReportScreenDef[] {
+  return FULL_REPORT_SCREENS.filter((screen) => {
+    if (screen.navGroup === "s8" || screen.navGroup === "s9") {
+      return tier === "advanced";
+    }
+    return true;
+  });
+}
+
 export const FULL_REPORT_ATTRIBUTION = "Prepared by 1320 Soul Origin Code System";
 
 export function screenBackgroundUrl(
@@ -399,6 +500,9 @@ export const FULL_REPORT_NAV_GROUPS: { id: FullReportNavGroup; label: string }[]
   { id: "integrated", label: "Blueprint" },
   { id: "s5", label: "S5" },
   { id: "s6", label: "S6" },
+  { id: "s7", label: "S7" },
+  { id: "s8", label: "S8" },
+  { id: "s9", label: "S9" },
   { id: "practice", label: "7-Day" },
   { id: "close", label: "Close" },
 ];

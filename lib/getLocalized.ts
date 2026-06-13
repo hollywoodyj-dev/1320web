@@ -39,3 +39,23 @@ export function localizedFromStrings(
 export function containsCjk(text: string): boolean {
   return /[\u3400-\u9fff]/.test(text);
 }
+
+/** Strip embedded CJK from English-slot copy (v2 DBs sometimes mix languages in one string). */
+export function sanitizeEnText(text: string): string {
+  return text
+    .replace(/[\u3400-\u9fff\u3000-\u303f\uff00-\uffef]+/g, "")
+    .replace(/\s*[:：]\s*(?=\s|[.,;]|$)/g, ":")
+    .replace(/\s{2,}/g, " ")
+    .replace(/\s+([.,;])/g, "$1")
+    .trim();
+}
+
+/** Build bilingual text; never leave CJK in the `en` slot when locale is English. */
+export function bilingualField(en?: string | null, zh?: string | null): LocalizedText {
+  const enRaw = en?.trim() ?? "";
+  const zhRaw = zh?.trim() ?? "";
+  if (enRaw && containsCjk(enRaw)) {
+    return fromV1Fields(sanitizeEnText(enRaw), zhRaw || enRaw);
+  }
+  return fromV1Fields(enRaw, zhRaw);
+}

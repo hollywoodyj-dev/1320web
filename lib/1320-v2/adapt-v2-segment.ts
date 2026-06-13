@@ -1,4 +1,4 @@
-import { fromV1Fields } from "@/lib/getLocalized";
+import { bilingualField, containsCjk, fromV1Fields } from "@/lib/getLocalized";
 import type { Locale, LocalizedText, SegmentContent } from "@/lib/types/1320-content";
 import type { SoulMissionSection } from "@/lib/types/s5-soul-mission";
 import type { V2BlockSpec, V2ModuleId } from "@/lib/types/1320-v2-content";
@@ -86,12 +86,26 @@ function strArray(entry: V2Entry, key: string): string[] {
 }
 
 function text(en?: string, zh?: string): LocalizedText {
-  return fromV1Fields(en, zh);
+  return bilingualField(en, zh);
 }
 
-function truncate(text: string, max = 200): string {
-  if (text.length <= max) return text;
-  return `${text.slice(0, max).trim()}…`;
+function mapStringArray(entry: V2Entry, enKey: string, zhKey: string): LocalizedText[] {
+  const enItems = strArray(entry, enKey);
+  const zhItems = strArray(entry, zhKey);
+  if (enItems.length) {
+    return enItems.map((en, i) => text(en, zhItems[i]));
+  }
+  return zhItems.map((zh) => text(undefined, zh));
+}
+
+function pickEnglishGuidance(entry: V2Entry): LocalizedText | undefined {
+  const ww = str(entry, "wisewave_guidance");
+  const wwZh = str(entry, "wisewave_guidance_zh") ?? str(entry, "guidance_zh");
+  const practice = str(entry, "one_week_practice");
+  const en = ww && !containsCjk(ww) ? ww : practice;
+  const zh = wwZh ?? (ww && containsCjk(ww) ? ww : undefined);
+  if (!en?.trim() && !zh?.trim()) return undefined;
+  return text(en, zh);
 }
 
 function formatBulletList(items: string[]): string {
@@ -194,9 +208,9 @@ export function adaptV2Segment(
   const base = baseSegment(module, code, entry);
   const freeEssenceSource =
     str(entry, "origin_essence") ??
+    str(entry, "mirror_essence") ??
     str(entry, "reflective_summary") ??
     str(entry, "vibration_essence") ??
-    str(entry, "mirror_essence") ??
     sections[0]?.body.en;
 
   const segment: SegmentContent = {
@@ -208,60 +222,71 @@ export function adaptV2Segment(
     ),
     reflectionQuestion: reflection ? text(reflection) : undefined,
     soulMissionSections: sections.length ? sections : undefined,
-    guidance: str(entry, "wisewave_guidance") || str(entry, "wisewave_reflection")
-      ? text(str(entry, "wisewave_guidance") ?? str(entry, "wisewave_reflection"))
-      : undefined,
+    guidance: pickEnglishGuidance(entry),
     practice: str(entry, "one_week_practice") ? text(str(entry, "one_week_practice")!) : undefined,
     s3Raw: module === "S3" ? s3Raw : undefined,
     s3Code: module === "S3" ? code : undefined,
   };
 
   if (module === "S1") {
-    segment.soulTraits = strArray(entry, "soul_traits").map((item) => text(item));
-    if (!segment.soulTraits.length) {
-      segment.soulTraits = strArray(entry, "soul_traits_zh").map((item) => text("", item));
+    segment.soulTraits = mapStringArray(entry, "soul_traits", "soul_traits_zh");
+    segment.coreGifts = mapStringArray(entry, "strengths", "strengths_zh");
+    segment.shadowPatterns = mapStringArray(entry, "shadow_frequency", "shadow_frequency_zh");
+    segment.lesson = text(str(entry, "core_lesson"), str(entry, "core_lesson_zh"));
+    segment.direction = mapStringArray(entry, "mission_direction", "mission_direction_zh");
+    segment.color = text(str(entry, "symbolic_color"), str(entry, "symbolic_color_zh"));
+    segment.totem = text(str(entry, "totem"), str(entry, "totem_zh"));
+    segment.fullEssence = text(str(entry, "origin_essence"), str(entry, "origin_essence_zh"));
+    if (!segment.guidance) {
+      segment.guidance = pickEnglishGuidance(entry);
     }
-    segment.coreGifts = strArray(entry, "strengths").map((item) => text(item));
-    if (!segment.coreGifts.length) {
-      segment.coreGifts = strArray(entry, "strengths_zh").map((item) => text("", item));
-    }
-    segment.lesson = str(entry, "core_lesson") ? text(str(entry, "core_lesson")!) : undefined;
-    segment.direction = strArray(entry, "mission_direction").map((item) => text(item));
-    segment.color = str(entry, "symbolic_color") ? text(str(entry, "symbolic_color")!) : undefined;
-    segment.totem = str(entry, "totem") ? text(str(entry, "totem")!) : undefined;
-    segment.fullEssence = str(entry, "origin_essence") ? text(str(entry, "origin_essence")!) : undefined;
   }
 
   if (module === "S0") {
-    segment.coreIllusion = str(entry, "reflective_summary") ? text(str(entry, "reflective_summary")!) : undefined;
-    segment.voidChallenge = str(entry, "void_challenge_zh") ? text("", str(entry, "void_challenge_zh")) : undefined;
-    segment.voidPower = str(entry, "void_power_zh") ? text("", str(entry, "void_power_zh")) : undefined;
-    segment.awakeningPath = str(entry, "path_of_return_zh") ? text("", str(entry, "path_of_return_zh")) : undefined;
+    segment.coreIllusion = text(str(entry, "core_illusion"), str(entry, "core_illusion_zh"));
+    if (!segment.coreIllusion.en?.trim() && !segment.coreIllusion.zh?.trim()) {
+      segment.coreIllusion = text(str(entry, "reflective_summary"), undefined);
+    }
+    segment.voidChallenge = text(str(entry, "void_challenge"), str(entry, "void_challenge_zh"));
+    segment.voidPower = text(str(entry, "void_power"), str(entry, "void_power_zh"));
+    segment.awakeningPath = text(str(entry, "path_of_return"), str(entry, "path_of_return_zh"));
+    segment.freeEssence = text(
+      str(entry, "reflective_summary") ?? freeEssenceSource ?? MISSING_EN,
+      str(entry, "origin_essence_zh"),
+    );
   }
 
   if (module === "S2") {
-    segment.relationshipPattern = str(entry, "relationship_pattern")
-      ? text(str(entry, "relationship_pattern")!)
-      : undefined;
-    segment.mirrorLesson = str(entry, "reflective_summary") ? text(str(entry, "reflective_summary")!) : undefined;
+    segment.relationshipPattern = text(
+      str(entry, "relationship_dynamic"),
+      str(entry, "relationship_dynamic_zh"),
+    );
+    segment.karmicLoop = text(str(entry, "karmic_loop"), str(entry, "karmic_loop_zh"));
+    segment.mirrorLesson = text(str(entry, "lesson"), str(entry, "lesson_zh"));
+    segment.integrationPrompt = text(str(entry, "healing_path"), str(entry, "healing_path_zh"));
+    segment.freeEssence = text(
+      str(entry, "mirror_essence") ?? str(entry, "reflective_summary") ?? freeEssenceSource ?? MISSING_EN,
+      str(entry, "mirror_essence_zh"),
+    );
+    segment.fullEssence = segment.freeEssence;
   }
 
   if (module === "S3") {
-    segment.expressionPattern = str(entry, "expression_style") ? text(str(entry, "expression_style")!) : undefined;
-    segment.growthEdge = str(entry, "integration_key") ? text(str(entry, "integration_key")!) : undefined;
-    segment.fullEssence = str(entry, "vibration_essence") ? text(str(entry, "vibration_essence")!) : undefined;
+    segment.expressionPattern = text(str(entry, "expression_style"), str(entry, "expression_style_zh"));
+    segment.growthEdge = text(str(entry, "integration_key"), str(entry, "integration_key_zh"));
+    segment.fullEssence = text(str(entry, "vibration_essence"), str(entry, "vibration_essence_zh"));
+    if (!segment.guidance) {
+      segment.guidance = pickEnglishGuidance(entry);
+    }
+    segment.integrationPrompt = text(str(entry, "one_week_practice"), str(entry, "one_week_practice_zh"));
   }
 
   if (module === "S4") {
-    segment.fullEssence = str(entry, "reflective_summary") ? text(str(entry, "reflective_summary")!) : undefined;
+    segment.fullEssence = text(str(entry, "reflective_summary"), str(entry, "reflective_summary_zh"));
   }
 
   if (safeNote) {
-    segment.integrationPrompt = text(safeNote);
-  }
-
-  if (freeEssenceSource) {
-    segment.freeEssence = text(truncate(freeEssenceSource), str(entry, "origin_essence_zh"));
+    segment.integrationPrompt = text(safeNote, str(entry, "safe_language_note_zh"));
   }
 
   return segment;

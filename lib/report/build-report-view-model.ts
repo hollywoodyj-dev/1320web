@@ -142,8 +142,7 @@ function buildS1Fields(
     field(locale, "Integration Guidance", segment.guidance),
   ].filter((f): f is ReportField => Boolean(f));
 
-  if (mode === "full") return polishReportFields(all, { archetype });
-  return all.filter((f) => f.label === "Overview");
+  return polishReportFields(all, { archetype });
 }
 
 function buildS3Fields(
@@ -161,8 +160,7 @@ function buildS3Fields(
     field(locale, "Integration Guidance", segment.guidance ?? segment.integrationPrompt),
   ].filter((f): f is ReportField => Boolean(f));
 
-  if (mode === "full") return polishReportFields(all, { archetype });
-  return all.filter((f) => f.label === "Overview" || f.label === "Raw Value");
+  return polishReportFields(all, { archetype });
 }
 
 function buildS2Fields(
@@ -180,8 +178,7 @@ function buildS2Fields(
     field(locale, "Integration Guidance", segment.guidance),
   ].filter((f): f is ReportField => Boolean(f));
 
-  if (mode === "full") return polishReportFields(all, { archetype });
-  return all.filter((f) => f.label === "Overview");
+  return polishReportFields(all, { archetype });
 }
 
 function buildS0Fields(
@@ -199,8 +196,7 @@ function buildS0Fields(
     field(locale, "Integration Guidance", segment.guidance),
   ].filter((f): f is ReportField => Boolean(f));
 
-  if (mode === "full") return polishReportFields(all, { archetype });
-  return all.filter((f) => f.label === "Overview");
+  return polishReportFields(all, { archetype });
 }
 
 function dedupeFields(fields: ReportField[]): ReportField[] {
@@ -316,16 +312,16 @@ export function buildReportViewModel(
       code,
       title: meta.title.en,
       shortLabel: meta.shortLabel.en,
-      essence: truncateOverview(buildOverviewEssence(id, seg, locale)),
+      essence:
+        mode === "free"
+          ? buildOverviewEssence(id, seg, locale)
+          : truncateOverview(buildOverviewEssence(id, seg, locale)),
     };
   });
 
   const modules: ReportModuleViewModel[] = segments.map((id) => {
     const seg = segmentContent[id];
-    const reflection =
-      mode === "free"
-        ? ""
-        : pickLocalized(content.segmentReflections[id], locale);
+    const reflection = pickLocalized(content.segmentReflections[id], locale);
 
     const archetype = pickLocalized(seg.title, locale);
     const codeNum = segmentCardCodeNum(content, id);
@@ -338,8 +334,7 @@ export function buildReportViewModel(
       cardImageUrl: getSegmentCardImageUrl(id, codeNum),
       fields: buildModuleFields(id, seg, locale, mode, archetype, content.codes.s3Raw),
       reflectionQuestion: reflection || undefined,
-      showLocked: mode === "free",
-      lockedTeaser: mode === "free" ? pickLocalized(seg.lockedPreview, locale) : undefined,
+      showLocked: false,
     };
   });
 

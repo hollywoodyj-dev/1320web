@@ -14,6 +14,14 @@ function pickFirstLocalized(
   return "";
 }
 
+function joinEssenceParts(parts: string[]): string {
+  return parts
+    .map((part) => part.trim())
+    .filter(Boolean)
+    .map((part) => (part.endsWith(".") || part.endsWith("。") ? part : `${part}.`))
+    .join(" ");
+}
+
 /** Short preview for overview pillar cards — no codes, no template wrappers. */
 export function buildOverviewEssence(
   segmentId: SegmentId,
@@ -35,20 +43,36 @@ export function buildOverviewEssence(
       return stripS3Boilerplate(
         pickLocalized(segment.fullEssence ?? segment.freeEssence, locale),
       );
-    case "s2":
+    case "s2": {
+      const parts = [
+        pickLocalized(segment.title, locale),
+        pickLocalized(segment.relationshipPattern, locale),
+        pickLocalized(segment.karmicLoop, locale),
+        pickLocalized(segment.mirrorLesson, locale),
+      ].filter(Boolean);
+      if (parts.length >= 2) return joinEssenceParts(parts);
       return pickFirstLocalized(
         locale,
         segment.relationshipPattern,
         segment.fullEssence,
         segment.freeEssence,
       );
-    case "s0":
+    }
+    case "s0": {
+      const parts = [
+        pickLocalized(segment.title, locale),
+        pickLocalized(segment.coreIllusion, locale),
+        pickLocalized(segment.voidPower, locale),
+        pickLocalized(segment.awakeningPath, locale),
+      ].filter(Boolean);
+      if (parts.length >= 2) return joinEssenceParts(parts);
       return pickFirstLocalized(
         locale,
         segment.coreIllusion,
         segment.freeEssence,
         segment.fullEssence,
       );
+    }
     default:
       return pickLocalized(segment.freeEssence, locale);
   }

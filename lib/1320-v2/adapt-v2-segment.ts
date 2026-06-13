@@ -1,3 +1,4 @@
+import { enrichV2AwarenessEntry } from "@/lib/1320-v2/enrich-v2-awareness";
 import { bilingualField, containsCjk, fromV1Fields } from "@/lib/getLocalized";
 import type { Locale, LocalizedText, SegmentContent } from "@/lib/types/1320-content";
 import type { SoulMissionSection } from "@/lib/types/s5-soul-mission";
@@ -171,11 +172,20 @@ function baseSegment(
 ): Pick<SegmentContent, "id" | "number" | "title" | "subtitle" | "shortLabel" | "segmentCode"> {
   const labels = MODULE_LABELS[module];
   const archetype = text(str(entry, "archetype"), str(entry, "archetype_zh"));
+  const mirrorArchetype = text(str(entry, "mirror_archetype"), str(entry, "mirror_archetype_zh"));
   const vibration = text(str(entry, "vibration_archetype"), str(entry, "vibration_archetype_zh"));
   const voidArchetype = text(str(entry, "void_archetype"), str(entry, "void_archetype_zh"));
   const title =
     titleOverride ??
-    (archetype.en ? archetype : vibration.en ? vibration : voidArchetype.en ? voidArchetype : labels.title);
+    (archetype.en
+      ? archetype
+      : mirrorArchetype.en
+        ? mirrorArchetype
+        : vibration.en
+          ? vibration
+          : voidArchetype.en
+            ? voidArchetype
+            : labels.title);
 
   return {
     id: code,
@@ -195,98 +205,106 @@ export function adaptV2Segment(
 ): SegmentContent {
   if (!entry) return missingSegment(module, code);
 
-  const reflection = str(entry, "reflection_question");
-  const safeNote = str(entry, "safe_language_note");
+  const enriched = enrichV2AwarenessEntry(module, code, entry);
+
+  const reflection = str(enriched, "reflection_question");
+  const safeNote = str(enriched, "safe_language_note");
   const sections = (() => {
-    if (module === "S5") return buildS5Sections(entry);
+    if (module === "S5") return buildS5Sections(enriched);
     if (module === "S4" || module === "S6" || module === "S7" || module === "S8" || module === "S9") {
-      return buildOutputSections(entry, getV2BlockSpecs(module), module);
+      return buildOutputSections(enriched, getV2BlockSpecs(module), module);
     }
     return [];
   })();
 
-  const base = baseSegment(module, code, entry);
+  const base = baseSegment(module, code, enriched);
   const freeEssenceSource =
-    str(entry, "origin_essence") ??
-    str(entry, "mirror_essence") ??
-    str(entry, "reflective_summary") ??
-    str(entry, "vibration_essence") ??
+    str(enriched, "origin_essence") ??
+    str(enriched, "mirror_essence") ??
+    str(enriched, "reflective_summary") ??
+    str(enriched, "vibration_essence") ??
     sections[0]?.body.en;
 
   const segment: SegmentContent = {
     ...base,
-    freeEssence: text(freeEssenceSource ?? MISSING_EN, str(entry, "origin_essence_zh")),
+    freeEssence: text(freeEssenceSource ?? MISSING_EN, str(enriched, "origin_essence_zh")),
     lockedPreview: text(
       "Full report renders all approved v2 database fields for this module.",
       "完整报告将呈现此模块的全部已批准 v2 数据库字段。",
     ),
     reflectionQuestion: reflection ? text(reflection) : undefined,
     soulMissionSections: sections.length ? sections : undefined,
-    guidance: pickEnglishGuidance(entry),
-    practice: str(entry, "one_week_practice") ? text(str(entry, "one_week_practice")!) : undefined,
+    guidance: pickEnglishGuidance(enriched),
+    practice: str(enriched, "one_week_practice") ? text(str(enriched, "one_week_practice")!) : undefined,
     s3Raw: module === "S3" ? s3Raw : undefined,
     s3Code: module === "S3" ? code : undefined,
   };
 
   if (module === "S1") {
-    segment.soulTraits = mapStringArray(entry, "soul_traits", "soul_traits_zh");
-    segment.coreGifts = mapStringArray(entry, "strengths", "strengths_zh");
-    segment.shadowPatterns = mapStringArray(entry, "shadow_frequency", "shadow_frequency_zh");
-    segment.lesson = text(str(entry, "core_lesson"), str(entry, "core_lesson_zh"));
-    segment.direction = mapStringArray(entry, "mission_direction", "mission_direction_zh");
-    segment.color = text(str(entry, "symbolic_color"), str(entry, "symbolic_color_zh"));
-    segment.totem = text(str(entry, "totem"), str(entry, "totem_zh"));
-    segment.fullEssence = text(str(entry, "origin_essence"), str(entry, "origin_essence_zh"));
+    segment.soulTraits = mapStringArray(enriched, "soul_traits", "soul_traits_zh");
+    segment.coreGifts = mapStringArray(enriched, "strengths", "strengths_zh");
+    segment.shadowPatterns = mapStringArray(enriched, "shadow_frequency", "shadow_frequency_zh");
+    segment.lesson = text(str(enriched, "core_lesson"), str(enriched, "core_lesson_zh"));
+    segment.direction = mapStringArray(enriched, "mission_direction", "mission_direction_zh");
+    segment.color = text(str(enriched, "symbolic_color"), str(enriched, "symbolic_color_zh"));
+    segment.totem = text(str(enriched, "totem"), str(enriched, "totem_zh"));
+    segment.fullEssence = text(str(enriched, "origin_essence"), str(enriched, "origin_essence_zh"));
     if (!segment.guidance) {
-      segment.guidance = pickEnglishGuidance(entry);
+      segment.guidance = pickEnglishGuidance(enriched);
     }
   }
 
   if (module === "S0") {
-    segment.coreIllusion = text(str(entry, "core_illusion"), str(entry, "core_illusion_zh"));
+    segment.coreIllusion = text(str(enriched, "core_illusion"), str(enriched, "core_illusion_zh"));
     if (!segment.coreIllusion.en?.trim() && !segment.coreIllusion.zh?.trim()) {
-      segment.coreIllusion = text(str(entry, "reflective_summary"), undefined);
+      segment.coreIllusion = text(str(enriched, "reflective_summary"), undefined);
     }
-    segment.voidChallenge = text(str(entry, "void_challenge"), str(entry, "void_challenge_zh"));
-    segment.voidPower = text(str(entry, "void_power"), str(entry, "void_power_zh"));
-    segment.awakeningPath = text(str(entry, "path_of_return"), str(entry, "path_of_return_zh"));
+    segment.voidChallenge = text(str(enriched, "void_challenge"), str(enriched, "void_challenge_zh"));
+    segment.voidPower = text(str(enriched, "void_power"), str(enriched, "void_power_zh"));
+    segment.awakeningPath = text(str(enriched, "path_of_return"), str(enriched, "path_of_return_zh"));
     segment.freeEssence = text(
-      str(entry, "reflective_summary") ?? freeEssenceSource ?? MISSING_EN,
-      str(entry, "origin_essence_zh"),
+      str(enriched, "core_illusion") ??
+        str(enriched, "reflective_summary") ??
+        freeEssenceSource ??
+        MISSING_EN,
+      str(enriched, "core_illusion_zh") ?? str(enriched, "origin_essence_zh"),
     );
   }
 
   if (module === "S2") {
     segment.relationshipPattern = text(
-      str(entry, "relationship_dynamic"),
-      str(entry, "relationship_dynamic_zh"),
+      str(enriched, "relationship_dynamic"),
+      str(enriched, "relationship_dynamic_zh"),
     );
-    segment.karmicLoop = text(str(entry, "karmic_loop"), str(entry, "karmic_loop_zh"));
-    segment.mirrorLesson = text(str(entry, "lesson"), str(entry, "lesson_zh"));
-    segment.integrationPrompt = text(str(entry, "healing_path"), str(entry, "healing_path_zh"));
+    segment.karmicLoop = text(str(enriched, "karmic_loop"), str(enriched, "karmic_loop_zh"));
+    segment.mirrorLesson = text(str(enriched, "lesson"), str(enriched, "lesson_zh"));
+    segment.integrationPrompt = text(str(enriched, "healing_path"), str(enriched, "healing_path_zh"));
     segment.freeEssence = text(
-      str(entry, "mirror_essence") ?? str(entry, "reflective_summary") ?? freeEssenceSource ?? MISSING_EN,
-      str(entry, "mirror_essence_zh"),
+      str(enriched, "mirror_essence") ?? str(enriched, "reflective_summary") ?? freeEssenceSource ?? MISSING_EN,
+      str(enriched, "mirror_essence_zh"),
     );
     segment.fullEssence = segment.freeEssence;
+    if (!segment.guidance) {
+      segment.guidance = pickEnglishGuidance(enriched);
+    }
   }
 
   if (module === "S3") {
-    segment.expressionPattern = text(str(entry, "expression_style"), str(entry, "expression_style_zh"));
-    segment.growthEdge = text(str(entry, "integration_key"), str(entry, "integration_key_zh"));
-    segment.fullEssence = text(str(entry, "vibration_essence"), str(entry, "vibration_essence_zh"));
+    segment.expressionPattern = text(str(enriched, "expression_style"), str(enriched, "expression_style_zh"));
+    segment.growthEdge = text(str(enriched, "integration_key"), str(enriched, "integration_key_zh"));
+    segment.fullEssence = text(str(enriched, "vibration_essence"), str(enriched, "vibration_essence_zh"));
     if (!segment.guidance) {
-      segment.guidance = pickEnglishGuidance(entry);
+      segment.guidance = pickEnglishGuidance(enriched);
     }
-    segment.integrationPrompt = text(str(entry, "one_week_practice"), str(entry, "one_week_practice_zh"));
+    segment.integrationPrompt = text(str(enriched, "one_week_practice"), str(enriched, "one_week_practice_zh"));
   }
 
   if (module === "S4") {
-    segment.fullEssence = text(str(entry, "reflective_summary"), str(entry, "reflective_summary_zh"));
+    segment.fullEssence = text(str(enriched, "reflective_summary"), str(enriched, "reflective_summary_zh"));
   }
 
-  if (safeNote) {
-    segment.integrationPrompt = text(safeNote, str(entry, "safe_language_note_zh"));
+  if (safeNote && module !== "S2" && module !== "S0") {
+    segment.integrationPrompt = text(safeNote, str(enriched, "safe_language_note_zh"));
   }
 
   return segment;

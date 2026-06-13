@@ -76,7 +76,8 @@ function containsCjk(text: string): boolean {
   return /[\u3400-\u9fff]/.test(text);
 }
 
-const s3Guidance = t(full.s3Content!.guidance, "en");
+assert(full.s3Content!.guidance !== undefined, "S3 guidance required");
+const s3Guidance = t(full.s3Content!.guidance!, "en");
 assert(s3Guidance.length > 20, "S3 EN wisewave guidance should be present");
 assert(!containsCjk(s3Guidance), `S3 EN guidance should be English, got: ${s3Guidance.slice(0, 40)}`);
 

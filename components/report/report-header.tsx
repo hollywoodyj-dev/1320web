@@ -53,7 +53,6 @@ export function ReportHeader({ title, subtitle, codeString, fictionBanner }: Rep
               className="report-header-ring-image"
               priority
             />
-            <span className="report-header-ring-cover" aria-hidden="true" />
           </div>
         </div>
       </div>

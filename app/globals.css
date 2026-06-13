@@ -3767,21 +3767,15 @@ body:has(.page-shell--full-report) {
   position: absolute;
   inset: 12%;
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(231, 181, 87, 0.48),
-    rgba(184, 119, 32, 0.14) 42%,
-    transparent 72%
-  );
+  background: radial-gradient(circle, rgba(241, 196, 104, 0.42), rgba(241, 196, 104, 0.08) 42%, transparent 72%);
 }
 
 .report-header-ring-art {
   position: absolute;
   inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  filter: drop-shadow(0 0 28px rgba(231, 181, 87, 0.34));
+  display: grid;
+  place-items: center;
+  filter: drop-shadow(0 0 26px rgba(241, 196, 104, 0.28));
 }
 
 .report-header-ring-image {
@@ -3789,28 +3783,6 @@ body:has(.page-shell--full-report) {
   height: 100%;
   object-fit: contain;
   background: transparent;
-  filter: sepia(0.38) saturate(1.5) hue-rotate(6deg) brightness(1.06);
-}
-
-/* Gold tint overlay — matches .text-gold-gradient title */
-.report-header-ring-cover {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  border-radius: 50%;
-  background: linear-gradient(180deg, #f7dfad 0%, #e7b557 34%, #b87720 72%, #f0d18d 100%);
-  mix-blend-mode: color;
-  opacity: 0.78;
-}
-
-.report-header-ring-cover::after {
-  content: "";
-  position: absolute;
-  inset: 14%;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(247, 223, 173, 0.35), transparent 70%);
-  mix-blend-mode: soft-light;
-  opacity: 0.9;
 }
 
 .report-header-subtitle {

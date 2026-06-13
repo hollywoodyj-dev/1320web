@@ -1,0 +1,18 @@
+{
+  "version": "2.0",
+  "importedAt": "2026-06-14",
+  "source": "1320 内容资产数据库-更新版（S0-S9)",
+  "files": {
+    "S0": "s0-void-gate.json",
+    "S1": "s1-soul-origin.json",
+    "S2": "s2-soul-mirror.json",
+    "S3": "s3-soul-vibration.json",
+    "S3_mapping": "s3-vibration-mapping.json",
+    "S4": "s4-core-shadow.json",
+    "S5": "s5-soul-mission.json",
+    "S6": "s6-value-receiving.json",
+    "S7": "s7-soul-sovereignty.json",
+    "S8": "s8-soul-contribution.json",
+    "S9": "s9-return-to-source.json"
+  }
+}

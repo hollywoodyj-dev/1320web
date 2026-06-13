@@ -48,7 +48,7 @@ export default async function ResultPage({ searchParams }: { searchParams: Promi
       s0: code.s0,
       locale: "en",
     },
-    { birthDate: birthDateLabel },
+    { birthDate: birthDateLabel, reportTier: "free" },
   );
 
   const reportMode = await resolveResultReportMode(content.combinationSignature);

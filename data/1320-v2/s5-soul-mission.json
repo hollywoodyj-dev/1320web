@@ -1,0 +1,1154 @@
+{
+  "system": "1320 Soul Origin Code System",
+  "trademark_style": "1320 Soul Origin Code System™",
+  "module": {
+    "code": "S5",
+    "name": "Soul Mission",
+    "zh_name": "灵魂使命",
+    "layer": "Transformation Layer",
+    "layer_zh": "转化层",
+    "version": "v4",
+    "status": "current_architecture"
+  },
+  "positioning": {
+    "description": "S5 Soul Mission is part of the current S0–S9 architecture. It is an independently calculated symbolic self-reflection code that shows how Soul Origin, Soul Mirror, and Soul Vibration may mature into conscious direction, grounded expression, and meaningful action.",
+    "zh_description": "S5 灵魂使命属于当前 S0–S9 架构，是一个独立计算出的象征性自我觉察编号。它用于显示灵魂本源、灵魂镜像与灵魂振动如何成熟为有意识的方向、落地表达与生命行动。",
+    "not_for": [
+      "future prediction",
+      "career assignment",
+      "fixed destiny",
+      "diagnosis",
+      "fortune-telling",
+      "authority over user decisions"
+    ]
+  },
+  "architecture_context": {
+    "awareness_layer": [
+      "S0 Void Gate",
+      "S1 Soul Origin",
+      "S2 Soul Mirror",
+      "S3 Soul Vibration",
+      "S4 Core Shadow Pattern"
+    ],
+    "transformation_layer": [
+      "S5 Soul Mission",
+      "S6 Value & Receiving",
+      "S7 Soul Sovereignty"
+    ],
+    "integration_layer": [
+      "S8 Soul Contribution",
+      "S9 Return to Source"
+    ],
+    "product_structure": {
+      "free_detailed_report": "S0–S4",
+      "full_report": "S0–S7",
+      "advanced_integration": "S0–S9"
+    }
+  },
+  "calculation": {
+    "formula": "S5 = (S1 + S2 + S3) mod 44",
+    "input_dependencies": [
+      "S1",
+      "S2",
+      "S3"
+    ],
+    "range": "1–44",
+    "zero_rule": "If the modulo result is 0, convert it to 44.",
+    "format": "S5-01 through S5-44",
+    "example": {
+      "S1": 12,
+      "S2": 27,
+      "S3": 8,
+      "raw_sum": 47,
+      "mod_44": 3,
+      "output": "S5-03"
+    }
+  },
+  "legacy_reconciliation": {
+    "previous_s5_logic": "Earlier archived S5 materials described S5 as a Soul Mission report generator based on S1, S2, S3, and S0. It used sections S5-0 through S5-7 to compose a full mission narrative.",
+    "current_s5_logic": "In the current product architecture, S5 is an independently calculated Soul Mission code using S5 = (S1 + S2 + S3) mod 44.",
+    "how_to_use_legacy_material": "Do not use the legacy generator as the calculation method. Preserve it as a report composition framework. The calculated S5 code provides the central Mission Essence, while the legacy S5-0 to S5-7 structure can guide how NOVA assembles narrative sections in the Full Report.",
+    "legacy_report_sections_preserved_as_template": [
+      "S5-0 Soul Mission Overview",
+      "S5-1 Primary Mission from S1",
+      "S5-2 Mirror Task from S2",
+      "S5-3 Vibrational Path from S3",
+      "S5-4 Void Gate Challenge from S0",
+      "S5-5 Mission Roadmap",
+      "S5-6 Breakthrough Point",
+      "S5-7 Wisewave Guidance"
+    ]
+  },
+  "interpretation_principles": [
+    "Interpret S5 as a symbolic reflective mission archetype, not a fixed fate.",
+    "Use S0–S4 as context when generating a full user-facing report.",
+    "Do not turn the S5 code into a profession list or a deterministic life instruction.",
+    "Use language of invitation, reflection, maturation, choice, and grounded expression.",
+    "Avoid mystification, spiritual hierarchy, certainty claims, and dependency-inducing language.",
+    "When generating a report, preserve user autonomy and present possibilities rather than commands."
+  ],
+  "content_schema": {
+    "code": "S5-01 through S5-44",
+    "archetype": "English archetype name",
+    "archetype_zh": "Chinese archetype name",
+    "output_blocks": {
+      "mission_essence": "Mission Essence / 使命本质",
+      "what_your_soul_is_learning_to_express": "What Your Soul Is Learning to Express / 灵魂正在学习表达什么",
+      "how_your_patterns_become_mission": "How Your Patterns Become Mission / 你的模式如何转化为使命",
+      "natural_mission_fields": "Natural Mission Fields / 自然使命场域",
+      "shadow_distortion_of_this_mission": "Shadow Distortion of This Mission / 使命的阴影扭曲",
+      "mature_expression": "Mature Expression / 成熟表达方式",
+      "wisewave_reflection": "Wisewave Reflection / 玄微引导语"
+    },
+    "rendering_requirement": "NOVA must render S5 using these seven blocks in order. Core block content must come from this database."
+  },
+  "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+  "revision_note": "v4 fully prewrites all seven S5 user-facing output blocks for S5-01 through S5-44. NOVA should retrieve these fields from the database and should not generate the core S5 interpretation from scratch.",
+  "s5_user_facing_output_blocks": [
+    {
+      "order": 1,
+      "key": "mission_essence",
+      "title": "Mission Essence",
+      "zh_title": "使命本质",
+      "nova_usage": "Use this as the opening interpretive statement for the calculated S5 code."
+    },
+    {
+      "order": 2,
+      "key": "soul_expression",
+      "title": "What Your Soul Is Learning to Express",
+      "zh_title": "灵魂正在学习表达什么",
+      "nova_usage": "Use this to describe the core quality the soul is learning to express through choices, relationships, work, and presence."
+    },
+    {
+      "order": 3,
+      "key": "patterns_into_mission",
+      "title": "How Your Patterns Become Mission",
+      "zh_title": "你的模式如何转化为使命",
+      "nova_usage": "Use this to connect S0-S4 awareness layers with the calculated S5 mission archetype."
+    },
+    {
+      "order": 4,
+      "key": "natural_mission_fields",
+      "title": "Natural Mission Fields",
+      "zh_title": "自然使命场域",
+      "nova_usage": "Use these as non-prescriptive examples of possible life fields where the mission may express."
+    },
+    {
+      "order": 5,
+      "key": "shadow_distortion_of_this_mission",
+      "title": "Shadow Distortion of This Mission",
+      "zh_title": "使命的阴影扭曲",
+      "nova_usage": "Use this to describe how the mission may distort under fear, proving, avoidance, control, or unconscious patterns."
+    },
+    {
+      "order": 6,
+      "key": "mature_expression",
+      "title": "Mature Expression",
+      "zh_title": "成熟表达方式",
+      "nova_usage": "Use this to describe how the mission becomes grounded, clear, and non-performative when integrated."
+    },
+    {
+      "order": 7,
+      "key": "wisewave_reflection",
+      "title": "Wisewave Reflection",
+      "zh_title": "玄微引导语",
+      "nova_usage": "Use this as the closing reflection for the S5 section."
+    }
+  ],
+  "field_rendering_rules": {
+    "general_rule": "For each calculated S5 code, NOVA must retrieve all seven output blocks from this content database.",
+    "do_not_generate_from_scratch": [
+      "mission_essence",
+      "what_your_soul_is_learning_to_express",
+      "how_your_patterns_become_mission",
+      "shadow_distortion_of_this_mission",
+      "mature_expression",
+      "wisewave_reflection"
+    ],
+    "allowed_nova_actions": [
+      "add one short contextual bridge sentence based on S0-S4",
+      "format the seven blocks for the report UI",
+      "translate between English and Chinese if required",
+      "lightly adapt pronouns without changing meaning"
+    ],
+    "protected_field_rule": {
+      "field": "how_your_patterns_become_mission",
+      "source": "content_database",
+      "instruction": "Do not generate this field from scratch. Retrieve the prewritten content for the calculated S5 code. NOVA may add one short contextual bridge sentence based on S0-S4, but the main interpretation must come from the database.",
+      "reason": "This field carries the core transformation logic of S5 and must remain stable, non-deterministic, and aligned with the 1320 framework."
+    }
+  },
+  "entries": [
+    {
+      "code": "S5-01",
+      "archetype": "The Mission of Initiation",
+      "archetype_zh": "启始使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to begin what has been waiting for movement. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is starting before certainty.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be the impulse to move first, solve quickly, or begin again whenever life feels stagnant. When unconscious, this can become impatience or pressure. When integrated, the same pattern becomes the mission of initiating movement with awareness. You learn to turn urgency into clean beginnings, and personal drive into an invitation that helps others take their first honest step.",
+        "natural_mission_fields": [
+          "leadership",
+          "entrepreneurship",
+          "launches",
+          "pioneering ideas",
+          "new communities"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become impulsiveness that confuses speed with alignment.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-02",
+      "archetype": "The Mission of Connection",
+      "archetype_zh": "连接使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to create bridges where separation has become normal. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is listening, harmonizing, and restoring relational flow.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be sensing the needs, tensions, and emotional distance between people before anyone names them. When unconscious, this can become over-adapting or losing yourself inside connection. When integrated, the same sensitivity becomes a mission of restoring relational flow without abandoning your own center. You learn to turn the need for harmony into the ability to build bridges that still honor truth.",
+        "natural_mission_fields": [
+          "relationship work",
+          "mediation",
+          "community care",
+          "partnerships",
+          "facilitation"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become over-adapting until the self disappears.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-03",
+      "archetype": "The Mission of Vision",
+      "archetype_zh": "远见使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to translate subtle insight into direction. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is seeing patterns before they become visible.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be seeing possibilities, symbols, or future directions before they are practical enough for others to understand. When unconscious, this can become overthinking, isolation, or living ahead of the present. When integrated, the same vision becomes a mission of translating subtle perception into usable direction. You learn to bring what you see far away into grounded choices that can help others orient themselves.",
+        "natural_mission_fields": [
+          "strategy",
+          "innovation",
+          "creative direction",
+          "research",
+          "future-oriented work"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become staying in possibility without grounding it.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-04",
+      "archetype": "The Mission of Structure",
+      "archetype_zh": "结构使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to give stable form to what matters. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is building systems, rhythms, and trustworthy foundations.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be trying to create stability whenever life feels uncertain. When unconscious, this can become rigidity, over-responsibility, or fear of change. When integrated, the same need for structure becomes a mission of building containers where growth can become sustainable. You learn to turn the desire for safety into systems, rhythms, and foundations that support life rather than restrict it.",
+        "natural_mission_fields": [
+          "operations",
+          "management",
+          "education",
+          "finance",
+          "long-term projects"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become becoming rigid or over-responsible.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-05",
+      "archetype": "The Mission of Activation",
+      "archetype_zh": "激活使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to awaken movement, courage, and latent potential. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is energizing people and spaces that have become stagnant.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be entering spaces and immediately sensing what is stuck, asleep, or ready to move. When unconscious, this can become pushing, intensity, or trying to awaken people before they are ready. When integrated, the same activation becomes a mission of catalyzing change with steadiness. You learn to turn pressure into presence, and your fire becomes a force that lights rather than burns.",
+        "natural_mission_fields": [
+          "coaching",
+          "teaching",
+          "leadership",
+          "public speaking",
+          "transformation work"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become pushing others before they are ready.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-06",
+      "archetype": "The Mission of Healing Presence",
+      "archetype_zh": "疗愈临在使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to restore emotional safety and softness. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is holding space with warmth and emotional intelligence.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be feeling the wounds, emotional needs, or unspoken grief of others. When unconscious, this can become absorbing pain or defining yourself through being needed. When integrated, the same sensitivity becomes a mission of healing presence. You learn to turn caretaking into grounded compassion, allowing your warmth to create repair without making you responsible for everyone’s healing.",
+        "natural_mission_fields": [
+          "healing arts",
+          "counseling",
+          "care work",
+          "emotional education",
+          "family systems"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become absorbing pain as proof of love.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-07",
+      "archetype": "The Mission of Courage",
+      "archetype_zh": "勇气使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to embody strength without losing tenderness. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is standing firm in difficult moments.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be meeting challenge with strength, endurance, or the instinct to protect. When unconscious, this can become defensiveness, constant struggle, or the belief that softness is unsafe. When integrated, the same force becomes a mission of embodied courage. You learn to turn inner battle into clear action, showing others that strength can protect life without hardening the heart.",
+        "natural_mission_fields": [
+          "advocacy",
+          "leadership",
+          "crisis support",
+          "embodied discipline",
+          "protection work"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become turning life into a battlefield.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-08",
+      "archetype": "The Mission of Nurturing",
+      "archetype_zh": "滋养使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to make growth feel held, human, and sustainable. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is supporting life through devotion and consistency.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be giving, holding, feeding, supporting, or becoming the emotional ground for others. When unconscious, this can become self-sacrifice or quiet resentment. When integrated, the same devotion becomes a mission of sustainable nurturing. You learn to turn over-giving into life-giving care, where your support includes your own needs and teaches others a healthier form of love.",
+        "natural_mission_fields": [
+          "family care",
+          "team culture",
+          "community building",
+          "hospitality",
+          "education"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become self-sacrifice disguised as love.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-09",
+      "archetype": "The Mission of Exploration",
+      "archetype_zh": "拓界使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to expand the field of what is possible. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is learning through experience and opening new paths.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be seeking new experiences whenever life feels too narrow. When unconscious, this can become restlessness or avoidance of commitment. When integrated, the same movement becomes a mission of exploration that expands consciousness. You learn to turn wandering into wisdom, and your encounters with the unknown become pathways that help others imagine a wider life.",
+        "natural_mission_fields": [
+          "travel",
+          "education",
+          "cultural work",
+          "experimentation",
+          "interdisciplinary creation"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become escaping depth through constant movement.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-10",
+      "archetype": "The Mission of Guardianship",
+      "archetype_zh": "守护使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to protect what is sacred without controlling it. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is creating safety, boundaries, and trust.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be scanning for risk, imbalance, or places where protection is needed. When unconscious, this can become control, suspicion, or over-guarding. When integrated, the same vigilance becomes a mission of guardianship. You learn to turn fear of loss into wise boundaries, creating spaces where trust, responsibility, and safety can coexist.",
+        "natural_mission_fields": [
+          "stewardship",
+          "ethics",
+          "operations",
+          "security",
+          "resource protection",
+          "mentorship"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become confusing care with control.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-11",
+      "archetype": "The Mission of Future Design",
+      "archetype_zh": "未来设计使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to help people orient toward a larger horizon. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is holding long-range vision and coherent direction.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be carrying a large future vision before the present is ready to hold it. When unconscious, this can become frustration with details or distance from immediate reality. When integrated, the same long-range sight becomes a mission of future design. You learn to turn abstract vision into coherent direction, helping others move toward what is possible without bypassing what is here.",
+        "natural_mission_fields": [
+          "strategy",
+          "visionary leadership",
+          "architecture of ideas",
+          "social innovation"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become living too far ahead of the present.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-12",
+      "archetype": "The Mission of Deep Empathy",
+      "archetype_zh": "深度共感使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to turn sensitivity into clear service. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is feeling what is unspoken and naming it gently.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be feeling emotional atmospheres so deeply that other people’s states enter your own body. When unconscious, this can become overwhelm or emotional absorption. When integrated, the same empathy becomes a mission of deep listening. You learn to turn sensitivity into discernment, creating spaces where what is unspoken can be gently named without losing yourself.",
+        "natural_mission_fields": [
+          "therapeutic work",
+          "art",
+          "listening spaces",
+          "emotional intelligence",
+          "support roles"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become losing boundaries inside others’ emotions.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-13",
+      "archetype": "The Mission of Liberation",
+      "archetype_zh": "解放使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to break old forms so truer ones can emerge. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is questioning inherited systems and creating alternatives.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be resisting inherited rules, roles, or systems that feel false. When unconscious, this can become opposition for its own sake or identity built around rebellion. When integrated, the same resistance becomes a mission of liberation. You learn to turn refusal into creation, showing that freedom is not merely leaving old structures but building truer ones.",
+        "natural_mission_fields": [
+          "reform",
+          "activism",
+          "entrepreneurship",
+          "disruptive design",
+          "cultural change"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become rebelling as identity instead of freedom.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-14",
+      "archetype": "The Mission of Transmission",
+      "archetype_zh": "传导使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to make wisdom understandable and usable. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is teaching, translating, and simplifying complexity.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be collecting insight, language, and understanding in order to make sense of life. When unconscious, this can become proving through knowledge or teaching before embodying. When integrated, the same impulse becomes a mission of transmission. You learn to turn information into wisdom that can be received, lived, and passed on with humility.",
+        "natural_mission_fields": [
+          "teaching",
+          "writing",
+          "content",
+          "consulting",
+          "training",
+          "spiritual education"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become proving worth through knowledge.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-15",
+      "archetype": "The Mission of Embodiment",
+      "archetype_zh": "入世使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to bring inner awareness into ordinary life. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is grounding insight through behavior, body, and practice.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be sensing truth in spiritual, emotional, or symbolic ways but needing to bring it into the body. When unconscious, this can become insight without integration. When integrated, the same awareness becomes a mission of embodiment. You learn to turn knowing into practice, so your life becomes the place where higher understanding becomes real.",
+        "natural_mission_fields": [
+          "somatic work",
+          "grounded spirituality",
+          "coaching",
+          "daily practice design"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become using spirituality to avoid practical reality.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-16",
+      "archetype": "The Mission of Harmony",
+      "archetype_zh": "和谐使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to restore balance without erasing truth. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is integrating different needs, tones, and perspectives.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be absorbing tension and trying to keep the peace. When unconscious, this can become self-silencing or maintaining harmony at the cost of truth. When integrated, the same gift becomes a mission of real harmony. You learn to turn conflict avoidance into relational intelligence, helping different needs meet without erasing what is true.",
+        "natural_mission_fields": [
+          "facilitation",
+          "negotiation",
+          "design",
+          "organizational culture",
+          "relational repair"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become avoiding conflict to preserve peace.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-17",
+      "archetype": "The Mission of Building Worlds",
+      "archetype_zh": "构筑使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to turn abstract purpose into living systems. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is planning, designing, and implementing durable structures.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be seeing what could be built and feeling responsible for making it work. When unconscious, this can become over-planning, perfectionism, or control of every detail. When integrated, the same builder energy becomes a mission of world-building. You learn to turn structure into a living container where ideas, people, and purpose can take form.",
+        "natural_mission_fields": [
+          "product creation",
+          "business building",
+          "systems design",
+          "architecture",
+          "community platforms"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become over-planning until life cannot enter.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-18",
+      "archetype": "The Mission of Transformation",
+      "archetype_zh": "转化使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to guide energy through endings, change, and renewal. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is facing shadow without losing the thread of life.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be moving through endings, shadows, or intense emotional transformations. When unconscious, this can become identifying with pain or believing growth must come through crisis. When integrated, the same depth becomes a mission of transformation. You learn to turn rupture into renewal, helping yourself and others cross difficult passages without worshiping suffering.",
+        "natural_mission_fields": [
+          "shadow work",
+          "change leadership",
+          "grief work",
+          "reinvention",
+          "healing containers"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become believing pain is required for growth.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-19",
+      "archetype": "The Mission of Voice",
+      "archetype_zh": "声音使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to speak what brings clarity, truth, and movement. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is using language as a bridge between inner and outer worlds.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be noticing what is unsaid and feeling pressure around whether to speak. When unconscious, this can become over-explaining, people-pleasing, or withholding truth until it becomes tension. When integrated, the same gift becomes a mission of voice. You learn to turn expression into a bridge, speaking clearly enough to reveal truth without using language as armor.",
+        "natural_mission_fields": [
+          "communication",
+          "writing",
+          "media",
+          "speaking",
+          "facilitation",
+          "education"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become performing clarity while hiding real feeling.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-20",
+      "archetype": "The Mission of Heart Wisdom",
+      "archetype_zh": "心智使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to let emotional truth become mature guidance. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is choosing from the heart without abandoning discernment.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be making choices through feeling, care, and emotional resonance. When unconscious, this can become emotional over-identification or losing discernment in the desire to love. When integrated, the same heart intelligence becomes a mission of heart wisdom. You learn to turn feeling into guidance that remains kind, clear, and self-respecting.",
+        "natural_mission_fields": [
+          "relationship work",
+          "healing",
+          "community",
+          "creative care",
+          "emotional leadership"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become confusing emotional intensity with truth.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-21",
+      "archetype": "The Mission of Integration",
+      "archetype_zh": "整合使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to gather scattered parts into coherent wholeness. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is connecting systems, meanings, and people into order.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be collecting many perspectives and trying to make them whole. When unconscious, this can become carrying too much or waiting until every piece is understood. When integrated, the same pattern becomes a mission of integration. You learn to turn complexity into clarity, helping scattered parts find order without making yourself responsible for everything.",
+        "natural_mission_fields": [
+          "systems thinking",
+          "strategy",
+          "operations",
+          "integrative coaching",
+          "research synthesis"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become carrying too much in the name of completion.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-22",
+      "archetype": "The Mission of Gentle Power",
+      "archetype_zh": "柔力使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to reveal strength through softness and presence. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is influencing through calm steadiness.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be hiding strength behind softness or avoiding visibility because your influence feels too much. When unconscious, this can become over-yielding or shrinking your presence. When integrated, the same quiet force becomes a mission of gentle power. You learn to turn softness into authority, showing that influence can be calm, relational, and deeply steady.",
+        "natural_mission_fields": [
+          "education",
+          "healing",
+          "culture shaping",
+          "leadership by presence",
+          "care-based systems"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become hiding power behind excessive humility.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-23",
+      "archetype": "The Mission of Discernment",
+      "archetype_zh": "辨识使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to see clearly through complexity. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is analysis joined with intuitive accuracy.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be analyzing motives, systems, and hidden causes in order to feel safe. When unconscious, this can become overthinking or using logic to avoid vulnerability. When integrated, the same clarity becomes a mission of discernment. You learn to turn analysis into wisdom, helping yourself and others see what is true without losing contact with the heart.",
+        "natural_mission_fields": [
+          "research",
+          "psychology",
+          "data",
+          "strategy",
+          "consulting",
+          "diagnostic frameworks"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become using analysis to avoid vulnerability.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-24",
+      "archetype": "The Mission of Radiance",
+      "archetype_zh": "光耀使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to remind people of hope without performing light. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is naturally uplifting the field through authentic expression.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be being seen, noticed, or placed in positions where your energy affects the room. When unconscious, this can become performance, image-maintenance, or fear of dimming. When integrated, the same radiance becomes a mission of authentic illumination. You learn to turn visibility into presence, allowing your light to uplift without needing constant approval.",
+        "natural_mission_fields": [
+          "public work",
+          "creative leadership",
+          "inspiration",
+          "community visibility",
+          "brand presence"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become needing attention in order to feel real.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-25",
+      "archetype": "The Mission of Flow",
+      "archetype_zh": "流动使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to show that change can be intelligent and alive. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is adapting without losing inner center.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be moving with change, adapting quickly, and resisting fixed forms. When unconscious, this can become drifting, avoidance, or lack of grounding. When integrated, the same fluidity becomes a mission of flow. You learn to turn change into creative movement, carrying freedom without losing center.",
+        "natural_mission_fields": [
+          "creative work",
+          "travel",
+          "flexible business",
+          "transition support",
+          "innovation spaces"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become using freedom to avoid commitment.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-26",
+      "archetype": "The Mission of Possibility",
+      "archetype_zh": "可能性使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to open windows into futures not yet named. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is receiving inspiration and turning it into direction.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be receiving sudden inspiration and sensing futures that are not yet visible. When unconscious, this can become scattered possibility or disappointment when reality is slower than vision. When integrated, the same inspiration becomes a mission of possibility. You learn to turn future signals into grounded direction, giving form to what is emerging without abandoning the present.",
+        "natural_mission_fields": [
+          "visioning",
+          "innovation",
+          "future studies",
+          "creative strategy",
+          "spiritual product design"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become becoming disconnected from present steps.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-27",
+      "archetype": "The Mission of Rebuilding",
+      "archetype_zh": "重建使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to help life rise again after collapse. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is turning endings into wiser foundations.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be experiencing collapse, endings, or resets that ask you to rebuild. When unconscious, this can become attachment to difficulty or the belief that struggle is required for growth. When integrated, the same resilience becomes a mission of rebuilding. You learn to turn what has fallen apart into wiser foundations, showing that renewal can be gentle as well as strong.",
+        "natural_mission_fields": [
+          "recovery work",
+          "trauma-informed spaces",
+          "rebuilding projects",
+          "mentorship",
+          "reinvention"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become identifying too strongly with struggle.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-28",
+      "archetype": "The Mission of Sacred Responsibility",
+      "archetype_zh": "神圣责任使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to hold power with maturity and care. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is being entrusted with influence, resources, or decisions.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be placed near responsibility, influence, resources, or decisions that affect others. When unconscious, this can become pressure, control, or fear of being wrong. When integrated, the same weight becomes a mission of sacred responsibility. You learn to turn responsibility into stewardship, holding power with clarity rather than ego or fear.",
+        "natural_mission_fields": [
+          "leadership",
+          "stewardship",
+          "governance",
+          "finance",
+          "team direction",
+          "ethical authority"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become carrying responsibility as burden or superiority.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-29",
+      "archetype": "The Mission of Inner Freedom",
+      "archetype_zh": "内在自由使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to live from inner permission rather than external approval. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is choosing truth even when belonging feels uncertain.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be feeling the tension between belonging and inner freedom. When unconscious, this can become leaving too quickly, isolating, or rejecting support. When integrated, the same longing becomes a mission of inner freedom. You learn to turn the fear of confinement into self-trust, showing that freedom can include connection without self-betrayal.",
+        "natural_mission_fields": [
+          "creative independence",
+          "entrepreneurship",
+          "personal liberation work",
+          "identity healing"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become confusing freedom with avoidance.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-30",
+      "archetype": "The Mission of Devotion",
+      "archetype_zh": "奉献使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to commit deeply without self-erasure. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is turning love into consistent, grounded action.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be loving through loyalty, consistency, and sustained care. When unconscious, this can become duty, endurance, or giving beyond truth. When integrated, the same devotion becomes a mission of grounded love. You learn to turn obligation into chosen commitment, making devotion a living force rather than a silent burden.",
+        "natural_mission_fields": [
+          "service",
+          "family systems",
+          "healing",
+          "craft mastery",
+          "long-term community work"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become giving until resentment forms.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-31",
+      "archetype": "The Mission of Truth-Seeking",
+      "archetype_zh": "求真使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to follow truth beyond comfort, image, or convention. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is asking better questions and refining perception.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be asking why, searching for truth, and refusing easy answers. When unconscious, this can become skepticism, distance, or never resting in what is already clear. When integrated, the same inquiry becomes a mission of truth-seeking. You learn to turn questioning into purification, helping perception become cleaner rather than colder.",
+        "natural_mission_fields": [
+          "research",
+          "philosophy",
+          "investigative work",
+          "teaching",
+          "inner inquiry"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become becoming critical, distant, or never satisfied.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-32",
+      "archetype": "The Mission of Sacred Communication",
+      "archetype_zh": "神圣沟通使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to bring coherence to what has been unspoken. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is naming truth in a way that can be received.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be carrying truths that need careful language. When unconscious, this can become fear of speaking, over-polishing, or using words to manage others. When integrated, the same gift becomes a mission of sacred communication. You learn to turn truth into language that is clear, timely, and human enough to be received.",
+        "natural_mission_fields": [
+          "writing",
+          "speaking",
+          "mediation",
+          "relational repair",
+          "storytelling",
+          "facilitation"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become withholding truth until pressure erupts.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-33",
+      "archetype": "The Mission of Compassionate Leadership",
+      "archetype_zh": "慈悲领导使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to lead through care, clarity, and responsibility. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is holding vision while honoring human reality.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be holding both vision and care for people’s limitations. When unconscious, this can become over-responsibility, rescuing, or leadership that carries too much. When integrated, the same capacity becomes a mission of compassionate leadership. You learn to turn care into direction, guiding others without taking away their agency.",
+        "natural_mission_fields": [
+          "leadership",
+          "education",
+          "nonprofits",
+          "healing businesses",
+          "community stewardship"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become rescuing people instead of empowering them.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-34",
+      "archetype": "The Mission of Creative Order",
+      "archetype_zh": "创造秩序使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to organize creative energy into usable form. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is turning inspiration into craft, method, and beauty.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be receiving creative ideas but needing form, rhythm, and craft to make them real. When unconscious, this can become unfinished beauty or frustration with process. When integrated, the same creativity becomes a mission of creative order. You learn to turn inspiration into method, allowing beauty to become usable, repeatable, and shared.",
+        "natural_mission_fields": [
+          "design",
+          "art direction",
+          "product creation",
+          "systems for creatives",
+          "publishing"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become losing vitality through excessive control.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-35",
+      "archetype": "The Mission of Threshold Guidance",
+      "archetype_zh": "门槛引导使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to support people at turning points. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is recognizing moments when an old identity is ending.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be sensing when an identity, relationship, role, or season is ending. When unconscious, this can become fear of transition or attachment to threshold states. When integrated, the same perception becomes a mission of threshold guidance. You learn to turn endings into passageways, helping yourself and others cross change with dignity.",
+        "natural_mission_fields": [
+          "rites of passage",
+          "coaching",
+          "grief support",
+          "career transitions",
+          "spiritual mentoring"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become rushing transformation or dramatizing change.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-36",
+      "archetype": "The Mission of Embodied Care",
+      "archetype_zh": "身体化关怀使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to make care practical, grounded, and sustainable. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is bringing attention to body, rhythm, nourishment, and daily life.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be noticing how body, rhythm, environment, and daily care shape emotional life. When unconscious, this can become caretaking, body-neglect, or over-focusing on others’ needs. When integrated, the same awareness becomes a mission of embodied care. You learn to turn attention to the ordinary into healing structure, where life becomes kinder through rhythm.",
+        "natural_mission_fields": [
+          "somatics",
+          "wellness",
+          "domestic systems",
+          "health education",
+          "care infrastructure"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become caretaking while ignoring personal needs.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-37",
+      "archetype": "The Mission of Sovereign Creation",
+      "archetype_zh": "主权创造使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to create from inner authority rather than permission. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is expressing original work without waiting to be chosen.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be carrying original ideas while waiting for permission, recognition, or the right audience. When unconscious, this can become delay, comparison, or frustration at not being chosen. When integrated, the same originality becomes a mission of sovereign creation. You learn to turn self-doubt into authorship, creating from inner authority rather than external selection.",
+        "natural_mission_fields": [
+          "art",
+          "entrepreneurship",
+          "thought leadership",
+          "independent platforms",
+          "innovation"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become isolating or refusing useful support.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-38",
+      "archetype": "The Mission of Collective Healing",
+      "archetype_zh": "集体疗愈使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to help groups metabolize what individuals cannot hold alone. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is sensing shared pain and creating safe containers.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be sensing collective pain, family patterns, or group emotional fields. When unconscious, this can become carrying what belongs to many or feeling responsible for the whole atmosphere. When integrated, the same perception becomes a mission of collective healing. You learn to turn shared pain into safe containers, where healing happens through responsibility, not absorption.",
+        "natural_mission_fields": [
+          "group facilitation",
+          "community healing",
+          "culture work",
+          "organizational repair"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become absorbing collective heaviness as personal duty.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-39",
+      "archetype": "The Mission of Joyful Expansion",
+      "archetype_zh": "喜悦扩展使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to restore aliveness, play, and possibility. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is expanding through joy, curiosity, and creative courage.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be expanding through joy, play, learning, and new experiences. When unconscious, this can become distraction or avoiding depth through positivity. When integrated, the same lightness becomes a mission of joyful expansion. You learn to turn joy into wisdom, showing that growth does not always require heaviness to be real.",
+        "natural_mission_fields": [
+          "education",
+          "creativity",
+          "entertainment",
+          "travel",
+          "youth work",
+          "experiential learning"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become avoiding seriousness or depth.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-40",
+      "archetype": "The Mission of Quiet Mastery",
+      "archetype_zh": "静默精通使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to embody depth without needing display. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is refining skill, wisdom, and presence over time.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be refining quietly, mastering slowly, and trusting depth more than visibility. When unconscious, this can become hiding, under-claiming, or waiting too long to share. When integrated, the same patience becomes a mission of quiet mastery. You learn to turn solitude into substance, allowing your depth to serve when the time is right.",
+        "natural_mission_fields": [
+          "craft",
+          "mentorship",
+          "research",
+          "contemplative work",
+          "specialist roles"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become hiding so completely that contribution cannot be received.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-41",
+      "archetype": "The Mission of Boundary Wisdom",
+      "archetype_zh": "边界智慧使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to teach love through clarity and limits. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is knowing what belongs to whom.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be sensing where responsibility, emotion, or energy is crossing a boundary. When unconscious, this can become defensiveness, judgment, or rigid separation. When integrated, the same clarity becomes a mission of boundary wisdom. You learn to turn protection into discernment, helping relationships become cleaner without becoming cold.",
+        "natural_mission_fields": [
+          "therapy-adjacent education",
+          "leadership",
+          "conflict repair",
+          "family systems",
+          "ethics"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become using boundaries as walls instead of bridges.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-42",
+      "archetype": "The Mission of Soulful Prosperity",
+      "archetype_zh": "灵魂丰盛使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to align value, receiving, and meaningful contribution. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is allowing support and resources to circulate cleanly.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be navigating questions of worth, exchange, support, and receiving. When unconscious, this can become scarcity, over-giving, undercharging, or guilt around support. When integrated, the same pattern becomes a mission of soulful prosperity. You learn to turn value into clean circulation, allowing resources to support contribution without becoming your identity.",
+        "natural_mission_fields": [
+          "business",
+          "value creation",
+          "pricing",
+          "resource stewardship",
+          "creative enterprise"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become equating worth with output or money.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-43",
+      "archetype": "The Mission of Sacred Disruption",
+      "archetype_zh": "神圣破局使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to interrupt false order so truth can breathe. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is seeing where systems appear stable but are not alive.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be noticing what is false, stagnant, or structurally misaligned before others are ready to admit it. When unconscious, this can become disruption for intensity or harsh truth-telling. When integrated, the same perception becomes a mission of sacred disruption. You learn to turn rupture into renewal, interrupting what is dead so something more alive can emerge.",
+        "natural_mission_fields": [
+          "innovation",
+          "reform",
+          "consciousness work",
+          "crisis redesign",
+          "truth-telling"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become creating disruption without enough care.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    },
+    {
+      "code": "S5-44",
+      "archetype": "The Mission of Integrated Service",
+      "archetype_zh": "整合服务使命",
+      "output_blocks": {
+        "mission_essence": "This Soul Mission points to the invitation to let personal wisdom become steady contribution. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "what_your_soul_is_learning_to_express": "The natural gift of this mission is serving from wholeness rather than obligation.",
+        "how_your_patterns_become_mission": "Your repeating pattern may be feeling called to serve, guide, or support something larger than the personal self. When unconscious, this can become obligation, savior identity, or disappearing into service. When integrated, the same devotion becomes a mission of integrated service. You learn to turn service into wholeness, contributing from fullness rather than self-abandonment.",
+        "natural_mission_fields": [
+          "teaching",
+          "service leadership",
+          "mentoring",
+          "community systems",
+          "legacy work"
+        ],
+        "shadow_distortion_of_this_mission": "When this mission is filtered through fear, it may become turning service into identity or self-erasure.",
+        "mature_expression": "The integration begins when the person stops asking, “What must I become?” and begins asking, “What truth is already trying to move through my life more honestly?”",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "nova_lookup_instruction": "Use this entry as the source of truth for the S5 user-facing section. Do not replace the seven output blocks with generated interpretation."
+    }
+  ]
+}

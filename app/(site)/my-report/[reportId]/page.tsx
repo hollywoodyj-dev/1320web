@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ReportDashboard } from "@/components/report/report-dashboard";
+import { FullReportViewer } from "@/components/full-report/full-report-viewer";
 import { getEntitledReportAccess } from "@/lib/auth/access";
-import { buildPaidReportViewModel } from "@/lib/report/build-report-from-row";
+import { get1320Content } from "@/lib/get1320Content";
+import { calculate1320Code } from "@/lib/calculate1320Code";
 import { SectionCard } from "@/components/section-card";
 
 export const dynamic = "force-dynamic";
@@ -64,11 +65,32 @@ export default async function MyReportPage({ params }: PageProps) {
     );
   }
 
-  const viewModel = buildPaidReportViewModel(access.report);
+  const report = access.report;
+  const code = calculate1320Code(report.birth_year, report.birth_month, report.birth_day);
+  const birthDateLabel = `${report.birth_year}-${String(report.birth_month).padStart(2, "0")}-${String(report.birth_day).padStart(2, "0")}`;
+
+  const content = get1320Content(
+    {
+      s1: code.s1,
+      s3: code.s3Raw,
+      s2: code.s2,
+      s0: code.s0,
+      locale: "en",
+    },
+    { birthDate: birthDateLabel, reportTier: "full" },
+  );
 
   return (
-    <div className="report-page">
-      <ReportDashboard viewModel={viewModel} analyticsEvent="result_view" />
+    <div className="full-report-page">
+      <FullReportViewer
+        content={content}
+        options={{
+          birthDate: birthDateLabel,
+          preparedFor: "You",
+          reportId: report.id,
+        }}
+        analyticsEvent="full_report_view"
+      />
     </div>
   );
 }

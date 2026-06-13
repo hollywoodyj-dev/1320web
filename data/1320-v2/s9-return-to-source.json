@@ -1,0 +1,225 @@
+{
+  "module": "S9 Return to Source",
+  "module_zh": "回源之门",
+  "version": "v1",
+  "system": "1320 Soul Origin Code System",
+  "layer": "Integration Layer",
+  "positioning": "S9 Return to Source is part of the 1320 Soul Origin Code System™, a symbolic self-reflection architecture. It is designed to help users reflect on 回源之门 as a non-deterministic awareness and integration layer. It is not predictive, diagnostic, deterministic, or fortune-telling.",
+  "calculation_dependency": {
+    "formula": "S9 = (S1 + S0 + S7 + S8) mod 9",
+    "range": "0–8",
+    "zero_handling": "Keep 0 as a valid code. Do not convert 0 unless a future product rule explicitly says otherwise.",
+    "output_format": "S9-00 style with two digits"
+  },
+  "rendering_blocks": [
+    {
+      "key": "return_essence",
+      "title": "Return Essence",
+      "title_zh": "回源本质"
+    },
+    {
+      "key": "what_your_soul_remembers",
+      "title": "What Your Soul Remembers",
+      "title_zh": "灵魂记起什么"
+    },
+    {
+      "key": "how_life_themes_resolve",
+      "title": "How Life Themes Resolve",
+      "title_zh": "生命主题如何整合"
+    },
+    {
+      "key": "natural_return_practices",
+      "title": "Natural Return Practices",
+      "title_zh": "自然回源练习"
+    },
+    {
+      "key": "shadow_distortion_of_return",
+      "title": "Shadow Distortion of Return",
+      "title_zh": "回源的阴影扭曲"
+    },
+    {
+      "key": "mature_return_expression",
+      "title": "Mature Return Expression",
+      "title_zh": "成熟回源表达"
+    },
+    {
+      "key": "wisewave_reflection",
+      "title": "Wisewave Reflection",
+      "title_zh": "玄微引导语"
+    }
+  ],
+  "entries": [
+    {
+      "code": "S9-00",
+      "archetype": "Return Through Silence",
+      "archetype_zh": "静默回源者",
+      "return_essence": "Your return to source happens through silence, stillness, and the space before identity forms.",
+      "what_your_soul_remembers": "This code reflects a soul learning that wholeness can be felt without explanation, performance, or conclusion.",
+      "how_life_themes_resolve": "Life themes resolve when the person stops demanding constant meaning and allows quiet presence to become enough.",
+      "natural_return_practices": [
+        "silent reflection",
+        "breath practice",
+        "nature solitude",
+        "digital pauses",
+        "non-performance"
+      ],
+      "shadow_distortion_of_return": "When distorted, return may become withdrawal, dissociation, or avoiding life in the name of peace.",
+      "mature_return_expression": "Mature return appears as silence that makes the person more present, not less engaged.",
+      "wisewave_reflection": "Source is not far away. It is the quiet that remains when you stop leaving yourself.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+    },
+    {
+      "code": "S9-01",
+      "archetype": "Return Through Enoughness",
+      "archetype_zh": "足够回源者",
+      "return_essence": "Your return to source is through remembering that existence does not need to be proven.",
+      "what_your_soul_remembers": "This code reflects a soul releasing the belief that value must be earned through achievement, beauty, usefulness, or recognition.",
+      "how_life_themes_resolve": "Life themes resolve when the person acts from worth rather than for worth.",
+      "natural_return_practices": [
+        "self-acceptance",
+        "rest practice",
+        "creative expression without proof",
+        "identity release",
+        "gentle discipline"
+      ],
+      "shadow_distortion_of_return": "When distorted, return may become complacency or avoiding growth by calling everything already complete.",
+      "mature_return_expression": "Mature return appears as enoughness that still allows honest growth.",
+      "wisewave_reflection": "You were not created as a question mark. You are allowed to live from enough.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+    },
+    {
+      "code": "S9-02",
+      "archetype": "Return Through Trust",
+      "archetype_zh": "信任回源者",
+      "return_essence": "Your return to source happens through loosening control and learning to cooperate with life without becoming passive.",
+      "what_your_soul_remembers": "This code reflects a soul releasing the need to manage every outcome in order to feel safe.",
+      "how_life_themes_resolve": "Life themes resolve when the person distinguishes trust from avoidance and responsibility from control.",
+      "natural_return_practices": [
+        "surrender practice",
+        "adaptive planning",
+        "faith in process",
+        "nervous system regulation",
+        "collaborative living"
+      ],
+      "shadow_distortion_of_return": "When distorted, return may become passivity, magical thinking, or refusing practical responsibility.",
+      "mature_return_expression": "Mature return appears as grounded trust: doing the next true thing while allowing life to remain alive.",
+      "wisewave_reflection": "Trust is not the absence of action. It is action without the grip of fear.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+    },
+    {
+      "code": "S9-03",
+      "archetype": "Return Through Connection",
+      "archetype_zh": "连接回源者",
+      "return_essence": "Your return to source is through remembering that separateness is not the whole truth.",
+      "what_your_soul_remembers": "This code reflects a soul healing isolation, guardedness, and the belief that they must carry everything alone.",
+      "how_life_themes_resolve": "Life themes resolve when connection becomes chosen, discerning, and rooted in self-presence.",
+      "natural_return_practices": [
+        "community",
+        "repair conversations",
+        "friendship",
+        "relational healing",
+        "shared practice"
+      ],
+      "shadow_distortion_of_return": "When distorted, return may become merging, dependency, or looking to others as the source of self.",
+      "mature_return_expression": "Mature return appears as connection without self-abandonment.",
+      "wisewave_reflection": "You return to source not by disappearing into others, but by meeting life with an open center.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+    },
+    {
+      "code": "S9-04",
+      "archetype": "Return Through Truth",
+      "archetype_zh": "真相回源者",
+      "return_essence": "Your return to source happens through allowing truth to refine identity, hope, relationships, and direction.",
+      "what_your_soul_remembers": "This code reflects a soul learning that reality is not an enemy of love; it is the ground where love becomes real.",
+      "how_life_themes_resolve": "Life themes resolve when the person stops protecting illusions and lets honest seeing become liberation.",
+      "natural_return_practices": [
+        "truth-telling",
+        "discernment",
+        "journaling reality vs projection",
+        "ethical repair",
+        "clear communication"
+      ],
+      "shadow_distortion_of_return": "When distorted, return may become harshness, judgment, or using truth to defend against tenderness.",
+      "mature_return_expression": "Mature return appears as truth with compassion: clear enough to liberate, gentle enough to be received.",
+      "wisewave_reflection": "Truth does not remove love. It removes what love was never meant to carry.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+    },
+    {
+      "code": "S9-05",
+      "archetype": "Return Through Surrender",
+      "archetype_zh": "臣服回源者",
+      "return_essence": "Your return to source is through releasing the identity that must force, fix, or explain everything.",
+      "what_your_soul_remembers": "This code reflects a soul learning that some thresholds open through softening, not pressure.",
+      "how_life_themes_resolve": "Life themes resolve when effort becomes clean and the person stops using striving to avoid vulnerability.",
+      "natural_return_practices": [
+        "letting-go rituals",
+        "grief work",
+        "acceptance practice",
+        "energy release",
+        "completion of old cycles"
+      ],
+      "shadow_distortion_of_return": "When distorted, return may become collapse, resignation, or spiritual bypassing.",
+      "mature_return_expression": "Mature return appears as surrendered participation: fully present, but no longer fighting the shape of reality.",
+      "wisewave_reflection": "Surrender is not giving up. It is no longer fighting what must be met.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+    },
+    {
+      "code": "S9-06",
+      "archetype": "Return Through Forgiveness",
+      "archetype_zh": "宽恕回源者",
+      "return_essence": "Your return to source happens through releasing the weight of blame, guilt, and unfinished emotional contracts.",
+      "what_your_soul_remembers": "This code reflects a soul learning that forgiveness is not approval; it is the return of life-force to the self.",
+      "how_life_themes_resolve": "Life themes resolve when the person stops making pain the center of identity and begins reclaiming freedom.",
+      "natural_return_practices": [
+        "self-forgiveness",
+        "relationship closure",
+        "compassionate boundaries",
+        "memory release",
+        "repair work"
+      ],
+      "shadow_distortion_of_return": "When distorted, return may become premature forgiveness, denying anger, or remaining in harmful patterns to appear evolved.",
+      "mature_return_expression": "Mature return appears as forgiveness with truth, boundaries, and self-respect.",
+      "wisewave_reflection": "Forgiveness does not ask you to forget yourself. It asks you to stop imprisoning your life in the past.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+    },
+    {
+      "code": "S9-07",
+      "archetype": "Return Through Presence",
+      "archetype_zh": "临在回源者",
+      "return_essence": "Your return to source is through entering the present moment fully enough for life to touch you again.",
+      "what_your_soul_remembers": "This code reflects a soul learning to come back from future fear, past loops, and imagined versions of reality.",
+      "how_life_themes_resolve": "Life themes resolve when the person chooses direct experience over constant mental departure.",
+      "natural_return_practices": [
+        "body awareness",
+        "mindful action",
+        "sensory grounding",
+        "simple routines",
+        "present-time choice"
+      ],
+      "shadow_distortion_of_return": "When distorted, return may become passivity, avoidance of planning, or using presence to ignore real responsibilities.",
+      "mature_return_expression": "Mature return appears as presence that sharpens action rather than dulling it.",
+      "wisewave_reflection": "The present moment is not small. It is the only place your soul can actually return.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+    },
+    {
+      "code": "S9-08",
+      "archetype": "Return Through Wholeness",
+      "archetype_zh": "完整回源者",
+      "return_essence": "Your return to source happens through integrating the parts of yourself you once split into good, bad, spiritual, human, strong, or weak.",
+      "what_your_soul_remembers": "This code reflects a soul learning that wholeness is not perfection; it is honest inclusion.",
+      "how_life_themes_resolve": "Life themes resolve when the person stops rejecting pieces of their humanity in order to feel worthy of source.",
+      "natural_return_practices": [
+        "shadow integration",
+        "creative embodiment",
+        "whole-self reflection",
+        "community integration",
+        "service from authenticity"
+      ],
+      "shadow_distortion_of_return": "When distorted, return may become identity inflation, trying to appear integrated, or bypassing the ordinary human process.",
+      "mature_return_expression": "Mature return appears as simple wholeness: nothing exaggerated, nothing denied.",
+      "wisewave_reflection": "You return to source by becoming less divided from yourself.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+    }
+  ],
+  "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+}

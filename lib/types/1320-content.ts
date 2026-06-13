@@ -61,6 +61,15 @@ export type Get1320ContentInput = {
   locale?: Locale;
 };
 
+/** Product tier for v2 content gating (see NOVA report_tiers). */
+export type ReportProductTier = "free" | "full" | "advanced";
+
+export type Get1320ContentOptions = {
+  birthDate?: string;
+  /** v2 only — defaults to `full` when flag enabled. */
+  reportTier?: ReportProductTier;
+};
+
 export type CodeDisplay = {
   s1: number;
   s3Raw: number;
@@ -73,6 +82,22 @@ export type CodeDisplay = {
   s0Code: string;
   codeString: string;
   compactCode: string;
+  /** v2 extended chain (when v2 pipeline active). */
+  s3?: number;
+  s4?: number;
+  s5?: number;
+  s6?: number;
+  s7?: number;
+  s8?: number;
+  s9?: number;
+  s4Code?: string;
+  s5Code?: string;
+  s6Code?: string;
+  s7Code?: string;
+  s8Code?: string;
+  s9Code?: string;
+  fullCodeString?: string;
+  fullCompactCode?: string;
 };
 
 export type FreeResultCopy = {
@@ -98,6 +123,11 @@ export type Get1320ContentResult = {
   s4Content: SegmentContent | null;
   s5Content: SegmentContent | null;
   s6Content: SegmentContent | null;
+  /** v2 Full tier (S7) — null when tier-gated or v1 pipeline. */
+  s7Content?: SegmentContent | null;
+  /** v2 Advanced tier (S8–S9). */
+  s8Content?: SegmentContent | null;
+  s9Content?: SegmentContent | null;
   integratedSoulBlueprint: IntegratedSoulBlueprint | null;
   /** Short synthesis paragraph for free result — derived from `integratedSoulBlueprint`. */
   integratedFreeSummary: LocalizedText;
@@ -105,6 +135,9 @@ export type Get1320ContentResult = {
   segmentReflections: Record<"s1" | "s3" | "s2" | "s0", LocalizedText>;
   synthesisError?: string;
   s5AssemblyError?: string;
+  /** `v2` when `USE_1320_V2_CONTENT` is enabled. */
+  contentPipeline?: "v1" | "v2";
+  reportTier?: ReportProductTier;
   freeResultCopy: FreeResultCopy;
 };
 

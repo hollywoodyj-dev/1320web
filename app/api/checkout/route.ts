@@ -52,7 +52,7 @@ export async function POST(request: Request) {
     const birthDateLabel = `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
     const content = get1320Content(
       { s1: code.s1, s3: code.s3Raw, s2: code.s2, s0: code.s0, locale: "en" },
-      { birthDate: birthDateLabel },
+      { birthDate: birthDateLabel, reportTier: "full" },
     );
 
     const user = await upsertUserByEmail(email, body.firstName?.trim());

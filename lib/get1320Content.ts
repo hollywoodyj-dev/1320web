@@ -11,7 +11,6 @@ import s6Data from "@/data/1320/s6-money-frequency.json";
 import { adaptAssembledS5 } from "@/lib/adapt-assembled-s5";
 import { assembleS5SoulMission } from "@/lib/assemble-s5-soul-mission";
 import {
-  adaptPremiumSegment,
   adaptS0,
   adaptS1,
   adaptS2,
@@ -19,6 +18,7 @@ import {
   adaptS6,
   mergeEnOverlay,
 } from "@/lib/adapt1320V1";
+import { adaptS4ShadowPattern } from "@/lib/full-report/adapt-s4-shadow";
 import { MissingS5SeedError } from "@/lib/load-s5-seeds";
 import { buildSynthesisLayerInput, validateSynthesisLayerInput } from "@/lib/build-synthesis-input";
 import { buildCombinationSignature } from "@/lib/combination-signature";
@@ -35,9 +35,12 @@ import { resolveAllSegmentReflections } from "@/lib/resolve-segment-reflection";
 import { resolveS3Tier } from "@/lib/s3-tier";
 import { formatCodeDisplay } from "@/lib/format-code-display";
 import { segmentCodeKey } from "@/lib/segment-code";
+import { buildGet1320ContentResultV2 } from "@/lib/1320-v2/build-get1320-content-result";
+import { use1320V2Content } from "@/lib/use-1320-v2-content";
 import type {
   FreeResultCopy,
   Get1320ContentInput,
+  Get1320ContentOptions,
   Get1320ContentResult,
   Locale,
   LocalizedText,
@@ -109,15 +112,28 @@ function attachReflection(
   return { ...content, reflectionQuestion: reflection };
 }
 
+export type { Get1320ContentOptions, ReportProductTier } from "@/lib/types/1320-content";
+
 export function get1320Content(
   input: Get1320ContentInput | LegacyCodeInput,
-  options?: { birthDate?: string },
+  options?: Get1320ContentOptions,
 ): Get1320ContentResult {
   const normalized: Get1320ContentInput =
     "s3Raw" in input
       ? { s1: input.s1, s3: input.s3Raw, s2: input.s2, s0: input.s0, locale: input.locale }
       : input;
 
+  if (use1320V2Content()) {
+    return buildGet1320ContentResultV2(normalized, options);
+  }
+
+  return get1320ContentV1(normalized, options);
+}
+
+function get1320ContentV1(
+  normalized: Get1320ContentInput,
+  options?: Get1320ContentOptions,
+): Get1320ContentResult {
   const locale: Locale = normalized.locale ?? "en";
 
   const s1Code = segmentCodeKey("S1", normalized.s1);
@@ -212,6 +228,7 @@ export function get1320Content(
       missingEntryFallback: freeResultCopy.missingEntryFallback,
       lockedTeaserLabel: freeResultCopy.lockedTeaserLabel,
     },
+    contentPipeline: "v1",
   };
 
   const synthesisInput = buildSynthesisLayerInput(
@@ -235,12 +252,10 @@ export function get1320Content(
     }
     return {
       ...partialResult,
-      s4Content: adaptPremiumSegment(
+      s4Content: adaptS4ShadowPattern(
         lookupRecord(s4Data as Record<string, unknown>, s1Code),
-        s1Code,
-        normalized.s1,
-        "Shadow Pattern Module",
-        "阴影模式模块",
+        s1Content,
+        locale,
       ),
       s5Content: s5Resolved.content,
       s5AssemblyError: s5Resolved.error,
@@ -249,6 +264,7 @@ export function get1320Content(
         normalized.s1,
       ),
       synthesisError: message,
+      contentPipeline: "v1",
     };
   }
 
@@ -279,12 +295,10 @@ export function get1320Content(
     s3Content,
     s2Content,
     s0Content,
-    s4Content: adaptPremiumSegment(
+    s4Content: adaptS4ShadowPattern(
       lookupRecord(s4Data as Record<string, unknown>, s1Code),
-      s1Code,
-      normalized.s1,
-      "Shadow Pattern Module",
-      "阴影模式模块",
+      s1Content,
+      locale,
     ),
     s5Content: s5Resolved.content,
     s5AssemblyError: s5Resolved.error,
@@ -306,6 +320,7 @@ export function get1320Content(
       missingEntryFallback: freeResultCopy.missingEntryFallback,
       lockedTeaserLabel: freeResultCopy.lockedTeaserLabel,
     },
+    contentPipeline: "v1",
   };
 }
 

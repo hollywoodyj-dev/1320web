@@ -35,7 +35,7 @@ function str(record: V1Record, key: string): string | undefined {
   return typeof value === "string" ? value : undefined;
 }
 
-function strArray(record: V1Record, key: string): string[] {
+export function strArray(record: V1Record, key: string): string[] {
   const value = record[key];
   if (!Array.isArray(value)) return [];
   return value.filter((item): item is string => typeof item === "string");

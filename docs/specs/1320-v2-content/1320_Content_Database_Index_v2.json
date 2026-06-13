@@ -1,0 +1,332 @@
+{
+  "document": {
+    "title": "1320 Content Database Index v2",
+    "version": "2.0",
+    "date": "2026-06-13",
+    "system": "1320 Soul Origin Code System™",
+    "product_context": "TheSoulProfile / SeeSoul / NOVA",
+    "purpose": "Master index for all S0–S9 content databases, defining module ranges, file references, lookup keys, rendering fields, product tier placement, and safety rules for NOVA."
+  },
+  "global_rules": {
+    "database_role": "Content databases are the source of truth for user-facing interpretations. NOVA calculates codes, looks up matching records, and renders the approved content.",
+    "nova_generation_boundary": [
+      "NOVA may generate short bridge sentences, section transitions, integration summaries, and localized formatting.",
+      "NOVA must not generate core interpretation fields from scratch when the field exists in the content database.",
+      "NOVA must preserve the symbolic, reflective, non-deterministic tone.",
+      "NOVA must not convert any code into destiny, fixed identity, diagnosis, prediction, financial advice, or spiritual rank."
+    ],
+    "safe_language_note": "All interpretations are symbolic and reflective. They are not predictive, diagnostic, deterministic, medical, legal, financial, or religious instructions, and they do not define a fixed identity."
+  },
+  "product_layers": {
+    "S0-S4": {
+      "layer": "Awareness Layer",
+      "layer_zh": "看见层",
+      "tier": "Free Detailed Report",
+      "function": "Helps the user see foundational patterns clearly."
+    },
+    "S5-S7": {
+      "layer": "Transformation Layer",
+      "layer_zh": "转化层",
+      "tier": "Full Soul Reflection Report",
+      "function": "Helps the user transform awareness into mission, value, receiving, and sovereignty."
+    },
+    "S8-S9": {
+      "layer": "Integration Layer",
+      "layer_zh": "整合层",
+      "tier": "Advanced Integration Report",
+      "function": "Helps the user integrate life themes into contribution and return-to-source reflection."
+    }
+  },
+  "databases": [
+    {
+      "module": "S0",
+      "name": "Void Gate",
+      "name_zh": "空性之门",
+      "layer": "Awareness Layer",
+      "product_tier": "Free Detailed Report",
+      "code_range": "S0-00 to S0-19",
+      "calculation": "full_birth_date_digit_sum mod 20",
+      "zero_rule": "Keep 0 as S0-00.",
+      "lookup_key_format": "S0-XX",
+      "primary_database_file": "1320_S0_Void_Gate_Content_Database_v2_EN.json",
+      "markdown_file": "1320_S0_Void_Gate_Content_Database_v2_EN.md",
+      "status": "needs_alignment_or_confirmed_source",
+      "rendering_fields": [
+        "Reflection Question",
+        "Void Theme",
+        "Core Illusion",
+        "How This Gate Appears",
+        "Integration Key",
+        "Grounded Practice",
+        "Wisewave Guidance",
+        "Safe Language Note"
+      ],
+      "nova_instruction": "Calculate S0 and lookup corresponding Void Gate content. Use reflective language and do not frame the void gate as fate or defect."
+    },
+    {
+      "module": "S1",
+      "name": "Soul Origin",
+      "name_zh": "灵魂本源",
+      "layer": "Awareness Layer",
+      "product_tier": "Free Detailed Report",
+      "code_range": "S1-01 to S1-44",
+      "calculation": "digit_sum(birth_year)",
+      "zero_rule": "Not applicable under normal year digit sum.",
+      "lookup_key_format": "S1-XX",
+      "primary_database_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.json",
+      "markdown_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "status": "legacy_content_exists_needs_v2_index_confirmation",
+      "rendering_fields": [
+        "Origin Essence",
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction",
+        "Wisewave Guidance",
+        "Symbolic Color",
+        "Totem",
+        "Safe Language Note"
+      ],
+      "nova_instruction": "Use S1 as the foundational origin frequency. Do not treat archetype as fixed identity."
+    },
+    {
+      "module": "S2",
+      "name": "Soul Mirror",
+      "name_zh": "灵魂镜像",
+      "layer": "Awareness Layer",
+      "product_tier": "Free Detailed Report",
+      "code_range": "S2-02 to S2-43 for valid Gregorian dates; legacy range may extend depending on source database",
+      "calculation": "birth_month + birth_day",
+      "zero_rule": "Not applicable.",
+      "lookup_key_format": "S2-XX",
+      "primary_database_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.json",
+      "markdown_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "status": "needs_alignment_or_confirmed_source",
+      "rendering_fields": [
+        "Mirror Essence",
+        "Relationship Pattern",
+        "Attraction Dynamic",
+        "Trigger Pattern",
+        "Hidden Need",
+        "Integration Key",
+        "Wisewave Guidance",
+        "Safe Language Note"
+      ],
+      "nova_instruction": "Use S2 to reflect relational mirror patterns. Do not instruct users to stay, leave, pursue, or end any relationship."
+    },
+    {
+      "module": "S3",
+      "name": "Soul Vibration",
+      "name_zh": "灵魂振动",
+      "layer": "Awareness Layer",
+      "product_tier": "Free Detailed Report",
+      "code_range": "Defined by official S3 vibration_level mapping table",
+      "calculation": "S3_raw = birth_month × birth_day; S3 = vibration_level(S3_raw)",
+      "zero_rule": "Follow official S3 vibration mapping.",
+      "lookup_key_format": "S3-XX",
+      "primary_database_file": "1320_S3_Soul_Vibration_Content_Database_v2_EN.json",
+      "markdown_file": "1320_S3_Soul_Vibration_Content_Database_v2_EN.md",
+      "mapping_file": "1320_S3_Vibration_Level_Mapping_Table_v2.json",
+      "status": "requires_official_mapping_table",
+      "rendering_fields": [
+        "Vibration Essence",
+        "Expression Style",
+        "Maturity Pattern",
+        "Acceleration Pattern",
+        "Grounding Challenge",
+        "Integration Key",
+        "Wisewave Guidance",
+        "Safe Language Note"
+      ],
+      "nova_instruction": "NOVA must not infer S3 without the official vibration_level mapping table. If mapping table is unavailable, return an error or missing mapping warning."
+    },
+    {
+      "module": "S4",
+      "name": "Core Shadow Pattern",
+      "name_zh": "核心阴影模式",
+      "layer": "Awareness Layer",
+      "product_tier": "Free Detailed Report",
+      "code_range": "S4-00 to S4-19",
+      "calculation": "(S2 + S0) mod 20",
+      "zero_rule": "Keep 0 as S4-00. Do not convert to 20.",
+      "lookup_key_format": "S4-XX",
+      "primary_database_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.json",
+      "markdown_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "status": "completed_v2",
+      "rendering_fields": [
+        "Reflection Question",
+        "Core Loop",
+        "Reflective Summary",
+        "Emotional Trigger",
+        "Defense Pattern",
+        "Hidden Need",
+        "Relationship Pattern",
+        "Work & Life Pattern",
+        "Integration Key",
+        "One-Week Practice",
+        "Wisewave Guidance",
+        "Safe Language Note"
+      ],
+      "nova_instruction": "Lookup S4 content directly. This layer should describe protective loops, not diagnose pathology."
+    },
+    {
+      "module": "S5",
+      "name": "Soul Mission",
+      "name_zh": "灵魂使命",
+      "layer": "Transformation Layer",
+      "product_tier": "Full Soul Reflection Report",
+      "code_range": "S5-01 to S5-44",
+      "calculation": "(S1 + S2 + S3) mod 44; 0 → 44",
+      "zero_rule": "If result is 0, convert to S5-44.",
+      "lookup_key_format": "S5-XX",
+      "primary_database_file": "1320_S5_Soul_Mission_Content_Database_v4_EN.json",
+      "markdown_file": "1320_S5_Soul_Mission_Content_Database_v4_EN.md",
+      "calculation_logic_file": "NOVA_S5_Soul_Mission_Calculation_Logic_v4.json",
+      "status": "completed_v4",
+      "rendering_fields": [
+        "Mission Essence",
+        "What Your Soul Is Learning to Express",
+        "How Your Patterns Become Mission",
+        "Natural Mission Fields",
+        "Shadow Distortion of This Mission",
+        "Mature Expression",
+        "Wisewave Reflection"
+      ],
+      "nova_instruction": "NOVA must retrieve the seven S5 blocks from the content database. Do not generate How Your Patterns Become Mission from scratch."
+    },
+    {
+      "module": "S6",
+      "name": "Value & Receiving",
+      "name_zh": "价值与接收",
+      "legacy_name": "Money Archetypes / Money Core Frequency",
+      "layer": "Transformation Layer",
+      "product_tier": "Full Soul Reflection Report",
+      "code_range": "S6-01 to S6-44",
+      "calculation": "(S1 + S3 + S0) mod 44; 0 → 44",
+      "zero_rule": "If result is 0, convert to S6-44.",
+      "lookup_key_format": "S6-XX",
+      "primary_database_file": "1320_S6_Value_Receiving_Content_Database_v1_EN.json",
+      "markdown_file": "1320_S6_Value_Receiving_Content_Database_v1_EN.md",
+      "calculation_logic_file": "NOVA_S6_Value_Receiving_Calculation_Logic_v1.json",
+      "status": "completed_v1",
+      "rendering_fields": [
+        "Value Essence",
+        "What Your Soul Is Learning to Receive",
+        "How Value Wants to Flow",
+        "Natural Value Fields",
+        "Shadow Distortion of Receiving",
+        "Mature Receiving Expression",
+        "Wisewave Reflection"
+      ],
+      "nova_instruction": "User-visible output must use Value & Receiving language. Do not output Money Frequency as the public label. Do not provide financial predictions or investment advice."
+    },
+    {
+      "module": "S7",
+      "name": "Soul Sovereignty",
+      "name_zh": "灵魂主权",
+      "layer": "Transformation Layer",
+      "product_tier": "Full Soul Reflection Report",
+      "code_range": "S7-00 to S7-06",
+      "calculation": "(S1 + S3 + S4 + S6) mod 7",
+      "zero_rule": "Keep 0 as S7-00.",
+      "lookup_key_format": "S7-XX",
+      "primary_database_file": "1320_S7_Soul_Sovereignty_Content_Database_v1_EN.json",
+      "markdown_file": "1320_S7_Soul_Sovereignty_Content_Database_v1_EN.md",
+      "calculation_logic_file": "NOVA_S7_Soul_Sovereignty_Calculation_Logic_v1.json",
+      "status": "completed_v1",
+      "rendering_fields": [
+        "Sovereignty Essence",
+        "Where Power Was Given Away",
+        "What Your Soul Is Learning to Choose",
+        "Boundary & Agency Pattern",
+        "Shadow Distortion of Sovereignty",
+        "Mature Sovereignty Expression",
+        "Wisewave Reflection"
+      ],
+      "nova_instruction": "Use S7 to reflect agency, boundary, and choice. Do not tell the user what decision to make."
+    },
+    {
+      "module": "S8",
+      "name": "Soul Contribution",
+      "name_zh": "灵魂贡献",
+      "layer": "Integration Layer",
+      "product_tier": "Advanced Integration Report",
+      "code_range": "S8-00 to S8-07",
+      "calculation": "(S5 + S6 + S7) mod 8",
+      "zero_rule": "Keep 0 as S8-00.",
+      "lookup_key_format": "S8-XX",
+      "primary_database_file": "1320_S8_Soul_Contribution_Content_Database_v1_EN.json",
+      "markdown_file": "1320_S8_Soul_Contribution_Content_Database_v1_EN.md",
+      "calculation_logic_file": "NOVA_S8_Soul_Contribution_Calculation_Logic_v1.json",
+      "status": "completed_v1",
+      "rendering_fields": [
+        "Contribution Essence",
+        "How Your Life Themes Become Contribution",
+        "Natural Contribution Fields",
+        "Who or What You May Serve",
+        "Shadow Distortion of Contribution",
+        "Mature Contribution Expression",
+        "Wisewave Reflection"
+      ],
+      "nova_instruction": "Use S8 as an integration reflection, not as a rank or proof of awakening."
+    },
+    {
+      "module": "S9",
+      "name": "Return to Source",
+      "name_zh": "回源之门",
+      "layer": "Integration Layer",
+      "product_tier": "Advanced Integration Report",
+      "code_range": "S9-00 to S9-08",
+      "calculation": "(S1 + S0 + S7 + S8) mod 9",
+      "zero_rule": "Keep 0 as S9-00.",
+      "lookup_key_format": "S9-XX",
+      "primary_database_file": "1320_S9_Return_to_Source_Content_Database_v1_EN.json",
+      "markdown_file": "1320_S9_Return_to_Source_Content_Database_v1_EN.md",
+      "calculation_logic_file": "NOVA_S9_Return_to_Source_Calculation_Logic_v1.json",
+      "status": "completed_v1",
+      "rendering_fields": [
+        "Return Essence",
+        "What Is Being Integrated",
+        "The Path Back to Wholeness",
+        "What Must Be Released",
+        "Shadow Distortion of Return",
+        "Mature Return Expression",
+        "Wisewave Reflection"
+      ],
+      "nova_instruction": "Use S9 as return-to-wholeness reflection. Do not frame it as a final answer, spiritual graduation, or ultimate truth."
+    }
+  ],
+  "master_logic_files": {
+    "architecture": "1320_Master_System_Architecture_v2.json",
+    "nova_calculation": "NOVA_Master_Calculation_Logic_v2.json",
+    "website_copy": "Website_Copy_Rewrite_Pack_v2.json"
+  },
+  "status_legend": {
+    "completed_v1": "Content and calculation logic exist in current upgraded architecture, first complete version.",
+    "completed_v4": "Content and calculation logic exist in current upgraded architecture with multiple iterations and finalized rendering blocks.",
+    "source_sample_confirmed": "Source format and content sample confirmed from uploaded source.",
+    "needs_alignment_or_confirmed_source": "Needs final v2 content database confirmation or migration from legacy source.",
+    "legacy_content_exists_needs_v2_index_confirmation": "Legacy content exists but should be confirmed against v2 naming and rendering fields.",
+    "requires_official_mapping_table": "Cannot be safely computed without official mapping table."
+  },
+  "repo_corrections": {
+    "date": "2026-06-14",
+    "S4": "Steward pack uses 1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.json; original index listed Awareness_Layer v1 name.",
+    "S7_json_keys": "Content DB uses what_your_soul_is_learning_to_reclaim; index rendering_fields use Choose wording."
+  },
+  "handoff_notes": {
+    "for_developers": [
+      "Use this index to connect NOVA calculation outputs to the correct content database file.",
+      "Do not hard-code user-facing descriptions in calculation logic if the content database includes that field.",
+      "Each module output should include code, name, localized name, layer, content fields, and safe language note.",
+      "If a database file listed here is not present in production, return a controlled missing_content_database error."
+    ],
+    "for_content_team": [
+      "S0, S1, S2, and S3 may need final v2 alignment if legacy files are not yet migrated.",
+      "S5 is currently the most stable version and should be used as the model for future content database field structure.",
+      "S6 should retain Value & Receiving language and avoid reverting to Money Frequency publicly.",
+      "S8–S9 should remain integration layers, not hierarchy or enlightenment language."
+    ]
+  }
+}

@@ -1,13 +1,14 @@
 /** Static copy for report pages (practices, journal, sample banners). */
 
 export const SAMPLE_REPORT_META = {
-  title: "Sample 1320 Soul Origin Report",
+  title: "Sample 1320 Full Soul Origin Report",
   description:
-    "Free-layer sample with fictional code S1-18 / S3-03 / S2-27 / S0-07. The paid Full Soul Origin Report (~32 pages) ships in a later release.",
+    "Full-report preview with fictional birth date July 14, 1988 — S1-26 / S3-03 / S2-21 / S0-18. For layout and tone only; not your personal code.",
   fictionBanner:
-    "Sample only — fictional birth date May 22, 1980. This shows the same free first layer as your personal /result page, not the paid ~32-page Full Report.",
+    "Sample only — fictional birth date July 14, 1988. This preview uses the full report template; your personal code lives on /result after you enter your birth date.",
   headerTitle: "YOUR 1320 SOUL ORIGIN CODE",
-  headerSubtitle: "Free-layer sample — fictional code for layout and tone preview.",
+  headerSubtitle: "Full report preview — fictional code S1-26 / S3-03 / S2-21 / S0-18",
+  birthDate: "1988-07-14",
 };
 
 export const REPORT_HEADER_ACTIONS = {

@@ -16,8 +16,28 @@ export function formatS3TierCode(tier: number): string {
   return `S3-${String(tier).padStart(2, "0")}`;
 }
 
+export function formatS4Code(value: number): string {
+  return `S4-${String(value).padStart(2, "0")}`;
+}
+
+export function formatS5Code(value: number): string {
+  return `S5-${String(value).padStart(2, "0")}`;
+}
+
 export function formatS6Code(value: number): string {
   return `S6-${String(value).padStart(2, "0")}`;
+}
+
+export function formatS7Code(value: number): string {
+  return `S7-${String(value).padStart(2, "0")}`;
+}
+
+export function formatS8Code(value: number): string {
+  return `S8-${String(value).padStart(2, "0")}`;
+}
+
+export function formatS9Code(value: number): string {
+  return `S9-${String(value).padStart(2, "0")}`;
 }
 
 export type SegmentCodePrefix = "S0" | "S1" | "S2";

@@ -1,0 +1,187 @@
+{
+  "module": "S7 Soul Sovereignty",
+  "module_zh": "灵魂主权",
+  "version": "v1",
+  "system": "1320 Soul Origin Code System",
+  "layer": "Transformation Layer",
+  "positioning": "S7 Soul Sovereignty is part of the 1320 Soul Origin Code System™, a symbolic self-reflection architecture. It is designed to help users reflect on 灵魂主权 as a non-deterministic awareness and integration layer. It is not predictive, diagnostic, deterministic, or fortune-telling.",
+  "calculation_dependency": {
+    "formula": "S7 = (S1 + S3 + S4 + S6) mod 7",
+    "range": "0–6",
+    "zero_handling": "Keep 0 as a valid code. Do not convert 0 unless a future product rule explicitly says otherwise.",
+    "output_format": "S7-00 style with two digits"
+  },
+  "rendering_blocks": [
+    {
+      "key": "sovereignty_essence",
+      "title": "Sovereignty Essence",
+      "title_zh": "主权本质"
+    },
+    {
+      "key": "what_your_soul_is_learning_to_reclaim",
+      "title": "What Your Soul Is Learning to Reclaim",
+      "title_zh": "灵魂正在学习收回什么"
+    },
+    {
+      "key": "where_power_was_given_away",
+      "title": "Where Power Was Given Away",
+      "title_zh": "力量曾交出去的地方"
+    },
+    {
+      "key": "natural_sovereignty_fields",
+      "title": "Natural Sovereignty Fields",
+      "title_zh": "自然主权场域"
+    },
+    {
+      "key": "shadow_distortion_of_sovereignty",
+      "title": "Shadow Distortion of Sovereignty",
+      "title_zh": "主权的阴影扭曲"
+    },
+    {
+      "key": "mature_sovereignty_expression",
+      "title": "Mature Sovereignty Expression",
+      "title_zh": "成熟主权表达"
+    },
+    {
+      "key": "wisewave_reflection",
+      "title": "Wisewave Reflection",
+      "title_zh": "玄微引导语"
+    }
+  ],
+  "entries": [
+    {
+      "code": "S7-00",
+      "archetype": "The Returning Self",
+      "archetype_zh": "回到自身者",
+      "sovereignty_essence": "Your sovereignty begins through returning to yourself before reacting to the field around you.",
+      "what_your_soul_is_learning_to_reclaim": "This code reflects a soul learning to reclaim presence, self-contact, and the right to pause before choosing.",
+      "where_power_was_given_away": "Patterns become visible when the person notices how quickly they leave their own center to manage the expectations, emotions, or urgency of others.",
+      "natural_sovereignty_fields": [
+        "self-reflection",
+        "decision pauses",
+        "emotional regulation",
+        "boundary repair",
+        "inner alignment work"
+      ],
+      "shadow_distortion_of_sovereignty": "When distorted, sovereignty may become withdrawal, passivity, or a quiet refusal to participate because the person is afraid of being influenced.",
+      "mature_sovereignty_expression": "Mature sovereignty appears as the ability to stay connected to life while remaining inwardly located in the self.",
+      "wisewave_reflection": "You do not need to disappear in order to be free. Return first, then respond.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+    },
+    {
+      "code": "S7-01",
+      "archetype": "The Self-Trusting One",
+      "archetype_zh": "自我信任者",
+      "sovereignty_essence": "Your sovereignty strengthens when you stop outsourcing permission and begin honoring clear inner signals.",
+      "what_your_soul_is_learning_to_reclaim": "This code reflects a soul learning to trust perception, intuition, and choice without needing perfect certainty.",
+      "where_power_was_given_away": "Patterns become visible where the person repeatedly asks others to confirm what the body, heart, or awareness has already recognized.",
+      "natural_sovereignty_fields": [
+        "independent decisions",
+        "creative leadership",
+        "intuitive work",
+        "personal direction",
+        "self-led relationships"
+      ],
+      "shadow_distortion_of_sovereignty": "When distorted, sovereignty may become stubbornness, impulsive certainty, or rejecting useful feedback in order to feel independent.",
+      "mature_sovereignty_expression": "Mature sovereignty appears as discernment: the ability to listen, receive information, and still choose from inner truth.",
+      "wisewave_reflection": "Self-trust is not the refusal to learn. It is the quiet knowing that your final choice must return to you.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+    },
+    {
+      "code": "S7-02",
+      "archetype": "The Boundaried Choice",
+      "archetype_zh": "边界选择者",
+      "sovereignty_essence": "Your sovereignty emerges through the ability to choose without abandoning your limits, needs, or honest capacity.",
+      "what_your_soul_is_learning_to_reclaim": "This code reflects a soul learning that love, service, and responsibility must include the self.",
+      "where_power_was_given_away": "Patterns become visible when the person says yes too quickly, delays honest refusal, or confuses availability with worth.",
+      "natural_sovereignty_fields": [
+        "boundary setting",
+        "relationship repair",
+        "service work",
+        "team roles",
+        "caregiving without self-erasure"
+      ],
+      "shadow_distortion_of_sovereignty": "When distorted, sovereignty may become defensiveness, over-protection, or rigid walls that replace honest boundaries.",
+      "mature_sovereignty_expression": "Mature sovereignty appears as clear, kind limits that protect energy without closing the heart.",
+      "wisewave_reflection": "A boundary is not separation from love. It is the place where love becomes sustainable.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+    },
+    {
+      "code": "S7-03",
+      "archetype": "The Truthful Actor",
+      "archetype_zh": "真实行动者",
+      "sovereignty_essence": "Your sovereignty is activated when truth becomes behavior, not only insight.",
+      "what_your_soul_is_learning_to_reclaim": "This code reflects a soul learning to move from awareness into grounded action, speech, and visible alignment.",
+      "where_power_was_given_away": "Patterns become visible when the person understands deeply but delays acting, speaks around the truth, or waits for conditions to feel safer.",
+      "natural_sovereignty_fields": [
+        "communication",
+        "leadership",
+        "creative publishing",
+        "ethical choices",
+        "visible self-expression"
+      ],
+      "shadow_distortion_of_sovereignty": "When distorted, sovereignty may become harsh truth-telling, urgency, or using clarity as a weapon instead of a bridge.",
+      "mature_sovereignty_expression": "Mature sovereignty appears as timely action that is direct, grounded, and respectful.",
+      "wisewave_reflection": "Truth becomes power when it enters the body, the voice, and the next honest step.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+    },
+    {
+      "code": "S7-04",
+      "archetype": "The Unapproved Free Self",
+      "archetype_zh": "不再外求许可者",
+      "sovereignty_essence": "Your sovereignty grows when you no longer organize your life around approval, recognition, or emotional permission.",
+      "what_your_soul_is_learning_to_reclaim": "This code reflects a soul learning to belong to itself even when external agreement is not guaranteed.",
+      "where_power_was_given_away": "Patterns become visible where the person edits desires, softens truth, or delays direction until others validate the choice.",
+      "natural_sovereignty_fields": [
+        "authentic expression",
+        "public voice",
+        "life transitions",
+        "creative identity",
+        "independent paths"
+      ],
+      "shadow_distortion_of_sovereignty": "When distorted, sovereignty may become rebellion for its own sake, rejecting connection to prove freedom.",
+      "mature_sovereignty_expression": "Mature sovereignty appears as the ability to remain open to connection without needing approval to exist.",
+      "wisewave_reflection": "You are allowed to be real before everyone understands you.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+    },
+    {
+      "code": "S7-05",
+      "archetype": "The Embodied Authority",
+      "archetype_zh": "入身主权者",
+      "sovereignty_essence": "Your sovereignty becomes stable when authority moves from concept into body, rhythm, and daily practice.",
+      "what_your_soul_is_learning_to_reclaim": "This code reflects a soul learning that inner authority is not a statement; it is lived through consistent choices.",
+      "where_power_was_given_away": "Patterns become visible when the person speaks of alignment but lives from urgency, overextension, or disembodied ideals.",
+      "natural_sovereignty_fields": [
+        "rituals",
+        "daily structure",
+        "somatic awareness",
+        "grounded leadership",
+        "consistent practice"
+      ],
+      "shadow_distortion_of_sovereignty": "When distorted, sovereignty may become spiritual performance, identity attachment, or claiming authority before embodying responsibility.",
+      "mature_sovereignty_expression": "Mature sovereignty appears as calm consistency: the person becomes trustworthy to themselves through repeated aligned action.",
+      "wisewave_reflection": "Authority is not something you announce. It is something your life quietly proves through alignment.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+    },
+    {
+      "code": "S7-06",
+      "archetype": "The Conscious Responsible One",
+      "archetype_zh": "清醒责任者",
+      "sovereignty_essence": "Your sovereignty matures through taking responsibility without carrying what does not belong to you.",
+      "what_your_soul_is_learning_to_reclaim": "This code reflects a soul learning the difference between conscious ownership and over-responsibility.",
+      "where_power_was_given_away": "Patterns become visible where the person either takes on too much or avoids responsibility because it feels like loss of freedom.",
+      "natural_sovereignty_fields": [
+        "leadership",
+        "family systems",
+        "community roles",
+        "project ownership",
+        "repair conversations"
+      ],
+      "shadow_distortion_of_sovereignty": "When distorted, sovereignty may become control, guilt, blame, or the belief that responsibility means carrying everything alone.",
+      "mature_sovereignty_expression": "Mature sovereignty appears as clean ownership: taking the next true action while returning other people's parts to them.",
+      "wisewave_reflection": "Responsibility is not a burden when it is clean. It becomes heavy only when you carry what is not yours.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+    }
+  ],
+  "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+}

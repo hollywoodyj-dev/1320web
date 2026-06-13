@@ -11,6 +11,10 @@
     "lint": "eslint",
     "smoke:content": "npx tsx scripts/smoke-content.ts",
     "smoke:canonical": "npx tsx scripts/smoke-canonical-rules.ts",
+    "smoke:v2-calculation": "npx tsx scripts/smoke-v2-calculation.ts",
+    "smoke:v2-content": "npx tsx scripts/smoke-v2-content.ts",
+    "smoke:v2-get-content": "npx tsx scripts/smoke-v2-get-content.ts",
+    "import:v2-databases": "npx tsx scripts/import-v2-databases.ts",
     "smoke:result-1977": "npx tsx scripts/smoke-result-1977.ts",
     "smoke:s5-assembly": "npx tsx scripts/smoke-s5-assembly.ts",
     "smoke:funnel": "npx tsx scripts/smoke-funnel.ts",
@@ -27,7 +31,10 @@
     "import:s6-master": "npx tsx scripts/import-s6-master.ts",
     "smoke:s6-master": "npx tsx scripts/smoke-s6-master.ts",
     "smoke:phase2a": "npx tsx scripts/smoke-phase2a.ts",
-    "db:migrate": "npx tsx scripts/db-migrate.ts"
+    "db:migrate": "npx tsx scripts/db-migrate.ts",
+    "sync:backgrounds": "npx tsx scripts/sync-full-report-backgrounds.ts",
+    "renumber:backgrounds": "npx tsx scripts/renumber-backgrounds-insert-page-07.ts",
+    "validate:backgrounds": "npx tsx scripts/validate-full-report-backgrounds.ts"
   },
   "dependencies": {
     "next": "16.2.6",

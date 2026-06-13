@@ -1,0 +1,541 @@
+{
+  "document": {
+    "title": "NOVA Master Calculation Logic v2",
+    "version": "2.0",
+    "date": "2026-06-13",
+    "system": "1320 Soul Origin Code System™",
+    "product_context": "TheSoulProfile / SeeSoul / NOVA",
+    "purpose": "Master JSON calculation logic for NOVA to compute S0–S9 codes, normalize outputs, call the correct content databases, and render report sections safely."
+  },
+  "positioning": {
+    "system_type": "symbolic_self_reflection_architecture",
+    "not": [
+      "prediction",
+      "fortune_telling",
+      "diagnosis",
+      "therapy",
+      "medical_advice",
+      "legal_advice",
+      "financial_advice",
+      "religious_authority",
+      "deterministic_identity_label"
+    ],
+    "required_language_style": [
+      "symbolic",
+      "reflective",
+      "non_deterministic",
+      "non_diagnostic",
+      "grounded",
+      "self_authority_preserving"
+    ],
+    "safe_language_note": "All interpretations are symbolic and reflective. They are not predictive, diagnostic, deterministic, medical, legal, financial, or religious instructions, and they do not define a fixed identity."
+  },
+  "input_schema": {
+    "required_fields": {
+      "birth_year": {
+        "type": "integer",
+        "format": "YYYY",
+        "example": 1980
+      },
+      "birth_month": {
+        "type": "integer",
+        "range": "1-12",
+        "example": 5
+      },
+      "birth_day": {
+        "type": "integer",
+        "range": "1-31 depending on month/year validity",
+        "example": 22
+      }
+    },
+    "validation_rules": [
+      "birth_year must be a four-digit integer.",
+      "birth_month must be between 1 and 12.",
+      "birth_day must be valid for the given month and year.",
+      "NOVA should reject impossible dates before calculation.",
+      "NOVA should not ask for birth time; birth time is not used in the 1320 system."
+    ],
+    "normalization_rules": [
+      "Use numeric month and day values, without leading-zero influence in arithmetic.",
+      "For full_birth_date_digit_sum, sum all digits from YYYY, MM, and DD. Month/day leading zeros do not change the digit sum except by contributing 0."
+    ]
+  },
+  "core_functions": {
+    "digit_sum": {
+      "definition": "Sum all decimal digits in an integer or date component string.",
+      "example": {
+        "input": "1980",
+        "calculation": "1 + 9 + 8 + 0",
+        "result": 18
+      }
+    },
+    "full_birth_date_digit_sum": {
+      "definition": "Sum all digits across birth_year, birth_month, and birth_day.",
+      "example": {
+        "input": "1980-05-22",
+        "calculation": "1 + 9 + 8 + 0 + 0 + 5 + 2 + 2",
+        "result": 27
+      }
+    },
+    "mod": {
+      "definition": "Use standard modulo operation. Apply each module's zero_rule after modulo calculation."
+    },
+    "vibration_level": {
+      "definition": "Map S3_raw to official S3 vibration level using the official S3 vibration mapping table.",
+      "required_external_table": "1320_S3_Vibration_Level_Mapping_Table",
+      "implementation_note": "NOVA must not infer S3 level without the official mapping table. If the table is missing, return S3_raw and a missing_mapping error instead of guessing."
+    }
+  },
+  "calculation_order": [
+    "S1",
+    "S2",
+    "S3_raw",
+    "S3",
+    "S0",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8",
+    "S9"
+  ],
+  "calculations": {
+    "S1": {
+      "name": "Soul Origin",
+      "name_zh": "灵魂本源",
+      "layer": "Awareness Layer",
+      "formula": "digit_sum(birth_year)",
+      "dependencies": [
+        "birth_year"
+      ],
+      "range": "1-44",
+      "zero_rule": "Not applicable under normal four-digit birth_year calculation.",
+      "code_format": "S1-{value_padded_2_digits}",
+      "content_lookup": {
+        "database": "1320_S1_Soul_Origin_Content_Database",
+        "key": "S1-XX"
+      }
+    },
+    "S2": {
+      "name": "Soul Mirror",
+      "name_zh": "灵魂镜像",
+      "layer": "Awareness Layer",
+      "formula": "birth_month + birth_day",
+      "dependencies": [
+        "birth_month",
+        "birth_day"
+      ],
+      "range": "2-43 for valid Gregorian birth dates; legacy database may support wider range if needed.",
+      "zero_rule": "Not applicable.",
+      "code_format": "S2-{value_padded_2_digits}",
+      "content_lookup": {
+        "database": "1320_S2_Soul_Mirror_Content_Database",
+        "key": "S2-XX"
+      }
+    },
+    "S3_raw": {
+      "name": "Soul Vibration Raw",
+      "name_zh": "灵魂振动原始值",
+      "layer": "Awareness Layer",
+      "formula": "birth_month × birth_day",
+      "dependencies": [
+        "birth_month",
+        "birth_day"
+      ],
+      "range": "1-372",
+      "zero_rule": "Not applicable.",
+      "code_format": "raw_integer",
+      "content_lookup": null
+    },
+    "S3": {
+      "name": "Soul Vibration",
+      "name_zh": "灵魂振动",
+      "layer": "Awareness Layer",
+      "formula": "vibration_level(S3_raw)",
+      "dependencies": [
+        "S3_raw",
+        "official_S3_vibration_level_mapping_table"
+      ],
+      "range": "Defined by official S3 vibration mapping table.",
+      "zero_rule": "Follow official S3 vibration mapping.",
+      "code_format": "S3-{value_padded_2_digits}",
+      "content_lookup": {
+        "database": "1320_S3_Soul_Vibration_Content_Database",
+        "key": "S3-XX"
+      },
+      "missing_mapping_behavior": {
+        "error_code": "S3_MAPPING_TABLE_MISSING",
+        "message": "Official S3 vibration mapping table is required. NOVA must not guess S3."
+      }
+    },
+    "S0": {
+      "name": "Void Gate",
+      "name_zh": "空性之门",
+      "layer": "Awareness Layer",
+      "formula": "full_birth_date_digit_sum mod 20",
+      "dependencies": [
+        "birth_year",
+        "birth_month",
+        "birth_day"
+      ],
+      "range": "0-19",
+      "zero_rule": "Keep 0 as S0-00. Do not convert to 20.",
+      "code_format": "S0-{value_padded_2_digits}",
+      "content_lookup": {
+        "database": "1320_S0_Void_Gate_Content_Database",
+        "key": "S0-XX"
+      }
+    },
+    "S4": {
+      "name": "Core Shadow Pattern",
+      "name_zh": "核心阴影模式",
+      "layer": "Awareness Layer",
+      "formula": "(S2 + S0) mod 20",
+      "dependencies": [
+        "S2",
+        "S0"
+      ],
+      "range": "0-19",
+      "zero_rule": "Keep 0 as S4-00. Do not convert to 20.",
+      "code_format": "S4-{value_padded_2_digits}",
+      "content_lookup": {
+        "database": "1320_S4_Core_Shadow_Pattern_Content_Database",
+        "key": "S4-XX"
+      }
+    },
+    "S5": {
+      "name": "Soul Mission",
+      "name_zh": "灵魂使命",
+      "layer": "Transformation Layer",
+      "formula": "(S1 + S2 + S3) mod 44",
+      "dependencies": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "range": "1-44",
+      "zero_rule": "If modulo result is 0, convert to 44.",
+      "code_format": "S5-{value_padded_2_digits}",
+      "content_lookup": {
+        "database": "1320_S5_Soul_Mission_Content_Database_v4_EN",
+        "key": "S5-XX"
+      },
+      "rendering_blocks": [
+        "Mission Essence",
+        "What Your Soul Is Learning to Express",
+        "How Your Patterns Become Mission",
+        "Natural Mission Fields",
+        "Shadow Distortion of This Mission",
+        "Mature Expression",
+        "Wisewave Reflection"
+      ],
+      "rendering_rule": "NOVA must retrieve the prewritten S5 content from the content database. NOVA must not generate the core seven blocks from scratch."
+    },
+    "S6": {
+      "name": "Value & Receiving",
+      "name_zh": "价值与接收",
+      "legacy_name": "Money Archetypes / Money Core Frequency",
+      "layer": "Transformation Layer",
+      "formula": "(S1 + S3 + S0) mod 44",
+      "dependencies": [
+        "S1",
+        "S3",
+        "S0"
+      ],
+      "range": "1-44",
+      "zero_rule": "If modulo result is 0, convert to 44.",
+      "code_format": "S6-{value_padded_2_digits}",
+      "content_lookup": {
+        "database": "1320_S6_Value_Receiving_Content_Database_v1_EN",
+        "key": "S6-XX"
+      },
+      "rendering_blocks": [
+        "Value Essence",
+        "What Your Soul Is Learning to Receive",
+        "How Value Wants to Flow",
+        "Natural Value Fields",
+        "Shadow Distortion of Receiving",
+        "Mature Receiving Expression",
+        "Wisewave Reflection"
+      ],
+      "rendering_rule": "NOVA must translate old money-frequency meanings into Value & Receiving language. Do not output financial predictions, income promises, investment advice, or wealth destiny statements."
+    },
+    "S7": {
+      "name": "Soul Sovereignty",
+      "name_zh": "灵魂主权",
+      "layer": "Transformation Layer",
+      "formula": "(S1 + S3 + S4 + S6) mod 7",
+      "dependencies": [
+        "S1",
+        "S3",
+        "S4",
+        "S6"
+      ],
+      "range": "0-6",
+      "zero_rule": "Keep 0 as S7-00. Do not convert.",
+      "code_format": "S7-{value_padded_2_digits}",
+      "content_lookup": {
+        "database": "1320_S7_Soul_Sovereignty_Content_Database_v1_EN",
+        "key": "S7-XX"
+      }
+    },
+    "S8": {
+      "name": "Soul Contribution",
+      "name_zh": "灵魂贡献",
+      "layer": "Integration Layer",
+      "formula": "(S5 + S6 + S7) mod 8",
+      "dependencies": [
+        "S5",
+        "S6",
+        "S7"
+      ],
+      "range": "0-7",
+      "zero_rule": "Keep 0 as S8-00. Do not convert.",
+      "code_format": "S8-{value_padded_2_digits}",
+      "content_lookup": {
+        "database": "1320_S8_Soul_Contribution_Content_Database_v1_EN",
+        "key": "S8-XX"
+      }
+    },
+    "S9": {
+      "name": "Return to Source",
+      "name_zh": "回源之门",
+      "layer": "Integration Layer",
+      "formula": "(S1 + S0 + S7 + S8) mod 9",
+      "dependencies": [
+        "S1",
+        "S0",
+        "S7",
+        "S8"
+      ],
+      "range": "0-8",
+      "zero_rule": "Keep 0 as S9-00. Do not convert.",
+      "code_format": "S9-{value_padded_2_digits}",
+      "content_lookup": {
+        "database": "1320_S9_Return_to_Source_Content_Database_v1_EN",
+        "key": "S9-XX"
+      }
+    }
+  },
+  "zero_rules_summary": {
+    "keep_zero": [
+      "S0",
+      "S4",
+      "S7",
+      "S8",
+      "S9"
+    ],
+    "convert_zero_to_max": {
+      "S5": 44,
+      "S6": 44
+    },
+    "not_applicable": [
+      "S1",
+      "S2",
+      "S3_raw"
+    ],
+    "mapping_dependent": [
+      "S3"
+    ]
+  },
+  "code_formatting_rules": {
+    "padding": "All user-visible module codes should use two-digit padding after the dash, e.g. S5-09, S7-03, S0-00.",
+    "internal_numeric_values": "Store both numeric_value and code_string in output JSON.",
+    "example": {
+      "numeric_value": 9,
+      "code_string": "S5-09"
+    }
+  },
+  "report_tiers": {
+    "free_report": {
+      "name": "Free Detailed Report",
+      "modules": [
+        "S0",
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "purpose": "Awareness Layer: see foundational patterns clearly."
+    },
+    "full_report": {
+      "name": "Full Soul Reflection Report",
+      "modules": [
+        "S0",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7"
+      ],
+      "purpose": "Awareness + Transformation: understand how patterns become mission, value, and sovereign action."
+    },
+    "advanced_report": {
+      "name": "Advanced Integration Report",
+      "modules": [
+        "S0",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8",
+        "S9"
+      ],
+      "purpose": "Full S0–S9 integration: contribution and return-to-source reflection."
+    }
+  },
+  "output_schema": {
+    "top_level_fields": [
+      "input",
+      "calculation_trace",
+      "codes",
+      "report_tier",
+      "sections",
+      "safe_language_note",
+      "warnings"
+    ],
+    "codes_object_example": {
+      "S0": {
+        "numeric_value": 7,
+        "code": "S0-07",
+        "name": "Void Gate"
+      },
+      "S1": {
+        "numeric_value": 18,
+        "code": "S1-18",
+        "name": "Soul Origin"
+      },
+      "S2": {
+        "numeric_value": 27,
+        "code": "S2-27",
+        "name": "Soul Mirror"
+      },
+      "S3_raw": {
+        "numeric_value": 110,
+        "code": null,
+        "name": "Soul Vibration Raw"
+      },
+      "S3": {
+        "numeric_value": 8,
+        "code": "S3-08",
+        "name": "Soul Vibration"
+      },
+      "S4": {
+        "numeric_value": 14,
+        "code": "S4-14",
+        "name": "Core Shadow Pattern"
+      },
+      "S5": {
+        "numeric_value": 9,
+        "code": "S5-09",
+        "name": "Soul Mission"
+      },
+      "S6": {
+        "numeric_value": 33,
+        "code": "S6-33",
+        "name": "Value & Receiving"
+      },
+      "S7": {
+        "numeric_value": 3,
+        "code": "S7-03",
+        "name": "Soul Sovereignty"
+      },
+      "S8": {
+        "numeric_value": 5,
+        "code": "S8-05",
+        "name": "Soul Contribution"
+      },
+      "S9": {
+        "numeric_value": 6,
+        "code": "S9-06",
+        "name": "Return to Source"
+      }
+    }
+  },
+  "worked_example": {
+    "input": {
+      "birth_year": 1980,
+      "birth_month": 5,
+      "birth_day": 22
+    },
+    "note": "This example assumes the official S3 vibration mapping returns S3 = 8 for S3_raw = 110.",
+    "calculation_trace": {
+      "S1": "digit_sum(1980) = 1 + 9 + 8 + 0 = 18",
+      "S2": "5 + 22 = 27",
+      "S3_raw": "5 × 22 = 110",
+      "S3": "vibration_level(110) = 8",
+      "S0": "(1 + 9 + 8 + 0 + 0 + 5 + 2 + 2) mod 20 = 27 mod 20 = 7",
+      "S4": "(27 + 7) mod 20 = 34 mod 20 = 14",
+      "S5": "(18 + 27 + 8) mod 44 = 53 mod 44 = 9",
+      "S6": "(18 + 8 + 7) mod 44 = 33 mod 44 = 33",
+      "S7": "(18 + 8 + 14 + 33) mod 7 = 73 mod 7 = 3",
+      "S8": "(9 + 33 + 3) mod 8 = 45 mod 8 = 5",
+      "S9": "(18 + 7 + 3 + 5) mod 9 = 33 mod 9 = 6"
+    },
+    "codes": {
+      "S0": "S0-07",
+      "S1": "S1-18",
+      "S2": "S2-27",
+      "S3": "S3-08",
+      "S4": "S4-14",
+      "S5": "S5-09",
+      "S6": "S6-33",
+      "S7": "S7-03",
+      "S8": "S8-05",
+      "S9": "S9-06"
+    }
+  },
+  "nova_behavior_rules": {
+    "must_do": [
+      "Calculate in the official order.",
+      "Validate date before calculation.",
+      "Use the official S3 mapping table.",
+      "Use two-digit code formatting.",
+      "Use content database lookup for all module interpretations.",
+      "Preserve user agency and avoid authority positioning.",
+      "Add safe language notes in report output."
+    ],
+    "must_not_do": [
+      "Do not infer S3 without the official mapping table.",
+      "Do not call S6 Money Frequency in user-visible output.",
+      "Do not generate S5 or S6 core blocks from scratch when database content exists.",
+      "Do not present any result as destiny, fate, fixed identity, diagnosis, prophecy, or guarantee.",
+      "Do not rank S8–S9 as higher spiritual levels."
+    ],
+    "allowed_contextual_generation": [
+      "Short bridge sentences between sections.",
+      "Brief integration summary based on already calculated and retrieved module content.",
+      "Formatting, localization, and tone adjustment.",
+      "Grounded reflection questions and practices, if aligned with content database safety rules."
+    ]
+  },
+  "migration_notes": {
+    "v1_to_v2": [
+      {
+        "old": "Four-part system using S1, S3, S2, S0 as primary public structure.",
+        "new": "Ten-layer S0–S9 system grouped into Awareness, Transformation, and Integration."
+      },
+      {
+        "old": "Money Frequency",
+        "new": "Value & Receiving"
+      },
+      {
+        "old": "S5 as a generated mission report using S1/S2/S3/S0.",
+        "new": "S5 as independently calculated code using (S1 + S2 + S3) mod 44; legacy structure may inform report assembly only."
+      },
+      {
+        "old": "Full Report = mission + money + 7-day practice.",
+        "new": "Full Report = S0–S7, including Soul Mission, Value & Receiving, and Soul Sovereignty."
+      },
+      {
+        "old": "No formal S8/S9 integration layer.",
+        "new": "S8 Soul Contribution and S9 Return to Source form the Advanced Integration Layer."
+      }
+    ]
+  }
+}

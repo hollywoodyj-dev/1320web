@@ -15,7 +15,7 @@ export function buildPaidReportViewModel(report: SoulReportRow) {
       s0: code.s0,
       locale: "en",
     },
-    { birthDate: birthDateLabel },
+    { birthDate: birthDateLabel, reportTier: "full" },
   );
 
   return buildReportViewModel(content, {

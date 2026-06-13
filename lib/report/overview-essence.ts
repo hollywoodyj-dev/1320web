@@ -1,6 +1,18 @@
 import { pickLocalized } from "@/lib/getLocalized";
 import type { SegmentId } from "@/lib/segments";
-import type { Locale, SegmentContent } from "@/lib/types/1320-content";
+import type { Locale, LocalizedText, SegmentContent } from "@/lib/types/1320-content";
+
+/** First source with non-empty text for the active locale (empty `en` must not block fallbacks). */
+function pickFirstLocalized(
+  locale: Locale,
+  ...sources: (LocalizedText | undefined)[]
+): string {
+  for (const source of sources) {
+    const text = pickLocalized(source, locale).trim();
+    if (text) return text;
+  }
+  return "";
+}
 
 /** Short preview for overview pillar cards — no codes, no template wrappers. */
 export function buildOverviewEssence(
@@ -24,14 +36,18 @@ export function buildOverviewEssence(
         pickLocalized(segment.fullEssence ?? segment.freeEssence, locale),
       );
     case "s2":
-      return pickLocalized(
-        segment.relationshipPattern ?? segment.fullEssence ?? segment.freeEssence,
+      return pickFirstLocalized(
         locale,
+        segment.relationshipPattern,
+        segment.fullEssence,
+        segment.freeEssence,
       );
     case "s0":
-      return pickLocalized(
-        segment.coreIllusion ?? segment.fullEssence ?? segment.freeEssence,
+      return pickFirstLocalized(
         locale,
+        segment.coreIllusion,
+        segment.freeEssence,
+        segment.fullEssence,
       );
     default:
       return pickLocalized(segment.freeEssence, locale);

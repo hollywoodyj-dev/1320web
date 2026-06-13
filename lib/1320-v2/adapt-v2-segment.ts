@@ -99,6 +99,22 @@ function mapStringArray(entry: V2Entry, enKey: string, zhKey: string): Localized
   return zhItems.map((zh) => text(undefined, zh));
 }
 
+function applySafeLanguageNote(segment: SegmentContent, enriched: V2Entry): void {
+  const safe = str(enriched, "safe_language_note");
+  if (safe) {
+    segment.lockedPreview = text(safe, str(enriched, "safe_language_note_zh"));
+  }
+}
+
+function applyWisewaveGuidance(segment: SegmentContent, enriched: V2Entry): void {
+  const guidance = text(
+    str(enriched, "wisewave_guidance") ?? str(enriched, "wisewave_reflection"),
+    str(enriched, "wisewave_guidance_zh") ?? str(enriched, "wisewave_reflection_zh"),
+  );
+  if (guidance.en?.trim() || guidance.zh?.trim()) {
+    segment.guidance = guidance;
+  }
+}
 function pickEnglishGuidance(entry: V2Entry): LocalizedText | undefined {
   const ww = str(entry, "wisewave_guidance");
   const wwZh = str(entry, "wisewave_guidance_zh") ?? str(entry, "guidance_zh");
@@ -208,7 +224,6 @@ export function adaptV2Segment(
   const enriched = enrichV2AwarenessEntry(module, code, entry);
 
   const reflection = str(enriched, "reflection_question");
-  const safeNote = str(enriched, "safe_language_note");
   const sections = (() => {
     if (module === "S5") return buildS5Sections(enriched);
     if (module === "S4" || module === "S6" || module === "S7" || module === "S8" || module === "S9") {
@@ -248,29 +263,35 @@ export function adaptV2Segment(
     segment.direction = mapStringArray(enriched, "mission_direction", "mission_direction_zh");
     segment.color = text(str(enriched, "symbolic_color"), str(enriched, "symbolic_color_zh"));
     segment.totem = text(str(enriched, "totem"), str(enriched, "totem_zh"));
-    segment.fullEssence = text(str(enriched, "origin_essence"), str(enriched, "origin_essence_zh"));
-    if (!segment.guidance) {
-      segment.guidance = pickEnglishGuidance(enriched);
-    }
+    segment.esotericLink = text(
+      str(enriched, "esoteric_link") ?? str(enriched, "symbolic_link"),
+      str(enriched, "esoteric_link_zh"),
+    );
+    segment.integrationKey = text(str(enriched, "integration_key"), str(enriched, "integration_key_zh"));
+    const origin = text(str(enriched, "origin_essence"), str(enriched, "origin_essence_zh"));
+    segment.fullEssence = origin;
+    segment.freeEssence = origin;
+    applyWisewaveGuidance(segment, enriched);
+    applySafeLanguageNote(segment, enriched);
   }
 
   if (module === "S0") {
     segment.coreIllusion = text(str(enriched, "core_illusion"), str(enriched, "core_illusion_zh"));
-    if (!segment.coreIllusion.en?.trim() && !segment.coreIllusion.zh?.trim()) {
-      segment.coreIllusion = text(str(enriched, "reflective_summary"), undefined);
-    }
     segment.voidChallenge = text(str(enriched, "void_challenge"), str(enriched, "void_challenge_zh"));
     segment.voidPower = text(str(enriched, "void_power"), str(enriched, "void_power_zh"));
     segment.awakeningPath = text(str(enriched, "path_of_return"), str(enriched, "path_of_return_zh"));
-    segment.freeEssence = text(
-      str(enriched, "core_illusion") ??
-        str(enriched, "reflective_summary") ??
-        freeEssenceSource ??
-        MISSING_EN,
-      str(enriched, "core_illusion_zh") ??
-        str(enriched, "reflective_summary_zh") ??
-        str(enriched, "origin_essence_zh"),
+    segment.integrationKey = text(str(enriched, "integration_key"), str(enriched, "integration_key_zh"));
+    const reflective = text(
+      str(enriched, "reflective_summary"),
+      str(enriched, "reflective_summary_zh"),
     );
+    segment.fullEssence = reflective;
+    segment.freeEssence = reflective;
+    segment.practice = str(enriched, "one_week_practice")
+      ? text(str(enriched, "one_week_practice")!, str(enriched, "one_week_practice_zh"))
+      : undefined;
+    applyWisewaveGuidance(segment, enriched);
+    applySafeLanguageNote(segment, enriched);
   }
 
   if (module === "S2") {
@@ -294,28 +315,47 @@ export function adaptV2Segment(
         str(enriched, "wisewave_guidance_zh"),
       );
     }
-    const safe = str(enriched, "safe_language_note");
-    if (safe) {
-      segment.lockedPreview = text(safe, str(enriched, "safe_language_note_zh"));
-    }
+    applySafeLanguageNote(segment, enriched);
   }
 
   if (module === "S3") {
+    const essence = text(str(enriched, "vibration_essence"), str(enriched, "vibration_essence_zh"));
+    segment.fullEssence = essence;
+    segment.freeEssence = essence;
+    segment.vibrationTraits = text(str(enriched, "soul_traits"), str(enriched, "soul_traits_zh"));
+    segment.strengthSummary = text(str(enriched, "strengths"), str(enriched, "strengths_zh"));
+    segment.challenges = text(str(enriched, "challenges"), str(enriched, "challenges_zh"));
     segment.expressionPattern = text(str(enriched, "expression_style"), str(enriched, "expression_style_zh"));
-    segment.growthEdge = text(str(enriched, "integration_key"), str(enriched, "integration_key_zh"));
-    segment.fullEssence = text(str(enriched, "vibration_essence"), str(enriched, "vibration_essence_zh"));
-    if (!segment.guidance) {
-      segment.guidance = pickEnglishGuidance(enriched);
-    }
-    segment.integrationPrompt = text(str(enriched, "one_week_practice"), str(enriched, "one_week_practice_zh"));
+    segment.integrationKey = text(str(enriched, "integration_key"), str(enriched, "integration_key_zh"));
+    segment.integrationPrompt = text(
+      str(enriched, "one_week_practice"),
+      str(enriched, "one_week_practice_zh"),
+    );
+    applyWisewaveGuidance(segment, enriched);
+    applySafeLanguageNote(segment, enriched);
   }
 
   if (module === "S4") {
-    segment.fullEssence = text(str(enriched, "reflective_summary"), str(enriched, "reflective_summary_zh"));
+    const reflective = text(str(enriched, "reflective_summary"), str(enriched, "reflective_summary_zh"));
+    segment.fullEssence = reflective;
+    segment.freeEssence = reflective;
+    segment.integrationKey = text(str(enriched, "integration_key"), str(enriched, "integration_key_zh"));
+    segment.practice = str(enriched, "one_week_practice")
+      ? text(str(enriched, "one_week_practice")!, str(enriched, "one_week_practice_zh"))
+      : undefined;
+    applyWisewaveGuidance(segment, enriched);
+    applySafeLanguageNote(segment, enriched);
   }
 
-  if (safeNote && module !== "S2" && module !== "S0") {
-    segment.integrationPrompt = text(safeNote, str(enriched, "safe_language_note_zh"));
+  if (module === "S5" || module === "S6" || module === "S7" || module === "S8" || module === "S9") {
+    applyWisewaveGuidance(segment, enriched);
+    applySafeLanguageNote(segment, enriched);
+    if (str(enriched, "one_week_practice")) {
+      segment.practice = text(
+        str(enriched, "one_week_practice")!,
+        str(enriched, "one_week_practice_zh"),
+      );
+    }
   }
 
   return segment;

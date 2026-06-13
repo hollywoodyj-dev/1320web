@@ -7,9 +7,7 @@ import { pickLocalized } from "@/lib/getLocalized";
 import { getSegmentCardImageUrl } from "@/lib/segment-card-asset";
 import { getSegment, type SegmentId } from "@/lib/segments";
 import type { IntegratedSummarySection } from "@/components/report/integrated-summary-card";
-import {
-  coreIllusionMechanismField,
-} from "@/lib/report/format-depth-fields";
+import type { SoulMissionSection } from "@/lib/types/s5-soul-mission";
 import { buildOverviewEssence, truncateOverview } from "@/lib/report/overview-essence";
 import {
   REFLECTION_JOURNAL_PROMPTS,
@@ -107,7 +105,14 @@ function polishReportFields(
   fields: ReportField[],
   options?: { archetype?: string },
 ): ReportField[] {
-  const overview = fields.find((f) => f.label === "Overview")?.value.trim().toLowerCase();
+  const overviewField = fields.find(
+    (f) =>
+      f.label === "Overview" ||
+      f.label === "Reflective Summary" ||
+      f.label === "Origin Essence" ||
+      f.label === "Vibration Essence",
+  );
+  const overview = overviewField?.value.trim().toLowerCase();
   const archetype = options?.archetype?.trim().toLowerCase();
 
   return dedupeFields(
@@ -117,10 +122,30 @@ function polishReportFields(
       if (isPlaceholderCopy(value)) return false;
       const lower = value.toLowerCase();
       if (archetype && lower === archetype) return false;
-      if (overview && f.label !== "Overview" && lower === overview) return false;
+      if (
+        overview &&
+        f.label !== overviewField?.label &&
+        f.label !== "Archetype" &&
+        f.label !== "Mirror Archetype" &&
+        f.label !== "Void Archetype" &&
+        f.label !== "Vibration Archetype" &&
+        lower === overview
+      ) {
+        return false;
+      }
       return true;
     }),
   );
+}
+
+function missionSectionFields(
+  locale: Locale,
+  sections: SoulMissionSection[] | undefined,
+): ReportField[] {
+  if (!sections?.length) return [];
+  return sections
+    .map((section) => field(locale, pickLocalized(section.label, locale), section.body))
+    .filter((f): f is ReportField => Boolean(f));
 }
 
 function buildS1Fields(
@@ -130,15 +155,18 @@ function buildS1Fields(
   archetype: string,
 ): ReportField[] {
   const all = [
-    field(locale, "Overview", segment.fullEssence ?? segment.freeEssence),
+    field(locale, "Archetype", segment.title),
+    field(locale, "Origin Essence", segment.fullEssence ?? segment.freeEssence),
     listField(locale, "Soul Traits", segment.soulTraits),
-    listField(locale, "Core Gifts", segment.coreGifts),
-    listField(locale, "Shadow Pattern", segment.shadowPatterns),
-    field(locale, "Soul Lesson", segment.lesson),
-    listField(locale, "Direction", segment.direction),
-    field(locale, "Color Frequency", segment.color),
+    listField(locale, "Strengths", segment.coreGifts),
+    listField(locale, "Shadow Frequency", segment.shadowPatterns),
+    field(locale, "Core Lesson", segment.lesson),
+    listField(locale, "Mission Direction", segment.direction),
+    field(locale, "Integration Key", segment.integrationKey),
+    field(locale, "Wisewave Guidance", segment.guidance),
+    field(locale, "Symbolic Color", segment.color),
     field(locale, "Totem", segment.totem),
-    field(locale, "Integration Guidance", segment.guidance),
+    field(locale, "Esoteric Link", segment.esotericLink),
   ].filter((f): f is ReportField => Boolean(f));
 
   return polishReportFields(all, { archetype });
@@ -152,11 +180,16 @@ function buildS3Fields(
   s3Raw: number,
 ): ReportField[] {
   const all = [
-    field(locale, "Overview", segment.fullEssence ?? segment.freeEssence),
+    field(locale, "Vibration Archetype", segment.title),
+    field(locale, "Vibration Essence", segment.fullEssence ?? segment.freeEssence),
     field(locale, "Raw Value", { en: String(s3Raw), zh: String(s3Raw) }),
-    field(locale, "Core Strengths", segment.expressionPattern),
-    field(locale, "Growth Edge", segment.growthEdge),
-    field(locale, "Integration Guidance", segment.guidance ?? segment.integrationPrompt),
+    field(locale, "Soul Traits", segment.vibrationTraits),
+    field(locale, "Strengths", segment.strengthSummary),
+    field(locale, "Challenges", segment.challenges),
+    field(locale, "Expression Style", segment.expressionPattern),
+    field(locale, "Integration Key", segment.integrationKey),
+    field(locale, "One-Week Practice", segment.integrationPrompt),
+    field(locale, "Wisewave Guidance", segment.guidance),
   ].filter((f): f is ReportField => Boolean(f));
 
   return polishReportFields(all, { archetype });
@@ -189,12 +222,15 @@ function buildS0Fields(
   archetype: string,
 ): ReportField[] {
   const all = [
-    field(locale, "Overview", segment.freeEssence),
+    field(locale, "Void Archetype", segment.title),
+    field(locale, "Reflective Summary", segment.fullEssence ?? segment.freeEssence),
     field(locale, "Core Illusion", segment.coreIllusion),
-    coreIllusionMechanismField(locale, segment),
+    field(locale, "Void Challenge", segment.voidChallenge),
     field(locale, "Void Power", segment.voidPower),
-    field(locale, "Awakening Path", segment.awakeningPath),
-    field(locale, "Integration Guidance", segment.guidance),
+    field(locale, "Path of Return", segment.awakeningPath),
+    field(locale, "Integration Key", segment.integrationKey),
+    field(locale, "One-Week Practice", segment.practice),
+    field(locale, "Wisewave Guidance", segment.guidance),
   ].filter((f): f is ReportField => Boolean(f));
 
   return polishReportFields(all, { archetype });

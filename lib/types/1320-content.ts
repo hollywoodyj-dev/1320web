@@ -49,6 +49,12 @@ export type SegmentContent = {
   integrationKey?: LocalizedText;
   expressionPattern?: LocalizedText;
   growthEdge?: LocalizedText;
+  /** S3 steward string fields (not always arrays). */
+  vibrationTraits?: LocalizedText;
+  strengthSummary?: LocalizedText;
+  challenges?: LocalizedText;
+  /** S1 esoteric_link from steward database. */
+  esotericLink?: LocalizedText;
   /** S5 Soul Mission — deterministic seed assembly (premium). */
   soulMissionSections?: SoulMissionSection[];
   assemblySignature?: string;

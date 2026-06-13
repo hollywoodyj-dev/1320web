@@ -45,6 +45,9 @@ assert(
   t(full.s4Content!.title, "en") === "The Loop of Perfection",
   "S4 v2 lookup by S4-14 not S1 shadow",
 );
+assert((full.s4Content!.soulMissionSections?.length ?? 0) >= 8, "S4 should have steward rendering fields");
+assert((full.s6Content!.soulMissionSections?.length ?? 0) >= 5, "S6 should have rendering blocks");
+assert((full.s7Content!.soulMissionSections?.length ?? 0) >= 5, "S7 should have rendering blocks");
 
 console.log("=== v2 get1320Content — free tier (/result) ===");
 const free = get1320Content(
@@ -66,5 +69,7 @@ const advanced = get1320Content(
 assert(advanced.s8Content !== null, "advanced tier includes S8");
 assert(advanced.s9Content !== null, "advanced tier includes S9");
 assert(advanced.codes.s9Code === "S9-07", `S9 expected S9-07, got ${advanced.codes.s9Code}`);
+assert((advanced.s8Content!.soulMissionSections?.length ?? 0) >= 5, "S8 should have rendering blocks");
+assert((advanced.s9Content!.soulMissionSections?.length ?? 0) >= 5, "S9 should have rendering blocks");
 
 console.log("\nPASS: smoke-v2-get-content — USE_1320_V2_CONTENT branch");

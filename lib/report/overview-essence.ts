@@ -30,6 +30,8 @@ export function buildOverviewEssence(
 ): string {
   switch (segmentId) {
     case "s1": {
+      const essence = pickLocalized(segment.fullEssence ?? segment.freeEssence, locale).trim();
+      if (essence) return stripS1Boilerplate(essence, segment, locale);
       const traits = segment.soulTraits
         ?.map((item) => pickLocalized(item, locale).trim())
         .filter(Boolean);
@@ -61,6 +63,8 @@ export function buildOverviewEssence(
       );
     }
     case "s0": {
+      const reflective = pickLocalized(segment.fullEssence ?? segment.freeEssence, locale).trim();
+      if (reflective) return reflective;
       const parts = [
         pickLocalized(segment.title, locale),
         pickLocalized(segment.coreIllusion, locale),

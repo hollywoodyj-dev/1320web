@@ -137,6 +137,9 @@ export function mergeS1Entry(entry: V2Entry, code: string): V2Entry {
   setIfEmpty(merged, "totem_zh", str(v1, "totemZh"));
   setIfEmpty(merged, "wisewave_guidance", str(v1, "guidanceEn"));
   setIfEmpty(merged, "wisewave_guidance_zh", str(v1, "guidanceZh"));
+  setIfEmpty(merged, "esoteric_link", str(v1, "symbolicLink"));
+  setIfEmpty(merged, "integration_key", str(v1, "integrationKeyEn"));
+  setIfEmpty(merged, "integration_key_zh", str(v1, "integrationKeyZh"));
 
   return merged;
 }

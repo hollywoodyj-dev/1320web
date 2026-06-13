@@ -98,6 +98,16 @@ function s5Sections(sections: SoulMissionSection[] | undefined, ids: string[], l
     .filter((f): f is NonNullable<typeof f> => Boolean(f));
 }
 
+function moduleSectionFields(
+  sections: SoulMissionSection[] | undefined,
+  locale: Locale,
+): ({ label: string; value: string; items?: string[] } | null)[] {
+  if (!sections?.length) return [];
+  return sections
+    .map((section) => field(pickLocalized(section.label, locale), pickLocalized(section.body, locale)))
+    .filter((f): f is NonNullable<typeof f> => Boolean(f));
+}
+
 function buildSevenDays(
   content: Get1320ContentResult,
   blueprint: IntegratedSoulBlueprint | null,
@@ -240,29 +250,40 @@ export function buildFullReportPayload(
       { type: "text", variant: "title", text: "Soul Frequency S1" },
       { type: "text", variant: "subtitle", text: codes.s1Code },
       fieldsBlock(
-        field("Overview", pickLocalized(s1.fullEssence ?? s1.freeEssence, locale)),
+        field("Archetype", pickLocalized(s1.title, locale)),
+        field("Origin Essence", pickLocalized(s1.fullEssence ?? s1.freeEssence, locale)),
         field("Soul Traits", "", listLt(s1.soulTraits, locale)),
-        field("Core Gifts", "", listLt(s1.coreGifts, locale)),
+        field("Strengths", "", listLt(s1.coreGifts, locale)),
       ),
     ],
     "s1-overflow": [
       { type: "text", variant: "title", text: "Soul Frequency S1" },
       { type: "text", variant: "subtitle", text: codes.s1Code },
       fieldsBlock(
-        field("Shadow Pattern", "", listLt(s1.shadowPatterns, locale)),
-        field("Soul Lesson", lt(s1, "lesson", locale)),
-        field("Direction", "", listLt(s1.direction, locale)),
-        field("Integration Guidance", lt(s1, "guidance", locale)),
+        field("Shadow Frequency", "", listLt(s1.shadowPatterns, locale)),
+        field("Core Lesson", lt(s1, "lesson", locale)),
+        field("Mission Direction", "", listLt(s1.direction, locale)),
+        field("Integration Key", lt(s1, "integrationKey", locale)),
+        field("Wisewave Guidance", lt(s1, "guidance", locale)),
+        field("Symbolic Color", lt(s1, "color", locale)),
+        field("Totem", lt(s1, "totem", locale)),
+        field("Esoteric Link", lt(s1, "esotericLink", locale)),
       ),
     ],
     "s3-divider": [],
     "s3-content": [
       ...sectionHeaderBlocks("S3 Overview", codes.s3Code),
       fieldsBlock(
-        field("Energy Expression", pickLocalized(s3.fullEssence ?? s3.freeEssence, locale)),
-        field("Core Strengths", lt(s3, "expressionPattern", locale)),
-        field("Growth Edge", lt(s3, "growthEdge", locale)),
-        field("Alignment", lt(s3, "guidance", locale) || lt(s3, "integrationPrompt", locale)),
+        field("Vibration Archetype", pickLocalized(s3.title, locale)),
+        field("Vibration Essence", pickLocalized(s3.fullEssence ?? s3.freeEssence, locale)),
+        field("Raw Value", String(codes.s3Raw)),
+        field("Soul Traits", lt(s3, "vibrationTraits", locale)),
+        field("Strengths", lt(s3, "strengthSummary", locale)),
+        field("Challenges", lt(s3, "challenges", locale)),
+        field("Expression Style", lt(s3, "expressionPattern", locale)),
+        field("Integration Key", lt(s3, "integrationKey", locale)),
+        field("One-Week Practice", lt(s3, "integrationPrompt", locale)),
+        field("Wisewave Guidance", lt(s3, "guidance", locale)),
         field("Reflection", pickLocalized(content.segmentReflections.s3, locale)),
       ),
     ],
@@ -270,30 +291,29 @@ export function buildFullReportPayload(
     "s2-content": [
       ...sectionHeaderBlocks("S2 Overview", codes.s2Code),
       fieldsBlock(
-        field("Overview", pickLocalized(s2.fullEssence ?? s2.freeEssence, locale)),
+        field("Mirror Archetype", pickLocalized(s2.title, locale)),
+        field("Reflective Summary", pickLocalized(s2.fullEssence ?? s2.freeEssence, locale)),
         field("Relationship Dynamic", lt(s2, "relationshipPattern", locale)),
       ),
     ],
     "s2-gifts": [
       ...sectionHeaderBlocks("S2 Relationship Gifts", codes.s2Code),
       fieldsBlock(
-        field("Relationship Gifts", lt(s2, "integrationPrompt", locale)),
-        field("Relational Strengths", pickLocalized(s2.fullEssence ?? s2.freeEssence, locale)),
+        field("Karmic Loop", lt(s2, "karmicLoop", locale)),
+        field("Lesson", lt(s2, "mirrorLesson", locale)),
+        field("Healing Path", lt(s2, "integrationPrompt", locale)),
       ),
     ],
     "s2-lessons": [
       ...sectionHeaderBlocks("S2 Relationship Lessons", codes.s2Code),
       fieldsBlock(
-        field("Relationship Trigger Pattern", lt(s2, "relationshipPattern", locale)),
-        field("Karmic Loop", lt(s2, "karmicLoop", locale)),
-        field("Mirror Lesson", lt(s2, "mirrorLesson", locale)),
+        field("Integration Key", lt(s2, "integrationKey", locale)),
+        field("Wisewave Guidance", lt(s2, "guidance", locale)),
       ),
     ],
     "s2-alignment": [
       ...sectionHeaderBlocks("S2 Relationship Alignment", codes.s2Code),
       fieldsBlock(
-        field("Healing Path", lt(s2, "integrationPrompt", locale)),
-        field("Integration Guidance", lt(s2, "guidance", locale)),
         field("Reflection", pickLocalized(content.segmentReflections.s2, locale)),
       ),
     ],
@@ -301,7 +321,8 @@ export function buildFullReportPayload(
     "s0-overview": [
       ...sectionHeaderBlocks("S0 Overview", codes.s0Code),
       fieldsBlock(
-        field("Overview", pickLocalized(s0.freeEssence, locale)),
+        field("Void Archetype", pickLocalized(s0.title, locale)),
+        field("Reflective Summary", pickLocalized(s0.fullEssence ?? s0.freeEssence, locale)),
         field("Core Illusion", lt(s0, "coreIllusion", locale)),
         field("Void Power", lt(s0, "voidPower", locale)),
       ),
@@ -309,16 +330,16 @@ export function buildFullReportPayload(
     "s0-shadow": [
       ...sectionHeaderBlocks("S0 Shadow Pattern", codes.s0Code),
       fieldsBlock(
-        field("Core Illusion Mechanism", lt(s0, "voidChallenge", locale) || lt(s0, "coreIllusion", locale)),
-        field("Shadow Pattern", lt(s0, "voidChallenge", locale)),
+        field("Void Challenge", lt(s0, "voidChallenge", locale)),
+        field("Path of Return", lt(s0, "awakeningPath", locale)),
       ),
     ],
     "s0-healing": [
       ...sectionHeaderBlocks("S0 Healing Path", codes.s0Code),
       fieldsBlock(
-        field("Path of Return", lt(s0, "awakeningPath", locale)),
-        field("Void Power", lt(s0, "voidPower", locale)),
-        field("Integration Guidance", lt(s0, "guidance", locale)),
+        field("Integration Key", lt(s0, "integrationKey", locale)),
+        field("One-Week Practice", lt(s0, "practice", locale)),
+        field("Wisewave Guidance", lt(s0, "guidance", locale)),
         field("Reflection", pickLocalized(content.segmentReflections.s0, locale)),
       ),
     ],
@@ -326,12 +347,16 @@ export function buildFullReportPayload(
     "s4-content": s4
       ? [
           ...sectionHeaderBlocks(pickLocalized(s4.title, locale), s4.segmentCode),
-          fieldsBlock(
-            field("Essence", pickLocalized(s4.fullEssence ?? s4.freeEssence, locale)),
-            field("Core Pattern", "", listLt(s4.shadowPatterns, locale)),
-            field("Integration", lt(s4, "lesson", locale)),
-            field("Guidance", lt(s4, "guidance", locale)),
-          ),
+          fieldsBlock(...moduleSectionFields(s4.soulMissionSections, locale)),
+          ...(s4.reflectionQuestion
+            ? [
+                {
+                  type: "text" as const,
+                  variant: "guidance" as const,
+                  text: pickLocalized(s4.reflectionQuestion, locale),
+                },
+              ]
+            : []),
         ]
       : [{ type: "text", variant: "body", text: "Core Shadow Pattern content is unavailable for this code." }],
     "integrated-divider": [],
@@ -397,20 +422,22 @@ export function buildFullReportPayload(
           { type: "text", variant: "subtitle", text: pickLocalized(s6.title, locale) },
           { type: "text", variant: "code", text: s6.segmentCode ?? "" },
           { type: "text", variant: "disclaimer", text: S6_VALUE_DISCLAIMER },
-          fieldsBlock(
-            field("Core Frequency", pickLocalized(s6.fullEssence ?? s6.freeEssence, locale)),
-            field("Soul–Wealth Relationship", lt(s6, "expressionPattern", locale)),
-          ),
+          fieldsBlock(...moduleSectionFields(s6.soulMissionSections?.slice(0, 3), locale)),
         ]
       : [],
     "s6-alignment": s6
       ? [
           ...sectionHeaderBlocks("S6 Gifts · Shadow · Alignment", s6.segmentCode),
-          fieldsBlock(
-            field("Shadow Frequency", lt(s6, "growthEdge", locale)),
-            field("Karmic Money Lesson", lt(s6, "lesson", locale)),
-            field("Grounded Guidance", lt(s6, "guidance", locale)),
-          ),
+          fieldsBlock(...moduleSectionFields(s6.soulMissionSections?.slice(3), locale)),
+          ...(s6.guidance
+            ? [
+                {
+                  type: "text" as const,
+                  variant: "guidance" as const,
+                  text: pickLocalized(s6.guidance, locale),
+                },
+              ]
+            : []),
           { type: "text", variant: "disclaimer", text: pickLocalized(s6.lockedPreview, locale) },
         ]
       : [],

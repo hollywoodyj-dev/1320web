@@ -1,7 +1,12 @@
 {
   "version": "2.0",
-  "importedAt": "2026-06-14",
-  "source": "1320 内容资产数据库-更新版（S0-S9)",
+  "importedAt": "2026-06-13",
+  "source": "1320 内容资产数据库-更新版（S0-S9) + v1 bilingual masters",
+  "bilingual": true,
+  "locale_exports": {
+    "en": "data/1320-v2-locale/en",
+    "zh": "data/1320-v2-locale/zh"
+  },
   "files": {
     "S0": "s0-void-gate.json",
     "S1": "s1-soul-origin.json",

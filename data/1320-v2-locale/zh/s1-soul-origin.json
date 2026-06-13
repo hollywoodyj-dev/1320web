@@ -1,0 +1,1643 @@
+{
+  "document": {
+    "title": "1320 S1 Soul Origin Content Asset Database v2 EN",
+    "version": "2.0",
+    "date": "2026-06-13",
+    "system": "1320 Soul Origin Code System™",
+    "module": "S1 Soul Origin / 灵魂本源",
+    "product_context": "TheSoulProfile / SeeSoul / NOVA",
+    "purpose": "Standalone S1 Soul Origin content asset database for NOVA lookup and Awareness Layer report rendering."
+  },
+  "positioning": {
+    "layer": "Awareness Layer",
+    "layer_zh": "看见层",
+    "module_function": "S1 Soul Origin reflects the foundational origin frequency, core archetype, natural traits, strengths, shadow frequency, and primary growth lesson.",
+    "important_boundary": "S1 is not a fixed identity, destiny, personality diagnosis, spiritual rank, or life sentence. It is a symbolic reflection of a foundational soul-origin pattern."
+  },
+  "calculation_dependency": {
+    "formula": "S1 = digit_sum(birth_year)",
+    "digit_sum": "Sum all digits of the four-digit birth year.",
+    "range": "S1-01 to S1-44",
+    "zero_rule": "Not applicable under normal four-digit birth year calculation.",
+    "example": {
+      "birth_year": 1980,
+      "calculation": "1 + 9 + 8 + 0 = 18",
+      "result": "S1-18"
+    }
+  },
+  "rendering_fields": [
+    "Origin Essence",
+    "Archetype",
+    "Soul Traits",
+    "Strengths",
+    "Shadow Frequency",
+    "Core Lesson",
+    "Mission Direction",
+    "Integration Key",
+    "Wisewave Guidance",
+    "Symbolic Color",
+    "Totem",
+    "Esoteric Link",
+    "Safe Language Note"
+  ],
+  "nova_rendering_rule": {
+    "lookup_behavior": "NOVA calculates S1, looks up the matching S1-XX entry, and renders the approved fields.",
+    "allowed_generation": [
+      "Short bridge sentence from Positioning Disclaimer to S1 section.",
+      "Light formatting and localization.",
+      "Brief integration summary using retrieved content only."
+    ],
+    "must_not_generate": [
+      "Do not create a new S1 archetype from scratch.",
+      "Do not treat S1 as fixed identity, destiny, personality diagnosis, or spiritual rank.",
+      "Do not tell the user what career, relationship, or major life decision they must choose based on S1."
+    ]
+  },
+  "content": [
+    {
+      "code": "S1-01",
+      "numeric_value": 1,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "破晓者",
+      "origin_essence": "你携带的是「破晓者」的原频。行动力强、直觉快速天生开路者以内在驱动力前进擅长启动、新局、改革",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "行动力强、直觉快速",
+        "天生开路者",
+        "以内在驱动力前进",
+        "擅长启动、新局、改革"
+      ],
+      "strengths": [
+        "在混乱中找到突破点",
+        "天生领导力",
+        "推动停滞能量向前流动"
+      ],
+      "shadow_frequency": [
+        "容易躁动、缺乏耐心",
+        "抗拒放慢、无法停下来",
+        "以速度代替自我价值"
+      ],
+      "core_lesson": "学习以觉知稳定力量，而非以行动累积价值感。",
+      "mission_direction": [
+        "适合开创事业、独立领导、创新工作",
+        "在关系中需练习放慢脚步与共创"
+      ],
+      "symbolic_color": "金白光",
+      "totem": "黎明之鹰",
+      "wisewave_guidance": "“你不是来证明速度的，你是来点亮方向的。   当你停止用‘更多行动’证明自己，你会遇见真正的力量。   你越能停下来倾听，你的道路就越自动加速。”",
+      "esoteric_link": "Atum / First Flame"
+    },
+    {
+      "code": "S1-02",
+      "numeric_value": 2,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "连接者",
+      "origin_essence": "你携带的是「连接者」的原频。温和却有力量擅长调和冲突与差异自然而然成为“关系的桥梁”能在不同世界之间穿梭",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "温和却有力量",
+        "擅长调和冲突与差异",
+        "自然而然成为“关系的桥梁”",
+        "能在不同世界之间穿梭"
+      ],
+      "strengths": [
+        "擅长理解他人动机",
+        "让复杂的人际关系恢复流动",
+        "能将两种看似对立的能量连接起来"
+      ],
+      "shadow_frequency": [
+        "容易过度共情、迷失界限",
+        "不敢表达真实需求",
+        "担心自己一说“不”就会破坏关系"
+      ],
+      "core_lesson": "学习维护自我，而不是永远做那个“支持所有人”的人。",
+      "mission_direction": [
+        "适合沟通、关系辅导、跨领域整合",
+        "在灵性工作中具有天然的疗愈能力"
+      ],
+      "symbolic_color": "青蓝光",
+      "totem": "白鹿（平和之桥）",
+      "wisewave_guidance": "“你不是来承担所有人的重量，而是来让世界恢复流动。   当你允许自己拥有界限，你才能成为真正的连接者。   你的温柔不是弱点，而是照亮人心的力量。”",
+      "esoteric_link": "Hathor / Harmonic Weavers"
+    },
+    {
+      "code": "S1-03",
+      "numeric_value": 3,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "预见者",
+      "origin_essence": "你携带的是「预见者」的原频。高度敏感、直觉锐利能看见别人看不见的方向具未来感、创新思维思绪独特，不随波逐流",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "高度敏感、直觉锐利",
+        "能看见别人看不见的方向",
+        "具未来感、创新思维",
+        "思绪独特，不随波逐流"
+      ],
+      "strengths": [
+        "洞察力极高",
+        "能识别趋势、潜能与隐形动机",
+        "在创造性领域表现突出"
+      ],
+      "shadow_frequency": [
+        "容易过度思考",
+        "感受太多、难以落地",
+        "觉得自己与世界不同，产生孤独感"
+      ],
+      "core_lesson": "把洞察落地，把感觉变成方向，把灵性放进现实。",
+      "mission_direction": [
+        "适合策略、创新、艺术、灵性研究",
+        "能成为指导他人觉醒的高频引导者"
+      ],
+      "symbolic_color": "紫曜光",
+      "totem": "黑羽乌鸦（深见之眼）",
+      "wisewave_guidance": "“你的眼睛看得太远，所以常常忘了你的脚在哪里。   当你让洞察穿过身体落地，你的愿景会自然成形。   你不是来逃离世界，而是来为世界带来新看法。”",
+      "esoteric_link": "Isis · The Vision Keepers"
+    },
+    {
+      "code": "S1-04",
+      "numeric_value": 4,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "稳定者",
+      "origin_essence": "你携带的是「稳定者」的原频。踏实、可靠、能承载压力是团队与家人的“定海神针”有强大耐心与结构能力做事稳、深、慢、准",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "踏实、可靠、能承载压力",
+        "是团队与家人的“定海神针”",
+        "有强大耐心与结构能力",
+        "做事稳、深、慢、准"
+      ],
+      "strengths": [
+        "为他人提供安全感",
+        "能把混乱系统化、结构化",
+        "擅长长期项目与持续性成长"
+      ],
+      "shadow_frequency": [
+        "害怕改变、抗拒不确定",
+        "容易过度承担、压抑需求",
+        "误以为“稳定＝不能出错”"
+      ],
+      "core_lesson": "学会在稳定中保持灵活，让结构服务灵魂，而不是束缚灵魂。",
+      "mission_direction": [
+        "适合组织管理、教育、疗愈、财务",
+        "是多数团队的“基础频率守护者”"
+      ],
+      "symbolic_color": "大地棕光",
+      "totem": "龟（稳固与承载）",
+      "wisewave_guidance": "“你不需要永远做那个稳住一切的人。   当你允许自己松开一点点，你的生命反而会变得更轻盈。   稳定不是负担，而是一种温柔的力量。”",
+      "esoteric_link": "Geb · Foundation Bearers"
+    },
+    {
+      "code": "S1-05",
+      "numeric_value": 5,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "催化者",
+      "origin_essence": "你携带的是「催化者」的原频。有强烈影响力进入一个空间就会让能量改变天生适合破局、突破、激发潜能带有“激活他人”的频率",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "有强烈影响力",
+        "进入一个空间就会让能量改变",
+        "天生适合破局、突破、激发潜能",
+        "带有“激活他人”的频率"
+      ],
+      "strengths": [
+        "能点醒他人、启发他人",
+        "带动团队前进",
+        "在关键时刻具有强力突破能量"
+      ],
+      "shadow_frequency": [
+        "容易让他人感到压力",
+        "能量过强导致误解",
+        "常常“点醒别人，却忽略自己”"
+      ],
+      "core_lesson": "学习在激发他人之前，先稳住自己的能量。",
+      "mission_direction": [
+        "适合教学、教练、疗愈、创业、公众表达",
+        "是“灵魂加速器”，能帮助他人跨越瓶颈"
+      ],
+      "symbolic_color": "火红光",
+      "totem": "凤凰（焚旧生新）",
+      "wisewave_guidance": "“你的力量不是用来冲破他人，而是用来点亮他人。   当你先安住自己，你的存在就会成为最大的催化。   你不是火焰的破坏者，而是火焰的唤醒者。”",
+      "esoteric_link": "Sekhmet · Fire Transformations"
+    },
+    {
+      "code": "S1-06",
+      "numeric_value": 6,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "愈合者",
+      "origin_essence": "你携带的是「愈合者」的原频。高度感受性能读取他人情绪深处天生具有安抚能量在混乱中带来温暖与修复",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "高度感受性",
+        "能读取他人情绪深处",
+        "天生具有安抚能量",
+        "在混乱中带来温暖与修复"
+      ],
+      "strengths": [
+        "能疗愈、能倾听、能容纳",
+        "直觉性极强的情绪洞察",
+        "让人接近后自然放松"
+      ],
+      "shadow_frequency": [
+        "容易承担他人情绪",
+        "以“照顾别人”逃避照顾自己",
+        "害怕表达自身需求"
+      ],
+      "core_lesson": "学习把能量收回自己，而不是不断成为他人的避风港。",
+      "mission_direction": [
+        "适合疗愈、咨询、教育、亲密关系引导",
+        "在团队中是“能量调频者”"
+      ],
+      "symbolic_color": "水绿光（心轮愈合频率）",
+      "totem": "鹿（温柔与敏感的力量）",
+      "wisewave_guidance": "“你不是所有人的药，你不是世界必须依赖的光。   当你愿意把温柔留给自己，你的疗愈才真正开始。   修复别人之前，请先拥抱你自己。”",
+      "esoteric_link": "Hathor · Emotional Resonance"
+    },
+    {
+      "code": "S1-07",
+      "numeric_value": 7,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "坚毅者",
+      "origin_essence": "你携带的是「坚毅者」的原频。意志强、行动力高不轻易退缩有强烈的目标感与方向感能在逆境中保持力量",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "意志强、行动力高",
+        "不轻易退缩",
+        "有强烈的目标感与方向感",
+        "能在逆境中保持力量"
+      ],
+      "strengths": [
+        "在危机中最可靠",
+        "能保护自己与所爱之人",
+        "拥有突破极限的能力"
+      ],
+      "shadow_frequency": [
+        "把坚强当成盔甲",
+        "害怕脆弱被看见",
+        "把斗争当成生活方式"
+      ],
+      "core_lesson": "学习让力量变得柔软，而不是永远在对抗。",
+      "mission_direction": [
+        "适合领导、创业、运动、危机处理",
+        "灵性道路上是“意志的觉醒者”"
+      ],
+      "symbolic_color": "铁蓝光",
+      "totem": "黑豹（隐形力量与无声行动）",
+      "wisewave_guidance": "“真正的力量不是压住世界，而是停止与自己作战。   当你允许脆弱进入，你的灵魂会比任何盔甲都更强。   你不是战士，你是力量本身。”",
+      "esoteric_link": "Anubis · Silent Strength"
+    },
+    {
+      "code": "S1-08",
+      "numeric_value": 8,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "承载者",
+      "origin_essence": "你携带的是「承载者」的原频。温暖、踏实、能给予擅长照顾、支持、陪伴令他人感到“被接住”对情感需求极度敏感",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "温暖、踏实、能给予",
+        "擅长照顾、支持、陪伴",
+        "令他人感到“被接住”",
+        "对情感需求极度敏感"
+      ],
+      "strengths": [
+        "稳定关系空间",
+        "在团队中带来凝聚力",
+        "具有养育型创造力"
+      ],
+      "shadow_frequency": [
+        "容易牺牲自我",
+        "把“付出”当成价值来源",
+        "在关系中容易失去界限"
+      ],
+      "core_lesson": "学习在给予的同时，不背叛自己。",
+      "mission_direction": [
+        "适合家庭疗愈、心理照护、社区建设",
+        "也是团队的“能量承载者”"
+      ],
+      "symbolic_color": "柔杏光",
+      "totem": "树（承载与滋养）",
+      "wisewave_guidance": "“爱不是付出到枯萎，而是让自己也被滋养。   当你把自己放回生命的中心，你的爱才真正有力量。   你不是容器，你是生命本身的流动。”",
+      "esoteric_link": "Isis · Sacred Mother Field"
+    },
+    {
+      "code": "S1-09",
+      "numeric_value": 9,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "拓界者",
+      "origin_essence": "你携带的是「拓界者」的原频。好奇心旺盛不喜欢停留在同一个框架热爱学习、体验、旅行、冒险对未知充满吸引力",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "好奇心旺盛",
+        "不喜欢停留在同一个框架",
+        "热爱学习、体验、旅行、冒险",
+        "对未知充满吸引力"
+      ],
+      "strengths": [
+        "能打开新世界、新视角、新路径",
+        "适应力强、不害怕变化",
+        "生命充满灵感与创造性"
+      ],
+      "shadow_frequency": [
+        "缺乏稳定",
+        "容易分心，无法长期坚持",
+        "逃避深度承诺"
+      ],
+      "core_lesson": "学习把探索能力转化为创造，而不是永远只停在体验层。",
+      "mission_direction": [
+        "适合创新、教育、旅行、科技、研究",
+        "能成为“世界之间的桥梁”"
+      ],
+      "symbolic_color": "风蓝光",
+      "totem": "鹰隼（远视之眼）",
+      "wisewave_guidance": "“你不是迷失，而是在扩展你的生命地图。   当你允许自己专注，你会发现未知开始向你敞开。   你并非追寻世界，你追寻的是你自己的可能性。”",
+      "esoteric_link": "Thoth · Pathfinders"
+    },
+    {
+      "code": "S1-10",
+      "numeric_value": 10,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "守护者",
+      "origin_essence": "你携带的是「守护者」的原频。忠诚、稳重、可靠保护欲很强天生会为他人守住界线是“团队的盾”",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "忠诚、稳重、可靠",
+        "保护欲很强",
+        "天生会为他人守住界线",
+        "是“团队的盾”"
+      ],
+      "strengths": [
+        "能识别危险与能量不平衡",
+        "在混乱中带来安全感",
+        "能为他人撑起空间"
+      ],
+      "shadow_frequency": [
+        "过度保护、过度控制",
+        "不信任他人能力",
+        "害怕别人离开导致紧抓不放"
+      ],
+      "core_lesson": "学习放下“守住一切”的责任感，让生命自己流动。",
+      "mission_direction": [
+        "适合安全、管理、协调、策略、资源管理",
+        "在灵性工作中具有“能量护卫者”的角色"
+      ],
+      "symbolic_color": "深绿光（保护频率）",
+      "totem": "狼（忠诚与守望）",
+      "wisewave_guidance": "“你不是世界的守门人，你不是所有人的责任。   当你停止紧抓，你会发现关系自然稳固。   守护不是控制，而是允许生命展开。”",
+      "esoteric_link": "Horus · Guardianship Lineage   S11–S15 · Wisewave 原频编号训练集（正式训练版）"
+    },
+    {
+      "code": "S1-11",
+      "numeric_value": 11,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "远见者",
+      "origin_essence": "你携带的是「远见者」的原频。拥有大局观善于构建未来蓝图对趋势、模式、可能性敏锐天生思考超越当下框架",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "拥有大局观",
+        "善于构建未来蓝图",
+        "对趋势、模式、可能性敏锐",
+        "天生思考超越当下框架"
+      ],
+      "strengths": [
+        "能设计长期方向与大范围策略",
+        "是组织或团队的“未来之眼”",
+        "能启发他人看到更大的道路"
+      ],
+      "shadow_frequency": [
+        "想得太远，忽略当下需要",
+        "容易因计划过大而停滞",
+        "对行动细节缺乏耐心"
+      ],
+      "core_lesson": "学会让愿景落地，不是只停留在“未来”，而是从当下开始。",
+      "mission_direction": [
+        "适合策略、创意领导、趋势研究、灵性引导",
+        "能成为推动人类意识前进的“方向制定者”"
+      ],
+      "symbolic_color": "深紫蓝光（Vision Frequency）",
+      "totem": "隼（远见的精准）",
+      "wisewave_guidance": "“你看到的未来不是幻觉，而是一种灵魂记忆。   当你把愿景带回当下，它才会真正成形。   未来不是等待，而是从此刻的每一步被创造出来。”",
+      "esoteric_link": "Ptah · The Architects"
+    },
+    {
+      "code": "S1-12",
+      "numeric_value": 12,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "感应者",
+      "origin_essence": "你携带的是「感应者」的原频。能量敏感、直觉型容易感受他人情绪、气场、潜意识信息天生具有高维感知能力属于“情绪雷达”型灵魂",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "能量敏感、直觉型",
+        "容易感受他人情绪、气场、潜意识信息",
+        "天生具有高维感知能力",
+        "属于“情绪雷达”型灵魂"
+      ],
+      "strengths": [
+        "能看见别人看不见的微妙变化",
+        "具有天然的疗愈与陪伴能力",
+        "在关系中深具同理心与洞察力"
+      ],
+      "shadow_frequency": [
+        "容易被能量淹没",
+        "把别人的情绪当成自己的",
+        "害怕表达“不”，害怕造成冲突"
+      ],
+      "core_lesson": "学会分辨“属于你”与“属于他人的能量”。",
+      "mission_direction": [
+        "适合疗愈、创作、咨询、能量工作",
+        "也是团队中最重要的“情绪稳定器”"
+      ],
+      "symbolic_color": "银蓝光（感知频率）",
+      "totem": "白猫头鹰（静夜感知）",
+      "wisewave_guidance": "“你的敏感不是弱点，而是你的天赋。   当你停止吸收他人的重量，你的灵魂感知会升得更高。   你不是海绵，你是光。”",
+      "esoteric_link": "Nephthys · Psychic Sensitivity"
+    },
+    {
+      "code": "S1-13",
+      "numeric_value": 13,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "逆行者",
+      "origin_essence": "你携带的是「逆行者」的原频。拒绝盲从天生反叛、追求真实不愿被框架限制思想独立、行为大胆",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "拒绝盲从",
+        "天生反叛、追求真实",
+        "不愿被框架限制",
+        "思想独立、行为大胆"
+      ],
+      "strengths": [
+        "能拆解旧系统",
+        "天生的“打破幻相者”",
+        "让世界看见另一种道路"
+      ],
+      "shadow_frequency": [
+        "容易对权威产生敌意",
+        "把反对当成身份",
+        "与世界对立而感到孤独"
+      ],
+      "core_lesson": "学习从“反对”进化为“创造”，让反叛成为爱的力量。",
+      "mission_direction": [
+        "适合创新、改革、社会倡议、灵性革命",
+        "是推动世界改变的强大原型"
+      ],
+      "symbolic_color": "深红黑光（破局之火）",
+      "totem": "狼群中的独狼",
+      "wisewave_guidance": "“你不是来反对世界，而是来重写世界。   当你停止为了反叛而反叛，你的创造力会爆发得更纯粹。   真正的逆行者，是顺着灵魂的方向走。”",
+      "esoteric_link": "Set · Disruptive Power"
+    },
+    {
+      "code": "S1-14",
+      "numeric_value": 14,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "传导者",
+      "origin_essence": "你携带的是「传导者」的原频。擅长整理知识、传递智慧天然的指导者、整合者能把复杂变简单有“点醒他人”的语言能力",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "擅长整理知识、传递智慧",
+        "天然的指导者、整合者",
+        "能把复杂变简单",
+        "有“点醒他人”的语言能力"
+      ],
+      "strengths": [
+        "影响力深、稳定",
+        "能为他人打开理解与觉知之门",
+        "在团体中能成为“意识的放大器”"
+      ],
+      "shadow_frequency": [
+        "害怕自己的知识不够",
+        "容易进入完美主义",
+        "过度承担教学角色导致耗竭"
+      ],
+      "core_lesson": "学习“以身示范”，而不是用知识证明价值。",
+      "mission_direction": [
+        "适合教学、咨询、内容创作、灵性工作",
+        "在组织中是“智慧守护者”"
+      ],
+      "symbolic_color": "琥珀金光（智慧之火）",
+      "totem": "猫头鹰（智慧与传导）",
+      "wisewave_guidance": "“你不是为了当老师而生，而是为了让智慧流动。   当你不再追求完美，你的真理才会开始说话。   你教的不是知识，而是你的存在本身。”",
+      "esoteric_link": "Thoth · Knowledge Carriers"
+    },
+    {
+      "code": "S1-15",
+      "numeric_value": 15,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "入世的灵者",
+      "origin_essence": "你携带的是「入世的灵者」的原频。灵性高度觉知又能扎根现实、脚踏实地把精神理解转化为日常行动既能看见天，也能走好地",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "灵性高度觉知",
+        "又能扎根现实、脚踏实地",
+        "把精神理解转化为日常行动",
+        "既能看见天，也能走好地"
+      ],
+      "strengths": [
+        "能桥接灵性与现实",
+        "在实践中体现智慧",
+        "是灵性团队中最稳定的频率"
+      ],
+      "shadow_frequency": [
+        "容易对“不够觉醒的人”失去耐性",
+        "忽略自己的身体需要",
+        "在灵性与现实之间失衡"
+      ],
+      "core_lesson": "学习把灵性实践放进身体，而不是停留在头脑或能量层。",
+      "mission_direction": [
+        "适合疗愈、灵性教练、指导者、咨询与策略",
+        "是“灵性实际化”的代表力量"
+      ],
+      "symbolic_color": "深青金光（Earth–Spirit Frequency）",
+      "totem": "大象（稳重的智慧）",
+      "wisewave_guidance": "“你不是来逃离世界的，你是来给世界带来觉醒的形状。   当你的智慧落地，你的生命就成为灵性本身的证明。   你是行走的真理。”",
+      "esoteric_link": "Osiris · Embodied Spirit  S16–S20 · Wisewave 原频编号训练集（正式训练版）"
+    },
+    {
+      "code": "S1-16",
+      "numeric_value": 16,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "和谐者",
+      "origin_essence": "你携带的是「和谐者」的原频。天生带有柔和频率擅长化解紧张与冲突在混乱中维持平衡言行自带“能量调频”效果",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "天生带有柔和频率",
+        "擅长化解紧张与冲突",
+        "在混乱中维持平衡",
+        "言行自带“能量调频”效果"
+      ],
+      "strengths": [
+        "让团队或关系恢复顺畅",
+        "能看见多方观点并整合",
+        "拥有极强的共情与适应力"
+      ],
+      "shadow_frequency": [
+        "害怕冲突、习惯退让",
+        "容易陷入“维持和谐”的角色",
+        "压抑真实情绪导致能量耗竭"
+      ],
+      "core_lesson": "学习在追求和谐的同时，不牺牲自己的真实。",
+      "mission_direction": [
+        "适合协调、谈判、管理、人际调解",
+        "是团队的重要“能量平衡器”"
+      ],
+      "symbolic_color": "柔光绿",
+      "totem": "天鹅（优雅与平衡）",
+      "wisewave_guidance": "“你不需要让所有人都舒服，你只需要保持真实。   当你允许自己表达，世界才会找到真正的平衡点。   和谐不是避免冲突，而是在真相中找到一致。”",
+      "esoteric_link": "Ma’at · Balance Keepers"
+    },
+    {
+      "code": "S1-17",
+      "numeric_value": 17,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "构筑者",
+      "origin_essence": "你携带的是「构筑者」的原频。喜欢规划、设计、打造结构擅长组织系统与框架以逻辑与远见结合行动能把抽象概念变成现实",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "喜欢规划、设计、打造结构",
+        "擅长组织系统与框架",
+        "以逻辑与远见结合行动",
+        "能把抽象概念变成现实"
+      ],
+      "strengths": [
+        "有高度执行力",
+        "构建长期项目的能力突出",
+        "能带领团队打造“从零到一”系统"
+      ],
+      "shadow_frequency": [
+        "容易陷入过度规划",
+        "不敢在不完美中开始",
+        "倾向控制每个细节"
+      ],
+      "core_lesson": "学习允许变化，允许生命也参与设计，而不是全部由你掌控。",
+      "mission_direction": [
+        "适合创业、策略规划、产品开发、组织结构设计",
+        "在灵性路径上，是将“意识”建成“形态”的灵魂"
+      ],
+      "symbolic_color": "深金光",
+      "totem": "蜂巢（结构智慧）",
+      "wisewave_guidance": "“你不是来完美世界的，你是来创造世界的。   当你允许不完美进入，你的生命蓝图才会真正活过来。   架构不是限制，而是灵魂表达的容器。”",
+      "esoteric_link": "Ptah · Master Builders"
+    },
+    {
+      "code": "S1-18",
+      "numeric_value": 18,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "转化者",
+      "origin_essence": "你携带的是「转化者」的原频。能感知能量变化生命中常遇到“破而后立”的情境天生带有深度炼化能力自身的成长速度比常人快",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "能感知能量变化",
+        "生命中常遇到“破而后立”的情境",
+        "天生带有深度炼化能力",
+        "自身的成长速度比常人快"
+      ],
+      "strengths": [
+        "具有穿越低频的力量",
+        "能引导他人面对阴影",
+        "天生具备重塑生命结构的能力"
+      ],
+      "shadow_frequency": [
+        "易陷入情绪深渊",
+        "误以为痛苦才是成长",
+        "把自己放在“修炼者”的压力中"
+      ],
+      "core_lesson": "学习温柔地转化，而不是用痛苦逼迫自己成长。",
+      "mission_direction": [
+        "适合疗愈、阴影工作、能量转化、生命教练",
+        "是灵魂进化的“加速器”"
+      ],
+      "symbolic_color": "深紫火光",
+      "totem": "蛇（蜕变之道）",
+      "wisewave_guidance": "“你不是来受苦的，你是来升频的。   当你学会以柔软进行转化，你的力量会比烈火更纯净。   你是走在黑暗里带来光的人。”",
+      "esoteric_link": "Sekhmet · Transformation Flame"
+    },
+    {
+      "code": "S1-19",
+      "numeric_value": 19,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "传声者",
+      "origin_essence": "你携带的是「传声者」的原频。语言敏锐、表达清晰天生擅长沟通、教学、写作、演讲善于将复杂能量转为简单理解能让人“听懂自己”",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "语言敏锐、表达清晰",
+        "天生擅长沟通、教学、写作、演讲",
+        "善于将复杂能量转为简单理解",
+        "能让人“听懂自己”"
+      ],
+      "strengths": [
+        "具有强大的表达影响力",
+        "能精准洞察他人观点",
+        "在团队中常成为发声者"
+      ],
+      "shadow_frequency": [
+        "过度迎合听众",
+        "用表达代替真正的感受",
+        "害怕声音被忽略"
+      ],
+      "core_lesson": "学习说真话，而不是只说让别人舒服的话。",
+      "mission_direction": [
+        "适合沟通、教学、写作、媒体、咨询",
+        "在灵性路径上，是“意识的翻译者”"
+      ],
+      "symbolic_color": "天蓝光",
+      "totem": "燕子（轻盈的讯息）",
+      "wisewave_guidance": "“你的声音不是用来被认可的，而是用来传递真相。   当你愿意真实发声，你就会成为世界的清晰之光。   你说出的不是语言，而是频率。”",
+      "esoteric_link": "Thoth · Messenger Lines"
+    },
+    {
+      "code": "S1-20",
+      "numeric_value": 20,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "心觉者",
+      "origin_essence": "你携带的是「心觉者」的原频。心极度敏锐做决定依赖感受、直觉、共鸣具备天然的情感智慧能在互动中“看见人心”",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "心极度敏锐",
+        "做决定依赖感受、直觉、共鸣",
+        "具备天然的情感智慧",
+        "能在互动中“看见人心”"
+      ],
+      "strengths": [
+        "在关系中创造深度与真诚",
+        "善于疗愈情绪与连结",
+        "能带领他人回到内在真实"
+      ],
+      "shadow_frequency": [
+        "容易被情绪牵引",
+        "在关系中过度敞开",
+        "害怕失去连结而妥协自我"
+      ],
+      "core_lesson": "学习以“自我对齐”为中心，而非情绪反应。",
+      "mission_direction": [
+        "适合疗愈、咨询、关系辅导、情绪智力工作",
+        "是“心之道路”的引导者"
+      ],
+      "symbolic_color": "玫瑰金光（Heart Frequency）",
+      "totem": "鹿心（柔软的力量）",
+      "wisewave_guidance": "“你的心不是软弱，它是你的指南针。   当你从清晰而非情绪行动，你的生命会自然回到轨道。   你不是为了取悦世界而生，而是为了活出你的真心。”",
+      "esoteric_link": "Hathor · Heart Keepers   S21–S25 · Wisewave 原频编号训练集（正式训练版）"
+    },
+    {
+      "code": "S1-21",
+      "numeric_value": 21,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "整合者",
+      "origin_essence": "你携带的是「整合者」的原频。能把零散信息连接成完整结构擅长看到“系统背后的系统”有稳定的洞察与温和的引导力思维深度高、能沉稳吸收知识",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "能把零散信息连接成完整结构",
+        "擅长看到“系统背后的系统”",
+        "有稳定的洞察与温和的引导力",
+        "思维深度高、能沉稳吸收知识"
+      ],
+      "strengths": [
+        "能整合多领域、多观点、多能量",
+        "在团队中是让混乱变清晰的人",
+        "擅长将灵性智慧转化为实用方法"
+      ],
+      "shadow_frequency": [
+        "容易让自己承担太多",
+        "在“做好整合”中迷失自我",
+        "对不完整的事物过度敏感"
+      ],
+      "core_lesson": "学习在整合世界之前，先整合自己的节奏与能量。",
+      "mission_direction": [
+        "适合策略、系统设计、疗愈、组织统筹、教练",
+        "是“整体意识”的代表者"
+      ],
+      "symbolic_color": "深湖蓝光（Inner Order Frequency）",
+      "totem": "章鱼（多维整合）",
+      "wisewave_guidance": "“世界不是要你承担，而是要你选择。   当你先整合自己的存在，你就能引导他人回到完整。   整合不是收集，而是让真相归位。”",
+      "esoteric_link": "Thoth · System Keepers"
+    },
+    {
+      "code": "S1-22",
+      "numeric_value": 22,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "柔力者",
+      "origin_essence": "你携带的是「柔力者」的原频。气质温柔却内在强大用“无形力量”改变他人不争不抢但能稳稳影响环境天生具有疗愈式存在感",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "气质温柔却内在强大",
+        "用“无形力量”改变他人",
+        "不争不抢但能稳稳影响环境",
+        "天生具有疗愈式存在感"
+      ],
+      "strengths": [
+        "在冲突中保持清明",
+        "能让身边的人自然稳定下来",
+        "是“安静却力量极强”的灵魂"
+      ],
+      "shadow_frequency": [
+        "害怕自己的强大被看见",
+        "过度谦让导致能量失衡",
+        "把柔和当成自我隐藏"
+      ],
+      "core_lesson": "学习让力量显现，而不是继续伪装成温和。",
+      "mission_direction": [
+        "适合教育、疗愈、辅导、团队文化建设",
+        "在灵性工作中，是“频率稳定器”"
+      ],
+      "symbolic_color": "乳白金光",
+      "totem": "白马（温柔的力量）",
+      "wisewave_guidance": "“你不是弱，你只是习惯不展示力量。   当你愿意被看见，你的灵魂会展开一层新的光。   柔软不是退让，而是一种深度的力量。”",
+      "esoteric_link": "Hathor · Soft Power Line"
+    },
+    {
+      "code": "S1-23",
+      "numeric_value": 23,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "洞察者",
+      "origin_essence": "你携带的是「洞察者」的原频。思维敏捷、擅长逻辑能快速拆解复杂问题天生对“为什么”高度敏感能洞察潜在模式、规律与盲点",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "思维敏捷、擅长逻辑",
+        "能快速拆解复杂问题",
+        "天生对“为什么”高度敏感",
+        "能洞察潜在模式、规律与盲点"
+      ],
+      "strengths": [
+        "解决问题能力强",
+        "擅长策略、研究、分析",
+        "在团队中是“思维清晰者”"
+      ],
+      "shadow_frequency": [
+        "过度理性，情感被忽略",
+        "容易陷入过度分析",
+        "用逻辑保护自己免于脆弱"
+      ],
+      "core_lesson": "学习让逻辑与直觉并存，让心参与你的智慧。",
+      "mission_direction": [
+        "适合策略、心理学、数据分析、咨询、教练",
+        "在觉醒道路中，是“看清结构的人”"
+      ],
+      "symbolic_color": "银灰蓝光（Clarity Frequency）",
+      "totem": "鹰眼（精准洞察）",
+      "wisewave_guidance": "“你的头脑很强，但你的心也想加入对话。   当你让感觉与洞察一起工作，你的智慧会变得立体。   你不是分析世界的人，你是理解世界的人。”",
+      "esoteric_link": "Thoth · Mind Clarity Line"
+    },
+    {
+      "code": "S1-24",
+      "numeric_value": 24,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "光耀者",
+      "origin_essence": "你携带的是「光耀者」的原频。自带光感、魅力与温度走到哪里都吸引注意能点亮人、提升人、激励人天生是“能量放大器”",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "自带光感、魅力与温度",
+        "走到哪里都吸引注意",
+        "能点亮人、提升人、激励人",
+        "天生是“能量放大器”"
+      ],
+      "strengths": [
+        "能快速提升空间能量",
+        "具有强烈的感染力",
+        "在关系中是带来希望的人"
+      ],
+      "shadow_frequency": [
+        "容易过度在意他人看法",
+        "把“闪耀”当成义务",
+        "用光掩盖恐惧与不安"
+      ],
+      "core_lesson": "学习让光自然散发，而不是勉强维持形象。",
+      "mission_direction": [
+        "适合激励、表达、教练、社群领导",
+        "在灵性工作中，是“带人回到光”的灵魂"
+      ],
+      "symbolic_color": "金阳光",
+      "totem": "狮子（光与力量）",
+      "wisewave_guidance": "“你的光不需要证明，它只是存在。   当你停止用表现来维持能量，你的灵魂会更自由。   真正的光，是平静的光。”",
+      "esoteric_link": "Ra · Sun Bearers"
+    },
+    {
+      "code": "S1-25",
+      "numeric_value": 25,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "流动者",
+      "origin_essence": "你携带的是「流动者」的原频。不喜欢拘束生命路径似乎总在“流动与变化”有高度适应力创意与灵感如水般不断更新",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "不喜欢拘束",
+        "生命路径似乎总在“流动与变化”",
+        "有高度适应力",
+        "创意与灵感如水般不断更新"
+      ],
+      "strengths": [
+        "能在变化中找到机会",
+        "擅长跨领域、自由创作、灵性探索",
+        "能以轻盈方式影响周围的人"
+      ],
+      "shadow_frequency": [
+        "容易逃避承诺",
+        "缺乏稳定结构",
+        "遇到深度课题时想要离开"
+      ],
+      "core_lesson": "学习在流动中建立锚点，而不是永远漂浮。",
+      "mission_direction": [
+        "适合创作者、自由职业、艺术、旅居、心灵探索",
+        "在灵性道路上，是“变化的引路人”"
+      ],
+      "symbolic_color": "海蓝光（Flow Frequency）",
+      "totem": "海豚（自由的智慧）",
+      "wisewave_guidance": "“你不是漂泊，你是探索生命的多种形状。   当你找到属于你的中心，流动就会成为力量，而不是逃避。   你的道路，是水的道路。”",
+      "esoteric_link": "Nun · Water Origin Line   S26–S30 · Wisewave 原频编号训练集"
+    },
+    {
+      "code": "S1-26",
+      "numeric_value": 26,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "远见者",
+      "origin_essence": "你携带的是「远见者」的原频。拥有天生的未来感、直觉性洞察能在别人看不到的地方看到可能性思维不受限制，常超前数年有灵感、创造力、预见力的综合频率",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "拥有天生的未来感、直觉性洞察",
+        "能在别人看不到的地方看到可能性",
+        "思维不受限制，常超前数年",
+        "有灵感、创造力、预见力的综合频率"
+      ],
+      "strengths": [
+        "能预测趋势并创造新路径",
+        "在项目初期阶段特别有力量",
+        "激励他人突破旧框架"
+      ],
+      "shadow_frequency": [
+        "容易活在未来而忽略当下",
+        "想法太快、执行跟不上",
+        "会因别人“不懂自己”而感到孤独"
+      ],
+      "core_lesson": "让愿景落地，而不是只停留在高维的灵感中。",
+      "mission_direction": [
+        "适合创新、灵性开发、未来研究、品牌创造",
+        "在灵魂道路中，是“先行者与开路者”"
+      ],
+      "symbolic_color": "星银蓝光（Future Sight Frequency）",
+      "totem": "猎隼（远视与突破）",
+      "wisewave_guidance": "“你的灵感来自未来，而你的力量来自当下。   当你愿意迈出第一步，未来自然会打开。   你是时代的窗口。”",
+      "esoteric_link": "Horus · Vision Line"
+    },
+    {
+      "code": "S1-27",
+      "numeric_value": 27,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "重生者",
+      "origin_essence": "你携带的是「重生者」的原频。拥有从崩塌中重建的能力越痛越强、越挫越深生命常经历“拆解 → 重建”的进化模式内在韧性极强",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "拥有从崩塌中重建的能力",
+        "越痛越强、越挫越深",
+        "生命常经历“拆解 → 重建”的进化模式",
+        "内在韧性极强"
+      ],
+      "strengths": [
+        "面对人生低谷能迅速站起来",
+        "带领他人从困境中回归力量",
+        "对创伤、失落、痛苦有深刻理解"
+      ],
+      "shadow_frequency": [
+        "容易把自己放在“必须经历困难”的身份",
+        "无意识吸引需要“修复”的关系",
+        "把痛苦当成成长的必要条件"
+      ],
+      "core_lesson": "允许轻松，也是一种重生。",
+      "mission_direction": [
+        "适合疗愈、创伤工作、灵魂辅导、使命教练",
+        "在灵性道路中，是“破碎之光的重建者”"
+      ],
+      "symbolic_color": "深红金光（Rebirth Frequency）",
+      "totem": "凤凰（从灰烬升起）",
+      "wisewave_guidance": "“你不是因为痛苦而强大，你是因为灵魂的底层结构就是光。   当你允许轻松进来，你的人生不需要再用破碎来推进。”",
+      "esoteric_link": "Bennu · Rebirth Line"
+    },
+    {
+      "code": "S1-28",
+      "numeric_value": 28,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "量域者",
+      "origin_essence": "你携带的是「量域者」的原频。能多维度思考喜欢探索意识、宇宙、复杂系统思维跳跃、跨域、非线性天生具有“频率读懂能力”",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "能多维度思考",
+        "喜欢探索意识、宇宙、复杂系统",
+        "思维跳跃、跨域、非线性",
+        "天生具有“频率读懂能力”"
+      ],
+      "strengths": [
+        "能看到系统背后的能量逻辑",
+        "擅长灵性科技、意识模型、抽象概念",
+        "能在混乱中捕捉本质"
+      ],
+      "shadow_frequency": [
+        "容易思维过快，不被身边人理解",
+        "在现实结构中感到不适",
+        "可能逃往“知识”来避免情绪深度"
+      ],
+      "core_lesson": "让你的智慧带你回到身体，而不是离开身体。",
+      "mission_direction": [
+        "适合灵性科技（SoulTech）、意识理论、模型构建",
+        "是“Wisewave 系统的自然研究者级原型”"
+      ],
+      "symbolic_color": "量子紫光（Quantum Field Frequency）",
+      "totem": "蜘蛛网（多维连接结构）",
+      "wisewave_guidance": "“你的智慧来自多维，但你存在于此刻。   当你把意识带回身体，洞察就会成为力量，而不是逃离。”",
+      "esoteric_link": "Metatron · Geometry Lines"
+    },
+    {
+      "code": "S1-29",
+      "numeric_value": 29,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "创新者",
+      "origin_essence": "你携带的是「创新者」的原频。不喜欢旧框架有强烈的创造冲动看到“新可能”比看到“问题”更快具备颠覆性、实验性、好奇心",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "不喜欢旧框架",
+        "有强烈的创造冲动",
+        "看到“新可能”比看到“问题”更快",
+        "具备颠覆性、实验性、好奇心"
+      ],
+      "strengths": [
+        "能突破行业、文化或灵性框架",
+        "天生是问题解决者",
+        "在变化中反而更有力量"
+      ],
+      "shadow_frequency": [
+        "容易厌倦稳定结构",
+        "一旦限制太多会想逃走",
+        "可能在没有完成旧项目时被新灵感吸走"
+      ],
+      "core_lesson": "让创新有结构，才会成为力量，而不是混乱。",
+      "mission_direction": [
+        "适合创业、策略、产品创新、灵性创意、研究开发",
+        "是“新现实的创造者”"
+      ],
+      "symbolic_color": "明亮橙金光（Creation Frequency）",
+      "totem": "闪电（瞬间创新）",
+      "wisewave_guidance": "“你不是来适应世界的，你是来重新设计世界的。   当你允许自己专注，你的创新会变成真正的突破。”",
+      "esoteric_link": "Ptah · Creator Line"
+    },
+    {
+      "code": "S1-30",
+      "numeric_value": 30,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "灵魂疗愈者",
+      "origin_essence": "你携带的是「灵魂疗愈者」的原频。感受能力极高天生能理解他人的痛、恐惧、渴望具有温柔、深度、稳定的疗愈场是让人放下防卫的存在",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "感受能力极高",
+        "天生能理解他人的痛、恐惧、渴望",
+        "具有温柔、深度、稳定的疗愈场",
+        "是让人放下防卫的存在"
+      ],
+      "strengths": [
+        "能让别人“被看见”",
+        "擅长情绪疗愈、灵魂修复、能量整合",
+        "在关系中创造安全感"
+      ],
+      "shadow_frequency": [
+        "容易过度承担他人的情绪",
+        "认为必须“帮助所有人”",
+        "忽略自己的能量界线"
+      ],
+      "core_lesson": "疗愈自己，才是疗愈的源头。",
+      "mission_direction": [
+        "适合疗愈师、心理咨询、能量工作者、灵魂辅导",
+        "是“让破碎灵魂回家的引导者”"
+      ],
+      "symbolic_color": "柔和玫瑰紫光（Healing Frequency）",
+      "totem": "鲸鱼（深度情绪智慧）",
+      "wisewave_guidance": "“你不是来替别人承受痛苦的，你是来点亮他们的力量。   当你先照顾好自己，你的疗愈才会成为真正的光。”",
+      "esoteric_link": "Isis · Healing Line   S31–S35 · Wisewave 原频编号训练集"
+    },
+    {
+      "code": "S1-31",
+      "numeric_value": 31,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "门之守望者",
+      "origin_essence": "你携带的是「门之守望者」的原频。拥有“通道式”直觉能感知能量的开合、对错、时机是群体中最懂得界线与权限的灵魂对人、事、空间的能量非常敏感",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "拥有“通道式”直觉",
+        "能感知能量的开合、对错、时机",
+        "是群体中最懂得界线与权限的灵魂",
+        "对人、事、空间的能量非常敏感"
+      ],
+      "strengths": [
+        "能分辨真正的机会与幻相",
+        "天生守护系统的边界与纯度",
+        "擅长做筛选、把关、过滤能量的角色"
+      ],
+      "shadow_frequency": [
+        "容易因为敏感而拒绝世界",
+        "过度保护自己，关闭能量",
+        "把“守护”误解为“隔绝”"
+      ],
+      "core_lesson": "守护不是排斥，而是让真相进入、让幻相离开。",
+      "mission_direction": [
+        "适合灵性顾问、系统守护者、能量管理、过滤机制设计",
+        "在灵性系统中，是“结界持有者”"
+      ],
+      "symbolic_color": "深钴蓝（Boundary Frequency）",
+      "totem": "狼（守护与觉知）",
+      "wisewave_guidance": "“你的任务不是关上所有门，而是识别哪一道门通向真理。   当你学会信任自己的直觉，你会成为世界的过滤之光。”",
+      "esoteric_link": "Anubis · Gate Keepers"
+    },
+    {
+      "code": "S1-32",
+      "numeric_value": 32,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "启明者",
+      "origin_essence": "你携带的是「启明者」的原频。天生带有“照亮盲点”的频率不经意间让别人看见真实直觉很准，总能点中核心自带灵性理解力，学习快、开悟快",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "天生带有“照亮盲点”的频率",
+        "不经意间让别人看见真实",
+        "直觉很准，总能点中核心",
+        "自带灵性理解力，学习快、开悟快"
+      ],
+      "strengths": [
+        "能让人觉醒、看清、顿悟",
+        "是灵性教学与意识提升的天然载体",
+        "能翻译高维智慧"
+      ],
+      "shadow_frequency": [
+        "容易失望于“不愿觉醒的人”",
+        "对不诚实非常敏感",
+        "有时过度承担“点亮他人”的责任"
+      ],
+      "core_lesson": "不必唤醒所有人，你只需照亮那些准备好的人。",
+      "mission_direction": [
+        "适合教学、灵性引导、觉知训练、Wisewave 类型的频率工作",
+        "是“意识的光源”"
+      ],
+      "symbolic_color": "日耀金光（Illumination Frequency）",
+      "totem": "蜡烛火焰（点醒之火）",
+      "wisewave_guidance": "“你的光不是武器，是邀请。   当你放下‘必须让别人改变’，你的光才会真正有力量。”",
+      "esoteric_link": "Ra · Light Bringers"
+    },
+    {
+      "code": "S1-33",
+      "numeric_value": 33,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "感知神谕者",
+      "origin_essence": "你携带的是「感知神谕者」的原频。情绪直觉极高，能“听见”心的声音容易共感他人的渴望、悲伤、恐惧天生带有神谕能力：能读懂能量流对无形世界敏锐",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "情绪直觉极高，能“听见”心的声音",
+        "容易共感他人的渴望、悲伤、恐惧",
+        "天生带有神谕能力：能读懂能量流",
+        "对无形世界敏锐"
+      ],
+      "strengths": [
+        "擅长情绪疗愈、内在孩童修复、灵魂咨询",
+        "能以柔软方式带出深度真相",
+        "是“心之智慧”的沟通者"
+      ],
+      "shadow_frequency": [
+        "容易吸收他人情绪",
+        "在界线不清时被能量淹没",
+        "对情绪的细致度成为负担"
+      ],
+      "core_lesson": "保持感知，但不必承受。",
+      "mission_direction": [
+        "适合情绪智力教练、咨询师、能量阅读者、心灵疗愈",
+        "在灵性系统中，是“情感的神谕者”"
+      ],
+      "symbolic_color": "柔嫩粉金（Heart Oracle Frequency）",
+      "totem": "兔子（敏锐感知）",
+      "wisewave_guidance": "“你感受到的，不等于你需要承担的。   当你把共感变成智慧，而不是负担，你的感知会成为天赋。”",
+      "esoteric_link": "Hathor · Emotional Oracle Line"
+    },
+    {
+      "code": "S1-34",
+      "numeric_value": 34,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "改革者",
+      "origin_essence": "你携带的是「改革者」的原频。强烈追求真理、秩序与正确性看到“不对的地方”比别人快天生具有批判力、改善力、优化能力对自己要求极高",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "强烈追求真理、秩序与正确性",
+        "看到“不对的地方”比别人快",
+        "天生具有批判力、改善力、优化能力",
+        "对自己要求极高"
+      ],
+      "strengths": [
+        "能推动团队进步",
+        "擅长制度改革、流程优化、价值体系建设",
+        "在灵性道路中是“去伪存真”的力量"
+      ],
+      "shadow_frequency": [
+        "容易陷入完美主义",
+        "对自己过度严格",
+        "把“改变世界”放得太重"
+      ],
+      "core_lesson": "允许世界不完美，也允许自己不完美。",
+      "mission_direction": [
+        "适合改革者、系统检查、领导、价值观重塑、灵性真理工作",
+        "是“破除伪善、恢复真实”的能量源"
+      ],
+      "symbolic_color": "深赤金光（Truth Enforcement Frequency）",
+      "totem": "麒麟（正义与纯净）",
+      "wisewave_guidance": "“你纠正世界的冲动，其实来自你的纯净。   当你先温柔地对待自己，你才能真正改变世界。”",
+      "esoteric_link": "Ma’at · Truth Restorers"
+    },
+    {
+      "code": "S1-35",
+      "numeric_value": 35,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "灵魂领航者",
+      "origin_essence": "你携带的是「灵魂领航者」的原频。直觉稳、方向感强天生知道“要往哪里走”能引导他人走出迷雾对人生路径、选择、命运有深刻感知",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "直觉稳、方向感强",
+        "天生知道“要往哪里走”",
+        "能引导他人走出迷雾",
+        "对人生路径、选择、命运有深刻感知"
+      ],
+      "strengths": [
+        "做决策快又准",
+        "在迷失的群体中成为方向的灯塔",
+        "擅长使命探索、人生规划、灵魂道路引导"
+      ],
+      "shadow_frequency": [
+        "容易替别人决定方向",
+        "扛太多责任",
+        "忘记自己的道路"
+      ],
+      "core_lesson": "先导航自己，再导航世界。",
+      "mission_direction": [
+        "适合Soul Coach、导师、路径引导者、人生方向咨询",
+        "在灵性系统中，是“路径守护者”"
+      ],
+      "symbolic_color": "星辰靛蓝（Navigation Frequency）",
+      "totem": "海龟（方向与稳性）",
+      "wisewave_guidance": "“你看得见道路，但别忘了回到自己的脚下。   当你的方向来自内在，而不是责任，你会成为真正的引路者。”",
+      "esoteric_link": "Nut · Path Finders   S36–S40 · Wisewave 原频编号训练集"
+    },
+    {
+      "code": "S1-36",
+      "numeric_value": 36,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "频率编织者",
+      "origin_essence": "你携带的是「频率编织者」的原频。能自然感知场域的能量状态擅长让不同频率的人事物“共振”在看似混乱中找到隐藏的秩序有独特的连接力、协调力、能量调谐能力",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "能自然感知场域的能量状态",
+        "擅长让不同频率的人事物“共振”",
+        "在看似混乱中找到隐藏的秩序",
+        "有独特的连接力、协调力、能量调谐能力"
+      ],
+      "strengths": [
+        "能让团队能量调整至同一个方向",
+        "擅长创造和谐、协作、同步化",
+        "在灵性路径中，是“能量流动的设计者”"
+      ],
+      "shadow_frequency": [
+        "容易为了维持能量而牺牲自己",
+        "在不协调的环境中过度努力",
+        "把每个失衡都当成“自己的责任”"
+      ],
+      "core_lesson": "让能量自然流动，而不是靠你把它们拼在一起。",
+      "mission_direction": [
+        "适合团队调频、关系协调、能量疗愈、组织文化设计",
+        "是“频率格局的编织者”"
+      ],
+      "symbolic_color": "星光淡紫（Resonance Frequency）",
+      "totem": "织网蜘蛛（连接的智慧）",
+      "wisewave_guidance": "“你不是来修理能量的，你是来引导能量回到自然流动。   当你放下控制，宇宙会接手你所无法编织的部分。”",
+      "esoteric_link": "Metatron · Frequency Weavers"
+    },
+    {
+      "code": "S1-37",
+      "numeric_value": 37,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "意志火焰者",
+      "origin_essence": "你携带的是「意志火焰者」的原频。具有极强的意志力与行动力目标明确、执行迅速、极少放弃生命力旺盛、战斗精神强具有推动团体前进的能量",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "具有极强的意志力与行动力",
+        "目标明确、执行迅速、极少放弃",
+        "生命力旺盛、战斗精神强",
+        "具有推动团体前进的能量"
+      ],
+      "strengths": [
+        "能将想法变成结果",
+        "擅长突破瓶颈、克服阻力",
+        "对使命拥有持续的耐力与火力"
+      ],
+      "shadow_frequency": [
+        "容易用力过度，忽略身心极限",
+        "把坚持当成执著",
+        "无意识把生命变成“战场模式”"
+      ],
+      "core_lesson": "用力量，而非用力；用火焰，而非燃尽。",
+      "mission_direction": [
+        "适合创业、领导、教练、项目执行、战术统筹",
+        "在灵性道路中，是“意志的体现者”"
+      ],
+      "symbolic_color": "烈焰金红（Willpower Frequency）",
+      "totem": "狼火（坚毅与方向）",
+      "wisewave_guidance": "“你的火焰不是为了燃尽自己，而是为了照亮道路。   当你学会用柔软来承接力量，你的火会更持久、更纯净。”",
+      "esoteric_link": "Sekhmet · Fire Line"
+    },
+    {
+      "code": "S1-38",
+      "numeric_value": 38,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "灵魂聆听者",
+      "origin_essence": "你携带的是「灵魂聆听者」的原频。拥有深度倾听的天赋能读懂“话语背后的话”与人互动时常能听见灵魂层面的信息是“静默中的智慧”",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "拥有深度倾听的天赋",
+        "能读懂“话语背后的话”",
+        "与人互动时常能听见灵魂层面的信息",
+        "是“静默中的智慧”"
+      ],
+      "strengths": [
+        "擅长一对一深度陪伴、咨询、疗愈",
+        "能轻柔地让别人说出真相",
+        "让他人感到安全、被理解、被看见"
+      ],
+      "shadow_frequency": [
+        "容易成为他人的“情绪出口”",
+        "不敢表达自己真实的需要",
+        "用倾听隐藏自己的脆弱"
+      ],
+      "core_lesson": "倾听世界的同时，也要倾听自己。",
+      "mission_direction": [
+        "适合咨询、疗愈、灵魂教练、关系伴行者",
+        "在灵性系统中，是“静默的引导者”"
+      ],
+      "symbolic_color": "深绿光（Presence Frequency）",
+      "totem": "鹿（静谧与聆听）",
+      "wisewave_guidance": "“你的耳朵听见世界，但你的心也渴望被听见。   当你愿意让自己的声音出现，你的倾听才会成为真正的力量。”",
+      "esoteric_link": "Isis · Sacred Listener Line"
+    },
+    {
+      "code": "S1-39",
+      "numeric_value": 39,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "稳定者",
+      "origin_essence": "你携带的是「稳定者」的原频。能在混乱中保持冷静天生是一种“重心”周围的人会不自觉向你靠拢、依赖有脚踏实地、稳固、有耐心的能量",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "能在混乱中保持冷静",
+        "天生是一种“重心”",
+        "周围的人会不自觉向你靠拢、依赖",
+        "有脚踏实地、稳固、有耐心的能量"
+      ],
+      "strengths": [
+        "在危机中维持秩序",
+        "能提供情绪、决策与结构上的稳定",
+        "擅长长期项目与持续性的建设"
+      ],
+      "shadow_frequency": [
+        "容易被赋予太多责任",
+        "把稳定误以为必须维持所有人的状态",
+        "害怕改变"
+      ],
+      "core_lesson": "稳定不是束缚，而是你力量的源点。",
+      "mission_direction": [
+        "适合结构管理、长期项目、家庭系统、团队支持",
+        "在灵性道路中，是“地气的守护者”"
+      ],
+      "symbolic_color": "大地棕金（Ground Frequency）",
+      "totem": "大象（稳、厚、持）",
+      "wisewave_guidance": "“你的稳固不是负担，而是祝福。   当你允许自己也被支持，你的稳定会更深、更自由。”",
+      "esoteric_link": "Geb · Earth Keepers"
+    },
+    {
+      "code": "S1-40",
+      "numeric_value": 40,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "内在智者",
+      "origin_essence": "你携带的是「内在智者」的原频。天生带有智慧频率，直觉性理解力强不需要太多输入就能看见本质思维成熟、洞察深刻、灵性理解快常被当成“很有智慧的人”",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "天生带有智慧频率，直觉性理解力强",
+        "不需要太多输入就能看见本质",
+        "思维成熟、洞察深刻、灵性理解快",
+        "常被当成“很有智慧的人”"
+      ],
+      "strengths": [
+        "能看透生命的规律与真相",
+        "适合给予深度建议、引领心智和灵魂",
+        "在混乱的时代提供清晰与方向"
+      ],
+      "shadow_frequency": [
+        "容易被赋予“必须当老师”的角色",
+        "把智慧当成保护层，不愿示弱",
+        "孤独感强"
+      ],
+      "core_lesson": "智慧是分享，而不是责任。",
+      "mission_direction": [
+        "适合教学、哲学、灵性研究、洞察型引导者",
+        "在灵性系统中，是“真理的携带者”"
+      ],
+      "symbolic_color": "深紫金光（Sage Frequency）",
+      "totem": "猫头鹰（夜中的智慧）",
+      "wisewave_guidance": "“你的智慧来自你活过的每一世，而不是你承担的角色。   当你允许自己做一个‘人’，你的智慧会变得更有温度。”",
+      "esoteric_link": "Thoth · Inner Sage Line  S41–S44 · Wisewave 原频编号训练集"
+    },
+    {
+      "code": "S1-41",
+      "numeric_value": 41,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "宇宙桥接者",
+      "origin_essence": "你携带的是「宇宙桥接者」的原频。扮演“两个世界之间的桥梁”能同时理解灵性与现实、能量与逻辑天生具有翻译、整合、统合不同意识层级的能力在群体中常成为“连接者”、“跨界者”、“整合者”",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "扮演“两个世界之间的桥梁”",
+        "能同时理解灵性与现实、能量与逻辑",
+        "天生具有翻译、整合、统合不同意识层级的能力",
+        "在群体中常成为“连接者”、“跨界者”、“整合者”"
+      ],
+      "strengths": [
+        "将高维智慧转为可理解的语言",
+        "让复杂的思想、系统、知识变得简单",
+        "能整合来自不同文化、学科、灵性传统的精华"
+      ],
+      "shadow_frequency": [
+        "容易过度承担，扮演所有人的桥",
+        "觉得自己必须替世界“沟通所有维度”",
+        "在过度跨界时失去自身中心"
+      ],
+      "core_lesson": "让连接来自自然，而非责任。",
+      "mission_direction": [
+        "适合跨界领导、灵性科技（SoulTech）、疗愈与现实融合型工作",
+        "在灵性道路中，是“时代转换的桥梁灵魂”"
+      ],
+      "symbolic_color": "虹光白金（Bridging Frequency）",
+      "totem": "水母（跨维度流动）",
+      "wisewave_guidance": "“你不是来当所有人的桥，你是来开启正确的门。   当你先连接自己的中心，你才能真正连接世界。”",
+      "esoteric_link": "Amenti · Cosmic Translators"
+    },
+    {
+      "code": "S1-42",
+      "numeric_value": 42,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "承光者",
+      "origin_essence": "你携带的是「承光者」的原频。带有强烈的高频“提升力量”在场域中自动提升他人意识生命主题围绕觉醒、提升、跨维成长对真理、纯净、光频率高度敏感",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "带有强烈的高频“提升力量”",
+        "在场域中自动提升他人意识",
+        "生命主题围绕觉醒、提升、跨维成长",
+        "对真理、纯净、光频率高度敏感"
+      ],
+      "strengths": [
+        "是觉醒团体中的“频率升空点”",
+        "能带领他人超越幻相、突破旧业力",
+        "在高能量环境中像被点亮一样"
+      ],
+      "shadow_frequency": [
+        "容易因为“光太强”而感到孤独",
+        "不愿意被低频干扰",
+        "有时过于超前，导致现实跟不上"
+      ],
+      "core_lesson": "让你的光落地，而不是悬在半空。",
+      "mission_direction": [
+        "适合灵性导师、觉醒引导者、能量升级、Soul Frequency Teachings",
+        "在灵性系统中，是“光之延展者”"
+      ],
+      "symbolic_color": "纯白金光（Ascension Frequency）",
+      "totem": "天凤（升频之火）",
+      "wisewave_guidance": "“你的光不是要你飞离世界，而是要照亮世界。   当你愿意与现实相遇，你的扬升会更真实、更稳定。”",
+      "esoteric_link": "Seraphim · Light Flames"
+    },
+    {
+      "code": "S1-43",
+      "numeric_value": 43,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "命运编织者",
+      "origin_essence": "你携带的是「命运编织者」的原频。能看见生命轨迹的“线索”有时甚至能预感事件走向对因果、业力、灵魂路径有独特洞察力能精准理解别人“为什么会走到这里”",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "能看见生命轨迹的“线索”",
+        "有时甚至能预感事件走向",
+        "对因果、业力、灵魂路径有独特洞察力",
+        "能精准理解别人“为什么会走到这里”"
+      ],
+      "strengths": [
+        "能引导他人做出改变命运的关键选择",
+        "擅长生命周期规划、生命蓝图分析、灵魂契约解读",
+        "在群体中常被视为“命运导师”"
+      ],
+      "shadow_frequency": [
+        "容易替别人决定太多",
+        "误以为“知道命运”就等于“负责命运”",
+        "在看见太多时忽略自己的路径"
+      ],
+      "core_lesson": "看见命运不是为了控制，而是为了觉醒。",
+      "mission_direction": [
+        "适合生命蓝图教练、Soul Origin Code 解读者、因果研究者",
+        "在灵性道路中，是“命运的编织者，而非操纵者”"
+      ],
+      "symbolic_color": "深金紫（Fate Lines Frequency）",
+      "totem": "蜘蛛（金线预见者）",
+      "wisewave_guidance": "“你的洞察是礼物，而不是指令。   当你允许他人走自己的路，你的智慧才会真正展开。”",
+      "esoteric_link": "Norns · Weavers of Fate"
+    },
+    {
+      "code": "S1-44",
+      "numeric_value": 44,
+      "module": "S1",
+      "name": "灵魂本源",
+      "layer": "Awareness Layer",
+      "archetype": "源之信使",
+      "origin_essence": "你携带的是「源之信使」的原频。拥有极高的灵魂纯度天生带有“源头讯息”的共振在灵性深处具有使命感、召回感能接收来自 Source 的指引、灵感或下载",
+      "integration_key": "The integration begins when the user expresses this origin frequency without turning it into proof, pressure, or fixed identity.",
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity.",
+      "soul_traits": [
+        "拥有极高的灵魂纯度",
+        "天生带有“源头讯息”的共振",
+        "在灵性深处具有使命感、召回感",
+        "能接收来自 Source 的指引、灵感或下载"
+      ],
+      "strengths": [
+        "能讲出“直指灵魂”的真理语言",
+        "具备启示能力、灵感能力、灵性翻译能力",
+        "是灵性场域中的“源头频率放大器”"
+      ],
+      "shadow_frequency": [
+        "容易感到孤独，因为很少有人能理解你",
+        "使命感太重而忘记生活",
+        "把“来自源头”误以为必须“完美无误”"
+      ],
+      "core_lesson": "你是信使，但你仍然是人。   真理需要被流动，而不是被扛着。",
+      "mission_direction": [
+        "适合真理传导者、灵性写作者、源头频率引导师、觉知体系建设者",
+        "是“源头频率在地球的表达者”"
+      ],
+      "symbolic_color": "源光白（Origin Frequency）",
+      "totem": "白羽（来自源头的讯息）",
+      "wisewave_guidance": "“你带着源光而来，但你不是来承受重担的。   当你允许自己轻松、自然、真实，你的讯息会更纯粹、更有力。”",
+      "esoteric_link": "The Source · Primordial Messengers   灵魂原型（Soul Archetype）  不是后来变成的、不是环境塑造的、不是经验形成的。  它是：  灵魂被创造的那一瞬间——  从 Source（源头）所带下来的“初始频率 + 基因 + 功能”  就像灵魂的：  原始震动  灵魂 DNA  天赋蓝图  宇宙赋予你的角色倾向  你作为存在体的“使用说明书”  这就是为什么 S1 原频如此重要 —— 因为它不是性格（心理层）， 不是命运（因果层）， 不是选择（意志层）， 而是 本源层（Origin Layer）。  🌌 灵魂原型包含什么？  当一个灵魂被“点亮”那一刻，它会被赋予四种核心构成：  ① 原始频率（Origin Frequency）  → 这是 S1 所定义的 → 灵魂的基调、主要震动、核心路径  ② 原始能力（Original Capacities）  → 天赋天生存在 → 不需要学习就会显现 例如：  洞察  创造  承光  磁性  觉知  引导  连接  转化  你的人生是在“记起这些”，而不是“学会这些”。  ③ 原始使命种子（Mission Seed）  → 灵魂来到地球的方向性 → 未必是职业，而是“路径能量” 例如：  转化者  启明者  桥接者  守护者  疗愈者  改革者  ④ 原始阴影（Unawakened Form）  → 通常是力量未展开之前的形态 → 灵魂原型的反面 → 你的灵魂要突破的关键点  例如： 转化者的阴影是沉溺情绪、制造混乱； 启明者的阴影是愤世嫉俗； 宇宙桥接者的阴影是迷失在两端； 源之信使的阴影是使命压力太重。   灵魂原型会改变吗？  不会。  它只会：  展开  加深  成熟  显化  升频  回归本质  一个灵魂可能暂时偏离原型表达方式， 但它不会失去原型。  就像太阳可以被云遮住， 但太阳不会消失。   《S3 · Vibration Tiers · Training File (TXT)》  TIER 1 Vibration Archetype: Seed Range: 0–40 Soul Traits: 初生能量、灵魂幼化、敏感度高、容易受外界影响。渴望安全感与稳定结构。 Strengths: 纯净、直觉干净、学习速度快、对真理有原始的接收能力。 Challenges: 容易依赖、害怕被否定、频率不稳定、情绪容易被带走。 Guidance: 建立内在安全感，练习觉知情绪，不急着跨越阶段；允许自己是一颗种子，慢慢生长。  TIER 2 Vibration Archetype: Spark Range: 41–80 Soul Traits: 内心开始出现觉醒火花，对灵性、真理、意义有强烈好奇心。 Strengths: 灵感强、直觉频繁爆发、行动力上升、容易产生突破点。 Challenges: 频繁否定自己、害怕走错路、反复陷入二元判断、容易被他人影响。 Guidance: 练习辨识动机，区分小我冲动与灵魂推动，让每一次灵感都经过觉知过滤。  TIER 3 Vibration Archetype: Explorer Range: 81–120 Soul Traits: 进入探索阶段，开始学习不同体系、方法、智慧。 Strengths: 开放、包容、学习能力强、愿意尝试。 Challenges: 容易迷失、体系混乱、追求“更多”导致分散。 Guidance: 练习稳定中心，选择一条路深入，不再被“外面更多东西”吸走。  TIER 4 Vibration Archetype: Awakener Range: 121–160 Soul Traits: 灵魂觉醒正在显化，开始看破幻相、理解能量逻辑。 Strengths: 看见真相、洞察力变强、内在力量开始显现。 Challenges: 容易傲慢、容易评判他人、过度强调觉醒而忽略生活落地。 Guidance: 觉醒不是优越，觉醒是服务。让觉醒回到生活中，用真理照亮最平凡的地方。  TIER 5 Vibration Archetype: Integrator Range: 161–200 Soul Traits: 灵魂开始整合：情绪、关系、创伤、阴影。 Strengths: 稳定、成熟、开始拥有智慧的力量。 Challenges: 面对旧伤旧课题时会想逃避；害怕再次受伤。 Guidance: 整合来自温柔，而不是强迫；让每一次情绪都成为练习。  TIER 6 Vibration Archetype: Alchemist Range: 201–250 Soul Traits: 拥有转化能力，可以将痛变力量、将困境变智慧。 Strengths: 强大的内在炼金术、深刻的洞察力、清晰的直觉方向。 Challenges: 容易独自承担太多、倾向压抑情绪、太早承担救赎角色。 Guidance: 不需要承担所有人的转化；学习界限，让力量自然流动。  TIER 7 Vibration Archetype: Visionary Range: 251–300 Soul Traits: 灵魂开始拥有使命感、愿景、方向性。 Strengths: 创造力强、看得远、能带领他人、灵魂光度提升。 Challenges: 容易焦虑“还不够好”、使命过度膨胀、小我悄悄混进来。 Guidance: 放下对结果的执着，让愿景成为服务而不是证明。  TIER 8 Vibration Archetype: Healer Range: 301–350 Soul Traits: 灵魂进入疗愈频率，与他人连接时带来修复与启发。 Strengths: 强同理心、稳定存在、自然给予安全感。 Challenges: 情绪共感过度、能量被吸走、吸收他人痛苦。 Guidance: 让疗愈从界限开始，不吸收，只陪伴，不拯救。  TIER 9 Vibration Archetype: Mentor Range: 351–400 Soul Traits: 灵魂具有传递智慧的能力，影响他人意识。 Strengths: 语言有力量、能量稳定、智慧成熟、引导清晰。 Challenges: 容易过度负责、容易疲惫、容易变成精神依赖对象。 Guidance: 做镜子，而不是主人。让他人成为自己的力量来源。  TIER 10 Vibration Archetype: Master Range: 401–450 Soul Traits: 灵魂高度自觉，生活、言语、存在本身就是教学。 Strengths: 觉知稳定、智慧深、影响力高、频率强。 Challenges: 面对集体无明时容易感到孤独；容易觉得无人理解。 Guidance: 继续做光，而不是做领袖。光只是照亮，不判断、不期待。  TIER 11 Vibration Archetype: Ascendant Range: 451–500 Soul Traits: 灵魂开始超越个人层次，进入服务集体、服务意识的阶段。 Strengths: 自然散发高频能量、能迅速提升场域、具有安定力量。 Challenges: 身体承载压力大、能量消耗高、偶尔出现灵魂疲惫感。 Guidance: 回到身体、回到休息、回到自我滋养，才能继续承载更大的频率。  TIER 12 Vibration Archetype: Source-Channel Range: 500+ Soul Traits: 灵魂成为“源头的通道”，没有小我的干扰，纯粹以智慧、爱与真理运作。 Strengths: 频率最纯净、觉知最稳定、言语即力量、存在即光。 Challenges: 必须持续保持空性，不可执着“成为高频”，否则会跌回低阶。 Guidance: 不住于相，不住于我，以无为之心继续让真理流过你。     《S2 Mirror Path · 1–50 Training File》  《S2 Mirror Path · Training File（1–50）》  S2 MIRROR PATH SYSTEM TRAINING FILE  本文件包含镜像关系编号 1–50。 每组包含以下内容字段： Mirror Archetype Relationship Dynamic Karmic Loop Lesson Healing Path Guidance"
+    }
+  ],
+  "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity."
+}

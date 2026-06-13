@@ -267,7 +267,9 @@ export function adaptV2Segment(
         str(enriched, "reflective_summary") ??
         freeEssenceSource ??
         MISSING_EN,
-      str(enriched, "core_illusion_zh") ?? str(enriched, "origin_essence_zh"),
+      str(enriched, "core_illusion_zh") ??
+        str(enriched, "reflective_summary_zh") ??
+        str(enriched, "origin_essence_zh"),
     );
   }
 
@@ -281,7 +283,7 @@ export function adaptV2Segment(
     segment.integrationPrompt = text(str(enriched, "healing_path"), str(enriched, "healing_path_zh"));
     segment.freeEssence = text(
       str(enriched, "mirror_essence") ?? str(enriched, "reflective_summary") ?? freeEssenceSource ?? MISSING_EN,
-      str(enriched, "mirror_essence_zh"),
+      str(enriched, "mirror_essence_zh") ?? str(enriched, "reflective_summary_zh"),
     );
     segment.fullEssence = segment.freeEssence;
     if (!segment.guidance) {

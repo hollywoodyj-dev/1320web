@@ -52,7 +52,6 @@
     {
       "code": "S7-00",
       "archetype": "The Returning Self",
-      "archetype_zh": "回到自身者",
       "sovereignty_essence": "Your sovereignty begins through returning to yourself before reacting to the field around you.",
       "what_your_soul_is_learning_to_reclaim": "This code reflects a soul learning to reclaim presence, self-contact, and the right to pause before choosing.",
       "where_power_was_given_away": "Patterns become visible when the person notices how quickly they leave their own center to manage the expectations, emotions, or urgency of others.",
@@ -71,7 +70,6 @@
     {
       "code": "S7-01",
       "archetype": "The Self-Trusting One",
-      "archetype_zh": "自我信任者",
       "sovereignty_essence": "Your sovereignty strengthens when you stop outsourcing permission and begin honoring clear inner signals.",
       "what_your_soul_is_learning_to_reclaim": "This code reflects a soul learning to trust perception, intuition, and choice without needing perfect certainty.",
       "where_power_was_given_away": "Patterns become visible where the person repeatedly asks others to confirm what the body, heart, or awareness has already recognized.",
@@ -90,7 +88,6 @@
     {
       "code": "S7-02",
       "archetype": "The Boundaried Choice",
-      "archetype_zh": "边界选择者",
       "sovereignty_essence": "Your sovereignty emerges through the ability to choose without abandoning your limits, needs, or honest capacity.",
       "what_your_soul_is_learning_to_reclaim": "This code reflects a soul learning that love, service, and responsibility must include the self.",
       "where_power_was_given_away": "Patterns become visible when the person says yes too quickly, delays honest refusal, or confuses availability with worth.",
@@ -109,7 +106,6 @@
     {
       "code": "S7-03",
       "archetype": "The Truthful Actor",
-      "archetype_zh": "真实行动者",
       "sovereignty_essence": "Your sovereignty is activated when truth becomes behavior, not only insight.",
       "what_your_soul_is_learning_to_reclaim": "This code reflects a soul learning to move from awareness into grounded action, speech, and visible alignment.",
       "where_power_was_given_away": "Patterns become visible when the person understands deeply but delays acting, speaks around the truth, or waits for conditions to feel safer.",
@@ -128,7 +124,6 @@
     {
       "code": "S7-04",
       "archetype": "The Unapproved Free Self",
-      "archetype_zh": "不再外求许可者",
       "sovereignty_essence": "Your sovereignty grows when you no longer organize your life around approval, recognition, or emotional permission.",
       "what_your_soul_is_learning_to_reclaim": "This code reflects a soul learning to belong to itself even when external agreement is not guaranteed.",
       "where_power_was_given_away": "Patterns become visible where the person edits desires, softens truth, or delays direction until others validate the choice.",
@@ -147,7 +142,6 @@
     {
       "code": "S7-05",
       "archetype": "The Embodied Authority",
-      "archetype_zh": "入身主权者",
       "sovereignty_essence": "Your sovereignty becomes stable when authority moves from concept into body, rhythm, and daily practice.",
       "what_your_soul_is_learning_to_reclaim": "This code reflects a soul learning that inner authority is not a statement; it is lived through consistent choices.",
       "where_power_was_given_away": "Patterns become visible when the person speaks of alignment but lives from urgency, overextension, or disembodied ideals.",
@@ -166,7 +160,6 @@
     {
       "code": "S7-06",
       "archetype": "The Conscious Responsible One",
-      "archetype_zh": "清醒责任者",
       "sovereignty_essence": "Your sovereignty matures through taking responsibility without carrying what does not belong to you.",
       "what_your_soul_is_learning_to_reclaim": "This code reflects a soul learning the difference between conscious ownership and over-responsibility.",
       "where_power_was_given_away": "Patterns become visible where the person either takes on too much or avoids responsibility because it feels like loss of freedom.",
@@ -183,9 +176,5 @@
       "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
     }
   ],
-  "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
-  "document": {
-    "bilingual_build": "2026-06-13",
-    "bilingual_note": "Full en + *_zh fields merged from steward v2 EN source and approved v1 bilingual masters (S0–S3, S6)."
-  }
+  "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
 }

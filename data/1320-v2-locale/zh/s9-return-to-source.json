@@ -51,8 +51,7 @@
   "entries": [
     {
       "code": "S9-00",
-      "archetype": "Return Through Silence",
-      "archetype_zh": "静默回源者",
+      "archetype": "静默回源者",
       "return_essence": "Your return to source happens through silence, stillness, and the space before identity forms.",
       "what_your_soul_remembers": "This code reflects a soul learning that wholeness can be felt without explanation, performance, or conclusion.",
       "how_life_themes_resolve": "Life themes resolve when the person stops demanding constant meaning and allows quiet presence to become enough.",
@@ -70,8 +69,7 @@
     },
     {
       "code": "S9-01",
-      "archetype": "Return Through Enoughness",
-      "archetype_zh": "足够回源者",
+      "archetype": "足够回源者",
       "return_essence": "Your return to source is through remembering that existence does not need to be proven.",
       "what_your_soul_remembers": "This code reflects a soul releasing the belief that value must be earned through achievement, beauty, usefulness, or recognition.",
       "how_life_themes_resolve": "Life themes resolve when the person acts from worth rather than for worth.",
@@ -89,8 +87,7 @@
     },
     {
       "code": "S9-02",
-      "archetype": "Return Through Trust",
-      "archetype_zh": "信任回源者",
+      "archetype": "信任回源者",
       "return_essence": "Your return to source happens through loosening control and learning to cooperate with life without becoming passive.",
       "what_your_soul_remembers": "This code reflects a soul releasing the need to manage every outcome in order to feel safe.",
       "how_life_themes_resolve": "Life themes resolve when the person distinguishes trust from avoidance and responsibility from control.",
@@ -108,8 +105,7 @@
     },
     {
       "code": "S9-03",
-      "archetype": "Return Through Connection",
-      "archetype_zh": "连接回源者",
+      "archetype": "连接回源者",
       "return_essence": "Your return to source is through remembering that separateness is not the whole truth.",
       "what_your_soul_remembers": "This code reflects a soul healing isolation, guardedness, and the belief that they must carry everything alone.",
       "how_life_themes_resolve": "Life themes resolve when connection becomes chosen, discerning, and rooted in self-presence.",
@@ -127,8 +123,7 @@
     },
     {
       "code": "S9-04",
-      "archetype": "Return Through Truth",
-      "archetype_zh": "真相回源者",
+      "archetype": "真相回源者",
       "return_essence": "Your return to source happens through allowing truth to refine identity, hope, relationships, and direction.",
       "what_your_soul_remembers": "This code reflects a soul learning that reality is not an enemy of love; it is the ground where love becomes real.",
       "how_life_themes_resolve": "Life themes resolve when the person stops protecting illusions and lets honest seeing become liberation.",
@@ -146,8 +141,7 @@
     },
     {
       "code": "S9-05",
-      "archetype": "Return Through Surrender",
-      "archetype_zh": "臣服回源者",
+      "archetype": "臣服回源者",
       "return_essence": "Your return to source is through releasing the identity that must force, fix, or explain everything.",
       "what_your_soul_remembers": "This code reflects a soul learning that some thresholds open through softening, not pressure.",
       "how_life_themes_resolve": "Life themes resolve when effort becomes clean and the person stops using striving to avoid vulnerability.",
@@ -165,8 +159,7 @@
     },
     {
       "code": "S9-06",
-      "archetype": "Return Through Forgiveness",
-      "archetype_zh": "宽恕回源者",
+      "archetype": "宽恕回源者",
       "return_essence": "Your return to source happens through releasing the weight of blame, guilt, and unfinished emotional contracts.",
       "what_your_soul_remembers": "This code reflects a soul learning that forgiveness is not approval; it is the return of life-force to the self.",
       "how_life_themes_resolve": "Life themes resolve when the person stops making pain the center of identity and begins reclaiming freedom.",
@@ -184,8 +177,7 @@
     },
     {
       "code": "S9-07",
-      "archetype": "Return Through Presence",
-      "archetype_zh": "临在回源者",
+      "archetype": "临在回源者",
       "return_essence": "Your return to source is through entering the present moment fully enough for life to touch you again.",
       "what_your_soul_remembers": "This code reflects a soul learning to come back from future fear, past loops, and imagined versions of reality.",
       "how_life_themes_resolve": "Life themes resolve when the person chooses direct experience over constant mental departure.",
@@ -203,8 +195,7 @@
     },
     {
       "code": "S9-08",
-      "archetype": "Return Through Wholeness",
-      "archetype_zh": "完整回源者",
+      "archetype": "完整回源者",
       "return_essence": "Your return to source happens through integrating the parts of yourself you once split into good, bad, spiritual, human, strong, or weak.",
       "what_your_soul_remembers": "This code reflects a soul learning that wholeness is not perfection; it is honest inclusion.",
       "how_life_themes_resolve": "Life themes resolve when the person stops rejecting pieces of their humanity in order to feel worthy of source.",
@@ -221,9 +212,5 @@
       "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
     }
   ],
-  "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
-  "document": {
-    "bilingual_build": "2026-06-13",
-    "bilingual_note": "Full en + *_zh fields merged from steward v2 EN source and approved v1 bilingual masters (S0–S3, S6)."
-  }
+  "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
 }

@@ -45,6 +45,8 @@ export type SegmentContent = {
   relationshipPattern?: LocalizedText;
   karmicLoop?: LocalizedText;
   mirrorLesson?: LocalizedText;
+  /** v2 steward Integration Key line (S0/S2). */
+  integrationKey?: LocalizedText;
   expressionPattern?: LocalizedText;
   growthEdge?: LocalizedText;
   /** S5 Soul Mission — deterministic seed assembly (premium). */

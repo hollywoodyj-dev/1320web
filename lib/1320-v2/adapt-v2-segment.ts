@@ -281,13 +281,22 @@ export function adaptV2Segment(
     segment.karmicLoop = text(str(enriched, "karmic_loop"), str(enriched, "karmic_loop_zh"));
     segment.mirrorLesson = text(str(enriched, "lesson"), str(enriched, "lesson_zh"));
     segment.integrationPrompt = text(str(enriched, "healing_path"), str(enriched, "healing_path_zh"));
-    segment.freeEssence = text(
-      str(enriched, "mirror_essence") ?? str(enriched, "reflective_summary") ?? freeEssenceSource ?? MISSING_EN,
-      str(enriched, "mirror_essence_zh") ?? str(enriched, "reflective_summary_zh"),
+    segment.integrationKey = text(str(enriched, "integration_key"), str(enriched, "integration_key_zh"));
+    const reflective = text(
+      str(enriched, "reflective_summary"),
+      str(enriched, "reflective_summary_zh"),
     );
-    segment.fullEssence = segment.freeEssence;
+    segment.fullEssence = reflective;
+    segment.freeEssence = reflective;
     if (!segment.guidance) {
-      segment.guidance = pickEnglishGuidance(enriched);
+      segment.guidance = text(
+        str(enriched, "wisewave_guidance"),
+        str(enriched, "wisewave_guidance_zh"),
+      );
+    }
+    const safe = str(enriched, "safe_language_note");
+    if (safe) {
+      segment.lockedPreview = text(safe, str(enriched, "safe_language_note_zh"));
     }
   }
 

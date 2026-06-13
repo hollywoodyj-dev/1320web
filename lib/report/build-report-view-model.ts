@@ -9,7 +9,6 @@ import { getSegment, type SegmentId } from "@/lib/segments";
 import type { IntegratedSummarySection } from "@/components/report/integrated-summary-card";
 import {
   coreIllusionMechanismField,
-  relationshipTriggerPatternField,
 } from "@/lib/report/format-depth-fields";
 import { buildOverviewEssence, truncateOverview } from "@/lib/report/overview-essence";
 import {
@@ -170,12 +169,14 @@ function buildS2Fields(
   archetype: string,
 ): ReportField[] {
   const all = [
-    field(locale, "Overview", segment.fullEssence ?? segment.freeEssence),
-    relationshipTriggerPatternField(locale, segment),
+    field(locale, "Mirror Archetype", segment.title),
+    field(locale, "Reflective Summary", segment.fullEssence ?? segment.freeEssence),
+    field(locale, "Relationship Dynamic", segment.relationshipPattern),
     field(locale, "Karmic Loop", segment.karmicLoop),
-    field(locale, "Mirror Lesson", segment.mirrorLesson),
+    field(locale, "Lesson", segment.mirrorLesson),
     field(locale, "Healing Path", segment.integrationPrompt),
-    field(locale, "Integration Guidance", segment.guidance),
+    field(locale, "Integration Key", segment.integrationKey),
+    field(locale, "Wisewave Guidance", segment.guidance),
   ].filter((f): f is ReportField => Boolean(f));
 
   return polishReportFields(all, { archetype });

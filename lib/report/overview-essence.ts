@@ -44,6 +44,8 @@ export function buildOverviewEssence(
         pickLocalized(segment.fullEssence ?? segment.freeEssence, locale),
       );
     case "s2": {
+      const reflective = pickLocalized(segment.fullEssence ?? segment.freeEssence, locale).trim();
+      if (reflective) return reflective;
       const parts = [
         pickLocalized(segment.title, locale),
         pickLocalized(segment.relationshipPattern, locale),

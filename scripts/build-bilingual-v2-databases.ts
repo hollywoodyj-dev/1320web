@@ -16,6 +16,7 @@ import { fileURLToPath } from "node:url";
 import {
   entryToLocale,
   mergeDatabaseContent,
+  mergeZhStewardFields,
 } from "../lib/1320-v2/bilingual-merge";
 import type { V2Entry } from "../lib/1320-v2/v2-index";
 
@@ -151,7 +152,25 @@ for (const spec of MODULE_COPIES) {
   }
 
   const raw = JSON.parse(readFileSync(from, "utf8")) as Record<string, unknown>;
-  const content = extractContentArray(raw);
+  const enContent = extractContentArray(raw);
+  const zhStewardPath = join(stewardParentDir(spec.stewardRel), spec.stewardZhName);
+  const zhByCode = new Map<string, V2Entry>();
+  if (existsSync(zhStewardPath)) {
+    const zhRaw = JSON.parse(readFileSync(zhStewardPath, "utf8")) as Record<string, unknown>;
+    for (const entry of extractContentArray(zhRaw)) {
+      const code = entry.code;
+      if (typeof code === "string") zhByCode.set(code, entry);
+    }
+  } else {
+    console.warn(`warn: no ZH steward file for ${spec.module} (${spec.stewardZhName})`);
+  }
+
+  const content = enContent.map((enEntry) => {
+    const code = enEntry.code;
+    if (typeof code !== "string") return enEntry;
+    const zhEntry = zhByCode.get(code);
+    return zhEntry ? mergeZhStewardFields(enEntry, zhEntry) : enEntry;
+  });
   const merged = mergeDatabaseContent(spec.module, content);
   mergedEntryCount += merged.length;
 
@@ -166,17 +185,17 @@ for (const spec of MODULE_COPIES) {
       "Full en + *_zh fields merged from steward v2 EN source and approved v1 bilingual masters (S0–S3, S6).",
   };
 
-  const enContent = merged.map((e) => entryToLocale(e, "en"));
-  const zhContent = merged.map((e) => entryToLocale(e, "zh"));
+  const enLocaleContent = merged.map((e) => entryToLocale(e, "en"));
+  const zhLocaleContent = merged.map((e) => entryToLocale(e, "zh"));
 
   const enFile = { ...raw };
   const zhFile = { ...raw };
   if (Array.isArray(raw.content)) {
-    enFile.content = enContent;
-    zhFile.content = zhContent;
+    enFile.content = enLocaleContent;
+    zhFile.content = zhLocaleContent;
   } else {
-    enFile.entries = enContent;
-    zhFile.entries = zhContent;
+    enFile.entries = enLocaleContent;
+    zhFile.entries = zhLocaleContent;
   }
 
   writeJson(join(destV2, spec.dest), bilingual);

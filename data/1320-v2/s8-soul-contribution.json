@@ -52,7 +52,6 @@
     {
       "code": "S8-00",
       "archetype": "Contribution Through Presence",
-      "archetype_zh": "临在贡献者",
       "contribution_essence": "Your contribution begins through the quality of presence you bring into spaces.",
       "what_your_soul_offers": "This code reflects a soul whose impact is not only in what they do, but in how they stabilize the field around them.",
       "how_contribution_flows": "Contribution flows when the person stops underestimating quiet influence and allows presence, listening, and grounded awareness to matter.",
@@ -66,12 +65,19 @@
       "shadow_distortion_of_contribution": "When distorted, contribution may become invisibility, passivity, or believing that only visible achievement counts.",
       "mature_contribution_expression": "Mature contribution appears as steady presence that helps others return to themselves without creating dependence.",
       "wisewave_reflection": "Your stillness can be a contribution when it is awake, grounded, and true.",
-      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "archetype_zh": "临在贡献者",
+      "natural_contribution_fields_zh": [
+        "holding space",
+        "community presence",
+        "listening roles",
+        "calm facilitation",
+        "emotional steadiness"
+      ]
     },
     {
       "code": "S8-01",
       "archetype": "Contribution Through Initiation",
-      "archetype_zh": "开创贡献者",
       "contribution_essence": "Your contribution moves through initiating new paths, starting needed conversations, and giving motion to what has been stagnant.",
       "what_your_soul_offers": "This code reflects a soul who contributes by opening doors rather than waiting for permission.",
       "how_contribution_flows": "Contribution flows when the person uses action to serve clarity, not to prove worth or outrun discomfort.",
@@ -85,12 +91,19 @@
       "shadow_distortion_of_contribution": "When distorted, contribution may become impatience, pressure, or starting many things without sustaining the energy needed for impact.",
       "mature_contribution_expression": "Mature contribution appears as clean initiation: beginning what is needed while respecting timing, capacity, and others' readiness.",
       "wisewave_reflection": "You do not need to force movement. You are here to open the first honest door.",
-      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "archetype_zh": "开创贡献者",
+      "natural_contribution_fields_zh": [
+        "startups",
+        "new projects",
+        "advocacy",
+        "creative launches",
+        "movement building"
+      ]
     },
     {
       "code": "S8-02",
       "archetype": "Contribution Through Connection",
-      "archetype_zh": "连接贡献者",
       "contribution_essence": "Your contribution is expressed through building bridges, restoring communication, and helping separate parts remember relationship.",
       "what_your_soul_offers": "This code reflects a soul whose gift is to make connection safer, clearer, and more conscious.",
       "how_contribution_flows": "Contribution flows when the person stops merging with others and begins connecting from a stable sense of self.",
@@ -104,12 +117,19 @@
       "shadow_distortion_of_contribution": "When distorted, contribution may become people-pleasing, emotional labor, or trying to hold connection at the cost of truth.",
       "mature_contribution_expression": "Mature contribution appears as connection with boundaries: warmth that does not erase the self.",
       "wisewave_reflection": "You are not here to hold everyone together. You are here to show what truthful connection can feel like.",
-      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "archetype_zh": "连接贡献者",
+      "natural_contribution_fields_zh": [
+        "relationship work",
+        "mediation",
+        "community care",
+        "cross-cultural spaces",
+        "partnership building"
+      ]
     },
     {
       "code": "S8-03",
       "archetype": "Contribution Through Insight",
-      "archetype_zh": "洞察贡献者",
       "contribution_essence": "Your contribution comes through seeing patterns, naming what is hidden, and translating complexity into clarity.",
       "what_your_soul_offers": "This code reflects a soul who helps others understand what they could not yet articulate.",
       "how_contribution_flows": "Contribution flows when insight becomes grounded enough to be useful, compassionate, and actionable.",
@@ -124,12 +144,20 @@
       "shadow_distortion_of_contribution": "When distorted, contribution may become over-analysis, intellectual distance, or using insight to avoid vulnerability.",
       "mature_contribution_expression": "Mature contribution appears as clear seeing that serves life rather than remaining above it.",
       "wisewave_reflection": "Your insight becomes medicine when it lands gently enough for reality to change.",
-      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "archetype_zh": "洞察贡献者",
+      "natural_contribution_fields_zh": [
+        "strategy",
+        "writing",
+        "teaching",
+        "research",
+        "pattern recognition",
+        "reflective guidance"
+      ]
     },
     {
       "code": "S8-04",
       "archetype": "Contribution Through Structure",
-      "archetype_zh": "结构贡献者",
       "contribution_essence": "Your contribution is expressed through building systems, rhythms, containers, and practical forms that allow growth to become sustainable.",
       "what_your_soul_offers": "This code reflects a soul who helps vision become usable, repeatable, and grounded.",
       "how_contribution_flows": "Contribution flows when structure serves aliveness rather than control.",
@@ -144,12 +172,20 @@
       "shadow_distortion_of_contribution": "When distorted, contribution may become rigidity, perfectionism, or managing every detail to avoid uncertainty.",
       "mature_contribution_expression": "Mature contribution appears as structure that supports freedom instead of restricting it.",
       "wisewave_reflection": "A true container does not imprison life. It gives life a place to grow.",
-      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "archetype_zh": "结构贡献者",
+      "natural_contribution_fields_zh": [
+        "operations",
+        "education",
+        "product systems",
+        "community structure",
+        "project management",
+        "long-term building"
+      ]
     },
     {
       "code": "S8-05",
       "archetype": "Contribution Through Transformation",
-      "archetype_zh": "转化贡献者",
       "contribution_essence": "Your contribution moves through helping people, projects, or systems cross thresholds of change.",
       "what_your_soul_offers": "This code reflects a soul who can meet endings, transitions, and deep renewal without turning away.",
       "how_contribution_flows": "Contribution flows when the person stops dramatizing transformation and begins holding change with steadiness.",
@@ -163,12 +199,19 @@
       "shadow_distortion_of_contribution": "When distorted, contribution may become intensity, rescuing, or seeking transformation through chaos.",
       "mature_contribution_expression": "Mature contribution appears as the ability to guide change without feeding urgency or collapse.",
       "wisewave_reflection": "Transformation does not need to be violent to be real. Your contribution is to make change conscious.",
-      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "archetype_zh": "转化贡献者",
+      "natural_contribution_fields_zh": [
+        "coaching",
+        "change leadership",
+        "healing spaces",
+        "crisis integration",
+        "creative reinvention"
+      ]
     },
     {
       "code": "S8-06",
       "archetype": "Contribution Through Healing",
-      "archetype_zh": "愈合贡献者",
       "contribution_essence": "Your contribution is expressed through repair, care, emotional attunement, and helping what has been fragmented return to wholeness.",
       "what_your_soul_offers": "This code reflects a soul whose presence can soften pain when boundaries and clarity remain intact.",
       "how_contribution_flows": "Contribution flows when care is offered from fullness rather than from the need to be needed.",
@@ -182,12 +225,19 @@
       "shadow_distortion_of_contribution": "When distorted, contribution may become self-sacrifice, emotional absorption, or carrying wounds that belong to others.",
       "mature_contribution_expression": "Mature contribution appears as compassionate support that empowers rather than creates dependence.",
       "wisewave_reflection": "You can be a healing presence without becoming anyone's source.",
-      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "archetype_zh": "愈合贡献者",
+      "natural_contribution_fields_zh": [
+        "healing arts",
+        "support roles",
+        "emotional education",
+        "care-centered leadership",
+        "family or community repair"
+      ]
     },
     {
       "code": "S8-07",
       "archetype": "Contribution Through Collective Vision",
-      "archetype_zh": "整体愿景贡献者",
       "contribution_essence": "Your contribution is expressed through seeing the larger pattern and helping individual gifts find their place in a wider whole.",
       "what_your_soul_offers": "This code reflects a soul who is learning to serve not status, but collective coherence.",
       "how_contribution_flows": "Contribution flows when vision includes practical responsibility and does not become an identity of superiority.",
@@ -202,7 +252,16 @@
       "shadow_distortion_of_contribution": "When distorted, contribution may become savior identity, grandiosity, or losing the human details inside a large vision.",
       "mature_contribution_expression": "Mature contribution appears as vision with humility: serving the whole without needing to become its center.",
       "wisewave_reflection": "The whole does not ask you to disappear. It asks you to contribute from your rightful place.",
-      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+      "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "archetype_zh": "整体愿景贡献者",
+      "natural_contribution_fields_zh": [
+        "collective work",
+        "social impact",
+        "spiritual communities",
+        "systems change",
+        "movement design",
+        "integrated leadership"
+      ]
     }
   ],
   "safe_language_note": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",

@@ -31,6 +31,59 @@ function strArray(record: JsonRecord, key: string): string[] | undefined {
   return items.length ? items : undefined;
 }
 
+function containsCjk(text: string): boolean {
+  return /[\u3400-\u9fff]/.test(text);
+}
+
+/** Set en/zh pair; replace base key when it holds Chinese, or *_zh when it holds English-only copy. */
+function setBilingualPair(
+  entry: V2Entry,
+  baseKey: string,
+  en?: string,
+  zh?: string,
+  options?: { forceEn?: boolean; forceZh?: boolean },
+): void {
+  const zhKey = `${baseKey}_zh`;
+  const existingEn = str(entry, baseKey);
+  const existingZh = str(entry, zhKey);
+
+  if (en?.trim()) {
+    const shouldSet =
+      options?.forceEn || !existingEn?.trim() || containsCjk(existingEn);
+    if (shouldSet) entry[baseKey] = en.trim();
+  }
+  if (zh?.trim()) {
+    const shouldSet =
+      options?.forceZh || !existingZh?.trim() || !containsCjk(existingZh);
+    if (shouldSet) entry[zhKey] = zh.trim();
+  }
+}
+
+function setArrayBilingualPair(
+  entry: V2Entry,
+  baseKey: string,
+  en?: string[],
+  zh?: string[],
+): void {
+  const zhKey = `${baseKey}_zh`;
+  setArrayIfEmpty(entry, baseKey, en);
+  setArrayIfEmpty(entry, zhKey, zh);
+  const existingEn = entry[baseKey];
+  if (Array.isArray(existingEn) && existingEn.length > 0) {
+    const first = existingEn.find((item): item is string => typeof item === "string");
+    if (first && containsCjk(first) && en?.length) {
+      entry[baseKey] = en;
+    }
+  }
+  const existingZh = entry[zhKey];
+  if (Array.isArray(existingZh) && existingZh.length > 0) {
+    const first = existingZh.find((item): item is string => typeof item === "string");
+    if (first && !containsCjk(first) && zh?.length) {
+      entry[zhKey] = zh;
+    }
+  }
+}
+
 function setIfEmpty(entry: V2Entry, key: string, value: unknown): void {
   if (value === undefined || value === null) return;
   if (typeof value === "string" && !value.trim()) return;
@@ -77,22 +130,51 @@ function buildS2IntegrationKey(healingEn?: string, healingZh?: string) {
   };
 }
 
+function buildS3IntegrationKey(guidanceEn?: string, guidanceZh?: string) {
+  return {
+    en: guidanceEn ? `The integration begins by: ${guidanceEn}` : undefined,
+    zh: guidanceZh ? `整合从此开始：${guidanceZh}` : undefined,
+  };
+}
+
+export function mergeZhStewardFields(enEntry: V2Entry, zhEntry: V2Entry): V2Entry {
+  const merged = { ...enEntry };
+  for (const [key, value] of Object.entries(zhEntry)) {
+    if (key === "code" || key === "module" || key === "numeric_value") continue;
+    if (key.endsWith("_zh")) {
+      if (typeof value === "string" && value.trim()) {
+        merged[key] = value.trim();
+      } else if (Array.isArray(value) && value.length > 0) {
+        merged[key] = value;
+      }
+      continue;
+    }
+    if (typeof value === "string" && value.trim() && containsCjk(value)) {
+      merged[`${key}_zh`] = value.trim();
+    } else if (Array.isArray(value) && value.length > 0) {
+      const zhKey = `${key}_zh`;
+      if (!merged[zhKey]) merged[zhKey] = value;
+    }
+  }
+  return merged;
+}
+
 export function mergeS0Entry(entry: V2Entry, code: string): V2Entry {
   const merged = { ...entry };
   const v1 = s0V1[code];
   if (v1) {
-    setIfEmpty(merged, "void_archetype", str(v1, "nameEn"));
-    setIfEmpty(merged, "void_archetype_zh", str(v1, "nameZh"));
-    setIfEmpty(merged, "core_illusion", str(v1, "coreIllusionEn"));
-    setIfEmpty(merged, "core_illusion_zh", str(v1, "coreIllusionZh"));
-    setIfEmpty(merged, "void_challenge", str(v1, "voidChallengeEn"));
-    setIfEmpty(merged, "void_challenge_zh", str(v1, "voidChallengeZh"));
-    setIfEmpty(merged, "void_power", str(v1, "voidPowerEn"));
-    setIfEmpty(merged, "void_power_zh", str(v1, "voidPowerZh"));
-    setIfEmpty(merged, "path_of_return", str(v1, "pathOfReturnEn"));
-    setIfEmpty(merged, "path_of_return_zh", str(v1, "pathOfReturnZh"));
-    setIfEmpty(merged, "wisewave_guidance", str(v1, "guidanceEn"));
-    setIfEmpty(merged, "wisewave_guidance_zh", str(v1, "guidanceZh"));
+    setBilingualPair(merged, "void_archetype", str(v1, "nameEn"), str(v1, "nameZh"));
+    setBilingualPair(merged, "core_illusion", str(v1, "coreIllusionEn"), str(v1, "coreIllusionZh"));
+    setBilingualPair(merged, "void_challenge", str(v1, "voidChallengeEn"), str(v1, "voidChallengeZh"));
+    setBilingualPair(merged, "void_power", str(v1, "voidPowerEn"), str(v1, "voidPowerZh"));
+    setBilingualPair(merged, "path_of_return", str(v1, "pathOfReturnEn"), str(v1, "pathOfReturnZh"));
+    setBilingualPair(
+      merged,
+      "wisewave_guidance",
+      str(v1, "guidanceEn"),
+      str(v1, "guidanceZh"),
+      { forceEn: true },
+    );
   }
 
   const summary = buildS0ReflectiveSummary(
@@ -117,29 +199,40 @@ export function mergeS1Entry(entry: V2Entry, code: string): V2Entry {
   const v1 = s1V1[code];
   if (!v1) return merged;
 
-  setIfEmpty(merged, "archetype", str(v1, "nameEn"));
-  setIfEmpty(merged, "archetype_zh", str(v1, "nameZh"));
-  setIfEmpty(merged, "origin_essence", str(v1, "essenceEn"));
-  setIfEmpty(merged, "origin_essence_zh", str(v1, "essenceZh"));
-  setArrayIfEmpty(merged, "soul_traits", strArray(v1, "traitsEn"));
-  setArrayIfEmpty(merged, "soul_traits_zh", strArray(v1, "traitsZh"));
-  setArrayIfEmpty(merged, "strengths", strArray(v1, "strengthsEn"));
-  setArrayIfEmpty(merged, "strengths_zh", strArray(v1, "strengthsZh"));
-  setArrayIfEmpty(merged, "shadow_frequency", strArray(v1, "shadowsEn"));
-  setArrayIfEmpty(merged, "shadow_frequency_zh", strArray(v1, "shadowsZh"));
-  setIfEmpty(merged, "core_lesson", str(v1, "lessonEn"));
-  setIfEmpty(merged, "core_lesson_zh", str(v1, "lessonZh"));
-  setArrayIfEmpty(merged, "mission_direction", strArray(v1, "directionEn"));
-  setArrayIfEmpty(merged, "mission_direction_zh", strArray(v1, "directionZh"));
-  setIfEmpty(merged, "symbolic_color", str(v1, "colorEn"));
-  setIfEmpty(merged, "symbolic_color_zh", str(v1, "colorZh"));
-  setIfEmpty(merged, "totem", str(v1, "totemEn"));
-  setIfEmpty(merged, "totem_zh", str(v1, "totemZh"));
-  setIfEmpty(merged, "wisewave_guidance", str(v1, "guidanceEn"));
-  setIfEmpty(merged, "wisewave_guidance_zh", str(v1, "guidanceZh"));
-  setIfEmpty(merged, "esoteric_link", str(v1, "symbolicLink"));
-  setIfEmpty(merged, "integration_key", str(v1, "integrationKeyEn"));
-  setIfEmpty(merged, "integration_key_zh", str(v1, "integrationKeyZh"));
+  setBilingualPair(merged, "archetype", str(v1, "nameEn"), str(v1, "nameZh"));
+  setBilingualPair(merged, "origin_essence", str(v1, "essenceEn"), str(v1, "essenceZh"));
+  setArrayBilingualPair(merged, "soul_traits", strArray(v1, "traitsEn"), strArray(v1, "traitsZh"));
+  setArrayBilingualPair(merged, "strengths", strArray(v1, "strengthsEn"), strArray(v1, "strengthsZh"));
+  setArrayBilingualPair(
+    merged,
+    "shadow_frequency",
+    strArray(v1, "shadowsEn"),
+    strArray(v1, "shadowsZh"),
+  );
+  setBilingualPair(merged, "core_lesson", str(v1, "lessonEn"), str(v1, "lessonZh"));
+  setArrayBilingualPair(
+    merged,
+    "mission_direction",
+    strArray(v1, "directionEn"),
+    strArray(v1, "directionZh"),
+  );
+  setBilingualPair(merged, "symbolic_color", str(v1, "colorEn"), str(v1, "colorZh"));
+  setBilingualPair(merged, "totem", str(v1, "totemEn"), str(v1, "totemZh"));
+  setBilingualPair(
+    merged,
+    "wisewave_guidance",
+    str(v1, "guidanceEn"),
+    str(v1, "guidanceZh"),
+    { forceEn: true },
+  );
+  setBilingualPair(merged, "esoteric_link", str(v1, "symbolicLink"), undefined);
+  setBilingualPair(
+    merged,
+    "integration_key",
+    str(v1, "integrationKeyEn"),
+    str(v1, "integrationKeyZh"),
+    { forceEn: true, forceZh: true },
+  );
 
   return merged;
 }
@@ -155,20 +248,24 @@ export function mergeS2Entry(entry: V2Entry, code: string): V2Entry {
   const merged = { ...entry };
   const v1 = s2V1[code];
   if (v1) {
-    setIfEmpty(merged, "mirror_archetype", str(v1, "nameEn"));
-    setIfEmpty(merged, "mirror_archetype_zh", str(v1, "nameZh"));
-    setIfEmpty(merged, "relationship_dynamic", str(v1, "relationshipDynamicEn"));
-    setIfEmpty(merged, "relationship_dynamic_zh", str(v1, "relationshipDynamicZh"));
-    setIfEmpty(merged, "karmic_loop", str(v1, "karmicLoopEn"));
-    setIfEmpty(merged, "karmic_loop_zh", str(v1, "karmicLoopZh"));
-    setIfEmpty(merged, "lesson", str(v1, "lessonEn"));
-    setIfEmpty(merged, "lesson_zh", str(v1, "lessonZh"));
-    setIfEmpty(merged, "healing_path", str(v1, "healingPathEn"));
-    setIfEmpty(merged, "healing_path_zh", str(v1, "healingPathZh"));
-    setIfEmpty(merged, "wisewave_guidance", str(v1, "guidanceEn"));
-    setIfEmpty(merged, "wisewave_guidance_zh", str(v1, "guidanceZh"));
-    setIfEmpty(merged, "mirror_essence", str(v1, "essenceEn"));
-    setIfEmpty(merged, "mirror_essence_zh", str(v1, "essenceZh"));
+    setBilingualPair(merged, "mirror_archetype", str(v1, "nameEn"), str(v1, "nameZh"));
+    setBilingualPair(
+      merged,
+      "relationship_dynamic",
+      str(v1, "relationshipDynamicEn"),
+      str(v1, "relationshipDynamicZh"),
+    );
+    setBilingualPair(merged, "karmic_loop", str(v1, "karmicLoopEn"), str(v1, "karmicLoopZh"));
+    setBilingualPair(merged, "lesson", str(v1, "lessonEn"), str(v1, "lessonZh"));
+    setBilingualPair(merged, "healing_path", str(v1, "healingPathEn"), str(v1, "healingPathZh"));
+    setBilingualPair(
+      merged,
+      "wisewave_guidance",
+      str(v1, "guidanceEn"),
+      str(v1, "guidanceZh"),
+      { forceEn: true },
+    );
+    setBilingualPair(merged, "mirror_essence", str(v1, "essenceEn"), str(v1, "essenceZh"));
   }
 
   const summary = buildS2ReflectiveSummary(
@@ -193,22 +290,26 @@ export function mergeS3Entry(entry: V2Entry, code: string): V2Entry {
   const tier = s3Tiers.find((t) => str(t, "code") === code);
   if (!tier) return merged;
 
-  setIfEmpty(merged, "vibration_archetype", str(tier, "nameEn"));
-  setIfEmpty(merged, "vibration_archetype_zh", str(tier, "nameZh"));
-  setIfEmpty(merged, "vibration_essence", str(tier, "essenceEn"));
-  setIfEmpty(merged, "vibration_essence_zh", str(tier, "essenceZh"));
-  setIfEmpty(merged, "soul_traits", str(tier, "soulTraitsEn"));
-  setIfEmpty(merged, "soul_traits_zh", str(tier, "soulTraitsZh"));
-  setIfEmpty(merged, "strengths", str(tier, "strengthsEn"));
-  setIfEmpty(merged, "strengths_zh", str(tier, "strengthsZh"));
-  setIfEmpty(merged, "challenges", str(tier, "challengesEn"));
-  setIfEmpty(merged, "challenges_zh", str(tier, "challengesZh"));
-  setIfEmpty(merged, "wisewave_guidance", str(tier, "guidanceEn"));
-  setIfEmpty(merged, "wisewave_guidance_zh", str(tier, "guidanceZh"));
-  setIfEmpty(merged, "expression_style", str(tier, "soulTraitsEn"));
-  setIfEmpty(merged, "expression_style_zh", str(tier, "soulTraitsZh"));
-  setIfEmpty(merged, "integration_key", str(tier, "guidanceEn"));
-  setIfEmpty(merged, "integration_key_zh", str(tier, "guidanceZh"));
+  setBilingualPair(merged, "vibration_archetype", str(tier, "nameEn"), str(tier, "nameZh"));
+  setBilingualPair(merged, "vibration_essence", str(tier, "essenceEn"), str(tier, "essenceZh"));
+  setBilingualPair(merged, "soul_traits", str(tier, "soulTraitsEn"), str(tier, "soulTraitsZh"));
+  setBilingualPair(merged, "strengths", str(tier, "strengthsEn"), str(tier, "strengthsZh"));
+  setBilingualPair(merged, "challenges", str(tier, "challengesEn"), str(tier, "challengesZh"));
+  setBilingualPair(
+    merged,
+    "wisewave_guidance",
+    str(tier, "guidanceEn"),
+    str(tier, "guidanceZh") ?? str(merged, "guidance_zh"),
+    { forceEn: true },
+  );
+  setBilingualPair(merged, "expression_style", str(tier, "soulTraitsEn"), str(tier, "soulTraitsZh"));
+
+  const integration = buildS3IntegrationKey(
+    str(merged, "wisewave_guidance"),
+    str(merged, "wisewave_guidance_zh"),
+  );
+  if (integration.en) merged.integration_key = integration.en;
+  if (integration.zh) merged.integration_key_zh = integration.zh;
 
   const archetypeEn = str(merged, "vibration_archetype");
   if (archetypeEn && !str(merged, "vibration_essence")?.includes(archetypeEn)) {
@@ -227,20 +328,42 @@ export function mergeS6Entry(entry: V2Entry, code: string): V2Entry {
   const v1 = s6V1[code];
   if (!v1) return merged;
 
-  setIfEmpty(merged, "archetype", str(v1, "nameEn"));
-  setIfEmpty(merged, "archetype_zh", str(v1, "nameZh"));
-  setIfEmpty(merged, "value_essence", str(v1, "moneyCoreFrequencyEn"));
-  setIfEmpty(merged, "value_essence_zh", str(v1, "moneyCoreFrequencyZh"));
-  setIfEmpty(merged, "what_your_soul_is_learning_to_receive", str(v1, "soulWealthRelationshipEn"));
-  setIfEmpty(merged, "what_your_soul_is_learning_to_receive_zh", str(v1, "soulWealthRelationshipZh"));
-  setIfEmpty(merged, "how_value_wants_to_flow", str(v1, "karmicMoneyLessonEn"));
-  setIfEmpty(merged, "how_value_wants_to_flow_zh", str(v1, "karmicMoneyLessonZh"));
-  setIfEmpty(merged, "shadow_distortion_of_receiving", str(v1, "shadowFrequencyEn"));
-  setIfEmpty(merged, "shadow_distortion_of_receiving_zh", str(v1, "shadowFrequencyZh"));
-  setIfEmpty(merged, "wisewave_reflection", str(v1, "wisewaveGuidanceEn"));
-  setIfEmpty(merged, "wisewave_reflection_zh", str(v1, "wisewaveGuidanceZh"));
-  setIfEmpty(merged, "safe_language_note", str(v1, "safetyDisclaimerEn"));
-  setIfEmpty(merged, "safe_language_note_zh", str(v1, "safetyDisclaimerZh"));
+  setBilingualPair(merged, "archetype", str(v1, "nameEn"), str(v1, "nameZh"));
+  setBilingualPair(merged, "value_essence", str(v1, "moneyCoreFrequencyEn"), str(v1, "moneyCoreFrequencyZh"));
+  setBilingualPair(
+    merged,
+    "what_your_soul_is_learning_to_receive",
+    str(v1, "soulWealthRelationshipEn"),
+    str(v1, "soulWealthRelationshipZh"),
+  );
+  setBilingualPair(
+    merged,
+    "how_value_wants_to_flow",
+    str(v1, "karmicMoneyLessonEn"),
+    str(v1, "karmicMoneyLessonZh"),
+  );
+  setBilingualPair(
+    merged,
+    "shadow_distortion_of_receiving",
+    str(v1, "shadowFrequencyEn"),
+    str(v1, "shadowFrequencyZh"),
+  );
+  setBilingualPair(
+    merged,
+    "wisewave_reflection",
+    str(v1, "wisewaveGuidanceEn"),
+    str(v1, "wisewaveGuidanceZh"),
+    { forceEn: true },
+  );
+  setBilingualPair(merged, "wisewave_guidance", str(v1, "wisewaveGuidanceEn"), str(v1, "wisewaveGuidanceZh"), {
+    forceEn: true,
+  });
+  setBilingualPair(
+    merged,
+    "safe_language_note",
+    str(v1, "safetyDisclaimerEn"),
+    str(v1, "safetyDisclaimerZh"),
+  );
 
   return merged;
 }
@@ -271,6 +394,9 @@ export function entryToLocale(entry: V2Entry, locale: "en" | "zh"): V2Entry {
   for (const [key, value] of Object.entries(entry)) {
     if (key.endsWith(zhSuffix)) continue;
     if (locale === "en") {
+      if (typeof value === "string" && containsCjk(value)) {
+        continue;
+      }
       out[key] = value;
       continue;
     }

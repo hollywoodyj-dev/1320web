@@ -72,4 +72,12 @@ assert(advanced.codes.s9Code === "S9-07", `S9 expected S9-07, got ${advanced.cod
 assert((advanced.s8Content!.soulMissionSections?.length ?? 0) >= 5, "S8 should have rendering blocks");
 assert((advanced.s9Content!.soulMissionSections?.length ?? 0) >= 5, "S9 should have rendering blocks");
 
+function containsCjk(text: string): boolean {
+  return /[\u3400-\u9fff]/.test(text);
+}
+
+const s3Guidance = t(full.s3Content!.guidance, "en");
+assert(s3Guidance.length > 20, "S3 EN wisewave guidance should be present");
+assert(!containsCjk(s3Guidance), `S3 EN guidance should be English, got: ${s3Guidance.slice(0, 40)}`);
+
 console.log("\nPASS: smoke-v2-get-content — USE_1320_V2_CONTENT branch");

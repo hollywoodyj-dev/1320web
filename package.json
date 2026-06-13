@@ -16,6 +16,7 @@
     "smoke:v2-get-content": "npx tsx scripts/smoke-v2-get-content.ts",
     "import:v2-databases": "npx tsx scripts/build-bilingual-v2-databases.ts",
     "build:bilingual-v2": "npx tsx scripts/build-bilingual-v2-databases.ts",
+    "audit:bilingual-v2": "npx tsx scripts/audit-bilingual-v2-locale.ts",
     "smoke:result-1977": "npx tsx scripts/smoke-result-1977.ts",
     "smoke:s5-assembly": "npx tsx scripts/smoke-s5-assembly.ts",
     "smoke:funnel": "npx tsx scripts/smoke-funnel.ts",

@@ -38,12 +38,13 @@
 - [x] `npm run smoke:v2-get-content` (sets flag in script)
 - [x] Routes: `/result` → `free`; `/sample-report`, `/my-report`, checkout → `full`
 
-## Phase 4 — Full report content mapping
+## Phase 4 — Full report content mapping (done)
 
-- New UI (separate track); interim: extend payloads like `build-full-report-v2-test-payload.ts`
-- Add S7 screens to production manifest when Lumen art arrives
-- S8/S9 screens for Advanced tier (Phase 2B)
-- Dashboard code strip S0–S7 (S8/S9 when Advanced)
+- [x] S7 screens in production `screen-manifest.ts` (placeholder art until Lumen delivers)
+- [x] S8/S9 screens for Advanced tier via `getFullReportScreensForTier()`
+- [x] `buildFullReportPayload()` maps S7–S9 from v2 `soulMissionSections`
+- [x] Dashboard / cover code strip through S7 (S8/S9 when Advanced)
+- [x] `npm run smoke:full-report-payload`
 
 ## Phase 5 — Lumen art & layout
 

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>01 Opening Note + Disclaimer · Full 1320 Soul Origin Report</title>
+  <!-- Canonical reference template from spec delivery 6/6. See UI_PAGE_01_OPENING_SPEC.md -->
+  <style>
+    :root {
+      --bg-deep: #050d19;
+      --bg-main: #081526;
+      --bg-radial: #10243d;
+      --text-main: #f5ead6;
+      --text-soft: rgba(245, 234, 214, 0.76);
+      --text-muted: rgba(245, 234, 214, 0.56);
+      --gold: #d6b56d;
+      --gold-bright: #f4d88a;
+      --gold-soft: rgba(214, 181, 109, 0.64);
+      --gold-faint: rgba(214, 181, 109, 0.22);
+      --panel: rgba(5, 14, 27, 0.72);
+      --panel-strong: rgba(5, 14, 27, 0.88);
+      --panel-border: rgba(214, 181, 109, 0.38);
+      --blue-glow: rgba(76, 139, 245, 0.16);
+      --violet-glow: rgba(124, 92, 255, 0.14);
+      --shadow: rgba(0, 0, 0, 0.42);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #020712;
+      color: var(--text-main);
+      font-family: Inter, Avenir Next, Montserrat, Arial, sans-serif;
+    }
+    .report-page {
+      width: 1600px;
+      height: 900px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 78% 38%, rgba(76,139,245,0.17), transparent 30%),
+        radial-gradient(circle at 30% 70%, rgba(124,92,255,0.12), transparent 36%),
+        radial-gradient(circle at 52% 22%, rgba(214,181,109,0.10), transparent 28%),
+        linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-main) 54%, #050b16 100%);
+    }
+    .report-page::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,0.92) 0 1px, transparent 1.6px),
+        radial-gradient(circle, rgba(214,181,109,0.78) 0 1px, transparent 1.4px);
+      background-size: 140px 140px, 220px 220px;
+      background-position: 26px 42px, 86px 124px;
+      opacity: 0.22;
+      pointer-events: none;
+    }
+    .report-page::after {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(214,181,109,0.58);
+      box-shadow: inset 0 0 24px rgba(214,181,109,0.08), 0 0 28px rgba(214,181,109,0.08);
+      pointer-events: none;
+    }
+    .cosmic-lines {
+      position: absolute;
+      inset: -80px;
+      opacity: 0.20;
+      background:
+        radial-gradient(circle at 80% 30%, transparent 0 70px, rgba(214,181,109,0.28) 71px 72px, transparent 73px 122px, rgba(214,181,109,0.16) 123px 124px, transparent 125px),
+        radial-gradient(circle at 52% 50%, transparent 0 210px, rgba(214,181,109,0.18) 211px 212px, transparent 213px 320px),
+        linear-gradient(24deg, transparent 0 48%, rgba(214,181,109,0.12) 49%, transparent 50%),
+        linear-gradient(138deg, transparent 0 49%, rgba(214,181,109,0.10) 50%, transparent 51%);
+      pointer-events: none;
+    }
+    .page-shell {
+      position: relative;
+      z-index: 3;
+      height: 100%;
+      padding: 44px 56px 38px;
+      display: grid;
+      grid-template-rows: 70px 1fr 88px;
+      gap: 18px;
+    }
+    .page-header {
+      display: grid;
+      grid-template-columns: 360px 1fr 86px;
+      align-items: center;
+      gap: 24px;
+    }
+    .brand-block { display: flex; align-items: center; gap: 16px; }
+    .brand-seal { width: 60px; height: 60px; flex: 0 0 auto; }
+    .brand-name {
+      color: var(--gold-bright);
+      font-family: Cormorant Garamond, Georgia, serif;
+      font-size: 24px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .brand-sub {
+      color: var(--text-soft);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 5px;
+    }
+    .report-title-top {
+      text-align: center;
+      color: var(--gold-bright);
+      font-size: 15px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      position: relative;
+    }
+    .report-title-top::before,
+    .report-title-top::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 170px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(214,181,109,0.58));
+    }
+    .report-title-top::before { right: calc(50% + 220px); }
+    .report-title-top::after { left: calc(50% + 220px); transform: rotate(180deg); }
+    .page-number {
+      justify-self: end;
+      width: 62px;
+      height: 62px;
+      border: 1px solid rgba(214,181,109,0.54);
+      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(5,14,27,0.74);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.28);
+    }
+    .page-number strong {
+      font-family: Cormorant Garamond, Georgia, serif;
+      font-size: 28px;
+      color: var(--gold-bright);
+      line-height: 1;
+    }
+    .page-number span {
+      color: var(--text-muted);
+      font-size: 10px;
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .main-grid {
+      display: grid;
+      grid-template-columns: 430px 1fr 430px;
+      gap: 28px;
+      min-height: 0;
+    }
+    .panel {
+      border: 1px solid var(--panel-border);
+      background:
+        radial-gradient(circle at 88% 18%, rgba(76,139,245,0.13), transparent 32%),
+        rgba(5, 14, 27, 0.74);
+      border-radius: 22px;
+      box-shadow: 0 22px 80px rgba(0,0,0,0.32), inset 0 0 24px rgba(255,255,255,0.03);
+      backdrop-filter: blur(16px);
+    }
+    .left-column { display: grid; grid-template-rows: auto 1fr; gap: 22px; min-height: 0; }
+    .opening-panel { padding: 28px 28px 26px; }
+    .section-kicker {
+      color: var(--gold-bright);
+      font-size: 13px;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      margin-bottom: 13px;
+    }
+    .opening-title {
+      font-family: Cormorant Garamond, Georgia, serif;
+      font-size: 54px;
+      line-height: 0.96;
+      color: var(--text-main);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin: 0 0 18px;
+    }
+    .gold-divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 18px 0 20px;
+      position: relative;
+    }
+    .gold-divider::after {
+      content: "✦";
+      position: absolute;
+      left: 50%;
+      top: -13px;
+      transform: translateX(-50%);
+      color: var(--gold-bright);
+      font-size: 15px;
+      background: rgba(5,14,27,0.92);
+      padding: 0 10px;
+    }
+    .body-copy {
+      font-size: 15.8px;
+      line-height: 1.58;
+      color: var(--text-soft);
+      margin: 0 0 16px;
+    }
+    .body-copy strong { color: var(--gold-bright); font-weight: 500; }
+    .use-panel { padding: 22px 24px; }
+    .small-panel-title {
+      color: var(--gold-bright);
+      font-size: 13px;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .use-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+    .use-item {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 13px;
+      align-items: start;
+      padding: 0 0 12px;
+      border-bottom: 1px solid rgba(214,181,109,0.16);
+    }
+    .use-item:last-child { border-bottom: 0; padding-bottom: 0; }
+    .round-icon {
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(214,181,109,0.48);
+      border-radius: 50%;
+      color: var(--gold-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      background: rgba(5,14,27,0.6);
+    }
+    .use-title {
+      color: var(--gold-bright);
+      font-family: Cormorant Garamond, Georgia, serif;
+      font-size: 20px;
+      line-height: 1.12;
+      margin-bottom: 3px;
+    }
+    .use-desc { color: var(--text-soft); font-size: 13px; line-height: 1.38; }
+    .center-column { display: grid; grid-template-rows: auto 1fr auto; gap: 22px; min-height: 0; }
+    .hero-statement { text-align: center; padding-top: 4px; }
+    .hero-title {
+      font-family: Cormorant Garamond, Georgia, serif;
+      font-size: 54px;
+      line-height: 1;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-main);
+      margin: 0 0 12px;
+    }
+    .hero-subtitle {
+      color: var(--gold-bright);
+      font-family: Cormorant Garamond, Georgia, serif;
+      font-size: 26px;
+      line-height: 1.18;
+      margin: 0 auto;
+      max-width: 690px;
+    }
+    .guidance-panel { padding: 24px 26px; }
+    .guidance-row {
+      display: grid;
+      grid-template-columns: 72px 190px 1fr;
+      gap: 18px;
+      padding: 15px 0;
+      border-top: 1px solid rgba(214,181,109,0.16);
+      align-items: center;
+    }
+    .guidance-row:first-child { border-top: 0; padding-top: 0; }
+    .guidance-row:last-child { padding-bottom: 0; }
+    .guidance-icon {
+      width: 52px;
+      height: 52px;
+      border: 1px solid rgba(214,181,109,0.44);
+      border-radius: 50%;
+      color: var(--gold-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      background: rgba(5,14,27,0.5);
+    }
+    .guidance-title {
+      font-family: Cormorant Garamond, Georgia, serif;
+      font-size: 22px;
+      line-height: 1.15;
+      color: var(--gold-bright);
+    }
+    .guidance-copy {
+      color: var(--text-soft);
+      font-size: 14px;
+      line-height: 1.42;
+      border-left: 1px solid rgba(214,181,109,0.18);
+      padding-left: 18px;
+    }
+    .bottom-center-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .mini-card {
+      padding: 22px 24px;
+      min-height: 128px;
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 16px;
+      align-items: center;
+    }
+    .mini-card-title {
+      color: var(--gold-bright);
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .mini-card-copy { color: var(--text-soft); font-size: 14px; line-height: 1.45; }
+    .star-icon { color: var(--gold-bright); font-size: 42px; line-height: 1; text-align: center; }
+    .right-column { display: grid; grid-template-rows: 1fr auto; gap: 22px; min-height: 0; }
+    .not-panel { padding: 24px 26px; }
+    .not-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 0; }
+    .not-item {
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      gap: 16px;
+      align-items: center;
+      padding: 15px 0;
+      border-top: 1px solid rgba(214,181,109,0.16);
+    }
+    .not-item:first-child { border-top: 0; padding-top: 0; }
+    .not-item:last-child { padding-bottom: 0; }
+    .not-icon {
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(214,181,109,0.48);
+      border-radius: 50%;
+      color: var(--gold-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19px;
+      background: rgba(5,14,27,0.56);
+    }
+    .not-copy {
+      color: var(--text-main);
+      font-family: Cormorant Garamond, Georgia, serif;
+      font-size: 21px;
+      line-height: 1.18;
+    }
+    .role-panel {
+      padding: 22px 24px;
+      min-height: 128px;
+      display: grid;
+      grid-template-columns: 1fr 105px;
+      gap: 18px;
+      align-items: center;
+    }
+    .role-title {
+      color: var(--gold-bright);
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .role-copy { color: var(--text-soft); font-size: 14px; line-height: 1.5; }
+    .human-orbit {
+      width: 94px;
+      height: 94px;
+      border-radius: 50%;
+      border: 1px solid rgba(214,181,109,0.35);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-bright);
+      font-size: 34px;
+      box-shadow: 0 0 24px rgba(214,181,109,0.10);
+    }
+    .human-orbit::before,
+    .human-orbit::after {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border-radius: 50%;
+      border: 1px solid rgba(214,181,109,0.18);
+    }
+    .human-orbit::after { inset: 28px; }
+    .footer-band {
+      border: 1px solid rgba(214,181,109,0.32);
+      border-radius: 24px;
+      background: rgba(5,14,27,0.74);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 22px;
+      align-items: center;
+      padding: 18px 30px;
+      box-shadow: 0 20px 70px rgba(0,0,0,0.30);
+    }
+    .footer-item {
+      color: var(--text-soft);
+      font-size: 13px;
+      line-height: 1.42;
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 14px;
+      align-items: center;
+    }
+    .footer-item:not(:last-child) {
+      border-right: 1px solid rgba(214,181,109,0.20);
+      padding-right: 22px;
+    }
+    .footer-icon {
+      width: 36px;
+      height: 36px;
+      border: 1px solid rgba(214,181,109,0.42);
+      border-radius: 50%;
+      color: var(--gold-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+    }
+    .footer-item strong { color: var(--gold-bright); font-weight: 500; }
+    .svg-gold { stroke: var(--gold); fill: none; }
+    @media print {
+      body { background: #050d19; }
+      .report-page { width: 1600px; height: 900px; page-break-after: always; }
+    }
+    @media (max-width: 1100px) {
+      .report-page { width: 100%; height: auto; min-height: 100vh; }
+      .page-shell { grid-template-rows: auto; padding: 36px 24px; }
+      .page-header, .main-grid, .footer-band { grid-template-columns: 1fr; }
+      .report-title-top::before, .report-title-top::after { display: none; }
+      .main-grid { gap: 24px; }
+      .guidance-row { grid-template-columns: 52px 1fr; }
+      .guidance-copy { grid-column: 2; border-left: 0; padding-left: 0; }
+      .bottom-center-cards { grid-template-columns: 1fr; }
+      .role-panel { grid-template-columns: 1fr; text-align: center; }
+      .human-orbit { margin: 0 auto; }
+      .footer-item { border-right: 0 !important; padding-right: 0 !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="report-page">
+    <div class="cosmic-lines"></div>
+    <section class="page-shell">
+      <header class="page-header">
+        <div class="brand-block">
+          <svg class="brand-seal" viewBox="0 0 100 100" aria-hidden="true">
+            <g class="svg-gold" stroke-width="1.4">
+              <circle cx="50" cy="50" r="42" />
+              <circle cx="50" cy="50" r="24" />
+              <circle cx="50" cy="26" r="24" />
+              <circle cx="50" cy="74" r="24" />
+              <circle cx="26" cy="50" r="24" />
+              <circle cx="74" cy="50" r="24" />
+              <circle cx="33" cy="33" r="24" />
+              <circle cx="67" cy="67" r="24" />
+              <circle cx="33" cy="67" r="24" />
+              <circle cx="67" cy="33" r="24" />
+            </g>
+          </svg>
+          <div class="brand-text">
+            <div class="brand-name">1320 Soul Code System</div>
+            <div class="brand-sub">Sacred · Symbolic · Self-Awareness</div>
+          </div>
+        </div>
+        <div class="report-title-top">Full 1320 Soul Origin Report</div>
+        <div class="page-number">
+          <strong>01</strong>
+          <span>of 18</span>
+        </div>
+      </header>
+
+      <section class="main-grid">
+        <div class="left-column">
+          <article class="opening-panel panel">
+            <div class="section-kicker">Opening Note</div>
+            <h1 class="opening-title">Welcome to<br />Your Report</h1>
+            <div class="gold-divider"></div>
+            <p class="body-copy">Welcome to your <strong>Full 1320 Soul Origin Report</strong>.</p>
+            <p class="body-copy">
+              This report is a symbolic mirror of your soul pattern through the
+              <strong>1320 Soul Origin Code System</strong>. It reflects the unique
+              combination of your inner architecture, soul vibration, relational mirrors,
+              shadow patterns, mission direction, value and receiving frequency,
+              sovereignty, contribution, and path of return.
+            </p>
+            <p class="body-copy">
+              It is designed to support your self-awareness, integration, and conscious return.
+              There is nothing to “fix” here — only to remember, understand, and embody.
+            </p>
+          </article>
+          <aside class="use-panel panel">
+            <div class="small-panel-title">How to Use This Report</div>
+            <ul class="use-list">
+              <li class="use-item">
+                <div class="round-icon">◉</div>
+                <div>
+                  <div class="use-title">Read Slowly</div>
+                  <div class="use-desc">Give yourself space to receive each section without rushing to define yourself.</div>
+                </div>
+              </li>
+              <li class="use-item">
+                <div class="round-icon">☉</div>
+                <div>
+                  <div class="use-title">Use as a Mirror</div>
+                  <div class="use-desc">This is not about labels. It is about recognition, reflection, and conscious choice.</div>
+                </div>
+              </li>
+              <li class="use-item">
+                <div class="round-icon">☷</div>
+                <div>
+                  <div class="use-title">Journal & Reflect</div>
+                  <div class="use-desc">Write freely. Let insights emerge in your own words and timing.</div>
+                </div>
+              </li>
+              <li class="use-item">
+                <div class="round-icon">✶</div>
+                <div>
+                  <div class="use-title">Apply with Awareness</div>
+                  <div class="use-desc">Take what resonates. Leave what does not. Integration is a living process.</div>
+                </div>
+              </li>
+              <li class="use-item">
+                <div class="round-icon">♡</div>
+                <div>
+                  <div class="use-title">Return Often</div>
+                  <div class="use-desc">Revisit this report as you grow. You evolve, and so will your reflections.</div>
+                </div>
+              </li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="center-column">
+          <section class="hero-statement">
+            <h2 class="hero-title">Disclaimer & Guidance</h2>
+            <p class="hero-subtitle">
+              This is a symbolic self-awareness report,<br />
+              not a prediction, diagnosis, or prescription.
+            </p>
+          </section>
+          <article class="guidance-panel panel">
+            <div class="small-panel-title">Important Guidance</div>
+            <div class="guidance-list">
+              <div class="guidance-row">
+                <div class="guidance-icon">◌</div>
+                <div class="guidance-title">This is a Mirror,<br />Not a Sentence</div>
+                <div class="guidance-copy">You are not your code. Your code is a reflection of patterns, not a definition of your destiny.</div>
+              </div>
+              <div class="guidance-row">
+                <div class="guidance-icon">✦</div>
+                <div class="guidance-title">You Have<br />Free Will</div>
+                <div class="guidance-copy">You always have the freedom to choose, to grow, to change, and to create.</div>
+              </div>
+              <div class="guidance-row">
+                <div class="guidance-icon">♧</div>
+                <div class="guidance-title">Growth is<br />Non-Linear</div>
+                <div class="guidance-copy">Insights may reveal layers over time. There is no “right pace” — trust your inner timing.</div>
+              </div>
+              <div class="guidance-row">
+                <div class="guidance-icon">◌</div>
+                <div class="guidance-title">Not Everything<br />Will Resonate</div>
+                <div class="guidance-copy">Take what is true for you now. Leave what is not. Integration happens naturally.</div>
+              </div>
+              <div class="guidance-row">
+                <div class="guidance-icon">♡</div>
+                <div class="guidance-title">You Are<br />Already Whole</div>
+                <div class="guidance-copy">This report points to potential, not lack. You are not incomplete. You are already whole.</div>
+              </div>
+            </div>
+          </article>
+          <div class="bottom-center-cards">
+            <article class="mini-card panel">
+              <div class="star-icon">✶</div>
+              <div>
+                <div class="mini-card-title">Core Intention</div>
+                <div class="mini-card-copy">This report exists to help you remember your essence, understand your patterns, and navigate your life with more clarity, compassion, and conscious choice.</div>
+              </div>
+            </article>
+            <article class="mini-card panel">
+              <div class="star-icon">☼</div>
+              <div>
+                <div class="mini-card-title">Agency Reminder</div>
+                <div class="mini-card-copy">This report may offer reflection, but it does not replace your discernment. The power is always yours.</div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="right-column">
+          <article class="not-panel panel">
+            <div class="small-panel-title">This Report Is Not</div>
+            <ul class="not-list">
+              <li class="not-item"><div class="not-icon">◌</div><div class="not-copy">Not a prediction of future events</div></li>
+              <li class="not-item"><div class="not-icon">✚</div><div class="not-copy">Not medical or psychological advice or diagnosis</div></li>
+              <li class="not-item"><div class="not-icon">☁</div><div class="not-copy">Not a substitute for therapy or professional support</div></li>
+              <li class="not-item"><div class="not-icon">$</div><div class="not-copy">Not financial, tax, business, or investment advice</div></li>
+              <li class="not-item"><div class="not-icon">⚖</div><div class="not-copy">Not legal advice or decision-making authority</div></li>
+              <li class="not-item"><div class="not-icon">✧</div><div class="not-copy">Not superstition, fortune-telling, or fixed destiny</div></li>
+            </ul>
+          </article>
+          <aside class="role-panel panel">
+            <div>
+              <div class="role-title">Your Role</div>
+              <div class="role-copy">You are the author of your life. This report is here to support your awareness — the power is always yours.</div>
+            </div>
+            <div class="human-orbit">♙</div>
+          </aside>
+        </div>
+      </section>
+
+      <footer class="footer-band">
+        <div class="footer-item">
+          <div class="footer-icon">◇</div>
+          <div>Use this report as a <strong>mirror for awareness</strong>, not as a fixed identity or absolute truth.</div>
+        </div>
+        <div class="footer-item">
+          <div class="footer-icon">✦</div>
+          <div>You are more than any pattern. You are consciousness in motion.</div>
+        </div>
+        <div class="footer-item">
+          <div class="footer-icon">♡</div>
+          <div>Thank you for choosing self-awareness, discernment, and integration.</div>
+        </div>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>

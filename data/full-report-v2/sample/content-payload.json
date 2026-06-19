@@ -1,0 +1,61 @@
+{
+  "modules": {
+    "s0": {
+      "code": "S0-07",
+      "segmentCode": "S0-07",
+      "title": "Self-Worth Illusion",
+      "subtitle": "Void Gate"
+    },
+    "s1": {
+      "code": "S1-18",
+      "segmentCode": "S1-18",
+      "title": "The Transformer",
+      "subtitle": "Origin Frequency"
+    },
+    "s2": {
+      "code": "S2-27",
+      "segmentCode": "S2-27",
+      "title": "The Soul Shock Mirror",
+      "subtitle": "Mirror Path"
+    },
+    "s3": {
+      "code": "S3-03",
+      "segmentCode": "S3-03",
+      "title": "Explorer",
+      "subtitle": "Vibration Tier",
+      "raw": 110,
+      "s3Code": "S3-03"
+    },
+    "s4": {
+      "code": "S4-14",
+      "segmentCode": "S4-S1-18",
+      "title": "The Transformer · Core Shadow Pattern",
+      "subtitle": "Core Shadow Pattern"
+    },
+    "s5": {
+      "code": "S5-04",
+      "segmentCode": "S1-18|S3-03|S2-27|S0-07",
+      "title": "Soul Mission",
+      "subtitle": "Assembled Blueprint"
+    },
+    "s6": {
+      "code": "S6-28",
+      "segmentCode": "S6-18",
+      "title": "Personal Power Wealth",
+      "subtitle": "Origin Frequency"
+    },
+    "s7": {
+      "code": "S7-00"
+    },
+    "s8": {
+      "code": "S8-00"
+    },
+    "s9": {
+      "code": "S9-07"
+    }
+  },
+  "integrated_blueprint": {},
+  "integration_practice": {
+    "days": []
+  }
+}

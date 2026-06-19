@@ -1,0 +1,18 @@
+/* Full Report v2 — print / PDF */
+
+@media print {
+  .full-report-v2-root {
+    background: var(--fr-v2-bg-deep) !important;
+  }
+
+  .fr-v2-report-page {
+    width: 1600px;
+    height: 900px;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .fr-v2-cta-button {
+    border: 1px solid var(--fr-v2-gold);
+  }
+}

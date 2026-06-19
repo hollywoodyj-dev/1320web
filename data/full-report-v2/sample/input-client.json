@@ -1,0 +1,13 @@
+{
+  "client": {
+    "name": "Example",
+    "birth_date": "1980-05-22",
+    "birth_date_display": "May 22, 1980",
+    "birth_date_iso": "1980-05-22",
+    "language": "en",
+    "report_mode": "paid_full"
+  },
+  "report": {
+    "report_mode": "paid_full"
+  }
+}

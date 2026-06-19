@@ -1,0 +1,46 @@
+/* Full Report v2 — responsive */
+
+@media (max-width: 1100px) {
+  .fr-v2-report-page {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .fr-v2-page-shell {
+    grid-template-rows: auto;
+    padding: 36px 24px;
+  }
+
+  .fr-v2-page-header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .fr-v2-brand-block {
+    justify-content: center;
+  }
+
+  .fr-v2-page-number {
+    justify-self: center;
+  }
+
+  .fr-v2-module-wheel {
+    transform: scale(0.78);
+    margin: -40px auto;
+  }
+
+  .fr-v2-page-footer-band {
+    grid-template-columns: 1fr;
+  }
+
+  .fr-v2-page-footer-item {
+    border-right: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .fr-v2-module-wheel {
+    transform: scale(0.62);
+  }
+}

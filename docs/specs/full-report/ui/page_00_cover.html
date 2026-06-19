@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>00 Cover Page · Full 1320 Soul Origin Report</title>
+  <!-- Canonical reference template from spec delivery 5/6. See UI_PAGE_00_COVER_SPEC.md -->
+  <style>
+    :root {
+      --bg-deep: #050d19;
+      --bg-main: #081526;
+      --bg-radial: #10243d;
+      --text-main: #f5ead6;
+      --text-soft: rgba(245, 234, 214, 0.76);
+      --text-muted: rgba(245, 234, 214, 0.56);
+      --gold: #d6b56d;
+      --gold-bright: #f4d88a;
+      --gold-soft: rgba(214, 181, 109, 0.64);
+      --gold-faint: rgba(214, 181, 109, 0.22);
+      --panel: rgba(5, 14, 27, 0.68);
+      --panel-soft: rgba(255, 255, 255, 0.045);
+      --panel-border: rgba(214, 181, 109, 0.38);
+      --blue-glow: rgba(76, 139, 245, 0.16);
+      --violet-glow: rgba(124, 92, 255, 0.14);
+      --shadow: rgba(0, 0, 0, 0.42);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #020712;
+      color: var(--text-main);
+      font-family: Inter, Avenir Next, Montserrat, Arial, sans-serif;
+    }
+    .report-cover {
+      width: 1600px;
+      height: 900px;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
+      background:
+        radial-gradient(circle at 52% 42%, rgba(214,181,109,0.12), transparent 25%),
+        radial-gradient(circle at 74% 58%, rgba(76,139,245,0.16), transparent 32%),
+        radial-gradient(circle at 24% 76%, rgba(124,92,255,0.12), transparent 34%),
+        linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-main) 52%, #050b16 100%);
+    }
+    .report-cover::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,0.9) 0 1px, transparent 1.6px),
+        radial-gradient(circle, rgba(214,181,109,0.8) 0 1px, transparent 1.4px);
+      background-size: 130px 130px, 210px 210px;
+      background-position: 22px 38px, 80px 120px;
+      opacity: 0.26;
+      pointer-events: none;
+    }
+    .report-cover::after {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(214,181,109,0.58);
+      box-shadow: inset 0 0 24px rgba(214,181,109,0.08), 0 0 28px rgba(214,181,109,0.08);
+      pointer-events: none;
+    }
+    .cosmic-lines {
+      position: absolute;
+      inset: -80px;
+      opacity: 0.22;
+      background:
+        radial-gradient(circle at 50% 42%, transparent 0 180px, rgba(214,181,109,0.28) 181px 182px, transparent 183px 236px, rgba(214,181,109,0.18) 237px 238px, transparent 239px 310px),
+        linear-gradient(24deg, transparent 0 48%, rgba(214,181,109,0.16) 49%, transparent 50%),
+        linear-gradient(138deg, transparent 0 49%, rgba(214,181,109,0.12) 50%, transparent 51%);
+      pointer-events: none;
+    }
+    .page-grid {
+      position: relative;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: 360px 1fr 380px;
+      grid-template-rows: 1fr 132px;
+      gap: 24px;
+      height: 100%;
+      padding: 56px 72px 48px;
+    }
+    .left-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-bottom: 46px;
+    }
+    .mini-seal { width: 82px; height: 82px; margin-bottom: 34px; }
+    .cover-kicker {
+      font-family: Cormorant Garamond, Georgia, serif;
+      font-size: 42px;
+      line-height: 1;
+      letter-spacing: 0.08em;
+      color: var(--gold-bright);
+      margin-bottom: 8px;
+    }
+    .cover-number {
+      font-family: Cormorant Garamond, Georgia, serif;
+      font-size: 122px;
+      line-height: 0.82;
+      letter-spacing: 0.02em;
+      color: var(--gold-bright);
+      text-shadow: 0 0 26px rgba(214,181,109,0.20);
+      margin-bottom: 22px;
+    }
+    .cover-title {
+      font-family: Cormorant Garamond, Georgia, serif;
+      font-size: 46px;
+      line-height: 1.06;
+      letter-spacing: 0.10em;
+      color: var(--text-main);
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+    .gold-divider {
+      width: 315px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 0 26px;
+      position: relative;
+    }
+    .gold-divider::after {
+      content: "✦";
+      position: absolute;
+      left: 50%;
+      top: -13px;
+      transform: translateX(-50%);
+      color: var(--gold-bright);
+      font-size: 16px;
+      background: var(--bg-main);
+      padding: 0 10px;
+    }
+    .cover-description {
+      font-size: 17px;
+      line-height: 1.54;
+      color: var(--text-soft);
+      max-width: 330px;
+      margin: 0 0 24px;
+    }
+    .mirror-line {
+      font-family: Cormorant Garamond, Georgia, serif;
+      font-size: 25px;
+      line-height: 1.2;
+      color: var(--gold-bright);
+      font-style: italic;
+      margin: 10px 0 6px;
+    }
+    .fate-line {
+      font-family: Cormorant Garamond, Georgia, serif;
+      font-size: 30px;
+      line-height: 1.16;
+      color: var(--text-main);
+      margin-top: 20px;
+    }
+    .center-panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+    }
+    .module-wheel {
+      width: 620px;
+      height: 620px;
+      position: relative;
+      border-radius: 50%;
+      filter: drop-shadow(0 0 22px rgba(214,181,109,0.16));
+    }
+    .wheel-ring {
+      position: absolute;
+      inset: 0;
+      border: 1px solid rgba(214,181,109,0.26);
+      border-radius: 50%;
+    }
+    .wheel-ring.r2 {
+      inset: 38px;
+      border-color: rgba(214,181,109,0.38);
+      box-shadow: 0 0 20px rgba(214,181,109,0.10);
+    }
+    .wheel-ring.r3 {
+      inset: 84px;
+      border-color: rgba(214,181,109,0.28);
+      border-style: dashed;
+    }
+    .wheel-ring.r4 {
+      inset: 148px;
+      border-color: rgba(214,181,109,0.22);
+    }
+    .wheel-axis {
+      position: absolute;
+      left: 50%;
+      top: 24px;
+      width: 1px;
+      height: 572px;
+      background: linear-gradient(180deg, transparent, rgba(214,181,109,0.74), transparent);
+      transform: translateX(-50%);
+    }
+    .wheel-axis.horizontal {
+      transform: translateX(-50%) rotate(90deg);
+      transform-origin: center center;
+    }
+    .wheel-center {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 230px;
+      height: 230px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at center, rgba(244,216,138,0.18), transparent 42%),
+        rgba(3, 10, 20, 0.84);
+      border: 1.5px solid rgba(214,181,109,0.66);
+      box-shadow: inset 0 0 40px rgba(214,181,109,0.08), 0 0 36px rgba(214,181,109,0.18);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 4;
+    }
+    .wheel-center::before {
+      content: "";
+      position: absolute;
+      inset: 28px;
+      border-radius: 50%;
+      border: 1px solid rgba(214,181,109,0.20);
+      background:
+        radial-gradient(circle at center, rgba(214,181,109,0.14), transparent 4px),
+        repeating-radial-gradient(circle at center, transparent 0 16px, rgba(214,181,109,0.10) 17px 18px);
+    }
+    .wheel-center-number {
+      font-family: Cormorant Garamond, Georgia, serif;
+      font-size: 88px;
+      line-height: 0.9;
+      color: var(--gold-bright);
+      z-index: 2;
+    }
+    .wheel-center-label {
+      font-size: 22px;
+      letter-spacing: 0.20em;
+      color: var(--text-main);
+      text-transform: uppercase;
+      z-index: 2;
+      margin-top: 8px;
+    }
+    .module-node {
+      position: absolute;
+      width: 118px;
+      height: 118px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 50% 25%, rgba(255,255,255,0.08), transparent 42%),
+        rgba(4, 13, 25, 0.92);
+      border: 1.3px solid rgba(214,181,109,0.82);
+      box-shadow: inset 0 0 24px rgba(255,255,255,0.035), 0 0 24px rgba(214,181,109,0.18);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+      text-align: center;
+    }
+    .module-icon {
+      font-size: 20px;
+      line-height: 1;
+      color: var(--gold-bright);
+      margin-bottom: 4px;
+    }
+    .module-code {
+      font-family: Cormorant Garamond, Georgia, serif;
+      font-size: 39px;
+      line-height: 0.92;
+      color: var(--gold-bright);
+    }
+    .module-name {
+      margin-top: 7px;
+      color: var(--text-main);
+      font-size: 12.5px;
+      line-height: 1.14;
+      max-width: 86px;
+    }
+    /* LOCKED ORDER clockwise: S9 → S0 → S1 → S2 → S3 → S4 → S5 → S6 → S7 → S8 */
+    .node-s9 { left: 251px; top: 8px; }
+    .node-s0 { left: 405px; top: 58px; }
+    .node-s1 { left: 486px; top: 202px; }
+    .node-s2 { left: 440px; top: 365px; }
+    .node-s3 { left: 332px; top: 482px; }
+    .node-s4 { left: 190px; top: 482px; }
+    .node-s5 { left: 82px; top: 365px; }
+    .node-s6 { left: 36px; top: 202px; }
+    .node-s7 { left: 116px; top: 58px; }
+    .node-s8 { left: 98px; top: 86px; }
+    .signature-panel {
+      width: 720px;
+      margin-top: 28px;
+      padding: 18px 28px 20px;
+      border: 1px solid var(--panel-border);
+      border-radius: 20px;
+      background: rgba(5, 14, 27, 0.74);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+      text-align: center;
+    }
+    .signature-label {
+      font-size: 13px;
+      color: var(--gold);
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .signature-code {
+      font-family: Cormorant Garamond, Georgia, serif;
+      font-size: 36px;
+      color: var(--gold-bright);
+      letter-spacing: 0.06em;
+    }
+    .signature-sub {
+      margin-top: 8px;
+      color: var(--text-soft);
+      font-size: 13px;
+    }
+    .right-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
+      padding-bottom: 38px;
+    }
+    .client-card,
+    .includes-card {
+      border: 1px solid var(--panel-border);
+      background:
+        radial-gradient(circle at 88% 24%, rgba(76,139,245,0.16), transparent 30%),
+        rgba(5, 14, 27, 0.72);
+      box-shadow: 0 24px 80px rgba(0,0,0,0.32), inset 0 0 24px rgba(255,255,255,0.03);
+      border-radius: 20px;
+      overflow: hidden;
+      backdrop-filter: blur(16px);
+    }
+    .client-card { padding: 30px 28px; }
+    .card-title {
+      color: var(--gold-bright);
+      font-size: 14px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .info-row {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 15px;
+      padding: 17px 0;
+      border-top: 1px solid rgba(214,181,109,0.18);
+      align-items: center;
+    }
+    .info-row:first-of-type { border-top: 0; }
+    .info-icon {
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(214,181,109,0.45);
+      border-radius: 50%;
+      color: var(--gold-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    .info-label {
+      color: var(--gold-bright);
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .info-value {
+      font-family: Cormorant Garamond, Georgia, serif;
+      color: var(--text-main);
+      font-size: 23px;
+      line-height: 1.1;
+    }
+    .includes-card { padding: 24px 26px 28px; }
+    .module-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px 24px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .module-list li {
+      color: var(--text-soft);
+      font-size: 13.5px;
+      line-height: 1.28;
+      display: flex;
+      gap: 8px;
+      align-items: baseline;
+    }
+    .module-list strong {
+      color: var(--gold-bright);
+      font-weight: 500;
+      min-width: 24px;
+    }
+    .module-list span { color: var(--text-main); }
+    .footer-disclaimer {
+      grid-column: 1 / 4;
+      align-self: end;
+      min-height: 92px;
+      padding: 22px 34px;
+      border: 1px solid rgba(214,181,109,0.32);
+      border-radius: 26px;
+      background: rgba(5, 14, 27, 0.76);
+      display: grid;
+      grid-template-columns: 56px 1fr 320px;
+      gap: 22px;
+      align-items: center;
+      box-shadow: 0 20px 70px rgba(0,0,0,0.30);
+    }
+    .footer-symbol {
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(214,181,109,0.48);
+      border-radius: 50%;
+      color: var(--gold-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+    .footer-text {
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--text-soft);
+    }
+    .footer-text strong {
+      color: var(--gold-bright);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+    .footer-agency {
+      border-left: 1px solid rgba(214,181,109,0.22);
+      padding-left: 24px;
+      font-size: 14px;
+      color: var(--text-main);
+      line-height: 1.45;
+    }
+    .svg-gold { stroke: var(--gold); fill: none; }
+    @media print {
+      body { background: #050d19; }
+      .report-cover { width: 1600px; height: 900px; page-break-after: always; }
+    }
+    @media (max-width: 1100px) {
+      .report-cover { width: 100%; height: auto; min-height: 100vh; }
+      .page-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 44px 28px;
+      }
+      .left-panel, .center-panel, .right-panel {
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+      }
+      .module-wheel { transform: scale(0.78); margin: -40px 0; }
+      .signature-panel { width: 100%; }
+      .footer-disclaimer {
+        grid-column: auto;
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .footer-agency {
+        border-left: 0;
+        border-top: 1px solid rgba(214,181,109,0.22);
+        padding-left: 0;
+        padding-top: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="report-cover">
+    <div class="cosmic-lines"></div>
+    <section class="page-grid">
+      <section class="left-panel">
+        <svg class="mini-seal" viewBox="0 0 100 100" aria-hidden="true">
+          <g class="svg-gold" stroke-width="1.4">
+            <circle cx="50" cy="50" r="42" />
+            <circle cx="50" cy="50" r="24" />
+            <circle cx="50" cy="26" r="24" />
+            <circle cx="50" cy="74" r="24" />
+            <circle cx="26" cy="50" r="24" />
+            <circle cx="74" cy="50" r="24" />
+            <circle cx="33" cy="33" r="24" />
+            <circle cx="67" cy="67" r="24" />
+            <circle cx="33" cy="67" r="24" />
+            <circle cx="67" cy="33" r="24" />
+          </g>
+        </svg>
+        <div class="cover-kicker">FULL</div>
+        <div class="cover-number">1320</div>
+        <div class="cover-title">Soul Origin<br />Report</div>
+        <div class="gold-divider"></div>
+        <p class="cover-description">
+          A complete soul mapping across 10 core dimensions —
+          revealing your origin, pattern, purpose, and path.
+        </p>
+        <div class="mirror-line">Your code is a mirror — not a sentence.</div>
+        <div class="fate-line">Not your fate.<br />Your mirror.</div>
+      </section>
+
+      <section class="center-panel">
+        <div class="module-wheel" aria-label="1320 Soul Code module wheel">
+          <div class="wheel-ring"></div>
+          <div class="wheel-ring r2"></div>
+          <div class="wheel-ring r3"></div>
+          <div class="wheel-ring r4"></div>
+          <div class="wheel-axis"></div>
+          <div class="wheel-axis horizontal"></div>
+          <div class="wheel-center">
+            <div class="wheel-center-number">1320</div>
+            <div class="wheel-center-label">Soul Code</div>
+          </div>
+          <!-- LOCKED ORDER: S9 → S0 → S1 → S2 → S3 → S4 → S5 → S6 → S7 → S8 -->
+          <div class="module-node node-s9">
+            <div class="module-icon">◎</div>
+            <div class="module-code">S9</div>
+            <div class="module-name">Return to Source</div>
+          </div>
+          <div class="module-node node-s0">
+            <div class="module-icon">⌂</div>
+            <div class="module-code">S0</div>
+            <div class="module-name">Void Gate</div>
+          </div>
+          <div class="module-node node-s1">
+            <div class="module-icon">♧</div>
+            <div class="module-code">S1</div>
+            <div class="module-name">Soul Origin</div>
+          </div>
+          <div class="module-node node-s2">
+            <div class="module-icon">◌</div>
+            <div class="module-code">S2</div>
+            <div class="module-name">Soul Mirror</div>
+          </div>
+          <div class="module-node node-s3">
+            <div class="module-icon">≋</div>
+            <div class="module-code">S3</div>
+            <div class="module-name">Soul Vibration</div>
+          </div>
+          <div class="module-node node-s4">
+            <div class="module-icon">△</div>
+            <div class="module-code">S4</div>
+            <div class="module-name">Core Shadow Pattern</div>
+          </div>
+          <div class="module-node node-s5">
+            <div class="module-icon">✶</div>
+            <div class="module-code">S5</div>
+            <div class="module-name">Soul Mission</div>
+          </div>
+          <div class="module-node node-s6">
+            <div class="module-icon">◡</div>
+            <div class="module-code">S6</div>
+            <div class="module-name">Value & Receiving</div>
+          </div>
+          <div class="module-node node-s7">
+            <div class="module-icon">♕</div>
+            <div class="module-code">S7</div>
+            <div class="module-name">Soul Sovereignty</div>
+          </div>
+          <div class="module-node node-s8">
+            <div class="module-icon">☄</div>
+            <div class="module-code">S8</div>
+            <div class="module-name">Soul Contribution</div>
+          </div>
+        </div>
+        <div class="signature-panel">
+          <div class="signature-label">Your Core Signature Preview</div>
+          <div class="signature-code">
+            {{calculation.s1.code}} | {{calculation.s3.code}} | {{calculation.s2.code}} | {{calculation.s0.code}}
+          </div>
+          <div class="signature-sub">
+            {{calculation.s1.code}} {{calculation.s1.title}} |
+            {{calculation.s3.code}} {{calculation.s3.title}} |
+            {{calculation.s2.code}} {{calculation.s2.title}} |
+            {{calculation.s0.code}} {{calculation.s0.title}}
+          </div>
+        </div>
+      </section>
+
+      <section class="right-panel">
+        <aside class="client-card">
+          <div class="card-title">Prepared For</div>
+          <div class="info-row">
+            <div class="info-icon">♙</div>
+            <div>
+              <div class="info-label">Name</div>
+              <div class="info-value">{{client.name}}</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon">□</div>
+            <div>
+              <div class="info-label">Birth Date</div>
+              <div class="info-value">{{client.birth_date_display}}</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon">☷</div>
+            <div>
+              <div class="info-label">Report Type</div>
+              <div class="info-value">{{report.type}}</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon">◎</div>
+            <div>
+              <div class="info-label">Generated By</div>
+              <div class="info-value">{{report.generated_by}}</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon">☉</div>
+            <div>
+              <div class="info-label">Report Version</div>
+              <div class="info-value">{{report.version}}</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon">◷</div>
+            <div>
+              <div class="info-label">Generated On</div>
+              <div class="info-value">{{report.generated_date}} · {{report.generated_time}}</div>
+            </div>
+          </div>
+        </aside>
+        <aside class="includes-card">
+          <div class="card-title">This Full Report Includes</div>
+          <ul class="module-list">
+            <li><strong>S0</strong><span>Void Gate</span></li>
+            <li><strong>S1</strong><span>Soul Origin</span></li>
+            <li><strong>S2</strong><span>Soul Mirror</span></li>
+            <li><strong>S3</strong><span>Soul Vibration</span></li>
+            <li><strong>S4</strong><span>Core Shadow Pattern</span></li>
+            <li><strong>S5</strong><span>Soul Mission</span></li>
+            <li><strong>S6</strong><span>Value & Receiving</span></li>
+            <li><strong>S7</strong><span>Soul Sovereignty</span></li>
+            <li><strong>S8</strong><span>Soul Contribution</span></li>
+            <li><strong>S9</strong><span>Return to Source</span></li>
+          </ul>
+        </aside>
+      </section>
+
+      <footer class="footer-disclaimer">
+        <div class="footer-symbol">◇</div>
+        <div class="footer-text">
+          <strong>Disclaimer:</strong><br />
+          This report is a symbolic self-reflection tool designed for clarity, insight,
+          and personal growth. It is not a substitute for professional advice, diagnosis,
+          therapy, legal counsel, financial advice, or treatment.
+        </div>
+        <div class="footer-agency">
+          You remain the author of your life.<br />
+          Use this report as a mirror for awareness, not as a fixed identity or absolute truth.
+        </div>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>

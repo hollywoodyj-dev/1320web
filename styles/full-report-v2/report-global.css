@@ -1,0 +1,15 @@
+/* Full Report v2 — global scope (1320 Dark Cosmic Portal) */
+
+.full-report-v2-root {
+  color: var(--fr-v2-text-main);
+  font-family: var(--fr-v2-font-ui);
+  -webkit-font-smoothing: antialiased;
+}
+
+.full-report-v2-root .fr-v2-serif {
+  font-family: var(--fr-v2-font-display);
+}
+
+.full-report-v2-root a {
+  color: inherit;
+}

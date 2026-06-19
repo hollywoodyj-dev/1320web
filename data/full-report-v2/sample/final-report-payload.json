@@ -1,0 +1,129 @@
+{
+  "client": {
+    "name": "Example",
+    "birth_date": "1980-05-22",
+    "birth_date_display": "May 22, 1980",
+    "birth_date_iso": "1980-05-22",
+    "language": "en",
+    "report_mode": "paid_full"
+  },
+  "report": {
+    "report_id": "1320-FULL-19800522",
+    "version": "Full Report v1.0",
+    "theme_version": "1320 Dark Cosmic Portal v1.0",
+    "generated_date": "June 19, 2026",
+    "generated_time": "7:06 PM",
+    "generated_by": "1320 Soul Code System",
+    "type": "Sample Full Report"
+  },
+  "calculation": {
+    "birth_date": "1980-05-22",
+    "digits": [
+      1,
+      9,
+      8,
+      0,
+      0,
+      5,
+      2,
+      2
+    ],
+    "s1": {
+      "formula": "1980 → 1 + … + digit sum",
+      "raw": 18,
+      "code": "S1-18",
+      "title": "The Transformer"
+    },
+    "s3": {
+      "formula": "5 × 22",
+      "raw": 110,
+      "code": "S3-03",
+      "title": "Explorer"
+    },
+    "s2": {
+      "formula": "5 + 22",
+      "raw": 27,
+      "code": "S2-27",
+      "title": "The Soul Shock Mirror"
+    },
+    "s0": {
+      "formula": "full birth date digit sum",
+      "raw": 27,
+      "mod": "27 mod 20",
+      "code": "S0-07",
+      "title": "Self-Worth Illusion"
+    },
+    "combination_signature": "S1-18|S3-03|S2-27|S0-07",
+    "s4_code": "S4-14",
+    "s5_code": "S5-04",
+    "s6_code": "S6-28",
+    "s7_code": "S7-00",
+    "s8_code": "S8-00",
+    "s9_code": "S9-07"
+  },
+  "modules": {
+    "s0": {
+      "code": "S0-07",
+      "segmentCode": "S0-07",
+      "title": "Self-Worth Illusion",
+      "subtitle": "Void Gate"
+    },
+    "s1": {
+      "code": "S1-18",
+      "segmentCode": "S1-18",
+      "title": "The Transformer",
+      "subtitle": "Origin Frequency"
+    },
+    "s2": {
+      "code": "S2-27",
+      "segmentCode": "S2-27",
+      "title": "The Soul Shock Mirror",
+      "subtitle": "Mirror Path"
+    },
+    "s3": {
+      "code": "S3-03",
+      "segmentCode": "S3-03",
+      "title": "Explorer",
+      "subtitle": "Vibration Tier",
+      "raw": 110,
+      "s3Code": "S3-03"
+    },
+    "s4": {
+      "code": "S4-14",
+      "segmentCode": "S4-S1-18",
+      "title": "The Transformer · Core Shadow Pattern",
+      "subtitle": "Core Shadow Pattern"
+    },
+    "s5": {
+      "code": "S5-04",
+      "segmentCode": "S1-18|S3-03|S2-27|S0-07",
+      "title": "Soul Mission",
+      "subtitle": "Assembled Blueprint"
+    },
+    "s6": {
+      "code": "S6-28",
+      "segmentCode": "S6-18",
+      "title": "Personal Power Wealth",
+      "subtitle": "Origin Frequency"
+    },
+    "s7": {
+      "code": "S7-00"
+    },
+    "s8": {
+      "code": "S8-00"
+    },
+    "s9": {
+      "code": "S9-07"
+    }
+  },
+  "integrated_blueprint": {},
+  "integration_practice": {
+    "days": []
+  },
+  "ctas": {
+    "primary": "Book a Personal 1320 Reading",
+    "secondary": "Start My 7-Day Integration Practice",
+    "soft": "Return to My Report",
+    "optional": "Continue Reflection with Wisewave"
+  }
+}

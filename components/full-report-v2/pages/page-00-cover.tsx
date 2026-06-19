@@ -53,9 +53,17 @@ export function Page00Cover({ payload }: Page00CoverProps) {
         <section className="fr-v2-cover-center">
           <ModuleWheel />
           <div className="fr-v2-signature-panel">
-            <div className="fr-v2-signature-label">Your Core Signature Preview</div>
-            <div className="fr-v2-signature-code">{sigCodes}</div>
-            <div className="fr-v2-signature-sub">{sigSub}</div>
+            <span className="fr-v2-signature-icon fr-v2-signature-icon--left" aria-hidden="true">
+              <BrandSeal size={44} />
+            </span>
+            <div className="fr-v2-signature-body">
+              <div className="fr-v2-signature-label">Your Core Signature Preview</div>
+              <div className="fr-v2-signature-code">{sigCodes}</div>
+              <div className="fr-v2-signature-sub">{sigSub}</div>
+            </div>
+            <span className="fr-v2-signature-icon fr-v2-signature-icon--right" aria-hidden="true">
+              ✦
+            </span>
           </div>
         </section>
 
@@ -110,14 +118,20 @@ export function Page00Cover({ payload }: Page00CoverProps) {
 
           <aside className="fr-v2-includes-card">
             <div className="fr-v2-card-title">This Full Report Includes</div>
-            <ul className="fr-v2-module-list">
+            <div className="fr-v2-includes-badges">
               {MODULE_INCLUDES_LIST.map((item) => (
-                <li key={item.code}>
-                  <strong>{item.code}</strong>
-                  <span>{item.label}</span>
-                </li>
+                <span
+                  key={item.code}
+                  className="fr-v2-includes-badge"
+                  title={`${item.code} ${item.label}`}
+                >
+                  {item.code}
+                </span>
               ))}
-            </ul>
+            </div>
+            <div className="fr-v2-includes-caption">
+              10 Core Modules · Complete Soul Map
+            </div>
           </aside>
         </section>
 

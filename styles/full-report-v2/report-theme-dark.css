@@ -42,6 +42,27 @@
     linear-gradient(180deg, var(--fr-v2-bg-deep) 0%, var(--fr-v2-bg-main) 52%, #050b16 100%);
 }
 
+/* Generated cosmic image backdrop (atmospheric only; wheel text stays code-rendered).
+ * The image URL is applied via inline style in FullReportV2Shell so the CSS
+ * bundler does not try to resolve url() as a module. */
+.fr-v2-cosmic-photo {
+  position: fixed;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.92;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.fr-v2-cosmic-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(3, 8, 18, 0.62), rgba(3, 8, 18, 0.78));
+}
+
 .full-report-v2-root--starfield::before {
   content: "";
   position: absolute;

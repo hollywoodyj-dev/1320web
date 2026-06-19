@@ -8,6 +8,8 @@ import { SiteHeader } from "@/components/site-header";
 
 type PageShellProps = {
   children: ReactNode;
+  /** Server-decided lead persistence flag, forwarded to the footer subscribe slot. */
+  leadsEnabled?: boolean;
 };
 
 function isFullReportRoute(pathname: string | null): boolean {
@@ -17,7 +19,7 @@ function isFullReportRoute(pathname: string | null): boolean {
 }
 
 /** Cosmic layout for inner routes — homepage keeps its own shell in `app/page.tsx`. */
-export function PageShell({ children }: PageShellProps) {
+export function PageShell({ children, leadsEnabled }: PageShellProps) {
   const pathname = usePathname();
   const fullReport = isFullReportRoute(pathname);
 
@@ -45,7 +47,7 @@ export function PageShell({ children }: PageShellProps) {
         <div id="main-content" className="inner-main" tabIndex={-1}>
           {children}
         </div>
-        <SiteFooter />
+        <SiteFooter leadsEnabled={leadsEnabled} />
       </div>
     </main>
   );

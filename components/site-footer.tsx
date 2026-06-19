@@ -3,7 +3,11 @@ import Link from "next/link";
 import { FooterSubscribeSlot } from "@/components/footer-subscribe-slot";
 import { FOOTER_COLUMNS, FOOTER_LEGAL_LINKS } from "@/lib/site-nav";
 
-export function SiteFooter() {
+type SiteFooterProps = {
+  leadsEnabled?: boolean;
+};
+
+export function SiteFooter({ leadsEnabled }: SiteFooterProps) {
   return (
     <footer className="inner-site-footer">
       <div className="inner-footer-brand">
@@ -53,7 +57,7 @@ export function SiteFooter() {
         </div>
       ))}
 
-      <FooterSubscribeSlot variant="inner" />
+      <FooterSubscribeSlot variant="inner" enabled={leadsEnabled} />
 
       <p className="footer-mantra inner-footer-mantra">
         YOUR CODE IS A MIRROR — NOT A SENTENCE.

@@ -21,3 +21,4 @@ export { FullReportV2Shell } from "@/components/full-report-v2/full-report-v2-sh
 export { FullReportV2Viewer } from "@/components/full-report-v2/full-report-v2-viewer";
 export { Page00Cover } from "@/components/full-report-v2/pages/page-00-cover";
 export { Page01Opening } from "@/components/full-report-v2/pages/page-01-opening";
+export { Page02Dimensions } from "@/components/full-report-v2/pages/page-02-dimensions";

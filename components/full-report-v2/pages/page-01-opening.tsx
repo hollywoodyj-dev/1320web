@@ -18,15 +18,10 @@ export function Page01Opening() {
 
         <section className="fr-v2-opening-main">
           <div className="fr-v2-opening-left">
-            <GlassPanel className="fr-v2-opening-panel">
-              <div className="fr-v2-section-kicker">Opening Note</div>
-              <h1 className="fr-v2-opening-title">
-                Welcome to
-                <br />
-                Your Report
-              </h1>
+            <div className="fr-v2-opening-note">
+              <h1 className="fr-v2-opening-title">Opening Note</h1>
               <div className="fr-v2-gold-divider" />
-              <p className="fr-v2-body-copy">
+              <p className="fr-v2-opening-lead">
                 Welcome to your <strong>Full 1320 Soul Origin Report</strong>.
               </p>
               <p className="fr-v2-body-copy">
@@ -41,7 +36,7 @@ export function Page01Opening() {
                 return. There is nothing to “fix” here — only to remember, understand, and
                 embody.
               </p>
-            </GlassPanel>
+            </div>
 
             <GlassPanel className="fr-v2-use-panel">
               <div className="fr-v2-small-panel-title">How to Use This Report</div>
@@ -59,85 +54,69 @@ export function Page01Opening() {
             </GlassPanel>
           </div>
 
-          <div className="fr-v2-opening-center">
-            <section className="fr-v2-hero-statement">
-              <h2 className="fr-v2-hero-title">Disclaimer & Guidance</h2>
-              <p className="fr-v2-hero-subtitle">
-                This is a symbolic self-awareness report,
-                <br />
-                not a prediction, diagnosis, or prescription.
-              </p>
-            </section>
+          <section className="fr-v2-hero-statement">
+            <h2 className="fr-v2-hero-title">Disclaimer &amp; Guidance</h2>
+            <p className="fr-v2-hero-subtitle">
+              This is a symbolic self-awareness report,
+              <br />
+              not a prediction, diagnosis, or prescription.
+            </p>
+          </section>
 
-            <GlassPanel className="fr-v2-guidance-panel">
-              <div className="fr-v2-small-panel-title">Important Guidance</div>
-              <div>
-                {OPENING_GUIDANCE_ROWS.map((row) => (
-                  <div key={row.title} className="fr-v2-guidance-row">
-                    <div className="fr-v2-guidance-icon">{row.icon}</div>
-                    <div className="fr-v2-guidance-title">
-                      {row.title.split("\n").map((line, i) => (
-                        <span key={i}>
-                          {line}
-                          {i < row.title.split("\n").length - 1 ? <br /> : null}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="fr-v2-guidance-copy">{row.copy}</div>
+          <GlassPanel className="fr-v2-guidance-panel">
+            <div className="fr-v2-small-panel-title">Important Guidance</div>
+            <div>
+              {OPENING_GUIDANCE_ROWS.map((row) => (
+                <div key={row.title} className="fr-v2-guidance-row">
+                  <div className="fr-v2-guidance-icon">{row.icon}</div>
+                  <div className="fr-v2-guidance-title">
+                    {row.title.split("\n").map((line, i) => (
+                      <span key={i}>
+                        {line}
+                        {i < row.title.split("\n").length - 1 ? <br /> : null}
+                      </span>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </GlassPanel>
-
-            <div className="fr-v2-bottom-center-cards">
-              <GlassPanel className="fr-v2-mini-card">
-                <div className="fr-v2-star-icon">✶</div>
-                <div>
-                  <div className="fr-v2-mini-card-title">Core Intention</div>
-                  <div className="fr-v2-mini-card-copy">
-                    This report exists to help you remember your essence, understand your
-                    patterns, and navigate your life with more clarity, compassion, and
-                    conscious choice.
-                  </div>
+                  <div className="fr-v2-guidance-copy">{row.copy}</div>
                 </div>
-              </GlassPanel>
-              <GlassPanel className="fr-v2-mini-card">
-                <div className="fr-v2-star-icon">☼</div>
-                <div>
-                  <div className="fr-v2-mini-card-title">Agency Reminder</div>
-                  <div className="fr-v2-mini-card-copy">
-                    This report may offer reflection, but it does not replace your
-                    discernment. The power is always yours.
-                  </div>
-                </div>
-              </GlassPanel>
+              ))}
             </div>
-          </div>
+          </GlassPanel>
 
-          <div className="fr-v2-opening-right">
-            <GlassPanel className="fr-v2-not-panel">
-              <div className="fr-v2-small-panel-title">This Report Is Not</div>
-              <ul className="fr-v2-not-list">
-                {OPENING_NOT_LIST.map((item) => (
-                  <li key={item.text} className="fr-v2-not-item">
-                    <div className="fr-v2-not-icon">{item.icon}</div>
-                    <div className="fr-v2-not-copy">{item.text}</div>
-                  </li>
-                ))}
-              </ul>
-            </GlassPanel>
+          <GlassPanel className="fr-v2-not-panel">
+            <div className="fr-v2-small-panel-title">This Report Is Not</div>
+            <ul className="fr-v2-not-list">
+              {OPENING_NOT_LIST.map((item) => (
+                <li key={item.text} className="fr-v2-not-item">
+                  <div className="fr-v2-not-icon">{item.icon}</div>
+                  <div className="fr-v2-not-copy">{item.text}</div>
+                </li>
+              ))}
+            </ul>
+          </GlassPanel>
 
-            <GlassPanel className="fr-v2-role-panel">
-              <div>
-                <div className="fr-v2-role-title">Your Role</div>
-                <div className="fr-v2-role-copy">
-                  You are the author of your life. This report is here to support your
-                  awareness — the power is always yours.
-                </div>
+          <GlassPanel className="fr-v2-mini-card fr-v2-intention-card">
+            <div className="fr-v2-star-icon">✶</div>
+            <div>
+              <div className="fr-v2-mini-card-title">Core Intention</div>
+              <div className="fr-v2-mini-card-copy">
+                This report exists to help you remember your essence, understand your
+                patterns, and navigate your life with more clarity, compassion, and
+                conscious choice.
               </div>
-              <div className="fr-v2-human-orbit">♙</div>
-            </GlassPanel>
-          </div>
+            </div>
+          </GlassPanel>
+
+          <GlassPanel className="fr-v2-role-panel">
+            <div>
+              <div className="fr-v2-role-title">Your Role</div>
+              <div className="fr-v2-role-copy">
+                You are the author of your life. This report is here to support your
+                awareness — the power is always yours.
+              </div>
+            </div>
+            <div className="fr-v2-human-orbit">♙</div>
+          </GlassPanel>
         </section>
 
         <PageFooter

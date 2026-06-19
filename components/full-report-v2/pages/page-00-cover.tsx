@@ -29,7 +29,7 @@ export function Page00Cover({ payload }: Page00CoverProps) {
       <div className="fr-v2-cosmic-lines" />
       <section className="fr-v2-cover-grid">
         <section className="fr-v2-cover-left">
-          <BrandSeal size={82} className="fr-v2-cover-seal" />
+          <BrandSeal size={72} className="fr-v2-cover-seal" />
           <div className="fr-v2-cover-kicker">FULL</div>
           <div className="fr-v2-cover-number">1320</div>
           <div className="fr-v2-cover-title">
@@ -43,28 +43,12 @@ export function Page00Cover({ payload }: Page00CoverProps) {
             pattern, purpose, and path.
           </p>
           <div className="fr-v2-mirror-line">Your code is a mirror — not a sentence.</div>
-          <div className="fr-v2-fate-line">
-            Not your fate.
-            <br />
-            Your mirror.
-          </div>
+          <div className="fr-v2-fate-line">Not your fate. Your mirror.</div>
+          <div className="fr-v2-gold-divider fr-v2-gold-divider--fate" />
         </section>
 
         <section className="fr-v2-cover-center">
           <ModuleWheel />
-          <div className="fr-v2-signature-panel">
-            <span className="fr-v2-signature-icon fr-v2-signature-icon--left" aria-hidden="true">
-              <BrandSeal size={44} />
-            </span>
-            <div className="fr-v2-signature-body">
-              <div className="fr-v2-signature-label">Your Core Signature Preview</div>
-              <div className="fr-v2-signature-code">{sigCodes}</div>
-              <div className="fr-v2-signature-sub">{sigSub}</div>
-            </div>
-            <span className="fr-v2-signature-icon fr-v2-signature-icon--right" aria-hidden="true">
-              ✦
-            </span>
-          </div>
         </section>
 
         <section className="fr-v2-cover-right">
@@ -115,40 +99,48 @@ export function Page00Cover({ payload }: Page00CoverProps) {
               </div>
             </div>
           </aside>
-
-          <aside className="fr-v2-includes-card">
-            <div className="fr-v2-card-title">This Full Report Includes</div>
-            <div className="fr-v2-includes-badges">
-              {MODULE_INCLUDES_LIST.map((item) => (
-                <span
-                  key={item.code}
-                  className="fr-v2-includes-badge"
-                  title={`${item.code} ${item.label}`}
-                >
-                  {item.code}
-                </span>
-              ))}
-            </div>
-            <div className="fr-v2-includes-caption">
-              10 Core Modules · Complete Soul Map
-            </div>
-          </aside>
         </section>
+
+        <div className="fr-v2-signature-panel">
+          <span className="fr-v2-signature-icon fr-v2-signature-icon--left" aria-hidden="true">
+            <BrandSeal size={42} />
+          </span>
+          <div className="fr-v2-signature-body">
+            <div className="fr-v2-signature-label">Your Core Signature Preview</div>
+            <div className="fr-v2-signature-code">{sigCodes}</div>
+            <div className="fr-v2-signature-sub">{sigSub}</div>
+          </div>
+          <span className="fr-v2-signature-icon fr-v2-signature-icon--right" aria-hidden="true">
+            ✦
+          </span>
+        </div>
+
+        <aside className="fr-v2-includes-card">
+          <div className="fr-v2-card-title">This Full Report Includes</div>
+          <div className="fr-v2-includes-badges">
+            {MODULE_INCLUDES_LIST.map((item) => (
+              <span
+                key={item.code}
+                className="fr-v2-includes-badge"
+                title={`${item.code} ${item.label}`}
+              >
+                {item.code}
+              </span>
+            ))}
+          </div>
+          <div className="fr-v2-includes-caption">
+            10 Core Modules · Complete Soul Map
+          </div>
+        </aside>
 
         <footer className="fr-v2-cover-footer">
           <div className="fr-v2-cover-footer-symbol">◇</div>
           <div className="fr-v2-cover-footer-text">
-            <strong>Disclaimer:</strong>
-            <br />
-            This report is a symbolic self-reflection tool designed for clarity, insight,
-            and personal growth. It is not a substitute for professional advice, diagnosis,
-            therapy, legal counsel, financial advice, or treatment.
-          </div>
-          <div className="fr-v2-cover-footer-agency">
-            You remain the author of your life.
-            <br />
-            Use this report as a mirror for awareness, not as a fixed identity or absolute
-            truth.
+            <strong>Disclaimer:</strong> This report is a symbolic self-reflection tool
+            designed for clarity, insight, and personal growth. It is not a substitute for
+            professional advice, diagnosis, therapy, legal counsel, financial advice, or
+            treatment. You remain the author of your life. Use this report as a mirror for
+            awareness, not as a fixed identity or absolute truth.
           </div>
         </footer>
       </section>

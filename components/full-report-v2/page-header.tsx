@@ -17,7 +17,7 @@ export function PageHeader({
   return (
     <header className="fr-v2-page-header">
       <div className="fr-v2-brand-block">
-        <BrandSeal size={60} className="fr-v2-brand-seal" />
+        <BrandSeal size={46} className="fr-v2-brand-seal" />
         <div>
           <div className="fr-v2-brand-name">1320 Soul Code System</div>
           <div className="fr-v2-brand-sub">Sacred · Symbolic · Self-Awareness</div>

@@ -21,8 +21,8 @@ export default function FullReportV2Page() {
 
   return (
     <div className="page-shell-inner page-shell--full-report">
-      <div className="page-frame" style={{ maxWidth: "100%", width: "100%" }}>
-        <main className="inner-main">
+      <div className="page-frame page-frame--full-report">
+        <main className="inner-main inner-main--full-report">
           <FullReportV2Viewer payload={payload} />
         </main>
       </div>

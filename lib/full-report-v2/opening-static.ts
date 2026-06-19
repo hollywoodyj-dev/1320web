@@ -4,31 +4,27 @@ export const OPENING_HOW_TO_USE = [
   {
     icon: "◉",
     title: "Read Slowly",
-    description:
-      "Give yourself space to receive each section without rushing to define yourself.",
+    description: "Give yourself space to receive each part.",
   },
   {
     icon: "☉",
     title: "Use as a Mirror",
-    description:
-      "This is not about labels. It is about recognition, reflection, and conscious choice.",
+    description: "This is not about “labels”, but about recognition.",
   },
   {
     icon: "☷",
     title: "Journal & Reflect",
-    description: "Write freely. Let insights emerge in your own words and timing.",
+    description: "Write freely. Let insights emerge in your own words.",
   },
   {
     icon: "✶",
     title: "Apply with Awareness",
-    description:
-      "Take what resonates. Leave what does not. Integration is a living process.",
+    description: "Take what resonates. Leave what does not.",
   },
   {
     icon: "♡",
     title: "Return Often",
-    description:
-      "Revisit this report as you grow. You evolve, and so will your reflections.",
+    description: "Revisit as you grow. You evolve, so will your reflections.",
   },
 ] as const;
 

@@ -1,7 +1,7 @@
 # Phase 2 Roadmap
 
-**Status:** In progress — FS-005 started  
-**Authority:** Wisewave Phase 1 sign-off (2026-07-02)  
+**Status:** FS-005 approved — FS-005A in progress  
+**Authority:** Wisewave Phase 1 sign-off (2026-07-02) + FS-005 review (9.8/10)  
 **Companion:** `docs/governance/WISEWAVE_PHASE1_SIGNOFF.md`
 
 ---
@@ -11,113 +11,105 @@
 | Phase 1 | Phase 2 |
 |---------|---------|
 | Generate a report | Maintain an ongoing relationship with the Soul Blueprint |
-| Canonical report architecture | Relationship Layer platform |
+| Canonical report architecture | **Domain Model + Relationship Layer platform** |
+
+Wisewave: FS-005 is the **Phase 2 Domain Model** — not an ordinary spec.
 
 ---
 
-## Five steps (Wisewave-approved order)
+## Phase 2 sequence (updated)
 
 | Step | ID | Deliverable | Status |
 |------|-----|-------------|--------|
 | 1 | Gate 5 | Hosted commerce (Stripe test mode) | ✅ Complete |
-| 2 | **FS-005** | Canonical Soul Blueprint Specification | 🔄 In progress |
-| 3 | FS-006 | Personal Integration Session | ⏳ Pending |
+| 2 | **FS-005** | Canonical Soul Blueprint Specification v1.1 | ✅ **Approved (9.8/10)** |
+| 2.5 | **FS-005A** | 1320 Platform Domain Model | 🔄 In progress |
+| 3 | FS-006 | Personal Integration Session | ⏳ After FS-005A |
 | 4 | FS-007 | Wisewave API | ⏳ Pending |
 | 5 | FS-008 | Membership & Living Blueprint | ⏳ Pending |
 
-**Remaining:** 4 deliverables after Gate 5.
+**Wisewave guidance:** Do not start FS-006 until FS-005A domain objects are defined.
 
 ---
 
-## Step 2 — FS-005 (current)
+## Step 2 — FS-005 ✅
 
-**Goal:** Formalize Phase 1 engineering as the official platform contract.
+**Goal:** Platform contract for the Soul Blueprint object.
 
 | Artifact | Path |
 |----------|------|
-| Spec (this deliverable) | `docs/specs/canonical-soul-blueprint/CANONICAL_SOUL_BLUEPRINT_SPEC_v1.md` |
-| Package index | `docs/specs/canonical-soul-blueprint/README.md` |
-| Implementation (existing) | `lib/canonical-report/` |
-| Parity QA (existing) | `docs/specs/full-report/CANONICAL_REPORT_PARITY_v1.md` |
+| Spec v1.1 | `docs/specs/canonical-soul-blueprint/CANONICAL_SOUL_BLUEPRINT_SPEC_v1.md` |
+| Wisewave sign-off | `docs/specs/canonical-soul-blueprint/WISEWAVE_FS005_SIGNOFF.md` |
+| Implementation | `lib/canonical-report/` |
 
-**FS-005 exit criteria:**
+**Wisewave verdict:** Approved with Strategic Notes (9.8/10). Section 14 Platform Principles incorporated in v1.1.
 
-- [ ] Spec v1 published and linked from governance + full-report index
-- [ ] Section registry documented as product structure (19 sections)
-- [ ] Consumer contract defined (desktop, mobile, paid access, future API)
-- [ ] Schema versioning policy documented (`canonical-report-v1` → future v2)
-- [ ] Naming migration plan (Canonical Report → Canonical Soul Blueprint) documented — code rename optional follow-up
+---
+
+## Step 2.5 — FS-005A (current)
+
+**Goal:** Define six core domain objects so FS-006/007/008 share one model.
+
+| Artifact | Path |
+|----------|------|
+| Domain model | `docs/specs/canonical-soul-blueprint/PLATFORM_DOMAIN_MODEL_v1.md` |
+
+**Six core objects:**
+
+| Object | Immutable |
+|--------|-----------|
+| Soul Blueprint | ✅ |
+| Expression Profile | ❌ |
+| Relationship Memory | ❌ |
+| Session | ❌ |
+| Reflection | ❌ |
+| Journey | ❌ |
+
+**FS-005A exit criteria:**
+
+- [x] Six objects defined with immutability rules
+- [x] Phase 2 deliverable mapping
+- [ ] Wisewave quick review (optional)
+- [ ] Per-object schema sketches (FS-006 kickoff)
 
 ---
 
 ## Step 3 — FS-006 (Personal Integration Session)
 
-**Goal:** Human application layer — help users apply the Blueprint to real life.
+**Depends on:** FS-005A domain model.
 
 | Area | Scope |
 |------|--------|
 | Product flow | Book → prep → session → follow-up |
-| Wisewave role | Prep + reflection support only — facilitator primary |
-| Data | Session themes, Growth Edge, link to entitled Blueprint |
-| Governance | Docs 8, 10, 16 in `docs/governance/` |
-
-**Depends on:** FS-005 consumer contract.
+| Domain objects | Session, Reflection, Soul Blueprint (read) |
+| Wisewave role | Prep + reflection support — facilitator primary |
 
 ---
 
 ## Step 4 — FS-007 (Wisewave API)
 
-**Goal:** Relational intelligence layer reading **Canonical Soul Blueprint** — not page HTML.
+**Depends on:** FS-005A + FS-005 schema versioning.
 
 | Area | Scope |
 |------|--------|
-| Input | `buildCanonicalReport()` output / stored entitlement payload |
-| Orchestration | Reasoning Architecture (Doc 12) — 9 layers before response |
-| Behaviour | Behaviour Standard + Cognitive Framework (Docs 6–7) |
-| QA | Gate 4 red-team; Relationship QA layer |
-| Resolvers (future) | Blueprint → Expression → Relationship → Conversation → Presentation |
-
-**Depends on:** FS-005 schema versioning.
+| Domain objects | Session, Relationship Memory, Soul Blueprint (read), Expression Profile |
+| Orchestration | Reasoning Architecture (Doc 12) |
+| QA | Relationship QA layer |
 
 ---
 
 ## Step 5 — FS-008 (Membership & Living Blueprint)
 
-**Goal:** Ongoing reflection — Expression Framework™ + Living Blueprint.
-
 | Area | Scope |
 |------|--------|
-| Living Blueprint | Canonical Blueprint + Expression Layer |
-| Expression Framework™ | Dormant → Emerging → Active → Embodied → Integrated |
-| Membership | Check-ins, journals, Growth Edge tracking, Living Blueprint Reviews |
-| Memory | Relationship Memory Architecture (Doc 9) |
-| QA | Continuity QA (Report → Wisewave → Membership → Session) |
-
-**Depends on:** FS-007 API foundation.
-
----
-
-## Cross-cutting enablers
-
-| ID | Item | When |
-|----|------|------|
-| A | Canonical Soul Blueprint terminology in engineering docs | FS-005 |
-| B | Relationship QA + Continuity QA | FS-007 / FS-008 |
-| C | Live Stripe switch | Separate go-live (not blocking FS-005 start) |
-
----
-
-## Out of scope for Phase 2 core
-
-- Heavy new Full Report page content (Phase 1 complete)
-- PDF renderer (Phase 2B — optional later)
-- Live Stripe (until explicit go-live)
-- Full code rename `canonical-report` → `canonical-soul-blueprint` (document first, migrate when API ships)
+| Domain objects | Journey, Expression Profile, Reflection, Relationship Memory |
+| Living Blueprint | Immutable Blueprint + dynamic Expression |
+| QA | Continuity QA |
 
 ---
 
 ## Related docs
 
 - `docs/governance/README.md` — 12-doc governance pack
+- `docs/specs/canonical-soul-blueprint/README.md` — FS-005 package index
 - `PHASE2_SPEC.md` — older platform spec (2A checkout — largely shipped)
-- `docs/specs/full-report/FULL_REPORT_RELEASE_QA_v1.md` — Gates 0–5 QA

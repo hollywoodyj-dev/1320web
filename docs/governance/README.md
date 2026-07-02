@@ -260,7 +260,8 @@ Wisewave layer (Docs 5–10, 12)
 | Desktop/mobile parity (P1–P4, Phase A/B) | ✅ 0 actionable gaps; release QA PASS WITH CHECKOUT NOTE |
 | Deprecated term cleanup (result labels, sanitizers) | ✅ Partial — ongoing sweep per Brand Bible |
 | Gate 5 hosted Stripe checkout | ✅ PASS (test mode) |
-| FS-005 Canonical Soul Blueprint Spec | 🔄 In progress |
+| FS-005 Canonical Soul Blueprint Spec | ✅ Approved (9.8/10) |
+| FS-005A Platform Domain Model | 🔄 In progress |
 | Expression Framework / Living Blueprint | ⏳ Phase 2 (FS-008) |
 | Wisewave API / Relationship resolvers | ⏳ Phase 2 (FS-007) |
 | Relationship + Continuity QA layers | ⏳ Phase 2 (Doc 11 Recs 7–8) |

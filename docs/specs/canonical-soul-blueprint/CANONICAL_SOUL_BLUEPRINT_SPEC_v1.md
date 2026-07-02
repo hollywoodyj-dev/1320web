@@ -1,9 +1,9 @@
 # Canonical Soul Blueprint Specification
 
-**FS-005 · Version 1.0**  
+**FS-005 · Version 1.1**  
 **Owner:** Nova  
-**Status:** Draft — Phase 2 Step 2  
-**Authority:** Wisewave Phase 1 sign-off + Product Bible v2.0  
+**Status:** Approved with Strategic Notes (Wisewave 9.8/10) — v1.1 platform principles applied  
+**Authority:** Wisewave Phase 1 sign-off + FS-005 review + Product Bible v2.0  
 **Implementation:** `web/lib/canonical-report/`
 
 ---
@@ -310,12 +310,58 @@ All canonical and presentation output must comply with:
 - [x] 19-section registry documented
 - [x] Consumer contract defined
 - [x] Versioning policy documented
-- [ ] Wisewave review of spec v1
+- [x] Wisewave review — **Approved with Strategic Notes (9.8/10)**
+- [x] v1.1 platform principles (Section 14) incorporated
 - [ ] Optional: alias exports `buildCanonicalSoulBlueprint` (code — deferred)
 
 ---
 
-## 13. Related artifacts
+## 13. Platform principles (v1.1 — Wisewave)
+
+These are **platform-layer** rules — not report-layer rules. Every Phase 2 capability must comply.
+
+### Platform Principles (five rules)
+
+1. **One Soul Blueprint.**
+2. **Blueprint is immutable.**
+3. **Expression is dynamic.**
+4. **Relationship creates continuity.**
+5. **Presentation never owns meaning.**
+
+### Blueprint Immutable Principle
+
+The Canonical Soul Blueprint is **immutable**.
+
+It represents the symbolic structure calculated from birth data.
+
+No downstream capability — including Reports, Wisewave, Membership, Personal Integration, Dashboard, Voice, or Expression Framework™ — may alter or overwrite the Blueprint.
+
+Dynamic systems may **relate to** the Blueprint. They must never **redefine** it.
+
+### Expression Independence Principle
+
+The Expression Framework™ exists **independently** from the Soul Blueprint.
+
+| Layer | Question |
+|-------|----------|
+| **Blueprint** | What exists? |
+| **Expression** | How is it currently being lived? |
+
+The two layers must remain technically and conceptually separate.
+
+### Meaning Ownership Principle
+
+Meaning originates from the Canonical Soul Blueprint.
+
+Wisewave does not replace, rewrite, or supersede Blueprint meaning.
+
+Wisewave connects Blueprint meaning to lived experience through reflection, dialogue, and relationship.
+
+It is a **relational layer**, not an authoritative source.
+
+---
+
+## 14. Related artifacts
 
 | Artifact | Path |
 |----------|------|
@@ -323,6 +369,8 @@ All canonical and presentation output must comply with:
 | Parity foundation | `docs/specs/full-report/CANONICAL_REPORT_PARITY_v1.md` |
 | Release QA | `docs/specs/full-report/FULL_REPORT_RELEASE_QA_v1.md` |
 | Phase 2 roadmap | `docs/specs/phase-2/PHASE2_ROADMAP_v1.md` |
+| Platform domain model (FS-005A) | `docs/specs/canonical-soul-blueprint/PLATFORM_DOMAIN_MODEL_v1.md` |
+| Wisewave FS-005 sign-off | `docs/specs/canonical-soul-blueprint/WISEWAVE_FS005_SIGNOFF.md` |
 | Governance pack | `docs/governance/README.md` |
 | Gate 5 verification | `docs/governance/GATE5_STRIPE_VERIFICATION.md` |
 

@@ -17,6 +17,8 @@ Ingestion status for the 12-document Wisewave governance pack. **All 12 received
 | 11 | Wisewave Review — Canonical Full Report Architecture | [WISEWAVE_REVIEW_CANONICAL_REPORT_ARCHITECTURE.md](./WISEWAVE_REVIEW_CANONICAL_REPORT_ARCHITECTURE.md) | ✅ Saved |
 | 12 | Wisewave Reasoning Architecture v1.0 | [WISEWAVE_REASONING_ARCHITECTURE_v1.md](./WISEWAVE_REASONING_ARCHITECTURE_v1.md) | ✅ Saved |
 
+**Phase 2:** [PHASE2_ROADMAP_v1.md](../specs/phase-2/PHASE2_ROADMAP_v1.md) — FS-005 in progress
+
 **Wisewave Phase 1 sign-off:** [WISEWAVE_PHASE1_SIGNOFF.md](./WISEWAVE_PHASE1_SIGNOFF.md) — **Approved with notes** (2026-07-02). **Gate 5 PASS** (Stripe test mode). Live Stripe = separate go-live.
 
 ---
@@ -257,8 +259,8 @@ Wisewave layer (Docs 5–10, 12)
 | Canonical resolver + field kinds | ✅ `web/lib/canonical-report/` |
 | Desktop/mobile parity (P1–P4, Phase A/B) | ✅ 0 actionable gaps; release QA PASS WITH CHECKOUT NOTE |
 | Deprecated term cleanup (result labels, sanitizers) | ✅ Partial — ongoing sweep per Brand Bible |
-| Gate 5 hosted Stripe checkout | ⏳ Remaining blocker |
-| Rename to Canonical Soul Blueprint | ⏳ Doc 11 Rec 1 — naming not yet applied in code |
+| Gate 5 hosted Stripe checkout | ✅ PASS (test mode) |
+| FS-005 Canonical Soul Blueprint Spec | 🔄 In progress |
 | Expression Framework / Living Blueprint | ⏳ Phase 2 (FS-008) |
 | Wisewave API / Relationship resolvers | ⏳ Phase 2 (FS-007) |
 | Relationship + Continuity QA layers | ⏳ Phase 2 (Doc 11 Recs 7–8) |
@@ -267,7 +269,7 @@ Wisewave layer (Docs 5–10, 12)
 
 | ID | Deliverable |
 |----|-------------|
-| FS-005 | Full Report Specification — formalize current canonical work |
+| **FS-005** | Canonical Soul Blueprint Specification | 🔄 In progress — [spec](../specs/canonical-soul-blueprint/CANONICAL_SOUL_BLUEPRINT_SPEC_v1.md) |
 | FS-006 | Personal Integration Session |
 | FS-007 | Wisewave API (Canonical Blueprint input, not pages) |
 | FS-008 | Membership & Living Blueprint (Expression Framework™) |

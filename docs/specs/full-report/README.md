@@ -11,6 +11,8 @@
 | `LUMEN_QA_PROTOCOL_v1.md` | Per-report QA gate |
 | `LUMEN_QA_FULL_REPORT_V2_WEB_MOBILE.md` | Web + mobile v2 QA by birth date (result vs system) |
 | `CANONICAL_REPORT_PARITY_v1.md` | One report / two presentations — schema + parity foundation |
+| `../canonical-soul-blueprint/CANONICAL_SOUL_BLUEPRINT_SPEC_v1.md` | **FS-005** — Canonical Soul Blueprint platform contract |
+| `../phase-2/PHASE2_ROADMAP_v1.md` | Phase 2 five-step roadmap |
 | `FULL_REPORT_RELEASE_QA_v1.md` | Final release QA checklist (automated + Lumen manual) |
 
 ## UI reference templates (`ui/`)

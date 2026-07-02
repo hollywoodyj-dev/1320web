@@ -4,7 +4,9 @@ Canonical product and content specs copied from the founder content pack for imp
 
 | Path | Purpose |
 |------|---------|
-| `1320-v2-content/README.md` | v2 content pack overview |
+| `phase-2/PHASE2_ROADMAP_v1.md` | **Phase 2** five-step roadmap (FS-005–FS-008) |
+| `canonical-soul-blueprint/` | **FS-005** Canonical Soul Blueprint spec package |
+| `full-report/` | Full Report v2 UI + parity + release QA |
 | `1320-v2-content/IMPLEMENTATION_PHASES.md` | Phased build plan (Phase 0–6) |
 | `1320-v2-content/CONTENT_DATABASE_MANIFEST.md` | Every S0–S9 JSON file + repo import path |
 | `1320-v2-content/1320_Content_Database_Index_v2.json` | Master index (S4 filename corrected) |

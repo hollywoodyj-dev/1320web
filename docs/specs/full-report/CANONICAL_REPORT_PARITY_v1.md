@@ -2,7 +2,7 @@
 
 **Source:** Wisewave 2/4 Review  
 **Owner:** Nova  
-**Status:** Gates 0–5 **QA PASS** (Stripe test mode verified) — live Stripe switch is separate go-live step. See `docs/governance/WISEWAVE_PHASE1_SIGNOFF.md` and `qa-artifacts/1320-full-report-release-qa-2026-07-02.md`.
+**Status:** Gates 0–5 **QA PASS** (Stripe test mode). Phase 2 FS-005 in progress — see `docs/specs/canonical-soul-blueprint/CANONICAL_SOUL_BLUEPRINT_SPEC_v1.md`.
 
 ## Product decision
 

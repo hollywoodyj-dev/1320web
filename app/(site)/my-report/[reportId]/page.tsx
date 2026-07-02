@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FullReportViewer } from "@/components/full-report/full-report-viewer";
+import { FullReportV2Viewer } from "@/components/full-report-v2/full-report-v2-viewer";
 import { getEntitledReportAccess } from "@/lib/auth/access";
-import { get1320Content } from "@/lib/get1320Content";
-import { calculate1320Code } from "@/lib/calculate1320Code";
+import { buildCanonicalReport } from "@/lib/canonical-report";
 import { SectionCard } from "@/components/section-card";
 
 export const dynamic = "force-dynamic";
@@ -66,31 +65,26 @@ export default async function MyReportPage({ params }: PageProps) {
   }
 
   const report = access.report;
-  const code = calculate1320Code(report.birth_year, report.birth_month, report.birth_day);
   const birthDateLabel = `${report.birth_year}-${String(report.birth_month).padStart(2, "0")}-${String(report.birth_day).padStart(2, "0")}`;
-
-  const content = get1320Content(
-    {
-      s1: code.s1,
-      s3: code.s3Raw,
-      s2: code.s2,
-      s0: code.s0,
-      locale: "en",
-    },
-    { birthDate: birthDateLabel, reportTier: "full" },
+  const birthDateDisplay = new Date(report.birth_year, report.birth_month - 1, report.birth_day).toLocaleDateString(
+    "en-US",
+    { month: "long", day: "numeric", year: "numeric" },
   );
+  const preparedFor = access.user.first_name?.trim() || "You";
+
+  const payload = buildCanonicalReport({
+    name: preparedFor,
+    birth_date: birthDateLabel,
+    birth_date_display: birthDateDisplay,
+  }).payload;
 
   return (
-    <div className="full-report-page">
-      <FullReportViewer
-        content={content}
-        options={{
-          birthDate: birthDateLabel,
-          preparedFor: "You",
-          reportId: report.id,
-        }}
-        analyticsEvent="full_report_view"
-      />
+    <div className="page-shell-inner page-shell--full-report">
+      <div className="page-frame page-frame--full-report">
+        <main className="inner-main inner-main--full-report">
+          <FullReportV2Viewer payload={payload} />
+        </main>
+      </div>
     </div>
   );
 }

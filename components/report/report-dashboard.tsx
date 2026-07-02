@@ -12,6 +12,7 @@ import { ReportFullUpsell } from "@/components/report/report-full-upsell";
 import { ReportHeader } from "@/components/report/report-header";
 import { ReportModuleCard } from "@/components/report/report-module-card";
 import { ReportSidebar, useReportScrollSpy } from "@/components/report/report-sidebar";
+import { ReportPreviewLinks } from "@/components/report/report-preview-links";
 import { ReportDebugPanel } from "@/components/report/report-debug-panel";
 import { ResultExtras } from "@/components/report/result-extras";
 import { trackEvent } from "@/lib/analytics";
@@ -50,6 +51,10 @@ export function ReportDashboard({ viewModel, analyticsEvent }: ReportDashboardPr
           codeString={viewModel.codeString}
           fictionBanner={viewModel.fictionBanner}
         />
+
+        {viewModel.birthDateLabel ? (
+          <ReportPreviewLinks birthDateLabel={viewModel.birthDateLabel} />
+        ) : null}
 
         <p className="report-boundary-note">{viewModel.boundaryNote}</p>
 

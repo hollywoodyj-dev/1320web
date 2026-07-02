@@ -1,0 +1,415 @@
+/* Mobile Page 24 — S8 Soul Contribution Reveal */
+
+.mr-v2-screen.mr-v2-screen--s8-soul-contribution-reveal {
+  height: auto;
+  max-height: none;
+  min-height: var(--mr-v2-viewport, 100dvh);
+  overflow: visible;
+  --mr-v2-s8-cyan: #8ee8ff;
+  --mr-v2-s8-blue: #70c8ff;
+  --mr-v2-s8-purple: #c783ff;
+}
+
+.mr-v2-screen.mr-v2-screen--s8-soul-contribution-reveal .mr-v2-cosmic-lines {
+  opacity: 0.24;
+  background:
+    radial-gradient(
+      circle at 50% 43%,
+      transparent 0 96px,
+      rgba(112, 200, 255, 0.18) 97px 98px,
+      transparent 99px 164px,
+      rgba(214, 181, 109, 0.13) 165px 166px,
+      transparent 167px
+    ),
+    radial-gradient(circle at 50% 48%, transparent 0 42px, rgba(214, 181, 109, 0.18) 43px 44px, transparent 45px),
+    linear-gradient(28deg, transparent 0 49%, rgba(214, 181, 109, 0.1) 50%, transparent 51%),
+    linear-gradient(142deg, transparent 0 49%, rgba(112, 200, 255, 0.1) 50%, transparent 51%);
+}
+
+.mr-v2-s8scr-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.mr-v2-s8scr-kicker {
+  color: var(--mr-v2-s8-cyan);
+  font-size: clamp(11px, 3vw, 12.5px);
+  letter-spacing: 0.22em;
+  margin-bottom: 14px;
+  text-shadow: 0 0 16px rgba(112, 200, 255, 0.28);
+}
+
+.mr-v2-s8scr-kicker::before,
+.mr-v2-s8scr-kicker::after {
+  background: linear-gradient(90deg, transparent, rgba(112, 200, 255, 0.72));
+}
+
+.mr-v2-s8scr-hero {
+  text-align: center;
+  margin-bottom: 18px;
+  flex-shrink: 0;
+}
+
+.mr-v2-s8scr-hero-title {
+  margin: 0;
+  color: var(--mr-v2-text-main);
+  font-family: var(--mr-v2-font-display);
+  font-size: clamp(34px, 10vw, 48px);
+  line-height: 0.96;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-shadow:
+    0 0 24px rgba(214, 181, 109, 0.2),
+    0 2px 0 rgba(0, 0, 0, 0.28);
+}
+
+.mr-v2-s8scr-hero-title-gold {
+  display: block;
+  color: var(--mr-v2-gold-bright);
+  font-size: 1.08em;
+  margin-top: 4px;
+  text-shadow: 0 0 28px rgba(244, 216, 138, 0.22);
+}
+
+.mr-v2-s8scr-hero-subtitle {
+  margin: 14px auto 0;
+  max-width: 352px;
+  color: var(--mr-v2-text-main);
+  font-family: var(--mr-v2-font-display);
+  font-size: clamp(17px, 4.8vw, 20px);
+  line-height: 1.34;
+  letter-spacing: 0.01em;
+}
+
+.mr-v2-s8scr-glass-card {
+  border: 1px solid rgba(214, 181, 109, 0.46);
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015)),
+    radial-gradient(circle at 50% 0%, rgba(244, 216, 138, 0.1), transparent 38%),
+    rgba(5, 14, 27, 0.72);
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.3),
+    inset 0 0 18px rgba(255, 255, 255, 0.025),
+    0 0 18px rgba(214, 181, 109, 0.08);
+  backdrop-filter: blur(14px);
+  flex-shrink: 0;
+  margin-bottom: 14px;
+}
+
+.mr-v2-s8scr-section-title {
+  color: var(--mr-v2-gold-bright);
+  font-family: var(--mr-v2-font-display);
+  font-size: clamp(17px, 4.8vw, 21px);
+  line-height: 1.12;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+}
+
+.mr-v2-s8scr-section-title--center {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.mr-v2-s8scr-section-title--blue {
+  color: var(--mr-v2-s8-cyan);
+  text-shadow: 0 0 16px rgba(112, 200, 255, 0.22);
+}
+
+/* S8 icon card uses page 19 mission-icon-card classes (mobile-s5-mission-pathway-icon.css) */
+
+.mr-v2-s8scr-code-main {
+  margin-top: 6px;
+  color: var(--mr-v2-s8-cyan);
+  font-family: var(--mr-v2-font-display);
+  font-size: clamp(42px, 11vw, 54px);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 0.95;
+  text-shadow: 0 0 24px rgba(112, 200, 255, 0.38);
+}
+
+/* CONTRIBUTION ESSENCE */
+
+.mr-v2-s8scr-essence-card {
+  padding: 22px 18px;
+  display: grid;
+  grid-template-columns: 66px 1fr;
+  gap: 16px;
+  align-items: center;
+  border-color: rgba(112, 200, 255, 0.42);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015)),
+    radial-gradient(circle at 100% 44%, rgba(199, 131, 255, 0.16), transparent 42%),
+    rgba(5, 14, 27, 0.72);
+}
+
+.mr-v2-s8scr-essence-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  border: 1px solid rgba(199, 131, 255, 0.54);
+  color: var(--mr-v2-s8-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 29px;
+  flex-shrink: 0;
+  background:
+    radial-gradient(circle at center, rgba(199, 131, 255, 0.2), transparent 58%),
+    rgba(5, 14, 27, 0.72);
+  box-shadow: 0 0 18px rgba(199, 131, 255, 0.14);
+}
+
+.mr-v2-s8scr-essence-title {
+  color: var(--mr-v2-gold-bright);
+  font-family: var(--mr-v2-font-display);
+  font-size: clamp(20px, 5.6vw, 24px);
+  line-height: 1.1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.mr-v2-s8scr-essence-copy {
+  color: var(--mr-v2-text-main);
+  font-size: clamp(14px, 4vw, 15.5px);
+  line-height: 1.48;
+}
+
+/* THREE CONTRIBUTION KEYS */
+
+.mr-v2-s8scr-keys-card {
+  padding: 22px 14px 20px;
+}
+
+.mr-v2-s8scr-keys-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.mr-v2-s8scr-key-item {
+  border: 1px solid rgba(214, 181, 109, 0.28);
+  border-radius: 18px;
+  background: rgba(5, 14, 27, 0.58);
+  padding: 16px 10px 14px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mr-v2-s8scr-key-icon {
+  width: 54px;
+  height: 54px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(112, 200, 255, 0.54);
+  border-radius: 50%;
+  color: var(--mr-v2-s8-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  flex-shrink: 0;
+  background:
+    radial-gradient(circle at center, rgba(112, 200, 255, 0.2), transparent 58%),
+    rgba(5, 14, 27, 0.72);
+  box-shadow: 0 0 18px rgba(112, 200, 255, 0.14);
+}
+
+.mr-v2-s8scr-key-item--gold .mr-v2-s8scr-key-icon {
+  color: var(--mr-v2-gold-bright);
+  border-color: rgba(244, 216, 138, 0.54);
+  background:
+    radial-gradient(circle at center, rgba(244, 216, 138, 0.18), transparent 58%),
+    rgba(5, 14, 27, 0.72);
+  box-shadow: 0 0 18px rgba(244, 216, 138, 0.14);
+}
+
+.mr-v2-s8scr-key-item--purple .mr-v2-s8scr-key-icon {
+  color: var(--mr-v2-s8-purple);
+  border-color: rgba(199, 131, 255, 0.54);
+  background:
+    radial-gradient(circle at center, rgba(199, 131, 255, 0.2), transparent 58%),
+    rgba(5, 14, 27, 0.72);
+  box-shadow: 0 0 18px rgba(199, 131, 255, 0.14);
+}
+
+.mr-v2-s8scr-key-title {
+  color: var(--mr-v2-s8-cyan);
+  font-family: var(--mr-v2-font-display);
+  font-size: clamp(14px, 4vw, 16px);
+  line-height: 1.1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.mr-v2-s8scr-key-item--gold .mr-v2-s8scr-key-title {
+  color: var(--mr-v2-gold-bright);
+}
+
+.mr-v2-s8scr-key-item--purple .mr-v2-s8scr-key-title {
+  color: var(--mr-v2-s8-purple);
+}
+
+.mr-v2-s8scr-key-copy {
+  color: var(--mr-v2-text-soft);
+  font-size: clamp(12px, 3.4vw, 13.4px);
+  line-height: 1.38;
+}
+
+/* SOUL CONTRIBUTION REMINDER */
+
+.mr-v2-s8scr-reminder-card {
+  padding: 20px 16px;
+  border-color: rgba(244, 216, 138, 0.52);
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 14px;
+  align-items: center;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015)),
+    radial-gradient(circle at 18% 50%, rgba(244, 216, 138, 0.16), transparent 38%),
+    rgba(5, 14, 27, 0.72);
+}
+
+.mr-v2-s8scr-reminder-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: 1px solid rgba(244, 216, 138, 0.54);
+  color: var(--mr-v2-gold-bright);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  flex-shrink: 0;
+  background:
+    radial-gradient(circle at center, rgba(244, 216, 138, 0.2), transparent 58%),
+    rgba(5, 14, 27, 0.72);
+  box-shadow: 0 0 20px rgba(244, 216, 138, 0.16);
+}
+
+.mr-v2-s8scr-reminder-title {
+  color: var(--mr-v2-gold-bright);
+  font-family: var(--mr-v2-font-display);
+  font-size: clamp(19px, 5.4vw, 23px);
+  line-height: 1.1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.mr-v2-s8scr-reminder-copy {
+  color: var(--mr-v2-text-main);
+  font-size: clamp(14px, 4vw, 15.2px);
+  line-height: 1.46;
+  margin: 0;
+}
+
+.mr-v2-s8scr-reminder-copy strong {
+  color: var(--mr-v2-gold-bright);
+  font-weight: 500;
+}
+
+/* FOOTER MANTRA */
+
+.mr-v2-s8scr-bottom-mantra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+}
+
+.mr-v2-s8scr-bottom-mantra-divider-row {
+  display: grid;
+  grid-template-columns: 1fr 34px 1fr;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.mr-v2-s8scr-bottom-mantra-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(214, 181, 109, 0.65));
+}
+
+.mr-v2-s8scr-bottom-mantra-line--reverse {
+  transform: rotate(180deg);
+}
+
+.mr-v2-s8scr-bottom-mantra-logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgba(214, 181, 109, 0.42);
+  box-shadow: 0 0 14px rgba(214, 181, 109, 0.16);
+}
+
+.mr-v2-s8scr-bottom-mantra-copy {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin: 0;
+  color: var(--mr-v2-gold-bright);
+  font-size: clamp(9.5px, 2.8vw, 11.5px);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.35;
+}
+
+.mr-v2-s8scr-bottom-mantra-star {
+  font-size: 11px;
+  line-height: 1;
+}
+
+@media (max-width: 390px) {
+  .mr-v2-s8scr-hero-title {
+    font-size: 36px;
+  }
+
+  .mr-v2-s8scr-hero-subtitle {
+    font-size: 18px;
+  }
+
+  .mr-v2-s8scr-essence-card,
+  .mr-v2-s8scr-reminder-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .mr-v2-s8scr-essence-icon,
+  .mr-v2-s8scr-reminder-icon {
+    margin: 0 auto;
+  }
+
+  .mr-v2-s8scr-keys-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .mr-v2-s8scr-bottom-mantra-copy {
+    font-size: 9px;
+    gap: 6px;
+  }
+}
+
+@media (max-height: 820px) {
+  .mr-v2-s8scr-hero {
+    margin-bottom: 14px;
+  }
+}

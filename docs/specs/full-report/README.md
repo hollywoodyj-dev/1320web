@@ -9,6 +9,9 @@
 | `FULL_SOUL_ORIGIN_REPORT_V1_SPEC_SUMMARY.md` | Master summary + deltas vs codebase |
 | `NOVA_IMPLEMENTATION_CHECKLIST_v1.md` | Nova build checklist |
 | `LUMEN_QA_PROTOCOL_v1.md` | Per-report QA gate |
+| `LUMEN_QA_FULL_REPORT_V2_WEB_MOBILE.md` | Web + mobile v2 QA by birth date (result vs system) |
+| `CANONICAL_REPORT_PARITY_v1.md` | One report / two presentations — schema + parity foundation |
+| `FULL_REPORT_RELEASE_QA_v1.md` | Final release QA checklist (automated + Lumen manual) |
 
 ## UI reference templates (`ui/`)
 

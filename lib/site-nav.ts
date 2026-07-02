@@ -46,8 +46,8 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     links: [
       { href: "/faq", label: "FAQ" },
       { href: "/sample-report", label: "Sample Report" },
-      { href: "/full-report", label: "Full Report Waitlist" },
-      { href: "/booking", label: "Book a Reading" },
+      { href: "/full-report", label: "Full Report" },
+      { href: "/booking", label: "Personal Integration Session" },
     ],
   },
   {
@@ -79,7 +79,7 @@ export const HOMEPAGE_FOOTER_COLUMNS: FooterColumn[] = [
       { href: "/faq", label: "Guides" },
       { href: "/sample-report", label: "Sample Report" },
       { href: "/full-report", label: "Full Report" },
-      { href: "/booking", label: "Book a Reading" },
+      { href: "/booking", label: "Personal Integration Session" },
     ],
   },
   {

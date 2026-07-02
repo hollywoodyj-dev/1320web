@@ -6,6 +6,8 @@ import { containsCjk } from "../lib/getLocalized";
 import { get1320Content, getS3TierRecord, t } from "../lib/get1320Content";
 import { buildReportViewModel } from "../lib/report/build-report-view-model";
 import { getSegmentCardImageUrl } from "../lib/segment-card-asset";
+import { getAdvancedModuleCardImageUrlFromCode } from "../lib/advanced-module-card-asset";
+import { calculate1320Code } from "../lib/calculate1320Code";
 
 const SAMPLE = { s1: 18, s3: 110, s2: 27, s0: 7 };
 
@@ -79,6 +81,21 @@ assert(Boolean(s1Module), "sample report should include S1 module");
 assert(s3Module?.cardImageUrl === "/S3-12/S03.webp", "S3 module should include tier card art");
 assert(s2Module?.cardImageUrl === "/S2-50/S2-27.webp", "S2 module should include mirror card art");
 assert(s0Module?.cardImageUrl === "/S0-19/S0-07.webp", "S0 module should include void gate card art");
+
+const sampleCodes = calculate1320Code(1980, 5, 22);
+assert(
+  getAdvancedModuleCardImageUrlFromCode(sampleCodes.s4Code) === `/S4-20/${sampleCodes.s4Code}.webp`,
+  "S4 card image path for canonical sample",
+);
+assert(
+  getAdvancedModuleCardImageUrlFromCode(sampleCodes.s5Code) === `/S5-44/${sampleCodes.s5Code}.webp`,
+  "S5 card image path for canonical sample",
+);
+assert(
+  getAdvancedModuleCardImageUrlFromCode(sampleCodes.s7Code) === `/S7-07/${sampleCodes.s7Code}.webp`,
+  "S7 card image path for canonical sample",
+);
+
 assert(s1Module!.fields.length >= 8, "S1 full module should expose distinct premium fields");
 const s1Values = s1Module!.fields.map((f) => f.value.trim());
 assert(new Set(s1Values).size === s1Values.length, "S1 module field values must be unique");

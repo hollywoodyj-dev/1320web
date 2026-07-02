@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { submitLead, trackEvent } from "@/lib/analytics";
-import { READING_OPTIONS } from "@/lib/booking-content";
+import { BOOKING_FINAL, READING_OPTIONS } from "@/lib/booking-content";
 import { FORM_CONSENT, FORM_MESSAGES } from "@/lib/form-consent";
 
 type BookingRequestFormProps = {
@@ -84,7 +84,7 @@ export function BookingRequestForm({ defaultReadingType }: BookingRequestFormPro
         />
       </label>
       <label className="conversion-field">
-        Preferred Reading Type
+        Preferred Session Type
         <select
           name="readingType"
           required
@@ -92,7 +92,7 @@ export function BookingRequestForm({ defaultReadingType }: BookingRequestFormPro
           defaultValue={defaultReadingType ?? ""}
         >
           <option value="" disabled>
-            Select a reading type
+            Select a session type
           </option>
           {READING_OPTIONS.options.map((option) => (
             <option key={option.id} value={option.id}>
@@ -125,7 +125,7 @@ export function BookingRequestForm({ defaultReadingType }: BookingRequestFormPro
         </span>
       </label>
       <button type="submit" className="gold-button">
-        REQUEST BOOKING
+        {BOOKING_FINAL.cta}
       </button>
       {status ? <p className="conversion-status">{status}</p> : null}
     </form>

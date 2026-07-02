@@ -1,0 +1,7 @@
+/* Loaded after per-page CSS — scroll-page screens fill the live track height
+   (var is set in JS to track.clientHeight, so this tracks address-bar changes
+   and avoids the bottom gap left by static dvh values). */
+
+.mr-v2-page-panel-inner--scroll .mr-v2-screen[class*="mr-v2-screen--"] {
+  min-height: var(--mr-v2-viewport, 100dvh);
+}

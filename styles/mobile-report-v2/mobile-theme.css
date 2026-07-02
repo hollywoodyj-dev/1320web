@@ -1,0 +1,78 @@
+/* Mobile Report v2 — theme tokens */
+
+.mobile-report-v2-root {
+  --mr-v2-bg-deep: #050d19;
+  --mr-v2-bg-main: #081526;
+  --mr-v2-text-main: #f5ead6;
+  --mr-v2-text-soft: rgba(245, 234, 214, 0.78);
+  --mr-v2-text-muted: rgba(245, 234, 214, 0.56);
+  --mr-v2-gold: #d6b56d;
+  --mr-v2-gold-bright: #f4d88a;
+  --mr-v2-panel: rgba(5, 14, 27, 0.74);
+  --mr-v2-panel-strong: rgba(5, 14, 27, 0.88);
+  --mr-v2-font-display: "Cormorant Garamond", Georgia, serif;
+  --mr-v2-font-ui: Inter, "Avenir Next", Montserrat, Arial, sans-serif;
+}
+
+.mobile-report-v2-root--cosmic-bg {
+  background:
+    radial-gradient(circle at 50% 14%, rgba(214, 181, 109, 0.14), transparent 24%),
+    radial-gradient(circle at 78% 42%, rgba(76, 139, 245, 0.16), transparent 32%),
+    radial-gradient(circle at 18% 72%, rgba(124, 92, 255, 0.12), transparent 34%),
+    linear-gradient(180deg, #020712 0%, var(--mr-v2-bg-deep) 38%, var(--mr-v2-bg-main) 72%, #030814 100%);
+}
+
+.mobile-report-v2-root--starfield::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.88) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(214, 181, 109, 0.72) 0 1px, transparent 1.3px);
+  background-size: 92px 92px, 148px 148px;
+  background-position: 24px 36px, 78px 116px;
+  opacity: 0.22;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Shared 1320 site logo below hero titles (pages 01–02) */
+.mr-v2-hero-brand-logo {
+  width: min(88px, 26vw);
+  height: auto;
+  margin: 0 auto 8px;
+  display: block;
+  object-fit: contain;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 18px rgba(244, 216, 138, 0.24));
+  flex-shrink: 0;
+}
+
+.mr-v2-hero-brand-logo--large {
+  width: min(100px, 28vw);
+  margin-bottom: 12px;
+}
+
+/* Signature orb icons — base styles (full-report CSS is not loaded on mobile-report-v2) */
+.mobile-report-v2-root .fr-v2-signature-code-icon {
+  width: var(--fr-v2-signature-code-icon-size, 80px);
+  height: var(--fr-v2-signature-code-icon-size, 80px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.mobile-report-v2-root .fr-v2-signature-code-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.mobile-report-v2-root .fr-v2-signature-code-fallback {
+  line-height: 1;
+}

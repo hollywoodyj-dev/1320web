@@ -1,3 +1,4 @@
+import { ModuleNodeIcon } from "@/components/full-report-v2/module-node-icons";
 import { MODULE_WHEEL_NODES } from "@/lib/full-report-v2/module-wheel";
 import {
   MODULE_WHEEL_LAYOUT_COVER,
@@ -102,7 +103,9 @@ export function ModuleWheel({ variant = "cover" }: ModuleWheelProps) {
               transform: pos.transform,
             }}
           >
-            <div className="fr-v2-module-node__icon">{node.icon}</div>
+            <div className="fr-v2-module-node__icon">
+              <ModuleNodeIcon id={node.id} />
+            </div>
             <div className="fr-v2-module-node__code">{node.code}</div>
             <div className="fr-v2-module-node__name">{node.label}</div>
             {variant === "overview" && (

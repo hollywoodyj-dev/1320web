@@ -9,6 +9,7 @@ import {
   HOMEPAGE_ABOUT_PREVIEW,
   HOMEPAGE_BLUEPRINT_INTRO,
   HOMEPAGE_CALCULATOR,
+  HOMEPAGE_CURIOSITY,
   HOMEPAGE_FINAL_CTA,
   HOMEPAGE_FOOTER_BRAND,
   HOMEPAGE_FULL_REPORT_PREVIEW,
@@ -17,6 +18,7 @@ import {
   HOMEPAGE_HOW,
   HOMEPAGE_META,
   HOMEPAGE_MID_CTA,
+  HOMEPAGE_NOT_THIS,
   HOMEPAGE_PILLAR_NOTE,
   HOMEPAGE_PILLARS,
   HOMEPAGE_STATS,
@@ -119,6 +121,17 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section className="homepage-curiosity">
+          <p className="homepage-section-eyebrow">{HOMEPAGE_CURIOSITY.eyebrow}</p>
+          <h2 className="homepage-section-title">{HOMEPAGE_CURIOSITY.title}</h2>
+          <ul className="homepage-curiosity-list">
+            {HOMEPAGE_CURIOSITY.questions.map((question) => (
+              <li key={question}>{question}</li>
+            ))}
+          </ul>
+          <p className="homepage-section-body">{HOMEPAGE_CURIOSITY.closing}</p>
+        </section>
+
         <nav className="homepage-secondary-links" aria-label="Explore 1320">
           {HOMEPAGE_SECONDARY_LINKS.map((link) => (
             <Link key={link.href} href={link.href} className="hero-secondary-link">
@@ -140,6 +153,7 @@ export default function HomePage() {
               <p className="pillar-code">{pillar.code}</p>
               <div className="pillar-card-body">
                 <h2>{pillar.title}</h2>
+                <p className="pillar-plain-language">{pillar.plainLanguage}</p>
                 <p className="pillar-headline">{pillar.headline}</p>
                 <p>{pillar.text}</p>
                 <Link href={pillar.learnMoreHref}>LEARN MORE</Link>
@@ -148,6 +162,20 @@ export default function HomePage() {
           ))}
         </section>
         <p className="homepage-pillar-note">{HOMEPAGE_PILLAR_NOTE}</p>
+
+        <section className="homepage-not-this">
+          <p className="homepage-section-eyebrow">{HOMEPAGE_NOT_THIS.eyebrow}</p>
+          <h2 className="homepage-section-title">{HOMEPAGE_NOT_THIS.title}</h2>
+          <p className="homepage-section-body">{HOMEPAGE_NOT_THIS.body}</p>
+          <ul className="homepage-not-this-list">
+            {HOMEPAGE_NOT_THIS.items.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <p className="homepage-section-body homepage-section-body--emphasis">
+            {HOMEPAGE_NOT_THIS.closing}
+          </p>
+        </section>
 
         <section className="how-section">
           <p className="homepage-section-eyebrow">{HOMEPAGE_HOW.eyebrow}</p>
@@ -211,12 +239,21 @@ export default function HomePage() {
             <p className="homepage-section-body">{HOMEPAGE_FULL_REPORT_PREVIEW.body}</p>
             <ul className="homepage-preview-list">
               {HOMEPAGE_FULL_REPORT_PREVIEW.includes.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item.title}>
+                  <strong>{item.title}</strong>
+                  <span>{item.detail}</span>
+                </li>
               ))}
             </ul>
             <div className="homepage-preview-actions">
               <Link href={HOMEPAGE_FULL_REPORT_PREVIEW.waitlistHref} className="gold-button">
                 {HOMEPAGE_FULL_REPORT_PREVIEW.waitlistCta}
+              </Link>
+              <Link
+                href={HOMEPAGE_FULL_REPORT_PREVIEW.sampleHref}
+                className="hero-secondary-link"
+              >
+                {HOMEPAGE_FULL_REPORT_PREVIEW.sampleCta}
               </Link>
               <Link
                 href={HOMEPAGE_FULL_REPORT_PREVIEW.readingHref}

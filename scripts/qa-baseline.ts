@@ -7,6 +7,7 @@ import path from "node:path";
 import { get1320Content } from "../lib/get1320Content";
 import { buildReportViewModel } from "../lib/report/build-report-view-model";
 import { getSegmentCardImageUrl } from "../lib/segment-card-asset";
+import { getAdvancedModuleCardImageUrlFromCode } from "../lib/advanced-module-card-asset";
 
 const SAMPLE = { s1: 18, s3: 110, s2: 27, s0: 7 };
 const PUBLIC = path.join(process.cwd(), "public");
@@ -66,7 +67,22 @@ assert(getSegmentCardImageUrl("s2", 27) === "/S2-50/S2-27.webp", "S2 path");
 assert(fileExists("/S0-19/S0-07.webp"), "S0-19/S0-07.webp missing");
 assert(getSegmentCardImageUrl("s0", 7) === "/S0-19/S0-07.webp", "S0 path");
 assert(getSegmentCardImageUrl("s0", 0) === "/S0-19/S0-00.webp", "S0 zero path");
-console.log("  OK S1/S2/S3/S0 card paths");
+assert(fileExists("/S4-20/S4-14.webp"), "S4-20/S4-14.webp missing (sample S4-14)");
+assert(
+  getAdvancedModuleCardImageUrlFromCode("S4-14") === "/S4-20/S4-14.webp",
+  "S4 card path",
+);
+assert(fileExists("/S5-44/S5-14.webp"), "S5-44/S5-14.webp missing (sample S5-14)");
+assert(
+  getAdvancedModuleCardImageUrlFromCode("S5-14") === "/S5-44/S5-14.webp",
+  "S5 card path",
+);
+assert(fileExists("/S7-07/S7-00.webp"), "S7-07/S7-00.webp missing");
+assert(
+  getAdvancedModuleCardImageUrlFromCode("S7-03") === "/S7-07/S7-03.webp",
+  "S7 card path",
+);
+console.log("  OK S1/S2/S3/S0 + S4–S9 card paths");
 
 console.log("\n=== Report view model (sample full) ===");
 const content = get1320Content({ ...SAMPLE, locale: "en" });

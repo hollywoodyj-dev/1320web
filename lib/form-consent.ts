@@ -15,7 +15,7 @@ export const FORM_MESSAGES = {
   waitlistSuccess: "You are on the waitlist. We will reach out when the Full Soul Origin Report opens.",
   waitlistError: "Please complete all required fields and confirm your consent.",
   bookingSuccess:
-    "Your booking request has been received. We will follow up by email to coordinate your session.",
+    "Your session request has been received. We will follow up by email to coordinate your Personal Integration Session.",
   bookingError: "Please complete all required fields and confirm your consent.",
   emailSuccess: "Thanks. Your interest has been captured.",
 } as const;

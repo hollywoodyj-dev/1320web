@@ -152,7 +152,7 @@ export function FullReportV2Phase1Gallery() {
           <PageFooter
             items={[
               {
-                icon: "◇",
+                icon: "mirror",
                 content: (
                   <>
                     Use this report as a <strong>mirror for awareness</strong>, not as a fixed
@@ -161,11 +161,11 @@ export function FullReportV2Phase1Gallery() {
                 ),
               },
               {
-                icon: "✦",
+                icon: "infinity",
                 content: "You are more than any pattern.",
               },
               {
-                icon: "♡",
+                icon: "heart",
                 content: "Thank you for choosing self-awareness.",
               },
             ]}

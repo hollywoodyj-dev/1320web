@@ -67,6 +67,44 @@ export type FullReportV2IntegratedBlueprint = {
   integration_theme?: string;
   embodiment_practice?: string;
   reflection_questions?: string[];
+  combination_signature?: string;
+  archetype_title?: string;
+  archetype_summary?: string;
+  gift_1?: string;
+  gift_2?: string;
+  gift_3?: string;
+  gift_4?: string;
+  s1_expression?: string;
+  s2_expression?: string;
+  s3_expression?: string;
+  s0_expression?: string;
+  synergy_essence_vibration?: string;
+  synergy_mirror_vibration?: string;
+  synergy_essence_mirror?: string;
+  synergy_void_all?: string;
+  flow_1_title?: string;
+  flow_1_copy?: string;
+  flow_2_title?: string;
+  flow_2_copy?: string;
+  flow_3_title?: string;
+  flow_3_copy?: string;
+  flow_4_title?: string;
+  flow_4_copy?: string;
+  integration_guidance?: string;
+  final_remembrance?: string;
+};
+
+export type FullReportV2IntegratedAction = {
+  flow_summary?: string;
+  s1_life_expression?: string;
+  s3_life_expression?: string;
+  s2_life_expression?: string;
+  s0_life_expression?: string;
+  s1_daily_action?: string;
+  s3_daily_action?: string;
+  s2_daily_action?: string;
+  s0_daily_action?: string;
+  affirmation?: string;
 };
 
 export type FullReportV2PracticeDay = {
@@ -78,6 +116,35 @@ export type FullReportV2PracticeDay = {
 
 export type FullReportV2IntegrationPractice = {
   days: FullReportV2PracticeDay[];
+};
+
+export type FullReportV2ReflectionJournal = {
+  prompt?: string;
+  placeholder?: string;
+  quote?: string;
+};
+
+export type FullReportV2ClosingReflection = {
+  subtitle?: string;
+  message?: string;
+  reminder_1_title?: string;
+  reminder_1_copy?: string;
+  reminder_2_title?: string;
+  reminder_2_copy?: string;
+  reminder_3_title?: string;
+  reminder_3_copy?: string;
+  reminder_4_title?: string;
+  reminder_4_copy?: string;
+  reminder_5_title?: string;
+  reminder_5_copy?: string;
+  quote?: string;
+  thank_you_message?: string;
+};
+
+export type FullReportV2FinalDisclaimer = {
+  hero_note?: string;
+  remember_copy?: string;
+  thank_you_line?: string;
 };
 
 export type FullReportV2CTAs = {
@@ -104,7 +171,11 @@ export type FullReportV2Payload = {
     s9: FullReportV2ModuleSlot;
   };
   integrated_blueprint: FullReportV2IntegratedBlueprint;
+  integrated_action?: FullReportV2IntegratedAction;
   integration_practice: FullReportV2IntegrationPractice;
+  reflection_journal?: FullReportV2ReflectionJournal;
+  closing_reflection?: FullReportV2ClosingReflection;
+  final_disclaimer?: FullReportV2FinalDisclaimer;
   ctas: FullReportV2CTAs;
 };
 

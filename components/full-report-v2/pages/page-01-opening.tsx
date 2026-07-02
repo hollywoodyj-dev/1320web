@@ -1,6 +1,7 @@
 import { GlassPanel } from "@/components/full-report-v2/glass-panel";
 import { PageFooter } from "@/components/full-report-v2/page-footer";
 import { PageHeader } from "@/components/full-report-v2/page-header";
+import { ReportGlyph } from "@/components/full-report-v2/report-glyph";
 import { ReportPage } from "@/components/full-report-v2/report-page";
 import {
   OPENING_FOOTER_ITEMS,
@@ -43,7 +44,9 @@ export function Page01Opening() {
               <ul className="fr-v2-use-list">
                 {OPENING_HOW_TO_USE.map((item) => (
                   <li key={item.title} className="fr-v2-use-item">
-                    <div className="fr-v2-round-icon">{item.icon}</div>
+                    <div className="fr-v2-round-icon">
+                      <ReportGlyph name={item.icon} />
+                    </div>
                     <div>
                       <div className="fr-v2-use-title">{item.title}</div>
                       <div className="fr-v2-use-desc">{item.description}</div>
@@ -68,7 +71,9 @@ export function Page01Opening() {
             <div>
               {OPENING_GUIDANCE_ROWS.map((row) => (
                 <div key={row.title} className="fr-v2-guidance-row">
-                  <div className="fr-v2-guidance-icon">{row.icon}</div>
+                  <div className="fr-v2-guidance-icon">
+                    <ReportGlyph name={row.icon} />
+                  </div>
                   <div className="fr-v2-guidance-title">
                     {row.title.split("\n").map((line, i) => (
                       <span key={i}>
@@ -88,7 +93,9 @@ export function Page01Opening() {
             <ul className="fr-v2-not-list">
               {OPENING_NOT_LIST.map((item) => (
                 <li key={item.text} className="fr-v2-not-item">
-                  <div className="fr-v2-not-icon">{item.icon}</div>
+                  <div className="fr-v2-not-icon">
+                    <ReportGlyph name={item.icon} />
+                  </div>
                   <div className="fr-v2-not-copy">{item.text}</div>
                 </li>
               ))}
@@ -96,7 +103,9 @@ export function Page01Opening() {
           </GlassPanel>
 
           <GlassPanel className="fr-v2-mini-card fr-v2-intention-card">
-            <div className="fr-v2-star-icon">✶</div>
+            <div className="fr-v2-star-icon">
+              <ReportGlyph name="compassStar" />
+            </div>
             <div>
               <div className="fr-v2-mini-card-title">Core Intention</div>
               <div className="fr-v2-mini-card-copy">
@@ -115,7 +124,9 @@ export function Page01Opening() {
                 awareness — the power is always yours.
               </div>
             </div>
-            <div className="fr-v2-human-orbit">♙</div>
+            <div className="fr-v2-human-orbit">
+              <ReportGlyph name="figure" />
+            </div>
           </GlassPanel>
         </section>
 

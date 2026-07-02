@@ -1,6 +1,15 @@
 import { calculate1320Code } from "@/lib/calculate1320Code";
-import { get1320Content } from "@/lib/get1320Content";
+import { buildGet1320ContentResultV2 } from "@/lib/1320-v2/build-get1320-content-result";
+import { buildSynthesisLayerInput } from "@/lib/build-synthesis-input";
+import { buildIntegratedBlueprintPageSlot } from "@/lib/full-report-v2/build-integrated-blueprint-page";
+import { enrichModuleFromSegment } from "@/lib/full-report-v2/enrich-module-slot";
 import { buildCalculationOutput } from "@/lib/full-report-v2/build-calculation-output";
+import {
+  MOBILE_INTEGRATED_PATTERN_ACTION_AFFIRMATION_FALLBACK,
+  MOBILE_INTEGRATED_PATTERN_ACTION_DAILY_FALLBACKS,
+  MOBILE_INTEGRATED_PATTERN_ACTION_FLOW_SUMMARY_FALLBACK,
+  MOBILE_INTEGRATED_PATTERN_ACTION_LIFE_FALLBACKS,
+} from "@/lib/mobile-report-v2/integrated-pattern-action-page-static";
 import {
   FULL_REPORT_V2_THEME_VERSION,
   FULL_REPORT_V2_VERSION,
@@ -44,7 +53,7 @@ export function buildSampleFullReportV2Payload(
   const codes = calculate1320Code(year, month, day);
   const locale = input.language === "zh" ? "zh" : "en";
 
-  const content = get1320Content(
+  const content = buildGet1320ContentResultV2(
     {
       s1: codes.s1,
       s3: codes.s3Raw,
@@ -70,16 +79,16 @@ export function buildSampleFullReportV2Payload(
     segment: typeof content.s1Content | null | undefined,
     code: string,
     extra?: Record<string, unknown>,
-  ) => {
-    if (!segment) return { code, ...extra };
-    return {
-      code,
-      segmentCode: segment.segmentCode ?? code,
-      title: segment.title.en,
-      subtitle: segment.subtitle.en,
-      ...extra,
-    };
-  };
+  ) => enrichModuleFromSegment(segment, code, extra);
+
+  const synthesisInput = buildSynthesisLayerInput(content, {}, {
+    birthDate: input.birth_date,
+    locale,
+  });
+  const integratedBlueprint =
+    content.integratedSoulBlueprint
+      ? buildIntegratedBlueprintPageSlot(content, content.integratedSoulBlueprint, synthesisInput)
+      : {};
 
   return {
     client: {
@@ -109,14 +118,33 @@ export function buildSampleFullReportV2Payload(
         raw: codes.s3Raw,
         s3Code: codes.s3Code,
       }),
-      s4: moduleSlot(content.s4Content, codes.s4Code),
+      s4: moduleSlot(content.s4Content, codes.s4Code, {
+        pattern_intensity: {
+          relationships: 5,
+          daily_choices: 4,
+          emotional_repetition: 5,
+          energy_wellbeing: 4,
+        },
+      }),
       s5: moduleSlot(content.s5Content, codes.s5Code),
       s6: moduleSlot(content.s6Content, codes.s6Code),
       s7: moduleSlot(content.s7Content ?? null, codes.s7Code),
       s8: moduleSlot(content.s8Content ?? null, codes.s8Code),
       s9: moduleSlot(content.s9Content ?? null, codes.s9Code),
     },
-    integrated_blueprint: {},
+    integrated_blueprint: integratedBlueprint,
+    integrated_action: {
+      flow_summary: MOBILE_INTEGRATED_PATTERN_ACTION_FLOW_SUMMARY_FALLBACK,
+      s1_life_expression: MOBILE_INTEGRATED_PATTERN_ACTION_LIFE_FALLBACKS.s1,
+      s3_life_expression: MOBILE_INTEGRATED_PATTERN_ACTION_LIFE_FALLBACKS.s3,
+      s2_life_expression: MOBILE_INTEGRATED_PATTERN_ACTION_LIFE_FALLBACKS.s2,
+      s0_life_expression: MOBILE_INTEGRATED_PATTERN_ACTION_LIFE_FALLBACKS.s0,
+      s1_daily_action: MOBILE_INTEGRATED_PATTERN_ACTION_DAILY_FALLBACKS.s1,
+      s3_daily_action: MOBILE_INTEGRATED_PATTERN_ACTION_DAILY_FALLBACKS.s3,
+      s2_daily_action: MOBILE_INTEGRATED_PATTERN_ACTION_DAILY_FALLBACKS.s2,
+      s0_daily_action: MOBILE_INTEGRATED_PATTERN_ACTION_DAILY_FALLBACKS.s0,
+      affirmation: MOBILE_INTEGRATED_PATTERN_ACTION_AFFIRMATION_FALLBACK,
+    },
     integration_practice: { days: [] },
     ctas: {
       primary: "Book a Personal 1320 Reading",

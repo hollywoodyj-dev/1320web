@@ -22,3 +22,5 @@ export { FullReportV2Viewer } from "@/components/full-report-v2/full-report-v2-v
 export { Page00Cover } from "@/components/full-report-v2/pages/page-00-cover";
 export { Page01Opening } from "@/components/full-report-v2/pages/page-01-opening";
 export { Page02Dimensions } from "@/components/full-report-v2/pages/page-02-dimensions";
+export { Page03Signature } from "@/components/full-report-v2/pages/page-03-signature";
+export { Page04S1 } from "@/components/full-report-v2/pages/page-04-s1";

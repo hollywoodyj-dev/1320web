@@ -12,7 +12,7 @@ export const FULL_REPORT_PAGE_REGISTRY: FullReportPageDef[] = [
   { index: 0, id: "page-00-cover", label: "00 Cover" },
   { index: 1, id: "page-01-opening", label: "01 Opening" },
   { index: 2, id: "page-02-dimensions", label: "02 Dimensions" },
-  { index: 3, id: "page-03-calculation", label: "03 Calculation" },
+  { index: 3, id: "page-03-signature", label: "03 Signature" },
   { index: 4, id: "page-04-s1", label: "04 S1" },
   { index: 5, id: "page-05-s3", label: "05 S3" },
   { index: 6, id: "page-06-s2", label: "06 S2" },

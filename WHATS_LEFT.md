@@ -50,6 +50,7 @@
 - [x] ~~**Marcellus + Inter** typography~~ **rolled back** — Geist + Georgia restored
 - [x] Homepage Full Report: gold waitlist CTA + demoted reading link
 - [x] Footer **SUBSCRIBE** hidden until leads persist (webhook today; DB in Phase 2A)
+- [ ] **Full Report v2 Page 04** — S1 influence progress bars are **not functional** (fixed 90/85/80/90% placeholders); amend when influence model is defined → `docs/specs/full-report/ui/UI_PAGE_04_S1_NOTES.md`
 - [ ] Wire **SAVE REPORT** / **EMAIL ME** on report header to lead capture (buttons exist; no action today)
 - [ ] ~~Webhook to Zapier/Make~~ → **Phase 2A:** product database for waitlist, booking, newsletter
 - [ ] Desktop pass on all routes (mobile funnel is done)
@@ -127,7 +128,7 @@ Free Soul Code → Paid Full Report (one-time) → Magic-link return → Optiona
 | `IMPLEMENTATION_BATCHES.md` | Phase 1 batch checklist (needs checkbox sync) |
 | `PHASE1_HANDOFF.md` | Full 15-doc handoff + architecture (status table stale) |
 | `README.md` | Dev, deploy, env, smoke commands |
-| `.env.example` | Production env template |
+| `docs/specs/full-report/ui/UI_PAGE_04_S1_NOTES.md` | Page 04 S1 — influence bars not functional (placeholder UI) |
 
 ---
 

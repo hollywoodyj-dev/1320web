@@ -51,11 +51,22 @@ function discoverPngInDir(dirRel: string, quality: number): { rel: string; quali
     .map((name) => ({ rel: `${dirRel}/${name}`, quality }));
 }
 
+const ADVANCED_MODULE_CARD_DIRS = ["S4-20", "S5-44", "S6-44", "S7-07", "S8-08", "S9-09"];
+
 function allWebpTargets(): { rel: string; quality: number }[] {
   return [
     ...WEBP_TARGETS,
     ...discoverPngInDir("S2-50", 88),
     ...discoverPngInDir("S0-19", 88),
+    ...ADVANCED_MODULE_CARD_DIRS.flatMap((dir) => discoverPngInDir(dir, 88)),
+    ...discoverPngInDir("full-report-v2/s5-mission-map-logos", 88),
+    ...discoverPngInDir("full-report-v2/s6-receiving-map-logos", 88),
+    ...discoverPngInDir("full-report-v2/s7-sovereignty-map-logos", 88),
+    ...discoverPngInDir("full-report-v2/s8-contribution-map-logos", 88),
+    ...discoverPngInDir("full-report-v2/s9-return-map-logos", 88),
+    ...discoverPngInDir("full-report-v2/closing-integration-seal-logos", 88),
+    ...discoverPngInDir("full-report-v2/disclaimer-seal-logos", 88),
+    { rel: "full-report-v2/soul-code-closing-reflection-background-lotus-ring-smaller-gpt-v1.png", quality: 88 },
   ];
 }
 

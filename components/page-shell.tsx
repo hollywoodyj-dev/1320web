@@ -12,23 +12,51 @@ type PageShellProps = {
   leadsEnabled?: boolean;
 };
 
-function isFullReportRoute(pathname: string | null): boolean {
+function isImmersiveReportRoute(pathname: string | null): boolean {
   if (!pathname) return false;
-  if (pathname === "/sample-report" || pathname === "/sample-report-v2") return true;
+  if (
+    pathname === "/sample-report" ||
+    pathname === "/sample-report-v2" ||
+    pathname === "/full-report-v2" ||
+    pathname === "/full-report-v2-phase1" ||
+    pathname === "/mobile-report-v2"
+  ) {
+    return true;
+  }
   return /^\/my-report\/[^/]+$/.test(pathname);
+}
+
+function isMobileReportRoute(pathname: string | null): boolean {
+  return pathname === "/mobile-report-v2";
 }
 
 /** Cosmic layout for inner routes — homepage keeps its own shell in `app/page.tsx`. */
 export function PageShell({ children, leadsEnabled }: PageShellProps) {
   const pathname = usePathname();
-  const fullReport = isFullReportRoute(pathname);
+  const immersive = isImmersiveReportRoute(pathname);
+  const mobileReport = isMobileReportRoute(pathname);
 
-  if (fullReport) {
+  if (immersive) {
     return (
-      <main className="page-shell page-shell-inner page-shell--full-report">
-        <SkipLink />
-        <div className="page-frame page-frame--full-report">
-          <div id="main-content" className="inner-main inner-main--full-report" tabIndex={-1}>
+      <main
+        className={[
+          "page-shell",
+          "page-shell-inner",
+          mobileReport ? "page-shell--mobile-report" : "page-shell--full-report",
+        ].join(" ")}
+      >
+        {!mobileReport ? <SkipLink /> : null}
+        <div
+          className={[
+            "page-frame",
+            mobileReport ? "page-frame--mobile-report" : "page-frame--full-report",
+          ].join(" ")}
+        >
+          <div
+            id="main-content"
+            className={mobileReport ? "" : "inner-main inner-main--full-report"}
+            tabIndex={-1}
+          >
             {children}
           </div>
         </div>

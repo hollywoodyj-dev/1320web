@@ -10,6 +10,10 @@ import type { IntegratedSummarySection } from "@/components/report/integrated-su
 import type { SoulMissionSection } from "@/lib/types/s5-soul-mission";
 import { buildOverviewEssence, truncateOverview } from "@/lib/report/overview-essence";
 import {
+  coreIllusionMechanismField,
+  relationshipTriggerPatternField,
+} from "@/lib/report/format-depth-fields";
+import {
   REFLECTION_JOURNAL_PROMPTS,
   REPORT_FINAL_CTA,
   SAMPLE_REPORT_META,
@@ -66,6 +70,7 @@ export type ReportViewModel = {
   journalPrompts: string[];
   practices: ReturnType<typeof generateIntegrationPractices>;
   finalCta: typeof REPORT_FINAL_CTA;
+  birthDateLabel?: string;
   debug?: ReportDebugInfo;
 };
 
@@ -182,7 +187,7 @@ function buildS3Fields(
   const all = [
     field(locale, "Vibration Archetype", segment.title),
     field(locale, "Vibration Essence", segment.fullEssence ?? segment.freeEssence),
-    field(locale, "Raw Value", { en: String(s3Raw), zh: String(s3Raw) }),
+    field(locale, "Expression Index", { en: String(s3Raw), zh: String(s3Raw) }),
     field(locale, "Soul Traits", segment.vibrationTraits),
     field(locale, "Strengths", segment.strengthSummary),
     field(locale, "Challenges", segment.challenges),
@@ -212,6 +217,13 @@ function buildS2Fields(
     field(locale, "Wisewave Guidance", segment.guidance),
   ].filter((f): f is ReportField => Boolean(f));
 
+  if (mode === "full") {
+    const triggerPattern = relationshipTriggerPatternField(locale, segment);
+    if (triggerPattern) {
+      all.push({ label: triggerPattern.label, value: triggerPattern.value });
+    }
+  }
+
   return polishReportFields(all, { archetype });
 }
 
@@ -232,6 +244,13 @@ function buildS0Fields(
     field(locale, "One-Week Practice", segment.practice),
     field(locale, "Wisewave Guidance", segment.guidance),
   ].filter((f): f is ReportField => Boolean(f));
+
+  if (mode === "full") {
+    const illusionMechanism = coreIllusionMechanismField(locale, segment);
+    if (illusionMechanism) {
+      all.push({ label: illusionMechanism.label, value: illusionMechanism.value });
+    }
+  }
 
   return polishReportFields(all, { archetype });
 }
@@ -348,7 +367,7 @@ export function buildReportViewModel(
       segmentId: id,
       code,
       title: meta.title.en,
-      shortLabel: meta.shortLabel.en,
+      shortLabel: id === "s2" ? "Relationship Mirror" : meta.shortLabel.en,
       essence:
         mode === "free"
           ? buildOverviewEssence(id, seg, locale)
@@ -367,7 +386,7 @@ export function buildReportViewModel(
       segmentId: id,
       codeLabel: segmentCodeLabel(content, id),
       archetype,
-      shortLabel: pickLocalized(seg.shortLabel, locale),
+      shortLabel: id === "s2" ? "Relationship Mirror" : pickLocalized(seg.shortLabel, locale),
       cardImageUrl: getSegmentCardImageUrl(id, codeNum),
       fields: buildModuleFields(id, seg, locale, mode, archetype, content.codes.s3Raw),
       reflectionQuestion: reflection || undefined,
@@ -417,6 +436,7 @@ export function buildReportViewModel(
     journalPrompts,
     practices: practicesResolved,
     finalCta: REPORT_FINAL_CTA,
+    birthDateLabel: options.birthDateLabel,
     debug,
   };
 }

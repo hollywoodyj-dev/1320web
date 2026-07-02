@@ -9,6 +9,7 @@ import {
   BOOKING_DISCLAIMER,
   BOOKING_FINAL,
   BOOKING_FAQ,
+  BOOKING_FORM_SECTION,
   BOOKING_HERO,
   BOOKING_META,
   BOOKING_WHO_FOR,
@@ -54,13 +55,13 @@ export default async function BookingPage({
         <p className="conversion-boundary">{BOOKING_HERO.boundary}</p>
         <div className="blueprint-hero-actions">
           <a href="#booking-form" className="gold-button">
-            BOOK A READING
+            {BOOKING_FINAL.cta}
           </a>
           <Link href={GENERATE_CODE_CTA.href} className="blueprint-secondary-link">
             GENERATE MY CODE FIRST
           </Link>
           <Link href="/full-report" className="blueprint-secondary-link">
-            JOIN FULL REPORT WAITLIST
+            EXPLORE FULL REPORT
           </Link>
         </div>
       </header>
@@ -133,7 +134,7 @@ export default async function BookingPage({
         </ul>
       </SectionCard>
 
-      <SectionCard title="Request a Booking" id="booking-form">
+      <SectionCard title={BOOKING_FORM_SECTION.title} id="booking-form">
         <BookingRequestForm defaultReadingType={defaultReadingType} />
       </SectionCard>
 
@@ -165,7 +166,7 @@ export default async function BookingPage({
         <h2>{BOOKING_FINAL.title}</h2>
         <p>{BOOKING_FINAL.body}</p>
         <a href="#booking-form" className="gold-button">
-          REQUEST BOOKING
+          {BOOKING_FINAL.cta}
         </a>
         <Link href="/sample-report" className="blueprint-secondary-link block mt-3">
           VIEW SAMPLE REPORT

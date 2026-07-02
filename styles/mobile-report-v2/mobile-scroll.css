@@ -1,0 +1,71 @@
+/* Mobile Report v2 — horizontal page swipe + vertical scroll within long pages */
+
+.mobile-report-v2-root {
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Horizontal track: swipe left → next page, swipe right → previous page */
+.mr-v2-page-track {
+  --mr-v2-viewport: 100dvh;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+
+.mr-v2-page-track::-webkit-scrollbar {
+  display: none;
+}
+
+.mr-v2-page-panel {
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: 100%;
+  min-height: var(--mr-v2-viewport);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.mr-v2-page-panel-inner {
+  width: 100%;
+  height: 100%;
+  min-height: var(--mr-v2-viewport);
+}
+
+.mr-v2-page-panel-inner--scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+  background: #020712;
+}
+
+/* Cover — fixed one-screen layout */
+.mr-v2-page-panel-inner .mr-v2-screen:not(.mr-v2-screen--opening):not(.mr-v2-screen--disclaimer):not(.mr-v2-screen--signature):not(.mr-v2-screen--code-map):not(.mr-v2-screen--how-to-read):not(.mr-v2-screen--s1-reveal):not(.mr-v2-screen--s1-essence):not(.mr-v2-screen--s3-reveal):not(.mr-v2-screen--s3-expression):not(.mr-v2-screen--s2-reveal):not(.mr-v2-screen--s2-mirror-lesson):not(.mr-v2-screen--s0-reveal):not(.mr-v2-screen--s0-void-integration):not(.mr-v2-screen--integrated-blueprint):not(.mr-v2-screen--integrated-pattern-action):not(.mr-v2-screen--s4-shadow-reveal):not(.mr-v2-screen--s4-shadow-loop-growth-edge):not(.mr-v2-screen--s5-soul-mission-reveal):not(.mr-v2-screen--s5-mission-pathway-icon):not(.mr-v2-screen--s6-value-receiving-reveal):not(.mr-v2-screen--s6-receiving-pattern-map):not(.mr-v2-screen--s7-soul-sovereignty-reveal):not(.mr-v2-screen--s7-sovereignty-alignment-map):not(.mr-v2-screen--s8-soul-contribution-reveal):not(.mr-v2-screen--s8-contribution-pathway):not(.mr-v2-screen--s9-return-to-source-reveal):not(.mr-v2-screen--s9-return-pathway-remembrance):not(.mr-v2-screen--7-day-integration-practice-overview):not(.mr-v2-screen--7-day-practice-cards):not(.mr-v2-screen--reflection-journal):not(.mr-v2-screen--closing-reflection):not(.mr-v2-screen--final-disclaimer) {
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+}
+
+/* Flow pages — grow inside vertical scroll panel */
+.mr-v2-page-panel-inner--scroll .mr-v2-screen {
+  height: auto;
+  max-height: none;
+  min-height: var(--mr-v2-viewport);
+  overflow: visible;
+}

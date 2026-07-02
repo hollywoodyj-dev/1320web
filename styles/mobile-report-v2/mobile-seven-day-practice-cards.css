@@ -1,0 +1,555 @@
+/* Mobile Page 29 — 7-Day Practice Cards */
+
+.mr-v2-screen.mr-v2-screen--7-day-practice-cards {
+  height: auto;
+  max-height: none;
+  min-height: var(--mr-v2-viewport, 100dvh);
+  overflow: visible;
+  --mr-v2-7dpc-blue: #70c8ff;
+  --mr-v2-7dpc-cyan: #8ee8ff;
+  --mr-v2-7dpc-green: #c7f45f;
+  --mr-v2-7dpc-violet: #c783ff;
+  --mr-v2-7dpc-pink: #ff9de8;
+  --mr-v2-7dpc-lavender: #d9c7ff;
+  --mr-v2-7dpc-purple: #d991ff;
+}
+
+.mr-v2-screen.mr-v2-screen--7-day-practice-cards .mr-v2-cosmic-lines {
+  opacity: 0.25;
+  background:
+    radial-gradient(
+      circle at 50% 42%,
+      transparent 0 96px,
+      rgba(244, 216, 138, 0.2) 97px 98px,
+      transparent 99px 164px,
+      rgba(199, 131, 255, 0.13) 165px 166px,
+      transparent 167px
+    ),
+    radial-gradient(circle at 50% 48%, transparent 0 42px, rgba(244, 216, 138, 0.2) 43px 44px, transparent 45px),
+    linear-gradient(28deg, transparent 0 49%, rgba(214, 181, 109, 0.1) 50%, transparent 51%),
+    linear-gradient(142deg, transparent 0 49%, rgba(112, 200, 255, 0.09) 50%, transparent 51%);
+}
+
+.mr-v2-7dpc-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.mr-v2-7dpc-kicker {
+  color: var(--mr-v2-7dpc-purple);
+  font-size: clamp(11px, 3vw, 12.5px);
+  letter-spacing: 0.22em;
+  margin-bottom: 14px;
+  text-shadow: 0 0 16px rgba(217, 145, 255, 0.24);
+}
+
+.mr-v2-7dpc-kicker::before,
+.mr-v2-7dpc-kicker::after {
+  background: linear-gradient(90deg, transparent, rgba(217, 145, 255, 0.72));
+}
+
+/* HERO */
+
+.mr-v2-7dpc-hero {
+  text-align: center;
+  margin-bottom: 18px;
+  flex-shrink: 0;
+}
+
+.mr-v2-7dpc-hero-title {
+  margin: 0;
+  color: var(--mr-v2-text-main);
+  font-family: var(--mr-v2-font-display);
+  font-size: clamp(40px, 11vw, 56px);
+  line-height: 0.96;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-shadow:
+    0 0 24px rgba(214, 181, 109, 0.2),
+    0 2px 0 rgba(0, 0, 0, 0.28);
+}
+
+.mr-v2-7dpc-hero-title-gold {
+  display: block;
+  color: var(--mr-v2-gold-bright);
+  font-size: 1.05em;
+  margin-top: 4px;
+  text-shadow: 0 0 28px rgba(244, 216, 138, 0.22);
+}
+
+.mr-v2-7dpc-hero-subtitle {
+  margin: 16px auto 0;
+  max-width: 352px;
+  color: var(--mr-v2-text-main);
+  font-family: var(--mr-v2-font-display);
+  font-size: clamp(17px, 4.8vw, 20px);
+  line-height: 1.34;
+  letter-spacing: 0.01em;
+}
+
+/* COMMON CARD */
+
+.mr-v2-7dpc-glass-card {
+  border: 1px solid rgba(214, 181, 109, 0.46);
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015)),
+    radial-gradient(circle at 50% 0%, rgba(244, 216, 138, 0.1), transparent 38%),
+    rgba(5, 14, 27, 0.72);
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.3),
+    inset 0 0 18px rgba(255, 255, 255, 0.025),
+    0 0 18px rgba(214, 181, 109, 0.08);
+  backdrop-filter: blur(14px);
+  flex-shrink: 0;
+  margin-bottom: 14px;
+}
+
+/* INTRO */
+
+.mr-v2-7dpc-intro-card {
+  padding: 20px 16px;
+  display: grid;
+  grid-template-columns: 74px 1fr;
+  gap: 16px;
+  align-items: center;
+  border-color: rgba(244, 216, 138, 0.5);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015)),
+    radial-gradient(circle at 18% 50%, rgba(244, 216, 138, 0.18), transparent 38%),
+    radial-gradient(circle at 100% 40%, rgba(199, 131, 255, 0.16), transparent 42%),
+    rgba(5, 14, 27, 0.72);
+}
+
+.mr-v2-7dpc-intro-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid rgba(244, 216, 138, 0.56);
+  color: var(--mr-v2-gold-bright);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  flex-shrink: 0;
+  background:
+    radial-gradient(circle at center, rgba(244, 216, 138, 0.2), transparent 58%),
+    rgba(5, 14, 27, 0.74);
+  box-shadow: 0 0 22px rgba(244, 216, 138, 0.18);
+}
+
+.mr-v2-7dpc-intro-title {
+  color: var(--mr-v2-gold-bright);
+  font-family: var(--mr-v2-font-display);
+  font-size: clamp(20px, 5.6vw, 24px);
+  line-height: 1.1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.mr-v2-7dpc-intro-copy {
+  color: var(--mr-v2-text-main);
+  font-size: clamp(14px, 4vw, 15.2px);
+  line-height: 1.46;
+}
+
+.mr-v2-7dpc-intro-copy strong {
+  color: var(--mr-v2-gold-bright);
+  font-weight: 600;
+}
+
+/* PRACTICE CARDS */
+
+.mr-v2-7dpc-practice-card {
+  padding: 18px 16px;
+  margin-bottom: 14px;
+  border-radius: 22px;
+  border: 1px solid rgba(214, 181, 109, 0.42);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015)),
+    rgba(5, 14, 27, 0.74);
+  box-shadow:
+    0 16px 44px rgba(0, 0, 0, 0.3),
+    inset 0 0 18px rgba(255, 255, 255, 0.025);
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 15px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.mr-v2-7dpc-practice-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 16% 50%, rgba(244, 216, 138, 0.14), transparent 38%);
+  pointer-events: none;
+}
+
+.mr-v2-7dpc-practice-card--blue {
+  border-color: rgba(112, 200, 255, 0.48);
+}
+
+.mr-v2-7dpc-practice-card--blue::before {
+  background: radial-gradient(circle at 16% 50%, rgba(112, 200, 255, 0.16), transparent 38%);
+}
+
+.mr-v2-7dpc-practice-card--violet {
+  border-color: rgba(199, 131, 255, 0.48);
+}
+
+.mr-v2-7dpc-practice-card--violet::before {
+  background: radial-gradient(circle at 16% 50%, rgba(199, 131, 255, 0.17), transparent 38%);
+}
+
+.mr-v2-7dpc-practice-card--pink {
+  border-color: rgba(255, 157, 232, 0.48);
+}
+
+.mr-v2-7dpc-practice-card--pink::before {
+  background: radial-gradient(circle at 16% 50%, rgba(255, 157, 232, 0.16), transparent 38%);
+}
+
+.mr-v2-7dpc-practice-card--purple {
+  border-color: rgba(217, 145, 255, 0.48);
+}
+
+.mr-v2-7dpc-practice-card--purple::before {
+  background: radial-gradient(circle at 16% 50%, rgba(217, 145, 255, 0.17), transparent 38%);
+}
+
+.mr-v2-7dpc-practice-card--cyan {
+  border-color: rgba(142, 232, 255, 0.48);
+}
+
+.mr-v2-7dpc-practice-card--cyan::before {
+  background: radial-gradient(circle at 16% 50%, rgba(142, 232, 255, 0.16), transparent 38%);
+}
+
+.mr-v2-7dpc-practice-card--lavender {
+  border-color: rgba(217, 199, 255, 0.48);
+}
+
+.mr-v2-7dpc-practice-card--lavender::before {
+  background: radial-gradient(circle at 16% 50%, rgba(217, 199, 255, 0.17), transparent 38%);
+}
+
+.mr-v2-7dpc-practice-orb,
+.mr-v2-7dpc-practice-body,
+.mr-v2-7dpc-open-arrow {
+  position: relative;
+  z-index: 2;
+}
+
+.mr-v2-7dpc-practice-orb {
+  width: 68px;
+  min-height: 68px;
+  border-radius: 50%;
+  border: 1px solid rgba(244, 216, 138, 0.58);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background:
+    radial-gradient(circle at center, rgba(244, 216, 138, 0.2), transparent 58%),
+    rgba(5, 14, 27, 0.76);
+  box-shadow: 0 0 22px rgba(244, 216, 138, 0.18);
+}
+
+.mr-v2-7dpc-practice-orb--multi {
+  width: auto;
+  min-width: 68px;
+  padding: 6px 8px;
+  gap: 6px;
+  border-radius: 999px;
+}
+
+.mr-v2-7dpc-practice-orb .fr-v2-signature-code-icon {
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgba(244, 216, 138, 0.48);
+  border-radius: 50%;
+  background: rgba(5, 14, 27, 0.76);
+  box-shadow: 0 0 14px rgba(244, 216, 138, 0.12);
+  overflow: hidden;
+}
+
+.mr-v2-7dpc-practice-orb--multi .fr-v2-signature-code-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.mr-v2-7dpc-practice-orb .fr-v2-signature-code-img {
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.mr-v2-7dpc-practice-card--blue .mr-v2-7dpc-practice-orb {
+  border-color: rgba(112, 200, 255, 0.58);
+  background:
+    radial-gradient(circle at center, rgba(112, 200, 255, 0.2), transparent 58%),
+    rgba(5, 14, 27, 0.76);
+}
+
+.mr-v2-7dpc-practice-card--blue .mr-v2-7dpc-practice-orb .fr-v2-signature-code-icon {
+  border-color: rgba(112, 200, 255, 0.48);
+  box-shadow: 0 0 14px rgba(112, 200, 255, 0.12);
+}
+
+.mr-v2-7dpc-practice-card--violet .mr-v2-7dpc-practice-orb {
+  color: var(--mr-v2-7dpc-violet);
+  border-color: rgba(199, 131, 255, 0.58);
+  background:
+    radial-gradient(circle at center, rgba(199, 131, 255, 0.2), transparent 58%),
+    rgba(5, 14, 27, 0.76);
+}
+
+.mr-v2-7dpc-practice-card--pink .mr-v2-7dpc-practice-orb {
+  color: var(--mr-v2-7dpc-pink);
+  border-color: rgba(255, 157, 232, 0.58);
+  background:
+    radial-gradient(circle at center, rgba(255, 157, 232, 0.2), transparent 58%),
+    rgba(5, 14, 27, 0.76);
+}
+
+.mr-v2-7dpc-practice-card--purple .mr-v2-7dpc-practice-orb {
+  color: var(--mr-v2-7dpc-purple);
+  border-color: rgba(217, 145, 255, 0.58);
+  background:
+    radial-gradient(circle at center, rgba(217, 145, 255, 0.2), transparent 58%),
+    rgba(5, 14, 27, 0.76);
+}
+
+.mr-v2-7dpc-practice-card--cyan .mr-v2-7dpc-practice-orb {
+  color: var(--mr-v2-7dpc-cyan);
+  border-color: rgba(142, 232, 255, 0.58);
+  background:
+    radial-gradient(circle at center, rgba(142, 232, 255, 0.2), transparent 58%),
+    rgba(5, 14, 27, 0.76);
+}
+
+.mr-v2-7dpc-practice-card--lavender .mr-v2-7dpc-practice-orb {
+  color: var(--mr-v2-7dpc-lavender);
+  border-color: rgba(217, 199, 255, 0.58);
+  background:
+    radial-gradient(circle at center, rgba(217, 199, 255, 0.2), transparent 58%),
+    rgba(5, 14, 27, 0.76);
+}
+
+.mr-v2-7dpc-day-label {
+  color: var(--mr-v2-gold-bright);
+  font-family: var(--mr-v2-font-display);
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.mr-v2-7dpc-practice-title {
+  color: var(--mr-v2-text-main);
+  font-family: var(--mr-v2-font-display);
+  font-size: clamp(22px, 6.4vw, 27px);
+  line-height: 1.05;
+  letter-spacing: 0.03em;
+  margin-bottom: 8px;
+}
+
+.mr-v2-7dpc-practice-copy {
+  color: var(--mr-v2-text-soft);
+  font-size: clamp(14px, 4vw, 15px);
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.mr-v2-7dpc-practice-focus,
+.mr-v2-7dpc-practice-reflection {
+  color: rgba(240, 236, 227, 0.82);
+  font-size: 13px;
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+
+.mr-v2-7dpc-practice-focus strong,
+.mr-v2-7dpc-practice-reflection strong {
+  color: var(--mr-v2-gold-bright);
+}
+
+.mr-v2-7dpc-practice-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.mr-v2-7dpc-code-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.mr-v2-7dpc-code-tag {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(244, 216, 138, 0.5);
+  background: rgba(5, 14, 27, 0.72);
+  color: var(--mr-v2-gold-bright);
+  font-family: var(--mr-v2-font-display);
+  font-size: clamp(16px, 4.4vw, 18px);
+  line-height: 1;
+  letter-spacing: 0.06em;
+  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.025);
+}
+
+.mr-v2-7dpc-code-tag--blue { color: var(--mr-v2-7dpc-blue); border-color: rgba(112, 200, 255, 0.52); }
+.mr-v2-7dpc-code-tag--green { color: var(--mr-v2-7dpc-green); border-color: rgba(199, 244, 95, 0.5); }
+.mr-v2-7dpc-code-tag--violet { color: var(--mr-v2-7dpc-violet); border-color: rgba(199, 131, 255, 0.52); }
+.mr-v2-7dpc-code-tag--pink { color: var(--mr-v2-7dpc-pink); border-color: rgba(255, 157, 232, 0.52); }
+.mr-v2-7dpc-code-tag--purple { color: var(--mr-v2-7dpc-purple); border-color: rgba(217, 145, 255, 0.52); }
+.mr-v2-7dpc-code-tag--cyan { color: var(--mr-v2-7dpc-cyan); border-color: rgba(142, 232, 255, 0.52); }
+.mr-v2-7dpc-code-tag--lavender { color: var(--mr-v2-7dpc-lavender); border-color: rgba(217, 199, 255, 0.52); }
+
+.mr-v2-7dpc-open-arrow {
+  color: var(--mr-v2-text-soft);
+  font-size: 28px;
+  line-height: 1;
+  opacity: 0.86;
+}
+
+/* CONSISTENCY */
+
+.mr-v2-7dpc-consistency-card {
+  padding: 22px 18px;
+  margin: 4px 0 14px;
+  text-align: center;
+  border-color: rgba(244, 216, 138, 0.5);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015)),
+    radial-gradient(circle at 50% 0%, rgba(244, 216, 138, 0.14), transparent 42%),
+    rgba(5, 14, 27, 0.72);
+}
+
+.mr-v2-7dpc-consistency-title {
+  color: var(--mr-v2-gold-bright);
+  font-family: var(--mr-v2-font-display);
+  font-size: clamp(19px, 5.4vw, 22px);
+  line-height: 1.1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.mr-v2-7dpc-consistency-copy {
+  color: var(--mr-v2-text-main);
+  font-size: clamp(14px, 4vw, 15.4px);
+  line-height: 1.42;
+}
+
+/* FOOTER MANTRA */
+
+.mr-v2-7dpc-bottom-mantra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+}
+
+.mr-v2-7dpc-bottom-mantra-divider-row {
+  display: grid;
+  grid-template-columns: 1fr 34px 1fr;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.mr-v2-7dpc-bottom-mantra-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(214, 181, 109, 0.65));
+}
+
+.mr-v2-7dpc-bottom-mantra-line--reverse {
+  transform: rotate(180deg);
+}
+
+.mr-v2-7dpc-bottom-mantra-logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgba(214, 181, 109, 0.42);
+  box-shadow: 0 0 14px rgba(214, 181, 109, 0.16);
+}
+
+.mr-v2-7dpc-bottom-mantra-copy {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin: 0;
+  color: var(--mr-v2-gold-bright);
+  font-size: clamp(9.5px, 2.8vw, 11.5px);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.35;
+}
+
+.mr-v2-7dpc-bottom-mantra-star {
+  font-size: 11px;
+  line-height: 1;
+}
+
+@media (max-width: 390px) {
+  .mr-v2-7dpc-hero-title {
+    font-size: 39px;
+  }
+
+  .mr-v2-7dpc-hero-subtitle {
+    font-size: 17px;
+  }
+
+  .mr-v2-7dpc-intro-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .mr-v2-7dpc-intro-icon {
+    margin: 0 auto;
+  }
+
+  .mr-v2-7dpc-practice-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .mr-v2-7dpc-practice-orb {
+    margin: 0 auto;
+  }
+
+  .mr-v2-7dpc-practice-row {
+    justify-content: center;
+  }
+
+  .mr-v2-7dpc-code-tags {
+    justify-content: center;
+  }
+
+  .mr-v2-7dpc-open-arrow {
+    display: none;
+  }
+
+  .mr-v2-7dpc-bottom-mantra-copy {
+    font-size: 9px;
+    gap: 6px;
+  }
+}

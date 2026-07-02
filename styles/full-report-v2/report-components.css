@@ -443,6 +443,22 @@
   font-size: 20px;
   color: var(--fr-v2-gold-bright);
   margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fr-v2-module-node__glyph {
+  width: 1.45em;
+  height: 1.45em;
+  display: block;
+  filter: drop-shadow(0 0 6px rgba(214, 181, 109, 0.35));
+}
+
+.fr-v2-glyph {
+  width: 1.25em;
+  height: 1.25em;
+  display: block;
 }
 
 .fr-v2-module-node__code {

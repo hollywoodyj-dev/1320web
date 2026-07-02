@@ -1,4 +1,4 @@
-/** Homepage copy — brand-led Soul Code default (Wisewave SEO spec). */
+/** Homepage copy — recognition-first, conversion-oriented (Wisewave Phase 1 addendum). */
 
 import { SEGMENTS } from "@/lib/segments";
 
@@ -11,7 +11,7 @@ export const HOMEPAGE_META = {
 export const HOMEPAGE_HERO = {
   titleLines: ["Discover Your", "Soul Code"] as const,
   subheadline:
-    "See the pattern you keep repeating through a reflective profile of your gifts, relational mirrors, and choices.",
+    "For the pattern you have always sensed but never had language for — your gifts, your mirrors, and the choices beneath them.",
   trustMicroLine: "Not your fate. Your mirror.",
   primaryCta: "See My Pattern",
   primaryHref: "#entry-panel",
@@ -19,15 +19,27 @@ export const HOMEPAGE_HERO = {
   miniLabels: [
     { digit: "ORIGIN", label: "Who You Are" },
     { digit: "TRINITY", label: "How You Express" },
-    { digit: "DUALITY", label: "Who You Attract" },
+    { digit: "DUALITY", label: "Relationship Mirror" },
     { digit: "EMPTINESS", label: "How You Awaken" },
   ],
+};
+
+export const HOMEPAGE_CURIOSITY = {
+  eyebrow: "BEFORE THE SYSTEM",
+  title: "Does this sound familiar?",
+  questions: [
+    "What patterns have quietly shaped your life for years?",
+    "Why do certain relationships keep repeating?",
+    "What part of yourself have you been overlooking?",
+  ],
+  closing:
+    "1320 begins with recognition — then offers structure. Not to define you, but to help you see what was already moving through your life.",
 };
 
 export const HOMEPAGE_CALCULATOR = {
   eyebrow: "START YOUR JOURNEY",
   titleLines: ["Discover Your", "1320 Soul Code"] as const,
-  body: "Enter your birth date to unlock your four-part soul blueprint.",
+  body: "Enter your birth date to see your four-part mirror — free, private, and reflective.",
   formLabel: "Enter your birth date",
   cta: "GENERATE MY CODE",
   trustNote: "Your data is private and secure.",
@@ -35,8 +47,8 @@ export const HOMEPAGE_CALCULATOR = {
 
 export const HOMEPAGE_BLUEPRINT_INTRO = {
   eyebrow: "YOUR 1320 BLUEPRINT",
-  title: "The Four Dimensions of Your Soul",
-  body: "Your 1320 Soul Code is formed through four core dimensions: your original frequency, your energetic expression, your relational mirror, and your awakening path.",
+  title: "Four mirrors. One soul story.",
+  body: "Your free Soul Code names the pattern. Each dimension reveals a different facet of the same life you have been living — not four separate labels, but one integrated mirror.",
   mobileShort: "Four dimensions. One soul blueprint.",
 };
 
@@ -46,49 +58,69 @@ export const HOMEPAGE_PILLARS = [
   {
     code: "S1",
     title: "ORIGIN FREQUENCY",
+    plainLanguage: "Who you are at your core — before roles, expectations, or adaptation.",
     headline: "Who You Are",
-    text: "Your soul archetype, core gifts, inner strength, and life direction.",
+    text: "Understand why you naturally approach life the way you do — your innate gifts, inner structure, and sense of direction.",
     tone: "gold",
     learnMoreHref: pillarMeta.S1.learnMoreHref,
   },
   {
     code: "S3",
     title: "VIBRATION TIER",
+    plainLanguage: "How your energy naturally expresses and matures over time.",
     headline: "How You Express",
-    text: "Your energy expression, strength, spiritual maturity, and frequency layer.",
+    text: "See how your expression rhythm and strengths shape how you show up — and how others experience your presence.",
     tone: "violet",
     learnMoreHref: pillarMeta.S3.learnMoreHref,
   },
   {
     code: "S2",
     title: "MIRROR PATH",
-    headline: "Who You Attract",
-    text: "Your relationship patterns, attraction dynamics, emotional mirrors, and soul lessons.",
+    plainLanguage: "The relational pattern that keeps appearing in your connections and what repeats.",
+    headline: "Relationship Mirror",
+    text: "Notice why certain dynamics return — and what your relationships have been mirroring back to you all along.",
     tone: "blue",
     learnMoreHref: pillarMeta.S2.learnMoreHref,
   },
   {
     code: "S0",
     title: "VOID GATE",
+    plainLanguage:
+      "The inner pattern that often appears during uncertainty, transition, and change.",
     headline: "How You Awaken",
-    text: "Your inner challenges, illusion patterns, awakening door, and path back to clarity.",
+    text: "Recognize the illusion that dims your clarity — and the path back to grounded choice when life feels unclear.",
     tone: "teal",
     learnMoreHref: pillarMeta.S0.learnMoreHref,
   },
 ] as const;
 
 export const HOMEPAGE_PILLAR_NOTE =
-  "S1 represents the core Origin Frequency, S3 represents energetic expression, S2 represents relational mirror patterns, and S0 represents the awakening path or Void Gate.";
+  "Each symbolic term above is paired with everyday language — so you can feel the mirror before learning the system.";
+
+export const HOMEPAGE_NOT_THIS = {
+  eyebrow: "WHAT 1320 IS NOT",
+  title: "A mirror — not a label",
+  body: "1320 is symbolic self-awareness. It is designed to reduce hesitation, not increase it.",
+  items: [
+    "Not personality typing",
+    "Not astrology",
+    "Not Human Design",
+    "Not fortune telling",
+    "Not a fixed destiny or life sentence",
+  ],
+  closing:
+    "You remain the author of your choices. The report reflects patterns — it does not predict outcomes or replace professional advice.",
+};
 
 export const HOMEPAGE_HOW = {
   eyebrow: "HOW 1320 WORKS",
-  title: "A Path of Awareness and Integration",
+  title: "From recognition to integration",
   body: "1320 is designed to help you move from self-recognition into conscious choice. It does not define your fate. It gives language to the patterns, gifts, and mirrors already moving through your life.",
   steps: [
     {
       number: "01",
-      title: "KNOW YOURSELF",
-      text: "Recognize your original design, gifts, and inner structure.",
+      title: "RECOGNIZE",
+      text: "Name what you have always sensed — your design, gifts, and inner structure.",
       tone: "gold",
       image: "/how-1320-works/step-01.webp",
       sizeClass: "",
@@ -97,8 +129,8 @@ export const HOMEPAGE_HOW = {
     },
     {
       number: "02",
-      title: "SEE YOUR PATTERNS",
-      text: "Observe the patterns, mirrors, and reactions that shape your life.",
+      title: "SEE THE PATTERN",
+      text: "Observe the mirrors and reactions that shape your relationships and choices.",
       tone: "violet",
       image: "/how-1320-works/step-03.webp",
       sizeClass: "step-icon-larger",
@@ -107,8 +139,8 @@ export const HOMEPAGE_HOW = {
     },
     {
       number: "03",
-      title: "ALIGN & CREATE",
-      text: "Choose actions that reflect your deeper truth and direction.",
+      title: "CHOOSE DIFFERENTLY",
+      text: "Align daily actions with what feels true — not what the pattern expects.",
       tone: "blue",
       image: "/how-1320-works/step-02.webp",
       sizeClass: "step-icon-smaller",
@@ -117,8 +149,8 @@ export const HOMEPAGE_HOW = {
     },
     {
       number: "04",
-      title: "INTEGRATE & REMEMBER",
-      text: "Return to the awareness that was already within you.",
+      title: "INTEGRATE",
+      text: "Return to the awareness that was already within you — with practice and reflection.",
       tone: "teal",
       image: "/how-1320-works/step-04.webp",
       sizeClass: "",
@@ -129,8 +161,8 @@ export const HOMEPAGE_HOW = {
 };
 
 export const HOMEPAGE_MID_CTA = {
-  headline: ["Your code is not a sentence.", "It is a mirror."],
-  body: "Your 1320 Soul Code does not tell you who you must become. It helps you see what has always been moving beneath the surface: your gifts, your patterns, your relational field, and your path of return.",
+  headline: ["Your code shows what.", "The Full Report explores why."],
+  body: "Your free result names the pattern. The Full Soul Origin Report is the bridge between recognition and understanding — shadow, mission, integration, and return.",
   primaryCta: "GENERATE MY CODE",
   secondaryCta: "VIEW SAMPLE REPORT",
   secondaryHref: "/sample-report",
@@ -153,41 +185,58 @@ export const HOMEPAGE_SECONDARY_LINKS = [
 
 export const HOMEPAGE_FULL_REPORT_PREVIEW = {
   eyebrow: "GO DEEPER",
-  title: "Unlock Your Full 1320 Soul Origin Report",
+  title: "When you are ready for the full mirror",
   transition:
-    "Your free result shows your code. The Full Report shows how your code moves through your identity, relationships, shadows, mission, and money patterns.",
-  body: "This is not more information. It is deeper integration — a map you can return to as awareness grows.",
+    "My code explains what. Now I want to understand why — how this pattern moves through identity, relationships, shadow, and purpose.",
+  body: "The Full Soul Origin Report (~32 pages) is not more labels. It is a structured space for reflection, practice, and integration you can return to as you grow.",
   includes: [
-    "Expanded S1 Origin Frequency",
-    "S3 Vibration Expression",
-    "S2 Relationship Mirror",
-    "S0 Awakening Gate",
-    "Integrated Soul Blueprint",
-    "Shadow Pattern Module",
-    "Soul Mission",
-    "Money Frequency",
-    "7-Day Integration Practice",
+    {
+      title: "Reflection questions tied to your codes",
+      detail: "Journal prompts for S1–S9 so insight becomes daily choice.",
+    },
+    {
+      title: "Personalized 7-day integration practices",
+      detail: "One focused practice per day across your full S0–S9 blueprint.",
+    },
+    {
+      title: "Relationship pattern maps",
+      detail: "See why certain dynamics repeat — and where conscious choice enters.",
+    },
+    {
+      title: "Shadow loop and growth-edge exercises",
+      detail: "Gentle awareness of your core pattern without diagnosis or prediction.",
+    },
+    {
+      title: "Soul mission and value-receiving lenses",
+      detail: "Direction and receiving patterns — self-awareness only, not financial advice.",
+    },
   ],
-  waitlistCta: "JOIN FULL REPORT WAITLIST",
+  waitlistCta: "EXPLORE FULL REPORT",
   waitlistHref: "/full-report",
-  readingCta: "BOOK A 1320 READING",
+  sampleCta: "SEE FREE SAMPLE FIRST",
+  sampleHref: "/sample-report",
+  readingCta: "PERSONAL INTEGRATION SESSION",
   readingHref: "/booking",
 };
 
 export const HOMEPAGE_ABOUT_PREVIEW = {
   eyebrow: "ABOUT THE SYSTEM",
-  title: "A Soul Intelligence System for a New Era of Awakening",
+  title: "Language for what you already sense",
   body: [
-    "1320 Soul Origin Code System is a frequency-based self-awareness framework created to help you understand your soul structure through four symbolic dimensions.",
+    "1320 Soul Origin Code System is a frequency-based self-awareness framework — four symbolic dimensions that help you see your soul structure with more clarity.",
     "It is not a prediction system. It is not a fixed destiny map. It is not here to tell you who you are allowed to become.",
-    "It is here to help you remember what is already within you — and choose from that place with more clarity.",
+    "It is here to help you remember what is already within you — and choose from that place with more honesty.",
   ],
   cta: "ABOUT 1320",
   href: "/about-1320",
 };
 
 export const HOMEPAGE_FINAL_CTA = {
-  lines: ["Begin with your birth date.", "Discover your 1320 Soul Code.", "Let the mirror open."],
+  lines: [
+    "You came here for a reason.",
+    "Begin with your birth date.",
+    "Let the mirror open.",
+  ],
   cta: "GENERATE MY CODE",
   trustNote: "Your data is private and secure.",
   mantra: "YOU ARE NOT HERE BY ACCIDENT. YOU CAME TO REMEMBER.",

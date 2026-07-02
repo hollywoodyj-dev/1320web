@@ -1,7 +1,8 @@
 import type { ReactNode } from "react";
+import { ReportGlyph, type ReportGlyphName } from "@/components/full-report-v2/report-glyph";
 
 type PageFooterItem = {
-  icon: string;
+  icon: ReportGlyphName;
   content: ReactNode;
 };
 
@@ -14,7 +15,9 @@ export function PageFooter({ items }: PageFooterProps) {
     <footer className="fr-v2-page-footer-band">
       {items.map((item, i) => (
         <div key={i} className="fr-v2-page-footer-item">
-          <div className="fr-v2-round-icon">{item.icon}</div>
+          <div className="fr-v2-round-icon">
+            <ReportGlyph name={item.icon} />
+          </div>
           <div>{item.content}</div>
         </div>
       ))}

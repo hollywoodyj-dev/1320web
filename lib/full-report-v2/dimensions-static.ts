@@ -1,5 +1,7 @@
 /** Fixed copy for Page 02 — The 10 Core Dimensions Overview */
 
+import type { ReportGlyphName } from "@/components/full-report-v2/report-glyph";
+
 export const DIMENSIONS_OVERVIEW_COPY = {
   heroTitle: "The 10 Core Dimensions Overview",
   heroSubtitle:
@@ -62,18 +64,21 @@ export const DIMENSIONS_WHY_COPY = {
   closing: "This is the path of conscious return.",
 } as const;
 
-export const DIMENSIONS_FOOTER_ITEMS = [
+export const DIMENSIONS_FOOTER_ITEMS: ReadonlyArray<{
+  icon: ReportGlyphName;
+  content: string;
+}> = [
   {
-    icon: "✶",
+    icon: "compassStar",
     content:
       "Remember: You are not here to become someone else. You are here to remember who you truly are.",
   },
   {
-    icon: "✦",
+    icon: "path",
     content: "This report will guide you through each dimension in depth — one by one.",
   },
   {
-    icon: "♡",
+    icon: "heart",
     content: "Take your time. Trust the process. You are exactly where you need to be.",
   },
-] as const;
+];

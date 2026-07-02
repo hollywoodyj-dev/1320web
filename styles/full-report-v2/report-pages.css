@@ -7299,6 +7299,10 @@
   overflow: hidden;
 }
 
+.fr-v2-integrated-flow-panel {
+  overflow: visible;
+}
+
 .fr-v2-integrated-code-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -7661,7 +7665,7 @@
 }
 
 .fr-v2-integrated-flow-step:not(:last-child)::after {
-  content: "â†’";
+  content: "\2192";
   position: absolute;
   right: -6px;
   top: 22px;

@@ -16,10 +16,10 @@ Automated regression (Section 1): PASS
 Desktop full walkthrough (Section 2): PASS
 Mobile full walkthrough (Section 3): PASS
 Ethical language spot check (Section 4): PASS
-Checkout / access (Section 5): BLOCKED LOCALLY - hosted Stripe test-mode checkout still required
+Checkout / access (Section 5): PASS (hosted, Stripe test mode)
 Cross-surface codes (Section 6): PASS
-Overall: PASS WITH CHECKOUT NOTE
-Notes: Full Report content, renderer parity, ethical language, and cross-surface code consistency passed after release-QA sanitizer/vocabulary fixes. Local checkout is intentionally not live without Stripe env, so public paid release still needs hosted Stripe test-mode checkout/access verification before live commerce switch.
+Overall: QA PASS
+Notes: Gates 0–5 complete in Stripe test mode. Live Stripe switch is separate go-live step.
 ```
 
 ```text

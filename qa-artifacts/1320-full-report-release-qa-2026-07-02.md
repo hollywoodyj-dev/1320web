@@ -33,7 +33,7 @@
 | 2 Desktop full walkthrough | PASS | Pages 00-18 checked for `1980-05-22` and `1982-02-03`; codes/titles matched expected truth; practice, journal, closing, and disclaimer present; no horizontal overflow or source/template leaks after S6 sanitizer fix. |
 | 3 Mobile full walkthrough | PASS | `390x844` text/DOM pass checked both canonical dates; expected codes/titles present; no horizontal overflow; pages 01-32 detected plus cover content; agency, practice, journal, closing, and final disclaimer present; public-string scan clean. |
 | 4 Gate 2 ethical language | PASS | Mobile disclaimer/final-disclaimer plus desktop closing/final disclaimer preserve symbolic/reflection framing, agency, and professional-boundary language; no deterministic, diagnostic, or internal QA strings found. |
-| 5 Checkout/access | BLOCKED LOCALLY | Local `/checkout` shows `Checkout Not Yet Live`; `POST /api/checkout` returns controlled `503` without local Stripe env; `/checkout/status?session_id=cs_test_missing` remains pending; `/my-report` requires magic-link sign-in. Hosted Stripe test-mode checkout still required. |
+| 5 Checkout/access | PASS (hosted, Stripe test mode) | Hosted checkout, payment, `/checkout/status` fulfillment, `/my-report/[reportId]` Full Report v2 access, and magic-link return verified in Stripe **test mode**. Live Stripe switch remains a separate go-live step. |
 | 6 Cross-surface consistency | PASS | Result, desktop, and mobile for both canonical dates showed expected S1/S3/S2/S0 codes and titles; no `Raw Value`, `Who You Attract`, `NOVA should`, old source-language, `the user`, `user's`, `you's`, `undefined`, or `null` in final public-string scan. |
 
 ### Canonical URLs checked
@@ -55,10 +55,27 @@
 - Free result S3 label changed from `Raw Value` to `Expression Index`.
 - Free result S2 short label changed from `Who You Attract` to `Relationship Mirror`.
 
+### Post-QA fixes (before Gate 5 close)
+
+- Paid `/my-report/[reportId]` now serves Full Report v2 (was legacy v1 viewer).
+- Page 08 Life Purpose Flow arrow encoding fixed (`\2192` CSS).
+
 ---
+
+## Gate 5 — Hosted Stripe test mode (verified)
+
+| Check | Result |
+|-------|--------|
+| `/checkout` live with Stripe test keys | PASS |
+| Test payment (`4242…`) | PASS |
+| `/checkout/success` + status polling | PASS |
+| `/my-report/[reportId]` entitled access | PASS |
+| Magic-link return | PASS |
+
+**Mode:** Stripe test mode only. Live commerce requires separate `sk_live_` + live webhook switch.
 
 ## Overall verdict
 
 | Status | Notes |
 |--------|-------|
-| **PASS WITH CHECKOUT NOTE** | Full Report content, renderer parity, ethical language, and cross-surface code consistency passed. Public paid release still requires hosted Stripe test-mode checkout/access verification before live commerce switch. |
+| **QA PASS** | Gates 0–5 complete for Stripe **test mode**. Full Report content, parity, ethical language, cross-surface consistency, and hosted checkout/access verified. **Live** Stripe switch is a separate go-live decision. |

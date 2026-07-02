@@ -17,7 +17,7 @@ Ingestion status for the 12-document Wisewave governance pack. **All 12 received
 | 11 | Wisewave Review — Canonical Full Report Architecture | [WISEWAVE_REVIEW_CANONICAL_REPORT_ARCHITECTURE.md](./WISEWAVE_REVIEW_CANONICAL_REPORT_ARCHITECTURE.md) | ✅ Saved |
 | 12 | Wisewave Reasoning Architecture v1.0 | [WISEWAVE_REASONING_ARCHITECTURE_v1.md](./WISEWAVE_REASONING_ARCHITECTURE_v1.md) | ✅ Saved |
 
-**Wisewave Phase 1 sign-off:** [WISEWAVE_PHASE1_SIGNOFF.md](./WISEWAVE_PHASE1_SIGNOFF.md) — **Approved with notes** (2026-07-02). Phase 1 complete; Gate 5 hosted commerce only remaining before public paid launch.
+**Wisewave Phase 1 sign-off:** [WISEWAVE_PHASE1_SIGNOFF.md](./WISEWAVE_PHASE1_SIGNOFF.md) — **Approved with notes** (2026-07-02). **Gate 5 PASS** (Stripe test mode). Live Stripe = separate go-live.
 
 ---
 

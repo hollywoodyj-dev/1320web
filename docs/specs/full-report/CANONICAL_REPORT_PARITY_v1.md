@@ -2,7 +2,7 @@
 
 **Source:** Wisewave 2/4 Review  
 **Owner:** Nova  
-**Status:** Wisewave Phase 1 **Approved with notes** (2026-07-02) — report architecture complete; Gate 5 hosted Stripe test checkout remains before live commerce. See `docs/governance/WISEWAVE_PHASE1_SIGNOFF.md`.
+**Status:** Gates 0–5 **QA PASS** (Stripe test mode verified) — live Stripe switch is separate go-live step. See `docs/governance/WISEWAVE_PHASE1_SIGNOFF.md` and `qa-artifacts/1320-full-report-release-qa-2026-07-02.md`.
 
 ## Product decision
 

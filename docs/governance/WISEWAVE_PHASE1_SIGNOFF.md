@@ -125,6 +125,6 @@ Phase 1 established the architectural and governance foundations originally envi
 | Gate 2 — Ethical language | ✅ Approved |
 | Gate 3 — Full Report integrity | ✅ Approved |
 | Gate 4 — Behaviour safety (static) | ✅ Approved |
-| Gate 5 — Commerce & delivery | ⏳ Hosted Stripe test verification pending |
+| Gate 5 — Commerce & delivery | ✅ PASS (Stripe test mode) |
 
-**Report product layer:** Cleared for public paid release pending Gate 5.
+**Report product layer:** Cleared for public paid release in **Stripe test mode**. Live commerce requires `sk_live_` switch.

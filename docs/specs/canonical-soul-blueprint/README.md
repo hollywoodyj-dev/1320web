@@ -8,7 +8,9 @@
 
 | File | Purpose |
 |------|---------|
-| [CANONICAL_SOUL_BLUEPRINT_SPEC_v1.md](./CANONICAL_SOUL_BLUEPRINT_SPEC_v1.md) | **Primary spec** — product definition, architecture, schema, consumers, versioning |
+| [CANONICAL_SOUL_BLUEPRINT_SPEC_v1.md](./CANONICAL_SOUL_BLUEPRINT_SPEC_v1.md) | **Primary spec v1.1** — Approved (9.8/10) |
+| [PLATFORM_DOMAIN_MODEL_v1.md](./PLATFORM_DOMAIN_MODEL_v1.md) | **FS-005A** — six core domain objects |
+| [WISEWAVE_FS005_SIGNOFF.md](./WISEWAVE_FS005_SIGNOFF.md) | Wisewave review record |
 | [../phase-2/PHASE2_ROADMAP_v1.md](../phase-2/PHASE2_ROADMAP_v1.md) | Phase 2 five-step roadmap |
 | [../full-report/CANONICAL_REPORT_PARITY_v1.md](../full-report/CANONICAL_REPORT_PARITY_v1.md) | Parity QA foundation (Phase 1) |
 | [../../governance/README.md](../../governance/README.md) | Governance pack (Constitution → Wisewave OS) |
@@ -40,11 +42,11 @@ Code still uses `CanonicalFullReport` and `canonical-report-v1` schema id — al
 
 ---
 
-## FS-005 status
+## FS-005 / FS-005A status
 
 | Item | Status |
 |------|--------|
-| Spec v1 draft | ✅ |
-| Wisewave review | ⏳ Pending |
-| Code rename | ⏳ Deferred (document-only in v1) |
-| API consumer contract | ✅ Documented in spec §6 |
+| Spec v1.1 + Platform Principles (§13) | ✅ Approved (9.8/10) |
+| FS-005A Platform Domain Model | 🔄 Draft |
+| FS-006 start | ⏳ After FS-005A |
+| Code rename | ⏳ Deferred until API |

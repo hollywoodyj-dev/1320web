@@ -7,12 +7,15 @@ export type NavLink = {
   matchPrefix?: boolean;
 };
 
+/** Public sample — Full Report v2 (canonical preview birth date). */
+export const SAMPLE_REPORT_HREF = "/full-report-v2";
+
 /** Shared top nav for homepage + inner site. Blueprint lives in footer. */
 export const CONVERSION_NAV: NavLink[] = [
   { href: "/", label: "HOME" },
   { href: "/about-1320", label: "ABOUT 1320", matchPrefix: true },
   { href: "/your-code", label: "YOUR CODE", matchPrefix: true },
-  { href: "/sample-report", label: "SAMPLE REPORT", matchPrefix: true },
+  { href: SAMPLE_REPORT_HREF, label: "SAMPLE REPORT", matchPrefix: true },
   { href: "/full-report", label: "FULL REPORT", matchPrefix: true },
   { href: "/booking", label: "READING", matchPrefix: true },
 ];
@@ -45,7 +48,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     title: "RESOURCES",
     links: [
       { href: "/faq", label: "FAQ" },
-      { href: "/sample-report", label: "Sample Report" },
+      { href: SAMPLE_REPORT_HREF, label: "Sample Report" },
       { href: "/full-report", label: "Full Report" },
       { href: "/booking", label: "Personal Integration Session" },
     ],
@@ -77,7 +80,7 @@ export const HOMEPAGE_FOOTER_COLUMNS: FooterColumn[] = [
     title: "RESOURCES",
     links: [
       { href: "/faq", label: "Guides" },
-      { href: "/sample-report", label: "Sample Report" },
+      { href: SAMPLE_REPORT_HREF, label: "Sample Report" },
       { href: "/full-report", label: "Full Report" },
       { href: "/booking", label: "Personal Integration Session" },
     ],

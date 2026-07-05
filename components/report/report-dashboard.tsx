@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { SAMPLE_REPORT_HREF } from "@/lib/site-nav";
 import type { ReportViewModel } from "@/lib/report/build-report-view-model";
 import { REPORT_NAV, type ReportSectionId } from "@/lib/report/report-nav";
 import { BlueprintOverviewRow } from "@/components/report/blueprint-overview-row";
@@ -70,8 +71,8 @@ export function ReportDashboard({ viewModel, analyticsEvent }: ReportDashboardPr
               open My Report
             </a>{" "}
             if you already purchased. See the{" "}
-            <a href="/sample-report" className="blueprint-secondary-link">
-              sample report
+            <a href={SAMPLE_REPORT_HREF} className="blueprint-secondary-link">
+              sample full report
             </a>{" "}
             for the same free layer with a fictional code.
           </p>

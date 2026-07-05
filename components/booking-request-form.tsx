@@ -12,6 +12,7 @@ type BookingRequestFormProps = {
 
 export function BookingRequestForm({ defaultReadingType }: BookingRequestFormProps) {
   const [status, setStatus] = useState("");
+  const [prepUrl, setPrepUrl] = useState("");
 
   function onFocus() {
     trackEvent("booking_click", { source: "booking_form" });
@@ -20,16 +21,16 @@ export function BookingRequestForm({ defaultReadingType }: BookingRequestFormPro
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
-    const data = new FormData(form);
-    const firstName = String(data.get("firstName") ?? "").trim();
-    const lastName = String(data.get("lastName") ?? "").trim();
-    const email = String(data.get("email") ?? "").trim();
-    const birthDate = String(data.get("birthDate") ?? "").trim();
-    const code = String(data.get("code") ?? "").trim();
-    const readingType = String(data.get("readingType") ?? "").trim();
-    const timezone = String(data.get("timezone") ?? "").trim();
-    const message = String(data.get("message") ?? "").trim();
-    const consent = data.get("consent") === "on";
+    const formData = new FormData(form);
+    const firstName = String(formData.get("firstName") ?? "").trim();
+    const lastName = String(formData.get("lastName") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const birthDate = String(formData.get("birthDate") ?? "").trim();
+    const code = String(formData.get("code") ?? "").trim();
+    const readingType = String(formData.get("readingType") ?? "").trim();
+    const timezone = String(formData.get("timezone") ?? "").trim();
+    const message = String(formData.get("message") ?? "").trim();
+    const consent = formData.get("consent") === "on";
 
     if (!firstName || !lastName || !email || !birthDate || !readingType || !consent) {
       setStatus(FORM_MESSAGES.bookingError);
@@ -38,20 +39,62 @@ export function BookingRequestForm({ defaultReadingType }: BookingRequestFormPro
     }
 
     trackEvent("booking_submit", { status: "success", readingType });
-    await submitLead({
-      type: "booking",
-      source: "booking_form",
-      email,
-      firstName,
-      lastName,
-      birthDate,
-      code: code || undefined,
-      readingType,
-      timezone: timezone || undefined,
-      message: message || undefined,
+
+    const response = await fetch("/api/personal-integration/request", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        type: "booking",
+        source: "booking_form",
+        email,
+        firstName,
+        lastName,
+        birthDate,
+        code: code || undefined,
+        readingType,
+        timezone: timezone || undefined,
+        message,
+      }),
     });
-    trackEvent("booking_success", { readingType });
-    setStatus(FORM_MESSAGES.bookingSuccess);
+
+    const data = (await response.json()) as {
+      ok?: boolean;
+      stored?: boolean;
+      prepUrl?: string;
+      error?: string;
+    };
+
+    if (!response.ok || !data.ok) {
+      setStatus(data.error ?? FORM_MESSAGES.bookingError);
+      trackEvent("booking_submit", { status: "error" });
+      return;
+    }
+
+    if (!data.stored) {
+      setPrepUrl("");
+      await submitLead({
+        type: "booking",
+        source: "booking_form",
+        email,
+        firstName,
+        lastName,
+        birthDate,
+        code: code || undefined,
+        readingType,
+        timezone: timezone || undefined,
+        message: message || undefined,
+      });
+      trackEvent("booking_success", { readingType });
+      setStatus(FORM_MESSAGES.bookingSuccess);
+      form.reset();
+      return;
+    }
+
+    trackEvent("booking_success", { readingType, hasPrepUrl: Boolean(data.prepUrl) });
+    setPrepUrl(data.prepUrl ?? "");
+    setStatus(
+      data.prepUrl ? FORM_MESSAGES.bookingSuccessWithPrep : FORM_MESSAGES.bookingSuccess,
+    );
     form.reset();
   }
 
@@ -128,6 +171,13 @@ export function BookingRequestForm({ defaultReadingType }: BookingRequestFormPro
         {BOOKING_FINAL.cta}
       </button>
       {status ? <p className="conversion-status">{status}</p> : null}
+      {prepUrl ? (
+        <p className="conversion-status">
+          <Link href={prepUrl} className="blueprint-secondary-link break-all">
+            Open session prep
+          </Link>
+        </p>
+      ) : null}
     </form>
   );
 }

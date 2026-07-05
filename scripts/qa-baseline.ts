@@ -17,7 +17,7 @@ const ROUTES = [
   "/your-code",
   "/generating",
   "/result",
-  "/sample-report",
+  "/full-report-v2",
   "/about-1320",
   "/blueprint",
   "/faq",
@@ -26,7 +26,7 @@ const ROUTES = [
 const REQUIRED_LINKS = [
   "/your-code",
   "/full-report",
-  "/sample-report",
+  "/full-report-v2",
   "/blueprint",
   "/about-1320",
   "/privacy",

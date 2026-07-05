@@ -80,6 +80,11 @@ export default async function MyReportPage({ params }: PageProps) {
 
   return (
     <div className="page-shell-inner page-shell--full-report">
+      <div className="px-4 py-2 text-center text-sm">
+        <Link href={`/living-blueprint/${reportId}`} className="blueprint-secondary-link">
+          Open Living Blueprint (Membership)
+        </Link>
+      </div>
       <div className="page-frame page-frame--full-report">
         <main className="inner-main inner-main--full-report">
           <FullReportV2Viewer payload={payload} />

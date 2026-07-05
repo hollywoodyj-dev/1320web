@@ -16,6 +16,8 @@ export const FORM_MESSAGES = {
   waitlistError: "Please complete all required fields and confirm your consent.",
   bookingSuccess:
     "Your session request has been received. We will follow up by email to coordinate your Personal Integration Session.",
+  bookingSuccessWithPrep:
+    "Your session request has been received. You can prepare for your session using the link below:",
   bookingError: "Please complete all required fields and confirm your consent.",
   emailSuccess: "Thanks. Your interest has been captured.",
 } as const;

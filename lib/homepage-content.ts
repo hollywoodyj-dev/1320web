@@ -1,6 +1,7 @@
 /** Homepage copy — recognition-first, conversion-oriented (Wisewave Phase 1 addendum). */
 
 import { SEGMENTS } from "@/lib/segments";
+import { SAMPLE_REPORT_HREF } from "@/lib/site-nav";
 
 export const HOMEPAGE_META = {
   title: "1320 Soul Code | Discover the Pattern You Keep Repeating",
@@ -165,7 +166,7 @@ export const HOMEPAGE_MID_CTA = {
   body: "Your free result names the pattern. The Full Soul Origin Report is the bridge between recognition and understanding — shadow, mission, integration, and return.",
   primaryCta: "GENERATE MY CODE",
   secondaryCta: "VIEW SAMPLE REPORT",
-  secondaryHref: "/sample-report",
+  secondaryHref: SAMPLE_REPORT_HREF,
 };
 
 export const HOMEPAGE_STATS = {
@@ -180,7 +181,7 @@ export const HOMEPAGE_STATS = {
 
 export const HOMEPAGE_SECONDARY_LINKS = [
   { href: "/blueprint", label: "Explore the Blueprint" },
-  { href: "/sample-report", label: "View Sample Report" },
+  { href: SAMPLE_REPORT_HREF, label: "View Sample Report" },
 ] as const;
 
 export const HOMEPAGE_FULL_REPORT_PREVIEW = {
@@ -214,7 +215,7 @@ export const HOMEPAGE_FULL_REPORT_PREVIEW = {
   waitlistCta: "EXPLORE FULL REPORT",
   waitlistHref: "/full-report",
   sampleCta: "SEE FREE SAMPLE FIRST",
-  sampleHref: "/sample-report",
+  sampleHref: SAMPLE_REPORT_HREF,
   readingCta: "PERSONAL INTEGRATION SESSION",
   readingHref: "/booking",
 };

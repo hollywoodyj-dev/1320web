@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SAMPLE_REPORT_HREF } from "@/lib/site-nav";
 import Link from "next/link";
 import { BlueprintViewTracker } from "@/components/blueprint/blueprint-view-tracker";
 import { BlueprintSegmentSection } from "@/components/blueprint/blueprint-segment-section";
@@ -40,7 +41,7 @@ export default function BlueprintPage() {
         <Link href={GENERATE_CODE_CTA.href} className="gold-button">
           {GENERATE_CODE_CTA.label}
         </Link>
-        <Link href="/sample-report" className="blueprint-secondary-link">
+        <Link href={SAMPLE_REPORT_HREF} className="blueprint-secondary-link">
           VIEW SAMPLE REPORT
         </Link>
       </InnerPageHero>
@@ -80,7 +81,7 @@ export default function BlueprintPage() {
 
       <SectionCard title={EXAMPLE_BLUEPRINT.title} subtitle={EXAMPLE_BLUEPRINT.code}>
         <p>{EXAMPLE_BLUEPRINT.note}</p>
-        <Link href="/sample-report" className="gold-button mt-4 inline-flex">
+        <Link href={SAMPLE_REPORT_HREF} className="gold-button mt-4 inline-flex">
           VIEW SAMPLE REPORT
         </Link>
       </SectionCard>

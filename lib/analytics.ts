@@ -46,6 +46,7 @@ export type LeadPayload = {
   timezone?: string;
   message?: string;
   code?: string;
+  platformSessionId?: string;
 };
 
 /** POST lead to optional API route — returns true when server accepts. */

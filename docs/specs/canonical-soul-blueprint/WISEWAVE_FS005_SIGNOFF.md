@@ -77,12 +77,12 @@ See: [PLATFORM_DOMAIN_MODEL_v1.md](./PLATFORM_DOMAIN_MODEL_v1.md)
 - [x] Three platform principles incorporated
 - [x] FS-005A Platform Domain Model draft published
 - [x] Phase 2 roadmap updated (FS-005A before FS-006)
-- [ ] Wisewave review of FS-005A (optional quick pass)
+- [x] Wisewave review of FS-005A — Approved with Notes (9.6/10)
 
 ---
 
 ## Updated Phase 2 sequence
 
 ```text
-Gate 5 ✅ → FS-005 ✅ → FS-005A 🔄 → FS-006 → FS-007 → FS-008
+Gate 5 ✅ → FS-005 ✅ → FS-005A ✅ (9.6/10) → FS-006 🔄 → FS-007 → FS-008
 ```

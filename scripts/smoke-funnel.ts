@@ -29,7 +29,7 @@ const ROUTES = [
   "/generating",
   "/result",
   "/full-report",
-  "/sample-report",
+  "/full-report-v2",
   "/booking",
   "/faq",
   "/privacy",

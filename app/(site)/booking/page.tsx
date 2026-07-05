@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SAMPLE_REPORT_HREF } from "@/lib/site-nav";
 import Link from "next/link";
 import { BookingRequestForm } from "@/components/booking-request-form";
 import { FaqSection } from "@/components/conversion/faq-section";
@@ -168,7 +169,7 @@ export default async function BookingPage({
         <a href="#booking-form" className="gold-button">
           {BOOKING_FINAL.cta}
         </a>
-        <Link href="/sample-report" className="blueprint-secondary-link block mt-3">
+        <Link href={SAMPLE_REPORT_HREF} className="blueprint-secondary-link block mt-3">
           VIEW SAMPLE REPORT
         </Link>
       </section>

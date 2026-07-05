@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SAMPLE_REPORT_HREF } from "@/lib/site-nav";
 import Link from "next/link";
 import { ModuleSymbol } from "@/components/conversion/module-symbol";
 import { FaqSection } from "@/components/conversion/faq-section";
@@ -41,7 +42,7 @@ export default function FullReportPage() {
           <Link href="/booking" className="blueprint-secondary-link">
             BOOK A 1320 READING
           </Link>
-          <Link href="/sample-report" className="blueprint-secondary-link">
+          <Link href={SAMPLE_REPORT_HREF} className="blueprint-secondary-link">
             VIEW SAMPLE REPORT
           </Link>
         </div>
@@ -131,7 +132,7 @@ export default function FullReportPage() {
         <Link href="/booking" className="gold-button">
           BOOK A 1320 READING
         </Link>
-        <Link href="/sample-report" className="blueprint-secondary-link block mt-3">
+        <Link href={SAMPLE_REPORT_HREF} className="blueprint-secondary-link block mt-3">
           VIEW SAMPLE REPORT
         </Link>
       </section>

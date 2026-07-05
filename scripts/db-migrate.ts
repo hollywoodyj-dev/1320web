@@ -12,14 +12,25 @@ if (!url) {
   process.exit(1);
 }
 
-const schemaPath = path.join(process.cwd(), "db", "schema.sql");
-const schema = fs.readFileSync(schemaPath, "utf8");
+const schemaFiles = [
+  "schema.sql",
+  "platform-domain-v1.sql",
+  "platform-domain-v1.1-authorship.sql",
+  "platform-domain-v1.2-personal-integration.sql",
+  "platform-domain-v1.3-follow-up.sql",
+  "platform-domain-v1.4-wisewave.sql",
+  "platform-domain-v1.5-membership.sql",
+];
 
 async function main() {
   const sql = postgres(url, { max: 1 });
-  await sql.unsafe(schema);
+  for (const file of schemaFiles) {
+    const schemaPath = path.join(process.cwd(), "db", file);
+    const schema = fs.readFileSync(schemaPath, "utf8");
+    await sql.unsafe(schema);
+    console.log("Applied schema:", schemaPath);
+  }
   await sql.end({ timeout: 5 });
-  console.log("Applied schema:", schemaPath);
 }
 
 main().catch((error) => {

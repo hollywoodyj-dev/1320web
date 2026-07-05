@@ -1,0 +1,72 @@
+import { buildCanonicalReport } from "@/lib/canonical-report";
+import { getPlatformSessionByPrepToken, updatePlatformSessionGrowthEdge } from "@/lib/db/platform-sessions";
+import { getSoulReportById } from "@/lib/db/reports";
+import { createReflection, listReflectionsForSession } from "@/lib/db/reflections";
+import { toSoulBlueprintRef } from "@/lib/platform-domain";
+import { SESSION_VARIANT_LABELS } from "@/lib/personal-integration/session-variants";
+
+export async function getPersonalIntegrationPrepContext(sessionId: string, prepToken: string) {
+  const session = await getPlatformSessionByPrepToken(sessionId, prepToken);
+  if (!session || session.kind !== "personal_integration") {
+    return null;
+  }
+
+  const report = await getSoulReportById(session.report_id);
+  if (!report) return null;
+
+  const clientName =
+    typeof session.meta?.clientName === "string" ? session.meta.clientName : "Guest";
+
+  const canonical = buildCanonicalReport({
+    name: clientName,
+    birth_date: report.birth_date,
+    birth_date_display: report.birth_date,
+  });
+
+  const blueprintRef = toSoulBlueprintRef(report, canonical);
+  const reflections = await listReflectionsForSession(session.id);
+  const variantLabel =
+    session.session_variant && session.session_variant in SESSION_VARIANT_LABELS
+      ? SESSION_VARIANT_LABELS[session.session_variant as keyof typeof SESSION_VARIANT_LABELS]
+      : "Personal Integration Session";
+
+  return {
+    session,
+    blueprintRef,
+    codes: blueprintRef.codes,
+    reflections,
+    variantLabel,
+    growthEdge: session.growth_edge,
+  };
+}
+
+export async function savePersonalIntegrationPrep(input: {
+  sessionId: string;
+  prepToken: string;
+  growthEdge: string;
+  prepNotes?: string;
+}) {
+  const session = await getPlatformSessionByPrepToken(input.sessionId, input.prepToken);
+  if (!session || session.kind !== "personal_integration") {
+    return null;
+  }
+
+  const updated = await updatePlatformSessionGrowthEdge({
+    sessionId: session.id,
+    growthEdge: input.growthEdge.trim(),
+    authorship: "user",
+  });
+
+  if (input.prepNotes?.trim()) {
+    await createReflection({
+      userId: session.user_id,
+      reportId: session.report_id,
+      kind: "practice",
+      body: input.prepNotes.trim(),
+      sourcePlatformSessionId: session.id,
+      authorship: "user",
+    });
+  }
+
+  return updated;
+}

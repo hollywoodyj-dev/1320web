@@ -1,7 +1,7 @@
 # Phase 2 Roadmap
 
-**Status:** FS-005 approved — FS-005A in progress  
-**Authority:** Wisewave Phase 1 sign-off (2026-07-02) + FS-005 review (9.8/10)  
+**Status:** Phase 2 foundation complete (FS-005 → FS-008)  
+**Authority:** Wisewave FS-005A sign-off (2026-07-05) + FS-005 review (9.8/10)  
 **Companion:** `docs/governance/WISEWAVE_PHASE1_SIGNOFF.md`
 
 ---
@@ -23,10 +23,10 @@ Wisewave: FS-005 is the **Phase 2 Domain Model** — not an ordinary spec.
 |------|-----|-------------|--------|
 | 1 | Gate 5 | Hosted commerce (Stripe test mode) | ✅ Complete |
 | 2 | **FS-005** | Canonical Soul Blueprint Specification v1.1 | ✅ **Approved (9.8/10)** |
-| 2.5 | **FS-005A** | 1320 Platform Domain Model | 🔄 In progress |
-| 3 | FS-006 | Personal Integration Session | ⏳ After FS-005A |
-| 4 | FS-007 | Wisewave API | ⏳ Pending |
-| 5 | FS-008 | Membership & Living Blueprint | ⏳ Pending |
+| 2.5 | **FS-005A** | 1320 Platform Domain Model | ✅ **Approved (9.6/10)** |
+| 3 | FS-006 | Personal Integration Session | ✅ Complete (+ FS-006.1) |
+| 4 | FS-007 | Wisewave API | ✅ Foundation shipped |
+| 5 | FS-008 | Membership & Living Blueprint | ✅ Foundation shipped |
 
 **Wisewave guidance:** Do not start FS-006 until FS-005A domain objects are defined.
 
@@ -46,13 +46,17 @@ Wisewave: FS-005 is the **Phase 2 Domain Model** — not an ordinary spec.
 
 ---
 
-## Step 2.5 — FS-005A (current)
+## Step 2.5 — FS-005A ✅
 
 **Goal:** Define six core domain objects so FS-006/007/008 share one model.
 
 | Artifact | Path |
 |----------|------|
 | Domain model | `docs/specs/canonical-soul-blueprint/PLATFORM_DOMAIN_MODEL_v1.md` |
+| Wisewave sign-off | `docs/specs/canonical-soul-blueprint/WISEWAVE_FS005A_SIGNOFF.md` |
+| TypeScript types | `lib/platform-domain/` |
+| SQL migration | `db/platform-domain-v1.sql`, `db/platform-domain-v1.1-authorship.sql` |
+| Smoke | `npm run smoke:platform-domain` |
 
 **Six core objects:**
 
@@ -61,7 +65,7 @@ Wisewave: FS-005 is the **Phase 2 Domain Model** — not an ordinary spec.
 | Soul Blueprint | ✅ |
 | Expression Profile | ❌ |
 | Relationship Memory | ❌ |
-| Session | ❌ |
+| Session (`platform_sessions`) | ❌ |
 | Reflection | ❌ |
 | Journey | ❌ |
 
@@ -69,42 +73,79 @@ Wisewave: FS-005 is the **Phase 2 Domain Model** — not an ordinary spec.
 
 - [x] Six objects defined with immutability rules
 - [x] Phase 2 deliverable mapping
-- [ ] Wisewave quick review (optional)
-- [ ] Per-object schema sketches (FS-006 kickoff)
+- [x] Per-object schema sketches (TypeScript + SQL)
+- [x] DB migration applied via `db:migrate`
+- [x] Domain smoke test
+- [x] Wisewave review — Approved with Notes (9.6/10)
+- [x] Authorship on mutable objects
 
 ---
 
-## Step 3 — FS-006 (Personal Integration Session)
+## Step 3 — FS-006 (Personal Integration Session) ✅
 
-**Depends on:** FS-005A domain model.
+**Depends on:** FS-005A domain model ✅
+
+| Artifact | Path |
+|----------|------|
+| Spec v1 | `docs/specs/personal-integration/FS006_PERSONAL_INTEGRATION_SESSION_v1.md` |
+| FS-006.1 follow-up | `docs/specs/personal-integration/FS006_1_PERSONAL_INTEGRATION_FOLLOWUP_v1.md` |
+| Orchestration | `lib/personal-integration/` |
+| Prep page | `/integration/prep/[sessionId]` |
+| Follow-up page | `/integration/follow-up/[sessionId]` |
+| Facilitator console | `/integration/facilitator` |
+| Smoke | `npm run smoke:personal-integration` |
 
 | Area | Scope |
 |------|--------|
-| Product flow | Book → prep → session → follow-up |
+| Product flow | Book ✅ → Prep ✅ → Live session ✅ → Follow-up ✅ |
 | Domain objects | Session, Reflection, Soul Blueprint (read) |
 | Wisewave role | Prep + reflection support — facilitator primary |
 
----
-
-## Step 4 — FS-007 (Wisewave API)
-
-**Depends on:** FS-005A + FS-005 schema versioning.
-
-| Area | Scope |
-|------|--------|
-| Domain objects | Session, Relationship Memory, Soul Blueprint (read), Expression Profile |
-| Orchestration | Reasoning Architecture (Doc 12) |
-| QA | Relationship QA layer |
+**Env (FS-006.1):** `PERSONAL_INTEGRATION_FACILITATOR_KEY`, `RESEND_API_KEY` (optional emails)
 
 ---
 
-## Step 5 — FS-008 (Membership & Living Blueprint)
+## Step 4 — FS-007 (Wisewave API) ✅
+
+**Depends on:** FS-005A + FS-005 schema versioning ✅
+
+| Artifact | Path |
+|----------|------|
+| Spec v1 | `docs/specs/wisewave-api/FS007_WISEWAVE_API_v1.md` |
+| Orchestration | `lib/wisewave/` |
+| Reflect UI | `/reflect`, `/reflect/[sessionId]` |
+| Smoke | `npm run smoke:wisewave` |
 
 | Area | Scope |
 |------|--------|
-| Domain objects | Journey, Expression Profile, Reflection, Relationship Memory |
-| Living Blueprint | Immutable Blueprint + dynamic Expression |
-| QA | Continuity QA |
+| Domain objects | Session, Relationship Memory, Soul Blueprint (read), Expression Profile (read) |
+| Orchestration | Nine Reasoning Layers → audit JSON per turn |
+| QA | Relationship QA (behaviour validation + auto-revision) |
+
+**Env:** `WISEWAVE_API_KEY` (optional server auth), `POSTGRES_URL`
+
+**Deferred:** External LLM provider, full Expression write path (FS-008)
+
+---
+
+## Step 5 — FS-008 (Membership & Living Blueprint) ✅
+
+| Artifact | Path |
+|----------|------|
+| Spec v1 | `docs/specs/membership/FS008_MEMBERSHIP_LIVING_BLUEPRINT_v1.md` |
+| Living Blueprint | `lib/living-blueprint/` |
+| Dashboard | `/living-blueprint/[reportId]` |
+| Smoke | `npm run smoke:membership` |
+
+| Area | Scope |
+|------|--------|
+| Domain objects | Journey, Expression Profile (write), Reflection, Relationship Memory |
+| Living Blueprint | Immutable Blueprint + dynamic Expression + 4 memory layers |
+| QA | Continuity QA on snapshot presentation |
+
+**Access v1:** Full Report entitlement required. Separate membership SKU deferred.
+
+**Before production push:** see [DEPLOY_REMINDERS.md](./DEPLOY_REMINDERS.md) (`WISEWAVE_API_KEY`, etc.).
 
 ---
 

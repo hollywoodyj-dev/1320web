@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SAMPLE_REPORT_HREF } from "@/lib/site-nav";
 import Link from "next/link";
 import { FaqSection } from "@/components/conversion/faq-section";
 import { InnerPageHero } from "@/components/inner-page-hero";
@@ -39,7 +40,7 @@ export default function About1320Page() {
         <Link href="/blueprint" className="blueprint-secondary-link">
           EXPLORE THE BLUEPRINT
         </Link>
-        <Link href="/sample-report" className="blueprint-secondary-link">
+        <Link href={SAMPLE_REPORT_HREF} className="blueprint-secondary-link">
           VIEW SAMPLE REPORT
         </Link>
       </InnerPageHero>
@@ -141,7 +142,7 @@ export default function About1320Page() {
         <Link href={GENERATE_CODE_CTA.href} className="gold-button">
           {GENERATE_CODE_CTA.label}
         </Link>
-        <Link href="/sample-report" className="blueprint-secondary-link block mt-3">
+        <Link href={SAMPLE_REPORT_HREF} className="blueprint-secondary-link block mt-3">
           VIEW SAMPLE REPORT
         </Link>
       </section>

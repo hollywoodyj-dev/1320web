@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import { REFLECT_CHAT } from "@/lib/wisewave/reflect-content";
 import type { WisewaveSessionContext } from "@/lib/wisewave/types";
 
@@ -8,13 +8,15 @@ type ReflectChatProps = {
   sessionId: string;
   accessToken: string;
   initialSession: WisewaveSessionContext;
+  initialMessage?: string;
 };
 
-export function ReflectChat({ sessionId, accessToken, initialSession }: ReflectChatProps) {
+export function ReflectChat({ sessionId, accessToken, initialSession, initialMessage }: ReflectChatProps) {
   const [session, setSession] = useState(initialSession);
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const autoSentRef = useRef(false);
 
   useEffect(() => {
     setSession(initialSession);
@@ -26,14 +28,9 @@ export function ReflectChat({ sessionId, accessToken, initialSession }: ReflectC
     if (data.ok && data.session) setSession(data.session);
   }
 
-  async function onSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const trimmed = message.trim();
-    if (!trimmed || loading) return;
-
+  async function sendMessage(trimmed: string) {
     setLoading(true);
     setError("");
-    setMessage("");
 
     try {
       const response = await fetch(`/api/wisewave/sessions/${sessionId}`, {
@@ -44,16 +41,33 @@ export function ReflectChat({ sessionId, accessToken, initialSession }: ReflectC
       const data = (await response.json()) as { ok?: boolean; error?: string };
       if (!response.ok || !data.ok) {
         setError(data.error ?? "Could not send message.");
-        setMessage(trimmed);
-        return;
+        return false;
       }
       await refreshSession();
+      return true;
     } catch {
       setError("Could not send message.");
-      setMessage(trimmed);
+      return false;
     } finally {
       setLoading(false);
     }
+  }
+
+  useEffect(() => {
+    const trimmed = initialMessage?.trim();
+    if (!trimmed || autoSentRef.current || session.turns.length > 0) return;
+    autoSentRef.current = true;
+    void sendMessage(trimmed);
+  }, [initialMessage, session.turns.length]);
+
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const trimmed = message.trim();
+    if (!trimmed || loading) return;
+
+    setMessage("");
+    const sent = await sendMessage(trimmed);
+    if (!sent) setMessage(trimmed);
   }
 
   return (
@@ -65,7 +79,9 @@ export function ReflectChat({ sessionId, accessToken, initialSession }: ReflectC
       </div>
 
       <div className="max-h-[28rem] space-y-3 overflow-y-auto rounded border border-white/10 p-4">
-        {session.turns.length === 0 ? (
+        {loading && session.turns.length === 0 ? (
+          <p className="text-sm opacity-70">{REFLECT_CHAT.thinking}</p>
+        ) : session.turns.length === 0 ? (
           <p className="text-sm opacity-70">{REFLECT_CHAT.empty}</p>
         ) : (
           session.turns.map((turn, index) => (

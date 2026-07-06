@@ -18,6 +18,17 @@ function readToken(params: SearchParams): string | undefined {
   return Array.isArray(value) ? value[0] : value;
 }
 
+function readSendMessage(params: SearchParams): string | undefined {
+  const value = params.send;
+  const raw = Array.isArray(value) ? value[0] : value;
+  if (!raw) return undefined;
+  try {
+    return decodeURIComponent(raw).trim() || undefined;
+  } catch {
+    return raw.trim() || undefined;
+  }
+}
+
 export default async function ReflectSessionPage({
   params,
   searchParams,
@@ -26,7 +37,9 @@ export default async function ReflectSessionPage({
   searchParams: Promise<SearchParams>;
 }) {
   const { sessionId } = await params;
-  const token = readToken(await searchParams);
+  const resolvedSearchParams = await searchParams;
+  const token = readToken(resolvedSearchParams);
+  const initialMessage = readSendMessage(resolvedSearchParams);
 
   if (!token) {
     return (
@@ -52,7 +65,12 @@ export default async function ReflectSessionPage({
         <p className="conversion-boundary text-sm opacity-90">{REFLECT_HERO.boundary}</p>
       </section>
       <SectionCard title="Reflection">
-        <ReflectChat sessionId={sessionId} accessToken={token} initialSession={session} />
+        <ReflectChat
+          sessionId={sessionId}
+          accessToken={token}
+          initialSession={session}
+          initialMessage={initialMessage}
+        />
       </SectionCard>
     </div>
   );

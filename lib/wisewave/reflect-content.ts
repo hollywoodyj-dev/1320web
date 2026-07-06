@@ -23,6 +23,7 @@ export const REFLECT_FORM = {
   submit: "BEGIN REFLECTION",
   error: "Please complete all required fields.",
   openingRequired: "Please share what brings you here today.",
+  networkError: "Network error. Please try again.",
   accountLead: "Your profile details are already saved — share what feels most present to begin.",
 };
 

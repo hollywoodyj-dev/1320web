@@ -76,19 +76,12 @@ async function handleAccountReflectSession(body: CreateWisewaveSessionBody) {
       openingMessage,
     });
 
-    const firstTurn = await processWisewaveTurn({
-      sessionId: result.sessionId,
-      accessToken: result.accessToken,
-      message: openingMessage,
-    });
-
     return NextResponse.json({
       ok: true,
       sessionId: result.sessionId,
       accessToken: result.accessToken,
       chatUrl: result.chatUrl,
       reportId: result.reportId,
-      firstTurn,
     });
   } catch (error) {
     console.error("[wisewave] account reflect session failed", error);
@@ -118,11 +111,15 @@ export async function handleCreateWisewaveSession(body: CreateWisewaveSessionBod
 
     let firstTurn = null;
     if (body.openingMessage?.trim()) {
-      firstTurn = await processWisewaveTurn({
-        sessionId: result.sessionId,
-        accessToken: result.accessToken,
-        message: body.openingMessage.trim(),
-      });
+      try {
+        firstTurn = await processWisewaveTurn({
+          sessionId: result.sessionId,
+          accessToken: result.accessToken,
+          message: body.openingMessage.trim(),
+        });
+      } catch (turnError) {
+        console.error("[wisewave] opening turn failed; session created", turnError);
+      }
     }
 
     return NextResponse.json({

@@ -5,9 +5,6 @@ import type { MouseEvent, ReactNode } from "react";
 
 export type ReportNavZone = "prev" | "next" | "menu" | "center" | "close";
 
-const INTERACTIVE_SELECTOR =
-  "a, button, input, textarea, select, label, [role='button'], .fr-v2-glass-panel, .fr-glass-card";
-
 type FullReportV2ChromeProps = {
   children: ReactNode;
   closeHref?: string;
@@ -21,6 +18,7 @@ type FullReportV2ChromeProps = {
   showLayoutGuide: boolean;
   onStageMouseMove: (event: MouseEvent<HTMLDivElement>) => void;
   onStageMouseLeave: () => void;
+  onTurnZoneMouseMove: (zone: "prev" | "next", event: MouseEvent<HTMLButtonElement>) => void;
 };
 
 function resolveZone(
@@ -73,20 +71,10 @@ export function FullReportV2Chrome({
   showLayoutGuide,
   onStageMouseMove,
   onStageMouseLeave,
+  onTurnZoneMouseMove,
 }: FullReportV2ChromeProps) {
-  const handleStageClick = (event: MouseEvent<HTMLDivElement>) => {
-    if (showLayoutGuide) return;
-
-    const target = event.target as HTMLElement;
-    if (target.closest(INTERACTIVE_SELECTOR)) return;
-    if (target.closest(".fr-v2-nav-dock, .fr-v2-close-btn, .fr-v2-layout-guide")) return;
-
-    const rect = event.currentTarget.getBoundingClientRect();
-    const zone = resolveZone(event.clientX, event.clientY, rect, pageIndex, pageCount);
-
-    if (zone === "prev") onPrev();
-    else if (zone === "next") onNext();
-  };
+  const canGoPrev = pageIndex > 0;
+  const canGoNext = pageIndex < pageCount - 1;
 
   return (
     <>
@@ -98,14 +86,32 @@ export function FullReportV2Chrome({
 
       <div
         className={`fr-v2-viewer-stage${showLayoutGuide ? " fr-v2-viewer-stage--guided" : ""}`}
-        onClick={handleStageClick}
         onMouseMove={onStageMouseMove}
         onMouseLeave={onStageMouseLeave}
         role="region"
         aria-label={`Report page ${pageIndex + 1} of ${pageCount}`}
       >
-        <div className="fr-v2-turn-zone fr-v2-turn-zone--prev" aria-hidden="true" />
-        <div className="fr-v2-turn-zone fr-v2-turn-zone--next" aria-hidden="true" />
+        {children}
+
+        {!showLayoutGuide && canGoPrev ? (
+          <button
+            type="button"
+            className="fr-v2-turn-zone fr-v2-turn-zone--prev"
+            aria-label="Previous page"
+            onClick={onPrev}
+            onMouseMove={(event) => onTurnZoneMouseMove("prev", event)}
+          />
+        ) : null}
+
+        {!showLayoutGuide && canGoNext ? (
+          <button
+            type="button"
+            className="fr-v2-turn-zone fr-v2-turn-zone--next"
+            aria-label="Next page"
+            onClick={onNext}
+            onMouseMove={(event) => onTurnZoneMouseMove("next", event)}
+          />
+        ) : null}
 
         {cursorTag && cursorPos && !showLayoutGuide ? (
           <div
@@ -116,8 +122,6 @@ export function FullReportV2Chrome({
             {cursorTag}
           </div>
         ) : null}
-
-        {children}
       </div>
     </>
   );

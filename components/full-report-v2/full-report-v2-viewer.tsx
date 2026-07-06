@@ -175,6 +175,15 @@ export function FullReportV2Viewer({ payload, closeHref }: FullReportV2ViewerPro
     setCursorPos(null);
   };
 
+  const handleTurnZoneMouseMove = (
+    zone: "prev" | "next",
+    event: MouseEvent<HTMLButtonElement>,
+  ) => {
+    if (showLayoutGuide) return;
+    setCursorTag(zone === "prev" ? "← Previous page" : "Next page →");
+    setCursorPos({ x: event.clientX + 14, y: event.clientY + 16 });
+  };
+
   const closeGuideLabel = closeHref === "/account" ? "Close (×) — back to Account" : "Close (×)";
 
   return (
@@ -190,6 +199,7 @@ export function FullReportV2Viewer({ payload, closeHref }: FullReportV2ViewerPro
         showLayoutGuide={showLayoutGuide}
         onStageMouseMove={handleStageMouseMove}
         onStageMouseLeave={handleStageMouseLeave}
+        onTurnZoneMouseMove={handleTurnZoneMouseMove}
       >
         {showLayoutGuide ? (
           <FullReportV2LayoutGuide closeLabel={closeGuideLabel} onDismiss={dismissLayoutGuide} />

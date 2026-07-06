@@ -1288,7 +1288,7 @@
 .fr-v2-nav-dock {
   position: relative;
   flex-shrink: 0;
-  z-index: 30;
+  z-index: 48;
   height: 14px;
 }
 
@@ -1421,24 +1421,29 @@
   position: absolute;
   top: 72px;
   bottom: 0;
-  z-index: 2;
+  z-index: 45;
   width: 28%;
-  pointer-events: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  pointer-events: auto;
+  cursor: pointer;
   opacity: 0;
   transition: opacity 0.25s ease;
 }
 
 .fr-v2-turn-zone--prev {
   left: 0;
-  background: linear-gradient(90deg, rgba(214, 181, 109, 0.12), transparent);
+  background: linear-gradient(90deg, rgba(214, 181, 109, 0.14), transparent);
 }
 
 .fr-v2-turn-zone--next {
   right: 0;
-  background: linear-gradient(270deg, rgba(214, 181, 109, 0.12), transparent);
+  background: linear-gradient(270deg, rgba(214, 181, 109, 0.14), transparent);
 }
 
 @media (hover: hover) {
+  .fr-v2-turn-zone:hover,
   .fr-v2-viewer-stage:hover .fr-v2-turn-zone {
     opacity: 1;
   }

@@ -1,6 +1,7 @@
 import { ensureSoulReportForUserBirthDate } from "@/lib/db/ensure-soul-report";
 import { ensureExpressionProfile } from "@/lib/db/expression-profiles";
 import { createPlatformSession, mergePlatformSessionMeta } from "@/lib/db/platform-sessions";
+import { getSoulReportById } from "@/lib/db/reports";
 import { upsertUserByEmail } from "@/lib/db/users";
 import { getSiteUrl } from "@/lib/platform-config";
 import { parseBirthDateString } from "@/lib/personal-integration/parse-birth-date";
@@ -64,6 +65,50 @@ export async function createWisewaveSession(
     accessToken: session.prep_access_token,
     chatUrl,
     reportId: report.id,
+  };
+}
+
+export async function createWisewaveSessionForUser(input: {
+  userId: string;
+  reportId: string;
+  clientName: string;
+  openingMessage: string;
+}): Promise<CreateWisewaveSessionResult> {
+  const report = await getSoulReportById(input.reportId);
+  if (!report || report.user_id !== input.userId) {
+    throw new Error("Report not found for user.");
+  }
+
+  await ensureExpressionProfile({ userId: input.userId, reportId: input.reportId });
+
+  const session = await createPlatformSession({
+    userId: input.userId,
+    reportId: input.reportId,
+    kind: "wisewave",
+    status: "active",
+    growthEdge: input.openingMessage.trim() || null,
+    authorship: "system",
+    meta: {
+      clientName: input.clientName,
+      requestSource: "account_reflect",
+    },
+  });
+
+  if (!session.prep_access_token) {
+    throw new Error("Wisewave session access token missing.");
+  }
+
+  await mergePlatformSessionMeta(session.id, {
+    openingMessage: input.openingMessage.trim(),
+  });
+
+  const chatUrl = `${getSiteUrl()}/reflect/${session.id}?token=${session.prep_access_token}`;
+
+  return {
+    sessionId: session.id,
+    accessToken: session.prep_access_token,
+    chatUrl,
+    reportId: input.reportId,
   };
 }
 

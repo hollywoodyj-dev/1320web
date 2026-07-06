@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { CHECKIN_FORM, EXPRESSION_FORM } from "@/lib/living-blueprint/content";
+import { CHECKIN_FORM, EXPRESSION_FORM, PROFILE_SUMMARY } from "@/lib/living-blueprint/content";
 import type { LivingBlueprintSnapshot } from "@/lib/living-blueprint/types";
 import { MEMORY_LAYER_LABELS } from "@/lib/living-blueprint/memory-layers";
 
@@ -54,6 +54,46 @@ export function LivingBlueprintDashboard({ reportId, initialSnapshot }: LivingBl
 
   return (
     <div className="space-y-6">
+      <section className="living-blueprint-profile rounded border border-white/10 p-4">
+        <h2 className="mb-3 font-medium">{PROFILE_SUMMARY.title}</h2>
+        <dl className="grid gap-3 sm:grid-cols-2">
+          <div>
+            <dt className="text-xs uppercase opacity-70">{PROFILE_SUMMARY.name}</dt>
+            <dd>{snapshot.clientName}</dd>
+          </div>
+          <div>
+            <dt className="text-xs uppercase opacity-70">{PROFILE_SUMMARY.email}</dt>
+            <dd>{snapshot.email ?? "—"}</dd>
+          </div>
+          <div>
+            <dt className="text-xs uppercase opacity-70">{PROFILE_SUMMARY.birthDate}</dt>
+            <dd>{snapshot.birthDate ?? "—"}</dd>
+          </div>
+          <div>
+            <dt className="text-xs uppercase opacity-70">{PROFILE_SUMMARY.expression}</dt>
+            <dd className="capitalize">{snapshot.expressionState}</dd>
+          </div>
+          <div>
+            <dt className="text-xs uppercase opacity-70">{PROFILE_SUMMARY.journey}</dt>
+            <dd className="capitalize">{snapshot.journeyStatus}</dd>
+          </div>
+          <div>
+            <dt className="text-xs uppercase opacity-70">{PROFILE_SUMMARY.lastReview}</dt>
+            <dd>
+              {snapshot.lastReviewAt
+                ? new Date(snapshot.lastReviewAt).toLocaleDateString()
+                : PROFILE_SUMMARY.notYet}
+            </dd>
+          </div>
+        </dl>
+        <div className="mt-3">
+          <p className="text-xs uppercase opacity-70">{PROFILE_SUMMARY.codes}</p>
+          <p className="font-mono text-sm">
+            {snapshot.codes.s1} · {snapshot.codes.s3} · {snapshot.codes.s2} · {snapshot.codes.s0}
+          </p>
+        </div>
+      </section>
+
       <p className="text-sm opacity-90">{snapshot.continuityNote}</p>
 
       <section className="rounded border border-white/10 p-4">

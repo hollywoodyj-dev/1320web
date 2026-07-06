@@ -3,6 +3,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { SignOutButton } from "@/components/auth/sign-out-button";
 import { SetPasswordForm } from "@/components/auth/set-password-form";
+import { ReflectEntryForm } from "@/components/reflect-entry-form";
 import { SectionCard } from "@/components/section-card";
 import { getAccountContext } from "@/lib/auth/account-context";
 import { ACCOUNT_COPY, ACCOUNT_META } from "@/lib/auth/account-content";
@@ -99,6 +100,29 @@ export default async function AccountPage() {
               {ACCOUNT_COPY.unlockFullReport}
             </Link>
           </>
+        )}
+      </SectionCard>
+
+      <SectionCard title={ACCOUNT_COPY.reflectTitle}>
+        <p>{ACCOUNT_COPY.reflectBody}</p>
+        {account.birthDate ? (
+          <>
+            <p className="mt-3 text-sm opacity-90">{ACCOUNT_COPY.reflectAccountLead}</p>
+            <div className="mt-4">
+              <ReflectEntryForm
+                compact
+                prefill={{
+                  firstName: account.user.first_name?.trim() || account.user.email.split("@")[0] || "Friend",
+                  email: account.user.email,
+                  birthDate: account.birthDate,
+                  useAccountProfile: true,
+                  reportId: account.entitledReportId ?? account.report?.id,
+                }}
+              />
+            </div>
+          </>
+        ) : (
+          <p className="mt-3 text-sm opacity-90">{ACCOUNT_COPY.reflectNeedsBirthDate}</p>
         )}
       </SectionCard>
 

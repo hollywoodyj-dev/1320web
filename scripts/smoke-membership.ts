@@ -39,6 +39,8 @@ const qa = validateContinuityPresentation({
   version: LIVING_BLUEPRINT_VERSION,
   reportId: "test",
   clientName: "Test",
+  email: "test@example.com",
+  birthDate: "1982-02-03",
   codes: { s1: "S1-18", s3: "S3-110", s2: "S2-27", s0: "S0-07" },
   expressionState: "emerging",
   journeyStatus: "active",
@@ -52,5 +54,6 @@ assert(qa.passed, "continuity QA pass");
 
 const accountPage = fs.readFileSync(path.join(root, "app/(site)/account/page.tsx"), "utf8");
 assert(accountPage.includes("/living-blueprint/"), "account links to Living Blueprint");
+assert(accountPage.includes("ReflectEntryForm"), "account includes Reflect with Wisewave");
 
 console.log("smoke:membership PASS");

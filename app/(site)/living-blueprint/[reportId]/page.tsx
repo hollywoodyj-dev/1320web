@@ -49,6 +49,7 @@ export default async function LivingBlueprintPage({ params }: PageProps) {
     userId: access.user.id,
     reportId,
     clientName: access.user.first_name ?? undefined,
+    email: access.user.email,
   });
 
   if (!snapshot) {

@@ -22,6 +22,8 @@ export const REFLECT_FORM = {
   openingPlaceholder: "Share what feels most present — no need to be polished…",
   submit: "BEGIN REFLECTION",
   error: "Please complete all required fields.",
+  openingRequired: "Please share what brings you here today.",
+  accountLead: "Your profile details are already saved — share what feels most present to begin.",
 };
 
 export const REFLECT_CHAT = {

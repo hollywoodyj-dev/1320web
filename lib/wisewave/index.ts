@@ -1,5 +1,5 @@
 export { verifyWisewaveApiRequest, isWisewaveApiConfigured } from "@/lib/wisewave/api-auth";
-export { createWisewaveSession } from "@/lib/wisewave/create-session";
+export { createWisewaveSession, createWisewaveSessionForUser } from "@/lib/wisewave/create-session";
 export { getWisewaveSessionContext, processWisewaveTurn } from "@/lib/wisewave/process-turn";
 export { runReasoningPipeline } from "@/lib/wisewave/run-reasoning-pipeline";
 export {

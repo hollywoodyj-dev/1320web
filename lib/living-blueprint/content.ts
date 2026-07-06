@@ -28,6 +28,18 @@ export const CHECKIN_FORM = {
   success: "Check-in saved. Your Living Blueprint review date was updated.",
 };
 
+export const PROFILE_SUMMARY = {
+  title: "Your membership profile",
+  name: "Name",
+  email: "Email",
+  birthDate: "Birth date",
+  codes: "Soul Blueprint codes",
+  expression: "Expression stage",
+  journey: "Journey status",
+  lastReview: "Last Living Blueprint review",
+  notYet: "Not yet recorded",
+};
+
 export const ACCESS_DENIED = {
   title: "Living Blueprint",
   unauthenticated: "Sign in with your account to view your Living Blueprint.",

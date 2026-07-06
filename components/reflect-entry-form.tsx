@@ -4,21 +4,76 @@ import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { REFLECT_FORM, REFLECT_HERO } from "@/lib/wisewave/reflect-content";
 
-export function ReflectEntryForm() {
+export type ReflectEntryPrefill = {
+  firstName: string;
+  email: string;
+  birthDate: string;
+  useAccountProfile?: boolean;
+  reportId?: string;
+};
+
+type ReflectEntryFormProps = {
+  prefill?: ReflectEntryPrefill;
+  compact?: boolean;
+};
+
+export function ReflectEntryForm({ prefill, compact = false }: ReflectEntryFormProps) {
   const router = useRouter();
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
+  const accountMode = Boolean(prefill?.useAccountProfile);
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
     const data = new FormData(form);
+    const openingMessage = String(data.get("openingMessage") ?? "").trim();
+
+    if (!openingMessage) {
+      setStatus(REFLECT_FORM.openingRequired);
+      return;
+    }
+
+    if (accountMode) {
+      setLoading(true);
+      setStatus("");
+
+      try {
+        const response = await fetch("/api/reflect/start", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            openingMessage,
+            useAccountProfile: true,
+            reportId: prefill?.reportId,
+          }),
+        });
+        const payload = (await response.json()) as {
+          ok?: boolean;
+          sessionId?: string;
+          accessToken?: string;
+          error?: string;
+        };
+
+        if (!response.ok || !payload.ok || !payload.sessionId || !payload.accessToken) {
+          setStatus(payload.error ?? REFLECT_FORM.error);
+          return;
+        }
+
+        router.push(`/reflect/${payload.sessionId}?token=${payload.accessToken}`);
+      } catch {
+        setStatus(REFLECT_FORM.error);
+      } finally {
+        setLoading(false);
+      }
+      return;
+    }
+
     const firstName = String(data.get("firstName") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
     const birthDate = String(data.get("birthDate") ?? "").trim();
-    const openingMessage = String(data.get("openingMessage") ?? "").trim();
 
-    if (!firstName || !email || !birthDate || !openingMessage) {
+    if (!firstName || !email || !birthDate) {
       setStatus(REFLECT_FORM.error);
       return;
     }
@@ -55,19 +110,57 @@ export function ReflectEntryForm() {
 
   return (
     <form className="conversion-form" onSubmit={onSubmit}>
-      <p className="conversion-lead mb-4">{REFLECT_HERO.body}</p>
-      <label className="conversion-field">
-        {REFLECT_FORM.firstName}
-        <input name="firstName" required className="conversion-input" />
-      </label>
-      <label className="conversion-field">
-        {REFLECT_FORM.email}
-        <input name="email" type="email" required className="conversion-input" />
-      </label>
-      <label className="conversion-field">
-        {REFLECT_FORM.birthDate}
-        <input name="birthDate" type="date" required className="conversion-input" />
-      </label>
+      {!compact ? <p className="conversion-lead mb-4">{REFLECT_HERO.body}</p> : null}
+
+      {accountMode && prefill ? (
+        <dl className="reflect-prefill-summary grid gap-3 sm:grid-cols-2 mb-4">
+          <div>
+            <dt className="text-xs uppercase tracking-wide opacity-70">{REFLECT_FORM.firstName}</dt>
+            <dd>{prefill.firstName}</dd>
+          </div>
+          <div>
+            <dt className="text-xs uppercase tracking-wide opacity-70">{REFLECT_FORM.email}</dt>
+            <dd>{prefill.email}</dd>
+          </div>
+          <div>
+            <dt className="text-xs uppercase tracking-wide opacity-70">{REFLECT_FORM.birthDate}</dt>
+            <dd>{prefill.birthDate}</dd>
+          </div>
+        </dl>
+      ) : (
+        <>
+          <label className="conversion-field">
+            {REFLECT_FORM.firstName}
+            <input
+              name="firstName"
+              required
+              defaultValue={prefill?.firstName}
+              className="conversion-input"
+            />
+          </label>
+          <label className="conversion-field">
+            {REFLECT_FORM.email}
+            <input
+              name="email"
+              type="email"
+              required
+              defaultValue={prefill?.email}
+              className="conversion-input"
+            />
+          </label>
+          <label className="conversion-field">
+            {REFLECT_FORM.birthDate}
+            <input
+              name="birthDate"
+              type="date"
+              required
+              defaultValue={prefill?.birthDate}
+              className="conversion-input"
+            />
+          </label>
+        </>
+      )}
+
       <label className="conversion-field">
         {REFLECT_FORM.opening}
         <textarea

@@ -17,6 +17,7 @@ export async function buildLivingBlueprintSnapshot(input: {
   userId: string;
   reportId: string;
   clientName?: string;
+  email?: string;
 }): Promise<LivingBlueprintSnapshot | null> {
   const report = await getSoulReportById(input.reportId);
   if (!report || report.user_id !== input.userId) return null;
@@ -81,6 +82,8 @@ export async function buildLivingBlueprintSnapshot(input: {
     version: LIVING_BLUEPRINT_VERSION,
     reportId: report.id,
     clientName,
+    email: input.email ?? null,
+    birthDate: soulReportBirthDateIso(report),
     codes: blueprintRef.codes,
     expressionState: expression?.state ?? "dormant",
     journeyStatus: journey?.status ?? "active",

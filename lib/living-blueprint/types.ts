@@ -8,6 +8,8 @@ export type LivingBlueprintSnapshot = {
   version: typeof LIVING_BLUEPRINT_VERSION;
   reportId: string;
   clientName: string;
+  email: string | null;
+  birthDate: string | null;
   codes: { s1: string; s3: string; s2: string; s0: string };
   expressionState: string;
   journeyStatus: string;

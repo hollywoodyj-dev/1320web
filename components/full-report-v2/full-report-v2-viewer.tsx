@@ -1,6 +1,12 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState, type MouseEvent } from "react";
+import {
+  FullReportV2Chrome,
+  resolveZone,
+  zoneToCursorTag,
+} from "@/components/full-report-v2/full-report-v2-chrome";
+import { FullReportV2LayoutGuide } from "@/components/full-report-v2/full-report-v2-layout-guide";
 import { FullReportV2Shell } from "@/components/full-report-v2/full-report-v2-shell";
 import { PageScaler } from "@/components/full-report-v2/page-scaler";
 import { Page00Cover } from "@/components/full-report-v2/pages/page-00-cover";
@@ -53,12 +59,19 @@ const IMPLEMENTED_PAGE_IDS = new Set([
   "page-18-disclaimer",
 ]);
 
+const LAYOUT_GUIDE_KEY = "fr-v2-layout-guide-dismissed";
+
 type FullReportV2ViewerProps = {
   payload: FullReportV2Payload;
+  /** When set, shows top-right close control (e.g. `/account` on entitled report). */
+  closeHref?: string;
 };
 
-export function FullReportV2Viewer({ payload }: FullReportV2ViewerProps) {
+export function FullReportV2Viewer({ payload, closeHref }: FullReportV2ViewerProps) {
   const [activeId, setActiveId] = useState<string>("page-00-cover");
+  const [showLayoutGuide, setShowLayoutGuide] = useState(false);
+  const [cursorTag, setCursorTag] = useState<string | null>(null);
+  const [cursorPos, setCursorPos] = useState<{ x: number; y: number } | null>(null);
 
   const pages = useMemo(
     () => [
@@ -86,74 +99,155 @@ export function FullReportV2Viewer({ payload }: FullReportV2ViewerProps) {
   );
 
   const activePage = pages.find((p) => p.id === activeId) ?? pages[0];
+  const pageIndex = pages.findIndex((p) => p.id === activeId);
   const activeIndex = getPageDefById(activeId)?.index ?? 0;
   const navWindow = getNavPageWindow(activeIndex);
-
   const progressActiveIndex = activeIndex === 0 ? 1 : activeIndex;
 
   const implementedInnerIndices = FULL_REPORT_PAGE_REGISTRY.filter(
     (p) => IMPLEMENTED_PAGE_IDS.has(p.id) && p.index > 0,
   ).map((p) => p.index);
 
-  const goToPageIndex = (pageIndex: number) => {
-    const def = getPageDefByIndex(pageIndex);
+  const goToPageIndex = (targetIndex: number) => {
+    const def = getPageDefByIndex(targetIndex);
     if (def && IMPLEMENTED_PAGE_IDS.has(def.id)) setActiveId(def.id);
   };
 
+  const goPrev = useCallback(() => {
+    if (pageIndex > 0) setActiveId(pages[pageIndex - 1].id);
+  }, [pageIndex, pages]);
+
+  const goNext = useCallback(() => {
+    if (pageIndex < pages.length - 1) setActiveId(pages[pageIndex + 1].id);
+  }, [pageIndex, pages]);
+
+  const dismissLayoutGuide = useCallback(() => {
+    setShowLayoutGuide(false);
+    try {
+      sessionStorage.setItem(LAYOUT_GUIDE_KEY, "1");
+    } catch {
+      // Ignore storage failures in private mode.
+    }
+  }, []);
+
+  useEffect(() => {
+    try {
+      if (!sessionStorage.getItem(LAYOUT_GUIDE_KEY)) setShowLayoutGuide(true);
+    } catch {
+      setShowLayoutGuide(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      if (showLayoutGuide) {
+        if (event.key === "Escape") dismissLayoutGuide();
+        return;
+      }
+      if (event.key === "ArrowRight" || event.key === "PageDown") {
+        event.preventDefault();
+        goNext();
+      }
+      if (event.key === "ArrowLeft" || event.key === "PageUp") {
+        event.preventDefault();
+        goPrev();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [showLayoutGuide, dismissLayoutGuide, goNext, goPrev]);
+
+  const handleStageMouseMove = (event: MouseEvent<HTMLDivElement>) => {
+    if (showLayoutGuide) {
+      setCursorTag(null);
+      setCursorPos(null);
+      return;
+    }
+
+    const rect = event.currentTarget.getBoundingClientRect();
+    const zone = resolveZone(event.clientX, event.clientY, rect, pageIndex, pages.length);
+    setCursorTag(zoneToCursorTag(zone, pageIndex, pages.length));
+    setCursorPos({ x: event.clientX + 14, y: event.clientY + 16 });
+  };
+
+  const handleStageMouseLeave = () => {
+    setCursorTag(null);
+    setCursorPos(null);
+  };
+
+  const closeGuideLabel = closeHref === "/account" ? "Close (×) — back to Account" : "Close (×)";
+
   return (
     <FullReportV2Shell>
-      <div className="fr-v2-nav-dock">
-        <span className="fr-v2-nav-handle" aria-hidden="true" />
-        <nav className="fr-v2-viewer-nav" aria-label="Report pages">
-          <span className="fr-v2-viewer-nav-label">Full Report v2</span>
-          {navWindow.map((pageIndex) => {
-            const def = getPageDefByIndex(pageIndex);
-            if (!def) return null;
+      <FullReportV2Chrome
+        closeHref={closeHref}
+        pageIndex={pageIndex}
+        pageCount={pages.length}
+        onPrev={goPrev}
+        onNext={goNext}
+        cursorTag={cursorTag}
+        cursorPos={cursorPos}
+        showLayoutGuide={showLayoutGuide}
+        onStageMouseMove={handleStageMouseMove}
+        onStageMouseLeave={handleStageMouseLeave}
+      >
+        {showLayoutGuide ? (
+          <FullReportV2LayoutGuide closeLabel={closeGuideLabel} onDismiss={dismissLayoutGuide} />
+        ) : null}
 
-            const isActive = pageIndex === activeIndex;
-            const isImplemented = IMPLEMENTED_PAGE_IDS.has(def.id);
+        <div className="fr-v2-nav-dock">
+            <span className="fr-v2-nav-handle" aria-hidden="true" />
+            <nav className="fr-v2-viewer-nav" aria-label="Report pages">
+              <span className="fr-v2-viewer-nav-label">Full Report</span>
+              {navWindow.map((targetIndex) => {
+                const def = getPageDefByIndex(targetIndex);
+                if (!def) return null;
 
-            if (isActive) {
-              return (
-                <button
-                  key={def.id}
-                  type="button"
-                  data-active="true"
-                  disabled
-                  aria-current="page"
-                >
-                  {def.label}
-                </button>
-              );
-            }
+                const isActive = targetIndex === activeIndex;
+                const isImplemented = IMPLEMENTED_PAGE_IDS.has(def.id);
 
-            if (isImplemented) {
-              return (
-                <button key={def.id} type="button" onClick={() => setActiveId(def.id)}>
-                  {def.label}
-                </button>
-              );
-            }
+                if (isActive) {
+                  return (
+                    <button
+                      key={def.id}
+                      type="button"
+                      data-active="true"
+                      disabled
+                      aria-current="page"
+                    >
+                      {def.label}
+                    </button>
+                  );
+                }
 
-            return (
-              <button key={def.id} type="button" disabled className="fr-v2-viewer-nav--future">
-                {def.label}
-              </button>
-            );
-          })}
-          <ProgressRail
-            activeIndex={progressActiveIndex}
-            availablePageIndices={implementedInnerIndices}
-            onSelectPage={goToPageIndex}
-          />
-        </nav>
-      </div>
+                if (isImplemented) {
+                  return (
+                    <button key={def.id} type="button" onClick={() => setActiveId(def.id)}>
+                      {def.label}
+                    </button>
+                  );
+                }
 
-      <div className="fr-v2-viewer-scroll">
-        <div key={activePage.id} id={activePage.id} className="fr-v2-viewer-page">
-          <PageScaler>{activePage.render()}</PageScaler>
+                return (
+                  <button key={def.id} type="button" disabled className="fr-v2-viewer-nav--future">
+                    {def.label}
+                  </button>
+                );
+              })}
+              <ProgressRail
+                activeIndex={progressActiveIndex}
+                availablePageIndices={implementedInnerIndices}
+                onSelectPage={goToPageIndex}
+              />
+            </nav>
+          </div>
+
+          <div className="fr-v2-viewer-scroll">
+            <div key={activePage.id} id={activePage.id} className="fr-v2-viewer-page">
+              <PageScaler>{activePage.render()}</PageScaler>
+          </div>
         </div>
-      </div>
+      </FullReportV2Chrome>
     </FullReportV2Shell>
   );
 }

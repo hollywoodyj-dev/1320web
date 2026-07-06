@@ -82,7 +82,7 @@ export default async function MyReportPage({ params }: PageProps) {
     <div className="page-shell-inner page-shell--full-report">
       <div className="page-frame page-frame--full-report">
         <main className="inner-main inner-main--full-report">
-          <FullReportV2Viewer payload={payload} />
+          <FullReportV2Viewer payload={payload} closeHref="/account" />
         </main>
       </div>
     </div>

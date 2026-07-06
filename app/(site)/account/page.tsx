@@ -87,20 +87,6 @@ export default async function AccountPage() {
         <SetPasswordForm hasPassword={account.hasPassword} />
       </SectionCard>
 
-      <SectionCard title={ACCOUNT_COPY.reflectTitle} id="reflect">
-        <p>{ACCOUNT_COPY.reflectBody}</p>
-        {reflectPrefill ? (
-          <>
-            <p className="mt-3 text-sm opacity-90">{ACCOUNT_COPY.reflectAccountLead}</p>
-            <div className="mt-4">
-              <ReflectEntryForm compact prefill={reflectPrefill} />
-            </div>
-          </>
-        ) : (
-          <p className="mt-3 text-sm opacity-90">{ACCOUNT_COPY.reflectNeedsBirthDate}</p>
-        )}
-      </SectionCard>
-
       {account.codeString ? (
         <SectionCard title={ACCOUNT_COPY.codesTitle}>
           <p className="font-mono text-sm">{account.codeString}</p>
@@ -146,6 +132,20 @@ export default async function AccountPage() {
               {ACCOUNT_COPY.unlockFullReport}
             </Link>
           </>
+        )}
+      </SectionCard>
+
+      <SectionCard title={ACCOUNT_COPY.reflectTitle} id="reflect">
+        <p>{ACCOUNT_COPY.reflectBody}</p>
+        {reflectPrefill ? (
+          <>
+            <p className="mt-3 text-sm opacity-90">{ACCOUNT_COPY.reflectAccountLead}</p>
+            <div className="mt-4">
+              <ReflectEntryForm compact prefill={reflectPrefill} />
+            </div>
+          </>
+        ) : (
+          <p className="mt-3 text-sm opacity-90">{ACCOUNT_COPY.reflectNeedsBirthDate}</p>
         )}
       </SectionCard>
 

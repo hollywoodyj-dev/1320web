@@ -49,6 +49,13 @@ export async function POST(request: Request) {
     });
   } catch (error) {
     console.error("[auth/login] failed", error);
+    const message = error instanceof Error ? error.message : String(error);
+    if (/too many connection/i.test(message)) {
+      return NextResponse.json(
+        { ok: false, error: "Sign-in is temporarily unavailable. Please try again in a minute." },
+        { status: 503 },
+      );
+    }
     return NextResponse.json({ ok: false, error: "Could not sign in." }, { status: 500 });
   }
 }

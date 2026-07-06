@@ -40,7 +40,7 @@ export function MagicLinkVerifyForm({ token, nextPath }: MagicLinkVerifyFormProp
   return (
     <div className="space-y-4">
       <button type="button" className="gold-button" onClick={onContinue} disabled={loading}>
-        {loading ? "OPENING REPORT…" : "CONTINUE TO MY FULL REPORT"}
+        {loading ? "SIGNING IN…" : "CONTINUE"}
       </button>
       {status ? <p className="conversion-status">{status}</p> : null}
     </div>

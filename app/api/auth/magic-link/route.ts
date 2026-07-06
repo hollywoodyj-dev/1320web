@@ -6,7 +6,15 @@ import { isDatabaseConfigured } from "@/lib/platform-config";
 type MagicLinkBody = {
   email?: string;
   reportId?: string;
+  next?: string;
 };
+
+function safeNextPath(value: unknown): string | undefined {
+  if (typeof value !== "string" || !value.startsWith("/") || value.startsWith("//")) {
+    return undefined;
+  }
+  return value;
+}
 
 function isValidEmail(value: unknown): value is string {
   return typeof value === "string" && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
@@ -35,6 +43,7 @@ export async function POST(request: Request) {
     email: user.email,
     reportId: body.reportId,
     purpose: "login",
+    nextPath: safeNextPath(body.next) ?? (body.reportId ? undefined : "/account"),
   });
 
   return NextResponse.json({

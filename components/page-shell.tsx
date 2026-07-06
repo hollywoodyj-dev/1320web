@@ -10,6 +10,7 @@ type PageShellProps = {
   children: ReactNode;
   /** Server-decided lead persistence flag, forwarded to the footer subscribe slot. */
   leadsEnabled?: boolean;
+  headerAccount?: { label: string; entitledReportId: string | null } | null;
 };
 
 function isImmersiveReportRoute(pathname: string | null): boolean {
@@ -31,7 +32,7 @@ function isMobileReportRoute(pathname: string | null): boolean {
 }
 
 /** Cosmic layout for inner routes — homepage keeps its own shell in `app/page.tsx`. */
-export function PageShell({ children, leadsEnabled }: PageShellProps) {
+export function PageShell({ children, leadsEnabled, headerAccount }: PageShellProps) {
   const pathname = usePathname();
   const immersive = isImmersiveReportRoute(pathname);
   const mobileReport = isMobileReportRoute(pathname);
@@ -71,7 +72,7 @@ export function PageShell({ children, leadsEnabled }: PageShellProps) {
       <div className="page-glow page-glow-left" aria-hidden="true" />
       <div className="page-glow page-glow-right" aria-hidden="true" />
       <div className="page-frame">
-        <SiteHeader />
+        <SiteHeader headerAccount={headerAccount} />
         <div id="main-content" className="inner-main" tabIndex={-1}>
           {children}
         </div>

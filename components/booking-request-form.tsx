@@ -6,13 +6,23 @@ import { submitLead, trackEvent } from "@/lib/analytics";
 import { BOOKING_FINAL, READING_OPTIONS } from "@/lib/booking-content";
 import { FORM_CONSENT, FORM_MESSAGES } from "@/lib/form-consent";
 
-type BookingRequestFormProps = {
-  defaultReadingType?: string;
+export type BookingAccountProfile = {
+  email: string;
+  firstName: string | null;
+  lastName: string | null;
+  birthDate: string | null;
+  codeString: string | null;
 };
 
-export function BookingRequestForm({ defaultReadingType }: BookingRequestFormProps) {
+type BookingRequestFormProps = {
+  defaultReadingType?: string;
+  account?: BookingAccountProfile | null;
+};
+
+export function BookingRequestForm({ defaultReadingType, account }: BookingRequestFormProps) {
   const [status, setStatus] = useState("");
   const [prepUrl, setPrepUrl] = useState("");
+  const signedIn = Boolean(account?.email);
 
   function onFocus() {
     trackEvent("booking_click", { source: "booking_form" });
@@ -22,23 +32,25 @@ export function BookingRequestForm({ defaultReadingType }: BookingRequestFormPro
     event.preventDefault();
     const form = event.currentTarget;
     const formData = new FormData(form);
-    const firstName = String(formData.get("firstName") ?? "").trim();
-    const lastName = String(formData.get("lastName") ?? "").trim();
-    const email = String(formData.get("email") ?? "").trim();
-    const birthDate = String(formData.get("birthDate") ?? "").trim();
-    const code = String(formData.get("code") ?? "").trim();
     const readingType = String(formData.get("readingType") ?? "").trim();
     const timezone = String(formData.get("timezone") ?? "").trim();
     const message = String(formData.get("message") ?? "").trim();
     const consent = formData.get("consent") === "on";
 
-    if (!firstName || !lastName || !email || !birthDate || !readingType || !consent) {
+    const firstName = account?.firstName ?? String(formData.get("firstName") ?? "").trim();
+    const lastName = account?.lastName ?? String(formData.get("lastName") ?? "").trim();
+    const email = account?.email ?? String(formData.get("email") ?? "").trim();
+    const birthDate = account?.birthDate ?? String(formData.get("birthDate") ?? "").trim();
+    const codeRaw = account?.codeString ?? String(formData.get("code") ?? "").trim();
+    const code = codeRaw || undefined;
+
+    if (!firstName || !lastName || !email || !birthDate || !readingType || !message || !consent) {
       setStatus(FORM_MESSAGES.bookingError);
       trackEvent("booking_submit", { status: "error" });
       return;
     }
 
-    trackEvent("booking_submit", { status: "success", readingType });
+    trackEvent("booking_submit", { status: "success", readingType, signedIn: Boolean(account) });
 
     const response = await fetch("/api/personal-integration/request", {
       method: "POST",
@@ -50,7 +62,7 @@ export function BookingRequestForm({ defaultReadingType }: BookingRequestFormPro
         firstName,
         lastName,
         birthDate,
-        code: code || undefined,
+        code,
         readingType,
         timezone: timezone || undefined,
         message,
@@ -79,7 +91,7 @@ export function BookingRequestForm({ defaultReadingType }: BookingRequestFormPro
         firstName,
         lastName,
         birthDate,
-        code: code || undefined,
+        code,
         readingType,
         timezone: timezone || undefined,
         message: message || undefined,
@@ -98,34 +110,70 @@ export function BookingRequestForm({ defaultReadingType }: BookingRequestFormPro
     form.reset();
   }
 
+  const profileComplete =
+    account &&
+    account.firstName &&
+    account.lastName &&
+    account.birthDate &&
+    account.email;
+
   return (
     <form className="conversion-form" id="booking-form" onSubmit={onSubmit} onFocus={onFocus}>
-      <div className="conversion-form-row">
-        <label className="conversion-field">
-          First Name
-          <input name="firstName" required className="conversion-input" />
-        </label>
-        <label className="conversion-field">
-          Last Name
-          <input name="lastName" required className="conversion-input" />
-        </label>
-      </div>
-      <label className="conversion-field">
-        Email
-        <input name="email" type="email" required className="conversion-input" />
-      </label>
-      <label className="conversion-field">
-        Birth Date
-        <input name="birthDate" type="date" required className="conversion-input" />
-      </label>
-      <label className="conversion-field">
-        Your 1320 Code <span className="conversion-optional">(optional)</span>
-        <input
-          name="code"
-          className="conversion-input"
-          placeholder="e.g. S1-18 / S3-110 / S2-27 / S0-07"
-        />
-      </label>
+      {profileComplete ? (
+        <div className="glass-card mb-4 p-4 text-sm space-y-1">
+          <p className="font-medium">Booking as {account.firstName} {account.lastName}</p>
+          <p className="opacity-80">{account.email} · {account.birthDate}</p>
+          {account.codeString ? (
+            <p className="font-mono text-xs opacity-80">{account.codeString}</p>
+          ) : null}
+          <Link href="/account" className="blueprint-secondary-link text-xs">
+            Update profile
+          </Link>
+        </div>
+      ) : (
+        <>
+          <div className="conversion-form-row">
+            <label className="conversion-field">
+              First Name
+              <input name="firstName" required className="conversion-input" defaultValue={account?.firstName ?? ""} />
+            </label>
+            <label className="conversion-field">
+              Last Name
+              <input name="lastName" required className="conversion-input" defaultValue={account?.lastName ?? ""} />
+            </label>
+          </div>
+          <label className="conversion-field">
+            Email
+            <input
+              name="email"
+              type="email"
+              required
+              className="conversion-input"
+              defaultValue={account?.email ?? ""}
+            />
+          </label>
+          <label className="conversion-field">
+            Birth Date
+            <input
+              name="birthDate"
+              type="date"
+              required
+              className="conversion-input"
+              defaultValue={account?.birthDate ?? ""}
+            />
+          </label>
+          <label className="conversion-field">
+            Your 1320 Code <span className="conversion-optional">(optional)</span>
+            <input
+              name="code"
+              className="conversion-input"
+              placeholder="e.g. S1-18 / S3-110 / S2-27 / S0-07"
+              defaultValue={account?.codeString ?? ""}
+            />
+          </label>
+        </>
+      )}
+
       <label className="conversion-field">
         Preferred Session Type
         <select

@@ -9,6 +9,9 @@ type UnlockCheckoutFormProps = {
   defaultYear?: number;
   defaultMonth?: number;
   defaultDay?: number;
+  defaultEmail?: string;
+  defaultFirstName?: string;
+  profileLocked?: boolean;
   source?: string;
 };
 
@@ -16,6 +19,9 @@ export function UnlockCheckoutForm({
   defaultYear,
   defaultMonth,
   defaultDay,
+  defaultEmail,
+  defaultFirstName,
+  profileLocked = false,
   source = "checkout_page",
 }: UnlockCheckoutFormProps) {
   const [status, setStatus] = useState("");
@@ -75,52 +81,82 @@ export function UnlockCheckoutForm({
 
   return (
     <form className="conversion-form checkout-form" onSubmit={onSubmit}>
-      <label className="conversion-field">
-        Email
-        <input name="email" type="email" required className="conversion-input" placeholder="you@example.com" />
-      </label>
-      <label className="conversion-field">
-        First Name <span className="conversion-optional">(optional)</span>
-        <input name="firstName" className="conversion-input" placeholder="Your first name" />
-      </label>
-      <div className="conversion-form-row">
-        <label className="conversion-field">
-          Birth Year
-          <input
-            name="year"
-            type="number"
-            required
-            className="conversion-input"
-            defaultValue={defaultYear}
-            min={1900}
-            max={2100}
-          />
-        </label>
-        <label className="conversion-field">
-          Month
-          <input
-            name="month"
-            type="number"
-            required
-            className="conversion-input"
-            defaultValue={defaultMonth}
-            min={1}
-            max={12}
-          />
-        </label>
-        <label className="conversion-field">
-          Day
-          <input
-            name="day"
-            type="number"
-            required
-            className="conversion-input"
-            defaultValue={defaultDay}
-            min={1}
-            max={31}
-          />
-        </label>
-      </div>
+      {profileLocked && defaultEmail ? (
+        <div className="glass-card mb-4 p-4 text-sm space-y-1">
+          <p>
+            Checkout as <strong>{defaultFirstName || "you"}</strong> ({defaultEmail})
+          </p>
+          <p className="opacity-80">
+            Birth date: {defaultYear}-{String(defaultMonth).padStart(2, "0")}-{String(defaultDay).padStart(2, "0")}
+          </p>
+          <input type="hidden" name="email" value={defaultEmail} />
+          <input type="hidden" name="firstName" value={defaultFirstName ?? ""} />
+          <input type="hidden" name="year" value={defaultYear} />
+          <input type="hidden" name="month" value={defaultMonth} />
+          <input type="hidden" name="day" value={defaultDay} />
+        </div>
+      ) : (
+        <>
+          <label className="conversion-field">
+            Email
+            <input
+              name="email"
+              type="email"
+              required
+              className="conversion-input"
+              placeholder="you@example.com"
+              defaultValue={defaultEmail}
+            />
+          </label>
+          <label className="conversion-field">
+            First Name <span className="conversion-optional">(optional)</span>
+            <input
+              name="firstName"
+              className="conversion-input"
+              placeholder="Your first name"
+              defaultValue={defaultFirstName}
+            />
+          </label>
+          <div className="conversion-form-row">
+            <label className="conversion-field">
+              Birth Year
+              <input
+                name="year"
+                type="number"
+                required
+                className="conversion-input"
+                defaultValue={defaultYear}
+                min={1900}
+                max={2100}
+              />
+            </label>
+            <label className="conversion-field">
+              Month
+              <input
+                name="month"
+                type="number"
+                required
+                className="conversion-input"
+                defaultValue={defaultMonth}
+                min={1}
+                max={12}
+              />
+            </label>
+            <label className="conversion-field">
+              Day
+              <input
+                name="day"
+                type="number"
+                required
+                className="conversion-input"
+                defaultValue={defaultDay}
+                min={1}
+                max={31}
+              />
+            </label>
+          </div>
+        </>
+      )}
       <label className="conversion-consent">
         <input name="consent" type="checkbox" required className="mt-0.5" />
         <span>

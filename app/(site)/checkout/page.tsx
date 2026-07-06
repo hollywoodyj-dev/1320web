@@ -3,6 +3,7 @@ import Link from "next/link";
 import { MagicLinkRequestForm } from "@/components/checkout/magic-link-request-form";
 import { UnlockCheckoutForm } from "@/components/checkout/unlock-checkout-form";
 import { SectionCard } from "@/components/section-card";
+import { accountBirthDateParts, getAccountContext } from "@/lib/auth/account-context";
 import { resolveBirthDateFromRequest } from "@/lib/resolve-birth-date";
 import { isDatabaseConfigured, isStripeConfigured } from "@/lib/platform-config";
 
@@ -20,6 +21,10 @@ export default async function CheckoutPage({
 }) {
   const params = await searchParams;
   const birth = await resolveBirthDateFromRequest(params);
+  const account = await getAccountContext();
+  const accountBirth = account ? accountBirthDateParts(account.birthDate) : null;
+  const checkoutBirth = accountBirth ?? birth;
+  const profileLocked = Boolean(account?.profileComplete && checkoutBirth);
   const configured = isDatabaseConfigured() && isStripeConfigured();
   const authError =
     typeof params.error === "string"
@@ -57,12 +62,30 @@ export default async function CheckoutPage({
             Return to Full Report overview
           </Link>
         </SectionCard>
+      ) : account && account.entitledReportId ? (
+        <SectionCard title="Full Report Already Unlocked">
+          <p>Your Full Report is ready.</p>
+          <Link href={`/my-report/${account.entitledReportId}`} className="gold-button mt-4 inline-flex">
+            OPEN FULL REPORT
+          </Link>
+        </SectionCard>
       ) : (
         <SectionCard title="Purchase Full Report">
+          {!account ? (
+            <p className="mb-4 text-sm opacity-90">
+              <Link href="/signup?next=/checkout" className="blueprint-secondary-link">
+                Create an account
+              </Link>{" "}
+              to save your details once — checkout becomes one step.
+            </p>
+          ) : null}
           <UnlockCheckoutForm
-            defaultYear={birth?.year}
-            defaultMonth={birth?.month}
-            defaultDay={birth?.day}
+            defaultYear={checkoutBirth?.year}
+            defaultMonth={checkoutBirth?.month}
+            defaultDay={checkoutBirth?.day}
+            defaultEmail={account?.user.email}
+            defaultFirstName={account?.user.first_name ?? undefined}
+            profileLocked={profileLocked}
             source="checkout_page"
           />
         </SectionCard>

@@ -6,8 +6,19 @@ import { usePathname } from "next/navigation";
 import { TopbarShell } from "@/components/topbar-shell";
 import { GENERATE_CODE_CTA, isNavActive, PRIMARY_NAV } from "@/lib/site-nav";
 
-export function SiteHeader() {
+type SiteHeaderProps = {
+  headerAccount?: { label: string; entitledReportId: string | null } | null;
+};
+
+export function SiteHeader({ headerAccount }: SiteHeaderProps) {
   const pathname = usePathname();
+
+  const nav = [
+    ...PRIMARY_NAV,
+    headerAccount
+      ? { href: "/account", label: "MY ACCOUNT", matchPrefix: true as const }
+      : { href: "/login", label: "SIGN IN", matchPrefix: true as const },
+  ];
 
   return (
     <TopbarShell
@@ -35,10 +46,14 @@ export function SiteHeader() {
           </Link>
         </div>
       }
-      nav={PRIMARY_NAV}
+      nav={nav}
       linkClassName={(item) => (isNavActive(pathname, item) ? "active" : undefined)}
-      ctaHref={GENERATE_CODE_CTA.href}
-      ctaLabel={GENERATE_CODE_CTA.label}
+      ctaHref={
+        headerAccount?.entitledReportId
+          ? `/my-report/${headerAccount.entitledReportId}`
+          : GENERATE_CODE_CTA.href
+      }
+      ctaLabel={headerAccount?.entitledReportId ? "MY FULL REPORT" : GENERATE_CODE_CTA.label}
     />
   );
 }

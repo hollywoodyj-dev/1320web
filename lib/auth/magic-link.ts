@@ -10,6 +10,7 @@ export async function issueMagicLink(input: {
   email: string;
   reportId?: string;
   purpose?: string;
+  nextPath?: string;
 }): Promise<{ url: string; rawToken: string }> {
   const db = getSql();
   const rawToken = createRawToken();
@@ -28,7 +29,12 @@ export async function issueMagicLink(input: {
     )
   `;
 
-  const redirect = input.reportId ? `/my-report/${input.reportId}` : "/my-report";
+  const redirect =
+    input.nextPath?.startsWith("/")
+      ? input.nextPath
+      : input.reportId
+        ? `/my-report/${input.reportId}`
+        : "/my-report";
   const url = `${getSiteUrl()}/auth/verify?token=${rawToken}&next=${encodeURIComponent(redirect)}`;
 
   await sendMagicLinkEmail({

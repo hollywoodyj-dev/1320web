@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SAMPLE_REPORT_HREF } from "@/lib/site-nav";
 import Link from "next/link";
+import { BookingLoginGate } from "@/components/auth/booking-login-gate";
 import { BookingRequestForm } from "@/components/booking-request-form";
 import { FaqSection } from "@/components/conversion/faq-section";
 import { SectionCard } from "@/components/section-card";
@@ -23,6 +24,7 @@ import {
   WHAT_WE_EXPLORE,
 } from "@/lib/booking-content";
 import { GENERATE_CODE_CTA } from "@/lib/site-nav";
+import { getAccountContext } from "@/lib/auth/account-context";
 
 export const metadata: Metadata = {
   title: BOOKING_META.title,
@@ -46,6 +48,16 @@ export default async function BookingPage({
 }) {
   const params = await searchParams;
   const defaultReadingType = readType(params);
+  const account = await getAccountContext();
+  const bookingProfile = account
+    ? {
+        email: account.user.email,
+        firstName: account.user.first_name,
+        lastName: account.user.last_name,
+        birthDate: account.birthDate,
+        codeString: account.codeString,
+      }
+    : null;
 
   return (
     <div className="conversion-page space-y-5">
@@ -136,7 +148,11 @@ export default async function BookingPage({
       </SectionCard>
 
       <SectionCard title={BOOKING_FORM_SECTION.title} id="booking-form">
-        <BookingRequestForm defaultReadingType={defaultReadingType} />
+        {account ? (
+          <BookingRequestForm defaultReadingType={defaultReadingType} account={bookingProfile} />
+        ) : (
+          <BookingLoginGate nextPath="/booking" />
+        )}
       </SectionCard>
 
       <SectionCard title={AFTER_BOOKING.title}>

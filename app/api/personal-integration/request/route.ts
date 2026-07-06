@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { getAccountContext } from "@/lib/auth/account-context";
 import { createPersonalIntegrationRequest } from "@/lib/personal-integration/create-booking-request";
 import { isPersonalIntegrationSessionVariant } from "@/lib/personal-integration/session-variants";
 import { isDatabaseConfigured } from "@/lib/platform-config";
@@ -13,7 +14,7 @@ function isValidEmail(value: unknown): value is string {
   return typeof value === "string" && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
 }
 
-/** FS-006 — Personal Integration booking request → platform session + lead. */
+/** FS-006 — Personal Integration booking (session-aware when signed in). */
 export async function POST(request: Request) {
   let body: RequestBody;
 
@@ -23,16 +24,23 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "Invalid JSON body" }, { status: 400 });
   }
 
-  const firstName = body.firstName?.trim();
-  const lastName = body.lastName?.trim();
-  const email = body.email?.trim();
-  const birthDate = body.birthDate?.trim();
+  const account = await getAccountContext();
+
+  const firstName = account?.user.first_name?.trim() || body.firstName?.trim();
+  const lastName = account?.user.last_name?.trim() || body.lastName?.trim();
+  const email = account?.user.email || body.email?.trim();
+  const birthDate = account?.birthDate || body.birthDate?.trim();
   const readingType = body.readingType?.trim();
   const message = body.message?.trim();
 
   if (!firstName || !lastName || !isValidEmail(email) || !birthDate || !readingType || !message) {
     return NextResponse.json(
-      { ok: false, error: "Missing required fields for session request." },
+      {
+        ok: false,
+        error: account
+          ? "Complete your session details below."
+          : "Sign in or complete all profile fields to book.",
+      },
       { status: 400 },
     );
   }
@@ -57,7 +65,7 @@ export async function POST(request: Request) {
       readingType,
       timezone: body.timezone?.trim(),
       message,
-      code: body.code?.trim(),
+      code: body.code?.trim() || account?.codeString || undefined,
     });
 
     return NextResponse.json({

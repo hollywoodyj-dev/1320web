@@ -74,9 +74,9 @@ export function ReportModuleCard({ module }: ReportModuleCardProps) {
             </Link>
           </div>
         ) : (
-          <button type="button" className="report-module-insight">
-            VIEW FULL INSIGHT
-          </button>
+          <Link href="/checkout" className="report-module-insight">
+            VIEW FULL REPORT
+          </Link>
         )}
 
         {module.reflectionQuestion ? (

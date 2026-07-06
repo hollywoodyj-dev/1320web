@@ -97,3 +97,12 @@ export async function getUserPasswordHashByEmail(
   if (!rows[0]) return null;
   return { id: rows[0].id, passwordHash: rows[0].password_hash };
 }
+
+export async function updateUserPassword(userId: string, passwordHash: string): Promise<void> {
+  const db = getSql();
+  await db`
+    UPDATE users
+    SET password_hash = ${passwordHash}, updated_at = NOW()
+    WHERE id = ${userId}
+  `;
+}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { SignOutButton } from "@/components/auth/sign-out-button";
+import { SetPasswordForm } from "@/components/auth/set-password-form";
 import { SectionCard } from "@/components/section-card";
 import { getAccountContext } from "@/lib/auth/account-context";
 import { ACCOUNT_COPY, ACCOUNT_META } from "@/lib/auth/account-content";
@@ -50,6 +51,7 @@ export default async function AccountPage() {
             <dd>{account.user.email}</dd>
           </div>
         </dl>
+        <SetPasswordForm hasPassword={account.hasPassword} />
       </SectionCard>
 
       {account.codeString ? (

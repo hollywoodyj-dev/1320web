@@ -3161,6 +3161,32 @@ button {
   color: #b9c1d0;
 }
 
+.account-set-password {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.account-set-password-lead {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: rgba(248, 244, 234, 0.82);
+}
+
+.account-set-password-form {
+  display: grid;
+  gap: 0.85rem;
+  max-width: 28rem;
+}
+
+.account-set-password-submit {
+  justify-self: start;
+}
+
+.account-set-password-success {
+  color: #9fd4a8;
+}
+
 @media (max-width: 520px) {
   .auth-card {
     padding: 26px 20px 22px;
@@ -4644,6 +4670,7 @@ body:has(.page-shell--mobile-report) {
 }
 
 .report-module-insight {
+  display: block;
   width: 100%;
   padding: 12px;
   border-radius: 10px;
@@ -4653,6 +4680,8 @@ body:has(.page-shell--mobile-report) {
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.05em;
+  text-align: center;
+  text-decoration: none;
   cursor: pointer;
 }
 

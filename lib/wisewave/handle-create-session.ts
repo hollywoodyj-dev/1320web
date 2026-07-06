@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { createWisewaveSession, createWisewaveSessionForUser, processWisewaveTurn } from "@/lib/wisewave";
 import { getCurrentUser } from "@/lib/auth/session";
 import { getLatestSoulReportForUser, getSoulReportById } from "@/lib/db/reports";
+import { getUserByEmail } from "@/lib/db/users";
+import type { UserRow } from "@/lib/db/types";
 
 export type CreateWisewaveSessionBody = {
   email?: string;
@@ -25,58 +27,79 @@ function parseAccountBirthDate(userBirth: string | Date | null | undefined, repo
   return null;
 }
 
+async function resolveAccountReflectUser(body: CreateWisewaveSessionBody): Promise<UserRow | null> {
+  const sessionUser = await getCurrentUser();
+  if (sessionUser) return sessionUser;
+
+  const email = body.email?.trim().toLowerCase();
+  if (!body.useAccountProfile || !isValidEmail(email)) return null;
+
+  return getUserByEmail(email);
+}
+
+async function handleAccountReflectSession(body: CreateWisewaveSessionBody) {
+  const openingMessage = body.openingMessage?.trim();
+  if (!openingMessage) {
+    return NextResponse.json({ ok: false, error: "What brings you here today is required." }, { status: 400 });
+  }
+
+  const user = await resolveAccountReflectUser(body);
+  if (!user) {
+    return NextResponse.json(
+      { ok: false, error: "Please sign in again, then start your reflection from My Account." },
+      { status: 401 },
+    );
+  }
+
+  const report = body.reportId ? await getSoulReportById(body.reportId) : await getLatestSoulReportForUser(user.id);
+  if (!report || report.user_id !== user.id) {
+    return NextResponse.json(
+      { ok: false, error: "We could not find a Soul Code report for your account." },
+      { status: 400 },
+    );
+  }
+
+  if (!parseAccountBirthDate(user.birth_date, report.birth_date as string | Date | null)) {
+    return NextResponse.json(
+      { ok: false, error: "Add your birth date to your profile before starting a reflection." },
+      { status: 400 },
+    );
+  }
+
+  try {
+    const clientName =
+      body.firstName?.trim() || user.first_name?.trim() || user.email.split("@")[0] || "Friend";
+    const result = await createWisewaveSessionForUser({
+      userId: user.id,
+      reportId: report.id,
+      clientName,
+      openingMessage,
+    });
+
+    const firstTurn = await processWisewaveTurn({
+      sessionId: result.sessionId,
+      accessToken: result.accessToken,
+      message: openingMessage,
+    });
+
+    return NextResponse.json({
+      ok: true,
+      sessionId: result.sessionId,
+      accessToken: result.accessToken,
+      chatUrl: result.chatUrl,
+      reportId: result.reportId,
+      firstTurn,
+    });
+  } catch (error) {
+    console.error("[wisewave] account reflect session failed", error);
+    return NextResponse.json({ ok: false, error: "Failed to create Wisewave session." }, { status: 500 });
+  }
+}
+
 /** Shared create-session logic for Wisewave API and public Reflect UI. */
 export async function handleCreateWisewaveSession(body: CreateWisewaveSessionBody) {
-  const openingMessage = body.openingMessage?.trim();
-  const user = await getCurrentUser();
-
-  if (user && body.useAccountProfile) {
-    if (!openingMessage) {
-      return NextResponse.json({ ok: false, error: "What brings you here today is required." }, { status: 400 });
-    }
-
-    let report = body.reportId ? await getSoulReportById(body.reportId) : await getLatestSoulReportForUser(user.id);
-    if (!report || report.user_id !== user.id) {
-      return NextResponse.json(
-        { ok: false, error: "We could not find a Soul Code report for your account." },
-        { status: 400 },
-      );
-    }
-
-    if (!parseAccountBirthDate(user.birth_date, report.birth_date as string | Date | null)) {
-      return NextResponse.json(
-        { ok: false, error: "Add your birth date to your profile before starting a reflection." },
-        { status: 400 },
-      );
-    }
-
-    try {
-      const clientName = user.first_name?.trim() || user.email.split("@")[0] || "Friend";
-      const result = await createWisewaveSessionForUser({
-        userId: user.id,
-        reportId: report.id,
-        clientName,
-        openingMessage,
-      });
-
-      const firstTurn = await processWisewaveTurn({
-        sessionId: result.sessionId,
-        accessToken: result.accessToken,
-        message: openingMessage,
-      });
-
-      return NextResponse.json({
-        ok: true,
-        sessionId: result.sessionId,
-        accessToken: result.accessToken,
-        chatUrl: result.chatUrl,
-        reportId: result.reportId,
-        firstTurn,
-      });
-    } catch (error) {
-      console.error("[wisewave] account reflect session failed", error);
-      return NextResponse.json({ ok: false, error: "Failed to create Wisewave session." }, { status: 500 });
-    }
+  if (body.useAccountProfile) {
+    return handleAccountReflectSession(body);
   }
 
   const email = body.email?.trim();

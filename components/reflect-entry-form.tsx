@@ -42,9 +42,13 @@ export function ReflectEntryForm({ prefill, compact = false }: ReflectEntryFormP
         const response = await fetch("/api/reflect/start", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
+          credentials: "same-origin",
           body: JSON.stringify({
             openingMessage,
             useAccountProfile: true,
+            firstName: prefill?.firstName,
+            email: prefill?.email,
+            birthDate: prefill?.birthDate,
             reportId: prefill?.reportId,
           }),
         });

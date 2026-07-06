@@ -5,6 +5,8 @@ import {
   type CreateWisewaveSessionBody,
 } from "@/lib/wisewave/handle-create-session";
 
+export const dynamic = "force-dynamic";
+
 /** Public Reflect UI — start a Wisewave session (no WISEWAVE_API_KEY). */
 export async function POST(request: Request) {
   if (!isDatabaseConfigured()) {

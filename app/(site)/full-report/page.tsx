@@ -26,6 +26,12 @@ export const metadata: Metadata = {
   description: FULL_REPORT_META.description,
 };
 
+const SEGMENT_BG_CODES = new Set(["S1", "S3", "S2", "S0"]);
+
+function segmentBgClass(code: string): string {
+  return SEGMENT_BG_CODES.has(code) ? ` segment-bg segment-bg--${code.toLowerCase()}` : "";
+}
+
 export default function FullReportPage() {
   return (
     <div className="conversion-page space-y-5">
@@ -76,7 +82,10 @@ export default function FullReportPage() {
       <SectionCard title={FULL_INCLUDES.title}>
         <div className="conversion-module-grid">
           {FULL_INCLUDES.modules.map((module) => (
-            <article key={module.code} className="conversion-module-card">
+            <article
+              key={module.code}
+              className={`conversion-module-card${segmentBgClass(module.code)}`}
+            >
               <p className="conversion-module-code">{module.code}</p>
               <h3>{module.title}</h3>
               <p>{module.text}</p>
@@ -112,15 +121,15 @@ export default function FullReportPage() {
 
       <SectionCard title="Unlock Your Full Report" id="waitlist">
         <p className="mb-4">
-          Purchase the Full Soul Origin Report once, then return anytime via magic link. You can also
-          join the waitlist for launch updates.
+          Purchase the Full Soul Origin Report once, then return anytime by signing in with your account.
+          You can also join the waitlist for launch updates.
         </p>
         <div className="flex flex-wrap gap-3 mb-5">
           <Link href="/checkout" className="gold-button inline-flex">
             GO TO CHECKOUT
           </Link>
-          <Link href="/my-report" className="blueprint-secondary-link">
-            ALREADY PURCHASED?
+          <Link href="/login?next=/my-report" className="blueprint-secondary-link">
+            ALREADY PURCHASED? SIGN IN
           </Link>
         </div>
         <WaitlistForm source="full_report_waitlist" buttonText="JOIN LAUNCH UPDATES" />
@@ -137,17 +146,19 @@ export default function FullReportPage() {
         </Link>
       </section>
 
-      <SectionCard title={WHO_FOR.title}>
-        <ul className="conversion-bullet-list">
-          {WHO_FOR.items.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </SectionCard>
+      <div className="conversion-pair">
+        <SectionCard title={WHO_FOR.title}>
+          <ul className="conversion-bullet-list">
+            {WHO_FOR.items.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </SectionCard>
 
-      <SectionCard title={WHO_NOT_FOR.title}>
-        <p>{WHO_NOT_FOR.body}</p>
-      </SectionCard>
+        <SectionCard title={WHO_NOT_FOR.title}>
+          <p>{WHO_NOT_FOR.body}</p>
+        </SectionCard>
+      </div>
 
       <FaqSection items={FULL_REPORT_FAQ} />
 

@@ -171,7 +171,7 @@ export function UnlockCheckoutForm({
       </button>
       {status ? <p className="conversion-status">{status}</p> : null}
       <p className="checkout-form-note">
-        One-time purchase. After payment you will receive a magic link to return to your Full Report anytime.
+        One-time purchase. After payment, sign in with your account password to return to your Full Report anytime.
       </p>
     </form>
   );

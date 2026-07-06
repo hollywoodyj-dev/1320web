@@ -33,6 +33,7 @@ export type UpsertUserAccountInput = {
   firstName: string;
   lastName: string;
   birthDate: string;
+  passwordHash?: string;
 };
 
 /** Signup — save profile once (name + birth date) and return user row. */
@@ -40,17 +41,19 @@ export async function upsertUserAccount(input: UpsertUserAccountInput): Promise<
   const db = getSql();
   const normalized = input.email.trim().toLowerCase();
   const rows = await db<UserRow[]>`
-    INSERT INTO users (email, first_name, last_name, birth_date)
+    INSERT INTO users (email, first_name, last_name, birth_date, password_hash)
     VALUES (
       ${normalized},
       ${input.firstName.trim()},
       ${input.lastName.trim()},
-      ${input.birthDate}
+      ${input.birthDate},
+      ${input.passwordHash ?? null}
     )
     ON CONFLICT (email) DO UPDATE SET
       first_name = COALESCE(EXCLUDED.first_name, users.first_name),
       last_name = COALESCE(EXCLUDED.last_name, users.last_name),
       birth_date = COALESCE(EXCLUDED.birth_date, users.birth_date),
+      password_hash = COALESCE(EXCLUDED.password_hash, users.password_hash),
       updated_at = NOW()
     RETURNING id, email, first_name, last_name, birth_date, created_at
   `;
@@ -78,4 +81,19 @@ export async function getUserByEmail(email: string): Promise<UserRow | null> {
     LIMIT 1
   `;
   return rows[0] ? normalizeUserRow(rows[0]) : null;
+}
+
+export async function getUserPasswordHashByEmail(
+  email: string,
+): Promise<{ id: string; passwordHash: string | null } | null> {
+  const db = getSql();
+  const normalized = email.trim().toLowerCase();
+  const rows = await db<{ id: string; password_hash: string | null }[]>`
+    SELECT id, password_hash
+    FROM users
+    WHERE email = ${normalized}
+    LIMIT 1
+  `;
+  if (!rows[0]) return null;
+  return { id: rows[0].id, passwordHash: rows[0].password_hash };
 }

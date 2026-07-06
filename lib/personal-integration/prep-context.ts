@@ -44,7 +44,7 @@ export async function getPersonalIntegrationPrepContext(sessionId: string, prepT
 export async function savePersonalIntegrationPrep(input: {
   sessionId: string;
   prepToken: string;
-  growthEdge: string;
+  growthEdge?: string;
   prepNotes?: string;
 }) {
   const session = await getPlatformSessionByPrepToken(input.sessionId, input.prepToken);
@@ -52,18 +52,28 @@ export async function savePersonalIntegrationPrep(input: {
     return null;
   }
 
-  const updated = await updatePlatformSessionGrowthEdge({
-    sessionId: session.id,
-    growthEdge: input.growthEdge.trim(),
-    authorship: "user",
-  });
+  const growthEdge = input.growthEdge?.trim();
+  const prepNotes = input.prepNotes?.trim();
+  if (!growthEdge && !prepNotes) {
+    return null;
+  }
 
-  if (input.prepNotes?.trim()) {
+  let updated = session;
+  if (growthEdge) {
+    const next = await updatePlatformSessionGrowthEdge({
+      sessionId: session.id,
+      growthEdge,
+      authorship: "user",
+    });
+    if (next) updated = next;
+  }
+
+  if (prepNotes) {
     await createReflection({
       userId: session.user_id,
       reportId: session.report_id,
       kind: "practice",
-      body: input.prepNotes.trim(),
+      body: prepNotes,
       sourcePlatformSessionId: session.id,
       authorship: "user",
     });

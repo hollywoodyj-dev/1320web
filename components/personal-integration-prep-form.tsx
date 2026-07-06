@@ -1,28 +1,28 @@
 "use client";
 
+import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { PREP_FORM } from "@/lib/personal-integration/prep-content";
 
 type PersonalIntegrationPrepFormProps = {
   sessionId: string;
   prepToken: string;
-  initialGrowthEdge: string;
+  initialPrepNotes?: string;
 };
 
 export function PersonalIntegrationPrepForm({
   sessionId,
   prepToken,
-  initialGrowthEdge,
+  initialPrepNotes = "",
 }: PersonalIntegrationPrepFormProps) {
-  const [growthEdge, setGrowthEdge] = useState(initialGrowthEdge);
-  const [prepNotes, setPrepNotes] = useState("");
+  const [prepNotes, setPrepNotes] = useState(initialPrepNotes);
   const [status, setStatus] = useState("");
   const [saving, setSaving] = useState(false);
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (!growthEdge.trim()) {
-      setStatus("Please name a growth edge for this session.");
+    if (!prepNotes.trim()) {
+      setStatus("Add optional notes above, or return to My Account.");
       return;
     }
 
@@ -36,20 +36,19 @@ export function PersonalIntegrationPrepForm({
         body: JSON.stringify({
           sessionId,
           token: prepToken,
-          growthEdge: growthEdge.trim(),
-          prepNotes: prepNotes.trim() || undefined,
+          prepNotes: prepNotes.trim(),
         }),
       });
 
       const data = (await response.json()) as { ok?: boolean; error?: string };
       if (!response.ok || !data.ok) {
-        setStatus(data.error ?? "Could not save prep. Please try again.");
+        setStatus(data.error ?? "Could not save notes. Please try again.");
         return;
       }
 
       setStatus(PREP_FORM.success);
     } catch {
-      setStatus("Could not save prep. Please try again.");
+      setStatus("Could not save notes. Please try again.");
     } finally {
       setSaving(false);
     }
@@ -57,17 +56,6 @@ export function PersonalIntegrationPrepForm({
 
   return (
     <form className="conversion-form" onSubmit={onSubmit}>
-      <label className="conversion-field">
-        {PREP_FORM.growthEdgeLabel}
-        <span className="conversion-optional block text-sm opacity-80">{PREP_FORM.growthEdgeHelp}</span>
-        <textarea
-          required
-          className="conversion-input conversion-textarea"
-          placeholder={PREP_FORM.growthEdgePlaceholder}
-          value={growthEdge}
-          onChange={(event) => setGrowthEdge(event.target.value)}
-        />
-      </label>
       <label className="conversion-field">
         {PREP_FORM.notesLabel}
         <span className="conversion-optional block text-sm opacity-80">{PREP_FORM.notesHelp}</span>
@@ -82,6 +70,11 @@ export function PersonalIntegrationPrepForm({
         {saving ? "Saving…" : PREP_FORM.submit}
       </button>
       {status ? <p className="conversion-status">{status}</p> : null}
+      <p className="text-sm mt-2">
+        <Link href="/account" className="blueprint-secondary-link">
+          Back to My Account
+        </Link>
+      </p>
     </form>
   );
 }

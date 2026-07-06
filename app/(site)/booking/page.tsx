@@ -7,7 +7,6 @@ import { FaqSection } from "@/components/conversion/faq-section";
 import { SectionCard } from "@/components/section-card";
 import {
   AFTER_BOOKING,
-  BEFORE_BOOK,
   BOOKING_DISCLAIMER,
   BOOKING_FINAL,
   BOOKING_FAQ,
@@ -79,14 +78,27 @@ export default async function BookingPage({
         </div>
       </header>
 
-      <SectionCard title={WHAT_IS_READING.title}>
-        <p>{WHAT_IS_READING.body}</p>
-      </SectionCard>
+      <div className="conversion-pair">
+        <SectionCard title={WHAT_IS_READING.title}>
+          <p>{WHAT_IS_READING.body}</p>
+        </SectionCard>
+
+        <SectionCard title={SESSION_EXPERIENCE.title}>
+          <ul className="conversion-bullet-list">
+            {SESSION_EXPERIENCE.points.map((point) => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
+        </SectionCard>
+      </div>
 
       <SectionCard title={WHAT_WE_EXPLORE.title}>
         <ul className="blueprint-layer-grid">
           {WHAT_WE_EXPLORE.items.map((item) => (
-            <li key={item.code} className="blueprint-layer-item">
+            <li
+              key={item.code}
+              className={`blueprint-layer-item segment-bg segment-bg--${item.code.toLowerCase()}`}
+            >
               <span className="blueprint-layer-code">{item.code}</span>
               <p>{item.text}</p>
             </li>
@@ -94,25 +106,19 @@ export default async function BookingPage({
         </ul>
       </SectionCard>
 
-      <SectionCard title={SESSION_EXPERIENCE.title}>
-        <ul className="conversion-bullet-list">
-          {SESSION_EXPERIENCE.points.map((point) => (
-            <li key={point}>{point}</li>
-          ))}
-        </ul>
-      </SectionCard>
+      <div className="conversion-pair">
+        <SectionCard title={BOOKING_WHO_FOR.title}>
+          <ul className="conversion-bullet-list">
+            {BOOKING_WHO_FOR.items.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </SectionCard>
 
-      <SectionCard title={BOOKING_WHO_FOR.title}>
-        <ul className="conversion-bullet-list">
-          {BOOKING_WHO_FOR.items.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </SectionCard>
-
-      <SectionCard title={BOOKING_WHO_NOT.title}>
-        <p>{BOOKING_WHO_NOT.body}</p>
-      </SectionCard>
+        <SectionCard title={BOOKING_WHO_NOT.title}>
+          <p>{BOOKING_WHO_NOT.body}</p>
+        </SectionCard>
+      </div>
 
       <SectionCard title={READING_OPTIONS.title}>
         <div className="conversion-reading-grid">
@@ -132,20 +138,26 @@ export default async function BookingPage({
         </div>
       </SectionCard>
 
-      <SectionCard title={BEFORE_BOOK.title}>
-        <p>{BEFORE_BOOK.body}</p>
-        <Link href={GENERATE_CODE_CTA.href} className="gold-button mt-4 inline-flex">
-          {BEFORE_BOOK.cta}
-        </Link>
-      </SectionCard>
+      <div className="conversion-pair">
+        <SectionCard title={WHAT_TO_PREPARE.title}>
+          <ul className="conversion-bullet-list">
+            {WHAT_TO_PREPARE.items.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </SectionCard>
 
-      <SectionCard title={WHAT_TO_PREPARE.title}>
-        <ul className="conversion-bullet-list">
-          {WHAT_TO_PREPARE.items.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </SectionCard>
+        <SectionCard title={AFTER_BOOKING.title}>
+          <ol className="blueprint-steps-list">
+            {AFTER_BOOKING.steps.map((step, index) => (
+              <li key={step}>
+                <span className="blueprint-step-num">{String(index + 1).padStart(2, "0")}</span>
+                {step}
+              </li>
+            ))}
+          </ol>
+        </SectionCard>
+      </div>
 
       <SectionCard title={BOOKING_FORM_SECTION.title} id="booking-form">
         {account ? (
@@ -153,17 +165,6 @@ export default async function BookingPage({
         ) : (
           <BookingLoginGate nextPath="/booking" />
         )}
-      </SectionCard>
-
-      <SectionCard title={AFTER_BOOKING.title}>
-        <ol className="blueprint-steps-list">
-          {AFTER_BOOKING.steps.map((step, index) => (
-            <li key={step}>
-              <span className="blueprint-step-num">{String(index + 1).padStart(2, "0")}</span>
-              {step}
-            </li>
-          ))}
-        </ol>
       </SectionCard>
 
       <SectionCard title={TESTIMONIAL_PLACEHOLDERS.title}>

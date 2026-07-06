@@ -21,7 +21,6 @@ type BookingRequestFormProps = {
 
 export function BookingRequestForm({ defaultReadingType, account }: BookingRequestFormProps) {
   const [status, setStatus] = useState("");
-  const [prepUrl, setPrepUrl] = useState("");
   const signedIn = Boolean(account?.email);
 
   function onFocus() {
@@ -82,8 +81,18 @@ export function BookingRequestForm({ defaultReadingType, account }: BookingReque
       return;
     }
 
+    if (data.prepUrl) {
+      trackEvent("booking_success", { readingType, hasPrepUrl: true });
+      try {
+        const prep = new URL(data.prepUrl);
+        window.location.href = `${prep.pathname}${prep.search}`;
+      } catch {
+        window.location.href = data.prepUrl;
+      }
+      return;
+    }
+
     if (!data.stored) {
-      setPrepUrl("");
       await submitLead({
         type: "booking",
         source: "booking_form",
@@ -102,11 +111,8 @@ export function BookingRequestForm({ defaultReadingType, account }: BookingReque
       return;
     }
 
-    trackEvent("booking_success", { readingType, hasPrepUrl: Boolean(data.prepUrl) });
-    setPrepUrl(data.prepUrl ?? "");
-    setStatus(
-      data.prepUrl ? FORM_MESSAGES.bookingSuccessWithPrep : FORM_MESSAGES.bookingSuccess,
-    );
+    trackEvent("booking_success", { readingType });
+    setStatus(FORM_MESSAGES.bookingSuccess);
     form.reset();
   }
 
@@ -219,13 +225,6 @@ export function BookingRequestForm({ defaultReadingType, account }: BookingReque
         {BOOKING_FINAL.cta}
       </button>
       {status ? <p className="conversion-status">{status}</p> : null}
-      {prepUrl ? (
-        <p className="conversion-status">
-          <Link href={prepUrl} className="blueprint-secondary-link break-all">
-            Open session prep
-          </Link>
-        </p>
-      ) : null}
     </form>
   );
 }

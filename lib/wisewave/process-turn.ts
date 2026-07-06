@@ -74,7 +74,7 @@ export async function processWisewaveTurn(input: {
   });
   const priorTurns = await listWisewaveTurns(session.id);
 
-  const { response, reasoning, qa } = runReasoningPipeline({
+  const { response, reasoning, qa } = await runReasoningPipeline({
     userMessage: trimmed,
     clientName: buildWisewaveClientName(session.meta, null),
     codes: buildWisewaveCodesFromReport(report),

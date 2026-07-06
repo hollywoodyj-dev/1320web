@@ -30,7 +30,7 @@ export const CHECKIN_FORM = {
 
 export const ACCESS_DENIED = {
   title: "Living Blueprint",
-  unauthenticated: "Sign in with your purchase magic link to view your Living Blueprint.",
+  unauthenticated: "Sign in with your account to view your Living Blueprint.",
   noEntitlement: "Living Blueprint membership is available with Full Report access.",
   ctaCheckout: "Get Full Report",
   ctaMyReport: "My reports",

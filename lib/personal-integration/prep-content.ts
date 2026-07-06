@@ -1,17 +1,22 @@
 /** FS-006 — Personal Integration prep page copy. */
 
 export const PREP_META = {
-  title: "Session Prep | Personal Integration | 1320",
+  title: "Session Confirmation | Personal Integration | 1320",
   description:
-    "Prepare for your Personal Integration Session — confirm your growth edge and optional notes before we meet.",
+    "Your Personal Integration Session is requested — review your Soul Blueprint and add optional facilitator notes.",
 };
 
 export const PREP_HERO = {
-  eyebrow: "SESSION PREPARATION",
-  title: "Prepare for Your Integration Session",
-  body: "Your Soul Blueprint is fixed — this prep step names what you want to work with in the live session. The facilitator leads; Wisewave may support reflection later.",
+  eyebrow: "SESSION CONFIRMATION",
+  title: "Your Session Is Requested",
+  body: "We saved your focus from booking. Review your Soul Blueprint below and add optional notes for your facilitator. We will follow up by email to confirm your session time.",
   boundary:
     "Symbolic reflection only — not therapy, diagnosis, or prediction. You remain the author of your choices.",
+};
+
+export const PREP_SAVED_FOCUS = {
+  title: "Your session focus",
+  note: "Saved from your booking request — update it by submitting a new booking if your focus changes.",
 };
 
 export const PREP_BLUEPRINT = {
@@ -20,15 +25,12 @@ export const PREP_BLUEPRINT = {
 };
 
 export const PREP_FORM = {
-  growthEdgeLabel: "Growth Edge for this session",
-  growthEdgeHelp:
-    "One focus you want to explore or integrate — a pattern, relationship mirror, or life area.",
-  growthEdgePlaceholder: "e.g. How my S2 mirror shows up when I avoid direct conversation…",
   notesLabel: "Optional prep notes",
   notesHelp: "Anything you want your facilitator to know before the session.",
   notesPlaceholder: "Context, recent shifts, or questions you are sitting with…",
-  submit: "SAVE PREP",
-  success: "Prep saved. We will follow up by email to confirm your session time.",
+  submit: "SAVE NOTES",
+  success: "Notes saved. We will follow up by email to confirm your session time.",
+  done: "Your session is confirmed. You can return here anytime from My Account to add notes.",
 };
 
 export const PREP_INVALID = {

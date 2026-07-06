@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
-import { issueMagicLink } from "@/lib/auth/magic-link";
+import { safeNextPath } from "@/lib/auth/next-path";
+import { hashPassword, validatePassword } from "@/lib/auth/password";
+import { setUserSession } from "@/lib/auth/session";
 import { ensureSoulReportForUserBirthDate } from "@/lib/db/ensure-soul-report";
 import { upsertUserAccount } from "@/lib/db/users";
 import { isDatabaseConfigured } from "@/lib/platform-config";
@@ -9,6 +11,7 @@ type SignupBody = {
   firstName?: string;
   lastName?: string;
   birthDate?: string;
+  password?: string;
   next?: string;
 };
 
@@ -20,14 +23,7 @@ function isValidBirthDate(value: unknown): value is string {
   return typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value.trim());
 }
 
-function safeNextPath(value: unknown): string {
-  if (typeof value !== "string" || !value.startsWith("/") || value.startsWith("//")) {
-    return "/account";
-  }
-  return value;
-}
-
-/** Create account (profile saved once) and email magic sign-in link. */
+/** Create account (profile saved once) and sign in with password. */
 export async function POST(request: Request) {
   if (!isDatabaseConfigured()) {
     return NextResponse.json({ ok: false, error: "Database not configured." }, { status: 503 });
@@ -44,6 +40,7 @@ export async function POST(request: Request) {
   const firstName = body.firstName?.trim();
   const lastName = body.lastName?.trim();
   const birthDate = body.birthDate?.trim();
+  const password = body.password ?? "";
 
   if (!isValidEmail(email) || !firstName || !lastName || !isValidBirthDate(birthDate)) {
     return NextResponse.json(
@@ -52,21 +49,26 @@ export async function POST(request: Request) {
     );
   }
 
-  try {
-    const user = await upsertUserAccount({ email, firstName, lastName, birthDate });
-    await ensureSoulReportForUserBirthDate({ userId: user.id, birthDate });
+  const passwordError = validatePassword(password);
+  if (passwordError) {
+    return NextResponse.json({ ok: false, error: passwordError }, { status: 400 });
+  }
 
-    const magic = await issueMagicLink({
-      userId: user.id,
-      email: user.email,
-      purpose: "signup",
-      nextPath: safeNextPath(body.next),
+  try {
+    const passwordHash = await hashPassword(password);
+    const user = await upsertUserAccount({
+      email,
+      firstName,
+      lastName,
+      birthDate,
+      passwordHash,
     });
+    await ensureSoulReportForUserBirthDate({ userId: user.id, birthDate });
+    await setUserSession(user.id);
 
     return NextResponse.json({
       ok: true,
-      message: "Account created. Check your email for a sign-in link.",
-      devMagicLinkUrl: process.env.NODE_ENV !== "production" ? magic.url : undefined,
+      redirect: safeNextPath(body.next),
     });
   } catch (error) {
     console.error("[auth/signup] failed", error);

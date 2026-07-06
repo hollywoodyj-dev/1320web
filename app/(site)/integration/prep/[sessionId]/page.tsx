@@ -9,6 +9,7 @@ import {
   PREP_HERO,
   PREP_INVALID,
   PREP_META,
+  PREP_SAVED_FOCUS,
   PREP_STATUS,
 } from "@/lib/personal-integration/prep-content";
 
@@ -53,6 +54,11 @@ export default async function PersonalIntegrationPrepPage({
   const statusCopy =
     PREP_STATUS[context.session.status as keyof typeof PREP_STATUS] ?? PREP_STATUS.scheduled;
 
+  const prepNotes =
+    [...context.reflections]
+      .reverse()
+      .find((reflection) => reflection.kind === "practice")?.body ?? "";
+
   return (
     <div className="conversion-page space-y-5">
       <section className="conversion-hero">
@@ -67,6 +73,12 @@ export default async function PersonalIntegrationPrepPage({
           Session reference: <span className="font-mono text-xs">{context.session.id}</span>
         </p>
       </SectionCard>
+
+      {context.growthEdge ? (
+        <SectionCard title={PREP_SAVED_FOCUS.title} subtitle={PREP_SAVED_FOCUS.note}>
+          <p className="leading-relaxed">{context.growthEdge}</p>
+        </SectionCard>
+      ) : null}
 
       <SectionCard title={PREP_BLUEPRINT.title} subtitle={PREP_BLUEPRINT.note}>
         <dl className="grid gap-3 sm:grid-cols-2">
@@ -89,11 +101,11 @@ export default async function PersonalIntegrationPrepPage({
         </dl>
       </SectionCard>
 
-      <SectionCard title="Your prep">
+      <SectionCard title="Optional notes for your facilitator">
         <PersonalIntegrationPrepForm
           sessionId={context.session.id}
           prepToken={token}
-          initialGrowthEdge={context.growthEdge ?? ""}
+          initialPrepNotes={prepNotes}
         />
       </SectionCard>
     </div>

@@ -80,10 +80,37 @@ export default async function AccountPage() {
       </SectionCard>
 
       <SectionCard title={ACCOUNT_COPY.bookingTitle}>
-        <p>{ACCOUNT_COPY.bookingBody}</p>
-        <Link href="/booking" className="gold-button mt-4 inline-flex">
-          {ACCOUNT_COPY.bookSession}
-        </Link>
+        {account.integrationSessions.length > 0 ? (
+          <>
+            <p>{ACCOUNT_COPY.sessionRequested}</p>
+            <ul className="conversion-bullet-list mt-4 space-y-3">
+              {account.integrationSessions.map((session) => (
+                <li key={session.sessionId} className="list-none">
+                  <p className="font-medium">{session.variantLabel}</p>
+                  <p className="text-sm opacity-80">
+                    Requested {session.createdAt} · {session.status}
+                  </p>
+                  {session.growthEdge ? (
+                    <p className="text-sm opacity-80 mt-1 line-clamp-2">{session.growthEdge}</p>
+                  ) : null}
+                  <Link href={session.prepPath} className="gold-button mt-3 inline-flex">
+                    {ACCOUNT_COPY.viewSessionPrep}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <Link href="/booking" className="blueprint-secondary-link mt-4 inline-block">
+              {ACCOUNT_COPY.bookAnotherSession}
+            </Link>
+          </>
+        ) : (
+          <>
+            <p>{ACCOUNT_COPY.bookingNone}</p>
+            <Link href="/booking" className="gold-button mt-4 inline-flex">
+              {ACCOUNT_COPY.bookSession}
+            </Link>
+          </>
+        )}
       </SectionCard>
 
       <p className="text-sm">

@@ -1,9 +1,23 @@
 import { getCurrentUser } from "@/lib/auth/session";
 import { userHasEntitlement } from "@/lib/db/entitlements";
+import { listPersonalIntegrationSessionsForUser } from "@/lib/db/platform-sessions";
 import { getLatestSoulReportForUser } from "@/lib/db/reports";
 import type { SoulReportRow } from "@/lib/db/types";
 import type { UserRow } from "@/lib/db/types";
+import {
+  isPersonalIntegrationSessionVariant,
+  SESSION_VARIANT_LABELS,
+} from "@/lib/personal-integration/session-variants";
 import { isDatabaseConfigured } from "@/lib/platform-config";
+
+export type AccountIntegrationSession = {
+  sessionId: string;
+  prepPath: string;
+  variantLabel: string;
+  status: string;
+  growthEdge: string | null;
+  createdAt: string;
+};
 
 export type AccountContext = {
   user: UserRow;
@@ -12,6 +26,7 @@ export type AccountContext = {
   birthDate: string | null;
   codeString: string | null;
   profileComplete: boolean;
+  integrationSessions: AccountIntegrationSession[];
 };
 
 function parseBirthDate(iso: string | null | undefined): string | null {
@@ -43,6 +58,24 @@ export async function getAccountContext(): Promise<AccountContext | null> {
       user.email,
   );
 
+  const rawSessions = await listPersonalIntegrationSessionsForUser(user.id);
+  const integrationSessions: AccountIntegrationSession[] = rawSessions
+    .filter((session) => session.prep_access_token)
+    .map((session) => {
+      const variant =
+        session.session_variant && isPersonalIntegrationSessionVariant(session.session_variant)
+          ? SESSION_VARIANT_LABELS[session.session_variant]
+          : "Personal Integration Session";
+      return {
+        sessionId: session.id,
+        prepPath: `/integration/prep/${session.id}?token=${session.prep_access_token}`,
+        variantLabel: variant,
+        status: session.status,
+        growthEdge: session.growth_edge,
+        createdAt: session.created_at.toISOString().slice(0, 10),
+      };
+    });
+
   return {
     user,
     report,
@@ -50,6 +83,7 @@ export async function getAccountContext(): Promise<AccountContext | null> {
     birthDate,
     codeString: report?.code_string ?? null,
     profileComplete,
+    integrationSessions,
   };
 }
 

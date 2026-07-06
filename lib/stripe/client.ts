@@ -42,7 +42,7 @@ export function getFullReportLineItems(): Stripe.Checkout.SessionCreateParams.Li
         unit_amount: amountCents,
         product_data: {
           name: "1320 Full Soul Origin Report",
-          description: "One-time unlock — in-browser Full Report with return access via magic link.",
+          description: "One-time unlock — in-browser Full Report with password sign-in return access.",
         },
       },
       quantity: 1,

@@ -23,7 +23,7 @@ export default async function CheckoutSuccessPage({
       <SectionCard title="Thank You — Full Report Unlock In Progress">
         <p>
           We are confirming your purchase and signing you in. You will be redirected to your Full
-          Report shortly. A magic link email is also sent when email is configured.
+          Report shortly. A confirmation email with sign-in instructions is sent when email is configured.
         </p>
         {sessionId ? <CheckoutSuccessClient sessionId={sessionId} /> : null}
         <div className="mt-4 flex flex-wrap gap-3">

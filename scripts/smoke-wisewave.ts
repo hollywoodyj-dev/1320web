@@ -15,6 +15,9 @@ const root = process.cwd();
 const required = [
   "docs/specs/wisewave-api/FS007_WISEWAVE_API_v1.md",
   "lib/wisewave/run-reasoning-pipeline.ts",
+  "lib/wisewave/generate-llm-response.ts",
+  "lib/wisewave/openai-config.ts",
+  "lib/wisewave/build-wisewave-system-prompt.ts",
   "lib/wisewave/process-turn.ts",
   "lib/wisewave/reasoning-helpers.ts",
   "lib/db/wisewave-turns.ts",
@@ -32,21 +35,28 @@ for (const rel of required) {
   assert(fs.existsSync(path.join(root, rel)), `Missing ${rel}`);
 }
 
-const pipeline = runReasoningPipeline({
-  userMessage: "I feel anxious about a relationship mirror — what does my S2 pattern mean?",
-  clientName: "Sample",
-  codes: { s1: "S1-18", s3: "S3-110", s2: "S2-27", s0: "S0-07" },
-  expressionState: "emerging",
-  memories: [],
-  priorTurns: [],
+async function main(): Promise<void> {
+  const pipeline = await runReasoningPipeline({
+    userMessage: "I feel anxious about a relationship mirror — what does my S2 pattern mean?",
+    clientName: "Sample",
+    codes: { s1: "S1-18", s3: "S3-110", s2: "S2-27", s0: "S0-07" },
+    expressionState: "emerging",
+    memories: [],
+    priorTurns: [],
+  });
+
+  assert(pipeline.reasoning.version === WISEWAVE_API_VERSION, "reasoning version");
+  assert(pipeline.reasoning.layers.behaviour_validation.summary.length > 0, "behaviour layer");
+  assert(pipeline.response.includes("Sample"), "response uses client name");
+  assert(!/\byou will\b/i.test(pipeline.response), "QA removes certainty");
+
+  const badQa = validateRelationshipQa("You will definitely fix this relationship.", "clarity");
+  assert(!badQa.passed, "detect bad certainty");
+
+  console.log("smoke:wisewave PASS");
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
 });
-
-assert(pipeline.reasoning.version === WISEWAVE_API_VERSION, "reasoning version");
-assert(pipeline.reasoning.layers.behaviour_validation.summary.length > 0, "behaviour layer");
-assert(pipeline.response.includes("Sample"), "response uses client name");
-assert(!/\byou will\b/i.test(pipeline.response), "QA removes certainty");
-
-const badQa = validateRelationshipQa("You will definitely fix this relationship.", "clarity");
-assert(!badQa.passed, "detect bad certainty");
-
-console.log("smoke:wisewave PASS");

@@ -82,12 +82,6 @@ export const READING_OPTIONS = {
   ],
 };
 
-export const BEFORE_BOOK = {
-  title: "Before You Book",
-  body: "Generate your personal code first so the session begins with your actual S1–S0 structure — not abstract theory.",
-  cta: "GENERATE MY CODE FIRST",
-};
-
 export const WHAT_TO_PREPARE = {
   title: "What to Prepare",
   items: [

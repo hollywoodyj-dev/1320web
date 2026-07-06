@@ -21,6 +21,7 @@ const schemaFiles = [
   "platform-domain-v1.4-wisewave.sql",
   "platform-domain-v1.5-membership.sql",
   "schema-v2-user-profile.sql",
+  "schema-v2-password-auth.sql",
 ];
 
 async function main() {

@@ -5,7 +5,7 @@ export type AdvancedModuleSymbolId = "s5" | "s6" | "shadow";
 export const FULL_REPORT_META = {
   title: "Full 1320 Soul Origin Report",
   description:
-    "Unlock the Full 1320 Soul Origin Report — deeper S1–S0 layers plus Shadow Pattern, Soul Mission, and Money Frequency modules. One-time purchase with magic-link return access.",
+    "Unlock the Full 1320 Soul Origin Report — deeper S1–S0 layers plus Shadow Pattern, Soul Mission, and Money Frequency modules. One-time purchase with password sign-in return access.",
 };
 
 export const FULL_REPORT_HERO = {
@@ -14,7 +14,7 @@ export const FULL_REPORT_HERO = {
   body: "Your free code gives you the doorway. The Full Report gives you the map — how your code moves through identity, relationships, shadows, mission, and money patterns.",
   boundary:
     "1320 is a mirror for reflection and integration — not prediction, fate, or professional advice.",
-  trust: "One-time purchase. Magic-link return access after checkout.",
+  trust: "One-time purchase. Sign in with your account to return after checkout.",
 };
 
 export const REPORT_PROMISE = {
@@ -161,7 +161,7 @@ export const WHO_NOT_FOR = {
 export const FULL_REPORT_FAQ = [
   {
     q: "Can I buy the Full Report now?",
-    a: "Use checkout to unlock the Full Report in-browser. After purchase, you receive a magic link to return anytime.",
+    a: "Use checkout to unlock the Full Report in-browser. After purchase, sign in with your email and password to return anytime.",
   },
   {
     q: "What do I get on the free result?",

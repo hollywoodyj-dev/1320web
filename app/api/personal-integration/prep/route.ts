@@ -25,10 +25,11 @@ export async function POST(request: Request) {
   const sessionId = body.sessionId?.trim();
   const token = body.token?.trim();
   const growthEdge = body.growthEdge?.trim();
+  const prepNotes = body.prepNotes?.trim();
 
-  if (!sessionId || !token || !growthEdge) {
+  if (!sessionId || !token || (!growthEdge && !prepNotes)) {
     return NextResponse.json(
-      { ok: false, error: "sessionId, token, and growthEdge are required." },
+      { ok: false, error: "sessionId, token, and prep notes (or growth edge) are required." },
       { status: 400 },
     );
   }
@@ -38,7 +39,7 @@ export async function POST(request: Request) {
       sessionId,
       prepToken: token,
       growthEdge,
-      prepNotes: body.prepNotes?.trim(),
+      prepNotes,
     });
 
     if (!updated) {

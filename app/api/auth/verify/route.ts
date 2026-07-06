@@ -31,7 +31,7 @@ export async function POST(request: Request) {
   const consumed = await consumeMagicLink(rawToken);
   if (!consumed) {
     return NextResponse.json(
-      { ok: false, error: "This link is invalid, already used, or expired. Request a new magic link." },
+      { ok: false, error: "This link is invalid, already used, or expired. Sign in with your password instead." },
       { status: 400 },
     );
   }

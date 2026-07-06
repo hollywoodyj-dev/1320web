@@ -17,8 +17,8 @@ export const ACCOUNT_META = {
 
 export const LOGIN_COPY = {
   title: "Welcome back",
-  body: "Enter your email and we will send a secure sign-in link. No password required.",
-  submit: "SEND SIGN-IN LINK",
+  body: "Sign in with your email and password to access your Full Report, booking, and account.",
+  submit: "SIGN IN",
   signupPrompt: "New here?",
   signupLink: "Create an account",
 };
@@ -26,7 +26,7 @@ export const LOGIN_COPY = {
 export const SIGNUP_COPY = {
   title: "Create your account",
   body: "Tell us once who you are and your birth date. We use this for your Soul Code, Full Report, and session booking — you will not need to fill it again.",
-  submit: "CREATE ACCOUNT & SEND LINK",
+  submit: "CREATE ACCOUNT",
   loginPrompt: "Already have an account?",
   loginLink: "Sign in",
 };
@@ -44,6 +44,10 @@ export const ACCOUNT_COPY = {
   unlockFullReport: "UNLOCK FULL REPORT",
   bookingTitle: "Personal Integration Session",
   bookingBody: "Book a live session — your profile details are already saved.",
+  bookingNone: "Request a Personal Integration Session when you are ready for live applied integration.",
   bookSession: "BOOK A SESSION",
+  sessionRequested: "Your session request is saved. Open prep to review your codes and add optional notes.",
+  viewSessionPrep: "OPEN SESSION PREP",
+  bookAnotherSession: "REQUEST ANOTHER SESSION",
   signOut: "Sign out",
 };

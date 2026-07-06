@@ -101,6 +101,21 @@ export type PersonalIntegrationSessionListRow = PlatformSessionRow & {
   user_first_name: string | null;
 };
 
+export async function listPersonalIntegrationSessionsForUser(
+  userId: string,
+  limit = 10,
+): Promise<PlatformSessionRow[]> {
+  const db = getSql();
+  return db<PlatformSessionRow[]>`
+    SELECT *
+    FROM platform_sessions
+    WHERE user_id = ${userId}
+      AND kind = 'personal_integration'
+    ORDER BY created_at DESC
+    LIMIT ${limit}
+  `;
+}
+
 export async function listPersonalIntegrationSessions(
   limit = 50,
 ): Promise<PersonalIntegrationSessionListRow[]> {

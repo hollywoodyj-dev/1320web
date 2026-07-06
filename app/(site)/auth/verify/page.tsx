@@ -6,7 +6,7 @@ import { isDatabaseConfigured } from "@/lib/platform-config";
 
 export const metadata: Metadata = {
   title: "Open Full Report",
-  description: "Confirm your secure return link to your 1320 Full Soul Origin Report.",
+  description: "Confirm your secure link to your 1320 Full Soul Origin Report.",
 };
 
 type SearchParams = Record<string, string | string[] | undefined>;
@@ -34,11 +34,16 @@ export default async function MagicLinkVerifyPage({
 
   if (!token) {
     return (
-      <SectionCard title="Invalid Link">
-        <p>This sign-in link is missing a token. Request a new magic link from checkout.</p>
-        <Link href="/checkout?error=token" className="gold-button mt-4 inline-flex">
-          GO TO CHECKOUT
-        </Link>
+      <SectionCard title="Sign In Required">
+        <p>This link is incomplete. Sign in with your email and password to open your Full Report.</p>
+        <div className="mt-4 flex flex-wrap gap-3">
+          <Link href={`/login?next=${encodeURIComponent(nextPath)}`} className="gold-button inline-flex">
+            SIGN IN
+          </Link>
+          <Link href={`/signup?next=${encodeURIComponent(nextPath)}`} className="blueprint-secondary-link self-center">
+            Set password
+          </Link>
+        </div>
       </SectionCard>
     );
   }
@@ -47,14 +52,14 @@ export default async function MagicLinkVerifyPage({
     <div className="conversion-page space-y-5">
       <SectionCard title="Open Your Full Report">
         <p className="mb-4 text-sm text-[#B9C1D0]">
-          Tap continue to sign in securely. This extra step prevents email scanners from using your
-          one-time link before you do.
+          This is a legacy email link. Tap continue to sign in, or use your password at the login page
+          instead.
         </p>
         <MagicLinkVerifyForm token={token} nextPath={nextPath} />
         <p className="mt-4 text-sm text-[#B9C1D0]">
-          Link expired?{" "}
-          <Link href="/checkout" className="blueprint-secondary-link">
-            Request a new magic link
+          Prefer password sign-in?{" "}
+          <Link href={`/login?next=${encodeURIComponent(nextPath)}`} className="blueprint-secondary-link">
+            Go to login
           </Link>
           .
         </p>

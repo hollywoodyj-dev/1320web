@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { LoginForm } from "@/components/auth/login-form";
-import { SectionCard } from "@/components/section-card";
 import { LOGIN_COPY, LOGIN_META } from "@/lib/auth/account-content";
 
 export const metadata: Metadata = {
@@ -23,19 +21,15 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
   const nextPath = readNext(params);
 
   return (
-    <div className="conversion-page space-y-5">
-      <header className="blueprint-hero glass-card">
-        <h1 className="blueprint-title">{LOGIN_COPY.title}</h1>
-        <p className="blueprint-lead">{LOGIN_COPY.body}</p>
-      </header>
-      <SectionCard title="Sign in with email">
+    <div className="auth-page">
+      <div className="auth-card glass-card">
+        <header className="auth-card-header">
+          <p className="auth-card-eyebrow">{LOGIN_META.title}</p>
+          <h1 className="auth-card-title">{LOGIN_COPY.title}</h1>
+          <p className="auth-card-lead">{LOGIN_COPY.body}</p>
+        </header>
         <LoginForm nextPath={nextPath} />
-      </SectionCard>
-      <p className="text-sm text-center">
-        <Link href="/signup" className="blueprint-secondary-link">
-          Create an account
-        </Link>
-      </p>
+      </div>
     </div>
   );
 }

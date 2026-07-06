@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MagicLinkRequestForm } from "@/components/checkout/magic-link-request-form";
+import { PurchaserSignInPrompt } from "@/components/checkout/purchaser-sign-in-prompt";
 import { UnlockCheckoutForm } from "@/components/checkout/unlock-checkout-form";
 import { SectionCard } from "@/components/section-card";
 import { accountBirthDateParts, getAccountContext } from "@/lib/auth/account-context";
@@ -9,7 +9,7 @@ import { isDatabaseConfigured, isStripeConfigured } from "@/lib/platform-config"
 
 export const metadata: Metadata = {
   title: "Unlock Full Report",
-  description: "Purchase your 1320 Full Soul Origin Report — one-time unlock with magic-link return access.",
+  description: "Purchase your 1320 Full Soul Origin Report — one-time unlock with password sign-in return access.",
 };
 
 type SearchParams = Record<string, string | string[] | undefined>;
@@ -29,8 +29,8 @@ export default async function CheckoutPage({
   const authError =
     typeof params.error === "string"
       ? {
-          expired: "That magic link is invalid, already used, or expired. Request a new one below.",
-          token: "That sign-in link was incomplete. Request a new magic link below.",
+          expired: "That old email link expired. Sign in with your password below instead.",
+          token: "That link was incomplete. Sign in with your email and password below.",
           db: "Report access is temporarily unavailable. Please try again shortly.",
         }[params.error]
       : undefined;
@@ -42,12 +42,12 @@ export default async function CheckoutPage({
         <h1 className="blueprint-title">Unlock My Full Blueprint</h1>
         <p className="blueprint-lead">
           Your free result gives you the first mirror. The Full Report opens the full map — deeper S1–S0,
-          Integrated Soul Blueprint, and return access via magic link.
+          Integrated Soul Blueprint, and return access when you sign in with your account.
         </p>
       </header>
 
       {authError ? (
-        <SectionCard title="Sign-In Link Issue">
+        <SectionCard title="Sign-In Issue">
           <p>{authError}</p>
         </SectionCard>
       ) : null}
@@ -92,10 +92,7 @@ export default async function CheckoutPage({
       )}
 
       <SectionCard title="Already Purchased?">
-        <p className="mb-4 text-sm text-[#B9C1D0]">
-          Request a new magic link to return to your Full Report.
-        </p>
-        <MagicLinkRequestForm />
+        <PurchaserSignInPrompt />
       </SectionCard>
     </div>
   );

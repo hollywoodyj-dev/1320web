@@ -1,6 +1,8 @@
 import type { RelationshipMemoryRow } from "@/lib/db/types";
 import type { WisewaveTurnRow } from "@/lib/db/types";
 import type { ExpressionState } from "@/lib/platform-domain";
+import { generateWisewaveLlmResponse } from "@/lib/wisewave/generate-llm-response";
+import { isOpenAiConfigured, getOpenAiModel } from "@/lib/wisewave/openai-config";
 import {
   detectWisewaveIntent,
   inferBlueprintCodes,
@@ -42,7 +44,7 @@ function synthesizeGrowthEdge(intent: WisewaveIntent, message: string, codes: st
   return `Choose one honest question about ${codeRef} you can carry for the next few days.`;
 }
 
-function composeResponse(input: {
+function composeRuleBasedResponse(input: {
   intent: WisewaveIntent;
   clientName: string;
   codes: string[];
@@ -76,11 +78,11 @@ function composeResponse(input: {
   ].join("");
 }
 
-export function runReasoningPipeline(input: PipelineInput): {
+export async function runReasoningPipeline(input: PipelineInput): Promise<{
   response: string;
   reasoning: ReasoningAudit;
   qa: RelationshipQaResult;
-} {
+}> {
   const intent = detectWisewaveIntent(input.userMessage);
   const blueprintCodes = inferBlueprintCodes(input.userMessage, input.codes);
   const lifeContext = buildLifeContext(input.priorTurns, input.userMessage);
@@ -89,7 +91,8 @@ export function runReasoningPipeline(input: PipelineInput): {
   const synthesis = `Blueprint (${blueprintCodes.join(", ")}) ↔ Expression (${input.expressionState}) ↔ lived experience.`;
   const growthEdge = synthesizeGrowthEdge(intent, input.userMessage, blueprintCodes);
 
-  const draft = composeResponse({
+  let responseEngine = "rule-based";
+  let draft = composeRuleBasedResponse({
     intent,
     clientName: input.clientName,
     codes: blueprintCodes,
@@ -98,6 +101,27 @@ export function runReasoningPipeline(input: PipelineInput): {
     synthesis,
     memorySnippet,
   });
+
+  if (isOpenAiConfigured()) {
+    try {
+      draft = await generateWisewaveLlmResponse({
+        userMessage: input.userMessage,
+        clientName: input.clientName,
+        codes: input.codes,
+        blueprintCodesReferenced: blueprintCodes,
+        expressionState: input.expressionState,
+        intent,
+        growthEdge,
+        synthesis,
+        lifeContext,
+        memorySnippet,
+        priorTurns: input.priorTurns,
+      });
+      responseEngine = `openai:${getOpenAiModel()}`;
+    } catch (error) {
+      console.error("Wisewave OpenAI response failed; using rule-based fallback:", error);
+    }
+  }
 
   const qaCheck = validateRelationshipQa(draft, intent);
   const response = qaCheck.passed ? draft : reviseForRelationshipQa(draft, qaCheck.flags);
@@ -122,7 +146,7 @@ export function runReasoningPipeline(input: PipelineInput): {
         "behaviour_validation",
         qaAfter.passed ? "passed" : qaAfter.flags.join(", "),
       ),
-      brand_expression: layer("brand_expression", "calm, invitational, non-deterministic"),
+      brand_expression: layer("brand_expression", `${responseEngine}; calm, invitational, non-deterministic`),
     },
   };
 

@@ -10,37 +10,42 @@ type LoginFormProps = {
 
 export function LoginForm({ nextPath = "/account" }: LoginFormProps) {
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [status, setStatus] = useState("");
-  const [devLink, setDevLink] = useState("");
+  const [loading, setLoading] = useState(false);
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("");
-    setDevLink("");
+    setLoading(true);
 
-    const response = await fetch("/api/auth/magic-link", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, next: nextPath }),
-    });
-    const json = (await response.json()) as {
-      ok?: boolean;
-      message?: string;
-      devMagicLinkUrl?: string;
-      error?: string;
-    };
+    try {
+      const response = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password, next: nextPath }),
+      });
+      const json = (await response.json()) as {
+        ok?: boolean;
+        redirect?: string;
+        error?: string;
+      };
 
-    if (!response.ok) {
-      setStatus(json.error ?? "Could not send sign-in link.");
-      return;
+      if (!response.ok || !json.ok) {
+        setStatus(json.error ?? "Could not sign in.");
+        return;
+      }
+
+      window.location.href = json.redirect ?? nextPath;
+    } catch {
+      setStatus("Network error. Please try again.");
+    } finally {
+      setLoading(false);
     }
-
-    setStatus(json.message ?? "Check your email for a sign-in link.");
-    if (json.devMagicLinkUrl) setDevLink(json.devMagicLinkUrl);
   }
 
   return (
-    <form className="conversion-form" onSubmit={onSubmit}>
+    <form className="auth-form" onSubmit={onSubmit}>
       <label className="conversion-field">
         Email
         <input
@@ -48,23 +53,28 @@ export function LoginForm({ nextPath = "/account" }: LoginFormProps) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
+          autoComplete="email"
           className="conversion-input"
           placeholder="you@example.com"
         />
       </label>
-      <button type="submit" className="gold-button">
-        {LOGIN_COPY.submit}
+      <label className="conversion-field">
+        Password
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+          autoComplete="current-password"
+          className="conversion-input"
+          placeholder="Letters and numbers, 8+ characters"
+        />
+      </label>
+      <button type="submit" className="gold-button auth-form-submit" disabled={loading}>
+        {loading ? "SIGNING IN…" : LOGIN_COPY.submit}
       </button>
-      {status ? <p className="conversion-status">{status}</p> : null}
-      {devLink ? (
-        <p className="conversion-status">
-          Dev link:{" "}
-          <a href={devLink} className="blueprint-secondary-link">
-            open sign-in
-          </a>
-        </p>
-      ) : null}
-      <p className="text-sm mt-4">
+      {status ? <p className="conversion-status auth-form-status">{status}</p> : null}
+      <p className="auth-form-footer">
         {LOGIN_COPY.signupPrompt}{" "}
         <Link href={`/signup?next=${encodeURIComponent(nextPath)}`} className="blueprint-secondary-link">
           {LOGIN_COPY.signupLink}

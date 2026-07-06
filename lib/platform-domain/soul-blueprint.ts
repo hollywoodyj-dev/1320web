@@ -1,4 +1,5 @@
 import type { CanonicalFullReport } from "@/lib/canonical-report/types";
+import { soulReportBirthDateIso } from "@/lib/db/normalize-soul-report-row";
 import type { SoulReportRow } from "@/lib/db/types";
 import { SOUL_BLUEPRINT_DOMAIN_VERSION, type SoulBlueprintRef, type SoulBlueprintSnapshot } from "@/lib/platform-domain/types";
 
@@ -14,7 +15,7 @@ export function toSoulBlueprintRef(
     domainVersion: SOUL_BLUEPRINT_DOMAIN_VERSION,
     reportId: report.id,
     userId: report.user_id,
-    birthDate: report.birth_date,
+    birthDate: soulReportBirthDateIso(report),
     combinationSignature: report.combination_signature,
     schemaVersion: canonical.schemaVersion,
     codes: {

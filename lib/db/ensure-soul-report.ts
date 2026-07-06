@@ -1,6 +1,7 @@
 import { calculate1320Code } from "@/lib/calculate1320Code";
 import { getSql } from "@/lib/db/client";
 import { createSoulReport } from "@/lib/db/reports";
+import { normalizeSoulReportRow } from "@/lib/db/normalize-soul-report-row";
 import type { SoulReportRow } from "@/lib/db/types";
 import { get1320Content } from "@/lib/get1320Content";
 
@@ -31,7 +32,7 @@ export async function ensureSoulReportForUserBirthDate(input: {
     ORDER BY created_at DESC
     LIMIT 1
   `;
-  if (existing[0]) return existing[0];
+  if (existing[0]) return normalizeSoulReportRow(existing[0]);
 
   const code = calculate1320Code(parts.year, parts.month, parts.day);
   const content = get1320Content(

@@ -1,5 +1,6 @@
 import type { SoulCodeResult } from "@/lib/calculate1320Code";
 import { getSql } from "@/lib/db/client";
+import { normalizeSoulReportRow } from "@/lib/db/normalize-soul-report-row";
 import type { SoulReportRow } from "@/lib/db/types";
 import { REPORT_CONTENT_VERSION } from "@/lib/platform-config";
 
@@ -44,7 +45,7 @@ export async function createSoulReport(input: {
     )
     RETURNING *
   `;
-  return rows[0];
+  return normalizeSoulReportRow(rows[0]);
 }
 
 export async function getSoulReportById(reportId: string): Promise<SoulReportRow | null> {
@@ -55,7 +56,7 @@ export async function getSoulReportById(reportId: string): Promise<SoulReportRow
     WHERE id = ${reportId}
     LIMIT 1
   `;
-  return rows[0] ?? null;
+  return rows[0] ? normalizeSoulReportRow(rows[0]) : null;
 }
 
 export async function getLatestSoulReportForUser(userId: string): Promise<SoulReportRow | null> {
@@ -67,5 +68,5 @@ export async function getLatestSoulReportForUser(userId: string): Promise<SoulRe
     ORDER BY created_at DESC
     LIMIT 1
   `;
-  return rows[0] ?? null;
+  return rows[0] ? normalizeSoulReportRow(rows[0]) : null;
 }

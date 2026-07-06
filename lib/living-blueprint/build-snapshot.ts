@@ -1,4 +1,5 @@
 import { buildCanonicalReport } from "@/lib/canonical-report";
+import { soulReportBirthDateDisplay, soulReportBirthDateIso } from "@/lib/db/normalize-soul-report-row";
 import { ensureExpressionProfile, getExpressionProfile } from "@/lib/db/expression-profiles";
 import { ensureJourney, getJourney } from "@/lib/db/journeys";
 import { listRelationshipMemoriesByLayer } from "@/lib/db/relationship-memories";
@@ -23,8 +24,8 @@ export async function buildLivingBlueprintSnapshot(input: {
   const clientName = input.clientName ?? "Member";
   const canonical = buildCanonicalReport({
     name: clientName,
-    birth_date: report.birth_date,
-    birth_date_display: report.birth_date,
+    birth_date: soulReportBirthDateIso(report),
+    birth_date_display: soulReportBirthDateDisplay(report),
   });
   const blueprintRef = toSoulBlueprintRef(report, canonical);
 

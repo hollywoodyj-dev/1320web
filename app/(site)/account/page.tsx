@@ -9,6 +9,8 @@ import { getAccountContext } from "@/lib/auth/account-context";
 import { ACCOUNT_COPY, ACCOUNT_META } from "@/lib/auth/account-content";
 import { isDatabaseConfigured } from "@/lib/platform-config";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: ACCOUNT_META.title,
   description: ACCOUNT_META.description,
@@ -31,6 +33,16 @@ export default async function AccountPage() {
   const displayName =
     [account.user.first_name, account.user.last_name].filter(Boolean).join(" ") || account.user.email;
 
+  const reflectPrefill = account.birthDate
+    ? {
+        firstName: account.user.first_name?.trim() || account.user.email.split("@")[0] || "Friend",
+        email: account.user.email,
+        birthDate: account.birthDate,
+        useAccountProfile: true as const,
+        reportId: account.entitledReportId ?? account.report?.id,
+      }
+    : null;
+
   return (
     <div className="conversion-page space-y-5">
       <header className="blueprint-hero glass-card">
@@ -39,6 +51,26 @@ export default async function AccountPage() {
         <p className="blueprint-lead">
           {ACCOUNT_COPY.signedInAs} <strong>{displayName}</strong> ({account.user.email})
         </p>
+        <div className="account-quick-links mt-4 flex flex-wrap gap-3">
+          {account.entitledReportId ? (
+            <Link href={`/my-report/${account.entitledReportId}`} className="gold-button inline-flex">
+              {ACCOUNT_COPY.openFullReport}
+            </Link>
+          ) : null}
+          {account.entitledReportId ? (
+            <Link
+              href={`/living-blueprint/${account.entitledReportId}`}
+              className="gold-button inline-flex"
+            >
+              {ACCOUNT_COPY.openLivingBlueprint}
+            </Link>
+          ) : null}
+          {reflectPrefill ? (
+            <a href="#reflect" className="gold-button inline-flex">
+              {ACCOUNT_COPY.reflectTitle.toUpperCase()}
+            </a>
+          ) : null}
+        </div>
       </header>
 
       <SectionCard title={ACCOUNT_COPY.profileTitle}>
@@ -53,6 +85,20 @@ export default async function AccountPage() {
           </div>
         </dl>
         <SetPasswordForm hasPassword={account.hasPassword} />
+      </SectionCard>
+
+      <SectionCard title={ACCOUNT_COPY.reflectTitle} id="reflect">
+        <p>{ACCOUNT_COPY.reflectBody}</p>
+        {reflectPrefill ? (
+          <>
+            <p className="mt-3 text-sm opacity-90">{ACCOUNT_COPY.reflectAccountLead}</p>
+            <div className="mt-4">
+              <ReflectEntryForm compact prefill={reflectPrefill} />
+            </div>
+          </>
+        ) : (
+          <p className="mt-3 text-sm opacity-90">{ACCOUNT_COPY.reflectNeedsBirthDate}</p>
+        )}
       </SectionCard>
 
       {account.codeString ? (
@@ -100,29 +146,6 @@ export default async function AccountPage() {
               {ACCOUNT_COPY.unlockFullReport}
             </Link>
           </>
-        )}
-      </SectionCard>
-
-      <SectionCard title={ACCOUNT_COPY.reflectTitle}>
-        <p>{ACCOUNT_COPY.reflectBody}</p>
-        {account.birthDate ? (
-          <>
-            <p className="mt-3 text-sm opacity-90">{ACCOUNT_COPY.reflectAccountLead}</p>
-            <div className="mt-4">
-              <ReflectEntryForm
-                compact
-                prefill={{
-                  firstName: account.user.first_name?.trim() || account.user.email.split("@")[0] || "Friend",
-                  email: account.user.email,
-                  birthDate: account.birthDate,
-                  useAccountProfile: true,
-                  reportId: account.entitledReportId ?? account.report?.id,
-                }}
-              />
-            </div>
-          </>
-        ) : (
-          <p className="mt-3 text-sm opacity-90">{ACCOUNT_COPY.reflectNeedsBirthDate}</p>
         )}
       </SectionCard>
 

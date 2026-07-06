@@ -62,6 +62,8 @@ export const ACCOUNT_COPY = {
   reflectBody: "Symbolic reflection grounded in your Soul Blueprint — invitational, not predictive.",
   reflectAccountLead: "Your profile is already saved. Share what brings you here today to begin.",
   reflectNeedsBirthDate: "Add your birth date in Your profile (or complete signup) before starting a reflection.",
+  reflectBegin: "BEGIN REFLECTION",
+  accountQuickLinks: "Quick links",
   bookingTitle: "Personal Integration Session",
   bookingBody: "Book a live session — your profile details are already saved.",
   bookingNone: "Request a Personal Integration Session when you are ready for live applied integration.",

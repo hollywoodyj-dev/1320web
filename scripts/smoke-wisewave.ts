@@ -20,6 +20,7 @@ const required = [
   "lib/db/wisewave-turns.ts",
   "lib/db/expression-profiles.ts",
   "lib/db/relationship-memories.ts",
+  "app/api/reflect/start/route.ts",
   "app/api/wisewave/sessions/route.ts",
   "app/api/wisewave/sessions/[sessionId]/route.ts",
   "app/(site)/reflect/page.tsx",

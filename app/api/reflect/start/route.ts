@@ -1,19 +1,14 @@
 import { NextResponse } from "next/server";
-import { isWisewaveApiConfigured, verifyWisewaveApiRequest } from "@/lib/wisewave/api-auth";
+import { isDatabaseConfigured } from "@/lib/platform-config";
 import {
   handleCreateWisewaveSession,
   type CreateWisewaveSessionBody,
 } from "@/lib/wisewave/handle-create-session";
-import { isDatabaseConfigured } from "@/lib/platform-config";
 
-/** FS-007 — Start a Wisewave session (server integrations; Bearer when WISEWAVE_API_KEY set). */
+/** Public Reflect UI — start a Wisewave session (no WISEWAVE_API_KEY). */
 export async function POST(request: Request) {
   if (!isDatabaseConfigured()) {
     return NextResponse.json({ ok: false, error: "Database not configured." }, { status: 503 });
-  }
-
-  if (isWisewaveApiConfigured() && !verifyWisewaveApiRequest(request)) {
-    return NextResponse.json({ ok: false, error: "Unauthorized." }, { status: 401 });
   }
 
   let body: CreateWisewaveSessionBody;

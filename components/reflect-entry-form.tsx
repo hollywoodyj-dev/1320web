@@ -27,7 +27,7 @@ export function ReflectEntryForm() {
     setStatus("");
 
     try {
-      const response = await fetch("/api/wisewave/sessions", {
+      const response = await fetch("/api/reflect/start", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ firstName, email, birthDate, openingMessage }),

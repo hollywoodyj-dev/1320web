@@ -43,7 +43,8 @@ User message
 
 | Route | Method | Auth | Purpose |
 |-------|--------|------|---------|
-| `/api/wisewave/sessions` | POST | Optional `WISEWAVE_API_KEY` | Create Wisewave session |
+| `/api/reflect/start` | POST | None (public Reflect UI) | Start session from `/reflect` |
+| `/api/wisewave/sessions` | POST | `WISEWAVE_API_KEY` when set | Server integrations |
 | `/api/wisewave/sessions/[sessionId]` | GET | Session `token` query | Read transcript |
 | `/api/wisewave/sessions/[sessionId]` | POST | Session `token` body | Process turn |
 

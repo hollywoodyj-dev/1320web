@@ -7,11 +7,17 @@ function isServerlessRuntime(): boolean {
   return Boolean(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME);
 }
 
-/** Prefer Neon/Vercel pooler host when a direct connection URL is configured. */
+/** Prefer pooled Postgres hostnames for serverless application traffic. */
 export function getConnectionUrl(url: string): string {
   try {
     const parsed = new URL(url);
     const host = parsed.hostname;
+
+    if (host === "db.prisma.io") {
+      parsed.hostname = "pooled.db.prisma.io";
+      return parsed.toString();
+    }
+
     if (host.includes(".neon.tech") && !host.includes("-pooler")) {
       const parts = host.split(".");
       parts[0] = `${parts[0]}-pooler`;
@@ -35,8 +41,8 @@ export function getSql() {
     const url = isServerlessRuntime() ? getConnectionUrl(rawUrl) : rawUrl;
     sql = postgres(url, {
       max: isServerlessRuntime() ? 1 : 5,
-      idle_timeout: 20,
-      max_lifetime: 60 * 30,
+      idle_timeout: 5,
+      max_lifetime: 60,
       connect_timeout: 10,
       prepare: false,
     });

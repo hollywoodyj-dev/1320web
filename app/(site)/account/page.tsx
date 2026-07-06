@@ -81,6 +81,27 @@ export default async function AccountPage() {
         )}
       </SectionCard>
 
+      <SectionCard title={ACCOUNT_COPY.livingBlueprintTitle}>
+        {account.entitledReportId ? (
+          <>
+            <p>{ACCOUNT_COPY.livingBlueprintBody}</p>
+            <Link
+              href={`/living-blueprint/${account.entitledReportId}`}
+              className="gold-button mt-4 inline-flex"
+            >
+              {ACCOUNT_COPY.openLivingBlueprint}
+            </Link>
+          </>
+        ) : (
+          <>
+            <p>{ACCOUNT_COPY.livingBlueprintLocked}</p>
+            <Link href="/checkout" className="gold-button mt-4 inline-flex">
+              {ACCOUNT_COPY.unlockFullReport}
+            </Link>
+          </>
+        )}
+      </SectionCard>
+
       <SectionCard title={ACCOUNT_COPY.bookingTitle}>
         {account.integrationSessions.length > 0 ? (
           <>

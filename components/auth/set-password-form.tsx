@@ -10,14 +10,15 @@ type SetPasswordFormProps = {
 
 export function SetPasswordForm({ hasPassword: hasPasswordInitial }: SetPasswordFormProps) {
   const [hasPassword, setHasPassword] = useState(hasPasswordInitial);
+  const [editing, setEditing] = useState(!hasPasswordInitial);
   const [status, setStatus] = useState("");
-  const [success, setSuccess] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("");
-    setSuccess(false);
+    setSuccessMessage("");
     setLoading(true);
 
     const form = event.currentTarget;
@@ -56,13 +57,36 @@ export function SetPasswordForm({ hasPassword: hasPasswordInitial }: SetPassword
       }
 
       form.reset();
-      setSuccess(true);
       setHasPassword(true);
+      setEditing(false);
+      setSuccessMessage(ACCOUNT_COPY.passwordSaved);
     } catch {
       setStatus("Network error. Please try again.");
     } finally {
       setLoading(false);
     }
+  }
+
+  if (hasPassword && !editing) {
+    return (
+      <div className="account-set-password">
+        <p className="account-set-password-saved">{ACCOUNT_COPY.passwordSavedStatus}</p>
+        {successMessage ? (
+          <p className="conversion-status account-set-password-success">{successMessage}</p>
+        ) : null}
+        <button
+          type="button"
+          className="blueprint-secondary-link account-set-password-toggle"
+          onClick={() => {
+            setEditing(true);
+            setSuccessMessage("");
+            setStatus("");
+          }}
+        >
+          {ACCOUNT_COPY.changePasswordLink}
+        </button>
+      </div>
+    );
   }
 
   return (
@@ -106,14 +130,27 @@ export function SetPasswordForm({ hasPassword: hasPasswordInitial }: SetPassword
           />
         </label>
         <p className="auth-form-hint">{PASSWORD_REQUIREMENTS}</p>
-        <button type="submit" className="gold-button account-set-password-submit" disabled={loading}>
-          {loading
-            ? ACCOUNT_COPY.passwordSaving
-            : hasPassword
-              ? ACCOUNT_COPY.passwordChangeSubmit
-              : ACCOUNT_COPY.passwordSetSubmit}
-        </button>
-        {success ? <p className="conversion-status account-set-password-success">{ACCOUNT_COPY.passwordSaved}</p> : null}
+        <div className="account-set-password-actions">
+          <button type="submit" className="gold-button account-set-password-submit" disabled={loading}>
+            {loading
+              ? ACCOUNT_COPY.passwordSaving
+              : hasPassword
+                ? ACCOUNT_COPY.passwordChangeSubmit
+                : ACCOUNT_COPY.passwordSetSubmit}
+          </button>
+          {hasPassword ? (
+            <button
+              type="button"
+              className="blueprint-secondary-link account-set-password-cancel"
+              onClick={() => {
+                setEditing(false);
+                setStatus("");
+              }}
+            >
+              Cancel
+            </button>
+          ) : null}
+        </div>
         {status ? <p className="conversion-status auth-form-status">{status}</p> : null}
       </form>
     </div>

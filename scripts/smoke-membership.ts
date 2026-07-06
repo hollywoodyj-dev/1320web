@@ -50,7 +50,7 @@ const qa = validateContinuityPresentation({
 });
 assert(qa.passed, "continuity QA pass");
 
-const myReport = fs.readFileSync(path.join(root, "app/(site)/my-report/[reportId]/page.tsx"), "utf8");
-assert(myReport.includes("/living-blueprint/"), "my-report links to Living Blueprint");
+const accountPage = fs.readFileSync(path.join(root, "app/(site)/account/page.tsx"), "utf8");
+assert(accountPage.includes("/living-blueprint/"), "account links to Living Blueprint");
 
 console.log("smoke:membership PASS");

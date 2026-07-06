@@ -3187,6 +3187,36 @@ button {
   color: #9fd4a8;
 }
 
+.account-set-password-saved {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgba(248, 244, 234, 0.82);
+}
+
+.account-set-password-toggle {
+  margin-top: 0.65rem;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+.account-set-password-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.account-set-password-cancel {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+}
+
 @media (max-width: 520px) {
   .auth-card {
     padding: 26px 20px 22px;

@@ -53,8 +53,12 @@ export default async function AccountPage() {
         </p>
         <div className="account-quick-links mt-4 flex flex-wrap gap-3">
           {account.entitledReportId ? (
-            <Link href={`/my-report/${account.entitledReportId}`} className="gold-button inline-flex">
-              {ACCOUNT_COPY.openFullReport}
+            <Link
+              href={`/my-report/${account.entitledReportId}`}
+              className="gold-button inline-flex"
+              aria-label="Read full report from account quick links"
+            >
+              {ACCOUNT_COPY.openFullReportHero}
             </Link>
           ) : null}
           {account.entitledReportId ? (
@@ -100,7 +104,11 @@ export default async function AccountPage() {
         {account.entitledReportId ? (
           <>
             <p>{ACCOUNT_COPY.fullReportUnlocked}</p>
-            <Link href={`/my-report/${account.entitledReportId}`} className="gold-button mt-4 inline-flex">
+            <Link
+              href={`/my-report/${account.entitledReportId}`}
+              className="gold-button mt-4 inline-flex"
+              aria-label="Open full report from Full Soul Origin Report section"
+            >
               {ACCOUNT_COPY.openFullReport}
             </Link>
           </>

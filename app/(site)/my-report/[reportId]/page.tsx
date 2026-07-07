@@ -76,6 +76,7 @@ export default async function MyReportPage({ params }: PageProps) {
     name: preparedFor,
     birth_date: birthDateLabel,
     birth_date_display: birthDateDisplay,
+    report_type: "Full Soul Origin Report",
   }).payload;
 
   return (

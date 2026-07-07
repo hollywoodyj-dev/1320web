@@ -185,6 +185,8 @@ export type FullReportV2InputClient = {
   birth_date_display?: string;
   timezone?: string;
   language?: "en" | "zh" | "bilingual";
+  /** Cover metadata — defaults to sample wording when omitted. */
+  report_type?: string;
 };
 
 export type FullReportV2LayerTitles = {

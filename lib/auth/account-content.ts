@@ -53,6 +53,7 @@ export const ACCOUNT_COPY = {
   fullReportUnlocked: "Your Full Report is unlocked.",
   fullReportLocked: "Unlock the ~32-page Full Report for your saved birth date.",
   openFullReport: "OPEN FULL REPORT",
+  openFullReportHero: "READ FULL REPORT",
   unlockFullReport: "UNLOCK FULL REPORT",
   livingBlueprintTitle: "Living Blueprint",
   livingBlueprintBody: "Your membership dashboard — expression updates, relationship memory, and check-ins.",

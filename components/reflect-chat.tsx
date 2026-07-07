@@ -103,6 +103,12 @@ export function ReflectChat({ sessionId, accessToken, initialSession, initialMes
             placeholder={REFLECT_CHAT.placeholder}
             value={message}
             onChange={(event) => setMessage(event.target.value)}
+            onKeyDown={(event) => {
+              if (event.key === "Enter" && !event.shiftKey) {
+                event.preventDefault();
+                event.currentTarget.form?.requestSubmit();
+              }
+            }}
             disabled={loading}
           />
         </label>

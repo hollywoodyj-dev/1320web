@@ -107,7 +107,7 @@ export function buildSampleFullReportV2Payload(
       generated_date: generated.generated_date,
       generated_time: generated.generated_time,
       generated_by: "1320 Soul Code System",
-      type: "Sample Full Report",
+      type: input.report_type ?? "Sample Full Report",
     },
     calculation,
     modules: {

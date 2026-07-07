@@ -4,7 +4,8 @@
 **Scope:** Phase 2 platform — password auth, account hub, entitled full report UX, Reflect from account  
 **Environment:** Production `https://www.1320soulcode.com` (primary)  
 **Audience:** Lumen (manual QA)  
-**Deploy baseline:** `837d4c5` and later on `master`  
+**Deploy baseline:** `cb150de` and later on `master`  
+**Handoff:** `qa-artifacts/LUMEN_QA_HANDOFF_ENTITLED_ACCOUNT_2026-07-07.md` (entitled account + re-test order)  
 **Last updated:** 2026-07-07
 
 **Pair with:** `LUMEN_QA_PROTOCOL_v1.md` (ethical language on report content) · `FULL_REPORT_RELEASE_QA_v1.md` (desktop/mobile report parity) · `QA_BIRTHDATE_LUMEN.md` (free `/result` funnel)
@@ -25,7 +26,7 @@ Verify that a paying member can **sign in reliably**, manage their account, **re
 |------|--------|
 | Browsers | Desktop Chrome or Edge; one mobile browser (Safari or Chrome @ 390×844) |
 | Tabs | Private/incognito between auth scenarios |
-| Test account | Entitled user with known email + password (or set password during test) |
+| Test account | Entitled user — see `qa-artifacts/LUMEN_QA_HANDOFF_ENTITLED_ACCOUNT_2026-07-07.md` |
 | Canonical birth date | **1982-02-03** (Lumen baseline) · optional **1980-05-22** regression |
 | Automated gate | Nova runs Section 0 first; Lumen proceeds only if green |
 

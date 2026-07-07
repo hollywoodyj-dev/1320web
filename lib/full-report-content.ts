@@ -5,7 +5,7 @@ export type AdvancedModuleSymbolId = "s5" | "s6" | "shadow";
 export const FULL_REPORT_META = {
   title: "Full 1320 Soul Origin Report",
   description:
-    "Unlock the Full 1320 Soul Origin Report — deeper S1–S0 layers plus Shadow Pattern, Soul Mission, and Money Frequency modules. One-time purchase with password sign-in return access.",
+    "Unlock the Full 1320 Soul Origin Report — deeper S1–S0 layers plus Shadow Pattern, Soul Mission, and Value & Receiving modules. One-time purchase with password sign-in return access.",
 };
 
 export const FULL_REPORT_HERO = {
@@ -45,7 +45,7 @@ export const FREE_VS_FULL = {
       "Reflection journal prompts and integration practices",
       "Shadow Pattern Module (derived from your origin frequency)",
       "S5 Soul Mission module",
-      "S6 Money Frequency module (self-awareness only)",
+      "S6 Value & Receiving module (self-awareness only)",
       "Designed for slow reading, integration, and return visits",
     ],
   },
@@ -116,12 +116,12 @@ export const ADVANCED_MODULES: {
     {
       symbol: "s6",
       code: "S6",
-      title: "Money Frequency",
+      title: "Value & Receiving",
       text: "How your energy relates to worth, receiving, and resource flow — self-awareness only.",
     },
   ],
   s6Disclaimer:
-    "S6 Money Frequency is for self-awareness and reflection only. It is not financial, investment, tax, or legal advice. Consult qualified professionals for money decisions.",
+    "S6 Value & Receiving is for self-awareness and reflection only. It is not financial, investment, tax, or legal advice. Consult qualified professionals for money decisions.",
 };
 
 export const REPORT_EXPERIENCE = {
@@ -169,7 +169,7 @@ export const FULL_REPORT_FAQ = [
   },
   {
     q: "Is S6 financial advice?",
-    a: "No. S6 Money Frequency is symbolic self-awareness about worth and resource patterns — not investment, tax, or financial planning advice.",
+    a: "No. S6 Value & Receiving is symbolic self-awareness about worth and resource patterns — not investment, tax, or financial planning advice.",
   },
   {
     q: "How is a reading different from the waitlist?",

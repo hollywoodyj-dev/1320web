@@ -87,7 +87,7 @@ export const FAQ_SECTIONS: FaqSection[] = [
       },
       {
         q: "Is S6 financial advice?",
-        a: "No. S6 Money Frequency is symbolic self-awareness only — not investment, tax, or financial planning advice.",
+        a: "No. S6 Value & Receiving is symbolic self-awareness only — not investment, tax, or financial planning advice.",
       },
       {
         q: "Where can I preview the full report layout?",

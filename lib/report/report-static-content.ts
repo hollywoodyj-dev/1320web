@@ -28,7 +28,7 @@ export const REPORT_FULL_UPSELL = {
     "Your Integrated Soul Blueprint",
     "Shadow Pattern Module",
     "Soul Mission",
-    "Money Frequency",
+    "Value & Receiving",
     "Your 7-Day Integration Practice",
   ],
   primaryCta: "UNLOCK MY FULL BLUEPRINT",
@@ -75,7 +75,7 @@ export const REPORT_FINAL_CTA = {
 export const RESULT_EXTRAS = {
   goDeeperTitle: "Go Deeper",
   goDeeperBody:
-    "Your free result reveals the first layer. The full report expands S1–S0 and unlocks the Shadow Pattern Module, Soul Mission, and Money Frequency (self-awareness only — not financial advice).",
+    "Your free result reveals the first layer. The full report expands S1–S0 and unlocks the Shadow Pattern Module, Soul Mission, and Value & Receiving (self-awareness only — not financial advice).",
   shareTitle: "Share Your Code",
   shareCopyLabel: "COPY MY CODE",
   shareHint: "Share your code as a mirror for conversation — not as a fixed identity.",

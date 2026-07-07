@@ -6,9 +6,10 @@ import { getSegment } from "@/lib/segments";
 
 type ReportModuleCardProps = {
   module: ReportModuleViewModel;
+  checkoutHref?: string;
 };
 
-export function ReportModuleCard({ module }: ReportModuleCardProps) {
+export function ReportModuleCard({ module, checkoutHref = "/checkout" }: ReportModuleCardProps) {
   const meta = getSegment(module.segmentId);
   const tone = PILLAR_TONE[module.segmentId];
   const showCard = Boolean(module.cardImageUrl);
@@ -69,12 +70,12 @@ export function ReportModuleCard({ module }: ReportModuleCardProps) {
           <div className="report-module-locked">
             <p>{module.lockedTeaser}</p>
             <p className="report-module-locked-label">Available in the Full Soul Origin Report</p>
-            <Link href="/checkout" className="report-module-locked-cta">
+            <Link href={checkoutHref} className="report-module-locked-cta">
               UNLOCK MY FULL BLUEPRINT
             </Link>
           </div>
         ) : (
-          <Link href="/checkout" className="report-module-insight">
+          <Link href={checkoutHref} className="report-module-insight">
             VIEW FULL REPORT
           </Link>
         )}

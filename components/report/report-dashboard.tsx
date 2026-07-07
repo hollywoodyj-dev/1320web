@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { saveBirthCookie } from "@/lib/birth-cookie";
 import { SAMPLE_REPORT_HREF } from "@/lib/site-nav";
 import type { ReportViewModel } from "@/lib/report/build-report-view-model";
 import { REPORT_NAV, type ReportSectionId } from "@/lib/report/report-nav";
@@ -34,6 +35,25 @@ export function ReportDashboard({ viewModel, analyticsEvent }: ReportDashboardPr
     if (analyticsEvent) trackEvent(analyticsEvent);
   }, [analyticsEvent]);
 
+  useEffect(() => {
+    if (!viewModel.birthDateLabel) return;
+    const match = viewModel.birthDateLabel.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/);
+    if (!match) return;
+
+    const year = Number(match[1]);
+    const month = Number(match[2]);
+    const day = Number(match[3]);
+    saveBirthCookie(year, month, day);
+    void fetch("/api/birth-cookie", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ year, month, day }),
+      credentials: "same-origin",
+    }).catch(() => {
+      // Query params on checkout links still preserve birth context.
+    });
+  }, [viewModel.birthDateLabel]);
+
   return (
     <div className="report-dashboard">
       <ReportSidebar
@@ -58,7 +78,7 @@ export function ReportDashboard({ viewModel, analyticsEvent }: ReportDashboardPr
           <p className="report-free-layer-note glass-card">
             This page shows your <strong>free first layer</strong> — overview fields only. The paid{" "}
             <strong>Full Soul Origin Report</strong> (~32 pages) unlocks at checkout.{" "}
-            <a href="/checkout" className="blueprint-secondary-link">
+            <a href={viewModel.checkoutHref} className="blueprint-secondary-link">
               Unlock my full blueprint
             </a>{" "}
             or{" "}
@@ -91,6 +111,7 @@ export function ReportDashboard({ viewModel, analyticsEvent }: ReportDashboardPr
               <ReportModuleCard
                 key={`${module.segmentId}-${module.codeLabel}`}
                 module={module}
+                checkoutHref={viewModel.checkoutHref}
               />
             ))}
           </div>
@@ -108,13 +129,13 @@ export function ReportDashboard({ viewModel, analyticsEvent }: ReportDashboardPr
           </section>
         )}
 
-        {viewModel.showFullUpsell ? <ReportFullUpsell /> : null}
+        {viewModel.showFullUpsell ? <ReportFullUpsell checkoutHref={viewModel.checkoutHref} /> : null}
 
         <ReportFinalCta
           title={viewModel.finalCta.title}
           body={viewModel.finalCta.body}
           unlock={viewModel.finalCta.unlock}
-          unlockHref={viewModel.finalCta.unlockHref}
+          unlockHref={viewModel.checkoutHref}
           book={viewModel.finalCta.book}
           bookHref={viewModel.finalCta.bookHref}
           profile={viewModel.finalCta.profile}

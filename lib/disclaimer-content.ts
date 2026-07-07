@@ -35,7 +35,7 @@ export const DISCLAIMER_SECTIONS: LegalSection[] = [
     ],
   },
   {
-    title: "Money Frequency (S6)",
+    title: "Value & Receiving (S6)",
     paragraphs: [
       "S6 addresses symbolic patterns around worth, receiving, and resource flow for self-awareness only.",
       "It is not investment advice, tax guidance, business consulting, or a promise of income or abundance.",

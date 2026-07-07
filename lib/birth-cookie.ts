@@ -30,7 +30,7 @@ export function saveBirthCookie(year: number, month: number, day: number): void 
   if (typeof document === "undefined") return;
   try {
     const value = formatBirthCookieValue(year, month, day);
-    document.cookie = `${BIRTH_COOKIE_NAME}=${encodeURIComponent(value)}; path=/; max-age=900; SameSite=Lax`;
+    document.cookie = `${BIRTH_COOKIE_NAME}=${encodeURIComponent(value)}; path=/; max-age=3600; SameSite=Lax`;
   } catch {
     // Cookie blocked — query params or sessionStorage may still work.
   }

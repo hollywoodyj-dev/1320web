@@ -13,6 +13,7 @@ import {
   coreIllusionMechanismField,
   relationshipTriggerPatternField,
 } from "@/lib/report/format-depth-fields";
+import { buildCheckoutHref } from "@/lib/report/build-checkout-href";
 import {
   REFLECTION_JOURNAL_PROMPTS,
   REPORT_FINAL_CTA,
@@ -71,6 +72,7 @@ export type ReportViewModel = {
   practices: ReturnType<typeof generateIntegrationPractices>;
   finalCta: typeof REPORT_FINAL_CTA;
   birthDateLabel?: string;
+  checkoutHref: string;
   debug?: ReportDebugInfo;
 };
 
@@ -200,6 +202,21 @@ function buildS3Fields(
   return polishReportFields(all, { archetype });
 }
 
+function buildFreeModuleFields(
+  segmentId: SegmentId,
+  segment: SegmentContent,
+  locale: Locale,
+): ReportField[] {
+  const labelBySegment: Record<SegmentId, string> = {
+    s1: "Origin Essence",
+    s3: "Vibration Essence",
+    s2: "Reflective Summary",
+    s0: "Reflective Summary",
+  };
+  const essence = field(locale, labelBySegment[segmentId], segment.freeEssence);
+  return essence ? [essence] : [];
+}
+
 function buildS2Fields(
   segment: SegmentContent,
   locale: Locale,
@@ -210,7 +227,7 @@ function buildS2Fields(
     field(locale, "Mirror Archetype", segment.title),
     field(locale, "Reflective Summary", segment.fullEssence ?? segment.freeEssence),
     field(locale, "Relationship Dynamic", segment.relationshipPattern),
-    field(locale, "Karmic Loop", segment.karmicLoop),
+    field(locale, "Repeating Mirror Pattern", segment.karmicLoop),
     field(locale, "Lesson", segment.mirrorLesson),
     field(locale, "Healing Path", segment.integrationPrompt),
     field(locale, "Integration Key", segment.integrationKey),
@@ -381,6 +398,23 @@ export function buildReportViewModel(
 
     const archetype = pickLocalized(seg.title, locale);
     const codeNum = segmentCardCodeNum(content, id);
+    const lockedTeaser =
+      pickLocalized(seg.lockedPreview, locale) ||
+      pickLocalized(content.freeResultCopy.missingEntryFallback, locale);
+
+    if (mode === "free") {
+      return {
+        segmentId: id,
+        codeLabel: segmentCodeLabel(content, id),
+        archetype,
+        shortLabel: id === "s2" ? "Relationship Mirror" : pickLocalized(seg.shortLabel, locale),
+        cardImageUrl: getSegmentCardImageUrl(id, codeNum),
+        fields: buildFreeModuleFields(id, seg, locale),
+        reflectionQuestion: reflection || undefined,
+        showLocked: true,
+        lockedTeaser,
+      };
+    }
 
     return {
       segmentId: id,
@@ -437,6 +471,7 @@ export function buildReportViewModel(
     practices: practicesResolved,
     finalCta: REPORT_FINAL_CTA,
     birthDateLabel: options.birthDateLabel,
+    checkoutHref: buildCheckoutHref(options.birthDateLabel),
     debug,
   };
 }

@@ -6,6 +6,7 @@
 **Audience:** Lumen (manual QA)  
 **Deploy baseline:** `cb150de` and later on `master`  
 **Handoff:** `qa-artifacts/LUMEN_QA_HANDOFF_ENTITLED_ACCOUNT_2026-07-07.md` (entitled account + re-test order)  
+**Reflect plan:** `qa-artifacts/LUMEN_QA_REFLECT_WITH_ACCOUNT_2026-07-07.md` (account birth prefill + chat cases)  
 **Last updated:** 2026-07-07
 
 **Pair with:** `LUMEN_QA_PROTOCOL_v1.md` (ethical language on report content) · `FULL_REPORT_RELEASE_QA_v1.md` (desktop/mobile report parity) · `QA_BIRTHDATE_LUMEN.md` (free `/result` funnel)

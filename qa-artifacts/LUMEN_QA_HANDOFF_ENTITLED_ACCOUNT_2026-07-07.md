@@ -116,6 +116,9 @@ Optional: repeat left/right tap on mobile @ 390×844.
 
 ### Pass 6 — Reflect & Living Blueprint (10 min)
 
+**Reflect entry (account birth prefill):** https://www.1320soulcode.com/login?next=/account%23reflect  
+**Full Reflect test plan:** `qa-artifacts/LUMEN_QA_REFLECT_WITH_ACCOUNT_2026-07-07.md`
+
 Signed in, birth date on profile.
 
 1. **Reflect with Wisewave** — name/email/birth prefilled; only intention required

@@ -149,11 +149,12 @@ export function applyCommercialReportLayer(
     practice: practice ? bilingualField(practice) : segment.practice,
     guidance: reflection ? bilingualField(reflection) : segment.guidance,
     growthEdge: growth ? bilingualField(growth) : segment.growthEdge,
-    lockedPreview: bilingualField(
-      "Commercial report output layer — reflective, non-predictive symbolic reading.",
-      "商业报告输出层 — 象征性反思阅读，非预测性内容。",
-    ),
   };
+
+  const safeNote = str(entry, "safe_language_note");
+  if (safeNote?.trim()) {
+    updated.lockedPreview = bilingualField(safeNote, str(entry, "safe_language_note_zh"));
+  }
 
   if (module === "S1" && blocks.core_gift) {
     updated.coreGifts = [bilingualField(blocks.core_gift)];

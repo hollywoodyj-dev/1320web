@@ -266,7 +266,7 @@ export function adaptV2Segment(
     s3Code: module === "S3" ? code : undefined,
   };
 
-  if (module === "S1" && !useCommercialLayer) {
+  if (module === "S1") {
     segment.soulTraits = mapStringArray(enriched, "soul_traits", "soul_traits_zh");
     segment.coreGifts = mapStringArray(enriched, "strengths", "strengths_zh");
     segment.shadowPatterns = mapStringArray(enriched, "shadow_frequency", "shadow_frequency_zh");
@@ -278,72 +278,80 @@ export function adaptV2Segment(
       str(enriched, "esoteric_link") ?? str(enriched, "symbolic_link"),
       str(enriched, "esoteric_link_zh"),
     );
-    segment.integrationKey = text(str(enriched, "integration_key"), str(enriched, "integration_key_zh"));
-    const origin = text(str(enriched, "origin_essence"), str(enriched, "origin_essence_zh"));
-    segment.fullEssence = origin;
-    segment.freeEssence = origin;
-    applyWisewaveGuidance(segment, enriched);
-    applySafeLanguageNote(segment, enriched);
+    if (!useCommercialLayer) {
+      segment.integrationKey = text(str(enriched, "integration_key"), str(enriched, "integration_key_zh"));
+      const origin = text(str(enriched, "origin_essence"), str(enriched, "origin_essence_zh"));
+      segment.fullEssence = origin;
+      segment.freeEssence = origin;
+      applyWisewaveGuidance(segment, enriched);
+      applySafeLanguageNote(segment, enriched);
+    }
   }
 
-  if (module === "S0" && !useCommercialLayer) {
+  if (module === "S0") {
     segment.coreIllusion = text(str(enriched, "core_illusion"), str(enriched, "core_illusion_zh"));
     segment.voidChallenge = text(str(enriched, "void_challenge"), str(enriched, "void_challenge_zh"));
     segment.voidPower = text(str(enriched, "void_power"), str(enriched, "void_power_zh"));
     segment.awakeningPath = text(str(enriched, "path_of_return"), str(enriched, "path_of_return_zh"));
-    segment.integrationKey = text(str(enriched, "integration_key"), str(enriched, "integration_key_zh"));
-    const reflective = text(
-      str(enriched, "reflective_summary"),
-      str(enriched, "reflective_summary_zh"),
-    );
-    segment.fullEssence = reflective;
-    segment.freeEssence = reflective;
-    segment.practice = str(enriched, "one_week_practice")
-      ? text(str(enriched, "one_week_practice")!, str(enriched, "one_week_practice_zh"))
-      : undefined;
-    applyWisewaveGuidance(segment, enriched);
-    applySafeLanguageNote(segment, enriched);
-  }
-
-  if (module === "S2" && !useCommercialLayer) {
-    segment.relationshipPattern = text(
-      str(enriched, "relationship_dynamic"),
-      str(enriched, "relationship_dynamic_zh"),
-    );
-    segment.karmicLoop = text(str(enriched, "karmic_loop"), str(enriched, "karmic_loop_zh"));
-    segment.mirrorLesson = text(str(enriched, "lesson"), str(enriched, "lesson_zh"));
-    segment.integrationPrompt = text(str(enriched, "healing_path"), str(enriched, "healing_path_zh"));
-    segment.integrationKey = text(str(enriched, "integration_key"), str(enriched, "integration_key_zh"));
-    const reflective = text(
-      str(enriched, "reflective_summary"),
-      str(enriched, "reflective_summary_zh"),
-    );
-    segment.fullEssence = reflective;
-    segment.freeEssence = reflective;
-    if (!segment.guidance) {
-      segment.guidance = text(
-        str(enriched, "wisewave_guidance"),
-        str(enriched, "wisewave_guidance_zh"),
+    if (!useCommercialLayer) {
+      segment.integrationKey = text(str(enriched, "integration_key"), str(enriched, "integration_key_zh"));
+      const reflective = text(
+        str(enriched, "reflective_summary"),
+        str(enriched, "reflective_summary_zh"),
       );
+      segment.fullEssence = reflective;
+      segment.freeEssence = reflective;
+      segment.practice = str(enriched, "one_week_practice")
+        ? text(str(enriched, "one_week_practice")!, str(enriched, "one_week_practice_zh"))
+        : undefined;
+      applyWisewaveGuidance(segment, enriched);
+      applySafeLanguageNote(segment, enriched);
     }
-    applySafeLanguageNote(segment, enriched);
   }
 
-  if (module === "S3" && !useCommercialLayer) {
-    const essence = text(str(enriched, "vibration_essence"), str(enriched, "vibration_essence_zh"));
-    segment.fullEssence = essence;
-    segment.freeEssence = essence;
+  if (module === "S2") {
+    if (!useCommercialLayer) {
+      segment.relationshipPattern = text(
+        str(enriched, "relationship_dynamic"),
+        str(enriched, "relationship_dynamic_zh"),
+      );
+      segment.karmicLoop = text(str(enriched, "karmic_loop"), str(enriched, "karmic_loop_zh"));
+      segment.mirrorLesson = text(str(enriched, "lesson"), str(enriched, "lesson_zh"));
+      segment.integrationPrompt = text(str(enriched, "healing_path"), str(enriched, "healing_path_zh"));
+      segment.integrationKey = text(str(enriched, "integration_key"), str(enriched, "integration_key_zh"));
+      const reflective = text(
+        str(enriched, "reflective_summary"),
+        str(enriched, "reflective_summary_zh"),
+      );
+      segment.fullEssence = reflective;
+      segment.freeEssence = reflective;
+      if (!segment.guidance) {
+        segment.guidance = text(
+          str(enriched, "wisewave_guidance"),
+          str(enriched, "wisewave_guidance_zh"),
+        );
+      }
+      applySafeLanguageNote(segment, enriched);
+    }
+  }
+
+  if (module === "S3") {
     segment.vibrationTraits = text(str(enriched, "soul_traits"), str(enriched, "soul_traits_zh"));
     segment.strengthSummary = text(str(enriched, "strengths"), str(enriched, "strengths_zh"));
     segment.challenges = text(str(enriched, "challenges"), str(enriched, "challenges_zh"));
     segment.expressionPattern = text(str(enriched, "expression_style"), str(enriched, "expression_style_zh"));
-    segment.integrationKey = text(str(enriched, "integration_key"), str(enriched, "integration_key_zh"));
-    segment.integrationPrompt = text(
-      str(enriched, "one_week_practice"),
-      str(enriched, "one_week_practice_zh"),
-    );
-    applyWisewaveGuidance(segment, enriched);
-    applySafeLanguageNote(segment, enriched);
+    if (!useCommercialLayer) {
+      const essence = text(str(enriched, "vibration_essence"), str(enriched, "vibration_essence_zh"));
+      segment.fullEssence = essence;
+      segment.freeEssence = essence;
+      segment.integrationKey = text(str(enriched, "integration_key"), str(enriched, "integration_key_zh"));
+      segment.integrationPrompt = text(
+        str(enriched, "one_week_practice"),
+        str(enriched, "one_week_practice_zh"),
+      );
+      applyWisewaveGuidance(segment, enriched);
+      applySafeLanguageNote(segment, enriched);
+    }
   }
 
   if (module === "S4" && !useCommercialLayer) {

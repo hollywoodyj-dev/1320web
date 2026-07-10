@@ -5,6 +5,7 @@
 process.env.USE_1320_V2_CONTENT = "true";
 
 import { get1320Content, t } from "../lib/get1320Content";
+import { buildSynthesisLayerInput, validateSynthesisLayerInput } from "../lib/build-synthesis-input";
 
 function assert(condition: boolean, message: string) {
   if (!condition) {
@@ -63,6 +64,18 @@ assert(free.s4Content !== null, "free tier includes S4");
 assert(free.s5Content === null, "free tier gates S5");
 assert(free.s6Content === null, "free tier gates S6");
 assert(free.s7Content === null, "free tier gates S7");
+
+const synthesisInput = buildSynthesisLayerInput(free, {}, { birthDate: "1980-05-22", locale: "en" });
+const synthesisMissing = validateSynthesisLayerInput(synthesisInput);
+assert(synthesisMissing.length === 0, `free synthesis missing: ${synthesisMissing.join(", ")}`);
+assert(
+  !t(free.s1Content!.lockedPreview, "en").includes("Commercial report output layer"),
+  "S1 lockedPreview must not leak internal commercial layer copy",
+);
+assert(
+  (free.integratedSoulBlueprint?.generationMeta.missingFields.length ?? 1) === 0,
+  "integrated blueprint should have complete synthesis fields for canonical free result",
+);
 
 console.log("=== v2 get1320Content — advanced tier ===");
 const advanced = get1320Content(

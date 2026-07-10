@@ -40,45 +40,59 @@ function stripIntegrationPrefix(text: string): string {
 }
 
 function s4SectionBody(sections: SoulMissionSection[] | undefined, key: string): string {
-  if (!sections) return "";
-  const match = sections.find((section) => section.id === `S4-${key}`);
-  return match?.body.en?.trim() ?? "";
+  return moduleSectionBody(sections, "S4", key);
 }
 
 function s4SectionLabel(sections: SoulMissionSection[] | undefined, key: string): string {
+  return moduleSectionLabel(sections, "S4", key);
+}
+
+function moduleSectionBody(
+  sections: SoulMissionSection[] | undefined,
+  modulePrefix: string,
+  key: string,
+): string {
   if (!sections) return "";
-  const match = sections.find((section) => section.id === `S4-${key}`);
+  const match = sections.find(
+    (section) =>
+      section.id === `${modulePrefix}-${key}` ||
+      section.id === `${modulePrefix}-commercial-${key}`,
+  );
+  return match?.body.en?.trim() ?? "";
+}
+
+function moduleSectionLabel(
+  sections: SoulMissionSection[] | undefined,
+  modulePrefix: string,
+  key: string,
+): string {
+  if (!sections) return "";
+  const match = sections.find(
+    (section) =>
+      section.id === `${modulePrefix}-${key}` ||
+      section.id === `${modulePrefix}-commercial-${key}`,
+  );
   return match?.label.en?.trim() ?? "";
 }
 
 function s5SectionBody(sections: SoulMissionSection[] | undefined, key: string): string {
-  if (!sections) return "";
-  const match = sections.find((section) => section.id === `S5-${key}`);
-  return match?.body.en?.trim() ?? "";
+  return moduleSectionBody(sections, "S5", key);
 }
 
 function s6SectionBody(sections: SoulMissionSection[] | undefined, key: string): string {
-  if (!sections) return "";
-  const match = sections.find((section) => section.id === `S6-${key}`);
-  return match?.body.en?.trim() ?? "";
+  return moduleSectionBody(sections, "S6", key);
 }
 
 function s7SectionBody(sections: SoulMissionSection[] | undefined, key: string): string {
-  if (!sections) return "";
-  const match = sections.find((section) => section.id === `S7-${key}`);
-  return match?.body.en?.trim() ?? "";
+  return moduleSectionBody(sections, "S7", key);
 }
 
 function s8SectionBody(sections: SoulMissionSection[] | undefined, key: string): string {
-  if (!sections) return "";
-  const match = sections.find((section) => section.id === `S8-${key}`);
-  return match?.body.en?.trim() ?? "";
+  return moduleSectionBody(sections, "S8", key);
 }
 
 function s9SectionBody(sections: SoulMissionSection[] | undefined, key: string): string {
-  if (!sections) return "";
-  const match = sections.find((section) => section.id === `S9-${key}`);
-  return match?.body.en?.trim() ?? "";
+  return moduleSectionBody(sections, "S9", key);
 }
 
 function parseBulletBody(text: string): string[] {
@@ -175,13 +189,21 @@ export function enrichModuleFromSegment(
   const s7Sections = isS7 ? segment.soulMissionSections : undefined;
   const s8Sections = isS8 ? segment.soulMissionSections : undefined;
   const s9Sections = isS9 ? segment.soulMissionSections : undefined;
-  const s4CoreLoop = isS4 ? s4SectionBody(s4Sections, "core_loop") : "";
-  const s4EmotionalTrigger = isS4 ? s4SectionBody(s4Sections, "emotional_trigger") : "";
+  let s4CoreLoop = isS4 ? s4SectionBody(s4Sections, "core_loop") : "";
+  let s4EmotionalTrigger = isS4 ? s4SectionBody(s4Sections, "emotional_trigger") : "";
   const s4DefensePattern = isS4 ? s4SectionBody(s4Sections, "defense_pattern") : "";
-  const s4HiddenNeed = isS4 ? s4SectionBody(s4Sections, "hidden_need") : "";
+  let s4HiddenNeed = isS4 ? s4SectionBody(s4Sections, "hidden_need") : "";
   const s4RelationshipPattern = isS4 ? s4SectionBody(s4Sections, "relationship_pattern") : "";
   const s4WorkLifePattern = isS4 ? s4SectionBody(s4Sections, "work_life_pattern") : "";
   const s4ReflectiveSummary = isS4 ? essenceText : "";
+  if (isS4 && segment.contentLayer === "commercial") {
+    const opening = moduleSectionBody(s4Sections, "S4", "opening_essence");
+    const howShowUp = moduleSectionBody(s4Sections, "S4", "how_this_may_show_up");
+    const hiddenNeedCommercial = moduleSectionBody(s4Sections, "S4", "hidden_need");
+    if (!s4CoreLoop && opening) s4CoreLoop = opening;
+    if (!s4EmotionalTrigger && howShowUp) s4EmotionalTrigger = howShowUp;
+    if (!s4HiddenNeed && hiddenNeedCommercial) s4HiddenNeed = hiddenNeedCommercial;
+  }
   const s4ShowsUp = isS4
     ? [
         s4EmotionalTrigger,
@@ -215,17 +237,29 @@ export function enrichModuleFromSegment(
       ].filter(Boolean)
     : [];
 
-  const s6ValueEssence = isS6 ? s6SectionBody(s6Sections, "value_essence") : "";
+  let s6ValueEssence = isS6 ? s6SectionBody(s6Sections, "value_essence") : "";
   const s6SoulLearning = isS6
     ? s6SectionBody(s6Sections, "what_your_soul_is_learning_to_receive")
     : "";
-  const s6ValueFlow = isS6 ? s6SectionBody(s6Sections, "how_value_wants_to_flow") : "";
+  let s6ValueFlow = isS6 ? s6SectionBody(s6Sections, "how_value_wants_to_flow") : "";
   const s6NaturalFields = isS6 ? s6SectionBody(s6Sections, "natural_value_fields") : "";
   const s6ShadowDistortion = isS6
     ? s6SectionBody(s6Sections, "shadow_distortion_of_receiving")
     : "";
-  const s6MatureExpression = isS6 ? s6SectionBody(s6Sections, "mature_receiving_expression") : "";
-  const s6Wisewave = isS6 ? s6SectionBody(s6Sections, "wisewave_reflection") : "";
+  let s6MatureExpression = isS6 ? s6SectionBody(s6Sections, "mature_receiving_expression") : "";
+  let s6Wisewave = isS6 ? s6SectionBody(s6Sections, "wisewave_reflection") : "";
+  if (isS6 && segment.contentLayer === "commercial") {
+    const opening = moduleSectionBody(s6Sections, "S6", "opening_essence");
+    const valueFlow = moduleSectionBody(s6Sections, "S6", "how_value_wants_to_flow");
+    const mature = moduleSectionBody(s6Sections, "S6", "mature_receiving_expression");
+    if (!s6ValueEssence && opening) s6ValueEssence = opening;
+    if (!s6ValueFlow && valueFlow) s6ValueFlow = valueFlow;
+    if (!s6MatureExpression && mature) s6MatureExpression = mature;
+    if (!s6Wisewave) {
+      const reflection = moduleSectionBody(s6Sections, "S6", "wisewave_reflection");
+      if (reflection) s6Wisewave = reflection;
+    }
+  }
   const s6Icon = isS6 ? resolveS6PrimaryIconAsset(code, line(segment.title)) : null;
   const s6Gifts = isS6 ? parseBulletBody(s6NaturalFields) : [];
   const s6ShowsUp = isS6

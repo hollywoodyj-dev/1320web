@@ -1,3 +1,8 @@
+import {
+  applyCommercialReportLayer,
+  hasCommercialReportBlocks,
+  mergeCommercialOverlay,
+} from "@/lib/1320-v2/commercial-report-layer";
 import { enrichV2AwarenessEntry } from "@/lib/1320-v2/enrich-v2-awareness";
 import { bilingualField, containsCjk, fromV1Fields } from "@/lib/getLocalized";
 import type { Locale, LocalizedText, SegmentContent } from "@/lib/types/1320-content";
@@ -187,21 +192,24 @@ function baseSegment(
   titleOverride?: LocalizedText,
 ): Pick<SegmentContent, "id" | "number" | "title" | "subtitle" | "shortLabel" | "segmentCode"> {
   const labels = MODULE_LABELS[module];
+  const displayName = text(str(entry, "display_name"), str(entry, "display_name_zh"));
   const archetype = text(str(entry, "archetype"), str(entry, "archetype_zh"));
   const mirrorArchetype = text(str(entry, "mirror_archetype"), str(entry, "mirror_archetype_zh"));
   const vibration = text(str(entry, "vibration_archetype"), str(entry, "vibration_archetype_zh"));
   const voidArchetype = text(str(entry, "void_archetype"), str(entry, "void_archetype_zh"));
   const title =
     titleOverride ??
-    (archetype.en
-      ? archetype
-      : mirrorArchetype.en
-        ? mirrorArchetype
-        : vibration.en
-          ? vibration
-          : voidArchetype.en
-            ? voidArchetype
-            : labels.title);
+    (displayName.en
+      ? displayName
+      : archetype.en
+        ? archetype
+        : mirrorArchetype.en
+          ? mirrorArchetype
+          : vibration.en
+            ? vibration
+            : voidArchetype.en
+              ? voidArchetype
+              : labels.title);
 
   return {
     id: code,
@@ -221,10 +229,13 @@ export function adaptV2Segment(
 ): SegmentContent {
   if (!entry) return missingSegment(module, code);
 
-  const enriched = enrichV2AwarenessEntry(module, code, entry);
+  const merged = mergeCommercialOverlay(entry, code);
+  const enriched = enrichV2AwarenessEntry(module, code, merged);
+  const useCommercialLayer = hasCommercialReportBlocks(enriched);
 
   const reflection = str(enriched, "reflection_question");
   const sections = (() => {
+    if (useCommercialLayer) return [];
     if (module === "S5") return buildS5Sections(enriched);
     if (module === "S4" || module === "S6" || module === "S7" || module === "S8" || module === "S9") {
       return buildOutputSections(enriched, getV2BlockSpecs(module), module);
@@ -255,7 +266,7 @@ export function adaptV2Segment(
     s3Code: module === "S3" ? code : undefined,
   };
 
-  if (module === "S1") {
+  if (module === "S1" && !useCommercialLayer) {
     segment.soulTraits = mapStringArray(enriched, "soul_traits", "soul_traits_zh");
     segment.coreGifts = mapStringArray(enriched, "strengths", "strengths_zh");
     segment.shadowPatterns = mapStringArray(enriched, "shadow_frequency", "shadow_frequency_zh");
@@ -275,7 +286,7 @@ export function adaptV2Segment(
     applySafeLanguageNote(segment, enriched);
   }
 
-  if (module === "S0") {
+  if (module === "S0" && !useCommercialLayer) {
     segment.coreIllusion = text(str(enriched, "core_illusion"), str(enriched, "core_illusion_zh"));
     segment.voidChallenge = text(str(enriched, "void_challenge"), str(enriched, "void_challenge_zh"));
     segment.voidPower = text(str(enriched, "void_power"), str(enriched, "void_power_zh"));
@@ -294,7 +305,7 @@ export function adaptV2Segment(
     applySafeLanguageNote(segment, enriched);
   }
 
-  if (module === "S2") {
+  if (module === "S2" && !useCommercialLayer) {
     segment.relationshipPattern = text(
       str(enriched, "relationship_dynamic"),
       str(enriched, "relationship_dynamic_zh"),
@@ -318,7 +329,7 @@ export function adaptV2Segment(
     applySafeLanguageNote(segment, enriched);
   }
 
-  if (module === "S3") {
+  if (module === "S3" && !useCommercialLayer) {
     const essence = text(str(enriched, "vibration_essence"), str(enriched, "vibration_essence_zh"));
     segment.fullEssence = essence;
     segment.freeEssence = essence;
@@ -335,7 +346,7 @@ export function adaptV2Segment(
     applySafeLanguageNote(segment, enriched);
   }
 
-  if (module === "S4") {
+  if (module === "S4" && !useCommercialLayer) {
     const reflective = text(str(enriched, "reflective_summary"), str(enriched, "reflective_summary_zh"));
     segment.fullEssence = reflective;
     segment.freeEssence = reflective;
@@ -347,7 +358,10 @@ export function adaptV2Segment(
     applySafeLanguageNote(segment, enriched);
   }
 
-  if (module === "S5" || module === "S6" || module === "S7" || module === "S8" || module === "S9") {
+  if (
+    !useCommercialLayer &&
+    (module === "S5" || module === "S6" || module === "S7" || module === "S8" || module === "S9")
+  ) {
     applyWisewaveGuidance(segment, enriched);
     applySafeLanguageNote(segment, enriched);
     if (str(enriched, "one_week_practice")) {
@@ -356,6 +370,10 @@ export function adaptV2Segment(
         str(enriched, "one_week_practice_zh"),
       );
     }
+  }
+
+  if (useCommercialLayer) {
+    return applyCommercialReportLayer(segment, module, enriched);
   }
 
   return segment;

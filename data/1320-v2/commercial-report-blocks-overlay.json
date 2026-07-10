@@ -1,0 +1,73 @@
+{
+  "version": "1.0",
+  "source": "Wisewave 1320_REPORT_OUTPUT_QUALITY_SAMPLE_PATCH_v1",
+  "purpose": "Staged commercial_report_blocks for sample blueprint — not a full database replacement.",
+  "sample_blueprint": "S1-18 / S3-03 / S2-27 / S0-07 / S4-14 / S5-04 / S6-28 / S7-00 / S8-00 / S9-07",
+  "entries": {
+    "S1-18": {
+      "display_name": "The Transformer",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Soul Origin carries the pattern of transformation. You may be someone who senses change before it becomes visible and who often meets life through cycles of release, renewal, and rebuilding.",
+        "how_this_may_show_up": "This can show up as a deep capacity to move through emotional intensity, endings, reinvention, and inner alchemy. At times, you may feel as if growth only comes through pressure, but the deeper invitation is to transform without turning pain into proof.",
+        "core_gift": "Your gift is the ability to help life move from breakdown into renewal. When grounded, this origin frequency allows you to face what others avoid and bring light into places that have been hidden, heavy, or unresolved.",
+        "growth_edge": "The growth edge is learning that transformation does not have to be harsh in order to be real. You are not here to suffer your way into power; you are here to let power become cleaner, softer, and more conscious.",
+        "integration_key": "Practice transforming gently. Let change become a process of awareness rather than a repeated demand to prove your strength.",
+        "wisewave_reflection": "You are not here to turn pain into identity. You are here to let what has been lived become wisdom, presence, and renewal."
+      }
+    },
+    "S3-03": {
+      "display_name": "Explorer",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Soul Vibration moves through exploration. You may be drawn to different systems, ideas, paths, and forms of wisdom because your energy learns by moving, testing, comparing, and discovering.",
+        "how_this_may_show_up": "This pattern can bring openness, curiosity, and a natural willingness to experiment. It may also make it easy to become scattered when the search for more information replaces the deeper work of integration.",
+        "core_gift": "Your gift is your ability to enter unfamiliar territory and make meaning through experience. You can learn across worlds and bring fresh perspective where others may be fixed or closed.",
+        "growth_edge": "The growth edge is depth. Not every open door needs to be entered. Some paths become powerful only when you stay long enough to be changed by them.",
+        "integration_key": "Choose one path, practice, or question to deepen this week. Let exploration become devotion rather than dispersion.",
+        "wisewave_reflection": "Your curiosity is sacred when it leads you back to your center. The path does not become smaller when you choose; it becomes real."
+      }
+    },
+    "S2-27": {
+      "display_name": "The Soul Shock Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Soul Mirror reflects relationships that can awaken you through intensity, activation, or sudden emotional clarity. These connections may not always feel comfortable, but they can reveal what is ready to be seen.",
+        "what_this_may_reflect": "You may notice a pattern of closeness, activation, distance, and return. The point is not to label another person as your destiny. The mirror is asking what part of you becomes visible when intimacy touches something unresolved.",
+        "recurring_relational_loop": "Intimacy may open the door, activation may reveal the wound, distance may become protection, and reconnection may begin the learning again.",
+        "lesson_in_connection": "Activation is not automatically a sign to stay or leave. It is first an invitation to pause, listen, and ask what is being awakened inside you.",
+        "integration_key": "Let the shock become awareness before it becomes reaction. Give yourself enough space to name what is true without making another person the whole explanation.",
+        "wisewave_reflection": "You did not meet this mirror only for comfort. You met it to see what your soul is ready to reclaim with more honesty and care."
+      }
+    },
+    "S0-07": {
+      "display_name": "Self-Worth Illusion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Void Gate points to the protective belief that you are somehow not enough. This does not define your worth; it shows where your awareness is being invited to return from comparison, proving, or self-denial.",
+        "how_this_may_show_up": "This may appear as holding back, over-explaining, shrinking your needs, or waiting until you feel more complete before allowing yourself to receive, create, or be seen.",
+        "hidden_power": "The hidden power of this gate is the ability to recognize your own light without needing constant external confirmation.",
+        "growth_edge": "The growth edge is allowing worth to be remembered rather than earned. You are not asked to become valuable; you are invited to stop abandoning the value already present.",
+        "integration_key": "Practice gratitude and allowing. Let one small act of receiving become evidence that you do not need to disappear in order to be loved, supported, or respected.",
+        "wisewave_reflection": "Your worth is not the result. It is the ground you return to when the illusion of not-enough begins to soften."
+      }
+    },
+    "S4-14": {
+      "display_name": "The Loop of Perfection",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Core Shadow Pattern may appear through the loop of perfection — the belief that expression, intimacy, or action must wait until everything is polished, ready, and safe from criticism.",
+        "how_this_may_show_up": "You may refine instead of release, prepare instead of participate, or edit your feelings until they no longer reveal what is real. Excellence is not the issue; the shadow begins when excellence becomes the condition for being seen.",
+        "hidden_need": "The hidden need is to feel safe while still in process, not only accepted when complete.",
+        "integration_key": "Let honest participation matter more than flawless presentation.",
+        "one_week_practice": "This week, complete or share one small imperfect action that moves something real forward.",
+        "wisewave_reflection": "What is real is allowed to begin unfinished. Perfection may promise protection, but life meets you through participation."
+      }
+    },
+    "S6-28": {
+      "display_name": "The Deep Transformer",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Value & Receiving pattern grows through depth, power, and transformational capacity. Your value may become most visible when you help yourself or others move through change with honesty and grounded strength.",
+        "how_value_wants_to_flow": "Support can meet you more cleanly when you stop hiding the depth of what you carry, while also softening the need to control every outcome before you allow receiving.",
+        "receiving_edge": "The receiving edge is relaxing the grip around loss, control, or intensity. Value does not need to be forced to be real.",
+        "mature_receiving_expression": "The mature expression is visible, reciprocal, and grounded. You can give without disappearing, receive without guilt, and create structures where your contribution is respected rather than silently consumed.",
+        "wisewave_reflection": "The more you soften your grip, the more support has room to approach."
+      }
+    }
+  }
+}

@@ -18,6 +18,11 @@
     "S6": "s6-value-receiving.json",
     "S7": "s7-soul-sovereignty.json",
     "S8": "s8-soul-contribution.json",
-    "S9": "s9-return-to-source.json"
+    "S9": "s9-return-to-source.json",
+    "commercial_overlay": "commercial-report-blocks-overlay.json"
+  },
+  "commercial_output_layer": {
+    "version": "commercial-v1",
+    "schema_doc": "docs/specs/1320-v2-content/COMMERCIAL_REPORT_BLOCKS_SCHEMA_v1.md"
   }
 }

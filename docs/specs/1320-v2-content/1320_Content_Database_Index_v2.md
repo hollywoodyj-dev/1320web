@@ -379,6 +379,22 @@ Use S9 as return-to-wholeness reflection. Do not frame it as a final answer, spi
 
 ---
 
+## Commercial Output Layer (Wisewave v1 — Step 1)
+
+The raw `data/1320-v2/*.json` files are the **Symbolic Source Layer**. Paid report rendering should prefer **`commercial_report_blocks`** when present (do not overwrite source fields).
+
+| Resource | Path |
+|---|---|
+| Schema | `docs/specs/1320-v2-content/COMMERCIAL_REPORT_BLOCKS_SCHEMA_v1.md` |
+| Wisewave audit | `docs/specs/1320-v2-content/1320_DATABASE_COMMERCIAL_QUALITY_AUDIT_v1.md` |
+| Upgrade plan | `docs/specs/1320-v2-content/1320_DATABASE_UPGRADE_AND_REFINEMENT_PLAN_v1.md` |
+| Sample overlay | `data/1320-v2/commercial-report-blocks-overlay.json` |
+| Nova renderer | `lib/1320-v2/commercial-report-layer.ts` |
+
+Renderer precedence: entry `commercial_report_blocks` → overlay file → legacy `output_blocks` / steward fields → symbolic source.
+
+---
+
 ## Handoff Notes
 
 ### For Developers

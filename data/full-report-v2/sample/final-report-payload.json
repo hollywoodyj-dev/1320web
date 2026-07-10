@@ -102,18 +102,27 @@
     },
     "s6": {
       "code": "S6-28",
-      "segmentCode": "S6-18",
-      "title": "Personal Power Wealth",
-      "subtitle": "Origin Frequency"
+      "segmentCode": "S6-28",
+      "title": "The Deep Transformer",
+      "subtitle": "Value & Receiving"
     },
     "s7": {
-      "code": "S7-00"
+      "code": "S7-00",
+      "segmentCode": "S7-00",
+      "title": "Soul Sovereignty",
+      "subtitle": "Soul Sovereignty"
     },
     "s8": {
-      "code": "S8-00"
+      "code": "S8-00",
+      "segmentCode": "S8-00",
+      "title": "Soul Contribution",
+      "subtitle": "Soul Contribution"
     },
     "s9": {
-      "code": "S9-07"
+      "code": "S9-07",
+      "segmentCode": "S9-07",
+      "title": "Return to Source",
+      "subtitle": "Return to Source"
     }
   },
   "integrated_blueprint": {},

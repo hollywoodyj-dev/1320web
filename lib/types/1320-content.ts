@@ -59,6 +59,10 @@ export type SegmentContent = {
   soulMissionSections?: SoulMissionSection[];
   assemblySignature?: string;
   s5SeedVersion?: string;
+  /** Which content layer rendered this segment. */
+  contentLayer?: "symbolic" | "commercial";
+  /** Commercial output layer version when contentLayer is commercial. */
+  commercialBlocksVersion?: string;
 };
 
 export type Get1320ContentInput = {

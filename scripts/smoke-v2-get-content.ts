@@ -45,7 +45,11 @@ assert(
   t(full.s4Content!.title, "en") === "The Loop of Perfection",
   "S4 v2 lookup by S4-14 not S1 shadow",
 );
-assert((full.s4Content!.soulMissionSections?.length ?? 0) >= 8, "S4 should have steward rendering fields");
+if (full.s4Content!.contentLayer === "commercial") {
+  assert((full.s4Content!.soulMissionSections?.length ?? 0) >= 4, "S4 commercial blocks should render");
+} else {
+  assert((full.s4Content!.soulMissionSections?.length ?? 0) >= 8, "S4 should have steward rendering fields");
+}
 assert((full.s6Content!.soulMissionSections?.length ?? 0) >= 5, "S6 should have rendering blocks");
 assert((full.s7Content!.soulMissionSections?.length ?? 0) >= 5, "S7 should have rendering blocks");
 
@@ -80,5 +84,22 @@ assert(full.s3Content!.guidance !== undefined, "S3 guidance required");
 const s3Guidance = t(full.s3Content!.guidance!, "en");
 assert(s3Guidance.length > 20, "S3 EN wisewave guidance should be present");
 assert(!containsCjk(s3Guidance), `S3 EN guidance should be English, got: ${s3Guidance.slice(0, 40)}`);
+
+console.log("=== v2 commercial output layer — sample blueprint overlay ===");
+assert(full.s1Content!.contentLayer === "commercial", "S1-18 should use commercial layer");
+assert(
+  t(full.s1Content!.freeEssence, "en").includes("Your Soul Origin carries"),
+  "S1 commercial opening_essence should render",
+);
+assert(
+  !t(full.s1Content!.freeEssence, "en").includes("This Soul Origin reflects"),
+  "S1 should not expose templated symbolic source copy when commercial layer present",
+);
+assert(full.s4Content!.contentLayer === "commercial", "S4-14 should use commercial layer");
+assert(full.s6Content!.contentLayer === "commercial", "S6-28 should use commercial layer");
+assert(
+  (full.s1Content!.soulMissionSections?.length ?? 0) >= 5,
+  "S1 commercial blocks should produce sections",
+);
 
 console.log("\nPASS: smoke-v2-get-content — USE_1320_V2_CONTENT branch");

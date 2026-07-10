@@ -4,10 +4,10 @@ import { buildFullReportV2PreviewPayload } from "@/lib/full-report-v2/resolve-pr
 import { resolveBirthDateFromRequest } from "@/lib/resolve-birth-date";
 
 export const metadata: Metadata = {
-  title: "Full 1320 Soul Origin Report (v2 Preview)",
+  title: "Sample Full Report | 1320 Soul Code",
   description:
-    "Dark Cosmic Portal full report preview — cover and opening pages. Pass year, month, day query params to preview a birth date.",
-  robots: { index: false },
+    "Sample Full Report preview — fictional code S1-18 / S3-03 / S2-27 / S0-07 (S3 raw value: 110). For structure and tone only.",
+  robots: { index: true, follow: true },
 };
 
 export const dynamic = "force-dynamic";

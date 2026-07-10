@@ -80,6 +80,9 @@ export default function BlueprintPage() {
       </SectionCard>
 
       <SectionCard title={EXAMPLE_BLUEPRINT.title} subtitle={EXAMPLE_BLUEPRINT.code}>
+        <p>
+          S3 raw value: <strong>{EXAMPLE_BLUEPRINT.s3Raw}</strong>
+        </p>
         <p>{EXAMPLE_BLUEPRINT.note}</p>
         <Link href={SAMPLE_REPORT_HREF} className="gold-button mt-4 inline-flex">
           VIEW SAMPLE REPORT
@@ -124,7 +127,7 @@ export default function BlueprintPage() {
           {GENERATE_CODE_CTA.label}
         </Link>
         <Link href="/full-report" className="blueprint-secondary-link block mt-3">
-          EXPLORE FULL REPORT WAITLIST
+          EXPLORE FULL REPORT
         </Link>
       </section>
 

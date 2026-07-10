@@ -4,7 +4,10 @@
 **Owner:** Nova  
 **Status:** Book → Prep → Follow-up shipped (FS-006 + FS-006.1) — facilitator ops live  
 **Authority:** Wisewave FS-005A sign-off (9.6/10)  
-**Domain model:** [PLATFORM_DOMAIN_MODEL_v1.md](../canonical-soul-blueprint/PLATFORM_DOMAIN_MODEL_v1.md)
+**Domain model:** [PLATFORM_DOMAIN_MODEL_v1.md](../canonical-soul-blueprint/PLATFORM_DOMAIN_MODEL_v1.md)  
+**Page revision:** [FS006_PAGE_REVISION_v2.md](../personal-integration/FS006_PAGE_REVISION_v2.md)  
+**Content positioning:** [1320_WEBSITE_CONTENT_POSITIONING_ADDENDUM_v1.md](../../governance/1320_WEBSITE_CONTENT_POSITIONING_ADDENDUM_v1.md)  
+**Founder origin:** [1320_FOUNDER_ORIGIN_COCREATION_ADDENDUM_v1.md](../../governance/1320_FOUNDER_ORIGIN_COCREATION_ADDENDUM_v1.md)
 
 ---
 

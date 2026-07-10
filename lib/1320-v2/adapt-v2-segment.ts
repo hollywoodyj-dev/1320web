@@ -29,7 +29,7 @@ const MODULE_LABELS: Record<
     number: 2,
     title: { en: "Soul Mirror", zh: "灵魂镜像" },
     subtitle: { en: "Soul Mirror", zh: "灵魂镜像" },
-    shortLabel: { en: "Who You Attract", zh: "你吸引谁" },
+    shortLabel: { en: "What Relationships Mirror", zh: "关系映照什么" },
   },
   S3: {
     number: 3,

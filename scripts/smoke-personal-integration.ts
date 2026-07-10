@@ -34,7 +34,10 @@ const required = [
   "app/(site)/integration/follow-up/[sessionId]/page.tsx",
   "app/(site)/integration/facilitator/page.tsx",
   "db/platform-domain-v1.2-personal-integration.sql",
-  "db/platform-domain-v1.3-follow-up.sql",
+  "db/platform-domain-v1.6-booking-checkout.sql",
+  "app/api/booking/checkout/route.ts",
+  "app/api/booking/checkout/status/route.ts",
+  "app/(site)/booking/success/page.tsx",
 ];
 
 for (const rel of required) {
@@ -54,6 +57,6 @@ assert(birth?.isoDate === "1980-05-22", "parse birth date");
 assert(parseBirthDateString("invalid") === null, "reject invalid birth date");
 
 const bookingForm = fs.readFileSync(path.join(root, "components/booking-request-form.tsx"), "utf8");
-assert(bookingForm.includes("/api/personal-integration/request"), "booking form wired to FS-006 API");
+assert(bookingForm.includes("/api/booking/checkout"), "booking form wired to Model B checkout");
 
 console.log("smoke:personal-integration PASS");

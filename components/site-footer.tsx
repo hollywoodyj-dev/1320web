@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FooterSubscribeSlot } from "@/components/footer-subscribe-slot";
+import { FOOTER_ORIGIN } from "@/lib/homepage-content";
 import { FOOTER_COLUMNS, FOOTER_LEGAL_LINKS } from "@/lib/site-nav";
 
 type SiteFooterProps = {
@@ -31,10 +32,14 @@ export function SiteFooter({ leadsEnabled }: SiteFooterProps) {
           </div>
         </div>
         <p className="footer-copy">
-          A symbolic tool for self-awareness and reflection — not prediction or professional
-          advice. You remain the authority of your own path.
+          1320 is a reflective intelligence platform built around the Soul Blueprint. It offers symbolic
+          reflection for self-awareness and integration. It does not provide prediction, diagnosis,
+          therapy, legal, financial, medical, or crisis advice.
         </p>
+        <p className="footer-copy text-sm opacity-80 mt-2">{FOOTER_ORIGIN.microcopy}</p>
+        <p className="footer-copy text-sm opacity-80 mt-2">{FOOTER_ORIGIN.founderLine}</p>
         <nav className="footer-legal-nav" aria-label="Legal and support">
+          <Link href={FOOTER_ORIGIN.originHref}>{FOOTER_ORIGIN.originLabel}</Link>
           {FOOTER_LEGAL_LINKS.map((link) => (
             <Link key={link.href} href={link.href}>
               {link.label}

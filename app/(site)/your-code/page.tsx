@@ -26,7 +26,12 @@ export default function YourCodePage() {
       <InnerPageHero
         eyebrow={YOUR_CODE_HERO.eyebrow}
         title={YOUR_CODE_HERO.title}
-        lead={YOUR_CODE_HERO.body}
+        lead={
+          <>
+            {YOUR_CODE_HERO.body}
+            <span className="block mt-3 opacity-90">{YOUR_CODE_HERO.birthNote}</span>
+          </>
+        }
       >
         <a href="#birth-date-form" className="blueprint-secondary-link">
           {YOUR_CODE_HERO.anchorLabel}

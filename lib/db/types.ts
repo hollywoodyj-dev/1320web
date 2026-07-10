@@ -29,6 +29,8 @@ export type PurchaseRow = {
   user_id: string;
   report_id: string | null;
   stripe_checkout_session_id: string | null;
+  product: string;
+  platform_session_id: string | null;
   status: string;
 };
 

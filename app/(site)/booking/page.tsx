@@ -15,12 +15,13 @@ import {
   BOOKING_META,
   BOOKING_WHO_FOR,
   BOOKING_WHO_NOT,
+  HOW_BLUEPRINT_SHOWS_UP,
   READING_OPTIONS,
   SESSION_EXPERIENCE,
   TESTIMONIAL_PLACEHOLDERS,
   WHAT_IS_READING,
   WHAT_TO_PREPARE,
-  WHAT_WE_EXPLORE,
+  WISEWAVE_TRANSITION,
 } from "@/lib/booking-content";
 import { GENERATE_CODE_CTA } from "@/lib/site-nav";
 import { getAccountContext } from "@/lib/auth/account-context";
@@ -81,6 +82,12 @@ export default async function BookingPage({
       <div className="conversion-pair">
         <SectionCard title={WHAT_IS_READING.title}>
           <p>{WHAT_IS_READING.body}</p>
+          <ul className="conversion-bullet-list mt-4">
+            {WHAT_IS_READING.explores.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <p className="mt-4 opacity-90">{WHAT_IS_READING.closing}</p>
         </SectionCard>
 
         <SectionCard title={SESSION_EXPERIENCE.title}>
@@ -92,14 +99,15 @@ export default async function BookingPage({
         </SectionCard>
       </div>
 
-      <SectionCard title={WHAT_WE_EXPLORE.title}>
+      <SectionCard title={HOW_BLUEPRINT_SHOWS_UP.title}>
         <ul className="blueprint-layer-grid">
-          {WHAT_WE_EXPLORE.items.map((item) => (
+          {HOW_BLUEPRINT_SHOWS_UP.items.map((item) => (
             <li
-              key={item.code}
+              key={item.category}
               className={`blueprint-layer-item segment-bg segment-bg--${item.code.toLowerCase()}`}
             >
-              <span className="blueprint-layer-code">{item.code}</span>
+              <span className="blueprint-layer-code">{item.category}</span>
+              <p className="text-xs opacity-70 mb-1">{item.code}</p>
               <p>{item.text}</p>
             </li>
           ))}
@@ -179,6 +187,26 @@ export default async function BookingPage({
       </SectionCard>
 
       <FaqSection items={BOOKING_FAQ} />
+
+      <SectionCard title={WISEWAVE_TRANSITION.title}>
+        <p>{WISEWAVE_TRANSITION.body}</p>
+        <ol className="blueprint-steps-list mt-4">
+          {WISEWAVE_TRANSITION.path.map((step, index) => (
+            <li key={step}>
+              <span className="blueprint-step-num">{String(index + 1).padStart(2, "0")}</span>
+              {step}
+            </li>
+          ))}
+        </ol>
+        <div className="mt-4 flex flex-wrap gap-3">
+          <Link href="/reflect" className="blueprint-secondary-link">
+            REFLECT WITH WISEWAVE
+          </Link>
+          <Link href="/account" className="blueprint-secondary-link">
+            LIVING BLUEPRINT
+          </Link>
+        </div>
+      </SectionCard>
 
       <section className="blueprint-final-cta glass-card">
         <h2>{BOOKING_FINAL.title}</h2>

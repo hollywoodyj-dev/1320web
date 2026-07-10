@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 type InnerPageHeroProps = {
   eyebrow: string;
   title: string;
-  lead: string;
+  lead: ReactNode;
   children?: ReactNode;
 };
 

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { FormEvent, useState } from "react";
-import { submitLead, trackEvent } from "@/lib/analytics";
+import { trackEvent } from "@/lib/analytics";
 import { BOOKING_FINAL, READING_OPTIONS } from "@/lib/booking-content";
 import { FORM_CONSENT, FORM_MESSAGES } from "@/lib/form-consent";
 
@@ -51,12 +51,10 @@ export function BookingRequestForm({ defaultReadingType, account }: BookingReque
 
     trackEvent("booking_submit", { status: "success", readingType, signedIn: Boolean(account) });
 
-    const response = await fetch("/api/personal-integration/request", {
+    const response = await fetch("/api/booking/checkout", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        type: "booking",
-        source: "booking_form",
         email,
         firstName,
         lastName,
@@ -70,50 +68,18 @@ export function BookingRequestForm({ defaultReadingType, account }: BookingReque
 
     const data = (await response.json()) as {
       ok?: boolean;
-      stored?: boolean;
-      prepUrl?: string;
+      url?: string;
       error?: string;
     };
 
-    if (!response.ok || !data.ok) {
+    if (!response.ok || !data.ok || !data.url) {
       setStatus(data.error ?? FORM_MESSAGES.bookingError);
       trackEvent("booking_submit", { status: "error" });
       return;
     }
 
-    if (data.prepUrl) {
-      trackEvent("booking_success", { readingType, hasPrepUrl: true });
-      try {
-        const prep = new URL(data.prepUrl);
-        window.location.href = `${prep.pathname}${prep.search}`;
-      } catch {
-        window.location.href = data.prepUrl;
-      }
-      return;
-    }
-
-    if (!data.stored) {
-      await submitLead({
-        type: "booking",
-        source: "booking_form",
-        email,
-        firstName,
-        lastName,
-        birthDate,
-        code,
-        readingType,
-        timezone: timezone || undefined,
-        message: message || undefined,
-      });
-      trackEvent("booking_success", { readingType });
-      setStatus(FORM_MESSAGES.bookingSuccess);
-      form.reset();
-      return;
-    }
-
-    trackEvent("booking_success", { readingType });
-    setStatus(FORM_MESSAGES.bookingSuccess);
-    form.reset();
+    trackEvent("booking_checkout_redirect", { readingType });
+    window.location.href = data.url;
   }
 
   const profileComplete =
@@ -173,7 +139,7 @@ export function BookingRequestForm({ defaultReadingType, account }: BookingReque
             <input
               name="code"
               className="conversion-input"
-              placeholder="e.g. S1-18 / S3-110 / S2-27 / S0-07"
+              placeholder="e.g. S1-18 / S3-03 / S2-27 / S0-07"
               defaultValue={account?.codeString ?? ""}
             />
           </label>

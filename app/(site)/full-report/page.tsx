@@ -3,7 +3,6 @@ import { SAMPLE_REPORT_HREF } from "@/lib/site-nav";
 import Link from "next/link";
 import { ModuleSymbol } from "@/components/conversion/module-symbol";
 import { FaqSection } from "@/components/conversion/faq-section";
-import { WaitlistForm } from "@/components/waitlist-form";
 import { SectionCard } from "@/components/section-card";
 import {
   ADVANCED_MODULES,
@@ -26,7 +25,7 @@ export const metadata: Metadata = {
   description: FULL_REPORT_META.description,
 };
 
-const SEGMENT_BG_CODES = new Set(["S1", "S3", "S2", "S0"]);
+const SEGMENT_BG_CODES = new Set(["S1", "S3", "S2", "S0", "S4", "S5", "S6", "S7", "S8", "S9"]);
 
 function segmentBgClass(code: string): string {
   return SEGMENT_BG_CODES.has(code) ? ` segment-bg segment-bg--${code.toLowerCase()}` : "";
@@ -46,7 +45,7 @@ export default function FullReportPage() {
             UNLOCK MY FULL BLUEPRINT
           </Link>
           <Link href="/booking" className="blueprint-secondary-link">
-            BOOK A 1320 READING
+            BOOK PERSONAL INTEGRATION SESSION
           </Link>
           <Link href={SAMPLE_REPORT_HREF} className="blueprint-secondary-link">
             VIEW SAMPLE REPORT
@@ -80,12 +79,36 @@ export default function FullReportPage() {
       </SectionCard>
 
       <SectionCard title={FULL_INCLUDES.title}>
-        <div className="conversion-module-grid">
-          {FULL_INCLUDES.modules.map((module) => (
+        <h3 className="text-sm font-medium mb-3">{FULL_INCLUDES.foundationTitle}</h3>
+        <div className="conversion-module-grid mb-6">
+          {FULL_INCLUDES.foundation.map((module) => (
             <article
               key={module.code}
               className={`conversion-module-card${segmentBgClass(module.code)}`}
             >
+              <p className="conversion-module-code">{module.code}</p>
+              <h3>{module.title}</h3>
+              <p>{module.text}</p>
+            </article>
+          ))}
+        </div>
+        <h3 className="text-sm font-medium mb-3">{FULL_INCLUDES.advancedTitle}</h3>
+        <div className="conversion-module-grid mb-6">
+          {FULL_INCLUDES.advanced.map((module) => (
+            <article
+              key={module.code}
+              className={`conversion-module-card${segmentBgClass(module.code)}`}
+            >
+              <p className="conversion-module-code">{module.code}</p>
+              <h3>{module.title}</h3>
+              <p>{module.text}</p>
+            </article>
+          ))}
+        </div>
+        <h3 className="text-sm font-medium mb-3">{FULL_INCLUDES.integrationTitle}</h3>
+        <div className="conversion-module-grid">
+          {FULL_INCLUDES.integration.map((module) => (
+            <article key={module.code} className="conversion-module-card">
               <p className="conversion-module-code">{module.code}</p>
               <h3>{module.title}</h3>
               <p>{module.text}</p>
@@ -119,12 +142,12 @@ export default function FullReportPage() {
         </div>
       </SectionCard>
 
-      <SectionCard title="Unlock Your Full Report" id="waitlist">
+      <SectionCard title="Unlock Your Full Report" id="checkout">
         <p className="mb-4">
-          Purchase the Full Soul Origin Report once, then return anytime by signing in with your account.
-          You can also join the waitlist for launch updates.
+          The Full Report is available now. One-time purchase — after checkout, sign in with your
+          account to return to your complete S0–S9 Soul Blueprint anytime.
         </p>
-        <div className="flex flex-wrap gap-3 mb-5">
+        <div className="flex flex-wrap gap-3">
           <Link href="/checkout" className="gold-button inline-flex">
             GO TO CHECKOUT
           </Link>
@@ -132,14 +155,13 @@ export default function FullReportPage() {
             ALREADY PURCHASED? SIGN IN
           </Link>
         </div>
-        <WaitlistForm source="full_report_waitlist" buttonText="JOIN LAUNCH UPDATES" />
       </SectionCard>
 
       <section className="blueprint-final-cta glass-card">
         <h2>Prefer Live Integration?</h2>
-        <p>Book a 1:1 Soul Code Reading for awareness and reflection in conversation.</p>
+        <p>Book a Personal Integration Session to apply your Soul Blueprint in real-life conversation.</p>
         <Link href="/booking" className="gold-button">
-          BOOK A 1320 READING
+          BOOK PERSONAL INTEGRATION SESSION
         </Link>
         <Link href={SAMPLE_REPORT_HREF} className="blueprint-secondary-link block mt-3">
           VIEW SAMPLE REPORT
@@ -165,9 +187,9 @@ export default function FullReportPage() {
       <section className="blueprint-final-cta glass-card">
         <h2>{FULL_REPORT_FINAL_CTA.title}</h2>
         <p>{FULL_REPORT_FINAL_CTA.body}</p>
-        <a href="#waitlist" className="gold-button">
-          JOIN THE WAITLIST
-        </a>
+        <Link href="/checkout" className="gold-button">
+          UNLOCK FULL REPORT
+        </Link>
         <Link href={GENERATE_CODE_CTA.href} className="blueprint-secondary-link block mt-3">
           {GENERATE_CODE_CTA.label}
         </Link>

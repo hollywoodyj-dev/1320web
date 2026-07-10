@@ -8,20 +8,19 @@ import { SectionCard } from "@/components/section-card";
 import { SymbolPillarGrid } from "@/components/symbol-pillar-grid";
 import {
   ABOUT_DISCLAIMER,
-  ABOUT_FINAL,
   ABOUT_FAQ,
   ABOUT_HERO,
   ABOUT_META,
-  ABOUT_PATH,
-  ABOUT_WHO_FOR,
-  ABOUT_WHO_NOT,
-  FOUR_CODES,
-  HOW_IT_WORKS,
+  CO_CREATION,
+  FOUNDER_BIO,
+  FOUNDER_NOTE,
+  ORIGIN_CTA,
+  ORIGIN_STORY,
   PHILOSOPHY,
-  WHAT_DIFFERENT,
   WHAT_IS_1320,
   WHAT_IS_NOT,
-  WHY_BIRTH_DATE,
+  WHY_1320_EXISTS,
+  WHY_GOVERNANCE,
 } from "@/lib/about-1320-content";
 import { GENERATE_CODE_CTA } from "@/lib/site-nav";
 
@@ -52,6 +51,69 @@ export default function About1320Page() {
         </div>
       </SectionCard>
 
+      <SectionCard title={WHY_1320_EXISTS.title}>
+        {WHY_1320_EXISTS.body.map((paragraph) => (
+          <p key={paragraph} className="mb-3 last:mb-0">
+            {paragraph}
+          </p>
+        ))}
+      </SectionCard>
+
+      <SectionCard title={PHILOSOPHY.title}>
+        <ul className="conversion-bullet-list">
+          {PHILOSOPHY.principles.map((principle) => (
+            <li key={principle}>{principle}</li>
+          ))}
+        </ul>
+        <p className="mt-4">{PHILOSOPHY.body}</p>
+      </SectionCard>
+
+      <SectionCard title={ORIGIN_STORY.title} id={ORIGIN_STORY.id}>
+        {ORIGIN_STORY.paragraphs.map((paragraph) => (
+          <p key={paragraph} className="mb-3 last:mb-0">
+            {paragraph}
+          </p>
+        ))}
+        <ol className="blueprint-steps-list mt-6">
+          {ORIGIN_STORY.timeline.map((item, index) => (
+            <li key={item.phase}>
+              <span className="blueprint-step-num">{String(index + 1).padStart(2, "0")}</span>
+              <strong className="block mb-1">{item.phase}</strong>
+              {item.text}
+            </li>
+          ))}
+        </ol>
+      </SectionCard>
+
+      <SectionCard title={CO_CREATION.title}>
+        {CO_CREATION.paragraphs.map((paragraph) => (
+          <p key={paragraph} className="mb-3 last:mb-0">
+            {paragraph}
+          </p>
+        ))}
+      </SectionCard>
+
+      <SectionCard title={FOUNDER_NOTE.title}>
+        {FOUNDER_NOTE.paragraphs.map((paragraph) => (
+          <p key={paragraph} className="mb-3 last:mb-0">
+            {paragraph}
+          </p>
+        ))}
+        <p className="mt-6 text-sm opacity-90">
+          — {FOUNDER_NOTE.signatureName}
+          <br />
+          {FOUNDER_NOTE.signatureTitle}
+        </p>
+      </SectionCard>
+
+      <SectionCard title={FOUNDER_BIO.title}>
+        <p>{FOUNDER_BIO.body}</p>
+      </SectionCard>
+
+      <SectionCard title={WHY_GOVERNANCE.title}>
+        <p>{WHY_GOVERNANCE.body}</p>
+      </SectionCard>
+
       <SectionCard title={WHAT_IS_NOT.title}>
         <ul className="conversion-bullet-list">
           {WHAT_IS_NOT.items.map((item) => (
@@ -61,91 +123,20 @@ export default function About1320Page() {
         <p className="mt-4 font-medium text-[#efc36f]">{WHAT_IS_NOT.mirror}</p>
       </SectionCard>
 
-      <SectionCard title={WHY_BIRTH_DATE.title}>
-        <p>{WHY_BIRTH_DATE.body}</p>
-        <ul className="blueprint-layer-grid mt-4">
-          {WHY_BIRTH_DATE.mapping.map((row) => (
-            <li key={row.code} className="blueprint-layer-item">
-              <span className="blueprint-layer-code">{row.code}</span>
-              <span className="blueprint-layer-label">{row.label}</span>
-              <p>{row.text}</p>
-            </li>
-          ))}
-        </ul>
-      </SectionCard>
-
-      <SectionCard title={FOUR_CODES.title}>
-        <div className="conversion-module-grid">
-          {FOUR_CODES.segments.map((seg) => (
-            <article key={seg.code} className="conversion-module-card">
-              <p className="conversion-module-code">{seg.code}</p>
-              <h3>{seg.title}</h3>
-              <p>{seg.text}</p>
-            </article>
-          ))}
-        </div>
-      </SectionCard>
-
-      <SectionCard title={HOW_IT_WORKS.title}>
-        <div className="blueprint-path-grid">
-          {HOW_IT_WORKS.steps.map((step) => (
-            <article key={step.number} className="blueprint-path-step">
-              <p className="blueprint-path-num">{step.number}</p>
-              <h3>{step.title}</h3>
-              <p>{step.text}</p>
-            </article>
-          ))}
-        </div>
-      </SectionCard>
-
-      <SectionCard title={PHILOSOPHY.title}>
-        <p>{PHILOSOPHY.body}</p>
-        <blockquote className="conversion-quote mt-4">{PHILOSOPHY.quote}</blockquote>
-      </SectionCard>
-
-      <SectionCard title={WHAT_DIFFERENT.title}>
-        <div className="blueprint-path-grid">
-          {WHAT_DIFFERENT.points.map((point) => (
-            <article key={point.title} className="blueprint-path-step">
-              <h3>{point.title}</h3>
-              <p>{point.text}</p>
-            </article>
-          ))}
-        </div>
-      </SectionCard>
-
-      <SectionCard title={ABOUT_WHO_FOR.title}>
-        <ul className="conversion-bullet-list">
-          {ABOUT_WHO_FOR.items.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </SectionCard>
-
-      <SectionCard title={ABOUT_WHO_NOT.title}>
-        <p>{ABOUT_WHO_NOT.body}</p>
-      </SectionCard>
-
       <section className="inner-final-cta glass-card">
-        <h2 className="inner-page-title text-gold-gradient">{ABOUT_PATH.title}</h2>
-        <p>{ABOUT_PATH.body}</p>
-        <Link href={GENERATE_CODE_CTA.href} className="gold-button">
-          {ABOUT_PATH.cta}
+        <h2 className="inner-page-title text-gold-gradient">{ORIGIN_CTA.title}</h2>
+        {ORIGIN_CTA.body.map((line) => (
+          <p key={line}>{line}</p>
+        ))}
+        <Link href={GENERATE_CODE_CTA.href} className="gold-button mt-4 inline-flex">
+          {ORIGIN_CTA.primaryCta}
+        </Link>
+        <Link href={SAMPLE_REPORT_HREF} className="blueprint-secondary-link block mt-3">
+          {ORIGIN_CTA.secondaryCta}
         </Link>
       </section>
 
       <FaqSection items={ABOUT_FAQ} />
-
-      <section className="inner-final-cta glass-card">
-        <h2 className="inner-page-title text-gold-gradient">{ABOUT_FINAL.title}</h2>
-        <p>{ABOUT_FINAL.body}</p>
-        <Link href={GENERATE_CODE_CTA.href} className="gold-button">
-          {GENERATE_CODE_CTA.label}
-        </Link>
-        <Link href={SAMPLE_REPORT_HREF} className="blueprint-secondary-link block mt-3">
-          VIEW SAMPLE REPORT
-        </Link>
-      </section>
 
       <p className="blueprint-disclaimer">{ABOUT_DISCLAIMER}</p>
     </InnerPageLayout>

@@ -1,41 +1,65 @@
-/** English copy for `/booking` — Personal Integration Session (Wisewave alignment). */
+/** English copy for `/booking` — FS-006 Personal Integration Page Revision v2.0 (Wisewave). */
 
 export const BOOKING_META = {
   title: "Personal Integration Session | 1320 Soul Code",
   description:
-    "Request a 1:1 Personal Integration Session to apply your Soul Code in conversation — symbolic reflection and integration, not fortune-telling. Phase 1: request only, no payment.",
+    "Continue your relationship with your Soul Blueprint through guided live integration — applied conversation for your real life, not a report read-aloud.",
 };
 
 export const BOOKING_HERO = {
   eyebrow: "PERSONAL INTEGRATION SESSION",
-  title: "Applied Integration — Not a Report Read-Aloud",
-  body: "A Personal Integration Session is live support to work with your four-part code — what resonates, what resists, and what wants to land in daily life. It is not someone reading your report to you, and not a prediction of your future.",
+  title: "Your Blueprint Does Not Change. Your Relationship With It Does.",
+  body: "A Personal Integration Session is a guided live conversation — not a report read-aloud. We explore how your Soul Blueprint is currently being lived, experienced, resisted, or integrated in your real life. The report is preparation. The session is application.",
   boundary:
     "Symbolic reflection and self-awareness support — not therapy, diagnosis, legal, financial, or medical advice. You remain the author of your choices.",
 };
 
 export const WHAT_IS_READING = {
   title: "What Is a Personal Integration Session?",
-  body: "We walk through your S1–S0 codes together — noticing patterns, naming mirrors, and choosing one integration focus you can carry forward. The session applies what you already sense; it does not recite a script or forecast outcomes.",
+  body: "A guided space to explore how your Soul Blueprint is currently being lived, experienced, resisted, or integrated. We work with what is present in your life now — not a script from your written report.",
+  explores: [
+    "Where your Blueprint feels alive in daily life",
+    "Where resistance appears when you try to live what you sense",
+    "What patterns repeat across relationships and choices",
+    "What currently needs attention and integration",
+  ],
+  closing:
+    "Your S1–S0 structure supports the conversation. Applied integration is the product — not code explanation.",
 };
 
-export const WHAT_WE_EXPLORE = {
-  title: "What We Explore",
+export const HOW_BLUEPRINT_SHOWS_UP = {
+  title: "How Your Blueprint Shows Up",
   items: [
-    { code: "S1", text: "Origin frequency — gifts, shadows, and soul direction" },
-    { code: "S3", text: "Vibration tier — how your energy expresses and grows" },
-    { code: "S2", text: "Mirror path — relationship patterns and recurring dynamics" },
-    { code: "S0", text: "Void gate — core illusion and return to clarity" },
+    {
+      category: "Identity",
+      code: "S1",
+      text: "Where your origin frequency feels alive — gifts, shadows, and soul direction in how you move through the world",
+    },
+    {
+      category: "Relationships",
+      code: "S2",
+      text: "Mirror patterns — how dynamics repeat in connection, conflict, and intimacy",
+    },
+    {
+      category: "Expression",
+      code: "S3",
+      text: "How your energy expresses, grows, and meets resistance in daily expression",
+    },
+    {
+      category: "Transition",
+      code: "S0",
+      text: "Void gates — what illusions dissolve, what clarity returns, and what you are moving through now",
+    },
   ],
 };
 
 export const SESSION_EXPERIENCE = {
   title: "Session Experience",
   points: [
-    "Grounded, calm pacing — time to feel what lands before moving on",
-    "Pattern recognition across segments — how S1–S0 speak together",
-    "One integration focus you can carry into daily life after the session",
-    "Conversation for application — not a performance of your written report",
+    "Safe reflective conversation — calm pacing, no performance required",
+    "Pattern recognition — noticing what repeats across your life and Blueprint",
+    "Applied integration — working with what resists, resonates, or wants to land",
+    "One practical next step you can carry forward after the session",
   ],
 };
 
@@ -43,6 +67,7 @@ export const BOOKING_WHO_FOR = {
   title: "Who This Is For",
   items: [
     "You have generated your code (or will before the session)",
+    "You want to move beyond understanding your Blueprint into living it",
     "You want live support integrating what the mirror reveals",
     "You prefer guided reflection over reading alone",
     "You are willing to take responsibility for your choices",
@@ -52,7 +77,7 @@ export const BOOKING_WHO_FOR = {
 
 export const BOOKING_WHO_NOT = {
   title: "Who This Is Not For",
-  body: "If you want guaranteed outcomes, someone to make decisions for you, a fortune-telling experience, or clinical diagnosis — please seek appropriate professional support. A Personal Integration Session does not replace therapy or medical care.",
+  body: "If you want guaranteed outcomes, someone to make decisions for you, a fortune-telling experience, or clinical diagnosis — please seek appropriate professional support. If you are looking for certainty rather than reflection, this session may not be the right fit. A Personal Integration Session does not replace therapy or medical care.",
 };
 
 export const READING_OPTIONS = {
@@ -60,24 +85,24 @@ export const READING_OPTIONS = {
   options: [
     {
       id: "intro",
-      title: "Intro Integration Session",
+      title: "Blueprint Integration Session",
       duration: "45 minutes",
-      text: "A focused first pass through your four codes — ideal if you are new to 1320 and want to apply the mirror in conversation.",
-      cta: "REQUEST INTRO SESSION",
+      text: "Your first guided conversation applying your Blueprint to real life — ideal when you want to move from understanding into lived integration.",
+      cta: "BOOK BLUEPRINT INTEGRATION",
     },
     {
       id: "deep",
-      title: "Deep Integration Session",
+      title: "Deep Blueprint Integration",
       duration: "75 minutes",
-      text: "More time for S1–S0 depth, shadow edges, and a concrete integration plan — not a longer report recap.",
-      cta: "REQUEST DEEP SESSION",
+      text: "More space for shadow edges, repeating patterns, and a concrete integration focus — when one layer of your Blueprint needs deeper attention.",
+      cta: "BOOK DEEP INTEGRATION",
     },
     {
       id: "integration",
-      title: "Focused Integration Session",
+      title: "Focused Life Integration",
       duration: "60 minutes",
-      text: "For returning clients — working a specific pattern, relationship mirror, or life chapter with applied integration.",
-      cta: "REQUEST FOCUSED SESSION",
+      text: "For returning clients — a specific life chapter, relationship mirror, or pattern you are ready to work with in applied conversation.",
+      cta: "BOOK FOCUSED INTEGRATION",
     },
   ],
 };
@@ -87,43 +112,72 @@ export const WHAT_TO_PREPARE = {
   items: [
     "Your birth date and four-code result (screenshot or notes are fine)",
     "A quiet space and stable connection for video or voice",
-    "One question or life area you want to explore with honesty",
+    "One question or life area you want to explore with honesty — or simply curiosity",
     "Willingness to pause when something feels tender — integration is not a race",
+    "There is no need to prepare the \"right\" question. Curiosity is enough.",
   ],
 };
 
 export const BOOKING_FORM_SECTION = {
-  title: "Request a Session",
+  title: "Book a Session",
 };
 
 export const AFTER_BOOKING = {
-  title: "After You Request a Session",
+  title: "After You Book",
   steps: [
-    "We review your request and session type preference",
-    "You receive a follow-up email to coordinate time and format",
-    "You may be invited to share your code or reflection notes in advance",
-    "The session focuses on awareness and one integration step — not prediction",
+    "Complete secure payment for your chosen session type",
+    "Choose your time on the scheduling calendar",
+    "Open your session prep space when you are ready",
+    "Enter a live integration conversation — application, not explanation",
   ],
 };
 
 export const TESTIMONIAL_PLACEHOLDERS = {
   title: "Session Reflections",
-  note: "Testimonials will appear here as verified client reflections become available. We do not use fabricated names or ratings in Phase 1.",
+  note: "Verified client reflections will appear here when available. We do not fabricate names or ratings. When added, reflections will focus on clarity, awareness, and relationship with self — not miraculous change or prediction claims.",
   placeholders: [
-    "[ Client reflection placeholder — integration-focused, no fabricated identity ]",
-    "[ Client reflection placeholder — mirror and relationship awareness ]",
-    "[ Client reflection placeholder — calm pacing and grounded language ]",
+    "[ Client reflection placeholder — clarity and self-awareness ]",
+    "[ Client reflection placeholder — relationship with own Blueprint ]",
+    "[ Client reflection placeholder — grounded integration language ]",
+  ],
+};
+
+export const WISEWAVE_TRANSITION = {
+  title: "What Comes After Personal Integration?",
+  body: "Your Blueprint remains the same. Your relationship with it continues. After your session, you may continue your reflective journey through Wisewave — ongoing conversations that support awareness, reflection, and integration over time. Personal Integration and Wisewave are complementary: one is guided human integration; the other is ongoing reflective companionship.",
+  path: [
+    "Soul Blueprint",
+    "Full Report",
+    "Personal Integration",
+    "Wisewave Reflection",
+    "Living Blueprint",
   ],
 };
 
 export const BOOKING_FAQ = [
   {
-    q: "Is payment required to request a session?",
-    a: "No. Phase 1 is a request only — we follow up by email to coordinate details. No checkout on this site.",
+    q: "Is payment required to book a session?",
+    a: "Yes. You pay securely via Stripe for your session type, then choose your time on our scheduling calendar.",
+  },
+  {
+    q: "How is this different from reflecting with Wisewave?",
+    a: "Wisewave is ongoing reflective conversation with your Blueprint over time. A Personal Integration Session is a live 1:1 guided space for applied integration with a human facilitator — deeper, focused, and time-bound.",
+  },
+  {
+    q: "Can I book before purchasing the Full Report?",
+    a: "Yes. The free Soul Blueprint result is enough to begin. The Full Report adds written depth for private reflection — the session adds live application in conversation.",
+  },
+  {
+    q: "Will we discuss my current life situation?",
+    a: "Yes. The session works with what is present in your life now — where your Blueprint feels alive, resisted, or ready to integrate. It is not a recital of your written report.",
+  },
+  {
+    q: "Can I return for another session later?",
+    a: "Yes. Many clients return for Focused Life Integration when a new chapter, pattern, or relationship mirror needs attention.",
   },
   {
     q: "Do I need my code before booking?",
-    a: "Strongly recommended. Generate your code first so the session uses your actual S1–S0 structure.",
+    a: "Strongly recommended. Generate your code first so the session is grounded in your actual Blueprint structure.",
   },
   {
     q: "Is this therapy or coaching certification?",
@@ -138,24 +192,20 @@ export const BOOKING_FAQ = [
     a: "No. The session is for applied integration in conversation — not reciting your written report aloud.",
   },
   {
-    q: "What session length should I choose?",
-    a: "Intro if you are new; Deep for a comprehensive first integration pass; Focused if you are returning to a specific pattern.",
-  },
-  {
-    q: "Can I book if I only have the free result?",
-    a: "Yes. The free layer is enough to begin. The Full Report adds written depth — the session adds live integration.",
+    q: "What session should I choose?",
+    a: "Blueprint Integration if you are beginning live integration; Deep Blueprint Integration when you want more space for shadow and pattern depth; Focused Life Integration when you are returning to a specific life area.",
   },
   {
     q: "What timezone do you use?",
-    a: "Include your timezone in the form. We coordinate by email after your request is received.",
+    a: "Include your timezone in the form. The scheduling calendar shows availability in your local time when supported.",
   },
   {
     q: "How is this different from the Full Report?",
-    a: "The Full Report is a written product for private reflection. A Personal Integration Session is a live 1:1 space to apply what you are learning.",
+    a: "The Full Report is a written product for private reflection. A Personal Integration Session is a live 1:1 space to apply what you are learning in your real life.",
   },
   {
     q: "What if I need to reschedule?",
-    a: "Reply to your coordination email. We will work with reasonable notice when possible.",
+    a: "Use the scheduling link from your confirmation page or reply to your prep email. We work with reasonable notice when possible.",
   },
 ];
 
@@ -163,7 +213,7 @@ export const BOOKING_DISCLAIMER =
   "1320 Personal Integration Sessions are for self-awareness and reflection only. They are not medical, psychological, legal, or financial advice. You remain responsible for your choices.";
 
 export const BOOKING_FINAL = {
-  title: "Ready for Applied Integration?",
-  body: "Request your Personal Integration Session below — or generate your code first if you have not yet.",
-  cta: "REQUEST SESSION",
+  title: "Ready to Continue Your Blueprint?",
+  body: "The report begins the relationship. The session helps you continue it. Book below — secure payment, then choose your time on the calendar.",
+  cta: "PAY & BOOK SESSION",
 };

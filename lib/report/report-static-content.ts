@@ -21,15 +21,13 @@ export const REPORT_FULL_UPSELL = {
   lead: "This free result gives you the first layer of your code.",
   body: "The Full Report expands:",
   items: [
-    "Your full S1 Origin Frequency",
-    "Your S3 expression pattern",
-    "Your S2 relationship mirror",
-    "Your S0 awakening gate",
-    "Your Integrated Soul Blueprint",
-    "Shadow Pattern Module",
-    "Soul Mission",
-    "Value & Receiving",
-    "Your 7-Day Integration Practice",
+    "Your full S1 Soul Origin",
+    "Your S3 Soul Vibration",
+    "Your S2 Soul Mirror",
+    "Your S0 Void Gate",
+    "S4 Core Shadow Pattern through S9 Return to Source",
+    "Integrated Soul Blueprint",
+    "7-Day Integration Practice and Reflection Journal",
   ],
   primaryCta: "UNLOCK MY FULL BLUEPRINT",
   primaryHref: "/checkout",
@@ -75,7 +73,7 @@ export const REPORT_FINAL_CTA = {
 export const RESULT_EXTRAS = {
   goDeeperTitle: "Go Deeper",
   goDeeperBody:
-    "Your free result reveals the first layer. The full report expands S1–S0 and unlocks the Shadow Pattern Module, Soul Mission, and Value & Receiving (self-awareness only — not financial advice).",
+    "Your free result reveals the foundation layer. The Full Report expands into the complete S0–S9 Soul Blueprint — including S4 Core Shadow Pattern, S5 Soul Mission, S6 Value & Receiving, S7 Soul Sovereignty, S8 Soul Contribution, and S9 Return to Source.",
   shareTitle: "Share Your Code",
   shareCopyLabel: "COPY MY CODE",
   shareHint: "Share your code as a mirror for conversation — not as a fixed identity.",
@@ -84,7 +82,7 @@ export const RESULT_EXTRAS = {
   faq: [
     {
       q: "Is this my full report?",
-      a: "No. This is the free first layer. The full Soul Origin Report goes deeper across all four codes and advanced modules.",
+      a: "No. This is the free foundation layer. The Full Soul Origin Report expands into the complete S0–S9 Soul Blueprint.",
     },
     {
       q: "Can my code change?",

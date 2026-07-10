@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { fulfillCheckoutSession } from "@/lib/stripe/fulfill-checkout";
+import { fulfillPaidCheckout } from "@/lib/stripe/fulfill-paid-checkout";
 import { getStripe } from "@/lib/stripe/client";
 import type Stripe from "stripe";
 
@@ -29,7 +29,7 @@ export async function POST(request: Request) {
   if (event.type === "checkout.session.completed") {
     const session = event.data.object as Stripe.Checkout.Session;
     if (session.payment_status === "paid") {
-      await fulfillCheckoutSession(session);
+      await fulfillPaidCheckout(session);
     }
   }
 

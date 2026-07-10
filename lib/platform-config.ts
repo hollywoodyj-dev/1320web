@@ -34,3 +34,8 @@ export const REPORT_CONTENT_VERSION = "2026-06-07";
 export const SESSION_COOKIE_NAME = "1320_session";
 
 export const FULL_REPORT_PRODUCT = "full_report";
+export const BOOKING_PRODUCT = "personal_integration";
+
+export function isBookingCheckoutConfigured(): boolean {
+  return isDatabaseConfigured() && isStripeConfigured();
+}

@@ -4,7 +4,7 @@ import type { SegmentContent, V1Record } from "@/lib/types/1320-content";
 const SEGMENT_LABELS = {
   s1: { subtitle: { en: "Origin Frequency", zh: "原频" }, shortLabel: { en: "Who You Are", zh: "你是谁" } },
   s3: { subtitle: { en: "Vibration Tier", zh: "振动层级" }, shortLabel: { en: "How You Express", zh: "你如何表达" } },
-  s2: { subtitle: { en: "Mirror Path", zh: "镜像路径" }, shortLabel: { en: "Who You Attract", zh: "你吸引谁" } },
+  s2: { subtitle: { en: "Soul Mirror", zh: "灵魂镜像" }, shortLabel: { en: "What Relationships Mirror", zh: "关系映照什么" } },
   s0: { subtitle: { en: "Void Gate", zh: "空门" }, shortLabel: { en: "How You Awaken", zh: "你如何觉醒" } },
 } as const;
 

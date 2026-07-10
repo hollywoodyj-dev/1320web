@@ -25,6 +25,12 @@ export type PersonalIntegrationRequestInput = {
   code?: string;
 };
 
+export type PersonalIntegrationRequestOptions = {
+  requestSource?: string;
+  paymentStatus?: "paid" | "pending";
+  stripeCheckoutSessionId?: string;
+};
+
 export type PersonalIntegrationRequestResult = {
   userId: string;
   reportId: string;
@@ -41,6 +47,7 @@ function truncateGrowthEdge(message: string, max = 280): string {
 
 export async function createPersonalIntegrationRequest(
   input: PersonalIntegrationRequestInput,
+  options?: PersonalIntegrationRequestOptions,
 ): Promise<PersonalIntegrationRequestResult> {
   const birth = parseBirthDateString(input.birthDate);
   if (!birth) {
@@ -66,7 +73,10 @@ export async function createPersonalIntegrationRequest(
       timezone: input.timezone ?? null,
       clientName: `${input.firstName} ${input.lastName}`.trim(),
       codeProvided: input.code ?? null,
-      requestSource: "booking_form",
+      requestSource: options?.requestSource ?? "booking_form",
+      paymentStatus: options?.paymentStatus ?? null,
+      stripeCheckoutSessionId: options?.stripeCheckoutSessionId ?? null,
+      schedulingStatus: options?.paymentStatus === "paid" ? "awaiting_selection" : null,
     },
   });
 

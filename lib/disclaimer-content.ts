@@ -1,11 +1,11 @@
 import { LEGAL_PLACEHOLDERS } from "@/lib/legal-placeholders";
 
-/** Standalone disclaimer — 10/15. */
+/** Standalone disclaimer — Living Blueprint Architecture (Addendum v1.0). */
 
 export const DISCLAIMER_META = {
   title: "Disclaimer",
   description:
-    "Important boundaries for using the 1320 Soul Origin Code — self-awareness only, not professional advice or guarantees.",
+    "Important boundaries for using 1320 — reflective intelligence for self-awareness only, not professional advice or guarantees.",
 };
 
 export type LegalSection = {
@@ -15,30 +15,59 @@ export type LegalSection = {
 
 export const DISCLAIMER_SECTIONS: LegalSection[] = [
   {
-    title: "Self-Awareness Only",
+    title: "Reflective Intelligence Platform",
     paragraphs: [
-      "1320 Soul Origin Code is a symbolic system for reflection, pattern recognition, and conscious integration.",
-      "It is not fortune-telling, prophecy, medical diagnosis, psychological treatment, legal counsel, or financial advice.",
+      "1320 is a reflective intelligence platform for symbolic self-awareness and integration.",
+      "It does not provide medical, psychological, legal, financial, therapeutic, crisis, or professional advice.",
+      "It is not fortune-telling, prophecy, or a substitute for licensed professional care.",
     ],
   },
   {
     title: "Your Authority",
     paragraphs: [
-      "Your code is a mirror — not a sentence. You remain the authority of your own path.",
-      "No segment (S1, S3, S2, S0, S4, S5, or S6) should be used to justify harm, bypass professional care, or outsource life decisions.",
+      "Your Soul Blueprint is a mirror — not a sentence. You remain the authority of your own path.",
+      "No segment (S1, S3, S2, S0, S4, S5, S6, S7, S8, or S9) should be used to justify harm, bypass professional care, or outsource life decisions.",
+      "1320 offers reflection, not instruction. You remain the final authority of your life.",
     ],
   },
   {
     title: "Relationships (S2)",
     paragraphs: [
-      "S2 Mirror Path describes relational patterns for awareness — not destined partners, guaranteed compatibility, or instructions to leave or stay in a relationship.",
+      "S2 Soul Mirror describes relational patterns for awareness — not destined partners, guaranteed compatibility, who you will attract, or instructions to leave or stay in a relationship.",
     ],
   },
   {
     title: "Value & Receiving (S6)",
     paragraphs: [
-      "S6 addresses symbolic patterns around worth, receiving, and resource flow for self-awareness only.",
-      "It is not investment advice, tax guidance, business consulting, or a promise of income or abundance.",
+      "S6 addresses symbolic patterns around worth, support, resources, recognition, and receiving for self-awareness only.",
+      "It is not investment advice, tax guidance, business consulting, money prediction, or a promise of income or abundance.",
+    ],
+  },
+  {
+    title: "Soul Sovereignty (S7)",
+    paragraphs: [
+      "S7 Soul Sovereignty is not permission to disregard others, avoid accountability, or make impulsive decisions.",
+      "It reflects themes of boundaries, choice, and self-authority as symbolic integration — not license to harm or bypass responsibility.",
+    ],
+  },
+  {
+    title: "Soul Contribution (S8)",
+    paragraphs: [
+      "S8 Soul Contribution is not a measure of public success, social status, usefulness, or external achievement.",
+      "It reflects contribution themes as symbolic integration — not ranking of worth or productivity.",
+    ],
+  },
+  {
+    title: "Return to Source (S9)",
+    paragraphs: [
+      "S9 Return to Source is not a claim of spiritual superiority, enlightenment, absolute truth, or final spiritual attainment.",
+      "It is return-path reflection — not hierarchy, ranking, or completion of a spiritual journey.",
+    ],
+  },
+  {
+    title: "Scores & Numeric Signals",
+    paragraphs: [
+      "Numeric scores, if used internally, are intelligence signals only. They are not user-facing measures of worth, maturity, spiritual level, success, or identity.",
     ],
   },
   {
@@ -48,10 +77,10 @@ export const DISCLAIMER_SECTIONS: LegalSection[] = [
     ],
   },
   {
-    title: "Readings & Reports",
+    title: "Reports & Sessions",
     paragraphs: [
       "Sample reports use fictional data for structure preview. Your personal report is generated from your own birth date.",
-      "Live readings and written reports support reflection — they do not guarantee outcomes or replace licensed professionals.",
+      "Personal Integration Sessions and written reports support reflection — they do not guarantee outcomes or replace licensed professionals.",
     ],
   },
   {
@@ -65,4 +94,3 @@ export const DISCLAIMER_SECTIONS: LegalSection[] = [
     paragraphs: [`Questions: ${LEGAL_PLACEHOLDERS.contactEmail}. Effective: ${LEGAL_PLACEHOLDERS.effectiveDate}.`],
   },
 ];
-

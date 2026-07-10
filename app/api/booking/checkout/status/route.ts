@@ -1,8 +1,10 @@
 import { NextResponse } from "next/server";
 import { setUserSession } from "@/lib/auth/session";
-import { fulfillPaidCheckout } from "@/lib/stripe/fulfill-paid-checkout";
 import { getPurchaseBySessionId } from "@/lib/db/purchases";
-import { BOOKING_PRODUCT, isDatabaseConfigured } from "@/lib/platform-config";
+import { isDatabaseConfigured } from "@/lib/platform-config";
+import { getBookingFulfillmentForCheckoutSession } from "@/lib/stripe/fulfill-booking-checkout";
+import type { BookingFulfillmentResult } from "@/lib/stripe/fulfill-booking-checkout";
+import { fulfillPaidCheckout } from "@/lib/stripe/fulfill-paid-checkout";
 import { getStripe } from "@/lib/stripe/client";
 
 export async function GET(request: Request) {
@@ -16,25 +18,21 @@ export async function GET(request: Request) {
   }
 
   let purchase = await getPurchaseBySessionId(sessionId);
+  let fulfillment = await getBookingFulfillmentForCheckoutSession(sessionId);
 
-  if (!purchase || purchase.status !== "completed") {
+  if (!fulfillment) {
     try {
       const session = await getStripe().checkout.sessions.retrieve(sessionId);
-      if (session.metadata?.product === BOOKING_PRODUCT) {
-        return NextResponse.json({
-          ok: false,
-          error: "This is a booking checkout. Use /api/booking/checkout/status.",
-        });
-      }
       if (session.payment_status === "paid") {
-        const fulfilled = await fulfillPaidCheckout(session);
-        if (fulfilled && "reportId" in fulfilled && !("prepUrl" in fulfilled)) {
-          await setUserSession(fulfilled.userId);
+        const result = await fulfillPaidCheckout(session);
+        if (result && "prepUrl" in result && "sessionId" in result) {
+          fulfillment = result as BookingFulfillmentResult;
+          await setUserSession(result.userId);
           purchase = await getPurchaseBySessionId(sessionId);
         }
       }
     } catch (error) {
-      console.error("GET /api/checkout/status fulfillment failed:", error);
+      console.error("GET /api/booking/checkout/status fulfillment failed:", error);
     }
   }
 
@@ -46,9 +44,18 @@ export async function GET(request: Request) {
     await setUserSession(purchase.user_id);
   }
 
+  if (fulfillment) {
+    return NextResponse.json({
+      ok: true,
+      status: purchase.status,
+      sessionId: fulfillment.sessionId,
+      prepUrl: fulfillment.prepUrl,
+      scheduleUrl: fulfillment.scheduleUrl,
+    });
+  }
+
   return NextResponse.json({
-    ok: purchase.status === "completed",
-    status: purchase.status,
-    reportId: purchase.report_id,
+    ok: false,
+    status: purchase.status === "completed" ? "fulfilling" : "pending",
   });
 }

@@ -14,6 +14,8 @@ import {
   HOMEPAGE_FOOTER_BRAND,
   HOMEPAGE_FULL_REPORT_PREVIEW,
   HOMEPAGE_HERO,
+  HOMEPAGE_ORIGIN,
+  FOOTER_ORIGIN,
   HOMEPAGE_SECONDARY_LINKS,
   HOMEPAGE_HOW,
   HOMEPAGE_META,
@@ -22,6 +24,7 @@ import {
   HOMEPAGE_PILLAR_NOTE,
   HOMEPAGE_PILLARS,
   HOMEPAGE_STATS,
+  HOMEPAGE_WHAT_IS,
 } from "@/lib/homepage-content";
 import { FOOTER_LEGAL_LINKS, HOMEPAGE_FOOTER_COLUMNS } from "@/lib/site-nav";
 
@@ -69,6 +72,7 @@ export default function HomePage() {
             </h1>
             <div className="hero-detail">
               <p className="hero-text">{HOMEPAGE_HERO.subheadline}</p>
+              <p className="hero-text hero-text--journey">{HOMEPAGE_HERO.journeyLine}</p>
               <ul className="hero-mini-labels" aria-label="1320 dimensions">
                 {HOMEPAGE_HERO.miniLabels.map((item) => (
                   <li key={item.digit}>
@@ -130,6 +134,29 @@ export default function HomePage() {
             ))}
           </ul>
           <p className="homepage-section-body">{HOMEPAGE_CURIOSITY.closing}</p>
+        </section>
+
+        <section className="homepage-what-is">
+          <p className="homepage-section-eyebrow">{HOMEPAGE_WHAT_IS.eyebrow}</p>
+          <h2 className="homepage-section-title">{HOMEPAGE_WHAT_IS.title}</h2>
+          {HOMEPAGE_WHAT_IS.body.map((paragraph) => (
+            <p key={paragraph} className="homepage-section-body">
+              {paragraph}
+            </p>
+          ))}
+        </section>
+
+        <section className="homepage-origin">
+          <p className="homepage-section-eyebrow">{HOMEPAGE_ORIGIN.eyebrow}</p>
+          <h2 className="homepage-section-title">{HOMEPAGE_ORIGIN.title}</h2>
+          {HOMEPAGE_ORIGIN.body.map((paragraph) => (
+            <p key={paragraph} className="homepage-section-body">
+              {paragraph}
+            </p>
+          ))}
+          <Link href={HOMEPAGE_ORIGIN.href} className="hero-secondary-link mt-3 inline-block">
+            {HOMEPAGE_ORIGIN.cta}
+          </Link>
         </section>
 
         <nav className="homepage-secondary-links" aria-label="Explore 1320">
@@ -238,6 +265,16 @@ export default function HomePage() {
             </p>
             <p className="homepage-section-body">{HOMEPAGE_FULL_REPORT_PREVIEW.body}</p>
             <ul className="homepage-preview-list">
+              {HOMEPAGE_FULL_REPORT_PREVIEW.advancedLayers.map((item) => (
+                <li key={item.code}>
+                  <strong>
+                    {item.code} · {item.title}
+                  </strong>
+                  <span>{item.detail}</span>
+                </li>
+              ))}
+            </ul>
+            <ul className="homepage-preview-list mt-4">
               {HOMEPAGE_FULL_REPORT_PREVIEW.includes.map((item) => (
                 <li key={item.title}>
                   <strong>{item.title}</strong>
@@ -246,8 +283,11 @@ export default function HomePage() {
               ))}
             </ul>
             <div className="homepage-preview-actions">
-              <Link href={HOMEPAGE_FULL_REPORT_PREVIEW.waitlistHref} className="gold-button">
-                {HOMEPAGE_FULL_REPORT_PREVIEW.waitlistCta}
+              <Link href={HOMEPAGE_FULL_REPORT_PREVIEW.checkoutHref} className="gold-button">
+                {HOMEPAGE_FULL_REPORT_PREVIEW.checkoutCta}
+              </Link>
+              <Link href={HOMEPAGE_FULL_REPORT_PREVIEW.primaryHref} className="hero-secondary-link">
+                {HOMEPAGE_FULL_REPORT_PREVIEW.primaryCta}
               </Link>
               <Link
                 href={HOMEPAGE_FULL_REPORT_PREVIEW.sampleHref}
@@ -311,7 +351,9 @@ export default function HomePage() {
               </div>
             </div>
             <p className="footer-copy">{HOMEPAGE_FOOTER_BRAND}</p>
+            <p className="footer-copy text-sm opacity-80 mt-2">{FOOTER_ORIGIN.microcopy}</p>
             <nav className="footer-legal-nav" aria-label="Legal and support">
+              <Link href={FOOTER_ORIGIN.originHref}>{FOOTER_ORIGIN.originLabel}</Link>
               {FOOTER_LEGAL_LINKS.map((link) => (
                 <Link key={link.href} href={link.href}>
                   {link.label}

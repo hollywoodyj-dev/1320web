@@ -13,11 +13,13 @@ export const SAMPLE_REPORT_HREF = "/full-report-v2";
 /** Shared top nav for homepage + inner site. Blueprint lives in footer. */
 export const CONVERSION_NAV: NavLink[] = [
   { href: "/", label: "HOME" },
-  { href: "/about-1320", label: "ABOUT 1320", matchPrefix: true },
+  { href: "/about-1320", label: "ABOUT", matchPrefix: true },
   { href: "/your-code", label: "YOUR CODE", matchPrefix: true },
-  { href: SAMPLE_REPORT_HREF, label: "SAMPLE REPORT", matchPrefix: true },
+  { href: "/blueprint", label: "BLUEPRINT", matchPrefix: true },
+  { href: SAMPLE_REPORT_HREF, label: "SAMPLE", matchPrefix: true },
   { href: "/full-report", label: "FULL REPORT", matchPrefix: true },
   { href: "/booking", label: "READING", matchPrefix: true },
+  { href: "/faq", label: "FAQ", matchPrefix: true },
 ];
 
 export const PRIMARY_NAV: NavLink[] = CONVERSION_NAV;
@@ -39,7 +41,8 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     title: "SYSTEM",
     links: [
       { href: "/about-1320", label: "About 1320" },
-      { href: "/blueprint", label: "The Blueprint" },
+      { href: "/about-1320#origin-story", label: "Origin Story" },
+      { href: "/blueprint", label: "Soul Blueprint" },
       { href: "/your-code", label: "Your Code" },
       { href: "/faq", label: "FAQ" },
     ],
@@ -71,8 +74,9 @@ export const HOMEPAGE_FOOTER_COLUMNS: FooterColumn[] = [
     title: "EXPLORE",
     links: [
       { href: "/about-1320", label: "About 1320" },
+      { href: "/about-1320#origin-story", label: "Origin Story" },
       { href: "/blueprint", label: "How It Works" },
-      { href: "/blueprint", label: "The Blueprint" },
+      { href: "/blueprint", label: "Soul Blueprint" },
       { href: "/faq", label: "FAQ" },
     ],
   },

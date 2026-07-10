@@ -19,5 +19,7 @@ export const FORM_MESSAGES = {
   bookingSuccessWithPrep:
     "Your session request has been received. You can prepare for your session using the link below:",
   bookingError: "Please complete all required fields and confirm your consent.",
+  bookingCheckoutUnavailable:
+    "Booking checkout is not available yet. Please try again later or contact us for help.",
   emailSuccess: "Thanks. Your interest has been captured.",
 } as const;

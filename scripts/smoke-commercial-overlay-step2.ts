@@ -61,9 +61,13 @@ for (const sample of SAMPLE_DATES) {
   }
 
   // S4 should fall back to symbolic/steward layer (not in Step 2 overlay).
-  assert(content.s4Content != null, `${sample.label} S4 content should be present`);
+  const s4 = content.s4Content;
+  if (!s4) {
+    console.error("FAIL:", `${sample.label} S4 content should be present`);
+    process.exit(1);
+  }
   assert(
-    content.s4Content.contentLayer !== "commercial",
+    s4.contentLayer !== "commercial",
     `${sample.label} S4 should remain non-commercial until Step 3`,
   );
 }

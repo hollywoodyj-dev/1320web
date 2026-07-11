@@ -13,10 +13,44 @@ import {
 } from "@/lib/types/commercial-report-blocks";
 import type { V2Entry } from "@/lib/1320-v2/v2-index";
 
-const OVERLAY_ENTRIES =
-  overlayData.entries && typeof overlayData.entries === "object"
-    ? (overlayData.entries as Record<string, CommercialReportEntryOverlay>)
-    : {};
+type OverlayFile = {
+  entries?: Record<string, CommercialReportEntryOverlay>;
+  commercial_report_blocks?: Record<
+    string,
+    CommercialReportEntryOverlay & { code?: string }
+  >;
+};
+
+function normalizeOverlayEntries(data: OverlayFile): Record<string, CommercialReportEntryOverlay> {
+  if (data.entries && typeof data.entries === "object") {
+    return data.entries;
+  }
+  if (data.commercial_report_blocks && typeof data.commercial_report_blocks === "object") {
+    const out: Record<string, CommercialReportEntryOverlay> = {};
+    for (const [code, row] of Object.entries(data.commercial_report_blocks)) {
+      out[code] = {
+        display_name: row.display_name,
+        display_name_zh: row.display_name_zh,
+        commercial_report_blocks: row.commercial_report_blocks,
+        governance: row.governance,
+      };
+    }
+    return out;
+  }
+  return {};
+}
+
+const OVERLAY_ENTRIES = normalizeOverlayEntries(overlayData as OverlayFile);
+
+export function countCommercialOverlayEntries(): number {
+  return Object.keys(OVERLAY_ENTRIES).length;
+}
+
+export function listCommercialOverlayCodes(module?: V2ModuleId): string[] {
+  const codes = Object.keys(OVERLAY_ENTRIES);
+  if (!module) return codes;
+  return codes.filter((code) => code.startsWith(`${module}-`));
+}
 
 function bilingualField(en?: string, zh?: string): LocalizedText {
   return { en: en ?? "", zh: zh || undefined };

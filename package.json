@@ -14,6 +14,7 @@
     "smoke:v2-calculation": "npx tsx scripts/smoke-v2-calculation.ts",
     "smoke:v2-content": "npx tsx scripts/smoke-v2-content.ts",
     "smoke:v2-get-content": "npx tsx scripts/smoke-v2-get-content.ts",
+    "smoke:commercial-overlay-step2": "npx tsx scripts/smoke-commercial-overlay-step2.ts",
     "smoke:full-report-payload": "npx tsx scripts/smoke-full-report-payload.ts",
     "smoke:full-report-v2-sample": "npx tsx scripts/smoke-full-report-v2-sample.ts",
     "smoke:report-canonical": "npx tsx scripts/smoke-report-canonical.ts",

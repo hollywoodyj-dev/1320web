@@ -1,0 +1,848 @@
+{
+  "document": {
+    "title": "1320 Commercial Report Blocks v3 Step 2 — S1",
+    "version": "v3-step2.0",
+    "status": "Draft for Nova integration and Lumen QA",
+    "source_database": "s1-soul-origin.json",
+    "purpose": "Commercial Report Output Layer blocks for Full Report / Mobile Report / PDF / API rendering. Original symbolic source fields remain unchanged."
+  },
+  "module": "S1",
+  "entries": [
+    {
+      "code": "S1-01",
+      "display_name": "The Initiator",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Initiator. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Strong action orientation and fast intuition, A natural path-opener, Moves forward from inner drive, and Skilled at initiating, beginning new cycles, and reform. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Finds breakthrough points in chaos, Natural leadership, and Moves stagnant energy forward. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Easily restless and impatient, Resists slowing down or stopping, and Uses speed as a substitute for self-worth. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to stabilize power through awareness, rather than accumulating self-worth through constant action.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "You are not here to prove speed. You are here to illuminate direction. When you stop proving yourself through more action, you meet real power. The more you pause and listen, the more your path naturally accelerates."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-02",
+      "display_name": "The Bridge",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Bridge. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Gentle yet powerful, Skilled at harmonizing conflict and difference, Naturally becomes a bridge in relationships, and Can move between different worlds. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Understands others' motivations well, Restores flow to complex relationships, and Connects energies that appear opposite. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Over-empathizes and loses boundaries, Hesitates to express true needs, and Fears that saying no will damage relationships. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to protect the self instead of always being the one who supports everyone.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "You are not here to carry everyone’s weight. You are here to help the world return to flow. When you allow yourself to have boundaries, you become a true bridge. Your gentleness is not weakness; it is a light that reaches the heart."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-03",
+      "display_name": "The Seer",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Seer. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Highly sensitive with sharp intuition, Sees directions others cannot see, Future-oriented with innovative thinking, and Thinks uniquely and does not simply follow the crowd. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Exceptional insight, Recognizes trends, potential, and hidden motives, and Strong expression in creative fields. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Overthinks easily, Feels too much and struggles to ground, and Feels different from the world and may become lonely. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Ground insight, turn feeling into direction, and bring spirituality into reality.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "Your eyes see far ahead, so you often forget where your feet are. When you let insight move through the body and land, your vision naturally takes form. You are not here to escape the world, but to bring the world a new way of seeing."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-04",
+      "display_name": "The Stabilizer",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Stabilizer. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Grounded, reliable, and able to hold pressure, A steady anchor for teams and family, Great patience and structural capacity, and Works steadily, deeply, slowly, and precisely. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Provides safety for others, Systematizes and structures chaos, and Strong in long-term projects and sustained growth. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Fears change and resists uncertainty, Over-carries and suppresses needs, and Mistakes stability for never making mistakes. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to remain flexible within stability, allowing structure to serve the soul instead of restricting it.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "You do not need to always be the one who holds everything together. When you allow yourself to loosen even a little, life becomes lighter. Stability is not a burden; it is a gentle kind of strength."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-05",
+      "display_name": "The Catalyst",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Catalyst. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Carries strong influence, Changes the energy of a space upon entering, Naturally suited to breakthrough, disruption, and activating potential, and Carries a frequency that activates others. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Awakens and inspires others, Moves teams forward, and Has powerful breakthrough energy at critical moments. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: May make others feel pressured, Strong energy can be misunderstood, and Often awakens others while neglecting the self. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to stabilize your own energy before activating others.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "Your power is not here to break through others, but to illuminate them. When you first settle within yourself, your presence becomes the greatest catalyst. You are not the destroyer of flame; you are the awakener of flame."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-06",
+      "display_name": "The Healer",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Healer. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Highly feeling-oriented, Reads the emotional depths of others, Naturally soothing energy, and Brings warmth and repair into chaos. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Can heal, listen, and hold space, Highly intuitive emotional insight, and People naturally relax in your presence. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Easily carries others’ emotions, Uses caring for others to avoid caring for the self, and Fears expressing personal needs. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to call your energy back to yourself instead of constantly becoming a shelter for others.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "You are not everyone’s medicine. You are not the light the world must depend on. When you are willing to keep tenderness for yourself, your healing truly begins. Before repairing others, embrace yourself first."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-07",
+      "display_name": "The Warrior",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Warrior. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Strong will and high action capacity, Does not easily give up, Clear goals and strong direction, and Maintains strength in adversity. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Most reliable in crisis, Protects self and loved ones, and Can break through limits. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Uses strength as armor, Fears being seen in vulnerability, and Turns life into a mode of struggle. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to let strength become soft instead of always fighting.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "True strength is not pressing the world down; it is no longer fighting yourself. When you allow vulnerability in, your soul becomes stronger than any armor. You are not the warrior; you are strength itself."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-08",
+      "display_name": "The Nurturer",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Nurturer. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Warm, grounded, and giving, Skilled at caring, supporting, and accompanying, Makes others feel held, and Highly sensitive to emotional needs. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Stabilizes relational space, Brings cohesion to teams, and Carries nurturing creativity. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Easily self-sacrifices, Uses giving as a source of worth, and Loses boundaries in relationships. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to give without betraying yourself.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "Love is not giving until you wither; it is allowing yourself to be nourished too. When you place yourself back at the center of life, your love becomes powerful. You are not a container; you are the flow of life itself."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-09",
+      "display_name": "The Explorer",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Explorer. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Strong curiosity, Dislikes staying inside one framework, Loves learning, experience, travel, and adventure, and Drawn to the unknown. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Opens new worlds, perspectives, and paths, Highly adaptable and unafraid of change, and Life is full of inspiration and creativity. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Lacks stability, Easily distracted and inconsistent, and Avoids deep commitment. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to turn exploration into creation instead of remaining only at the level of experience.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "You are not lost; you are expanding your life map. When you allow yourself to focus, you will find the unknown beginning to open. You are not chasing the world; you are chasing your own possibilities."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-10",
+      "display_name": "The Guardian",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Guardian. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Loyal, steady, and reliable, Strong protective instinct, Naturally holds boundaries for others, and A shield for the team. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Recognizes danger and energetic imbalance, Brings safety in chaos, and Can hold protective space for others. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Overprotective and controlling, Does not trust others’ capacity, and Clings from fear of abandonment. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to release the responsibility to hold everything, allowing life to move on its own.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "You are not the gatekeeper of the world. You are not responsible for everyone. When you stop gripping, relationships naturally become stable. Guarding is not control; it is allowing life to unfold."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-11",
+      "display_name": "The Visionary",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Visionary. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Has a broad perspective, Skilled at building future blueprints, Sensitive to trends, patterns, and possibilities, and Naturally thinks beyond present frameworks. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Designs long-term direction and large-scale strategy, The future eye of an organization or team, and Inspires others to see a greater path. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Thinks too far ahead and ignores present needs, May become stuck because the plan is too large, and Impatient with practical details. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to ground vision, not only remain in the future, but begin from the present.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "The future you see is not illusion; it is a form of soul memory. When you bring vision back to the present, it can truly take shape. The future is not waiting; it is created through each step now."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-12",
+      "display_name": "The Empath",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Empath. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Energetically sensitive and intuitive, Easily senses others’ emotions, fields, and subconscious information, Naturally carries higher-dimensional perception, and An emotional radar soul. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Sees subtle changes others miss, Natural healing and companionship capacity, and Deep empathy and insight in relationships. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Easily overwhelmed by energy, Mistakes others’ emotions for their own, and Fears saying no or creating conflict. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to distinguish what belongs to you from what belongs to others.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "Your sensitivity is not weakness; it is your gift. When you stop absorbing the weight of others, your soul perception rises higher. You are not a sponge; you are light."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-13",
+      "display_name": "The Rebel",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Rebel. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Refuses blind conformity, Naturally rebellious and truth-seeking, Does not want to be limited by frameworks, and Independent in thought and bold in action. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Dismantles old systems, A natural illusion-breaker, and Shows the world another way. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Easily develops hostility toward authority, Turns opposition into identity, and Feels lonely through conflict with the world. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to evolve from opposition into creation, letting rebellion become a force of love.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "You are not here to oppose the world; you are here to rewrite it. When you stop rebelling for the sake of rebellion, your creativity becomes purer. A true rebel walks in the direction of the soul."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-14",
+      "display_name": "The Teacher",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Teacher. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Skilled at organizing knowledge and transmitting wisdom, A natural guide and integrator, Can make complexity simple, and Has the language ability to awaken others. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Deep and stable influence, Opens doors of understanding and awareness for others, and Amplifies consciousness in groups. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Fears not knowing enough, Falls into perfectionism, and Over-carries the teacher role and becomes depleted. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to demonstrate through being, rather than using knowledge to prove worth.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "You were not born to be a teacher; you were born to let wisdom flow. When you stop pursuing perfection, your truth begins to speak. What you teach is not knowledge, but your presence itself."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-15",
+      "display_name": "The Grounded Mystic",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Grounded Mystic. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Highly spiritually aware, Also grounded and practical, Turns spiritual understanding into daily action, and Can see the sky and walk the earth. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Bridges spirituality and reality, Embodies wisdom through practice, and One of the most stable frequencies in spiritual teams. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Impatient with those perceived as less awakened, Neglects bodily needs, and Falls out of balance between spirituality and reality. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to bring spiritual practice into the body, not keep it only in the mind or energy field.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "You are not here to escape the world. You are here to give awakening a shape in the world. When your wisdom lands, your life becomes proof of spirituality itself. You are walking truth."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-16",
+      "display_name": "The Harmonizer",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Harmonizer. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Naturally carries a soft frequency, Skilled at dissolving tension and conflict, Maintains balance in chaos, and Words and actions naturally tune energy. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Restores flow to teams or relationships, Sees multiple perspectives and integrates them, and Strong empathy and adaptability. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Fears conflict and tends to yield, Falls into the role of maintaining harmony, and Suppresses true emotions and becomes depleted. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to pursue harmony without sacrificing your truth.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "You do not need to make everyone comfortable. You only need to remain true. When you allow yourself to express, the world finds a real point of balance. Harmony is not avoiding conflict; it is finding alignment within truth."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-17",
+      "display_name": "The Architect",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Architect. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Enjoys planning, designing, and building structure, Skilled at organizing systems and frameworks, Combines logic and vision with action, and Turns abstract concepts into reality. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Highly capable in execution, Strong at building long-term projects, and Can lead teams to create systems from zero to one. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Falls into over-planning, Afraid to begin before things are perfect, and Tends to control every detail. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to allow change and let life participate in the design instead of controlling everything yourself.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "You are not here to perfect the world. You are here to create the world. When you allow imperfection in, your life blueprint truly comes alive. Structure is not limitation; it is a vessel for soul expression."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-18",
+      "display_name": "The Transformer",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Transformer. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Senses energetic change, Often experiences breakdowns that lead to renewal, Naturally carries deep alchemical capacity, and Grows faster than many around them. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Can move through low-frequency states, Guides others to face shadow, and Naturally able to rebuild life structures. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Easily falls into emotional depth, Mistakes pain for growth, and Places pressure on the self as a constant practitioner. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to transform gently instead of forcing growth through pain.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "You are not here to suffer. You are here to rise in frequency. When you learn to transform with softness, your power becomes purer than fire. You are one who walks through darkness and brings light."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-19",
+      "display_name": "The Communicator",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Communicator. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Language-sensitive and clear in expression, Naturally skilled in communication, teaching, writing, and speaking, Turns complex energy into simple understanding, and Helps people hear themselves. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Strong expressive influence, Precisely understands others’ viewpoints, and Often becomes the voice within a team. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Over-adapts to the audience, Uses expression instead of feeling, and Fears that the voice will be ignored. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to speak truth, not only what makes others comfortable.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "Your voice is not here to be approved. It is here to transmit truth. When you are willing to speak authentically, you become a clear light in the world. What you speak is not merely language; it is frequency."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-20",
+      "display_name": "The Heart-Centered",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Heart-Centered. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Extremely sensitive heart, Makes decisions through feeling, intuition, and resonance, Natural emotional wisdom, and Sees the heart of others in interaction. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Creates depth and sincerity in relationships, Heals emotion and connection, and Guides others back to inner truth. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Easily pulled by emotion, Over-opens in relationships, and Compromises self from fear of losing connection. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to center on self-alignment rather than emotional reaction.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "Your heart is not weakness; it is your compass. When you act from clarity rather than emotion, life naturally returns to its path. You are not here to please the world, but to live your true heart."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-21",
+      "display_name": "The Integrator",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Integrator. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Connects scattered information into complete structures, Sees the system behind the system, Stable insight and gentle guidance, and Deep thinker who absorbs knowledge steadily. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Integrates multiple fields, viewpoints, and energies, Brings clarity to chaos in teams, and Turns spiritual wisdom into practical methods. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Carries too much, Loses self while trying to integrate everything, and Overly sensitive to incompleteness. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to integrate your own rhythm and energy before integrating the world.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "The world is not asking you to carry it; it is asking you to choose. When you first integrate your own being, you can guide others back to wholeness. Integration is not collecting; it is letting truth return to its place."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-22",
+      "display_name": "The Gentle Power",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Gentle Power. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Gentle in presence yet powerful within, Changes others through invisible strength, Does not compete but steadily influences the environment, and Naturally healing in presence. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Stays clear in conflict, Naturally stabilizes people nearby, and A quiet yet extremely powerful soul. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Fears being seen in power, Over-yields and loses energetic balance, and Uses softness to hide the self. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to let power become visible instead of continuing to disguise it as gentleness.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "You are not weak; you are used to not showing your strength. When you are willing to be seen, your soul opens into a new layer of light. Softness is not retreat; it is a deep form of power."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-23",
+      "display_name": "The Analyst",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Analyst. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Quick-minded and logical, Rapidly deconstructs complex problems, Highly sensitive to why, and Sees hidden patterns, laws, and blind spots. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Strong problem-solving ability, Skilled in strategy, research, and analysis, and The clear thinker in a team. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Overly rational and neglects feeling, Easily over-analyzes, and Uses logic to protect from vulnerability. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to let logic and intuition coexist, allowing the heart to join your wisdom.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "Your mind is strong, but your heart also wants to join the conversation. When you let feeling and insight work together, your wisdom becomes dimensional. You are not someone who analyzes the world; you are someone who understands it."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-24",
+      "display_name": "The Radiant Soul",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Radiant Soul. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Naturally carries radiance, charm, and warmth, Attracts attention wherever they go, Can light up, uplift, and inspire others, and A natural energy amplifier. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Quickly elevates the energy of a space, Strong infectious presence, and Brings hope in relationships. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Overly concerned with others’ opinions, Treats shining as an obligation, and Uses light to cover fear and insecurity. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to let light radiate naturally rather than forcing an image.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "Your light does not need proof; it simply exists. When you stop maintaining energy through performance, your soul becomes freer. True light is calm light."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-25",
+      "display_name": "The Flow Walker",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Flow Walker. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Dislikes restriction, Life path often moves through flow and change, Highly adaptable, and Creativity and inspiration renew like water. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Finds opportunity in change, Skilled in cross-disciplinary work, free creation, and spiritual exploration, and Influences others lightly. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Easily avoids commitment, Lacks stable structure, and Wants to leave when facing depth. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Learn to establish anchors within flow instead of remaining forever ungrounded.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "You are not drifting; you are exploring the many shapes of life. When you find your center, flow becomes strength rather than escape. Your path is the path of water."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-26",
+      "display_name": "The Visionary",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Visionary. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Innate future sense and intuitive insight, Sees possibilities where others cannot, Unrestricted thinking, often years ahead, and Carries inspiration, creativity, and foresight. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Can sense trends and create new paths, Especially powerful in early project phases, and Inspires others to break old frameworks. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Lives in the future and neglects the present, Ideas move faster than execution, and Feels lonely when others do not understand. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Let vision land instead of remaining only in high-dimensional inspiration.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "Your inspiration comes from the future, and your power comes from the present. When you are willing to take the first step, the future naturally opens. You are a window of the times."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-27",
+      "display_name": "The Rebuilder",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Rebuilder. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Can rebuild from collapse, Becomes stronger and deeper through difficulty, Often moves through dismantling and rebuilding cycles, and Deep inner resilience. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Rises quickly from life lows, Leads others back to strength from hardship, and Deeply understands trauma, loss, and pain. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Identifies with needing to go through difficulty, Unconsciously attracts relationships that need repair, and Treats pain as necessary for growth. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Allow ease to also be a form of rebirth.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "You are not strong because of pain; you are strong because the deepest structure of your soul is light. When you allow ease to enter, life no longer needs to move forward through breaking."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-28",
+      "display_name": "The Quantum Mind",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Quantum Mind. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Thinks multidimensionally, Explores consciousness, the cosmos, and complex systems, Nonlinear, cross-domain, and fast-moving mind, and Naturally reads frequency. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Sees the energetic logic behind systems, Skilled in spiritual technology, consciousness models, and abstract concepts, and Captures essence within chaos. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Mind moves too fast and may not be understood, Feels uncomfortable in practical structures, and May escape into knowledge to avoid emotional depth. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Let your wisdom bring you back to the body instead of away from it.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "Your wisdom comes from many dimensions, but you exist in this moment. When you bring consciousness back to the body, insight becomes power instead of escape."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-29",
+      "display_name": "The Innovator",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Innovator. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Dislikes old frameworks, Strong creative impulse, Sees new possibilities faster than problems, and Disruptive, experimental, and curious. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Breaks through industry, cultural, or spiritual frameworks, A natural problem solver, and Becomes stronger in change. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Easily bored by stable structures, Wants to escape when limitations are too strong, and Gets pulled into new inspiration before completing old projects. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Give innovation structure so it becomes power rather than chaos.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "You are not here to adapt to the world; you are here to redesign it. When you allow yourself to focus, your innovation becomes a true breakthrough."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-30",
+      "display_name": "The Soul Healer",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Soul Healer. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Extremely high feeling capacity, Naturally understands others’ pain, fears, and longings, Carries a gentle, deep, stable healing field, and Helps people lower their defenses. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Helps others feel seen, Skilled in emotional healing, soul repair, and energy integration, and Creates safety in relationships. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Over-carries others’ emotions, Believes they must help everyone, and Neglects energetic boundaries. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Healing yourself is the source of healing.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "You are not here to bear others’ pain for them. You are here to illuminate their strength. When you take care of yourself first, your healing becomes true light."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-31",
+      "display_name": "The Gatekeeper",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Gatekeeper. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Has channel-like intuition, Senses energetic opening, closing, alignment, and timing, A soul who understands boundaries and permission within groups, and Highly sensitive to the energy of people, events, and spaces. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Distinguishes true opportunities from illusion, Naturally guards the purity and boundaries of systems, and Skilled at filtering and energetic gatekeeping. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Rejects the world because of sensitivity, Overprotects the self and closes energy, and Mistakes guarding for isolation. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Guarding is not rejection; it is allowing truth to enter and illusion to leave.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "Your task is not to close every door, but to recognize which door leads to truth. When you trust your intuition, you become a filtering light in the world."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-32",
+      "display_name": "The Illuminator",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Illuminator. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Naturally illuminates blind spots, Helps others see truth without trying, Accurate intuition that reaches the core, and Naturally understands spirituality and learns quickly. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Can awaken, clarify, and bring realization, A natural vessel for spiritual teaching and consciousness elevation, and Translates higher-dimensional wisdom. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Easily disappointed in those unwilling to awaken, Very sensitive to dishonesty, and Over-carries the responsibility to illuminate others. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "You do not need to awaken everyone. You only need to illuminate those who are ready.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "Your light is not a weapon; it is an invitation. When you release the need to make others change, your light becomes truly powerful."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-33",
+      "display_name": "The Empath Oracle",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Empath Oracle. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Extremely high emotional intuition; hears the voice of the heart, Easily empathizes with others’ longings, sadness, and fears, Carries oracle-like capacity to read energy flow, and Sensitive to the invisible world. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Skilled in emotional healing, inner child repair, and soul counseling, Brings deep truth through softness, and A communicator of heart wisdom. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Easily absorbs others’ emotions, Gets overwhelmed when boundaries are unclear, and Emotional sensitivity becomes a burden. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Stay perceptive without carrying everything.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "What you feel is not always yours to carry. When you turn empathy into wisdom rather than burden, your perception becomes a gift."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-34",
+      "display_name": "The Reformer",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Reformer. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Strong pursuit of truth, order, and integrity, Sees what is wrong faster than others, Naturally critical, improving, and optimizing, and Holds very high standards for the self. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Moves teams forward, Skilled in system reform, process optimization, and value-system building, and A force of truth-restoration on the spiritual path. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Falls into perfectionism, Overly strict with self, and Carries the task of changing the world too heavily. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Allow the world to be imperfect, and allow yourself to be imperfect too.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "Your impulse to correct the world comes from your purity. When you first treat yourself with gentleness, you can truly change the world."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-35",
+      "display_name": "The Soul Navigator",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Soul Navigator. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Steady intuition and strong sense of direction, Naturally knows where to go, Guides others out of fog, and Deeply senses life paths, choices, and destiny. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Decisive and accurate, Becomes a lighthouse of direction for lost groups, and Skilled in mission exploration, life planning, and soul path guidance. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Easily decides directions for others, Carries too much responsibility, and Forgets one’s own path. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Navigate yourself first, then navigate the world.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "You can see the road, but do not forget to return to your own feet. When your direction comes from within rather than responsibility, you become a true guide."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-36",
+      "display_name": "The Frequency Weaver",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Frequency Weaver. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Naturally senses the energetic state of a field, Skilled at bringing people and things into resonance, Finds hidden order in apparent chaos, and Unique connective, coordinating, and tuning ability. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Aligns team energy toward one direction, Creates harmony, collaboration, and synchronization, and A designer of energy flow on the spiritual path. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Sacrifices self to maintain energy, Overworks in misaligned environments, and Treats every imbalance as personal responsibility. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Let energy flow naturally instead of forcing it together through yourself.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "You are not here to repair energy. You are here to guide energy back into natural flow. When you release control, the universe takes over what you cannot weave alone."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-37",
+      "display_name": "The Willpower Flame",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Willpower Flame. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Extremely strong will and action capacity, Clear goals, fast execution, rarely gives up, Strong vitality and fighting spirit, and Moves groups forward with force. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Turns ideas into results, Breaks through bottlenecks and resistance, and Sustained endurance and fire for mission. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Overexerts and ignores physical and emotional limits, Mistakes persistence for attachment, and Unconsciously turns life into a battlefield. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Use power, not force; use flame, not burnout.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "Your flame is not here to burn you out. It is here to illuminate the road. When you learn to hold power with softness, your fire becomes more lasting and pure."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-38",
+      "display_name": "The Soul Listener",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Soul Listener. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Gifted in deep listening, Understands the words behind the words, Often hears soul-level information in interaction, and Wisdom in silence. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Skilled in one-on-one deep accompaniment, counseling, and healing, Gently helps others speak truth, and Makes others feel safe, understood, and seen. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Becomes an emotional outlet for others, Fears expressing true needs, and Uses listening to hide vulnerability. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "As you listen to the world, also listen to yourself.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "Your ears hear the world, but your heart also longs to be heard. When you allow your own voice to appear, your listening becomes true power."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-39",
+      "display_name": "The Stabilizer",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Stabilizer. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Keeps calm in chaos, Naturally acts as a center of gravity, Others instinctively move toward and rely on you, and Grounded, stable, patient energy. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Maintains order in crisis, Provides emotional, decision-making, and structural stability, and Strong in long-term projects and sustained building. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Receives too much responsibility, Mistakes stability for maintaining everyone’s state, and Fears change. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Stability is not restriction; it is the source point of your power.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "Your steadiness is not a burden; it is a blessing. When you allow yourself to be supported too, your stability becomes deeper and freer."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-40",
+      "display_name": "The Inner Sage",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Inner Sage. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Naturally carries a wisdom frequency and intuitive understanding, Sees the essence without needing much input, Mature thinking, deep insight, quick spiritual understanding, and Often seen as wise by others. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Sees the laws and truths of life, Suited to deep guidance of mind and soul, and Offers clarity and direction in chaotic times. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Given the role of always being the teacher, Uses wisdom as a shield and avoids weakness, and Strong sense of loneliness. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Wisdom is to be shared, not carried as responsibility.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "Your wisdom comes from every life you have lived, not from the role you carry. When you allow yourself to be human, your wisdom gains warmth."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-41",
+      "display_name": "The Cosmic Bridge",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Cosmic Bridge. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Acts as a bridge between two worlds, Understands spirituality and reality, energy and logic at once, Translates, integrates, and unifies different levels of consciousness, and Often a connector, cross-boundary figure, and integrator in groups. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Turns higher-dimensional wisdom into understandable language, Simplifies complex thoughts, systems, and knowledge, and Integrates wisdom from different cultures, disciplines, and spiritual traditions. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Over-carries by becoming everyone’s bridge, Feels responsible for communicating all dimensions for the world, and Loses center through excessive crossing of boundaries. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Let connection arise naturally, not from responsibility.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "You are not here to be everyone’s bridge. You are here to open the right doors. When you first connect with your own center, you can truly connect the world."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-42",
+      "display_name": "The Ascension Flame",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Ascension Flame. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Carries a strong high-frequency uplifting force, Automatically elevates others’ consciousness in a field, Life themes revolve around awakening, elevation, and multidimensional growth, and Highly sensitive to truth, purity, and light frequency. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: A frequency-lift point in awakening groups, Helps others transcend illusion and break through old karmic patterns, and Becomes illuminated in high-energy environments. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Feels lonely because the light is strong, Does not want to be disturbed by low-frequency energy, and May be too far ahead for reality to follow. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Let your light land instead of remaining suspended above life.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "Your light is not here to make you fly away from the world. It is here to illuminate the world. When you are willing to meet reality, your ascension becomes more real and stable."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-43",
+      "display_name": "The Destiny Weaver",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Destiny Weaver. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Sees clues in life trajectories, May sense the direction events are taking, Unique insight into cause and effect, karma, and soul paths, and Precisely understands why others have arrived where they are. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Guides others toward key choices that change life patterns, Skilled in lifecycle planning, life blueprint analysis, and soul contract interpretation, and Often seen as a destiny mentor in groups. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Easily decides too much for others, Mistakes seeing destiny for being responsible for destiny, and Ignores personal path when seeing too much. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "Seeing destiny is not for control, but for awakening.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "Your insight is a gift, not an instruction. When you allow others to walk their own path, your wisdom truly unfolds."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S1-44",
+      "display_name": "The Source Messenger",
+      "commercial_report_blocks": {
+        "opening_essence": "You carry the origin pattern of The Source Messenger. This points to a natural way your being may perceive, create, relate, lead, or transform before you start adapting to outside expectations.",
+        "how_this_may_show_up": "In real life, you may recognize this through patterns such as: Extremely high soul purity, Naturally resonates with Source messages, Deep spiritual mission and a sense of being called back, and Receives guidance, inspiration, or downloads from Source. You may not always recognize this as a gift because it can feel so natural, but it often shapes how you move through decisions, relationships, and inner growth.",
+        "core_gift": "The gifts of this origin include: Speaks truth that reaches directly into the soul, Carries revelatory, inspirational, and spiritual translation capacity, and A Source-frequency amplifier in spiritual fields. When you trust this pattern without turning it into pressure, it becomes a stable source of direction and contribution.",
+        "growth_edge": "The growth edge appears when the same origin frequency becomes distorted through patterns such as: Feels lonely because few understand, Mission becomes too heavy and life is forgotten, and Mistakes being from Source for needing to be perfectly accurate. The invitation is not to reject this part of yourself, but to express it with more awareness, pacing, and self-honesty.",
+        "integration_key": "You are a messenger, and you are still human. Truth needs to flow, not be carried as a burden.",
+        "one_week_practice": "For one week, notice one moment each day when this origin pattern wants to express itself. Ask: am I acting from alignment, or am I trying to prove something? Choose one small action that lets the gift move cleanly.",
+        "wisewave_reflection": "You come with Source light, but you are not here to carry a burden. When you allow yourself to be light, natural, and real, your message becomes purer and more powerful."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    }
+  ]
+}

@@ -22,7 +22,9 @@
     "commercial_overlay": "commercial-report-blocks-overlay.json"
   },
   "commercial_output_layer": {
-    "version": "commercial-v1",
-    "schema_doc": "docs/specs/1320-v2-content/COMMERCIAL_REPORT_BLOCKS_SCHEMA_v1.md"
+    "version": "commercial-v3-step2",
+    "schema_doc": "docs/specs/1320-v2-content/COMMERCIAL_REPORT_BLOCKS_SCHEMA_v1.md",
+    "overlay": "commercial-report-blocks-overlay.json",
+    "module_exports": "commercial-overlay/step2-s0-s3/"
   }
 }

@@ -1,0 +1,240 @@
+{
+  "document": {
+    "title": "1320 Commercial Report Blocks v3 Step 2 — S3",
+    "version": "v3-step2.0",
+    "status": "Draft for Nova integration and Lumen QA",
+    "source_database": "s3-soul-vibration.json",
+    "purpose": "Commercial Report Output Layer blocks for Full Report / Mobile Report / PDF / API rendering. Original symbolic source fields remain unchanged."
+  },
+  "module": "S3",
+  "entries": [
+    {
+      "code": "S3-01",
+      "display_name": "Seed",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S3 vibration carries the Seed pattern. This describes how your energy may move, express, learn, and seek grounding through lived experience.",
+        "how_this_may_show_up": "You may recognize this vibration through: Early-stage energy, tender soul development, high sensitivity, and a strong tendency to be influenced by the external field. This tier seeks safety, steadiness, and supportive structure. It can shape how you enter relationships, work, creativity, learning, and inner development.",
+        "core_gift": "The gifts of this vibration include: Purity, clean intuition, fast learning, and an original receptivity to truth. When expressed with awareness, this energy becomes a natural current of movement, creativity, and self-recognition.",
+        "growth_edge": "The growth edge may appear through: Dependency, fear of invalidation, unstable frequency, and emotional susceptibility to external influence. The invitation is to let your energy mature without forcing it, comparing it, or turning it into a performance standard.",
+        "integration_key": "Integration begins by: Build inner safety, practice emotional awareness, and do not rush beyond the current stage. Allow yourself to be a seed that grows steadily. Let this become a grounded rhythm rather than another ideal to chase.",
+        "one_week_practice": "For one week, notice when your energy accelerates, contracts, opens, or stabilizes. Each day, write one sentence about what helped you return to grounded presence and one small choice that supports your Seed vibration.",
+        "wisewave_reflection": "Build inner safety, practice emotional awareness, and do not rush beyond the current stage. Allow yourself to be a seed that grows steadily."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S3-02",
+      "display_name": "Spark",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S3 vibration carries the Spark pattern. This describes how your energy may move, express, learn, and seek grounding through lived experience.",
+        "how_this_may_show_up": "You may recognize this vibration through: The inner spark of awakening begins to appear, bringing strong curiosity toward spirituality, truth, and meaning. It can shape how you enter relationships, work, creativity, learning, and inner development.",
+        "core_gift": "The gifts of this vibration include: Strong inspiration, frequent intuitive flashes, rising action energy, and a natural capacity to generate breakthroughs. When expressed with awareness, this energy becomes a natural current of movement, creativity, and self-recognition.",
+        "growth_edge": "The growth edge may appear through: Self-doubt, fear of taking the wrong path, repeated dualistic judgment, and susceptibility to the opinions or energy of others. The invitation is to let your energy mature without forcing it, comparing it, or turning it into a performance standard.",
+        "integration_key": "Integration begins by: Practice discerning motivation. Learn to distinguish ego impulse from soul movement, and let every inspiration pass through awareness before action. Let this become a grounded rhythm rather than another ideal to chase.",
+        "one_week_practice": "For one week, notice when your energy accelerates, contracts, opens, or stabilizes. Each day, write one sentence about what helped you return to grounded presence and one small choice that supports your Spark vibration.",
+        "wisewave_reflection": "Practice discerning motivation. Learn to distinguish ego impulse from soul movement, and let every inspiration pass through awareness before action."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S3-03",
+      "display_name": "Explorer",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S3 vibration carries the Explorer pattern. This describes how your energy may move, express, learn, and seek grounding through lived experience.",
+        "how_this_may_show_up": "You may recognize this vibration through: The soul enters an exploratory stage, learning different systems, methods, and streams of wisdom. It can shape how you enter relationships, work, creativity, learning, and inner development.",
+        "core_gift": "The gifts of this vibration include: Openness, tolerance, strong learning ability, and willingness to experiment. When expressed with awareness, this energy becomes a natural current of movement, creativity, and self-recognition.",
+        "growth_edge": "The growth edge may appear through: Getting lost in too many systems, becoming scattered, and mistaking the pursuit of more information for depth. The invitation is to let your energy mature without forcing it, comparing it, or turning it into a performance standard.",
+        "integration_key": "Integration begins by: Practice stabilizing your center. Choose one path to deepen rather than being pulled away by the endless search for more. Let this become a grounded rhythm rather than another ideal to chase.",
+        "one_week_practice": "For one week, notice when your energy accelerates, contracts, opens, or stabilizes. Each day, write one sentence about what helped you return to grounded presence and one small choice that supports your Explorer vibration.",
+        "wisewave_reflection": "Practice stabilizing your center. Choose one path to deepen rather than being pulled away by the endless search for more."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S3-04",
+      "display_name": "Awakener",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S3 vibration carries the Awakener pattern. This describes how your energy may move, express, learn, and seek grounding through lived experience.",
+        "how_this_may_show_up": "You may recognize this vibration through: Soul awakening begins to manifest. The person starts seeing through illusion and understanding the logic of energy. It can shape how you enter relationships, work, creativity, learning, and inner development.",
+        "core_gift": "The gifts of this vibration include: Seeing truth, stronger insight, and the beginning manifestation of inner power. When expressed with awareness, this energy becomes a natural current of movement, creativity, and self-recognition.",
+        "growth_edge": "The growth edge may appear through: Spiritual arrogance, judging others, and overemphasizing awakening while neglecting grounded daily embodiment. The invitation is to let your energy mature without forcing it, comparing it, or turning it into a performance standard.",
+        "integration_key": "Integration begins by: Awakening is not superiority; awakening is service. Let awakening return to ordinary life and let truth illuminate the simplest places. Let this become a grounded rhythm rather than another ideal to chase.",
+        "one_week_practice": "For one week, notice when your energy accelerates, contracts, opens, or stabilizes. Each day, write one sentence about what helped you return to grounded presence and one small choice that supports your Awakener vibration.",
+        "wisewave_reflection": "Awakening is not superiority; awakening is service. Let awakening return to ordinary life and let truth illuminate the simplest places."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S3-05",
+      "display_name": "Integrator",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S3 vibration carries the Integrator pattern. This describes how your energy may move, express, learn, and seek grounding through lived experience.",
+        "how_this_may_show_up": "You may recognize this vibration through: The soul begins integrating emotions, relationships, wounds, and shadow material. It can shape how you enter relationships, work, creativity, learning, and inner development.",
+        "core_gift": "The gifts of this vibration include: Stability, maturity, and the emerging strength of wisdom. When expressed with awareness, this energy becomes a natural current of movement, creativity, and self-recognition.",
+        "growth_edge": "The growth edge may appear through: The tendency to avoid old wounds and recurring lessons, often due to fear of being hurt again. The invitation is to let your energy mature without forcing it, comparing it, or turning it into a performance standard.",
+        "integration_key": "Integration begins by: Integration comes through gentleness, not force. Let every emotion become a practice. Let this become a grounded rhythm rather than another ideal to chase.",
+        "one_week_practice": "For one week, notice when your energy accelerates, contracts, opens, or stabilizes. Each day, write one sentence about what helped you return to grounded presence and one small choice that supports your Integrator vibration.",
+        "wisewave_reflection": "Integration comes through gentleness, not force. Let every emotion become a practice."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S3-06",
+      "display_name": "Alchemist",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S3 vibration carries the Alchemist pattern. This describes how your energy may move, express, learn, and seek grounding through lived experience.",
+        "how_this_may_show_up": "You may recognize this vibration through: A transformative capacity emerges: pain can be turned into strength, and difficulty into wisdom. It can shape how you enter relationships, work, creativity, learning, and inner development.",
+        "core_gift": "The gifts of this vibration include: Strong inner alchemy, deep insight, and clear intuitive direction. When expressed with awareness, this energy becomes a natural current of movement, creativity, and self-recognition.",
+        "growth_edge": "The growth edge may appear through: Carrying too much alone, repressing emotion, and stepping too quickly into the role of rescuer or savior. The invitation is to let your energy mature without forcing it, comparing it, or turning it into a performance standard.",
+        "integration_key": "Integration begins by: You do not need to carry everyone’s transformation. Learn boundaries and let power move naturally. Let this become a grounded rhythm rather than another ideal to chase.",
+        "one_week_practice": "For one week, notice when your energy accelerates, contracts, opens, or stabilizes. Each day, write one sentence about what helped you return to grounded presence and one small choice that supports your Alchemist vibration.",
+        "wisewave_reflection": "You do not need to carry everyone’s transformation. Learn boundaries and let power move naturally."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S3-07",
+      "display_name": "Visionary",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S3 vibration carries the Visionary pattern. This describes how your energy may move, express, learn, and seek grounding through lived experience.",
+        "how_this_may_show_up": "You may recognize this vibration through: The soul begins to carry mission, vision, and a stronger sense of direction. It can shape how you enter relationships, work, creativity, learning, and inner development.",
+        "core_gift": "The gifts of this vibration include: Strong creativity, long-range vision, the ability to lead others, and an increasing luminosity of soul expression. When expressed with awareness, this energy becomes a natural current of movement, creativity, and self-recognition.",
+        "growth_edge": "The growth edge may appear through: Anxiety about not being good enough, mission inflation, and subtle ego entering the vision. The invitation is to let your energy mature without forcing it, comparing it, or turning it into a performance standard.",
+        "integration_key": "Integration begins by: Release attachment to outcome. Let vision become service rather than proof. Let this become a grounded rhythm rather than another ideal to chase.",
+        "one_week_practice": "For one week, notice when your energy accelerates, contracts, opens, or stabilizes. Each day, write one sentence about what helped you return to grounded presence and one small choice that supports your Visionary vibration.",
+        "wisewave_reflection": "Release attachment to outcome. Let vision become service rather than proof."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S3-08",
+      "display_name": "Healer",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S3 vibration carries the Healer pattern. This describes how your energy may move, express, learn, and seek grounding through lived experience.",
+        "how_this_may_show_up": "You may recognize this vibration through: The soul enters a healing frequency, bringing repair and inspiration through connection with others. It can shape how you enter relationships, work, creativity, learning, and inner development.",
+        "core_gift": "The gifts of this vibration include: Strong empathy, stable presence, and a natural capacity to offer safety. When expressed with awareness, this energy becomes a natural current of movement, creativity, and self-recognition.",
+        "growth_edge": "The growth edge may appear through: Over-empathy, energetic depletion, and absorbing the pain of others. The invitation is to let your energy mature without forcing it, comparing it, or turning it into a performance standard.",
+        "integration_key": "Integration begins by: Let healing begin with boundaries. Do not absorb; accompany. Do not rescue; remain present. Let this become a grounded rhythm rather than another ideal to chase.",
+        "one_week_practice": "For one week, notice when your energy accelerates, contracts, opens, or stabilizes. Each day, write one sentence about what helped you return to grounded presence and one small choice that supports your Healer vibration.",
+        "wisewave_reflection": "Let healing begin with boundaries. Do not absorb; accompany. Do not rescue; remain present."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S3-09",
+      "display_name": "Mentor",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S3 vibration carries the Mentor pattern. This describes how your energy may move, express, learn, and seek grounding through lived experience.",
+        "how_this_may_show_up": "You may recognize this vibration through: The soul carries the ability to transmit wisdom and influence the awareness of others. It can shape how you enter relationships, work, creativity, learning, and inner development.",
+        "core_gift": "The gifts of this vibration include: Powerful language, stable energy, mature wisdom, and clear guidance. When expressed with awareness, this energy becomes a natural current of movement, creativity, and self-recognition.",
+        "growth_edge": "The growth edge may appear through: Over-responsibility, fatigue, and becoming an object of spiritual dependency for others. The invitation is to let your energy mature without forcing it, comparing it, or turning it into a performance standard.",
+        "integration_key": "Integration begins by: Be a mirror, not a master. Let others become the source of their own strength. Let this become a grounded rhythm rather than another ideal to chase.",
+        "one_week_practice": "For one week, notice when your energy accelerates, contracts, opens, or stabilizes. Each day, write one sentence about what helped you return to grounded presence and one small choice that supports your Mentor vibration.",
+        "wisewave_reflection": "Be a mirror, not a master. Let others become the source of their own strength."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S3-10",
+      "display_name": "Master",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S3 vibration carries the Master pattern. This describes how your energy may move, express, learn, and seek grounding through lived experience.",
+        "how_this_may_show_up": "You may recognize this vibration through: The soul is highly self-aware; life, language, and presence themselves become teaching. It can shape how you enter relationships, work, creativity, learning, and inner development.",
+        "core_gift": "The gifts of this vibration include: Stable awareness, deep wisdom, high influence, and strong frequency. When expressed with awareness, this energy becomes a natural current of movement, creativity, and self-recognition.",
+        "growth_edge": "The growth edge may appear through: Loneliness when facing collective unconsciousness and the feeling of being deeply misunderstood. The invitation is to let your energy mature without forcing it, comparing it, or turning it into a performance standard.",
+        "integration_key": "Integration begins by: Continue to be light, not a leader. Light simply illuminates; it does not judge or expect. Let this become a grounded rhythm rather than another ideal to chase.",
+        "one_week_practice": "For one week, notice when your energy accelerates, contracts, opens, or stabilizes. Each day, write one sentence about what helped you return to grounded presence and one small choice that supports your Master vibration.",
+        "wisewave_reflection": "Continue to be light, not a leader. Light simply illuminates; it does not judge or expect."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S3-11",
+      "display_name": "Ascendant",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S3 vibration carries the Ascendant pattern. This describes how your energy may move, express, learn, and seek grounding through lived experience.",
+        "how_this_may_show_up": "You may recognize this vibration through: The soul begins moving beyond the personal level into service to the collective and to consciousness itself. It can shape how you enter relationships, work, creativity, learning, and inner development.",
+        "core_gift": "The gifts of this vibration include: A natural high-frequency field, the ability to elevate spaces quickly, and a stabilizing presence. When expressed with awareness, this energy becomes a natural current of movement, creativity, and self-recognition.",
+        "growth_edge": "The growth edge may appear through: High pressure on the body, significant energetic consumption, and occasional soul-level fatigue. The invitation is to let your energy mature without forcing it, comparing it, or turning it into a performance standard.",
+        "integration_key": "Integration begins by: Return to the body, to rest, and to self-nourishment so you can continue holding a larger frequency. Let this become a grounded rhythm rather than another ideal to chase.",
+        "one_week_practice": "For one week, notice when your energy accelerates, contracts, opens, or stabilizes. Each day, write one sentence about what helped you return to grounded presence and one small choice that supports your Ascendant vibration.",
+        "wisewave_reflection": "Return to the body, to rest, and to self-nourishment so you can continue holding a larger frequency."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S3-12",
+      "display_name": "Source-Channel",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S3 vibration carries the Source-Channel pattern. This describes how your energy may move, express, learn, and seek grounding through lived experience.",
+        "how_this_may_show_up": "You may recognize this vibration through: The soul becomes a channel of Source, functioning through wisdom, love, and truth with minimal ego interference. It can shape how you enter relationships, work, creativity, learning, and inner development.",
+        "core_gift": "The gifts of this vibration include: The purest frequency, the most stable awareness, speech as power, and presence as light. When expressed with awareness, this energy becomes a natural current of movement, creativity, and self-recognition.",
+        "growth_edge": "The growth edge may appear through: The need to remain empty and non-attached; attachment to being high-frequency can pull the expression back into lower patterns. The invitation is to let your energy mature without forcing it, comparing it, or turning it into a performance standard.",
+        "integration_key": "Integration begins by: Do not dwell in form or self. Let truth continue to move through you with a non-forcing heart. Let this become a grounded rhythm rather than another ideal to chase.",
+        "one_week_practice": "For one week, notice when your energy accelerates, contracts, opens, or stabilizes. Each day, write one sentence about what helped you return to grounded presence and one small choice that supports your Source-Channel vibration.",
+        "wisewave_reflection": "Do not dwell in form or self. Let truth continue to move through you with a non-forcing heart."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    }
+  ]
+}

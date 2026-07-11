@@ -61,6 +61,6 @@ export const COMMERCIAL_EXTRA_BLOCK_SPECS: Record<string, V2BlockSpec[]> = {
   ],
 };
 
-export const COMMERCIAL_LAYER_VERSION = "commercial-v1" as const;
+export const COMMERCIAL_LAYER_VERSION = "commercial-v3-step2" as const;
 
 export type ContentLayer = "symbolic" | "commercial";

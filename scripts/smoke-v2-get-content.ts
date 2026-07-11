@@ -101,15 +101,19 @@ assert(!containsCjk(s3Guidance), `S3 EN guidance should be English, got: ${s3Gui
 console.log("=== v2 commercial output layer — sample blueprint overlay ===");
 assert(full.s1Content!.contentLayer === "commercial", "S1-18 should use commercial layer");
 assert(
-  t(full.s1Content!.freeEssence, "en").includes("Your Soul Origin carries"),
-  "S1 commercial opening_essence should render",
+  full.s1Content!.commercialBlocksVersion === "commercial-v3-step2",
+  "S1 should use Step 2 commercial overlay version",
+);
+assert(
+  t(full.s1Content!.freeEssence, "en").includes("The Transformer"),
+  "S1 Step 2 commercial opening_essence should render",
 );
 assert(
   !t(full.s1Content!.freeEssence, "en").includes("This Soul Origin reflects"),
   "S1 should not expose templated symbolic source copy when commercial layer present",
 );
-assert(full.s4Content!.contentLayer === "commercial", "S4-14 should use commercial layer");
-assert(full.s6Content!.contentLayer === "commercial", "S6-28 should use commercial layer");
+assert(full.s4Content!.contentLayer !== "commercial", "S4-14 remains steward layer until Step 3");
+assert(full.s6Content!.contentLayer !== "commercial", "S6-28 remains steward layer until Step 3");
 assert(
   (full.s1Content!.soulMissionSections?.length ?? 0) >= 5,
   "S1 commercial blocks should produce sections",

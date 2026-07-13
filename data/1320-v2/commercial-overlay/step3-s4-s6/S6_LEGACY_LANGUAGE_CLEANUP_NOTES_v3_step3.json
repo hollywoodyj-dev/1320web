@@ -1,0 +1,513 @@
+{
+  "document": {
+    "title": "S6 Value & Receiving Legacy Language Cleanup Notes",
+    "version": "v3-step3.0",
+    "status": "Non-blocking source cleanup recommendations; commercial overlay is already cleaned",
+    "note": "Original symbolic source fields remain unchanged. This file identifies legacy wealth/resources/财富 language still present in source fields so Nova/Lumen can prevent accidental public rendering."
+  },
+  "items": [
+    {
+      "code": "S6-01",
+      "display_name": "The Clear Self-Worth Receiver",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "丰盛",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-02",
+      "display_name": "The Intuitive Flow Receiver",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "丰盛",
+        "财富",
+        "金矿"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-03",
+      "display_name": "The Creative Vision Receiver",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "丰盛",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-04",
+      "display_name": "The Steady Builder",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "丰盛",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-05",
+      "display_name": "The Relational Voice",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "丰盛",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-06",
+      "display_name": "The Empathic Healer",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-07",
+      "display_name": "The Embodied Mystic",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "丰盛",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-08",
+      "display_name": "The Transformational Alchemist",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "丰盛",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-09",
+      "display_name": "The Strategic Seer",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-10",
+      "display_name": "The Responsible Builder",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-11",
+      "display_name": "The Expansive Explorer",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "丰盛",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-12",
+      "display_name": "The Compassionate Value Holder",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "丰盛",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-13",
+      "display_name": "The Visible Leader",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-14",
+      "display_name": "The Structured Flow Keeper",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-15",
+      "display_name": "The Aesthetic Creator",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-16",
+      "display_name": "The Grounded Provider",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "丰盛",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-17",
+      "display_name": "The Practical Mystic",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-18",
+      "display_name": "The Soft Power Magnet",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "丰盛",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-19",
+      "display_name": "The Swift Innovator",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-20",
+      "display_name": "The Resilient Executor",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-21",
+      "display_name": "The Sensitive Aesthetic Soul",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-22",
+      "display_name": "The Wise Acceptance Receiver",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "丰盛",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-23",
+      "display_name": "The Reliable Contributor",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "丰盛",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-24",
+      "display_name": "The Boundaried Connector",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-25",
+      "display_name": "The Intuitive Discernment Holder",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-26",
+      "display_name": "The Strategic Actor",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-27",
+      "display_name": "The Compassionate Boundary Keeper",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-28",
+      "display_name": "The Deep Transformer",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "丰盛",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-29",
+      "display_name": "The Inspired Finisher",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-30",
+      "display_name": "The Lightened Responsibility Holder",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-31",
+      "display_name": "The Embodied Thinker",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-32",
+      "display_name": "The Self-Nourished Supporter",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-33",
+      "display_name": "The Evolving Stabilizer",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-34",
+      "display_name": "The Centered Sensitive",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "丰盛",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-35",
+      "display_name": "The Authentic Magnet",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-36",
+      "display_name": "The Implementing Analyst",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-37",
+      "display_name": "The Wise Server",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "丰盛",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-38",
+      "display_name": "The Open Channel",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-39",
+      "display_name": "The Focused Fire",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-40",
+      "display_name": "The Gentle Architect",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "丰盛",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-41",
+      "display_name": "The Acting Visionary",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-42",
+      "display_name": "The Self-Recognizing Depth",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "丰盛",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-43",
+      "display_name": "The Collaborative Rebel",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    },
+    {
+      "code": "S6-44",
+      "display_name": "The Co-Creative Leader",
+      "residual_terms_detected": [
+        "resources",
+        "wealth",
+        "财富"
+      ],
+      "recommendation": "Do not render these legacy terms in paid report output. Prefer commercial_report_blocks and Value & Receiving language. Source cleanup may be approved separately if Chinese output is reactivated.",
+      "preferred_language": "worth, support, resources, recognition, receiving, reciprocity, visibility, contribution"
+    }
+  ]
+}

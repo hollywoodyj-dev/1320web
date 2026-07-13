@@ -1,0 +1,848 @@
+{
+  "document": {
+    "title": "1320 Commercial Report Blocks v3 Step 3 — S5",
+    "version": "v3-step3.0",
+    "status": "Draft for Nova integration and Lumen QA",
+    "source_database": "s5-soul-mission.json",
+    "purpose": "Commercial Report Output Layer blocks for Full Report / Mobile Report / PDF / API rendering. Original symbolic source fields remain unchanged."
+  },
+  "module": "S5",
+  "entries": [
+    {
+      "code": "S5-01",
+      "display_name": "The Mission of Initiation",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Initiation, describes a meaningful direction your life may keep returning to. Your mission may invite you to begin what has been waiting for movement. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through the impulse to move first, solve quickly, or begin again whenever life feels stagnant. When fear is leading, this can become impatience or pressure. When integrated, the same sensitivity becomes the mission of initiating movement with awareness. You are learning to turn urgency into clean beginnings, and personal drive into an invitation that helps others take their first honest step.",
+        "core_gift": "The core gift of this mission is starting before certainty. It may naturally express through fields such as leadership, entrepreneurship, launches, pioneering ideas, and new communities, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become impulsiveness that confuses speed with alignment.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-02",
+      "display_name": "The Mission of Connection",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Connection, describes a meaningful direction your life may keep returning to. Your mission may invite you to create bridges where separation has become normal. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through sensing the needs, tensions, and emotional distance between people before anyone names them. When fear is leading, this can become over-adapting or losing yourself inside connection. When integrated, the same sensitivity becomes a mission of restoring relational flow without abandoning your own center. You are learning to turn the need for harmony into the ability to build bridges that still honor truth.",
+        "core_gift": "The core gift of this mission is listening, harmonizing, and restoring relational flow. It may naturally express through fields such as relationship work, mediation, community care, partnerships, and facilitation, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become over-adapting until the self disappears.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-03",
+      "display_name": "The Mission of Vision",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Vision, describes a meaningful direction your life may keep returning to. Your mission may invite you to translate subtle insight into direction. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through seeing possibilities, symbols, or future directions before they are practical enough for others to understand. When fear is leading, this can become overthinking, isolation, or living ahead of the present. When integrated, the same vision becomes a mission of translating subtle perception into usable direction. You are learning to bring what you see far away into grounded choices that can help others orient themselves.",
+        "core_gift": "The core gift of this mission is seeing patterns before they become visible. It may naturally express through fields such as strategy, innovation, creative direction, research, and future-oriented work, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become staying in possibility without grounding it.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-04",
+      "display_name": "The Mission of Structure",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Structure, describes a meaningful direction your life may keep returning to. Your mission may invite you to give stable form to what matters. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through trying to create stability whenever life feels uncertain. When fear is leading, this can become rigidity, over-responsibility, or fear of change. When integrated, the same need for structure becomes a mission of building containers where growth can become sustainable. You are learning to turn the desire for safety into systems, rhythms, and foundations that support life rather than restrict it.",
+        "core_gift": "The core gift of this mission is building systems, rhythms, and trustworthy foundations. It may naturally express through fields such as operations, management, education, resource planning, and long-term projects, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become rigid or over-responsible.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-05",
+      "display_name": "The Mission of Activation",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Activation, describes a meaningful direction your life may keep returning to. Your mission may invite you to awaken movement, courage, and latent potential. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through entering spaces and immediately sensing what is stuck, asleep, or ready to move. When fear is leading, this can become pushing, intensity, or trying to awaken people before they are ready. When integrated, the same activation becomes a mission of catalyzing change with steadiness. You are learning to turn pressure into presence, and your fire becomes a force that lights rather than burns.",
+        "core_gift": "The core gift of this mission is energizing people and spaces that have become stagnant. It may naturally express through fields such as coaching, teaching, leadership, public speaking, and transformation work, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become pushing others before they are ready.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-06",
+      "display_name": "The Mission of Healing Presence",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Healing Presence, describes a meaningful direction your life may keep returning to. Your mission may invite you to restore emotional safety and softness. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through feeling the wounds, emotional needs, or unspoken grief of others. When fear is leading, this can become absorbing pain or defining yourself through being needed. When integrated, the same sensitivity becomes a mission of healing presence. You are learning to turn caretaking into grounded compassion, allowing your warmth to create repair without making you responsible for everyone’s healing.",
+        "core_gift": "The core gift of this mission is holding space with warmth and emotional intelligence. It may naturally express through fields such as healing arts, counseling, care work, emotional education, and family systems, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become absorbing pain as proof of love.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-07",
+      "display_name": "The Mission of Courage",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Courage, describes a meaningful direction your life may keep returning to. Your mission may invite you to embody strength without losing tenderness. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through meeting challenge with strength, endurance, or the instinct to protect. When fear is leading, this can become defensiveness, constant struggle, or the belief that softness is unsafe. When integrated, the same force becomes a mission of embodied courage. You are learning to turn inner battle into clear action, showing others that strength can protect life without hardening the heart.",
+        "core_gift": "The core gift of this mission is standing firm in difficult moments. It may naturally express through fields such as advocacy, leadership, crisis support, embodied discipline, and protection work, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become turning life into a battlefield.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-08",
+      "display_name": "The Mission of Nurturing",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Nurturing, describes a meaningful direction your life may keep returning to. Your mission may invite you to make growth feel held, human, and sustainable. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through giving, holding, feeding, supporting, or becoming the emotional ground for others. When fear is leading, this can become self-sacrifice or quiet resentment. When integrated, the same devotion becomes a mission of sustainable nurturing. You are learning to turn over-giving into life-giving care, where your support includes your own needs and teaches others a healthier form of love.",
+        "core_gift": "The core gift of this mission is supporting life through devotion and consistency. It may naturally express through fields such as family care, team culture, community building, hospitality, and education, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become self-sacrifice disguised as love.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-09",
+      "display_name": "The Mission of Exploration",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Exploration, describes a meaningful direction your life may keep returning to. Your mission may invite you to expand the field of what is possible. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through seeking new experiences whenever life feels too narrow. When fear is leading, this can become restlessness or avoidance of commitment. When integrated, the same movement becomes a mission of exploration that expands consciousness. You are learning to turn wandering into wisdom, and your encounters with the unknown become pathways that help others imagine a wider life.",
+        "core_gift": "The core gift of this mission is learning through experience and opening new paths. It may naturally express through fields such as travel, education, cultural work, experimentation, and interdisciplinary creation, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become escaping depth through constant movement.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-10",
+      "display_name": "The Mission of Guardianship",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Guardianship, describes a meaningful direction your life may keep returning to. Your mission may invite you to protect what is sacred without controlling it. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through scanning for risk, imbalance, or places where protection is needed. When fear is leading, this can become control, suspicion, or over-guarding. When integrated, the same vigilance becomes a mission of guardianship. You are learning to turn fear of loss into wise boundaries, creating spaces where trust, responsibility, and safety can coexist.",
+        "core_gift": "The core gift of this mission is creating safety, boundaries, and trust. It may naturally express through fields such as stewardship, ethics, operations, security, resource protection, and mentorship, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become confusing care with control.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-11",
+      "display_name": "The Mission of Future Design",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Future Design, describes a meaningful direction your life may keep returning to. Your mission may invite you to help people orient toward a larger horizon. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through carrying a large future vision before the present is ready to hold it. When fear is leading, this can become frustration with details or distance from immediate reality. When integrated, the same long-range sight becomes a mission of future design. You are learning to turn abstract vision into coherent direction, helping others move toward what is possible without bypassing what is here.",
+        "core_gift": "The core gift of this mission is holding long-range vision and coherent direction. It may naturally express through fields such as strategy, visionary leadership, architecture of ideas, and social innovation, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become living too far ahead of the present.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-12",
+      "display_name": "The Mission of Deep Empathy",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Deep Empathy, describes a meaningful direction your life may keep returning to. Your mission may invite you to turn sensitivity into clear service. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through feeling emotional atmospheres so deeply that other people’s states enter your own body. When fear is leading, this can become overwhelm or emotional absorption. When integrated, the same empathy becomes a mission of deep listening. You are learning to turn sensitivity into discernment, creating spaces where what is unspoken can be gently named without losing yourself.",
+        "core_gift": "The core gift of this mission is feeling what is unspoken and naming it gently. It may naturally express through fields such as therapeutic work, art, listening spaces, emotional intelligence, and support roles, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become losing boundaries inside others’ emotions.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-13",
+      "display_name": "The Mission of Liberation",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Liberation, describes a meaningful direction your life may keep returning to. Your mission may invite you to break old forms so truer ones can emerge. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through resisting inherited rules, roles, or systems that feel false. When fear is leading, this can become opposition for its own sake or identity built around rebellion. When integrated, the same resistance becomes a mission of liberation. You are learning to turn refusal into creation, showing that freedom is not merely leaving old structures but building truer ones.",
+        "core_gift": "The core gift of this mission is questioning inherited systems and creating alternatives. It may naturally express through fields such as reform, activism, entrepreneurship, disruptive design, and cultural change, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become rebelling as identity instead of freedom.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-14",
+      "display_name": "The Mission of Transmission",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Transmission, describes a meaningful direction your life may keep returning to. Your mission may invite you to make wisdom understandable and usable. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through collecting insight, language, and understanding in order to make sense of life. When fear is leading, this can become proving through knowledge or teaching before embodying. When integrated, the same impulse becomes a mission of transmission. You are learning to turn information into wisdom that can be received, lived, and passed on with humility.",
+        "core_gift": "The core gift of this mission is teaching, translating, and simplifying complexity. It may naturally express through fields such as teaching, writing, content, consulting, training, and spiritual education, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become proving worth through knowledge.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-15",
+      "display_name": "The Mission of Embodiment",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Embodiment, describes a meaningful direction your life may keep returning to. Your mission may invite you to bring inner awareness into ordinary life. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through sensing truth in spiritual, emotional, or symbolic ways but needing to bring it into the body. When fear is leading, this can become insight without integration. When integrated, the same awareness becomes a mission of embodiment. You are learning to turn knowing into practice, so your life becomes the place where higher understanding becomes real.",
+        "core_gift": "The core gift of this mission is grounding insight through behavior, body, and practice. It may naturally express through fields such as somatic work, grounded spirituality, coaching, and daily practice design, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become using spirituality to avoid practical reality.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-16",
+      "display_name": "The Mission of Harmony",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Harmony, describes a meaningful direction your life may keep returning to. Your mission may invite you to restore balance without erasing truth. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through absorbing tension and trying to keep the peace. When fear is leading, this can become self-silencing or maintaining harmony at the cost of truth. When integrated, the same gift becomes a mission of real harmony. You are learning to turn conflict avoidance into relational intelligence, helping different needs meet without erasing what is true.",
+        "core_gift": "The core gift of this mission is integrating different needs, tones, and perspectives. It may naturally express through fields such as facilitation, negotiation, design, organizational culture, and relational repair, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become avoiding conflict to preserve peace.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-17",
+      "display_name": "The Mission of Building Worlds",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Building Worlds, describes a meaningful direction your life may keep returning to. Your mission may invite you to turn abstract purpose into living systems. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through seeing what could be built and feeling responsible for making it work. When fear is leading, this can become over-planning, perfectionism, or control of every detail. When integrated, the same builder energy becomes a mission of world-building. You are learning to turn structure into a living container where ideas, people, and purpose can take form.",
+        "core_gift": "The core gift of this mission is planning, designing, and implementing durable structures. It may naturally express through fields such as product creation, business building, systems design, architecture, and community platforms, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become over-planning until life cannot enter.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-18",
+      "display_name": "The Mission of Transformation",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Transformation, describes a meaningful direction your life may keep returning to. Your mission may invite you to guide energy through endings, change, and renewal. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through moving through endings, shadows, or intense emotional transformations. When fear is leading, this can become identifying with pain or believing growth must come through crisis. When integrated, the same depth becomes a mission of transformation. You are learning to turn rupture into renewal, helping yourself and others cross difficult passages without worshiping suffering.",
+        "core_gift": "The core gift of this mission is facing shadow without losing the thread of life. It may naturally express through fields such as shadow work, change leadership, grief work, reinvention, and healing containers, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become believing pain is required for growth.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-19",
+      "display_name": "The Mission of Voice",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Voice, describes a meaningful direction your life may keep returning to. Your mission may invite you to speak what brings clarity, truth, and movement. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through noticing what is unsaid and feeling pressure around whether to speak. When fear is leading, this can become over-explaining, people-pleasing, or withholding truth until it becomes tension. When integrated, the same gift becomes a mission of voice. You are learning to turn expression into a bridge, speaking clearly enough to reveal truth without using language as armor.",
+        "core_gift": "The core gift of this mission is using language as a bridge between inner and outer worlds. It may naturally express through fields such as communication, writing, media, speaking, facilitation, and education, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become performing clarity while hiding real feeling.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-20",
+      "display_name": "The Mission of Heart Wisdom",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Heart Wisdom, describes a meaningful direction your life may keep returning to. Your mission may invite you to let emotional truth become mature guidance. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through making choices through feeling, care, and emotional resonance. When fear is leading, this can become emotional over-identification or losing discernment in the desire to love. When integrated, the same heart intelligence becomes a mission of heart wisdom. You are learning to turn feeling into guidance that remains kind, clear, and self-respecting.",
+        "core_gift": "The core gift of this mission is choosing from the heart without abandoning discernment. It may naturally express through fields such as relationship work, healing, community, creative care, and emotional leadership, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become confusing emotional intensity with truth.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-21",
+      "display_name": "The Mission of Integration",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Integration, describes a meaningful direction your life may keep returning to. Your mission may invite you to gather scattered parts into coherent wholeness. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through collecting many perspectives and trying to make them whole. When fear is leading, this can become carrying too much or waiting until every piece is understood. When integrated, the same sensitivity becomes a mission of integration. You are learning to turn complexity into clarity, helping scattered parts find order without making yourself responsible for everything.",
+        "core_gift": "The core gift of this mission is connecting systems, meanings, and people into order. It may naturally express through fields such as systems thinking, strategy, operations, integrative coaching, and research synthesis, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become carrying too much in the name of completion.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-22",
+      "display_name": "The Mission of Gentle Power",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Gentle Power, describes a meaningful direction your life may keep returning to. Your mission may invite you to reveal strength through softness and presence. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through hiding strength behind softness or avoiding visibility because your influence feels too much. When fear is leading, this can become over-yielding or shrinking your presence. When integrated, the same quiet force becomes a mission of gentle power. You are learning to turn softness into authority, showing that influence can be calm, relational, and deeply steady.",
+        "core_gift": "The core gift of this mission is influencing through calm steadiness. It may naturally express through fields such as education, healing, culture shaping, leadership by presence, and care-based systems, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become hiding power behind excessive humility.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-23",
+      "display_name": "The Mission of Discernment",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Discernment, describes a meaningful direction your life may keep returning to. Your mission may invite you to see clearly through complexity. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through analyzing motives, systems, and hidden causes in order to feel safe. When fear is leading, this can become overthinking or using logic to avoid vulnerability. When integrated, the same clarity becomes a mission of discernment. You are learning to turn analysis into wisdom, helping yourself and others see what is true without losing contact with the heart.",
+        "core_gift": "The core gift of this mission is analysis joined with intuitive accuracy. It may naturally express through fields such as research, psychology, data, strategy, consulting, and diagnostic frameworks, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become using analysis to avoid vulnerability.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-24",
+      "display_name": "The Mission of Radiance",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Radiance, describes a meaningful direction your life may keep returning to. Your mission may invite you to remind people of hope without performing light. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through being seen, noticed, or placed in positions where your energy affects the room. When fear is leading, this can become performance, image-maintenance, or fear of dimming. When integrated, the same radiance becomes a mission of authentic illumination. You are learning to turn visibility into presence, allowing your light to uplift without needing constant approval.",
+        "core_gift": "The core gift of this mission is naturally uplifting the field through authentic expression. It may naturally express through fields such as public work, creative leadership, inspiration, community visibility, and brand presence, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become needing attention in order to feel real.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-25",
+      "display_name": "The Mission of Flow",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Flow, describes a meaningful direction your life may keep returning to. Your mission may invite you to show that change can be intelligent and alive. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through moving with change, adapting quickly, and resisting fixed forms. When fear is leading, this can become drifting, avoidance, or lack of grounding. When integrated, the same fluidity becomes a mission of flow. You are learning to turn change into creative movement, carrying freedom without losing center.",
+        "core_gift": "The core gift of this mission is adapting without losing inner center. It may naturally express through fields such as creative work, travel, flexible business, transition support, and innovation spaces, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become using freedom to avoid commitment.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-26",
+      "display_name": "The Mission of Possibility",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Possibility, describes a meaningful direction your life may keep returning to. Your mission may invite you to open windows into futures not yet named. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through receiving sudden inspiration and sensing futures that are not yet visible. When fear is leading, this can become scattered possibility or disappointment when reality is slower than vision. When integrated, the same inspiration becomes a mission of possibility. You are learning to turn future signals into grounded direction, giving form to what is emerging without abandoning the present.",
+        "core_gift": "The core gift of this mission is receiving inspiration and turning it into direction. It may naturally express through fields such as visioning, innovation, future studies, creative strategy, and spiritual product design, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become disconnected from present steps.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-27",
+      "display_name": "The Mission of Rebuilding",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Rebuilding, describes a meaningful direction your life may keep returning to. Your mission may invite you to help life rise again after collapse. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through experiencing collapse, endings, or resets that ask you to rebuild. When fear is leading, this can become attachment to difficulty or the belief that struggle is required for growth. When integrated, the same resilience becomes a mission of rebuilding. You are learning to turn what has fallen apart into wiser foundations, showing that renewal can be gentle as well as strong.",
+        "core_gift": "The core gift of this mission is turning endings into wiser foundations. It may naturally express through fields such as recovery work, trauma-informed spaces, rebuilding projects, mentorship, and reinvention, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become identifying too strongly with struggle.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-28",
+      "display_name": "The Mission of Sacred Responsibility",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Sacred Responsibility, describes a meaningful direction your life may keep returning to. Your mission may invite you to hold power with maturity and care. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through placed near responsibility, influence, resources, or decisions that affect others. When fear is leading, this can become pressure, control, or fear of being wrong. When integrated, the same weight becomes a mission of sacred responsibility. You are learning to turn responsibility into stewardship, holding power with clarity rather than ego or fear.",
+        "core_gift": "The core gift of this mission is being entrusted with influence, resources, or decisions. It may naturally express through fields such as leadership, stewardship, governance, resource planning, team direction, and ethical authority, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become carrying responsibility as burden or superiority.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-29",
+      "display_name": "The Mission of Inner Freedom",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Inner Freedom, describes a meaningful direction your life may keep returning to. Your mission may invite you to live from inner permission rather than external approval. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through feeling the tension between belonging and inner freedom. When fear is leading, this can become leaving too quickly, isolating, or rejecting support. When integrated, the same longing becomes a mission of inner freedom. You are learning to turn the fear of confinement into self-trust, showing that freedom can include connection without self-betrayal.",
+        "core_gift": "The core gift of this mission is choosing truth even when belonging feels uncertain. It may naturally express through fields such as creative independence, entrepreneurship, personal liberation work, and identity healing, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become confusing freedom with avoidance.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-30",
+      "display_name": "The Mission of Devotion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Devotion, describes a meaningful direction your life may keep returning to. Your mission may invite you to commit deeply without self-erasure. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through loving through loyalty, consistency, and sustained care. When fear is leading, this can become duty, endurance, or giving beyond truth. When integrated, the same devotion becomes a mission of grounded love. You are learning to turn obligation into chosen commitment, making devotion a living force rather than a silent burden.",
+        "core_gift": "The core gift of this mission is turning love into consistent, grounded action. It may naturally express through fields such as service, family systems, healing, craft mastery, and long-term community work, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become giving until resentment forms.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-31",
+      "display_name": "The Mission of Truth-Seeking",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Truth-Seeking, describes a meaningful direction your life may keep returning to. Your mission may invite you to follow truth beyond comfort, image, or convention. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through asking why, searching for truth, and refusing easy answers. When fear is leading, this can become skepticism, distance, or never resting in what is already clear. When integrated, the same inquiry becomes a mission of truth-seeking. You are learning to turn questioning into purification, helping perception become cleaner rather than colder.",
+        "core_gift": "The core gift of this mission is asking better questions and refining perception. It may naturally express through fields such as research, philosophy, investigative work, teaching, and inner inquiry, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become critical, distant, or never satisfied.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-32",
+      "display_name": "The Mission of Sacred Communication",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Sacred Communication, describes a meaningful direction your life may keep returning to. Your mission may invite you to bring coherence to what has been unspoken. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through carrying truths that need careful language. When fear is leading, this can become fear of speaking, over-polishing, or using words to manage others. When integrated, the same gift becomes a mission of sacred communication. You are learning to turn truth into language that is clear, timely, and human enough to be received.",
+        "core_gift": "The core gift of this mission is naming truth in a way that can be received. It may naturally express through fields such as writing, speaking, mediation, relational repair, storytelling, and facilitation, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become withholding truth until pressure erupts.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-33",
+      "display_name": "The Mission of Compassionate Leadership",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Compassionate Leadership, describes a meaningful direction your life may keep returning to. Your mission may invite you to lead through care, clarity, and responsibility. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through holding both vision and care for people’s limitations. When fear is leading, this can become over-responsibility, rescuing, or leadership that carries too much. When integrated, the same capacity becomes a mission of compassionate leadership. You are learning to turn care into direction, guiding others without taking away their agency.",
+        "core_gift": "The core gift of this mission is holding vision while honoring human reality. It may naturally express through fields such as leadership, education, nonprofits, healing businesses, and community stewardship, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become rescuing people instead of empowering them.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-34",
+      "display_name": "The Mission of Creative Order",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Creative Order, describes a meaningful direction your life may keep returning to. Your mission may invite you to organize creative energy into usable form. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through receiving creative ideas but needing form, rhythm, and craft to make them real. When fear is leading, this can become unfinished beauty or frustration with process. When integrated, the same creativity becomes a mission of creative order. You are learning to turn inspiration into method, allowing beauty to become usable, repeatable, and shared.",
+        "core_gift": "The core gift of this mission is turning inspiration into craft, method, and beauty. It may naturally express through fields such as design, art direction, product creation, systems for creatives, and publishing, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become losing vitality through excessive control.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-35",
+      "display_name": "The Mission of Threshold Guidance",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Threshold Guidance, describes a meaningful direction your life may keep returning to. Your mission may invite you to support people at turning points. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through sensing when an identity, relationship, role, or season is ending. When fear is leading, this can become fear of transition or attachment to threshold states. When integrated, the same perception becomes a mission of threshold guidance. You are learning to turn endings into passageways, helping yourself and others cross change with dignity.",
+        "core_gift": "The core gift of this mission is recognizing moments when an old identity is ending. It may naturally express through fields such as rites of passage, coaching, grief support, career transitions, and spiritual mentoring, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become rushing transformation or dramatizing change.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-36",
+      "display_name": "The Mission of Embodied Care",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Embodied Care, describes a meaningful direction your life may keep returning to. Your mission may invite you to make care practical, grounded, and sustainable. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through noticing how body, rhythm, environment, and daily care shape emotional life. When fear is leading, this can become caretaking, body-neglect, or over-focusing on others’ needs. When integrated, the same awareness becomes a mission of embodied care. You are learning to turn attention to the ordinary into healing structure, where life becomes kinder through rhythm.",
+        "core_gift": "The core gift of this mission is bringing attention to body, rhythm, nourishment, and daily life. It may naturally express through fields such as somatics, wellness, domestic systems, health education, and care infrastructure, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become caretaking while ignoring personal needs.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-37",
+      "display_name": "The Mission of Sovereign Creation",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Sovereign Creation, describes a meaningful direction your life may keep returning to. Your mission may invite you to create from inner authority rather than permission. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through carrying original ideas while waiting for permission, recognition, or the right audience. When fear is leading, this can become delay, comparison, or frustration at not being chosen. When integrated, the same originality becomes a mission of sovereign creation. You are learning to turn self-doubt into authorship, creating from inner authority rather than external selection.",
+        "core_gift": "The core gift of this mission is expressing original work without waiting to be chosen. It may naturally express through fields such as art, entrepreneurship, thought leadership, independent platforms, and innovation, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become isolating or refusing useful support.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-38",
+      "display_name": "The Mission of Collective Healing",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Collective Healing, describes a meaningful direction your life may keep returning to. Your mission may invite you to help groups metabolize what individuals cannot hold alone. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through sensing collective pain, family patterns, or group emotional fields. When fear is leading, this can become carrying what belongs to many or feeling responsible for the whole atmosphere. When integrated, the same perception becomes a mission of collective healing. You are learning to turn shared pain into safe containers, where healing happens through responsibility, not absorption.",
+        "core_gift": "The core gift of this mission is sensing shared pain and creating safe containers. It may naturally express through fields such as group facilitation, community healing, culture work, and organizational repair, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become absorbing collective heaviness as personal duty.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-39",
+      "display_name": "The Mission of Joyful Expansion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Joyful Expansion, describes a meaningful direction your life may keep returning to. Your mission may invite you to restore aliveness, play, and possibility. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through expanding through joy, play, learning, and new experiences. When fear is leading, this can become distraction or avoiding depth through positivity. When integrated, the same lightness becomes a mission of joyful expansion. You are learning to turn joy into wisdom, showing that growth does not always require heaviness to be real.",
+        "core_gift": "The core gift of this mission is expanding through joy, curiosity, and creative courage. It may naturally express through fields such as education, creativity, entertainment, travel, youth work, and experiential learning, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become avoiding seriousness or depth.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-40",
+      "display_name": "The Mission of Quiet Mastery",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Quiet Mastery, describes a meaningful direction your life may keep returning to. Your mission may invite you to embody depth without needing display. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through refining quietly, mastering slowly, and trusting depth more than visibility. When fear is leading, this can become hiding, under-claiming, or waiting too long to share. When integrated, the same patience becomes a mission of quiet mastery. You are learning to turn solitude into substance, allowing your depth to serve when the time is right.",
+        "core_gift": "The core gift of this mission is refining skill, wisdom, and presence over time. It may naturally express through fields such as craft, mentorship, research, contemplative work, and specialist roles, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become hiding so completely that contribution cannot be received.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-41",
+      "display_name": "The Mission of Boundary Wisdom",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Boundary Wisdom, describes a meaningful direction your life may keep returning to. Your mission may invite you to teach love through clarity and limits. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through sensing where responsibility, emotion, or energy is crossing a boundary. When fear is leading, this can become defensiveness, judgment, or rigid separation. When integrated, the same clarity becomes a mission of boundary wisdom. You are learning to turn protection into discernment, helping relationships become cleaner without becoming cold.",
+        "core_gift": "The core gift of this mission is knowing what belongs to whom. It may naturally express through fields such as therapy-adjacent education, leadership, conflict repair, family systems, and ethics, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become using boundaries as walls instead of bridges.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-42",
+      "display_name": "The Mission of Soulful Value",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Soulful Value, describes a meaningful direction your life may keep returning to. Your mission may invite you to align value, receiving, and meaningful contribution. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through navigating questions of worth, exchange, support, and receiving. When fear is leading, this can become scarcity, over-giving, undercharging, or guilt around support. When integrated, the same sensitivity becomes a mission of soulful value circulation. You are learning to turn value into clean circulation, allowing resources to support contribution without becoming your identity.",
+        "core_gift": "The core gift of this mission is allowing support and resources to circulate cleanly. It may naturally express through fields such as business, value creation, pricing, resource stewardship, and creative enterprise, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become equating worth with output or resources.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-43",
+      "display_name": "The Mission of Sacred Disruption",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Sacred Disruption, describes a meaningful direction your life may keep returning to. Your mission may invite you to interrupt false order so truth can breathe. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through noticing what is false, stagnant, or structurally misaligned before others are ready to admit it. When fear is leading, this can become disruption for intensity or harsh truth-telling. When integrated, the same perception becomes a mission of sacred disruption. You are learning to turn rupture into renewal, interrupting what is dead so something more alive can emerge.",
+        "core_gift": "The core gift of this mission is seeing where systems appear stable but are not alive. It may naturally express through fields such as innovation, reform, consciousness work, crisis redesign, and truth-telling, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become creating disruption without enough care.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S5-44",
+      "display_name": "The Mission of Integrated Service",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S5 pattern, The Mission of Integrated Service, describes a meaningful direction your life may keep returning to. Your mission may invite you to let personal wisdom become steady contribution. This is a direction of inner maturation, not a fixed career, destiny, or external obligation.",
+        "how_this_may_show_up": "You may recognize this mission through feeling called to serve, guide, or support something larger than the personal self. When fear is leading, this can become obligation, savior identity, or disappearing into service. When integrated, the same devotion becomes a mission of integrated service. You are learning to turn service into wholeness, contributing from fullness rather than self-abandonment.",
+        "core_gift": "The core gift of this mission is serving from wholeness rather than obligation. It may naturally express through fields such as teaching, service leadership, mentoring, community systems, and legacy work, but it does not have to be limited to any one role or career.",
+        "growth_edge": "The growth edge is to let this mission mature without turning it into pressure. When fear is leading, this mission may become turning service into identity or self-erasure.",
+        "integration_key": "Integration begins when you stop trying to force a role and begin listening for what is already trying to move through your life more honestly.",
+        "one_week_practice": "For one week, choose one small action that expresses this mission in real life. Keep it modest and concrete: one message, one decision, one boundary, one offer, one structure, or one moment of honest service. Notice what feels aligned rather than what looks impressive.",
+        "wisewave_reflection": "Your mission is not a burden placed upon you. It is the shape your life begins to take when awareness becomes choice. You do not have to force meaning. You only have to stop abandoning what is true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    }
+  ]
+}

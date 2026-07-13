@@ -216,17 +216,31 @@ export function enrichModuleFromSegment(
     : [];
   const s4Icon = isS4 ? resolveS4PrimaryIconAsset(code, line(segment.title)) : null;
 
-  const s5MissionEssence = isS5 ? s5SectionBody(s5Sections, "mission_essence") : "";
-  const s5SoulExpression = isS5
+  let s5MissionEssence = isS5 ? s5SectionBody(s5Sections, "mission_essence") : "";
+  let s5SoulExpression = isS5
     ? s5SectionBody(s5Sections, "what_your_soul_is_learning_to_express")
     : "";
-  const s5PatternsMission = isS5 ? s5SectionBody(s5Sections, "how_your_patterns_become_mission") : "";
+  let s5PatternsMission = isS5 ? s5SectionBody(s5Sections, "how_your_patterns_become_mission") : "";
   const s5NaturalFields = isS5 ? s5SectionBody(s5Sections, "natural_mission_fields") : "";
-  const s5ShadowDistortion = isS5
+  let s5ShadowDistortion = isS5
     ? s5SectionBody(s5Sections, "shadow_distortion_of_this_mission")
     : "";
-  const s5MatureExpression = isS5 ? s5SectionBody(s5Sections, "mature_expression") : "";
-  const s5Wisewave = isS5 ? s5SectionBody(s5Sections, "wisewave_reflection") : "";
+  let s5MatureExpression = isS5 ? s5SectionBody(s5Sections, "mature_expression") : "";
+  let s5Wisewave = isS5 ? s5SectionBody(s5Sections, "wisewave_reflection") : "";
+  if (isS5 && segment.contentLayer === "commercial") {
+    const opening = moduleSectionBody(s5Sections, "S5", "opening_essence");
+    const howShowUp = moduleSectionBody(s5Sections, "S5", "how_this_may_show_up");
+    const gift = moduleSectionBody(s5Sections, "S5", "core_gift");
+    const growth = moduleSectionBody(s5Sections, "S5", "growth_edge");
+    const integration = moduleSectionBody(s5Sections, "S5", "integration_key");
+    const reflection = moduleSectionBody(s5Sections, "S5", "wisewave_reflection");
+    if (!s5MissionEssence && opening) s5MissionEssence = opening;
+    if (!s5PatternsMission && howShowUp) s5PatternsMission = howShowUp;
+    if (!s5SoulExpression && gift) s5SoulExpression = gift;
+    if (!s5ShadowDistortion && growth) s5ShadowDistortion = growth;
+    if (!s5MatureExpression && integration) s5MatureExpression = integration;
+    if (!s5Wisewave && reflection) s5Wisewave = reflection;
+  }
   const s5Icon = isS5 ? resolveS5PrimaryIconAsset(code, line(segment.title)) : null;
   const s5Gifts = isS5 ? parseBulletBody(s5NaturalFields) : [];
   const s5ShowsUp = isS5

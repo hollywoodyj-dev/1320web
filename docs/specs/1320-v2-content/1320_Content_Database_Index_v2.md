@@ -392,7 +392,21 @@ The raw `data/1320-v2/*.json` files are the **Symbolic Source Layer**. Paid repo
 | Step 2 module exports | `data/1320-v2/commercial-overlay/step2-s0-s3/` |
 | Nova renderer | `lib/1320-v2/commercial-report-layer.ts` |
 
-**Step 2 (2026-07-11):** Wisewave delivered 126 S0–S3 commercial blocks via overlay v3. S4–S9 remain on symbolic/steward fallback until Steps 3–4.
+**Step 2 (2026-07-11):** Wisewave delivered 126 S0–S3 commercial blocks via overlay v3.
+
+**Step 3 (2026-07-13):** Wisewave delivered 108 S4–S6 commercial blocks (light normalization). S7–S9 remain on symbolic/steward fallback until Step 4.
+
+| Step | Modules | Entries |
+|------|---------|--------:|
+| 2 | S0–S3 | 126 |
+| 3 | S4–S6 | 108 |
+| **Total overlay** | S0–S6 | **234** |
+
+| Resource | Path |
+|---|---|
+| Step 3 module exports | `data/1320-v2/commercial-overlay/step3-s4-s6/` |
+| Step 3 QA summary | `docs/specs/1320-v2-content/1320_COMMERCIAL_REPORT_BLOCKS_STEP3_QA_SUMMARY.md` |
+| S6 legacy cleanup notes | `docs/specs/1320-v2-content/S6_LEGACY_LANGUAGE_CLEANUP_NOTES_v3_step3.json` |
 
 Renderer precedence: entry `commercial_report_blocks` → overlay file → legacy `output_blocks` / steward fields → symbolic source.
 

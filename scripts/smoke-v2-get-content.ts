@@ -101,8 +101,8 @@ assert(!containsCjk(s3Guidance), `S3 EN guidance should be English, got: ${s3Gui
 console.log("=== v2 commercial output layer — sample blueprint overlay ===");
 assert(full.s1Content!.contentLayer === "commercial", "S1-18 should use commercial layer");
 assert(
-  full.s1Content!.commercialBlocksVersion === "commercial-v3-step2",
-  "S1 should use Step 2 commercial overlay version",
+  full.s1Content!.commercialBlocksVersion === "commercial-v3-step3",
+  "S1 should use Step 3 commercial overlay version",
 );
 assert(
   t(full.s1Content!.freeEssence, "en").includes("The Transformer"),
@@ -112,11 +112,31 @@ assert(
   !t(full.s1Content!.freeEssence, "en").includes("This Soul Origin reflects"),
   "S1 should not expose templated symbolic source copy when commercial layer present",
 );
-assert(full.s4Content!.contentLayer !== "commercial", "S4-14 remains steward layer until Step 3");
-assert(full.s6Content!.contentLayer !== "commercial", "S6-28 remains steward layer until Step 3");
+assert(full.s4Content!.contentLayer === "commercial", "S4-14 should use commercial layer after Step 3");
+assert(full.s5Content!.contentLayer === "commercial", "S5-04 should use commercial layer after Step 3");
+assert(full.s6Content!.contentLayer === "commercial", "S6-28 should use commercial layer after Step 3");
+assert(full.s7Content!.contentLayer !== "commercial", "S7-00 remains steward layer until Step 4");
 assert(
   (full.s1Content!.soulMissionSections?.length ?? 0) >= 5,
   "S1 commercial blocks should produce sections",
 );
+assert(
+  (full.s4Content!.soulMissionSections?.length ?? 0) >= 5,
+  "S4 commercial blocks should produce sections",
+);
+assert(
+  (full.s5Content!.soulMissionSections?.length ?? 0) >= 5,
+  "S5 commercial blocks should produce sections",
+);
+assert(
+  (full.s6Content!.soulMissionSections?.length ?? 0) >= 5,
+  "S6 commercial blocks should produce sections",
+);
+const s6Text = [
+  t(full.s6Content!.freeEssence, "en"),
+  ...(full.s6Content!.soulMissionSections ?? []).map((s) => s.body.en ?? ""),
+].join("\n");
+assert(!s6Text.includes("财富"), "S6 commercial output should not leak legacy 财富 language");
+assert(!s6Text.includes("金矿"), "S6 commercial output should not leak legacy 金矿 language");
 
 console.log("\nPASS: smoke-v2-get-content — USE_1320_V2_CONTENT branch");

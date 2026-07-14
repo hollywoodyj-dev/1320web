@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { UnifiedReportPrintDocument } from "@/components/report-system/UnifiedReportPrintDocument";
-import { buildCanonicalSampleReport } from "@/lib/canonical-report";
-import type { ReportType } from "@/lib/report-system/report-surface";
+import {
+  parseReportTypeParam,
+  resolveSamplePrintReport,
+} from "@/lib/report-system/resolve-print-report";
 import "@/styles/report-system/index.css";
 
 export const metadata: Metadata = {
-  title: "Report System Print Preview",
-  description: "PDF HTML surface for unified report renderer.",
+  title: "Sample Report · PDF",
+  description: "Sample Soul Blueprint report PDF HTML surface.",
   robots: { index: false },
 };
 
@@ -19,18 +21,14 @@ function pickParam(value: string | string[] | undefined, fallback: string): stri
   return value ?? fallback;
 }
 
-function parseReportType(value: string): ReportType {
-  return value === "full" ? "full" : "sample";
-}
-
-export default async function ReportSystemPrintPreviewPage({
+export default async function SampleReportPrintPage({
   searchParams,
 }: {
   searchParams: Promise<SearchParams>;
 }) {
   const params = await searchParams;
-  const reportType = parseReportType(pickParam(params.type, "full"));
-  const data = buildCanonicalSampleReport();
+  const reportType = parseReportTypeParam(pickParam(params.type, "full"));
+  const data = await resolveSamplePrintReport(params);
 
   return <UnifiedReportPrintDocument reportType={reportType} data={data} />;
 }

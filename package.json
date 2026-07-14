@@ -20,6 +20,7 @@
     "smoke:full-report-v2-sample": "npx tsx scripts/smoke-full-report-v2-sample.ts",
     "smoke:report-canonical": "npx tsx scripts/smoke-report-canonical.ts",
     "smoke:report-system": "npx tsx scripts/smoke-report-system.ts",
+    "smoke:report-pdf": "npx tsx scripts/smoke-report-pdf.ts",
     "smoke:report-parity": "npx tsx scripts/smoke-report-parity.ts",
     "smoke:release-qa": "npx tsx scripts/smoke-release-qa.ts",
     "smoke:platform-domain": "npx tsx scripts/smoke-platform-domain.ts",
@@ -53,10 +54,12 @@
     "validate:backgrounds": "npx tsx scripts/validate-full-report-backgrounds.ts"
   },
   "dependencies": {
+    "@sparticuz/chromium": "^133.0.0",
     "bcryptjs": "^3.0.3",
     "next": "16.2.6",
     "openai": "^6.45.0",
     "postgres": "^3.4.9",
+    "puppeteer-core": "^24.22.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "stripe": "^22.2.0"

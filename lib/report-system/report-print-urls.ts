@@ -1,0 +1,26 @@
+import { getSiteUrl } from "@/lib/platform-config";
+import type { ReportType } from "@/lib/report-system/report-surface";
+import { buildSamplePrintSearchParams } from "@/lib/report-system/resolve-print-report";
+
+export function buildSampleReportPrintUrl(
+  reportType: ReportType = "full",
+  baseUrl: string = getSiteUrl(),
+): string {
+  const params = buildSamplePrintSearchParams(reportType);
+  return `${baseUrl.replace(/\/$/, "")}/sample-report/print?${params}`;
+}
+
+export function buildEntitledReportPrintUrl(
+  reportId: string,
+  baseUrl: string = getSiteUrl(),
+): string {
+  return `${baseUrl.replace(/\/$/, "")}/report/${encodeURIComponent(reportId)}/print`;
+}
+
+export function buildReportSystemPreviewPrintUrl(
+  reportType: ReportType = "full",
+  baseUrl: string = getSiteUrl(),
+): string {
+  const params = buildSamplePrintSearchParams(reportType);
+  return `${baseUrl.replace(/\/$/, "")}/report-system-preview/print?${params}`;
+}

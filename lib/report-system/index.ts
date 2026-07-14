@@ -33,3 +33,17 @@ export {
   sanitizeReportText,
 } from "@/lib/report-system/normalizeReportContent";
 export { buildCanonicalReportFromPreview } from "@/lib/report-system/buildCanonicalReportFromPreview";
+export {
+  generateReportPdfFromUrl,
+  isReportPdfGenerationConfigured,
+} from "@/lib/report-system/generate-report-pdf";
+export {
+  buildEntitledReportPrintUrl,
+  buildReportSystemPreviewPrintUrl,
+  buildSampleReportPrintUrl,
+} from "@/lib/report-system/report-print-urls";
+export {
+  parseReportTypeParam,
+  resolveEntitledPrintReport,
+  resolveSamplePrintReport,
+} from "@/lib/report-system/resolve-print-report";

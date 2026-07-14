@@ -13,6 +13,13 @@ type PageShellProps = {
   headerAccount?: { label: string; entitledReportId: string | null } | null;
 };
 
+function isPrintReportRoute(pathname: string | null): boolean {
+  if (!pathname) return false;
+  if (pathname === "/sample-report/print") return true;
+  if (pathname === "/report-system-preview/print") return true;
+  return /^\/report\/[^/]+\/print$/.test(pathname);
+}
+
 function isUnifiedReportWebRoute(pathname: string | null): boolean {
   if (!pathname) return false;
   if (pathname === "/full-report-v2") return true;
@@ -43,6 +50,17 @@ export function PageShell({ children, leadsEnabled, headerAccount }: PageShellPr
   const immersive = isImmersiveReportRoute(pathname);
   const mobileReport = isMobileReportRoute(pathname);
   const unifiedWebReport = isUnifiedReportWebRoute(pathname);
+  const printReport = isPrintReportRoute(pathname);
+
+  if (printReport) {
+    return (
+      <main className="report-print-document-shell">
+        <div id="main-content" tabIndex={-1}>
+          {children}
+        </div>
+      </main>
+    );
+  }
 
   if (immersive) {
     const shellClass = mobileReport

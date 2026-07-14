@@ -106,6 +106,20 @@ Screenshots saved:
 - Legacy `MobileReportV2Viewer` (32-page swipe) retained in codebase; no longer mounted on production mobile sample route.
 - `/my-report/[reportId]` on mobile still uses web unified renderer until entitled mobile path is added.
 
+## Step 6 — PDF Surface + Download API (2026-07-14)
+
+- Print HTML routes:
+  - `/sample-report/print?type=full|sample`
+  - `/report/[reportId]/print` (entitled, session required)
+  - `/report-system-preview/print` (dev preview, unchanged path)
+- PDF download API:
+  - `/api/report/sample/pdf?type=full|sample`
+  - `/api/report/[reportId]/pdf` (entitled, forwards session cookie to Chromium)
+- Shared print document: `UnifiedReportPrintDocument` + `ReportRenderer surface="pdf"`
+- PDF generation: `puppeteer-core` + `@sparticuz/chromium` (or `PUPPETEER_EXECUTABLE_PATH` locally)
+
+**Pending Lumen re-check:** PDF HTML pages at 1600×900, print CSS, sample PDF API, entitled PDF API with magic-link session.
+
 ### Lumen Step 5 Re-check
 
 **Verdict:** PASS WITH NOTES — production `/mobile-report-v2` now uses the unified sample mobile renderer and passes the requested Step 5 checks. Entitled `/my-report/[reportId]` mobile remains out of scope for this pass.

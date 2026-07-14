@@ -1,0 +1,32 @@
+:root {
+  --report-bg-deep: #030814;
+  --report-bg-main: #081526;
+
+  --report-text-main: #f7ecd8;
+  --report-text-soft: rgba(247, 236, 216, 0.78);
+  --report-text-muted: rgba(247, 236, 216, 0.56);
+
+  --report-gold: #d8b76f;
+  --report-gold-bright: #f6d98a;
+
+  --report-purple: #8c5cff;
+  --report-purple-soft: rgba(140, 92, 255, 0.22);
+
+  --report-blue: #70c8ff;
+  --report-pink: #ff9de8;
+  --report-green: #c7f45f;
+
+  --report-panel: rgba(10, 16, 34, 0.76);
+  --report-panel-strong: rgba(15, 22, 46, 0.9);
+  --report-panel-border: rgba(216, 183, 111, 0.38);
+  --report-panel-border-soft: rgba(255, 255, 255, 0.1);
+
+  --report-radius-xl: 28px;
+  --report-radius-lg: 22px;
+  --report-radius-md: 16px;
+
+  --report-shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.42);
+
+  --report-font-ui: Inter, "Avenir Next", Montserrat, Arial, sans-serif;
+  --report-font-display: Georgia, "Times New Roman", serif;
+}

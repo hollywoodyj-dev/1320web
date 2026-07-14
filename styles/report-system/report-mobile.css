@@ -1,0 +1,53 @@
+.report-root[data-surface="mobile"] {
+  background: #020712;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.report-root[data-surface="mobile"] .report-page {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 26px 22px 30px;
+  border-radius: 0;
+  border: none;
+  background:
+    radial-gradient(circle at 50% 10%, rgba(216, 183, 111, 0.16), transparent 25%),
+    radial-gradient(circle at 82% 30%, rgba(112, 200, 255, 0.16), transparent 34%),
+    radial-gradient(circle at 76% 54%, rgba(140, 92, 255, 0.22), transparent 34%),
+    linear-gradient(180deg, #020712 0%, var(--report-bg-deep) 38%, var(--report-bg-main) 72%, #030814 100%);
+}
+
+.report-root[data-surface="mobile"] .report-hero {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.report-root[data-surface="mobile"] .report-hero h1 {
+  font-size: 34px;
+  line-height: 1.06;
+}
+
+.report-root[data-surface="mobile"] .report-hero p {
+  font-size: 15px;
+  line-height: 1.55;
+  max-width: 330px;
+  margin-inline: auto;
+}
+
+.report-root[data-surface="mobile"] .report-card-grid {
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.report-root[data-surface="mobile"] .report-insight-card {
+  grid-template-columns: 42px 1fr;
+  padding: 18px;
+}
+
+.report-root[data-surface="mobile"] .report-nav {
+  max-width: 430px;
+  margin-inline: auto;
+  padding: 0 22px 24px;
+}

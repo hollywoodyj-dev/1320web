@@ -19,6 +19,7 @@
     "smoke:full-report-payload": "npx tsx scripts/smoke-full-report-payload.ts",
     "smoke:full-report-v2-sample": "npx tsx scripts/smoke-full-report-v2-sample.ts",
     "smoke:report-canonical": "npx tsx scripts/smoke-report-canonical.ts",
+    "smoke:report-system": "npx tsx scripts/smoke-report-system.ts",
     "smoke:report-parity": "npx tsx scripts/smoke-report-parity.ts",
     "smoke:release-qa": "npx tsx scripts/smoke-release-qa.ts",
     "smoke:platform-domain": "npx tsx scripts/smoke-platform-domain.ts",

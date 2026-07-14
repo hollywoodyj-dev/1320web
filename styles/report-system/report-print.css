@@ -1,0 +1,21 @@
+@page {
+  size: 1600px 900px;
+  margin: 0;
+}
+
+@media print {
+  body {
+    background: #050d19;
+  }
+
+  .report-root[data-surface="pdf"] .report-page,
+  .report-root[data-surface="web"] .report-page {
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .report-nav,
+  .locked-cta {
+    display: none !important;
+  }
+}

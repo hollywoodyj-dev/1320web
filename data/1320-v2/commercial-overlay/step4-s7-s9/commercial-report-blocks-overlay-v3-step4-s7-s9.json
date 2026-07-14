@@ -1,0 +1,479 @@
+{
+  "document": {
+    "title": "1320 Commercial Report Blocks Overlay v3 — Step 4 S7-S9",
+    "version": "v3-step4.0",
+    "status": "Draft for Nova integration and Lumen commercial copy QA",
+    "created_for": "Steps 2–5 handoff: Step 4 expansion for S7/S8/S9 commercial_report_blocks",
+    "renderer_contract": "entry commercial_report_blocks → overlay file → S5 output_blocks / steward fields → symbolic source",
+    "source_files": [
+      "s7-soul-sovereignty.json",
+      "s8-soul-contribution.json",
+      "s9-return-to-source.json"
+    ],
+    "scope": {
+      "S7": 7,
+      "S8": 8,
+      "S9": 9,
+      "total": 24
+    },
+    "governance_note": "All blocks are written as reflective, non-predictive, non-diagnostic, non-ranking user-facing copy. S7 avoids score/percentage language; S8 avoids usefulness/status/success framing; S9 avoids spiritual attainment or superiority framing."
+  },
+  "commercial_report_blocks": {
+    "S7-00": {
+      "code": "S7-00",
+      "display_name": "The Returning Self",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S7 pattern, The Returning Self, is about how you return to inner authority without turning sovereignty into isolation or control. Your sovereignty begins through returning to yourself before reacting to the field around you. This is not a measure of how strong or advanced you are; it is a mirror for how choice, truth, and self-trust may be asking to mature in your life.",
+        "how_this_may_show_up": "You may notice this layer when decisions, boundaries, relationship expectations, or outside pressure pull you away from your own center. Patterns become visible when you notices how quickly they leave their own center to manage the expectations, emotions, or urgency of others. It may show up in small moments: saying yes too quickly, waiting for permission, reacting from fear, or trying to protect freedom by becoming unavailable.",
+        "core_gift": "The gift of The Returning Self is the capacity to choose from a more honest inner place. Mature sovereignty appears as the ability to stay connected to life while remaining inwardly located in the self. When this pattern is expressed with care, sovereignty becomes less about resistance and more about clear presence, responsible choice, and self-trust that can still remain connected to life.",
+        "growth_edge": "Your growth edge is to notice where power leaves your body before you have fully chosen. When distorted, sovereignty may become withdrawal, passivity, or a quiet refusal to participate because you is afraid of being influenced. The invitation is not to become harder or more separate; it is to reclaim your right to pause, listen, and respond from truth rather than fear.",
+        "integration_key": "Integration begins by practicing sovereignty in ordinary, repeatable ways: self-reflection, decision pauses, and emotional regulation. Let the practice be grounded and relational. You do not have to prove your freedom; you can embody it through one clean choice at a time.",
+        "one_week_practice": "For one week, choose one moment each day to pause before responding. Ask: am I choosing from truth, fear, approval, pressure, or habit? Write one sentence about what your body already knows, then make one small choice that respects both your truth and your responsibility.",
+        "wisewave_reflection": "You do not need to disappear in order to be free. Return first, then respond."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S7-01": {
+      "code": "S7-01",
+      "display_name": "The Self-Trusting One",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S7 pattern, The Self-Trusting One, is about how you return to inner authority without turning sovereignty into isolation or control. Your sovereignty strengthens when you stop outsourcing permission and begin honoring clear inner signals. This is not a measure of how strong or advanced you are; it is a mirror for how choice, truth, and self-trust may be asking to mature in your life.",
+        "how_this_may_show_up": "You may notice this layer when decisions, boundaries, relationship expectations, or outside pressure pull you away from your own center. Patterns become visible where you repeatedly asks others to confirm what the body, heart, or awareness has already recognized. It may show up in small moments: saying yes too quickly, waiting for permission, reacting from fear, or trying to protect freedom by becoming unavailable.",
+        "core_gift": "The gift of The Self-Trusting One is the capacity to choose from a more honest inner place. Mature sovereignty appears as discernment: the ability to listen, receive information, and still choose from inner truth. When this pattern is expressed with care, sovereignty becomes less about resistance and more about clear presence, responsible choice, and self-trust that can still remain connected to life.",
+        "growth_edge": "Your growth edge is to notice where power leaves your body before you have fully chosen. When distorted, sovereignty may become stubbornness, impulsive certainty, or rejecting useful feedback in order to feel independent. The invitation is not to become harder or more separate; it is to reclaim your right to pause, listen, and respond from truth rather than fear.",
+        "integration_key": "Integration begins by practicing sovereignty in ordinary, repeatable ways: independent decisions, creative leadership, and intuitive work. Let the practice be grounded and relational. You do not have to prove your freedom; you can embody it through one clean choice at a time.",
+        "one_week_practice": "For one week, choose one moment each day to pause before responding. Ask: am I choosing from truth, fear, approval, pressure, or habit? Write one sentence about what your body already knows, then make one small choice that respects both your truth and your responsibility.",
+        "wisewave_reflection": "Self-trust is not the refusal to learn. It is the quiet knowing that your final choice must return to you."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S7-02": {
+      "code": "S7-02",
+      "display_name": "The Boundaried Choice",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S7 pattern, The Boundaried Choice, is about how you return to inner authority without turning sovereignty into isolation or control. Your sovereignty emerges through the ability to choose without abandoning your limits, needs, or honest capacity. This is not a measure of how strong or advanced you are; it is a mirror for how choice, truth, and self-trust may be asking to mature in your life.",
+        "how_this_may_show_up": "You may notice this layer when decisions, boundaries, relationship expectations, or outside pressure pull you away from your own center. Patterns become visible when you says yes too quickly, delays honest refusal, or confuses availability with worth. It may show up in small moments: saying yes too quickly, waiting for permission, reacting from fear, or trying to protect freedom by becoming unavailable.",
+        "core_gift": "The gift of The Boundaried Choice is the capacity to choose from a more honest inner place. Mature sovereignty appears as clear, kind limits that protect energy without closing the heart. When this pattern is expressed with care, sovereignty becomes less about resistance and more about clear presence, responsible choice, and self-trust that can still remain connected to life.",
+        "growth_edge": "Your growth edge is to notice where power leaves your body before you have fully chosen. When distorted, sovereignty may become defensiveness, over-protection, or rigid walls that replace honest boundaries. The invitation is not to become harder or more separate; it is to reclaim your right to pause, listen, and respond from truth rather than fear.",
+        "integration_key": "Integration begins by practicing sovereignty in ordinary, repeatable ways: boundary setting, relationship repair, and service work. Let the practice be grounded and relational. You do not have to prove your freedom; you can embody it through one clean choice at a time.",
+        "one_week_practice": "For one week, choose one moment each day to pause before responding. Ask: am I choosing from truth, fear, approval, pressure, or habit? Write one sentence about what your body already knows, then make one small choice that respects both your truth and your responsibility.",
+        "wisewave_reflection": "A boundary is not separation from love. It is the place where love becomes sustainable."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S7-03": {
+      "code": "S7-03",
+      "display_name": "The Truthful Actor",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S7 pattern, The Truthful Actor, is about how you return to inner authority without turning sovereignty into isolation or control. Your sovereignty is activated when truth becomes behavior, not only insight. This is not a measure of how strong or advanced you are; it is a mirror for how choice, truth, and self-trust may be asking to mature in your life.",
+        "how_this_may_show_up": "You may notice this layer when decisions, boundaries, relationship expectations, or outside pressure pull you away from your own center. Patterns become visible when you understands deeply but delays acting, speaks around the truth, or waits for conditions to feel safer. It may show up in small moments: saying yes too quickly, waiting for permission, reacting from fear, or trying to protect freedom by becoming unavailable.",
+        "core_gift": "The gift of The Truthful Actor is the capacity to choose from a more honest inner place. Mature sovereignty appears as timely action that is direct, grounded, and respectful. When this pattern is expressed with care, sovereignty becomes less about resistance and more about clear presence, responsible choice, and self-trust that can still remain connected to life.",
+        "growth_edge": "Your growth edge is to notice where power leaves your body before you have fully chosen. When distorted, sovereignty may become harsh truth-telling, urgency, or using clarity as a weapon instead of a bridge. The invitation is not to become harder or more separate; it is to reclaim your right to pause, listen, and respond from truth rather than fear.",
+        "integration_key": "Integration begins by practicing sovereignty in ordinary, repeatable ways: communication, leadership, and creative publishing. Let the practice be grounded and relational. You do not have to prove your freedom; you can embody it through one clean choice at a time.",
+        "one_week_practice": "For one week, choose one moment each day to pause before responding. Ask: am I choosing from truth, fear, approval, pressure, or habit? Write one sentence about what your body already knows, then make one small choice that respects both your truth and your responsibility.",
+        "wisewave_reflection": "Truth becomes power when it enters the body, the voice, and the next honest step."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S7-04": {
+      "code": "S7-04",
+      "display_name": "The Unapproved Free Self",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S7 pattern, The Unapproved Free Self, is about how you return to inner authority without turning sovereignty into isolation or control. Your sovereignty grows when you no longer organize your life around approval, recognition, or emotional permission. This is not a measure of how strong or advanced you are; it is a mirror for how choice, truth, and self-trust may be asking to mature in your life.",
+        "how_this_may_show_up": "You may notice this layer when decisions, boundaries, relationship expectations, or outside pressure pull you away from your own center. Patterns become visible where you edits desires, softens truth, or delays direction until others validate the choice. It may show up in small moments: saying yes too quickly, waiting for permission, reacting from fear, or trying to protect freedom by becoming unavailable.",
+        "core_gift": "The gift of The Unapproved Free Self is the capacity to choose from a more honest inner place. Mature sovereignty appears as the ability to remain open to connection without needing approval to exist. When this pattern is expressed with care, sovereignty becomes less about resistance and more about clear presence, responsible choice, and self-trust that can still remain connected to life.",
+        "growth_edge": "Your growth edge is to notice where power leaves your body before you have fully chosen. When distorted, sovereignty may become rebellion for its own sake, rejecting connection to prove freedom. The invitation is not to become harder or more separate; it is to reclaim your right to pause, listen, and respond from truth rather than fear.",
+        "integration_key": "Integration begins by practicing sovereignty in ordinary, repeatable ways: authentic expression, public voice, and life transitions. Let the practice be grounded and relational. You do not have to prove your freedom; you can embody it through one clean choice at a time.",
+        "one_week_practice": "For one week, choose one moment each day to pause before responding. Ask: am I choosing from truth, fear, approval, pressure, or habit? Write one sentence about what your body already knows, then make one small choice that respects both your truth and your responsibility.",
+        "wisewave_reflection": "You are allowed to be real before everyone understands you."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S7-05": {
+      "code": "S7-05",
+      "display_name": "The Embodied Authority",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S7 pattern, The Embodied Authority, is about how you return to inner authority without turning sovereignty into isolation or control. Your sovereignty becomes stable when authority moves from concept into body, rhythm, and daily practice. This is not a measure of how strong or advanced you are; it is a mirror for how choice, truth, and self-trust may be asking to mature in your life.",
+        "how_this_may_show_up": "You may notice this layer when decisions, boundaries, relationship expectations, or outside pressure pull you away from your own center. Patterns become visible when you speaks of alignment but lives from urgency, overextension, or disembodied ideals. It may show up in small moments: saying yes too quickly, waiting for permission, reacting from fear, or trying to protect freedom by becoming unavailable.",
+        "core_gift": "The gift of The Embodied Authority is the capacity to choose from a more honest inner place. Mature sovereignty appears as calm consistency: you becomes trustworthy to themselves through repeated aligned action. When this pattern is expressed with care, sovereignty becomes less about resistance and more about clear presence, responsible choice, and self-trust that can still remain connected to life.",
+        "growth_edge": "Your growth edge is to notice where power leaves your body before you have fully chosen. When distorted, sovereignty may become spiritual performance, identity attachment, or claiming authority before embodying responsibility. The invitation is not to become harder or more separate; it is to reclaim your right to pause, listen, and respond from truth rather than fear.",
+        "integration_key": "Integration begins by practicing sovereignty in ordinary, repeatable ways: rituals, daily structure, and somatic awareness. Let the practice be grounded and relational. You do not have to prove your freedom; you can embody it through one clean choice at a time.",
+        "one_week_practice": "For one week, choose one moment each day to pause before responding. Ask: am I choosing from truth, fear, approval, pressure, or habit? Write one sentence about what your body already knows, then make one small choice that respects both your truth and your responsibility.",
+        "wisewave_reflection": "Authority is not something you announce. It is something your life quietly proves through alignment."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S7-06": {
+      "code": "S7-06",
+      "display_name": "The Conscious Responsible One",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S7 pattern, The Conscious Responsible One, is about how you return to inner authority without turning sovereignty into isolation or control. Your sovereignty matures through taking responsibility without carrying what does not belong to you. This is not a measure of how strong or advanced you are; it is a mirror for how choice, truth, and self-trust may be asking to mature in your life.",
+        "how_this_may_show_up": "You may notice this layer when decisions, boundaries, relationship expectations, or outside pressure pull you away from your own center. Patterns become visible where you either takes on too much or avoids responsibility because it feels like loss of freedom. It may show up in small moments: saying yes too quickly, waiting for permission, reacting from fear, or trying to protect freedom by becoming unavailable.",
+        "core_gift": "The gift of The Conscious Responsible One is the capacity to choose from a more honest inner place. Mature sovereignty appears as clean ownership: taking the next true action while returning other people's parts to them. When this pattern is expressed with care, sovereignty becomes less about resistance and more about clear presence, responsible choice, and self-trust that can still remain connected to life.",
+        "growth_edge": "Your growth edge is to notice where power leaves your body before you have fully chosen. When distorted, sovereignty may become control, guilt, blame, or the belief that responsibility means carrying everything alone. The invitation is not to become harder or more separate; it is to reclaim your right to pause, listen, and respond from truth rather than fear.",
+        "integration_key": "Integration begins by practicing sovereignty in ordinary, repeatable ways: leadership, family systems, and community roles. Let the practice be grounded and relational. You do not have to prove your freedom; you can embody it through one clean choice at a time.",
+        "one_week_practice": "For one week, choose one moment each day to pause before responding. Ask: am I choosing from truth, fear, approval, pressure, or habit? Write one sentence about what your body already knows, then make one small choice that respects both your truth and your responsibility.",
+        "wisewave_reflection": "Responsibility is not a burden when it is clean. It becomes heavy only when you carry what is not yours."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S8-00": {
+      "code": "S8-00",
+      "display_name": "Contribution Through Presence",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S8 pattern, Contribution Through Presence, describes how your presence and gifts may naturally contribute to the world around you. Your contribution begins through the quality of presence you bring into spaces. This is not about public status, productivity, or proving your value. It is about the quality of contribution that becomes possible when your blueprint is lived with integrity.",
+        "how_this_may_show_up": "You may notice this layer in the way you affect rooms, relationships, teams, communities, or creative fields. Contribution flows when you stops underestimating quiet influence and allows presence, listening, and grounded awareness to matter. Sometimes your contribution may be visible; sometimes it may be quiet, relational, structural, or deeply felt without needing to become performance.",
+        "core_gift": "The gift of Contribution Through Presence is that your life can serve something larger without erasing you. You may be learningse impact is not only in what they do, but in how they stabilize the field around them. When this gift matures, contribution becomes a natural extension of who you are, not a demand to be more useful, impressive, or constantly available.",
+        "growth_edge": "Your growth edge is to notice the distortion that can form around contribution. When distorted, contribution may become invisibility, passivity, or believing that only visible achievement counts. The invitation is to let service become cleaner: neither hiding your gift nor overextending it to earn belonging, approval, or significance.",
+        "integration_key": "Integration begins by honoring the way contribution actually moves through you. Natural fields may include holding space, community presence, and listening roles. Choose expressions that are aligned with capacity, timing, and truth rather than pressure or comparison.",
+        "one_week_practice": "For one week, notice one place where your presence, choice, listening, clarity, structure, or care already contributes. Do not measure it by applause. Write one sentence each day: today, my contribution felt most honest when…",
+        "wisewave_reflection": "Your stillness can be a contribution when it is awake, grounded, and true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S8-01": {
+      "code": "S8-01",
+      "display_name": "Contribution Through Initiation",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S8 pattern, Contribution Through Initiation, describes how your presence and gifts may naturally contribute to the world around you. Your contribution moves through initiating new paths, starting needed conversations, and giving motion to what has been stagnant. This is not about public status, productivity, or proving your value. It is about the quality of contribution that becomes possible when your blueprint is lived with integrity.",
+        "how_this_may_show_up": "You may notice this layer in the way you affect rooms, relationships, teams, communities, or creative fields. Contribution flows when you uses action to serve clarity, not to prove worth or outrun discomfort. Sometimes your contribution may be visible; sometimes it may be quiet, relational, structural, or deeply felt without needing to become performance.",
+        "core_gift": "The gift of Contribution Through Initiation is that your life can serve something larger without erasing you. You may be learning contributes by opening doors rather than waiting for permission. When this gift matures, contribution becomes a natural extension of who you are, not a demand to be more useful, impressive, or constantly available.",
+        "growth_edge": "Your growth edge is to notice the distortion that can form around contribution. When distorted, contribution may become impatience, pressure, or starting many things without sustaining the energy needed for impact. The invitation is to let service become cleaner: neither hiding your gift nor overextending it to earn belonging, approval, or significance.",
+        "integration_key": "Integration begins by honoring the way contribution actually moves through you. Natural fields may include startups, new projects, and advocacy. Choose expressions that are aligned with capacity, timing, and truth rather than pressure or comparison.",
+        "one_week_practice": "For one week, notice one place where your presence, choice, listening, clarity, structure, or care already contributes. Do not measure it by applause. Write one sentence each day: today, my contribution felt most honest when…",
+        "wisewave_reflection": "You do not need to force movement. You are here to open the first honest door."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S8-02": {
+      "code": "S8-02",
+      "display_name": "Contribution Through Connection",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S8 pattern, Contribution Through Connection, describes how your presence and gifts may naturally contribute to the world around you. Your contribution is expressed through building bridges, restoring communication, and helping separate parts remember relationship. This is not about public status, productivity, or proving your value. It is about the quality of contribution that becomes possible when your blueprint is lived with integrity.",
+        "how_this_may_show_up": "You may notice this layer in the way you affect rooms, relationships, teams, communities, or creative fields. Contribution flows when you stops merging with others and begins connecting from a stable sense of self. Sometimes your contribution may be visible; sometimes it may be quiet, relational, structural, or deeply felt without needing to become performance.",
+        "core_gift": "The gift of Contribution Through Connection is that your life can serve something larger without erasing you. You may be learningse gift is to make connection safer, clearer, and more conscious. When this gift matures, contribution becomes a natural extension of who you are, not a demand to be more useful, impressive, or constantly available.",
+        "growth_edge": "Your growth edge is to notice the distortion that can form around contribution. When distorted, contribution may become people-pleasing, emotional labor, or trying to hold connection at the cost of truth. The invitation is to let service become cleaner: neither hiding your gift nor overextending it to earn belonging, approval, or significance.",
+        "integration_key": "Integration begins by honoring the way contribution actually moves through you. Natural fields may include relationship work, mediation, and community care. Choose expressions that are aligned with capacity, timing, and truth rather than pressure or comparison.",
+        "one_week_practice": "For one week, notice one place where your presence, choice, listening, clarity, structure, or care already contributes. Do not measure it by applause. Write one sentence each day: today, my contribution felt most honest when…",
+        "wisewave_reflection": "You are not here to hold everyone together. You are here to show what truthful connection can feel like."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S8-03": {
+      "code": "S8-03",
+      "display_name": "Contribution Through Insight",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S8 pattern, Contribution Through Insight, describes how your presence and gifts may naturally contribute to the world around you. Your contribution comes through seeing patterns, naming what is hidden, and translating complexity into clarity. This is not about public status, productivity, or proving your value. It is about the quality of contribution that becomes possible when your blueprint is lived with integrity.",
+        "how_this_may_show_up": "You may notice this layer in the way you affect rooms, relationships, teams, communities, or creative fields. Contribution flows when insight becomes grounded enough to be useful, compassionate, and actionable. Sometimes your contribution may be visible; sometimes it may be quiet, relational, structural, or deeply felt without needing to become performance.",
+        "core_gift": "The gift of Contribution Through Insight is that your life can serve something larger without erasing you. You may be learning helps others understand what they could not yet articulate. When this gift matures, contribution becomes a natural extension of who you are, not a demand to be more useful, impressive, or constantly available.",
+        "growth_edge": "Your growth edge is to notice the distortion that can form around contribution. When distorted, contribution may become over-analysis, intellectual distance, or using insight to avoid vulnerability. The invitation is to let service become cleaner: neither hiding your gift nor overextending it to earn belonging, approval, or significance.",
+        "integration_key": "Integration begins by honoring the way contribution actually moves through you. Natural fields may include strategy, writing, and teaching. Choose expressions that are aligned with capacity, timing, and truth rather than pressure or comparison.",
+        "one_week_practice": "For one week, notice one place where your presence, choice, listening, clarity, structure, or care already contributes. Do not measure it by applause. Write one sentence each day: today, my contribution felt most honest when…",
+        "wisewave_reflection": "Your insight becomes medicine when it lands gently enough for reality to change."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S8-04": {
+      "code": "S8-04",
+      "display_name": "Contribution Through Structure",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S8 pattern, Contribution Through Structure, describes how your presence and gifts may naturally contribute to the world around you. Your contribution is expressed through building systems, rhythms, containers, and practical forms that allow growth to become sustainable. This is not about public status, productivity, or proving your value. It is about the quality of contribution that becomes possible when your blueprint is lived with integrity.",
+        "how_this_may_show_up": "You may notice this layer in the way you affect rooms, relationships, teams, communities, or creative fields. Contribution flows when structure serves aliveness rather than control. Sometimes your contribution may be visible; sometimes it may be quiet, relational, structural, or deeply felt without needing to become performance.",
+        "core_gift": "The gift of Contribution Through Structure is that your life can serve something larger without erasing you. You may be learning helps vision become usable, repeatable, and grounded. When this gift matures, contribution becomes a natural extension of who you are, not a demand to be more useful, impressive, or constantly available.",
+        "growth_edge": "Your growth edge is to notice the distortion that can form around contribution. When distorted, contribution may become rigidity, perfectionism, or managing every detail to avoid uncertainty. The invitation is to let service become cleaner: neither hiding your gift nor overextending it to earn belonging, approval, or significance.",
+        "integration_key": "Integration begins by honoring the way contribution actually moves through you. Natural fields may include operations, education, and product systems. Choose expressions that are aligned with capacity, timing, and truth rather than pressure or comparison.",
+        "one_week_practice": "For one week, notice one place where your presence, choice, listening, clarity, structure, or care already contributes. Do not measure it by applause. Write one sentence each day: today, my contribution felt most honest when…",
+        "wisewave_reflection": "A true container does not imprison life. It gives life a place to grow."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S8-05": {
+      "code": "S8-05",
+      "display_name": "Contribution Through Transformation",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S8 pattern, Contribution Through Transformation, describes how your presence and gifts may naturally contribute to the world around you. Your contribution moves through helping people, projects, or systems cross thresholds of change. This is not about public status, productivity, or proving your value. It is about the quality of contribution that becomes possible when your blueprint is lived with integrity.",
+        "how_this_may_show_up": "You may notice this layer in the way you affect rooms, relationships, teams, communities, or creative fields. Contribution flows when you stops dramatizing transformation and begins holding change with steadiness. Sometimes your contribution may be visible; sometimes it may be quiet, relational, structural, or deeply felt without needing to become performance.",
+        "core_gift": "The gift of Contribution Through Transformation is that your life can serve something larger without erasing you. You may be learning can meet endings, transitions, and deep renewal without turning away. When this gift matures, contribution becomes a natural extension of who you are, not a demand to be more useful, impressive, or constantly available.",
+        "growth_edge": "Your growth edge is to notice the distortion that can form around contribution. When distorted, contribution may become intensity, rescuing, or seeking transformation through chaos. The invitation is to let service become cleaner: neither hiding your gift nor overextending it to earn belonging, approval, or significance.",
+        "integration_key": "Integration begins by honoring the way contribution actually moves through you. Natural fields may include coaching, change leadership, and healing spaces. Choose expressions that are aligned with capacity, timing, and truth rather than pressure or comparison.",
+        "one_week_practice": "For one week, notice one place where your presence, choice, listening, clarity, structure, or care already contributes. Do not measure it by applause. Write one sentence each day: today, my contribution felt most honest when…",
+        "wisewave_reflection": "Transformation does not need to be violent to be real. Your contribution is to make change conscious."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S8-06": {
+      "code": "S8-06",
+      "display_name": "Contribution Through Healing",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S8 pattern, Contribution Through Healing, describes how your presence and gifts may naturally contribute to the world around you. Your contribution is expressed through repair, care, emotional attunement, and helping what has been fragmented return to wholeness. This is not about public status, productivity, or proving your value. It is about the quality of contribution that becomes possible when your blueprint is lived with integrity.",
+        "how_this_may_show_up": "You may notice this layer in the way you affect rooms, relationships, teams, communities, or creative fields. Contribution flows when care is offered from fullness rather than from the need to be needed. Sometimes your contribution may be visible; sometimes it may be quiet, relational, structural, or deeply felt without needing to become performance.",
+        "core_gift": "The gift of Contribution Through Healing is that your life can serve something larger without erasing you. You may be learningse presence can soften pain when boundaries and clarity remain intact. When this gift matures, contribution becomes a natural extension of who you are, not a demand to be more useful, impressive, or constantly available.",
+        "growth_edge": "Your growth edge is to notice the distortion that can form around contribution. When distorted, contribution may become self-sacrifice, emotional absorption, or carrying wounds that belong to others. The invitation is to let service become cleaner: neither hiding your gift nor overextending it to earn belonging, approval, or significance.",
+        "integration_key": "Integration begins by honoring the way contribution actually moves through you. Natural fields may include healing arts, support roles, and emotional education. Choose expressions that are aligned with capacity, timing, and truth rather than pressure or comparison.",
+        "one_week_practice": "For one week, notice one place where your presence, choice, listening, clarity, structure, or care already contributes. Do not measure it by applause. Write one sentence each day: today, my contribution felt most honest when…",
+        "wisewave_reflection": "You can be a healing presence without becoming anyone's source."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S8-07": {
+      "code": "S8-07",
+      "display_name": "Contribution Through Collective Vision",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S8 pattern, Contribution Through Collective Vision, describes how your presence and gifts may naturally contribute to the world around you. Your contribution is expressed through seeing the larger pattern and helping individual gifts find their place in a wider whole. This is not about public status, productivity, or proving your value. It is about the quality of contribution that becomes possible when your blueprint is lived with integrity.",
+        "how_this_may_show_up": "You may notice this layer in the way you affect rooms, relationships, teams, communities, or creative fields. Contribution flows when vision includes practical responsibility and remains grounded in shared life, not inflated identity. Sometimes your contribution may be visible; sometimes it may be quiet, relational, structural, or deeply felt without needing to become performance.",
+        "core_gift": "The gift of Contribution Through Collective Vision is that your life can serve something larger without erasing you. You may be learning is learning to serve not status, but collective coherence. When this gift matures, contribution becomes a natural extension of who you are, not a demand to be more useful, impressive, or constantly available.",
+        "growth_edge": "Your growth edge is to notice the distortion that can form around contribution. When distorted, contribution may become savior identity, grandiosity, or losing the human details inside a large vision. The invitation is to let service become cleaner: neither hiding your gift nor overextending it to earn belonging, approval, or significance.",
+        "integration_key": "Integration begins by honoring the way contribution actually moves through you. Natural fields may include collective work, social impact, and spiritual communities. Choose expressions that are aligned with capacity, timing, and truth rather than pressure or comparison.",
+        "one_week_practice": "For one week, notice one place where your presence, choice, listening, clarity, structure, or care already contributes. Do not measure it by applause. Write one sentence each day: today, my contribution felt most honest when…",
+        "wisewave_reflection": "The whole does not ask you to disappear. It asks you to contribute from your rightful place."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S9-00": {
+      "code": "S9-00",
+      "display_name": "Return Through Silence",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S9 pattern, Return Through Silence, points to how you return to simplicity, wholeness, and source within ordinary life. Your return to source happens through silence, stillness, and the space before identity forms. This is not a badge of spiritual attainment. It is a reflective doorway into what helps you become more present, honest, and whole.",
+        "how_this_may_show_up": "You may notice this layer when life asks you to release an old identity, soften control, repair relationship, tell the truth, rest, forgive, or become more present. Life themes resolve when you stops demanding constant meaning and allows quiet presence to become enough. The return is usually not dramatic; it often happens through small moments where you stop leaving yourself.",
+        "core_gift": "The gift of Return Through Silence is the ability to remember what remains when striving, proving, fear, or fragmentation quiets down. You may be learning that wholeness can be felt without explanation, performance, or conclusion. When this matures, return does not remove you from life; it helps you meet life with more humility, peace, and inner contact.",
+        "growth_edge": "Your growth edge is to notice when the language of return becomes a way to bypass reality. When distorted, return may become withdrawal, dissociation, or avoiding life in the name of peace. The invitation is to let return make you more available to truth, responsibility, and tenderness, not less engaged with the human experience.",
+        "integration_key": "Integration begins through practices that return you to direct contact with life: silent reflection, breath practice, and nature solitude. Keep them simple. The point is not to become someone else; it is to remember the part of you that is already here beneath the noise.",
+        "one_week_practice": "For one week, create one daily return ritual that takes less than five minutes. Pause, breathe, and ask: what am I ready to stop carrying for a moment? Let the answer be felt before it becomes a concept.",
+        "wisewave_reflection": "Source is not far away. It is the quiet that remains when you stop leaving yourself."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S9-01": {
+      "code": "S9-01",
+      "display_name": "Return Through Enoughness",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S9 pattern, Return Through Enoughness, points to how you return to simplicity, wholeness, and source within ordinary life. Your return to source is through remembering that existence does not need to be proven. This is not a badge of spiritual attainment. It is a reflective doorway into what helps you become more present, honest, and whole.",
+        "how_this_may_show_up": "You may notice this layer when life asks you to release an old identity, soften control, repair relationship, tell the truth, rest, forgive, or become more present. Life themes resolve when you acts from worth rather than for worth. The return is usually not dramatic; it often happens through small moments where you stop leaving yourself.",
+        "core_gift": "The gift of Return Through Enoughness is the ability to remember what remains when striving, proving, fear, or fragmentation quiets down. This layer points to a part of you releasing the belief that value must be earned through achievement, appearance, approval, or recognition. When this matures, return does not remove you from life; it helps you meet life with more humility, peace, and inner contact.",
+        "growth_edge": "Your growth edge is to notice when the language of return becomes a way to bypass reality. When distorted, return may become complacency or avoiding growth by calling everything already complete. The invitation is to let return make you more available to truth, responsibility, and tenderness, not less engaged with the human experience.",
+        "integration_key": "Integration begins through practices that return you to direct contact with life: self-acceptance, rest practice, and creative expression without proof. Keep them simple. The point is not to become someone else; it is to remember the part of you that is already here beneath the noise.",
+        "one_week_practice": "For one week, create one daily return ritual that takes less than five minutes. Pause, breathe, and ask: what am I ready to stop carrying for a moment? Let the answer be felt before it becomes a concept.",
+        "wisewave_reflection": "You were not created as a question mark. You are allowed to live from enough."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S9-02": {
+      "code": "S9-02",
+      "display_name": "Return Through Trust",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S9 pattern, Return Through Trust, points to how you return to simplicity, wholeness, and source within ordinary life. Your return to source happens through loosening control and learning to cooperate with life without becoming passive. This is not a badge of spiritual attainment. It is a reflective doorway into what helps you become more present, honest, and whole.",
+        "how_this_may_show_up": "You may notice this layer when life asks you to release an old identity, soften control, repair relationship, tell the truth, rest, forgive, or become more present. Life themes resolve when you distinguishes trust from avoidance and responsibility from control. The return is usually not dramatic; it often happens through small moments where you stop leaving yourself.",
+        "core_gift": "The gift of Return Through Trust is the ability to remember what remains when striving, proving, fear, or fragmentation quiets down. This layer points to a part of you releasing the need to manage every outcome in order to feel safe. When this matures, return does not remove you from life; it helps you meet life with more humility, peace, and inner contact.",
+        "growth_edge": "Your growth edge is to notice when the language of return becomes a way to bypass reality. When distorted, return may become passivity, magical thinking, or refusing practical responsibility. The invitation is to let return make you more available to truth, responsibility, and tenderness, not less engaged with the human experience.",
+        "integration_key": "Integration begins through practices that return you to direct contact with life: surrender practice, adaptive planning, and faith in process. Keep them simple. The point is not to become someone else; it is to remember the part of you that is already here beneath the noise.",
+        "one_week_practice": "For one week, create one daily return ritual that takes less than five minutes. Pause, breathe, and ask: what am I ready to stop carrying for a moment? Let the answer be felt before it becomes a concept.",
+        "wisewave_reflection": "Trust is not the absence of action. It is action without the grip of fear."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S9-03": {
+      "code": "S9-03",
+      "display_name": "Return Through Connection",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S9 pattern, Return Through Connection, points to how you return to simplicity, wholeness, and source within ordinary life. Your return to source is through remembering that separateness is not the whole truth. This is not a badge of spiritual attainment. It is a reflective doorway into what helps you become more present, honest, and whole.",
+        "how_this_may_show_up": "You may notice this layer when life asks you to release an old identity, soften control, repair relationship, tell the truth, rest, forgive, or become more present. Life themes resolve when connection becomes chosen, discerning, and rooted in self-presence. The return is usually not dramatic; it often happens through small moments where you stop leaving yourself.",
+        "core_gift": "The gift of Return Through Connection is the ability to remember what remains when striving, proving, fear, or fragmentation quiets down. This layer points to a part of you healing isolation, guardedness, and the belief that they must carry everything alone. When this matures, return does not remove you from life; it helps you meet life with more humility, peace, and inner contact.",
+        "growth_edge": "Your growth edge is to notice when the language of return becomes a way to bypass reality. When distorted, return may become merging, dependency, or looking to others as the source of self. The invitation is to let return make you more available to truth, responsibility, and tenderness, not less engaged with the human experience.",
+        "integration_key": "Integration begins through practices that return you to direct contact with life: community, repair conversations, and friendship. Keep them simple. The point is not to become someone else; it is to remember the part of you that is already here beneath the noise.",
+        "one_week_practice": "For one week, create one daily return ritual that takes less than five minutes. Pause, breathe, and ask: what am I ready to stop carrying for a moment? Let the answer be felt before it becomes a concept.",
+        "wisewave_reflection": "You return to source not by disappearing into others, but by meeting life with an open center."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S9-04": {
+      "code": "S9-04",
+      "display_name": "Return Through Truth",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S9 pattern, Return Through Truth, points to how you return to simplicity, wholeness, and source within ordinary life. Your return to source happens through allowing truth to refine identity, hope, relationships, and direction. This is not a badge of spiritual attainment. It is a reflective doorway into what helps you become more present, honest, and whole.",
+        "how_this_may_show_up": "You may notice this layer when life asks you to release an old identity, soften control, repair relationship, tell the truth, rest, forgive, or become more present. Life themes resolve when you stops protecting illusions and lets honest seeing become liberation. The return is usually not dramatic; it often happens through small moments where you stop leaving yourself.",
+        "core_gift": "The gift of Return Through Truth is the ability to remember what remains when striving, proving, fear, or fragmentation quiets down. You may be learning that reality is not an enemy of love; it is the ground where love becomes real. When this matures, return does not remove you from life; it helps you meet life with more humility, peace, and inner contact.",
+        "growth_edge": "Your growth edge is to notice when the language of return becomes a way to bypass reality. When distorted, return may become harshness, judgment, or using truth to defend against tenderness. The invitation is to let return make you more available to truth, responsibility, and tenderness, not less engaged with the human experience.",
+        "integration_key": "Integration begins through practices that return you to direct contact with life: truth-telling, discernment, and journaling reality vs projection. Keep them simple. The point is not to become someone else; it is to remember the part of you that is already here beneath the noise.",
+        "one_week_practice": "For one week, create one daily return ritual that takes less than five minutes. Pause, breathe, and ask: what am I ready to stop carrying for a moment? Let the answer be felt before it becomes a concept.",
+        "wisewave_reflection": "Truth does not remove love. It removes what love was never meant to carry."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S9-05": {
+      "code": "S9-05",
+      "display_name": "Return Through Surrender",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S9 pattern, Return Through Surrender, points to how you return to simplicity, wholeness, and source within ordinary life. Your return to source is through releasing the identity that must force, fix, or explain everything. This is not a badge of spiritual attainment. It is a reflective doorway into what helps you become more present, honest, and whole.",
+        "how_this_may_show_up": "You may notice this layer when life asks you to release an old identity, soften control, repair relationship, tell the truth, rest, forgive, or become more present. Life themes resolve when effort becomes clean and you stops using striving to avoid vulnerability. The return is usually not dramatic; it often happens through small moments where you stop leaving yourself.",
+        "core_gift": "The gift of Return Through Surrender is the ability to remember what remains when striving, proving, fear, or fragmentation quiets down. You may be learning that some thresholds open through softening, not pressure. When this matures, return does not remove you from life; it helps you meet life with more humility, peace, and inner contact.",
+        "growth_edge": "Your growth edge is to notice when the language of return becomes a way to bypass reality. When distorted, return may become collapse, resignation, or spiritual bypassing. The invitation is to let return make you more available to truth, responsibility, and tenderness, not less engaged with the human experience.",
+        "integration_key": "Integration begins through practices that return you to direct contact with life: letting-go rituals, grief work, and acceptance practice. Keep them simple. The point is not to become someone else; it is to remember the part of you that is already here beneath the noise.",
+        "one_week_practice": "For one week, create one daily return ritual that takes less than five minutes. Pause, breathe, and ask: what am I ready to stop carrying for a moment? Let the answer be felt before it becomes a concept.",
+        "wisewave_reflection": "Surrender is not giving up. It is no longer fighting what must be met."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S9-06": {
+      "code": "S9-06",
+      "display_name": "Return Through Forgiveness",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S9 pattern, Return Through Forgiveness, points to how you return to simplicity, wholeness, and source within ordinary life. Your return to source happens through releasing the weight of blame, guilt, and unfinished emotional contracts. This is not a badge of spiritual attainment. It is a reflective doorway into what helps you become more present, honest, and whole.",
+        "how_this_may_show_up": "You may notice this layer when life asks you to release an old identity, soften control, repair relationship, tell the truth, rest, forgive, or become more present. Life themes resolve when you stops making pain the center of identity and begins reclaiming freedom. The return is usually not dramatic; it often happens through small moments where you stop leaving yourself.",
+        "core_gift": "The gift of Return Through Forgiveness is the ability to remember what remains when striving, proving, fear, or fragmentation quiets down. You may be learning that forgiveness is not approval; it is the return of life-force to the self. When this matures, return does not remove you from life; it helps you meet life with more humility, peace, and inner contact.",
+        "growth_edge": "Your growth edge is to notice when the language of return becomes a way to bypass reality. When distorted, return may become premature forgiveness, denying anger, or remaining in harmful patterns to appear evolved. The invitation is to let return make you more available to truth, responsibility, and tenderness, not less engaged with the human experience.",
+        "integration_key": "Integration begins through practices that return you to direct contact with life: self-forgiveness, relationship closure, and compassionate boundaries. Keep them simple. The point is not to become someone else; it is to remember the part of you that is already here beneath the noise.",
+        "one_week_practice": "For one week, create one daily return ritual that takes less than five minutes. Pause, breathe, and ask: what am I ready to stop carrying for a moment? Let the answer be felt before it becomes a concept.",
+        "wisewave_reflection": "Forgiveness does not ask you to forget yourself. It asks you to stop imprisoning your life in the past."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S9-07": {
+      "code": "S9-07",
+      "display_name": "Return Through Presence",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S9 pattern, Return Through Presence, points to how you return to simplicity, wholeness, and source within ordinary life. Your return to source is through entering the present moment fully enough for life to touch you again. This is not a badge of spiritual attainment. It is a reflective doorway into what helps you become more present, honest, and whole.",
+        "how_this_may_show_up": "You may notice this layer when life asks you to release an old identity, soften control, repair relationship, tell the truth, rest, forgive, or become more present. Life themes resolve when you chooses direct experience over constant mental departure. The return is usually not dramatic; it often happens through small moments where you stop leaving yourself.",
+        "core_gift": "The gift of Return Through Presence is the ability to remember what remains when striving, proving, fear, or fragmentation quiets down. You may be learning to come back from future fear, past loops, and imagined versions of reality. When this matures, return does not remove you from life; it helps you meet life with more humility, peace, and inner contact.",
+        "growth_edge": "Your growth edge is to notice when the language of return becomes a way to bypass reality. When distorted, return may become passivity, avoidance of planning, or using presence to ignore real responsibilities. The invitation is to let return make you more available to truth, responsibility, and tenderness, not less engaged with the human experience.",
+        "integration_key": "Integration begins through practices that return you to direct contact with life: body awareness, mindful action, and sensory grounding. Keep them simple. The point is not to become someone else; it is to remember the part of you that is already here beneath the noise.",
+        "one_week_practice": "For one week, create one daily return ritual that takes less than five minutes. Pause, breathe, and ask: what am I ready to stop carrying for a moment? Let the answer be felt before it becomes a concept.",
+        "wisewave_reflection": "The present moment is not small. It is the only place your soul can actually return."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    "S9-08": {
+      "code": "S9-08",
+      "display_name": "Return Through Wholeness",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S9 pattern, Return Through Wholeness, points to how you return to simplicity, wholeness, and source within ordinary life. Your return to source happens through integrating the parts of yourself you once split into good, bad, spiritual, human, strong, or weak. This is not a badge of spiritual attainment. It is a reflective doorway into what helps you become more present, honest, and whole.",
+        "how_this_may_show_up": "You may notice this layer when life asks you to release an old identity, soften control, repair relationship, tell the truth, rest, forgive, or become more present. Life themes resolve when you stops rejecting pieces of their humanity in order to feel worthy of source. The return is usually not dramatic; it often happens through small moments where you stop leaving yourself.",
+        "core_gift": "The gift of Return Through Wholeness is the ability to remember what remains when striving, proving, fear, or fragmentation quiets down. You may be learning that wholeness is not perfection; it is honest inclusion. When this matures, return does not remove you from life; it helps you meet life with more humility, peace, and inner contact.",
+        "growth_edge": "Your growth edge is to notice when the language of return becomes a way to bypass reality. When distorted, return may become identity inflation, trying to appear integrated, or bypassing the ordinary human process. The invitation is to let return make you more available to truth, responsibility, and tenderness, not less engaged with the human experience.",
+        "integration_key": "Integration begins through practices that return you to direct contact with life: shadow integration, creative embodiment, and whole-self reflection. Keep them simple. The point is not to become someone else; it is to remember the part of you that is already here beneath the noise.",
+        "one_week_practice": "For one week, create one daily return ritual that takes less than five minutes. Pause, breathe, and ask: what am I ready to stop carrying for a moment? Let the answer be felt before it becomes a concept.",
+        "wisewave_reflection": "You return to source by becoming less divided from yourself."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    }
+  }
+}

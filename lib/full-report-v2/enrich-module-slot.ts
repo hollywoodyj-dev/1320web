@@ -284,17 +284,31 @@ export function enrichModuleFromSegment(
       ].filter(Boolean)
     : [];
 
-  const s7SovereigntyEssence = isS7 ? s7SectionBody(s7Sections, "sovereignty_essence") : "";
-  const s7SoulReclaim = isS7
+  let s7SovereigntyEssence = isS7 ? s7SectionBody(s7Sections, "sovereignty_essence") : "";
+  let s7SoulReclaim = isS7
     ? s7SectionBody(s7Sections, "what_your_soul_is_learning_to_reclaim")
     : "";
-  const s7PowerGivenAway = isS7 ? s7SectionBody(s7Sections, "where_power_was_given_away") : "";
+  let s7PowerGivenAway = isS7 ? s7SectionBody(s7Sections, "where_power_was_given_away") : "";
   const s7NaturalFields = isS7 ? s7SectionBody(s7Sections, "natural_sovereignty_fields") : "";
-  const s7ShadowDistortion = isS7
+  let s7ShadowDistortion = isS7
     ? s7SectionBody(s7Sections, "shadow_distortion_of_sovereignty")
     : "";
-  const s7MatureExpression = isS7 ? s7SectionBody(s7Sections, "mature_sovereignty_expression") : "";
-  const s7Wisewave = isS7 ? s7SectionBody(s7Sections, "wisewave_reflection") : "";
+  let s7MatureExpression = isS7 ? s7SectionBody(s7Sections, "mature_sovereignty_expression") : "";
+  let s7Wisewave = isS7 ? s7SectionBody(s7Sections, "wisewave_reflection") : "";
+  if (isS7 && segment.contentLayer === "commercial") {
+    const opening = moduleSectionBody(s7Sections, "S7", "opening_essence");
+    const howShowUp = moduleSectionBody(s7Sections, "S7", "how_this_may_show_up");
+    const gift = moduleSectionBody(s7Sections, "S7", "core_gift");
+    const growth = moduleSectionBody(s7Sections, "S7", "growth_edge");
+    const integration = moduleSectionBody(s7Sections, "S7", "integration_key");
+    const reflection = moduleSectionBody(s7Sections, "S7", "wisewave_reflection");
+    if (!s7SovereigntyEssence && opening) s7SovereigntyEssence = opening;
+    if (!s7SoulReclaim && gift) s7SoulReclaim = gift;
+    if (!s7PowerGivenAway && howShowUp) s7PowerGivenAway = howShowUp;
+    if (!s7ShadowDistortion && growth) s7ShadowDistortion = growth;
+    if (!s7MatureExpression && integration) s7MatureExpression = integration;
+    if (!s7Wisewave && reflection) s7Wisewave = reflection;
+  }
   const s7Icon = isS7 ? resolveS7PrimaryIconAsset(code, line(segment.title)) : null;
   const s7Gifts = isS7 ? parseBulletBody(s7NaturalFields) : [];
   const s7ShowsUp = isS7
@@ -305,17 +319,31 @@ export function enrichModuleFromSegment(
       ].filter(Boolean)
     : [];
 
-  const s8ContributionEssence = isS8 ? s8SectionBody(s8Sections, "contribution_essence") : "";
-  const s8SoulOffers = isS8 ? s8SectionBody(s8Sections, "what_your_soul_offers") : "";
-  const s8ContributionFlow = isS8 ? s8SectionBody(s8Sections, "how_contribution_flows") : "";
+  let s8ContributionEssence = isS8 ? s8SectionBody(s8Sections, "contribution_essence") : "";
+  let s8SoulOffers = isS8 ? s8SectionBody(s8Sections, "what_your_soul_offers") : "";
+  let s8ContributionFlow = isS8 ? s8SectionBody(s8Sections, "how_contribution_flows") : "";
   const s8NaturalFields = isS8 ? s8SectionBody(s8Sections, "natural_contribution_fields") : "";
-  const s8ShadowDistortion = isS8
+  let s8ShadowDistortion = isS8
     ? s8SectionBody(s8Sections, "shadow_distortion_of_contribution")
     : "";
-  const s8MatureExpression = isS8
+  let s8MatureExpression = isS8
     ? s8SectionBody(s8Sections, "mature_contribution_expression")
     : "";
-  const s8Wisewave = isS8 ? s8SectionBody(s8Sections, "wisewave_reflection") : "";
+  let s8Wisewave = isS8 ? s8SectionBody(s8Sections, "wisewave_reflection") : "";
+  if (isS8 && segment.contentLayer === "commercial") {
+    const opening = moduleSectionBody(s8Sections, "S8", "opening_essence");
+    const howShowUp = moduleSectionBody(s8Sections, "S8", "how_this_may_show_up");
+    const gift = moduleSectionBody(s8Sections, "S8", "core_gift");
+    const growth = moduleSectionBody(s8Sections, "S8", "growth_edge");
+    const integration = moduleSectionBody(s8Sections, "S8", "integration_key");
+    const reflection = moduleSectionBody(s8Sections, "S8", "wisewave_reflection");
+    if (!s8ContributionEssence && opening) s8ContributionEssence = opening;
+    if (!s8SoulOffers && gift) s8SoulOffers = gift;
+    if (!s8ContributionFlow && howShowUp) s8ContributionFlow = howShowUp;
+    if (!s8ShadowDistortion && growth) s8ShadowDistortion = growth;
+    if (!s8MatureExpression && integration) s8MatureExpression = integration;
+    if (!s8Wisewave && reflection) s8Wisewave = reflection;
+  }
   const s8Icon = isS8 ? resolveS8PrimaryIconAsset(code, line(segment.title)) : null;
   const s8Gifts = isS8 ? parseBulletBody(s8NaturalFields) : [];
   const s8ShowsUp = isS8
@@ -326,15 +354,29 @@ export function enrichModuleFromSegment(
       ].filter(Boolean)
     : [];
 
-  const s9ReturnEssence = isS9 ? s9SectionBody(s9Sections, "return_essence") : "";
-  const s9SoulRemembers = isS9 ? s9SectionBody(s9Sections, "what_your_soul_remembers") : "";
-  const s9LifeThemesResolve = isS9 ? s9SectionBody(s9Sections, "how_life_themes_resolve") : "";
+  let s9ReturnEssence = isS9 ? s9SectionBody(s9Sections, "return_essence") : "";
+  let s9SoulRemembers = isS9 ? s9SectionBody(s9Sections, "what_your_soul_remembers") : "";
+  let s9LifeThemesResolve = isS9 ? s9SectionBody(s9Sections, "how_life_themes_resolve") : "";
   const s9NaturalPractices = isS9 ? s9SectionBody(s9Sections, "natural_return_practices") : "";
-  const s9ShadowDistortion = isS9
+  let s9ShadowDistortion = isS9
     ? s9SectionBody(s9Sections, "shadow_distortion_of_return")
     : "";
-  const s9MatureExpression = isS9 ? s9SectionBody(s9Sections, "mature_return_expression") : "";
-  const s9Wisewave = isS9 ? s9SectionBody(s9Sections, "wisewave_reflection") : "";
+  let s9MatureExpression = isS9 ? s9SectionBody(s9Sections, "mature_return_expression") : "";
+  let s9Wisewave = isS9 ? s9SectionBody(s9Sections, "wisewave_reflection") : "";
+  if (isS9 && segment.contentLayer === "commercial") {
+    const opening = moduleSectionBody(s9Sections, "S9", "opening_essence");
+    const howShowUp = moduleSectionBody(s9Sections, "S9", "how_this_may_show_up");
+    const gift = moduleSectionBody(s9Sections, "S9", "core_gift");
+    const growth = moduleSectionBody(s9Sections, "S9", "growth_edge");
+    const integration = moduleSectionBody(s9Sections, "S9", "integration_key");
+    const reflection = moduleSectionBody(s9Sections, "S9", "wisewave_reflection");
+    if (!s9ReturnEssence && opening) s9ReturnEssence = opening;
+    if (!s9SoulRemembers && gift) s9SoulRemembers = gift;
+    if (!s9LifeThemesResolve && howShowUp) s9LifeThemesResolve = howShowUp;
+    if (!s9ShadowDistortion && growth) s9ShadowDistortion = growth;
+    if (!s9MatureExpression && integration) s9MatureExpression = integration;
+    if (!s9Wisewave && reflection) s9Wisewave = reflection;
+  }
   const s9Icon = isS9 ? resolveS9PrimaryIconAsset(code, line(segment.title)) : null;
   const s9Gifts = isS9 ? parseBulletBody(s9NaturalPractices) : [];
   const s9ShowsUp = isS9

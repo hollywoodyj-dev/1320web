@@ -394,19 +394,21 @@ The raw `data/1320-v2/*.json` files are the **Symbolic Source Layer**. Paid repo
 
 **Step 2 (2026-07-11):** Wisewave delivered 126 S0–S3 commercial blocks via overlay v3.
 
-**Step 3 (2026-07-13):** Wisewave delivered 108 S4–S6 commercial blocks (light normalization). S7–S9 remain on symbolic/steward fallback until Step 4.
+**Step 3 (2026-07-13):** Wisewave delivered 108 S4–S6 commercial blocks (light normalization).
+
+**Step 4 (2026-07-14):** Wisewave delivered 24 S7–S9 commercial blocks (expansion). Full S0–S9 overlay complete pending Step 5 package consolidation.
 
 | Step | Modules | Entries |
 |------|---------|--------:|
 | 2 | S0–S3 | 126 |
 | 3 | S4–S6 | 108 |
-| **Total overlay** | S0–S6 | **234** |
+| 4 | S7–S9 | 24 |
+| **Total overlay** | S0–S9 | **258** |
 
 | Resource | Path |
 |---|---|
-| Step 3 module exports | `data/1320-v2/commercial-overlay/step3-s4-s6/` |
-| Step 3 QA summary | `docs/specs/1320-v2-content/1320_COMMERCIAL_REPORT_BLOCKS_STEP3_QA_SUMMARY.md` |
-| S6 legacy cleanup notes | `docs/specs/1320-v2-content/S6_LEGACY_LANGUAGE_CLEANUP_NOTES_v3_step3.json` |
+| Step 4 module exports | `data/1320-v2/commercial-overlay/step4-s7-s9/` |
+| Step 4 QA summary | `docs/specs/1320-v2-content/1320_COMMERCIAL_REPORT_BLOCKS_STEP4_QA_SUMMARY.md` |
 
 Renderer precedence: entry `commercial_report_blocks` → overlay file → legacy `output_blocks` / steward fields → symbolic source.
 

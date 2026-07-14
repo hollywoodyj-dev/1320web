@@ -1,0 +1,146 @@
+{
+  "document": {
+    "title": "1320 Commercial Report Blocks v3 — Step 4 S7 Soul Sovereignty",
+    "version": "v3-step4.0",
+    "status": "Draft for Nova integration and Lumen commercial copy QA",
+    "source_file": "s7-soul-sovereignty.json",
+    "module": "Soul Sovereignty",
+    "count": 7,
+    "governance_note": "S7 uses qualitative sovereignty language only; no percentages, scoring, ranking, or spiritual hierarchy."
+  },
+  "entries": [
+    {
+      "code": "S7-00",
+      "display_name": "The Returning Self",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S7 pattern, The Returning Self, is about how you return to inner authority without turning sovereignty into isolation or control. Your sovereignty begins through returning to yourself before reacting to the field around you. This is not a measure of how strong or advanced you are; it is a mirror for how choice, truth, and self-trust may be asking to mature in your life.",
+        "how_this_may_show_up": "You may notice this layer when decisions, boundaries, relationship expectations, or outside pressure pull you away from your own center. Patterns become visible when you notices how quickly they leave their own center to manage the expectations, emotions, or urgency of others. It may show up in small moments: saying yes too quickly, waiting for permission, reacting from fear, or trying to protect freedom by becoming unavailable.",
+        "core_gift": "The gift of The Returning Self is the capacity to choose from a more honest inner place. Mature sovereignty appears as the ability to stay connected to life while remaining inwardly located in the self. When this pattern is expressed with care, sovereignty becomes less about resistance and more about clear presence, responsible choice, and self-trust that can still remain connected to life.",
+        "growth_edge": "Your growth edge is to notice where power leaves your body before you have fully chosen. When distorted, sovereignty may become withdrawal, passivity, or a quiet refusal to participate because you is afraid of being influenced. The invitation is not to become harder or more separate; it is to reclaim your right to pause, listen, and respond from truth rather than fear.",
+        "integration_key": "Integration begins by practicing sovereignty in ordinary, repeatable ways: self-reflection, decision pauses, and emotional regulation. Let the practice be grounded and relational. You do not have to prove your freedom; you can embody it through one clean choice at a time.",
+        "one_week_practice": "For one week, choose one moment each day to pause before responding. Ask: am I choosing from truth, fear, approval, pressure, or habit? Write one sentence about what your body already knows, then make one small choice that respects both your truth and your responsibility.",
+        "wisewave_reflection": "You do not need to disappear in order to be free. Return first, then respond."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S7-01",
+      "display_name": "The Self-Trusting One",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S7 pattern, The Self-Trusting One, is about how you return to inner authority without turning sovereignty into isolation or control. Your sovereignty strengthens when you stop outsourcing permission and begin honoring clear inner signals. This is not a measure of how strong or advanced you are; it is a mirror for how choice, truth, and self-trust may be asking to mature in your life.",
+        "how_this_may_show_up": "You may notice this layer when decisions, boundaries, relationship expectations, or outside pressure pull you away from your own center. Patterns become visible where you repeatedly asks others to confirm what the body, heart, or awareness has already recognized. It may show up in small moments: saying yes too quickly, waiting for permission, reacting from fear, or trying to protect freedom by becoming unavailable.",
+        "core_gift": "The gift of The Self-Trusting One is the capacity to choose from a more honest inner place. Mature sovereignty appears as discernment: the ability to listen, receive information, and still choose from inner truth. When this pattern is expressed with care, sovereignty becomes less about resistance and more about clear presence, responsible choice, and self-trust that can still remain connected to life.",
+        "growth_edge": "Your growth edge is to notice where power leaves your body before you have fully chosen. When distorted, sovereignty may become stubbornness, impulsive certainty, or rejecting useful feedback in order to feel independent. The invitation is not to become harder or more separate; it is to reclaim your right to pause, listen, and respond from truth rather than fear.",
+        "integration_key": "Integration begins by practicing sovereignty in ordinary, repeatable ways: independent decisions, creative leadership, and intuitive work. Let the practice be grounded and relational. You do not have to prove your freedom; you can embody it through one clean choice at a time.",
+        "one_week_practice": "For one week, choose one moment each day to pause before responding. Ask: am I choosing from truth, fear, approval, pressure, or habit? Write one sentence about what your body already knows, then make one small choice that respects both your truth and your responsibility.",
+        "wisewave_reflection": "Self-trust is not the refusal to learn. It is the quiet knowing that your final choice must return to you."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S7-02",
+      "display_name": "The Boundaried Choice",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S7 pattern, The Boundaried Choice, is about how you return to inner authority without turning sovereignty into isolation or control. Your sovereignty emerges through the ability to choose without abandoning your limits, needs, or honest capacity. This is not a measure of how strong or advanced you are; it is a mirror for how choice, truth, and self-trust may be asking to mature in your life.",
+        "how_this_may_show_up": "You may notice this layer when decisions, boundaries, relationship expectations, or outside pressure pull you away from your own center. Patterns become visible when you says yes too quickly, delays honest refusal, or confuses availability with worth. It may show up in small moments: saying yes too quickly, waiting for permission, reacting from fear, or trying to protect freedom by becoming unavailable.",
+        "core_gift": "The gift of The Boundaried Choice is the capacity to choose from a more honest inner place. Mature sovereignty appears as clear, kind limits that protect energy without closing the heart. When this pattern is expressed with care, sovereignty becomes less about resistance and more about clear presence, responsible choice, and self-trust that can still remain connected to life.",
+        "growth_edge": "Your growth edge is to notice where power leaves your body before you have fully chosen. When distorted, sovereignty may become defensiveness, over-protection, or rigid walls that replace honest boundaries. The invitation is not to become harder or more separate; it is to reclaim your right to pause, listen, and respond from truth rather than fear.",
+        "integration_key": "Integration begins by practicing sovereignty in ordinary, repeatable ways: boundary setting, relationship repair, and service work. Let the practice be grounded and relational. You do not have to prove your freedom; you can embody it through one clean choice at a time.",
+        "one_week_practice": "For one week, choose one moment each day to pause before responding. Ask: am I choosing from truth, fear, approval, pressure, or habit? Write one sentence about what your body already knows, then make one small choice that respects both your truth and your responsibility.",
+        "wisewave_reflection": "A boundary is not separation from love. It is the place where love becomes sustainable."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S7-03",
+      "display_name": "The Truthful Actor",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S7 pattern, The Truthful Actor, is about how you return to inner authority without turning sovereignty into isolation or control. Your sovereignty is activated when truth becomes behavior, not only insight. This is not a measure of how strong or advanced you are; it is a mirror for how choice, truth, and self-trust may be asking to mature in your life.",
+        "how_this_may_show_up": "You may notice this layer when decisions, boundaries, relationship expectations, or outside pressure pull you away from your own center. Patterns become visible when you understands deeply but delays acting, speaks around the truth, or waits for conditions to feel safer. It may show up in small moments: saying yes too quickly, waiting for permission, reacting from fear, or trying to protect freedom by becoming unavailable.",
+        "core_gift": "The gift of The Truthful Actor is the capacity to choose from a more honest inner place. Mature sovereignty appears as timely action that is direct, grounded, and respectful. When this pattern is expressed with care, sovereignty becomes less about resistance and more about clear presence, responsible choice, and self-trust that can still remain connected to life.",
+        "growth_edge": "Your growth edge is to notice where power leaves your body before you have fully chosen. When distorted, sovereignty may become harsh truth-telling, urgency, or using clarity as a weapon instead of a bridge. The invitation is not to become harder or more separate; it is to reclaim your right to pause, listen, and respond from truth rather than fear.",
+        "integration_key": "Integration begins by practicing sovereignty in ordinary, repeatable ways: communication, leadership, and creative publishing. Let the practice be grounded and relational. You do not have to prove your freedom; you can embody it through one clean choice at a time.",
+        "one_week_practice": "For one week, choose one moment each day to pause before responding. Ask: am I choosing from truth, fear, approval, pressure, or habit? Write one sentence about what your body already knows, then make one small choice that respects both your truth and your responsibility.",
+        "wisewave_reflection": "Truth becomes power when it enters the body, the voice, and the next honest step."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S7-04",
+      "display_name": "The Unapproved Free Self",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S7 pattern, The Unapproved Free Self, is about how you return to inner authority without turning sovereignty into isolation or control. Your sovereignty grows when you no longer organize your life around approval, recognition, or emotional permission. This is not a measure of how strong or advanced you are; it is a mirror for how choice, truth, and self-trust may be asking to mature in your life.",
+        "how_this_may_show_up": "You may notice this layer when decisions, boundaries, relationship expectations, or outside pressure pull you away from your own center. Patterns become visible where you edits desires, softens truth, or delays direction until others validate the choice. It may show up in small moments: saying yes too quickly, waiting for permission, reacting from fear, or trying to protect freedom by becoming unavailable.",
+        "core_gift": "The gift of The Unapproved Free Self is the capacity to choose from a more honest inner place. Mature sovereignty appears as the ability to remain open to connection without needing approval to exist. When this pattern is expressed with care, sovereignty becomes less about resistance and more about clear presence, responsible choice, and self-trust that can still remain connected to life.",
+        "growth_edge": "Your growth edge is to notice where power leaves your body before you have fully chosen. When distorted, sovereignty may become rebellion for its own sake, rejecting connection to prove freedom. The invitation is not to become harder or more separate; it is to reclaim your right to pause, listen, and respond from truth rather than fear.",
+        "integration_key": "Integration begins by practicing sovereignty in ordinary, repeatable ways: authentic expression, public voice, and life transitions. Let the practice be grounded and relational. You do not have to prove your freedom; you can embody it through one clean choice at a time.",
+        "one_week_practice": "For one week, choose one moment each day to pause before responding. Ask: am I choosing from truth, fear, approval, pressure, or habit? Write one sentence about what your body already knows, then make one small choice that respects both your truth and your responsibility.",
+        "wisewave_reflection": "You are allowed to be real before everyone understands you."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S7-05",
+      "display_name": "The Embodied Authority",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S7 pattern, The Embodied Authority, is about how you return to inner authority without turning sovereignty into isolation or control. Your sovereignty becomes stable when authority moves from concept into body, rhythm, and daily practice. This is not a measure of how strong or advanced you are; it is a mirror for how choice, truth, and self-trust may be asking to mature in your life.",
+        "how_this_may_show_up": "You may notice this layer when decisions, boundaries, relationship expectations, or outside pressure pull you away from your own center. Patterns become visible when you speaks of alignment but lives from urgency, overextension, or disembodied ideals. It may show up in small moments: saying yes too quickly, waiting for permission, reacting from fear, or trying to protect freedom by becoming unavailable.",
+        "core_gift": "The gift of The Embodied Authority is the capacity to choose from a more honest inner place. Mature sovereignty appears as calm consistency: you becomes trustworthy to themselves through repeated aligned action. When this pattern is expressed with care, sovereignty becomes less about resistance and more about clear presence, responsible choice, and self-trust that can still remain connected to life.",
+        "growth_edge": "Your growth edge is to notice where power leaves your body before you have fully chosen. When distorted, sovereignty may become spiritual performance, identity attachment, or claiming authority before embodying responsibility. The invitation is not to become harder or more separate; it is to reclaim your right to pause, listen, and respond from truth rather than fear.",
+        "integration_key": "Integration begins by practicing sovereignty in ordinary, repeatable ways: rituals, daily structure, and somatic awareness. Let the practice be grounded and relational. You do not have to prove your freedom; you can embody it through one clean choice at a time.",
+        "one_week_practice": "For one week, choose one moment each day to pause before responding. Ask: am I choosing from truth, fear, approval, pressure, or habit? Write one sentence about what your body already knows, then make one small choice that respects both your truth and your responsibility.",
+        "wisewave_reflection": "Authority is not something you announce. It is something your life quietly proves through alignment."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S7-06",
+      "display_name": "The Conscious Responsible One",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S7 pattern, The Conscious Responsible One, is about how you return to inner authority without turning sovereignty into isolation or control. Your sovereignty matures through taking responsibility without carrying what does not belong to you. This is not a measure of how strong or advanced you are; it is a mirror for how choice, truth, and self-trust may be asking to mature in your life.",
+        "how_this_may_show_up": "You may notice this layer when decisions, boundaries, relationship expectations, or outside pressure pull you away from your own center. Patterns become visible where you either takes on too much or avoids responsibility because it feels like loss of freedom. It may show up in small moments: saying yes too quickly, waiting for permission, reacting from fear, or trying to protect freedom by becoming unavailable.",
+        "core_gift": "The gift of The Conscious Responsible One is the capacity to choose from a more honest inner place. Mature sovereignty appears as clean ownership: taking the next true action while returning other people's parts to them. When this pattern is expressed with care, sovereignty becomes less about resistance and more about clear presence, responsible choice, and self-trust that can still remain connected to life.",
+        "growth_edge": "Your growth edge is to notice where power leaves your body before you have fully chosen. When distorted, sovereignty may become control, guilt, blame, or the belief that responsibility means carrying everything alone. The invitation is not to become harder or more separate; it is to reclaim your right to pause, listen, and respond from truth rather than fear.",
+        "integration_key": "Integration begins by practicing sovereignty in ordinary, repeatable ways: leadership, family systems, and community roles. Let the practice be grounded and relational. You do not have to prove your freedom; you can embody it through one clean choice at a time.",
+        "one_week_practice": "For one week, choose one moment each day to pause before responding. Ask: am I choosing from truth, fear, approval, pressure, or habit? Write one sentence about what your body already knows, then make one small choice that respects both your truth and your responsibility.",
+        "wisewave_reflection": "Responsibility is not a burden when it is clean. It becomes heavy only when you carry what is not yours."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    }
+  ]
+}

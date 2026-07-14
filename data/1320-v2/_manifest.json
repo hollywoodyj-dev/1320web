@@ -22,12 +22,13 @@
     "commercial_overlay": "commercial-report-blocks-overlay.json"
   },
   "commercial_output_layer": {
-    "version": "commercial-v3-step3",
+    "version": "commercial-v3-step4",
     "schema_doc": "docs/specs/1320-v2-content/COMMERCIAL_REPORT_BLOCKS_SCHEMA_v1.md",
     "overlay": "commercial-report-blocks-overlay.json",
     "module_exports": {
       "step2_s0_s3": "commercial-overlay/step2-s0-s3/",
-      "step3_s4_s6": "commercial-overlay/step3-s4-s6/"
+      "step3_s4_s6": "commercial-overlay/step3-s4-s6/",
+      "step4_s7_s9": "commercial-overlay/step4-s7-s9/"
     }
   }
 }

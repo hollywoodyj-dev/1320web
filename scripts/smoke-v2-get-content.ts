@@ -101,8 +101,8 @@ assert(!containsCjk(s3Guidance), `S3 EN guidance should be English, got: ${s3Gui
 console.log("=== v2 commercial output layer — sample blueprint overlay ===");
 assert(full.s1Content!.contentLayer === "commercial", "S1-18 should use commercial layer");
 assert(
-  full.s1Content!.commercialBlocksVersion === "commercial-v3-step3",
-  "S1 should use Step 3 commercial overlay version",
+  full.s1Content!.commercialBlocksVersion === "commercial-v3-step4",
+  "S1 should use Step 4 commercial overlay version",
 );
 assert(
   t(full.s1Content!.freeEssence, "en").includes("The Transformer"),
@@ -115,7 +115,26 @@ assert(
 assert(full.s4Content!.contentLayer === "commercial", "S4-14 should use commercial layer after Step 3");
 assert(full.s5Content!.contentLayer === "commercial", "S5-04 should use commercial layer after Step 3");
 assert(full.s6Content!.contentLayer === "commercial", "S6-28 should use commercial layer after Step 3");
-assert(full.s7Content!.contentLayer !== "commercial", "S7-00 remains steward layer until Step 4");
+assert(full.s7Content!.contentLayer === "commercial", "S7-00 should use commercial layer after Step 4");
+assert(
+  (full.s7Content!.soulMissionSections?.length ?? 0) >= 5,
+  "S7 commercial blocks should produce sections",
+);
+
+const advancedCommercial = get1320Content(
+  { ...SAMPLE, locale: "en" },
+  { birthDate: "1980-05-22", reportTier: "advanced" },
+);
+assert(advancedCommercial.s8Content!.contentLayer === "commercial", "S8-00 commercial after Step 4");
+assert(advancedCommercial.s9Content!.contentLayer === "commercial", "S9-07 commercial after Step 4");
+assert(
+  (advancedCommercial.s8Content!.soulMissionSections?.length ?? 0) >= 5,
+  "S8 commercial blocks should produce sections",
+);
+assert(
+  (advancedCommercial.s9Content!.soulMissionSections?.length ?? 0) >= 5,
+  "S9 commercial blocks should produce sections",
+);
 assert(
   (full.s1Content!.soulMissionSections?.length ?? 0) >= 5,
   "S1 commercial blocks should produce sections",

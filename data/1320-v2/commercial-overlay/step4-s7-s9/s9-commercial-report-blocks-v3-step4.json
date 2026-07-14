@@ -1,0 +1,184 @@
+{
+  "document": {
+    "title": "1320 Commercial Report Blocks v3 — Step 4 S9 Return to Source",
+    "version": "v3-step4.0",
+    "status": "Draft for Nova integration and Lumen commercial copy QA",
+    "source_file": "s9-return-to-source.json",
+    "module": "Return to Source",
+    "count": 9,
+    "governance_note": "S9 return language must not imply spiritual level, enlightenment status, superiority, bypassing, or final attainment."
+  },
+  "entries": [
+    {
+      "code": "S9-00",
+      "display_name": "Return Through Silence",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S9 pattern, Return Through Silence, points to how you return to simplicity, wholeness, and source within ordinary life. Your return to source happens through silence, stillness, and the space before identity forms. This is not a badge of spiritual attainment. It is a reflective doorway into what helps you become more present, honest, and whole.",
+        "how_this_may_show_up": "You may notice this layer when life asks you to release an old identity, soften control, repair relationship, tell the truth, rest, forgive, or become more present. Life themes resolve when you stops demanding constant meaning and allows quiet presence to become enough. The return is usually not dramatic; it often happens through small moments where you stop leaving yourself.",
+        "core_gift": "The gift of Return Through Silence is the ability to remember what remains when striving, proving, fear, or fragmentation quiets down. You may be learning that wholeness can be felt without explanation, performance, or conclusion. When this matures, return does not remove you from life; it helps you meet life with more humility, peace, and inner contact.",
+        "growth_edge": "Your growth edge is to notice when the language of return becomes a way to bypass reality. When distorted, return may become withdrawal, dissociation, or avoiding life in the name of peace. The invitation is to let return make you more available to truth, responsibility, and tenderness, not less engaged with the human experience.",
+        "integration_key": "Integration begins through practices that return you to direct contact with life: silent reflection, breath practice, and nature solitude. Keep them simple. The point is not to become someone else; it is to remember the part of you that is already here beneath the noise.",
+        "one_week_practice": "For one week, create one daily return ritual that takes less than five minutes. Pause, breathe, and ask: what am I ready to stop carrying for a moment? Let the answer be felt before it becomes a concept.",
+        "wisewave_reflection": "Source is not far away. It is the quiet that remains when you stop leaving yourself."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S9-01",
+      "display_name": "Return Through Enoughness",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S9 pattern, Return Through Enoughness, points to how you return to simplicity, wholeness, and source within ordinary life. Your return to source is through remembering that existence does not need to be proven. This is not a badge of spiritual attainment. It is a reflective doorway into what helps you become more present, honest, and whole.",
+        "how_this_may_show_up": "You may notice this layer when life asks you to release an old identity, soften control, repair relationship, tell the truth, rest, forgive, or become more present. Life themes resolve when you acts from worth rather than for worth. The return is usually not dramatic; it often happens through small moments where you stop leaving yourself.",
+        "core_gift": "The gift of Return Through Enoughness is the ability to remember what remains when striving, proving, fear, or fragmentation quiets down. This layer points to a part of you releasing the belief that value must be earned through achievement, appearance, approval, or recognition. When this matures, return does not remove you from life; it helps you meet life with more humility, peace, and inner contact.",
+        "growth_edge": "Your growth edge is to notice when the language of return becomes a way to bypass reality. When distorted, return may become complacency or avoiding growth by calling everything already complete. The invitation is to let return make you more available to truth, responsibility, and tenderness, not less engaged with the human experience.",
+        "integration_key": "Integration begins through practices that return you to direct contact with life: self-acceptance, rest practice, and creative expression without proof. Keep them simple. The point is not to become someone else; it is to remember the part of you that is already here beneath the noise.",
+        "one_week_practice": "For one week, create one daily return ritual that takes less than five minutes. Pause, breathe, and ask: what am I ready to stop carrying for a moment? Let the answer be felt before it becomes a concept.",
+        "wisewave_reflection": "You were not created as a question mark. You are allowed to live from enough."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S9-02",
+      "display_name": "Return Through Trust",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S9 pattern, Return Through Trust, points to how you return to simplicity, wholeness, and source within ordinary life. Your return to source happens through loosening control and learning to cooperate with life without becoming passive. This is not a badge of spiritual attainment. It is a reflective doorway into what helps you become more present, honest, and whole.",
+        "how_this_may_show_up": "You may notice this layer when life asks you to release an old identity, soften control, repair relationship, tell the truth, rest, forgive, or become more present. Life themes resolve when you distinguishes trust from avoidance and responsibility from control. The return is usually not dramatic; it often happens through small moments where you stop leaving yourself.",
+        "core_gift": "The gift of Return Through Trust is the ability to remember what remains when striving, proving, fear, or fragmentation quiets down. This layer points to a part of you releasing the need to manage every outcome in order to feel safe. When this matures, return does not remove you from life; it helps you meet life with more humility, peace, and inner contact.",
+        "growth_edge": "Your growth edge is to notice when the language of return becomes a way to bypass reality. When distorted, return may become passivity, magical thinking, or refusing practical responsibility. The invitation is to let return make you more available to truth, responsibility, and tenderness, not less engaged with the human experience.",
+        "integration_key": "Integration begins through practices that return you to direct contact with life: surrender practice, adaptive planning, and faith in process. Keep them simple. The point is not to become someone else; it is to remember the part of you that is already here beneath the noise.",
+        "one_week_practice": "For one week, create one daily return ritual that takes less than five minutes. Pause, breathe, and ask: what am I ready to stop carrying for a moment? Let the answer be felt before it becomes a concept.",
+        "wisewave_reflection": "Trust is not the absence of action. It is action without the grip of fear."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S9-03",
+      "display_name": "Return Through Connection",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S9 pattern, Return Through Connection, points to how you return to simplicity, wholeness, and source within ordinary life. Your return to source is through remembering that separateness is not the whole truth. This is not a badge of spiritual attainment. It is a reflective doorway into what helps you become more present, honest, and whole.",
+        "how_this_may_show_up": "You may notice this layer when life asks you to release an old identity, soften control, repair relationship, tell the truth, rest, forgive, or become more present. Life themes resolve when connection becomes chosen, discerning, and rooted in self-presence. The return is usually not dramatic; it often happens through small moments where you stop leaving yourself.",
+        "core_gift": "The gift of Return Through Connection is the ability to remember what remains when striving, proving, fear, or fragmentation quiets down. This layer points to a part of you healing isolation, guardedness, and the belief that they must carry everything alone. When this matures, return does not remove you from life; it helps you meet life with more humility, peace, and inner contact.",
+        "growth_edge": "Your growth edge is to notice when the language of return becomes a way to bypass reality. When distorted, return may become merging, dependency, or looking to others as the source of self. The invitation is to let return make you more available to truth, responsibility, and tenderness, not less engaged with the human experience.",
+        "integration_key": "Integration begins through practices that return you to direct contact with life: community, repair conversations, and friendship. Keep them simple. The point is not to become someone else; it is to remember the part of you that is already here beneath the noise.",
+        "one_week_practice": "For one week, create one daily return ritual that takes less than five minutes. Pause, breathe, and ask: what am I ready to stop carrying for a moment? Let the answer be felt before it becomes a concept.",
+        "wisewave_reflection": "You return to source not by disappearing into others, but by meeting life with an open center."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S9-04",
+      "display_name": "Return Through Truth",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S9 pattern, Return Through Truth, points to how you return to simplicity, wholeness, and source within ordinary life. Your return to source happens through allowing truth to refine identity, hope, relationships, and direction. This is not a badge of spiritual attainment. It is a reflective doorway into what helps you become more present, honest, and whole.",
+        "how_this_may_show_up": "You may notice this layer when life asks you to release an old identity, soften control, repair relationship, tell the truth, rest, forgive, or become more present. Life themes resolve when you stops protecting illusions and lets honest seeing become liberation. The return is usually not dramatic; it often happens through small moments where you stop leaving yourself.",
+        "core_gift": "The gift of Return Through Truth is the ability to remember what remains when striving, proving, fear, or fragmentation quiets down. You may be learning that reality is not an enemy of love; it is the ground where love becomes real. When this matures, return does not remove you from life; it helps you meet life with more humility, peace, and inner contact.",
+        "growth_edge": "Your growth edge is to notice when the language of return becomes a way to bypass reality. When distorted, return may become harshness, judgment, or using truth to defend against tenderness. The invitation is to let return make you more available to truth, responsibility, and tenderness, not less engaged with the human experience.",
+        "integration_key": "Integration begins through practices that return you to direct contact with life: truth-telling, discernment, and journaling reality vs projection. Keep them simple. The point is not to become someone else; it is to remember the part of you that is already here beneath the noise.",
+        "one_week_practice": "For one week, create one daily return ritual that takes less than five minutes. Pause, breathe, and ask: what am I ready to stop carrying for a moment? Let the answer be felt before it becomes a concept.",
+        "wisewave_reflection": "Truth does not remove love. It removes what love was never meant to carry."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S9-05",
+      "display_name": "Return Through Surrender",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S9 pattern, Return Through Surrender, points to how you return to simplicity, wholeness, and source within ordinary life. Your return to source is through releasing the identity that must force, fix, or explain everything. This is not a badge of spiritual attainment. It is a reflective doorway into what helps you become more present, honest, and whole.",
+        "how_this_may_show_up": "You may notice this layer when life asks you to release an old identity, soften control, repair relationship, tell the truth, rest, forgive, or become more present. Life themes resolve when effort becomes clean and you stops using striving to avoid vulnerability. The return is usually not dramatic; it often happens through small moments where you stop leaving yourself.",
+        "core_gift": "The gift of Return Through Surrender is the ability to remember what remains when striving, proving, fear, or fragmentation quiets down. You may be learning that some thresholds open through softening, not pressure. When this matures, return does not remove you from life; it helps you meet life with more humility, peace, and inner contact.",
+        "growth_edge": "Your growth edge is to notice when the language of return becomes a way to bypass reality. When distorted, return may become collapse, resignation, or spiritual bypassing. The invitation is to let return make you more available to truth, responsibility, and tenderness, not less engaged with the human experience.",
+        "integration_key": "Integration begins through practices that return you to direct contact with life: letting-go rituals, grief work, and acceptance practice. Keep them simple. The point is not to become someone else; it is to remember the part of you that is already here beneath the noise.",
+        "one_week_practice": "For one week, create one daily return ritual that takes less than five minutes. Pause, breathe, and ask: what am I ready to stop carrying for a moment? Let the answer be felt before it becomes a concept.",
+        "wisewave_reflection": "Surrender is not giving up. It is no longer fighting what must be met."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S9-06",
+      "display_name": "Return Through Forgiveness",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S9 pattern, Return Through Forgiveness, points to how you return to simplicity, wholeness, and source within ordinary life. Your return to source happens through releasing the weight of blame, guilt, and unfinished emotional contracts. This is not a badge of spiritual attainment. It is a reflective doorway into what helps you become more present, honest, and whole.",
+        "how_this_may_show_up": "You may notice this layer when life asks you to release an old identity, soften control, repair relationship, tell the truth, rest, forgive, or become more present. Life themes resolve when you stops making pain the center of identity and begins reclaiming freedom. The return is usually not dramatic; it often happens through small moments where you stop leaving yourself.",
+        "core_gift": "The gift of Return Through Forgiveness is the ability to remember what remains when striving, proving, fear, or fragmentation quiets down. You may be learning that forgiveness is not approval; it is the return of life-force to the self. When this matures, return does not remove you from life; it helps you meet life with more humility, peace, and inner contact.",
+        "growth_edge": "Your growth edge is to notice when the language of return becomes a way to bypass reality. When distorted, return may become premature forgiveness, denying anger, or remaining in harmful patterns to appear evolved. The invitation is to let return make you more available to truth, responsibility, and tenderness, not less engaged with the human experience.",
+        "integration_key": "Integration begins through practices that return you to direct contact with life: self-forgiveness, relationship closure, and compassionate boundaries. Keep them simple. The point is not to become someone else; it is to remember the part of you that is already here beneath the noise.",
+        "one_week_practice": "For one week, create one daily return ritual that takes less than five minutes. Pause, breathe, and ask: what am I ready to stop carrying for a moment? Let the answer be felt before it becomes a concept.",
+        "wisewave_reflection": "Forgiveness does not ask you to forget yourself. It asks you to stop imprisoning your life in the past."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S9-07",
+      "display_name": "Return Through Presence",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S9 pattern, Return Through Presence, points to how you return to simplicity, wholeness, and source within ordinary life. Your return to source is through entering the present moment fully enough for life to touch you again. This is not a badge of spiritual attainment. It is a reflective doorway into what helps you become more present, honest, and whole.",
+        "how_this_may_show_up": "You may notice this layer when life asks you to release an old identity, soften control, repair relationship, tell the truth, rest, forgive, or become more present. Life themes resolve when you chooses direct experience over constant mental departure. The return is usually not dramatic; it often happens through small moments where you stop leaving yourself.",
+        "core_gift": "The gift of Return Through Presence is the ability to remember what remains when striving, proving, fear, or fragmentation quiets down. You may be learning to come back from future fear, past loops, and imagined versions of reality. When this matures, return does not remove you from life; it helps you meet life with more humility, peace, and inner contact.",
+        "growth_edge": "Your growth edge is to notice when the language of return becomes a way to bypass reality. When distorted, return may become passivity, avoidance of planning, or using presence to ignore real responsibilities. The invitation is to let return make you more available to truth, responsibility, and tenderness, not less engaged with the human experience.",
+        "integration_key": "Integration begins through practices that return you to direct contact with life: body awareness, mindful action, and sensory grounding. Keep them simple. The point is not to become someone else; it is to remember the part of you that is already here beneath the noise.",
+        "one_week_practice": "For one week, create one daily return ritual that takes less than five minutes. Pause, breathe, and ask: what am I ready to stop carrying for a moment? Let the answer be felt before it becomes a concept.",
+        "wisewave_reflection": "The present moment is not small. It is the only place your soul can actually return."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S9-08",
+      "display_name": "Return Through Wholeness",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S9 pattern, Return Through Wholeness, points to how you return to simplicity, wholeness, and source within ordinary life. Your return to source happens through integrating the parts of yourself you once split into good, bad, spiritual, human, strong, or weak. This is not a badge of spiritual attainment. It is a reflective doorway into what helps you become more present, honest, and whole.",
+        "how_this_may_show_up": "You may notice this layer when life asks you to release an old identity, soften control, repair relationship, tell the truth, rest, forgive, or become more present. Life themes resolve when you stops rejecting pieces of their humanity in order to feel worthy of source. The return is usually not dramatic; it often happens through small moments where you stop leaving yourself.",
+        "core_gift": "The gift of Return Through Wholeness is the ability to remember what remains when striving, proving, fear, or fragmentation quiets down. You may be learning that wholeness is not perfection; it is honest inclusion. When this matures, return does not remove you from life; it helps you meet life with more humility, peace, and inner contact.",
+        "growth_edge": "Your growth edge is to notice when the language of return becomes a way to bypass reality. When distorted, return may become identity inflation, trying to appear integrated, or bypassing the ordinary human process. The invitation is to let return make you more available to truth, responsibility, and tenderness, not less engaged with the human experience.",
+        "integration_key": "Integration begins through practices that return you to direct contact with life: shadow integration, creative embodiment, and whole-self reflection. Keep them simple. The point is not to become someone else; it is to remember the part of you that is already here beneath the noise.",
+        "one_week_practice": "For one week, create one daily return ritual that takes less than five minutes. Pause, breathe, and ask: what am I ready to stop carrying for a moment? Let the answer be felt before it becomes a concept.",
+        "wisewave_reflection": "You return to source by becoming less divided from yourself."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    }
+  ]
+}

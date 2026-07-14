@@ -1,0 +1,165 @@
+{
+  "document": {
+    "title": "1320 Commercial Report Blocks v3 — Step 4 S8 Soul Contribution",
+    "version": "v3-step4.0",
+    "status": "Draft for Nova integration and Lumen commercial copy QA",
+    "source_file": "s8-soul-contribution.json",
+    "module": "Soul Contribution",
+    "count": 8,
+    "governance_note": "S8 contribution language must not equate contribution with usefulness, public success, productivity, status, or external achievement."
+  },
+  "entries": [
+    {
+      "code": "S8-00",
+      "display_name": "Contribution Through Presence",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S8 pattern, Contribution Through Presence, describes how your presence and gifts may naturally contribute to the world around you. Your contribution begins through the quality of presence you bring into spaces. This is not about public status, productivity, or proving your value. It is about the quality of contribution that becomes possible when your blueprint is lived with integrity.",
+        "how_this_may_show_up": "You may notice this layer in the way you affect rooms, relationships, teams, communities, or creative fields. Contribution flows when you stops underestimating quiet influence and allows presence, listening, and grounded awareness to matter. Sometimes your contribution may be visible; sometimes it may be quiet, relational, structural, or deeply felt without needing to become performance.",
+        "core_gift": "The gift of Contribution Through Presence is that your life can serve something larger without erasing you. You may be learningse impact is not only in what they do, but in how they stabilize the field around them. When this gift matures, contribution becomes a natural extension of who you are, not a demand to be more useful, impressive, or constantly available.",
+        "growth_edge": "Your growth edge is to notice the distortion that can form around contribution. When distorted, contribution may become invisibility, passivity, or believing that only visible achievement counts. The invitation is to let service become cleaner: neither hiding your gift nor overextending it to earn belonging, approval, or significance.",
+        "integration_key": "Integration begins by honoring the way contribution actually moves through you. Natural fields may include holding space, community presence, and listening roles. Choose expressions that are aligned with capacity, timing, and truth rather than pressure or comparison.",
+        "one_week_practice": "For one week, notice one place where your presence, choice, listening, clarity, structure, or care already contributes. Do not measure it by applause. Write one sentence each day: today, my contribution felt most honest when…",
+        "wisewave_reflection": "Your stillness can be a contribution when it is awake, grounded, and true."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S8-01",
+      "display_name": "Contribution Through Initiation",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S8 pattern, Contribution Through Initiation, describes how your presence and gifts may naturally contribute to the world around you. Your contribution moves through initiating new paths, starting needed conversations, and giving motion to what has been stagnant. This is not about public status, productivity, or proving your value. It is about the quality of contribution that becomes possible when your blueprint is lived with integrity.",
+        "how_this_may_show_up": "You may notice this layer in the way you affect rooms, relationships, teams, communities, or creative fields. Contribution flows when you uses action to serve clarity, not to prove worth or outrun discomfort. Sometimes your contribution may be visible; sometimes it may be quiet, relational, structural, or deeply felt without needing to become performance.",
+        "core_gift": "The gift of Contribution Through Initiation is that your life can serve something larger without erasing you. You may be learning contributes by opening doors rather than waiting for permission. When this gift matures, contribution becomes a natural extension of who you are, not a demand to be more useful, impressive, or constantly available.",
+        "growth_edge": "Your growth edge is to notice the distortion that can form around contribution. When distorted, contribution may become impatience, pressure, or starting many things without sustaining the energy needed for impact. The invitation is to let service become cleaner: neither hiding your gift nor overextending it to earn belonging, approval, or significance.",
+        "integration_key": "Integration begins by honoring the way contribution actually moves through you. Natural fields may include startups, new projects, and advocacy. Choose expressions that are aligned with capacity, timing, and truth rather than pressure or comparison.",
+        "one_week_practice": "For one week, notice one place where your presence, choice, listening, clarity, structure, or care already contributes. Do not measure it by applause. Write one sentence each day: today, my contribution felt most honest when…",
+        "wisewave_reflection": "You do not need to force movement. You are here to open the first honest door."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S8-02",
+      "display_name": "Contribution Through Connection",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S8 pattern, Contribution Through Connection, describes how your presence and gifts may naturally contribute to the world around you. Your contribution is expressed through building bridges, restoring communication, and helping separate parts remember relationship. This is not about public status, productivity, or proving your value. It is about the quality of contribution that becomes possible when your blueprint is lived with integrity.",
+        "how_this_may_show_up": "You may notice this layer in the way you affect rooms, relationships, teams, communities, or creative fields. Contribution flows when you stops merging with others and begins connecting from a stable sense of self. Sometimes your contribution may be visible; sometimes it may be quiet, relational, structural, or deeply felt without needing to become performance.",
+        "core_gift": "The gift of Contribution Through Connection is that your life can serve something larger without erasing you. You may be learningse gift is to make connection safer, clearer, and more conscious. When this gift matures, contribution becomes a natural extension of who you are, not a demand to be more useful, impressive, or constantly available.",
+        "growth_edge": "Your growth edge is to notice the distortion that can form around contribution. When distorted, contribution may become people-pleasing, emotional labor, or trying to hold connection at the cost of truth. The invitation is to let service become cleaner: neither hiding your gift nor overextending it to earn belonging, approval, or significance.",
+        "integration_key": "Integration begins by honoring the way contribution actually moves through you. Natural fields may include relationship work, mediation, and community care. Choose expressions that are aligned with capacity, timing, and truth rather than pressure or comparison.",
+        "one_week_practice": "For one week, notice one place where your presence, choice, listening, clarity, structure, or care already contributes. Do not measure it by applause. Write one sentence each day: today, my contribution felt most honest when…",
+        "wisewave_reflection": "You are not here to hold everyone together. You are here to show what truthful connection can feel like."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S8-03",
+      "display_name": "Contribution Through Insight",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S8 pattern, Contribution Through Insight, describes how your presence and gifts may naturally contribute to the world around you. Your contribution comes through seeing patterns, naming what is hidden, and translating complexity into clarity. This is not about public status, productivity, or proving your value. It is about the quality of contribution that becomes possible when your blueprint is lived with integrity.",
+        "how_this_may_show_up": "You may notice this layer in the way you affect rooms, relationships, teams, communities, or creative fields. Contribution flows when insight becomes grounded enough to be useful, compassionate, and actionable. Sometimes your contribution may be visible; sometimes it may be quiet, relational, structural, or deeply felt without needing to become performance.",
+        "core_gift": "The gift of Contribution Through Insight is that your life can serve something larger without erasing you. You may be learning helps others understand what they could not yet articulate. When this gift matures, contribution becomes a natural extension of who you are, not a demand to be more useful, impressive, or constantly available.",
+        "growth_edge": "Your growth edge is to notice the distortion that can form around contribution. When distorted, contribution may become over-analysis, intellectual distance, or using insight to avoid vulnerability. The invitation is to let service become cleaner: neither hiding your gift nor overextending it to earn belonging, approval, or significance.",
+        "integration_key": "Integration begins by honoring the way contribution actually moves through you. Natural fields may include strategy, writing, and teaching. Choose expressions that are aligned with capacity, timing, and truth rather than pressure or comparison.",
+        "one_week_practice": "For one week, notice one place where your presence, choice, listening, clarity, structure, or care already contributes. Do not measure it by applause. Write one sentence each day: today, my contribution felt most honest when…",
+        "wisewave_reflection": "Your insight becomes medicine when it lands gently enough for reality to change."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S8-04",
+      "display_name": "Contribution Through Structure",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S8 pattern, Contribution Through Structure, describes how your presence and gifts may naturally contribute to the world around you. Your contribution is expressed through building systems, rhythms, containers, and practical forms that allow growth to become sustainable. This is not about public status, productivity, or proving your value. It is about the quality of contribution that becomes possible when your blueprint is lived with integrity.",
+        "how_this_may_show_up": "You may notice this layer in the way you affect rooms, relationships, teams, communities, or creative fields. Contribution flows when structure serves aliveness rather than control. Sometimes your contribution may be visible; sometimes it may be quiet, relational, structural, or deeply felt without needing to become performance.",
+        "core_gift": "The gift of Contribution Through Structure is that your life can serve something larger without erasing you. You may be learning helps vision become usable, repeatable, and grounded. When this gift matures, contribution becomes a natural extension of who you are, not a demand to be more useful, impressive, or constantly available.",
+        "growth_edge": "Your growth edge is to notice the distortion that can form around contribution. When distorted, contribution may become rigidity, perfectionism, or managing every detail to avoid uncertainty. The invitation is to let service become cleaner: neither hiding your gift nor overextending it to earn belonging, approval, or significance.",
+        "integration_key": "Integration begins by honoring the way contribution actually moves through you. Natural fields may include operations, education, and product systems. Choose expressions that are aligned with capacity, timing, and truth rather than pressure or comparison.",
+        "one_week_practice": "For one week, notice one place where your presence, choice, listening, clarity, structure, or care already contributes. Do not measure it by applause. Write one sentence each day: today, my contribution felt most honest when…",
+        "wisewave_reflection": "A true container does not imprison life. It gives life a place to grow."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S8-05",
+      "display_name": "Contribution Through Transformation",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S8 pattern, Contribution Through Transformation, describes how your presence and gifts may naturally contribute to the world around you. Your contribution moves through helping people, projects, or systems cross thresholds of change. This is not about public status, productivity, or proving your value. It is about the quality of contribution that becomes possible when your blueprint is lived with integrity.",
+        "how_this_may_show_up": "You may notice this layer in the way you affect rooms, relationships, teams, communities, or creative fields. Contribution flows when you stops dramatizing transformation and begins holding change with steadiness. Sometimes your contribution may be visible; sometimes it may be quiet, relational, structural, or deeply felt without needing to become performance.",
+        "core_gift": "The gift of Contribution Through Transformation is that your life can serve something larger without erasing you. You may be learning can meet endings, transitions, and deep renewal without turning away. When this gift matures, contribution becomes a natural extension of who you are, not a demand to be more useful, impressive, or constantly available.",
+        "growth_edge": "Your growth edge is to notice the distortion that can form around contribution. When distorted, contribution may become intensity, rescuing, or seeking transformation through chaos. The invitation is to let service become cleaner: neither hiding your gift nor overextending it to earn belonging, approval, or significance.",
+        "integration_key": "Integration begins by honoring the way contribution actually moves through you. Natural fields may include coaching, change leadership, and healing spaces. Choose expressions that are aligned with capacity, timing, and truth rather than pressure or comparison.",
+        "one_week_practice": "For one week, notice one place where your presence, choice, listening, clarity, structure, or care already contributes. Do not measure it by applause. Write one sentence each day: today, my contribution felt most honest when…",
+        "wisewave_reflection": "Transformation does not need to be violent to be real. Your contribution is to make change conscious."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S8-06",
+      "display_name": "Contribution Through Healing",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S8 pattern, Contribution Through Healing, describes how your presence and gifts may naturally contribute to the world around you. Your contribution is expressed through repair, care, emotional attunement, and helping what has been fragmented return to wholeness. This is not about public status, productivity, or proving your value. It is about the quality of contribution that becomes possible when your blueprint is lived with integrity.",
+        "how_this_may_show_up": "You may notice this layer in the way you affect rooms, relationships, teams, communities, or creative fields. Contribution flows when care is offered from fullness rather than from the need to be needed. Sometimes your contribution may be visible; sometimes it may be quiet, relational, structural, or deeply felt without needing to become performance.",
+        "core_gift": "The gift of Contribution Through Healing is that your life can serve something larger without erasing you. You may be learningse presence can soften pain when boundaries and clarity remain intact. When this gift matures, contribution becomes a natural extension of who you are, not a demand to be more useful, impressive, or constantly available.",
+        "growth_edge": "Your growth edge is to notice the distortion that can form around contribution. When distorted, contribution may become self-sacrifice, emotional absorption, or carrying wounds that belong to others. The invitation is to let service become cleaner: neither hiding your gift nor overextending it to earn belonging, approval, or significance.",
+        "integration_key": "Integration begins by honoring the way contribution actually moves through you. Natural fields may include healing arts, support roles, and emotional education. Choose expressions that are aligned with capacity, timing, and truth rather than pressure or comparison.",
+        "one_week_practice": "For one week, notice one place where your presence, choice, listening, clarity, structure, or care already contributes. Do not measure it by applause. Write one sentence each day: today, my contribution felt most honest when…",
+        "wisewave_reflection": "You can be a healing presence without becoming anyone's source."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S8-07",
+      "display_name": "Contribution Through Collective Vision",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S8 pattern, Contribution Through Collective Vision, describes how your presence and gifts may naturally contribute to the world around you. Your contribution is expressed through seeing the larger pattern and helping individual gifts find their place in a wider whole. This is not about public status, productivity, or proving your value. It is about the quality of contribution that becomes possible when your blueprint is lived with integrity.",
+        "how_this_may_show_up": "You may notice this layer in the way you affect rooms, relationships, teams, communities, or creative fields. Contribution flows when vision includes practical responsibility and remains grounded in shared life, not inflated identity. Sometimes your contribution may be visible; sometimes it may be quiet, relational, structural, or deeply felt without needing to become performance.",
+        "core_gift": "The gift of Contribution Through Collective Vision is that your life can serve something larger without erasing you. You may be learning is learning to serve not status, but collective coherence. When this gift matures, contribution becomes a natural extension of who you are, not a demand to be more useful, impressive, or constantly available.",
+        "growth_edge": "Your growth edge is to notice the distortion that can form around contribution. When distorted, contribution may become savior identity, grandiosity, or losing the human details inside a large vision. The invitation is to let service become cleaner: neither hiding your gift nor overextending it to earn belonging, approval, or significance.",
+        "integration_key": "Integration begins by honoring the way contribution actually moves through you. Natural fields may include collective work, social impact, and spiritual communities. Choose expressions that are aligned with capacity, timing, and truth rather than pressure or comparison.",
+        "one_week_practice": "For one week, notice one place where your presence, choice, listening, clarity, structure, or care already contributes. Do not measure it by applause. Write one sentence each day: today, my contribution felt most honest when…",
+        "wisewave_reflection": "The whole does not ask you to disappear. It asks you to contribute from your rightful place."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    }
+  ]
+}

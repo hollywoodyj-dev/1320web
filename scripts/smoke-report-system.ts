@@ -75,4 +75,15 @@ assert(!/\b(score|rank|ranking)\b/.test(s7Text), "S7 blocks avoid score/rank lan
 console.log("PASS smoke:report-system");
 console.log(`  pages=${FULL_REPORT_PAGE_COUNT} sampleLocked=${lockedSamplePages.length}`);
 
+const previewReport = buildCanonicalSampleReport();
+const samplePagesFromPreview = buildSampleReportPages();
+assert(
+  samplePagesFromPreview.filter((page) => page.access === "locked-preview").length === 9,
+  "sample report web route will lock 9 advanced/tail sections",
+);
+assert(
+  Boolean(normalizeReportSegment(previewReport, "S1").commercialBlocks.opening_essence),
+  "S1 opening essence resolves for web segment cards",
+);
+
 export {};

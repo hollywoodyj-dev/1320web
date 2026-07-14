@@ -91,3 +91,12 @@ Screenshots saved:
 - This pass verifies the new preview foundation only.
 - `/full-report-v2` and `/mobile-report-v2` remain legacy viewers by design for this step.
 - PDF download API wiring remains out of scope for this pass.
+
+## Step 3 — Production Web Migration (2026-07-14)
+
+- `/full-report-v2` now uses `UnifiedReportWebShell` + `ReportRenderer` with `reportType="sample"` and `surface="web"`.
+- `/my-report/[reportId]` (entitled) uses `reportType="full"` with close link to `/account`.
+- Legacy `FullReportV2Viewer` retained in codebase for reference; no longer mounted on production web routes.
+- Mobile sample still redirects to `/mobile-report-v2` (Step 5).
+
+**Pending Lumen re-check:** production `/full-report-v2` sample locks + scroll layout; entitled full report opens all sections.

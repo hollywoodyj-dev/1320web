@@ -4,6 +4,69 @@
   padding: 72px 24px;
 }
 
+.unified-report-web-shell {
+  position: relative;
+  min-height: 100%;
+}
+
+.unified-report-web-banner {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 10px 16px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--report-text-soft);
+  background: rgba(8, 14, 30, 0.92);
+  border-bottom: 1px solid rgba(216, 183, 111, 0.28);
+}
+
+.unified-report-web-close {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 30;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--report-text-main);
+  background: rgba(8, 14, 30, 0.88);
+  border: 1px solid rgba(216, 183, 111, 0.38);
+  text-decoration: none;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.page-shell--unified-report-web {
+  position: relative;
+  inset: auto;
+  z-index: 40;
+  width: 100%;
+  min-height: 100dvh;
+  height: auto;
+  max-height: none;
+  overflow: auto;
+  background: #020712;
+}
+
+html:has(.page-shell--unified-report-web),
+body:has(.page-shell--unified-report-web) {
+  overflow: auto;
+  height: auto;
+  min-height: 100%;
+  background: #020712;
+}
+
+.page-shell--unified-report-web .page-frame--full-report,
+.page-shell--unified-report-web .inner-main--full-report {
+  height: auto;
+  min-height: 100dvh;
+  overflow: visible;
+}
+
 .report-root[data-surface="web"] .report-page {
   width: min(1120px, 100%);
   margin: 0 auto 48px;

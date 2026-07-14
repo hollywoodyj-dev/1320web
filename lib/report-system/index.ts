@@ -32,3 +32,4 @@ export {
   normalizeReportSegment,
   sanitizeReportText,
 } from "@/lib/report-system/normalizeReportContent";
+export { buildCanonicalReportFromPreview } from "@/lib/report-system/buildCanonicalReportFromPreview";

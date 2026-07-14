@@ -13,6 +13,12 @@ type PageShellProps = {
   headerAccount?: { label: string; entitledReportId: string | null } | null;
 };
 
+function isUnifiedReportWebRoute(pathname: string | null): boolean {
+  if (!pathname) return false;
+  if (pathname === "/full-report-v2") return true;
+  return /^\/my-report\/[^/]+$/.test(pathname);
+}
+
 function isImmersiveReportRoute(pathname: string | null): boolean {
   if (!pathname) return false;
   if (
@@ -36,14 +42,21 @@ export function PageShell({ children, leadsEnabled, headerAccount }: PageShellPr
   const pathname = usePathname();
   const immersive = isImmersiveReportRoute(pathname);
   const mobileReport = isMobileReportRoute(pathname);
+  const unifiedWebReport = isUnifiedReportWebRoute(pathname);
 
   if (immersive) {
+    const shellClass = mobileReport
+      ? "page-shell--mobile-report"
+      : unifiedWebReport
+        ? "page-shell--unified-report-web"
+        : "page-shell--full-report";
+
     return (
       <main
         className={[
           "page-shell",
           "page-shell-inner",
-          mobileReport ? "page-shell--mobile-report" : "page-shell--full-report",
+          shellClass,
         ].join(" ")}
       >
         {!mobileReport ? <SkipLink /> : null}

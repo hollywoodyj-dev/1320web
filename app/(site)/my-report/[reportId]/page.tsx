@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FullReportV2Viewer } from "@/components/full-report-v2/full-report-v2-viewer";
+import { UnifiedReportWebShell } from "@/components/report-system/UnifiedReportWebShell";
 import { getEntitledReportAccess } from "@/lib/auth/access";
 import { buildCanonicalReport } from "@/lib/canonical-report";
 import { SectionCard } from "@/components/section-card";
+import "@/styles/report-system/index.css";
 
 export const dynamic = "force-dynamic";
 
@@ -72,20 +73,18 @@ export default async function MyReportPage({ params }: PageProps) {
   );
   const preparedFor = access.user.first_name?.trim() || "You";
 
-  const payload = buildCanonicalReport({
+  const canonicalReport = buildCanonicalReport({
     name: preparedFor,
     birth_date: birthDateLabel,
     birth_date_display: birthDateDisplay,
     report_type: "Full Soul Origin Report",
-  }).payload;
+  });
 
   return (
-    <div className="page-shell-inner page-shell--full-report">
-      <div className="page-frame page-frame--full-report">
-        <main className="inner-main inner-main--full-report">
-          <FullReportV2Viewer payload={payload} closeHref="/account" />
-        </main>
-      </div>
-    </div>
+    <UnifiedReportWebShell
+      reportType="full"
+      data={canonicalReport}
+      closeHref="/account"
+    />
   );
 }

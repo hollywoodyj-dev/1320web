@@ -99,4 +99,42 @@ Screenshots saved:
 - Legacy `FullReportV2Viewer` retained in codebase for reference; no longer mounted on production web routes.
 - Mobile sample still redirects to `/mobile-report-v2` (Step 5).
 
-**Pending Lumen re-check:** production `/full-report-v2` sample locks + scroll layout; entitled full report opens all sections.
+### Lumen Step 3 Re-check
+
+**Verdict:** PASS WITH NOTES — `/full-report-v2` sample migration passes; one S7 locked-preview copy issue was fixed locally and needs deploy; entitled `/my-report/[reportId]` full-renderer path still needs an authenticated magic-link session for product verification.
+
+Production `/full-report-v2?view=desktop`:
+
+- PASS: route rendered `UnifiedReportWebShell` + `ReportRenderer`.
+- PASS: `data-report-type="sample"` and `data-surface="web"`.
+- PASS: `17` scroll pages rendered in canonical order.
+- PASS: `9` locked preview blocks rendered for S4-S9 plus practice / journal / closing.
+- PASS: sample banner visible: `Sample report preview — foundation layers S1–S0 are open...`.
+- PASS: desktop web card grid remained spacious two-column (`493px 493px` at 1440px viewport).
+- PASS: no source-layer/template leak terms found.
+- NOTE: deployed S7 locked preview text still contained `ranking or scores`. Lumen patched `lib/report-system/report-access.ts` locally to remove score/rank language and verified the corrected local route.
+
+Local fixed `/full-report-v2?view=desktop` on `http://127.0.0.1:3016`:
+
+- PASS: `17` pages, `9` locks, sample banner, canonical page map, and two-column grid preserved.
+- PASS: S6 still contains `Value & Receiving`.
+- PASS: S7 locked preview no longer contains `%`, percent, percentage, score, ranking, ranked, or rank language.
+- PASS: no source-layer/template leak terms found.
+
+`/my-report/fa695c92-8593-4cef-9c17-715de202a78b?view=desktop`:
+
+- BLOCKED FOR PRODUCT VERIFICATION: production browser session is unauthenticated and correctly returned `Magic Link Required`.
+- Code inspection confirms the entitled branch renders `UnifiedReportWebShell reportType="full"` with `closeHref="/account"`.
+- Remaining product check: open an authenticated entitled report session and verify all 17 sections are open, no locked preview blocks appear, and close returns to `/account`.
+
+Re-run commands after local S7 copy fix:
+
+- `npm run smoke:report-system` — PASS (`pages=17 sampleLocked=9`)
+- `npm run smoke:commercial-overlay` — PASS
+- `npm run build` — PASS
+
+Screenshots saved:
+
+- `qa-artifacts/unified-step3-full-report-v2-prod-20260714.png`
+- `qa-artifacts/unified-step3-my-report-prod-unauth-20260714.png`
+- `qa-artifacts/unified-step3-full-report-v2-local-fixed-20260714.png`

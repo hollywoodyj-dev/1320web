@@ -51,7 +51,7 @@ export const LOCKED_PREVIEW_COPY: Record<
   "s7-sovereignty": {
     title: "S7 · Soul Sovereignty",
     description:
-      "Strengthen boundaries, choice, and self-authority — qualitative integration, not ranking or scores.",
+      "Strengthen boundaries, choice, and self-authority through qualitative integration and lived discernment.",
   },
   "s8-contribution": {
     title: "S8 · Soul Contribution",

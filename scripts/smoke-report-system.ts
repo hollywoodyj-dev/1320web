@@ -3,6 +3,7 @@ import {
   buildSampleReportPages,
   FULL_REPORT_PAGE_COUNT,
   FULL_REPORT_PAGE_MAP,
+  LOCKED_PREVIEW_COPY,
   normalizeReportSegment,
   SAMPLE_REPORT_ACCESS,
 } from "@/lib/report-system";
@@ -71,6 +72,9 @@ assert(
 const s7Text = Object.values(normalizeReportSegment(report, "S7").commercialBlocks).join(" ").toLowerCase();
 assert(!/\b\d{1,3}%\b/.test(s7Text), "S7 blocks avoid percentage language");
 assert(!/\b(score|rank|ranking)\b/.test(s7Text), "S7 blocks avoid score/rank language");
+
+const s7LockedPreview = LOCKED_PREVIEW_COPY["s7-sovereignty"].description.toLowerCase();
+assert(!/\b(score|rank|ranking|ranked|percent|percentage)\b/.test(s7LockedPreview), "S7 locked preview avoids score/rank language");
 
 console.log("PASS smoke:report-system");
 console.log(`  pages=${FULL_REPORT_PAGE_COUNT} sampleLocked=${lockedSamplePages.length}`);

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { LockedPreviewBlock } from "@/components/report-system/LockedPreviewBlock";
 import { ReportDisclaimerPage } from "@/components/report-system/ReportDisclaimerPage";
 import { ReportHero } from "@/components/report-system/ReportHero";
@@ -13,6 +13,11 @@ import { ReportRoot } from "@/components/report-system/ReportRoot";
 import { ReportSegmentGrid } from "@/components/report-system/ReportSegmentGrid";
 import { ReportSegmentPage } from "@/components/report-system/ReportSegmentPage";
 import { ReportInsightCard } from "@/components/report-system/ReportInsightCard";
+import {
+  readStoredMobilePageIndex,
+  useUnifiedReportMobileSwipe,
+  writeStoredMobilePageIndex,
+} from "@/components/report-system/use-unified-report-mobile-nav";
 import type { CanonicalFullReport } from "@/lib/canonical-report/types";
 import { LOCKED_PREVIEW_COPY } from "@/lib/report-system/report-access";
 import { buildReportPages } from "@/lib/report-system/buildReportPages";
@@ -107,25 +112,49 @@ function renderPageBody(page: BuiltReportPage, data: CanonicalFullReport) {
 
 export function ReportRenderer({ reportType, surface, data }: ReportRendererProps) {
   const pages = useMemo(() => buildReportPages(reportType), [reportType]);
+  const stageRef = useRef<HTMLDivElement>(null);
   const [mobileIndex, setMobileIndex] = useState(0);
+  const [mobileHydrated, setMobileHydrated] = useState(false);
+
+  useEffect(() => {
+    if (surface !== "mobile") return;
+    setMobileIndex(readStoredMobilePageIndex(reportType, pages.length));
+    setMobileHydrated(true);
+  }, [surface, reportType, pages.length]);
+
+  useEffect(() => {
+    if (surface !== "mobile" || !mobileHydrated) return;
+    writeStoredMobilePageIndex(reportType, mobileIndex);
+  }, [surface, reportType, mobileIndex, mobileHydrated]);
+
+  const setMobilePage = useCallback(
+    (index: number) => {
+      setMobileIndex(Math.max(0, Math.min(pages.length - 1, index)));
+    },
+    [pages.length],
+  );
+
+  useUnifiedReportMobileSwipe(stageRef, mobileIndex, pages.length, setMobilePage);
 
   const activeMobilePage = pages[mobileIndex] ?? pages[0];
 
   if (surface === "mobile") {
     return (
       <ReportRoot reportType={reportType} surface={surface}>
-        <ReportPage
-          pageId={activeMobilePage.pageId}
-          pageNumber={activeMobilePage.pageNumber}
-          totalPages={activeMobilePage.totalPages}
-        >
-          {renderPageBody(activeMobilePage, data)}
-        </ReportPage>
+        <div ref={stageRef} className="unified-report-mobile-stage">
+          <ReportPage
+            pageId={activeMobilePage.pageId}
+            pageNumber={activeMobilePage.pageNumber}
+            totalPages={activeMobilePage.totalPages}
+          >
+            {renderPageBody(activeMobilePage, data)}
+          </ReportPage>
+        </div>
         <ReportNavigation
           pageNumber={activeMobilePage.pageNumber}
           totalPages={activeMobilePage.totalPages}
-          onPrevious={() => setMobileIndex((index) => Math.max(0, index - 1))}
-          onNext={() => setMobileIndex((index) => Math.min(pages.length - 1, index + 1))}
+          onPrevious={() => setMobilePage(mobileIndex - 1)}
+          onNext={() => setMobilePage(mobileIndex + 1)}
           disablePrevious={mobileIndex <= 0}
           disableNext={mobileIndex >= pages.length - 1}
         />

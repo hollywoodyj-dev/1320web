@@ -99,6 +99,15 @@ Screenshots saved:
 - Legacy `FullReportV2Viewer` retained in codebase for reference; no longer mounted on production web routes.
 - Mobile sample still redirects to `/mobile-report-v2` (Step 5).
 
+## Step 5 — Production Mobile Migration (2026-07-14)
+
+- `/mobile-report-v2` now uses `UnifiedReportMobileShell` + `ReportRenderer` with `reportType="sample"` and `surface="mobile"`.
+- Mobile navigation: Prev/Next buttons, horizontal swipe, sessionStorage page index persistence.
+- Legacy `MobileReportV2Viewer` (32-page swipe) retained in codebase; no longer mounted on production mobile sample route.
+- `/my-report/[reportId]` on mobile still uses web unified renderer until entitled mobile path is added.
+
+**Pending Lumen re-check:** production `/mobile-report-v2` — 17 pages, 9 locks, swipe/prev-next, sample banner.
+
 ### Lumen Step 3 Re-check
 
 **Verdict:** PASS WITH NOTES — `/full-report-v2` sample migration passes; one S7 locked-preview copy issue was fixed locally and needs deploy; entitled `/my-report/[reportId]` full-renderer path still needs an authenticated magic-link session for product verification.

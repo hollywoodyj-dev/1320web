@@ -1,17 +1,67 @@
 .report-root[data-surface="mobile"] {
   background: #020712;
   padding: 0;
-  min-height: 100vh;
+  min-height: 100dvh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.unified-report-mobile-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  height: 100%;
+  position: relative;
+}
+
+.unified-report-mobile-banner {
+  flex-shrink: 0;
+  padding: 10px 14px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--report-text-soft);
+  background: rgba(8, 14, 30, 0.94);
+  border-bottom: 1px solid rgba(216, 183, 111, 0.24);
+}
+
+.unified-report-mobile-close {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 30;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--report-text-main);
+  background: rgba(8, 14, 30, 0.88);
+  border: 1px solid rgba(216, 183, 111, 0.38);
+  text-decoration: none;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.unified-report-mobile-stage {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .report-root[data-surface="mobile"] .report-page {
   width: 100%;
   max-width: 430px;
-  min-height: 100vh;
+  min-height: 100%;
+  flex: 1;
   margin: 0 auto;
-  padding: 26px 22px 30px;
+  padding: 26px 22px 18px;
   border-radius: 0;
   border: none;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   background:
     radial-gradient(circle at 50% 10%, rgba(216, 183, 111, 0.16), transparent 25%),
     radial-gradient(circle at 82% 30%, rgba(112, 200, 255, 0.16), transparent 34%),
@@ -47,7 +97,9 @@
 }
 
 .report-root[data-surface="mobile"] .report-nav {
+  flex-shrink: 0;
   max-width: 430px;
+  width: 100%;
   margin-inline: auto;
-  padding: 0 22px 24px;
+  padding: 12px 22px calc(16px + env(safe-area-inset-bottom, 0px));
 }

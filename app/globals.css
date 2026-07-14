@@ -3966,8 +3966,16 @@ body:has(.page-shell--mobile-report) {
   gap: 0;
 }
 
+.page-shell--mobile-report #main-content:has(.unified-report-mobile-shell) {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 .page-shell--mobile-report,
-.page-shell-inner:has(.mobile-report-v2-root) {
+.page-shell-inner:has(.mobile-report-v2-root),
+.page-shell-inner:has(.unified-report-mobile-shell) {
   min-height: 100dvh;
   height: 100dvh;
   max-height: 100dvh;

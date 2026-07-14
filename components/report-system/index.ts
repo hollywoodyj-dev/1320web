@@ -15,3 +15,4 @@ export { ReportSegmentGrid } from "./ReportSegmentGrid";
 export { ReportSegmentPage } from "./ReportSegmentPage";
 export { ReportShell } from "./ReportShell";
 export { UnifiedReportWebShell } from "./UnifiedReportWebShell";
+export { UnifiedReportMobileShell } from "./UnifiedReportMobileShell";

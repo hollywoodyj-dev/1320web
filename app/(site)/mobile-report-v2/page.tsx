@@ -1,19 +1,22 @@
 import type { Metadata } from "next";
-import { MobileReportV2Viewer } from "@/components/mobile-report-v2/mobile-report-v2-viewer";
-import { buildFullReportV2PreviewPayload } from "@/lib/full-report-v2/resolve-preview-birth-date-input";
+import { UnifiedReportMobileShell } from "@/components/report-system/UnifiedReportMobileShell";
+import { buildCanonicalReportFromPreview } from "@/lib/report-system/buildCanonicalReportFromPreview";
 import { resolveBirthDateFromRequest } from "@/lib/resolve-birth-date";
-import "@/styles/mobile-report-v2/index.css";
+import "@/styles/report-system/index.css";
 
 export const metadata: Metadata = {
-  title: "Mobile Report v2 · Cover Preview",
+  title: "Sample Full Report | 1320 Soul Code",
   description:
-    "Mobile-first premium cover for the 1320 Soul Origin Code System full report.",
+    "Mobile sample report — foundation layers open, advanced sections show locked previews.",
   robots: { index: false },
 };
 
 export const dynamic = "force-dynamic";
 
 type SearchParams = Record<string, string | string[] | undefined>;
+
+const SAMPLE_BANNER =
+  "Sample report — S1–S0 open. Advanced sections show locked previews until you unlock the Full Report.";
 
 export default async function MobileReportV2Page({
   searchParams,
@@ -22,10 +25,12 @@ export default async function MobileReportV2Page({
 }) {
   const params = await searchParams;
   const birth = await resolveBirthDateFromRequest(params);
-  const payload = buildFullReportV2PreviewPayload(birth, {
+  const report = buildCanonicalReportFromPreview(birth, {
     name: "Kate Lu",
     birth_date_display: "22 May 1980",
   });
 
-  return <MobileReportV2Viewer payload={payload} />;
+  return (
+    <UnifiedReportMobileShell reportType="sample" data={report} banner={SAMPLE_BANNER} />
+  );
 }

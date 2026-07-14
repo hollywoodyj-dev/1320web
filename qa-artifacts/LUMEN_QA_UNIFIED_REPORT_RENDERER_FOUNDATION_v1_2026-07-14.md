@@ -106,7 +106,35 @@ Screenshots saved:
 - Legacy `MobileReportV2Viewer` (32-page swipe) retained in codebase; no longer mounted on production mobile sample route.
 - `/my-report/[reportId]` on mobile still uses web unified renderer until entitled mobile path is added.
 
-**Pending Lumen re-check:** production `/mobile-report-v2` — 17 pages, 9 locks, swipe/prev-next, sample banner.
+### Lumen Step 5 Re-check
+
+**Verdict:** PASS WITH NOTES — production `/mobile-report-v2` now uses the unified sample mobile renderer and passes the requested Step 5 checks. Entitled `/my-report/[reportId]` mobile remains out of scope for this pass.
+
+Command checks on commit `aee2308`:
+
+- `npm run build` — PASS
+- `npm run smoke:report-system` — PASS (`pages=17 sampleLocked=9`)
+- `npm run smoke:commercial-overlay` — PASS
+
+Production `/mobile-report-v2` at 390px width:
+
+- PASS: rendered `.report-root` with `data-surface="mobile"` and `data-report-type="sample"`.
+- PASS: `UnifiedReportMobileShell` sample banner visible: `Sample report — S1–S0 open. Advanced sections show locked previews until you unlock the Full Report.`
+- PASS: one active `.report-page` at a time with single-column card grid (`346px` at 390px viewport).
+- PASS: Prev/Next navigation visible; first page disables Prev and enables Next.
+- PASS: full Prev/Next walk produced the same 17-page order as web sample: `cover`, `blueprint-overview`, `s1-origin`, `s3-vibration`, `s2-mirror`, `s0-void`, `integrated-foundation`, `s4-shadow`, `s5-mission`, `s6-value`, `s7-sovereignty`, `s8-contribution`, `s9-return`, `seven-day-practice`, `reflection-journal`, `closing-reflection`, `final-disclaimer`.
+- PASS: exactly 9 locked previews appeared: S4-S9 plus `seven-day-practice`, `reflection-journal`, and `closing-reflection`.
+- PASS: horizontal swipe handler moved forward and backward (`s2-mirror` → `s0-void` → `s2-mirror`) using touch events.
+- PASS: sessionStorage page persistence worked; stored index `4` survived reload and returned to `s2-mirror`.
+- PASS: S6 locked preview preserved `Value & Receiving`.
+- PASS: S7 locked preview did not contain `%`, percent, percentage, score, ranking, ranked, or rank language.
+- PASS: no source-layer/template leak terms found.
+- PASS WITH NOTE: mobile shell min-height matched viewport (`844px` in 390x844 test) and nav used bottom padding. Browser environment reported safe-area inset as `0px`, so physical-device notch inset was not separately validated.
+
+Screenshots saved:
+
+- `qa-artifacts/unified-step5-mobile-prod-cover-20260714.png`
+- `qa-artifacts/unified-step5-mobile-prod-s7-locked-20260714.png`
 
 ### Lumen Step 3 Re-check
 

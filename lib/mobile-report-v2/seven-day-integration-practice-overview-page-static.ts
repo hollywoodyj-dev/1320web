@@ -8,14 +8,23 @@ export const MOBILE_7DIP_BRAND_SUBTITLE = "Full Soul Origin Report";
 
 export const MOBILE_7DIP_PAGE_INDEX = "28";
 
-export const MOBILE_7DIP_KICKER = "7-Day Integration";
+export const MOBILE_7DIP_KICKER = "Full Report Practice";
 
-export const MOBILE_7DIP_TITLE_LINE = "Integration Practice";
+export const MOBILE_7DIP_TITLE_LINE = "7-Day Integration";
 
-export const MOBILE_7DIP_TITLE_EMPHASIS = "Overview";
+export const MOBILE_7DIP_TITLE_EMPHASIS = "Practice Overview";
 
 export const MOBILE_7DIP_SUBTITLE =
-  "A 7-day practice journey to integrate your full S0–S9 Soul Blueprint.";
+  "These 7 daily themes guide you to integrate all Soul Blueprint layers through reflection and action.";
+
+export const MOBILE_7DIP_TIPS_TITLE = "Integration Tips";
+
+export const MOBILE_7DIP_TIPS = [
+  { icon: "◷", lines: ["15–30 min", "Each Day"] },
+  { icon: "✎", lines: ["Write in", "Journal"] },
+  { icon: "♧", lines: ["Small Actions", "Big Impact"] },
+  { icon: "♡", lines: ["Be Patient &", "Compassionate"] },
+] as const;
 
 export const MOBILE_7DIP_OVERVIEW_ICON = "✷";
 

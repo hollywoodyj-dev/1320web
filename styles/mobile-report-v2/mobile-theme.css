@@ -1,16 +1,17 @@
 /* Mobile Report v2 — theme tokens */
 
 .mobile-report-v2-root {
-  --mr-v2-bg-deep: #050d19;
+  --mr-v2-bg-deep: #030814;
   --mr-v2-bg-main: #081526;
-  --mr-v2-text-main: #f5ead6;
-  --mr-v2-text-soft: rgba(245, 234, 214, 0.78);
-  --mr-v2-text-muted: rgba(245, 234, 214, 0.56);
-  --mr-v2-gold: #d6b56d;
-  --mr-v2-gold-bright: #f4d88a;
-  --mr-v2-panel: rgba(5, 14, 27, 0.74);
-  --mr-v2-panel-strong: rgba(5, 14, 27, 0.88);
-  --mr-v2-font-display: "Cormorant Garamond", Georgia, serif;
+  --mr-v2-text-main: #f7ecd8;
+  --mr-v2-text-soft: rgba(247, 236, 216, 0.78);
+  --mr-v2-text-muted: rgba(247, 236, 216, 0.56);
+  --mr-v2-gold: #d8b76f;
+  --mr-v2-gold-bright: #f6d98a;
+  --mr-v2-panel: rgba(9, 16, 32, 0.74);
+  --mr-v2-panel-strong: rgba(12, 18, 38, 0.88);
+  --mr-v2-panel-border: rgba(216, 183, 111, 0.42);
+  --mr-v2-font-display: Georgia, "Times New Roman", serif;
   --mr-v2-font-ui: Inter, "Avenir Next", Montserrat, Arial, sans-serif;
 }
 

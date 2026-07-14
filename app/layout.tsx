@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import { getSiteUrl } from "@/lib/platform-config";
 import "./globals.css";
+import "@/styles/site-density-v1.css";
 import "@/styles/full-report-v2/report-global.css";
 import "@/styles/full-report-v2/report-theme-dark.css";
 import "@/styles/full-report-v2/report-components.css";

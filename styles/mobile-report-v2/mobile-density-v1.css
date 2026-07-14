@@ -1,0 +1,344 @@
+/* Visual Density v1 — mobile report tokens + reusable patterns */
+
+.mobile-report-v2-root {
+  --mr-v2-bg-deep: #030814;
+  --mr-v2-bg-main: #081526;
+  --mr-v2-text-main: #f7ecd8;
+  --mr-v2-text-soft: rgba(247, 236, 216, 0.78);
+  --mr-v2-text-muted: rgba(247, 236, 216, 0.56);
+  --mr-v2-gold: #d8b76f;
+  --mr-v2-gold-bright: #f6d98a;
+  --mr-v2-panel: rgba(9, 16, 32, 0.74);
+  --mr-v2-panel-strong: rgba(12, 18, 38, 0.88);
+  --mr-v2-panel-border: rgba(216, 183, 111, 0.42);
+  --mr-v2-purple: #8c5cff;
+  --mr-v2-purple-soft: rgba(140, 92, 255, 0.24);
+  --mr-v2-radius-xl: 28px;
+  --mr-v2-radius-lg: 22px;
+  --mr-v2-radius-md: 16px;
+  --mr-v2-shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.42);
+  --mr-v2-font-ui: Inter, "Avenir Next", Montserrat, Arial, sans-serif;
+  --mr-v2-font-display: Georgia, "Times New Roman", serif;
+  --mr-v2-body-size: 16.5px;
+  --mr-v2-body-lh: 1.65;
+}
+
+.mobile-report-v2-root .mr-v2-screen {
+  font-family: var(--mr-v2-font-ui);
+  font-size: var(--mr-v2-body-size);
+  line-height: var(--mr-v2-body-lh);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--mr-v2-text-main);
+}
+
+.mobile-report-v2-root .mr-v2-screen p,
+.mobile-report-v2-root .mr-v2-screen li {
+  font-weight: 400;
+}
+
+.mobile-report-v2-root .mr-v2-screen h1,
+.mobile-report-v2-root .mr-v2-screen h2,
+.mobile-report-v2-root .mr-v2-screen h3 {
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+
+/* Density content shell */
+.mr-density-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  padding: 26px 24px 28px;
+  gap: 0;
+}
+
+/* Hero */
+.mr-density-hero {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.mr-density-ornament {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--mr-v2-gold-bright);
+  background: rgba(216, 183, 111, 0.08);
+  border: 1px solid rgba(216, 183, 111, 0.28);
+  font-size: 18px;
+}
+
+.mr-density-eyebrow {
+  color: var(--mr-v2-gold-bright);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+.mr-density-hero-title {
+  margin: 0;
+  font-family: var(--mr-v2-font-display);
+  font-size: clamp(32px, 8vw, 38px);
+  line-height: 1.06;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: var(--mr-v2-text-main);
+}
+
+.mr-density-divider {
+  width: 160px;
+  height: 1px;
+  margin: 18px auto;
+  background: linear-gradient(90deg, transparent, rgba(216, 183, 111, 0.8), transparent);
+  position: relative;
+}
+
+.mr-density-divider::after {
+  content: "✦";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -52%);
+  color: var(--mr-v2-gold-bright);
+  font-size: 14px;
+}
+
+.mr-density-hero-desc {
+  margin: 0 auto;
+  max-width: 330px;
+  color: var(--mr-v2-text-soft);
+  font-size: 15px;
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Practice cards */
+.mr-density-practice-list {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 18px;
+}
+
+.mr-density-practice-card {
+  display: grid;
+  grid-template-columns: 48px 1fr 18px;
+  align-items: center;
+  gap: 12px;
+  min-height: 62px;
+  padding: 9px 14px 9px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.035)),
+    rgba(10, 16, 34, 0.72);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.mr-density-practice-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.mr-density-practice-icon .fr-v2-signature-code-icon {
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+}
+
+.mr-density-practice-icon--origin {
+  background: radial-gradient(circle at 30% 20%, #ffe9a9, #9c7127 72%);
+}
+.mr-density-practice-icon--expression {
+  background: radial-gradient(circle at 30% 20%, #a8eeff, #2167b8 72%);
+}
+.mr-density-practice-icon--mirror {
+  background: radial-gradient(circle at 30% 20%, #ffb6cd, #93435f 72%);
+}
+.mr-density-practice-icon--void {
+  background: radial-gradient(circle at 30% 20%, #d8b7ff, #6036b8 72%);
+}
+.mr-density-practice-icon--shadow {
+  background: radial-gradient(circle at 30% 20%, #c7f45f, #4f762e 72%);
+}
+.mr-density-practice-icon--mission {
+  background: radial-gradient(circle at 30% 20%, #ffe2a0, #a36a23 72%);
+}
+.mr-density-practice-icon--value {
+  background: radial-gradient(circle at 30% 20%, #ffb4e7, #9a457e 72%);
+}
+
+.mr-density-practice-meta {
+  min-width: 0;
+}
+
+.mr-density-practice-title-row {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  margin-bottom: 2px;
+}
+
+.mr-density-practice-day {
+  color: var(--mr-v2-gold-bright);
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.mr-density-practice-title {
+  color: var(--mr-v2-text-main);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mr-density-practice-subtitle {
+  margin: 0;
+  color: var(--mr-v2-text-soft);
+  font-size: 12px;
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mr-density-chevron {
+  color: var(--mr-v2-gold-bright);
+  font-size: 22px;
+  opacity: 0.9;
+}
+
+/* Tips panel */
+.mr-density-tips-panel {
+  margin-top: 4px;
+  padding: 20px 16px;
+  border-radius: var(--mr-v2-radius-lg);
+  border: 1px solid rgba(216, 183, 111, 0.58);
+  background:
+    linear-gradient(135deg, rgba(216, 183, 111, 0.1), rgba(140, 92, 255, 0.08)),
+    rgba(8, 14, 30, 0.82);
+}
+
+.mr-density-tips-title {
+  text-align: center;
+  color: var(--mr-v2-gold-bright);
+  font-weight: 700;
+  margin: 0 0 16px;
+  letter-spacing: 0.02em;
+}
+
+.mr-density-tips-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.mr-density-tip {
+  text-align: center;
+  color: var(--mr-v2-text-soft);
+  font-size: 11px;
+  line-height: 1.25;
+}
+
+.mr-density-tip-icon {
+  display: block;
+  margin: 0 auto 8px;
+  color: var(--mr-v2-gold-bright);
+  font-size: 23px;
+}
+
+/* Insight card (S1–S9 sections) */
+.report-insight-card {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 16px;
+  padding: 22px;
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03)),
+    rgba(10, 16, 34, 0.72);
+  border: 1px solid rgba(216, 183, 111, 0.28);
+  margin-bottom: 14px;
+}
+
+.report-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--mr-v2-gold-bright);
+  background: rgba(216, 183, 111, 0.12);
+  border: 1px solid rgba(216, 183, 111, 0.32);
+  font-size: 18px;
+}
+
+.report-card-kicker {
+  margin: 0 0 6px;
+  color: var(--mr-v2-gold-bright);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.report-card-body h3 {
+  margin: 0 0 8px;
+  color: var(--mr-v2-text-main);
+  font-size: 22px;
+  line-height: 1.18;
+  font-weight: 600;
+}
+
+.report-card-body p {
+  margin: 0;
+  color: var(--mr-v2-text-soft);
+  font-size: 15.5px;
+  line-height: 1.58;
+  max-width: 100%;
+}
+
+/* Global mobile report spacing pass */
+.mr-v2-screen--density-v1 {
+  height: auto;
+  max-height: none;
+  min-height: var(--mr-v2-viewport, 100dvh);
+  overflow: visible;
+}
+
+.mobile-report-v2-root .mr-v2-screen section + section {
+  margin-top: 4px;
+}
+
+.mobile-report-v2-root .mr-v2-glass-card,
+.mobile-report-v2-root .mr-v2-7dip-glass-card {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 640px) {
+  .mobile-report-v2-root {
+    --mr-v2-body-size: 16.5px;
+  }
+}

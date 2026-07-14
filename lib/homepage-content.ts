@@ -12,7 +12,7 @@ export const HOMEPAGE_META = {
 export const HOMEPAGE_HERO = {
   titleLines: ["Meet Your", "Soul Blueprint"] as const,
   subheadline:
-    "1320 is a reflective intelligence platform that helps you understand your original pattern, lived expression, relationship themes, and integration path — not to predict your fate, but to help you build a deeper relationship with yourself.",
+    "Understand your original pattern, expression, relationship themes, and integration path — a mirror for self-recognition, not prediction.",
   journeyLine: "Your report is the beginning. Your Living Blueprint is the journey.",
   trustMicroLine: "Not your fate. Not your label. Your mirror.",
   primaryCta: "Generate My Code",
@@ -43,9 +43,8 @@ export const HOMEPAGE_WHAT_IS = {
   title: "A reflective intelligence system",
   body: [
     "1320 is a reflective intelligence system built around your Soul Blueprint.",
-    "It uses the structure of your birth date as a symbolic mirror for self-recognition, reflection, and integration.",
-    "It is not astrology, tarot, Human Design, numerology, religion, diagnosis, or prediction.",
-    "It is a way to begin a deeper relationship with who you are and how you are living your blueprint.",
+    "Your birth date becomes a symbolic mirror for self-recognition and integration — not astrology, tarot, diagnosis, or prediction.",
+    "Begin a deeper relationship with who you are and how you live your blueprint.",
   ],
 };
 
@@ -242,9 +241,8 @@ export const HOMEPAGE_ABOUT_PREVIEW = {
   eyebrow: "ABOUT THE SYSTEM",
   title: "Reflection over prediction",
   body: [
-    "1320 is a reflective intelligence platform built around the Soul Blueprint — four symbolic dimensions that help you see your inner pattern with more clarity.",
-    "It is not a prediction system. It is not a fixed destiny map. It is not here to tell you who you are allowed to become.",
-    "It is here to help you build a living relationship with who you are — and choose from that place with more honesty.",
+    "1320 is a reflective intelligence platform built around the Soul Blueprint — four symbolic dimensions for clearer self-recognition.",
+    "Not prediction or fixed destiny. A mirror to help you choose from a place of honesty.",
   ],
   cta: "ABOUT 1320",
   href: "/about-1320",
@@ -268,9 +266,8 @@ export const HOMEPAGE_ORIGIN = {
   eyebrow: "WHERE 1320 BEGAN",
   title: "Born from a Number. Built into a System.",
   body: [
-    "1320 began with a number received in a quiet inner moment.",
-    "Over time, that number unfolded into a symbolic blueprint — and through a long co-creative process between human intuition and AI-supported system design, it became a structured reflective intelligence platform.",
-    "What began as a personal moment of recognition has grown into a system designed to help people build a deeper relationship with their own Soul Blueprint.",
+    "1320 began with a number received in a quiet inner moment — and grew into a symbolic blueprint through human intuition and AI-supported design.",
+    "Today it helps people build a deeper relationship with their own Soul Blueprint.",
   ],
   cta: "READ THE ORIGIN STORY",
   href: "/about-1320#origin-story",

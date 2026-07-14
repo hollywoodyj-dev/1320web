@@ -118,8 +118,6 @@ Screenshots saved:
 - Shared print document: `UnifiedReportPrintDocument` + `ReportRenderer surface="pdf"`
 - PDF generation: `puppeteer-core` + `@sparticuz/chromium` (or `PUPPETEER_EXECUTABLE_PATH` locally)
 
-**Pending Lumen re-check:** PDF HTML pages at 1600×900, print CSS, sample PDF API, entitled PDF API with magic-link session.
-
 ### Lumen Step 5 Re-check
 
 **Verdict:** PASS WITH NOTES — production `/mobile-report-v2` now uses the unified sample mobile renderer and passes the requested Step 5 checks. Entitled `/my-report/[reportId]` mobile remains out of scope for this pass.
@@ -189,3 +187,55 @@ Screenshots saved:
 - `qa-artifacts/unified-step3-full-report-v2-prod-20260714.png`
 - `qa-artifacts/unified-step3-my-report-prod-unauth-20260714.png`
 - `qa-artifacts/unified-step3-full-report-v2-local-fixed-20260714.png`
+
+### Lumen Step 6 Re-check
+
+**Verdict:** PASS WITH NOTES - production sample PDF HTML and sample PDF download API pass. Entitled print/PDF routes remain blocked for product verification without an authenticated magic-link session, as expected.
+
+Command checks on commit `1c46da2`:
+
+- `npm run build` - PASS
+- `npm run smoke:report-pdf` - PASS (`unifiedPages=17`)
+- `npm run smoke:report-system` - PASS (`pages=17 sampleLocked=9`)
+
+Production `/sample-report/print?type=full`:
+
+- PASS: rendered `.report-root` with `data-surface="pdf"` and `data-report-type="full"`.
+- PASS: rendered `17` `.report-page` entries in canonical order: `cover`, `blueprint-overview`, `s1-origin`, `s3-vibration`, `s2-mirror`, `s0-void`, `integrated-foundation`, `s4-shadow`, `s5-mission`, `s6-value`, `s7-sovereignty`, `s8-contribution`, `s9-return`, `seven-day-practice`, `reflection-journal`, `closing-reflection`, `final-disclaimer`.
+- PASS: first PDF page box measured `1600 x 900`.
+- PASS: print CSS loaded with `@page` size `1600px 900px` and zero margin.
+- PASS: no report nav, site header/footer navigation, locked blocks, or visible CTA controls in the full PDF HTML surface.
+- PASS: S6 full PDF page preserved `Value & Receiving`.
+- PASS: S7 full PDF page did not contain `%`, percent, percentage, score, ranking, ranked, or rank language.
+- PASS: no source-layer/template leak terms found.
+
+Production `/sample-report/print?type=sample`:
+
+- PASS: rendered `.report-root` with `data-surface="pdf"` and `data-report-type="sample"`.
+- PASS: rendered `17` pages and exactly `9` locked preview blocks.
+- PASS: locked previews matched S4-S9 plus `seven-day-practice`, `reflection-journal`, and `closing-reflection`.
+- PASS: S6 locked preview preserved `Value & Receiving`.
+- PASS: S7 locked preview did not contain `%`, percent, percentage, score, ranking, ranked, or rank language.
+- PASS WITH NOTE: the DOM still contains nine `Unlock Full Report` anchors inside locked preview blocks, but `.report-print-document .locked-cta { display: none; }` and print media hide them, so they are not visible in the rendered/PDF output.
+
+Production `/api/report/sample/pdf?type=full`:
+
+- PASS: returned HTTP `200`.
+- PASS: `Content-Type: application/pdf`.
+- PASS: `Content-Disposition: attachment; filename="1320-sample-report-full.pdf"`.
+- PASS: downloaded body begins with `%PDF-` and was `4,325,115` bytes.
+
+Entitled routes:
+
+- `/report/fa695c92-8593-4cef-9c17-715de202a78b/print` - blocked in unauthenticated browser session; expected secure access requirement.
+- `/api/report/fa695c92-8593-4cef-9c17-715de202a78b/pdf` - returned HTTP `401` with `{"ok":false,"error":"unauthenticated"}`.
+- Code inspection confirms the entitled PDF API checks report access, then forwards the request cookie to Chromium when generating `/report/[reportId]/print`.
+
+Screenshots / files saved:
+
+- `qa-artifacts/unified-step6-sample-print-full-prod-20260714.png`
+- `qa-artifacts/unified-step6-sample-print-locked-prod-20260714.png`
+- `qa-artifacts/unified-step6-sample-full-prod.pdf`
+- `qa-artifacts/unified-step6-sample-full-prod.headers.txt`
+- `qa-artifacts/unified-step6-entitled-unauth-pdf.headers.txt`
+- `qa-artifacts/unified-step6-entitled-unauth-pdf.body`

@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Age: 0
+Cache-Control: private, no-store
+Content-Disposition: attachment; filename="1320-sample-report-full.pdf"
+Content-Type: application/pdf
+Date: Tue, 14 Jul 2026 12:22:17 GMT
+Server: Vercel
+Strict-Transport-Security: max-age=63072000
+X-Matched-Path: /api/report/sample/pdf
+X-Vercel-Cache: MISS
+X-Vercel-Id: syd1::iad1::gn62t-1784031724879-0b620a181ff0
+Transfer-Encoding: chunked
+

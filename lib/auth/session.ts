@@ -1,6 +1,6 @@
 import { cookies } from "next/headers";
-import { createSession, deleteSession, getSessionUserId } from "@/lib/db/sessions";
-import { getUserById } from "@/lib/db/users";
+import { createSession, deleteSession } from "@/lib/db/sessions";
+import { fetchUserBySessionId } from "@/lib/db/account-bundle";
 import { SESSION_COOKIE_NAME } from "@/lib/platform-config";
 
 const SESSION_MAX_AGE_SECONDS = 60 * 60 * 24 * 30;
@@ -37,11 +37,7 @@ export async function getCurrentUser() {
   if (!sessionId) return null;
 
   try {
-    const userId = await getSessionUserId(sessionId);
-    if (!userId) return null;
-    const user = await getUserById(userId);
-    if (!user) return null;
-    return user;
+    return await fetchUserBySessionId(sessionId);
   } catch {
     return null;
   }

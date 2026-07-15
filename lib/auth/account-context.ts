@@ -1,12 +1,7 @@
 import { cookies } from "next/headers";
-import { getCurrentUser } from "@/lib/auth/session";
+import { fetchAccountCoreBundle } from "@/lib/db/account-bundle";
 import { getSql } from "@/lib/db/client";
-import { userHasEntitlement } from "@/lib/db/entitlements";
-import { listPersonalIntegrationSessionsForUser } from "@/lib/db/platform-sessions";
-import { getLatestSoulReportForUser } from "@/lib/db/reports";
-import { getUserPasswordHashByEmail } from "@/lib/db/users";
-import type { SoulReportRow } from "@/lib/db/types";
-import type { UserRow } from "@/lib/db/types";
+import type { SoulReportRow, UserRow } from "@/lib/db/types";
 import {
   isPersonalIntegrationSessionVariant,
   SESSION_VARIANT_LABELS,
@@ -93,57 +88,55 @@ export async function getHeaderAccountSummary(): Promise<HeaderAccountSummary | 
 export async function getAccountContext(): Promise<AccountContext | null> {
   if (!isDatabaseConfigured()) return null;
 
-  const user = await getCurrentUser();
-  if (!user) return null;
+  const cookieStore = await cookies();
+  const sessionId = cookieStore.get(SESSION_COOKIE_NAME)?.value;
+  if (!sessionId) return null;
 
-  const profileBirth = parseBirthDate(user.birth_date);
-  const report = await getLatestSoulReportForUser(user.id);
-  const birthDate = profileBirth ?? (report ? parseBirthDate(report.birth_date as string) : null);
+  try {
+    const bundle = await fetchAccountCoreBundle(sessionId);
+    if (!bundle) return null;
 
-  let entitledReportId: string | null = null;
-  if (report) {
-    const entitled = await userHasEntitlement({ userId: user.id, reportId: report.id });
-    if (entitled) entitledReportId = report.id;
+    const { user, report, entitledReportId, hasPassword, integrationSessions: rawSessions } = bundle;
+    const profileBirth = parseBirthDate(user.birth_date);
+    const birthDate = profileBirth ?? (report ? parseBirthDate(report.birth_date as string) : null);
+
+    const profileComplete = Boolean(
+      user.first_name?.trim() &&
+        user.last_name?.trim() &&
+        birthDate &&
+        user.email,
+    );
+
+    const integrationSessions: AccountIntegrationSession[] = rawSessions
+      .filter((session) => session.prep_access_token)
+      .map((session) => {
+        const variant =
+          session.session_variant && isPersonalIntegrationSessionVariant(session.session_variant)
+            ? SESSION_VARIANT_LABELS[session.session_variant]
+            : "Personal Integration Session";
+        return {
+          sessionId: session.id,
+          prepPath: `/integration/prep/${session.id}?token=${session.prep_access_token}`,
+          variantLabel: variant,
+          status: session.status,
+          growthEdge: session.growth_edge,
+          createdAt: session.created_at.toISOString().slice(0, 10),
+        };
+      });
+
+    return {
+      user,
+      report,
+      entitledReportId,
+      birthDate,
+      codeString: report?.code_string ?? null,
+      profileComplete,
+      hasPassword,
+      integrationSessions,
+    };
+  } catch {
+    return null;
   }
-
-  const profileComplete = Boolean(
-    user.first_name?.trim() &&
-      user.last_name?.trim() &&
-      birthDate &&
-      user.email,
-  );
-
-  const passwordAuth = await getUserPasswordHashByEmail(user.email);
-  const hasPassword = Boolean(passwordAuth?.passwordHash);
-
-  const rawSessions = await listPersonalIntegrationSessionsForUser(user.id);
-  const integrationSessions: AccountIntegrationSession[] = rawSessions
-    .filter((session) => session.prep_access_token)
-    .map((session) => {
-      const variant =
-        session.session_variant && isPersonalIntegrationSessionVariant(session.session_variant)
-          ? SESSION_VARIANT_LABELS[session.session_variant]
-          : "Personal Integration Session";
-      return {
-        sessionId: session.id,
-        prepPath: `/integration/prep/${session.id}?token=${session.prep_access_token}`,
-        variantLabel: variant,
-        status: session.status,
-        growthEdge: session.growth_edge,
-        createdAt: session.created_at.toISOString().slice(0, 10),
-      };
-    });
-
-  return {
-    user,
-    report,
-    entitledReportId,
-    birthDate,
-    codeString: report?.code_string ?? null,
-    profileComplete,
-    hasPassword,
-    integrationSessions,
-  };
 }
 
 export function accountBirthDateParts(

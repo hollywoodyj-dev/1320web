@@ -26,15 +26,15 @@ import {
 import type { CanonicalFullReport } from "@/lib/canonical-report/types";
 import { LOCKED_PREVIEW_COPY } from "@/lib/report-system/report-access";
 import { buildReportPages } from "@/lib/report-system/buildReportPages";
-import type { BuiltReportPage, ReportRendererProps, ReportSegmentCode } from "@/lib/report-system/report-surface";
+import type { BuiltReportPage, ReportRendererProps, ReportSegmentCode, ReportSurface } from "@/lib/report-system/report-surface";
 
-function renderCoverPage(data: CanonicalFullReport) {
+function renderCoverPage(data: CanonicalFullReport, surface: ReportSurface) {
   const { client, calculation } = data.payload;
 
   return (
     <>
       <ReportHero
-        eyebrow="1320 Soul Code System"
+        eyebrow={surface === "mobile" ? undefined : "1320 Soul Code System"}
         title="Your Soul Blueprint"
         description={`Prepared for ${client.name} · ${client.birth_date_display}`}
       />
@@ -82,7 +82,7 @@ function renderOverviewPage(data: CanonicalFullReport) {
   );
 }
 
-function renderPageBody(page: BuiltReportPage, data: CanonicalFullReport) {
+function renderPageBody(page: BuiltReportPage, data: CanonicalFullReport, surface: ReportSurface) {
   if (page.access === "locked-preview") {
     const copy = LOCKED_PREVIEW_COPY[page.pageId as keyof typeof LOCKED_PREVIEW_COPY];
     return (
@@ -95,7 +95,7 @@ function renderPageBody(page: BuiltReportPage, data: CanonicalFullReport) {
 
   switch (page.pageType) {
     case "cover":
-      return renderCoverPage(data);
+      return renderCoverPage(data, surface);
     case "overview":
       return renderOverviewPage(data);
     case "segment":
@@ -151,8 +151,9 @@ export function ReportRenderer({ reportType, surface, data }: ReportRendererProp
                   pageId={page.pageId}
                   pageNumber={page.pageNumber}
                   totalPages={page.totalPages}
+                  surface={surface}
                 >
-                  {renderPageBody(page, data)}
+                  {renderPageBody(page, data, surface)}
                 </ReportPage>
               </div>
             </div>
@@ -170,8 +171,9 @@ export function ReportRenderer({ reportType, surface, data }: ReportRendererProp
           pageId={page.pageId}
           pageNumber={page.pageNumber}
           totalPages={page.totalPages}
+          surface={surface}
         >
-          {renderPageBody(page, data)}
+          {renderPageBody(page, data, surface)}
         </ReportPage>
       ))}
     </ReportRoot>

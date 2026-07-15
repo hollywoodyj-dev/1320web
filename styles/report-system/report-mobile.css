@@ -79,68 +79,78 @@
   margin-bottom: 24px;
 }
 
-.report-root[data-surface="mobile"] .report-header {
-  flex-wrap: nowrap;
+.report-root[data-surface="mobile"] .report-header--mobile {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) auto;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.report-root[data-surface="mobile"] .report-brand-block--header {
-  flex: 1;
-  min-width: 0;
-  gap: 10px;
-}
-
-.report-root[data-surface="mobile"] .report-brand-block--header .report-brand-copy {
-  display: block;
-  min-width: 0;
-  flex: 1;
-}
-
-.report-root[data-surface="mobile"] .report-brand-block--header .report-brand-name {
-  font-size: 10px;
-  letter-spacing: 0.07em;
-  line-height: 1.1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.report-root[data-surface="mobile"] .report-brand-block--header .report-brand-subtitle {
-  margin-top: 2px;
-  font-size: 9px;
-  letter-spacing: 0.05em;
-  line-height: 1.1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.report-root[data-surface="mobile"] .report-brand-logos {
   gap: 8px;
+  margin-bottom: 16px;
+}
+
+.report-root[data-surface="mobile"] .report-mobile-header-seal {
+  width: 40px;
+  height: 40px;
   flex-shrink: 0;
+  filter: drop-shadow(0 0 12px rgba(244, 216, 138, 0.2));
 }
 
-.report-root[data-surface="mobile"] .report-brand-logo-1320 {
-  width: 34px;
-  height: 34px;
+.report-root[data-surface="mobile"] .report-mobile-header-brand {
+  min-width: 0;
+  text-align: center;
 }
 
-.report-root[data-surface="mobile"] .report-brand-block--header .report-brand-logo-seal {
-  width: 34px;
-  height: 34px;
+.report-root[data-surface="mobile"] .report-mobile-header-title {
+  color: var(--report-gold-bright);
+  font-family: var(--report-font-display);
+  font-weight: 600;
+  font-size: clamp(7.5px, 2.15vw, 9px);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.report-root[data-surface="mobile"] .report-header .page-meta {
+.report-root[data-surface="mobile"] .report-mobile-header-subtitle {
+  margin-top: 2px;
+  color: var(--report-text-soft);
+  font-family: var(--report-font-display);
+  font-size: clamp(7px, 2vw, 8.5px);
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.report-root[data-surface="mobile"] .report-mobile-header-meta,
+.report-root[data-surface="mobile"] .report-mobile-header-meta-spacer {
   flex-shrink: 0;
-  font-size: 11px;
-  line-height: 1.15;
+  min-width: 52px;
+}
+
+.report-root[data-surface="mobile"] .report-mobile-header-meta {
   text-align: right;
+  color: var(--report-text-soft);
+  font-size: 10px;
+  line-height: 1.15;
 }
 
-.report-root[data-surface="mobile"] .report-header .page-meta strong {
-  font-size: 12px;
+.report-root[data-surface="mobile"] .report-mobile-header-meta strong {
+  display: block;
+  color: var(--report-gold-bright);
+  font-size: 11px;
+}
+
+.report-root[data-surface="mobile"] .report-hero .section-kicker {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .report-root[data-surface="mobile"] .report-brand-block--hero .report-brand-logo-1320 {

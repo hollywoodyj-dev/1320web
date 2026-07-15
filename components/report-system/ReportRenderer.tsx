@@ -151,7 +151,6 @@ export function ReportRenderer({ reportType, surface, data }: ReportRendererProp
                   pageId={page.pageId}
                   pageNumber={page.pageNumber}
                   totalPages={page.totalPages}
-                  surface={surface}
                 >
                   {renderPageBody(page, data, surface)}
                 </ReportPage>
@@ -171,7 +170,6 @@ export function ReportRenderer({ reportType, surface, data }: ReportRendererProp
           pageId={page.pageId}
           pageNumber={page.pageNumber}
           totalPages={page.totalPages}
-          surface={surface}
         >
           {renderPageBody(page, data, surface)}
         </ReportPage>

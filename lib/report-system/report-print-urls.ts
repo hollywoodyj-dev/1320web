@@ -1,6 +1,6 @@
 import { getSiteUrl, resolveReportPrintBaseUrl } from "@/lib/platform-config";
+import { buildSamplePrintSearchParams } from "@/lib/report-system/report-print-params";
 import type { ReportType } from "@/lib/report-system/report-surface";
-import { buildSamplePrintSearchParams } from "@/lib/report-system/resolve-print-report";
 
 export function buildSampleReportPrintUrl(
   reportType: ReportType = "full",
@@ -17,9 +17,7 @@ export function buildEntitledReportPrintUrl(
   return `${baseUrl.replace(/\/$/, "")}/report/${encodeURIComponent(reportId)}/print`;
 }
 
-export function buildEntitledReportPrintPath(reportId: string): string {
-  return `/report/${encodeURIComponent(reportId)}/print`;
-}
+export { buildEntitledReportPrintPath } from "@/lib/report-system/report-print-params";
 
 export function buildEntitledReportPrintUrlFromRequest(
   reportId: string,

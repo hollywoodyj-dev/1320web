@@ -2,9 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import {
-  buildEntitledReportPrintPath,
-} from "@/lib/report-system/report-print-urls";
+import { buildEntitledReportPrintPath } from "@/lib/report-system/report-print-params";
 import { ACCOUNT_COPY } from "@/lib/auth/account-content";
 
 type DownloadReportButtonProps = {

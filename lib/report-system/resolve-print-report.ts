@@ -3,18 +3,10 @@ import type { CanonicalFullReport } from "@/lib/canonical-report/types";
 import { getEntitledReportAccess } from "@/lib/auth/access";
 import { buildCanonicalReportFromPreview } from "@/lib/report-system/buildCanonicalReportFromPreview";
 import { resolveBirthDateFromRequest } from "@/lib/resolve-birth-date";
-import type { ReportType } from "@/lib/report-system/report-surface";
 
 type SearchParams = Record<string, string | string[] | undefined>;
 
-function pickParam(value: string | string[] | undefined, fallback: string): string {
-  if (Array.isArray(value)) return value[0] ?? fallback;
-  return value ?? fallback;
-}
-
-export function parseReportTypeParam(value: string | undefined): ReportType {
-  return value === "sample" ? "sample" : "full";
-}
+export { parseReportTypeParam, buildSamplePrintSearchParams } from "@/lib/report-system/report-print-params";
 
 export async function resolveSamplePrintReport(
   searchParams: SearchParams,
@@ -56,6 +48,3 @@ export async function resolveEntitledPrintReport(
   };
 }
 
-export function buildSamplePrintSearchParams(reportType: ReportType): string {
-  return reportType === "sample" ? "type=sample" : "type=full";
-}

@@ -11,7 +11,13 @@ type PageShellProps = {
   /** Server-decided lead persistence flag, forwarded to the footer subscribe slot. */
   leadsEnabled?: boolean;
   headerAccount?: { label: string; entitledReportId: string | null } | null;
+  /** Phone/tablet entitled report — use flip shell + mobile renderer. */
+  preferMobileReportShell?: boolean;
 };
+
+function isEntitledReportRoute(pathname: string | null): boolean {
+  return /^\/my-report\/[^/]+$/.test(pathname ?? "");
+}
 
 function isPrintReportRoute(pathname: string | null): boolean {
   if (!pathname) return false;
@@ -45,11 +51,13 @@ function isMobileReportRoute(pathname: string | null): boolean {
 }
 
 /** Cosmic layout for inner routes — homepage keeps its own shell in `app/page.tsx`. */
-export function PageShell({ children, leadsEnabled, headerAccount }: PageShellProps) {
+export function PageShell({ children, leadsEnabled, headerAccount, preferMobileReportShell = false }: PageShellProps) {
   const pathname = usePathname();
   const immersive = isImmersiveReportRoute(pathname);
-  const mobileReport = isMobileReportRoute(pathname);
-  const unifiedWebReport = isUnifiedReportWebRoute(pathname);
+  const mobileReport =
+    isMobileReportRoute(pathname) ||
+    (isEntitledReportRoute(pathname) && preferMobileReportShell);
+  const unifiedWebReport = isUnifiedReportWebRoute(pathname) && !mobileReport;
   const printReport = isPrintReportRoute(pathname);
 
   if (printReport) {

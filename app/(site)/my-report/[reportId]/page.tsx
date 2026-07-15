@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { headers } from "next/headers";
+import { UnifiedReportMobileShell } from "@/components/report-system/UnifiedReportMobileShell";
 import { UnifiedReportWebShell } from "@/components/report-system/UnifiedReportWebShell";
 import { getEntitledReportAccess } from "@/lib/auth/access";
 import { buildCanonicalReport } from "@/lib/canonical-report";
+import { preferMobileReportFromUserAgent } from "@/lib/report/prefer-mobile-report";
 import { SectionCard } from "@/components/section-card";
 import "@/styles/report-system/index.css";
 
@@ -79,6 +82,21 @@ export default async function MyReportPage({ params }: PageProps) {
     birth_date_display: birthDateDisplay,
     report_type: "Full Soul Origin Report",
   });
+
+  const requestHeaders = await headers();
+  const preferMobile =
+    requestHeaders.get("x-1320-mobile-report") === "1" ||
+    preferMobileReportFromUserAgent(requestHeaders.get("user-agent"));
+
+  if (preferMobile) {
+    return (
+      <UnifiedReportMobileShell
+        reportType="full"
+        data={canonicalReport}
+        closeHref="/account"
+      />
+    );
+  }
 
   return (
     <UnifiedReportWebShell

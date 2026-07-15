@@ -1,3 +1,5 @@
+export { ReportSegmentCardIcon } from "./ReportSegmentCardIcon";
+export { ReportCoverSignatureCard } from "./ReportCoverSignatureCard";
 export { LockedPreviewBlock } from "./LockedPreviewBlock";
 export { ReportBrandBlock } from "./ReportBrandBlock";
 export { ReportDisclaimerPage } from "./ReportDisclaimerPage";

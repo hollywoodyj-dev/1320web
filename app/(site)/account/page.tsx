@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { DownloadReportButton } from "@/components/account/download-report-button";
 import { SignOutButton } from "@/components/auth/sign-out-button";
 import { SetPasswordForm } from "@/components/auth/set-password-form";
 import { ReflectEntryForm } from "@/components/reflect-entry-form";
@@ -69,6 +70,12 @@ export default async function AccountPage() {
               {ACCOUNT_COPY.openLivingBlueprint}
             </Link>
           ) : null}
+          {account.entitledReportId ? (
+            <DownloadReportButton
+              reportId={account.entitledReportId}
+              className="gold-button inline-flex"
+            />
+          ) : null}
           {reflectPrefill ? (
             <a href="#reflect" className="gold-button inline-flex">
               {ACCOUNT_COPY.reflectTitle.toUpperCase()}
@@ -104,13 +111,19 @@ export default async function AccountPage() {
         {account.entitledReportId ? (
           <>
             <p>{ACCOUNT_COPY.fullReportUnlocked}</p>
-            <Link
-              href={`/my-report/${account.entitledReportId}`}
-              className="gold-button mt-4 inline-flex"
-              aria-label="Open full report from Full Soul Origin Report section"
-            >
-              {ACCOUNT_COPY.openFullReport}
-            </Link>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <Link
+                href={`/my-report/${account.entitledReportId}`}
+                className="gold-button inline-flex"
+                aria-label="Open full report from Full Soul Origin Report section"
+              >
+                {ACCOUNT_COPY.openFullReport}
+              </Link>
+              <DownloadReportButton
+                reportId={account.entitledReportId}
+                className="gold-button inline-flex"
+              />
+            </div>
           </>
         ) : (
           <>

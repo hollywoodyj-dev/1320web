@@ -1,59 +1,60 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useRef } from "react";
+import { useMobilePageSwipe } from "@/components/mobile-report-v2/use-mobile-page-swipe";
 import { LockedPreviewBlock } from "@/components/report-system/LockedPreviewBlock";
 import { ReportDisclaimerPage } from "@/components/report-system/ReportDisclaimerPage";
 import { ReportHero } from "@/components/report-system/ReportHero";
 import { ReportIntegrationPage } from "@/components/report-system/ReportIntegrationPage";
 import { ReportJournalPage } from "@/components/report-system/ReportJournalPage";
-import { ReportNavigation } from "@/components/report-system/ReportNavigation";
 import { ReportPage } from "@/components/report-system/ReportPage";
 import { ReportPracticePage } from "@/components/report-system/ReportPracticePage";
 import { ReportRoot } from "@/components/report-system/ReportRoot";
 import { ReportSegmentGrid } from "@/components/report-system/ReportSegmentGrid";
 import { ReportSegmentPage } from "@/components/report-system/ReportSegmentPage";
-import { ReportBrandBlock } from "@/components/report-system/ReportBrandBlock";
+import { ReportCoverSignatureCard } from "@/components/report-system/ReportCoverSignatureCard";
 import { ReportInsightCard } from "@/components/report-system/ReportInsightCard";
+import { useUnifiedReportMobileTrack } from "@/components/report-system/use-unified-report-mobile-nav";
+import { getSignatureCardImageUrl } from "@/lib/full-report-v2/signature-card-images";
 import {
-  readStoredMobilePageIndex,
-  useUnifiedReportMobileSwipe,
-  writeStoredMobilePageIndex,
-} from "@/components/report-system/use-unified-report-mobile-nav";
+  SIGNATURE_CODE_CARD_META,
+  type SignatureCodeCardKey,
+} from "@/lib/full-report-v2/signature-static";
+import {
+  toReportSegmentIconKey,
+} from "@/lib/report-system/report-segment-card-image";
 import type { CanonicalFullReport } from "@/lib/canonical-report/types";
 import { LOCKED_PREVIEW_COPY } from "@/lib/report-system/report-access";
 import { buildReportPages } from "@/lib/report-system/buildReportPages";
-import type { BuiltReportPage, ReportRendererProps } from "@/lib/report-system/report-surface";
+import type { BuiltReportPage, ReportRendererProps, ReportSegmentCode } from "@/lib/report-system/report-surface";
 
 function renderCoverPage(data: CanonicalFullReport) {
   const { client, calculation } = data.payload;
 
   return (
     <>
-      <ReportBrandBlock variant="hero" showLabels={false} />
       <ReportHero
         eyebrow="1320 Soul Code System"
         title="Your Soul Blueprint"
         description={`Prepared for ${client.name} · ${client.birth_date_display}`}
       />
-      <ReportSegmentGrid>
-        <ReportInsightCard
-          kicker="Signature"
-          title="Four-Part Foundation"
-          body={calculation.combination_signature}
-          icon="✦"
-        />
-      </ReportSegmentGrid>
+      <ReportCoverSignatureCard calculation={calculation} />
     </>
   );
 }
 
 function renderOverviewPage(data: CanonicalFullReport) {
   const { calculation } = data.payload;
-  const layers = [
-    { code: "S1", title: calculation.s1.title, label: calculation.s1.code },
-    { code: "S3", title: calculation.s3.title, label: calculation.s3.code },
-    { code: "S2", title: calculation.s2.title, label: calculation.s2.code },
-    { code: "S0", title: calculation.s0.title, label: calculation.s0.code },
+  const layers: Array<{
+    segment: ReportSegmentCode;
+    key: SignatureCodeCardKey;
+    title: string;
+    label: string;
+  }> = [
+    { segment: "S1", key: "s1", title: calculation.s1.title, label: calculation.s1.code },
+    { segment: "S3", key: "s3", title: calculation.s3.title, label: calculation.s3.code },
+    { segment: "S2", key: "s2", title: calculation.s2.title, label: calculation.s2.code },
+    { segment: "S0", key: "s0", title: calculation.s0.title, label: calculation.s0.code },
   ];
 
   return (
@@ -66,10 +67,14 @@ function renderOverviewPage(data: CanonicalFullReport) {
       <ReportSegmentGrid>
         {layers.map((layer) => (
           <ReportInsightCard
-            key={layer.code}
-            kicker={layer.code}
+            key={layer.segment}
+            kicker={layer.segment}
             title={layer.title}
             body={layer.label}
+            segmentKey={toReportSegmentIconKey(layer.segment)}
+            segmentCode={layer.label}
+            icon={SIGNATURE_CODE_CARD_META[layer.key].icon}
+            iconImageSrc={getSignatureCardImageUrl(layer.key, calculation)}
           />
         ))}
       </ReportSegmentGrid>
@@ -112,54 +117,47 @@ function renderPageBody(page: BuiltReportPage, data: CanonicalFullReport) {
   }
 }
 
+function isMobilePageScrollable(page: BuiltReportPage): boolean {
+  return page.pageType !== "cover";
+}
+
 export function ReportRenderer({ reportType, surface, data }: ReportRendererProps) {
   const pages = useMemo(() => buildReportPages(reportType), [reportType]);
-  const stageRef = useRef<HTMLDivElement>(null);
-  const [mobileIndex, setMobileIndex] = useState(0);
-  const [mobileHydrated, setMobileHydrated] = useState(false);
+  const trackRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (surface !== "mobile") return;
-    setMobileIndex(readStoredMobilePageIndex(reportType, pages.length));
-    setMobileHydrated(true);
-  }, [surface, reportType, pages.length]);
-
-  useEffect(() => {
-    if (surface !== "mobile" || !mobileHydrated) return;
-    writeStoredMobilePageIndex(reportType, mobileIndex);
-  }, [surface, reportType, mobileIndex, mobileHydrated]);
-
-  const setMobilePage = useCallback(
-    (index: number) => {
-      setMobileIndex(Math.max(0, Math.min(pages.length - 1, index)));
-    },
-    [pages.length],
-  );
-
-  useUnifiedReportMobileSwipe(stageRef, mobileIndex, pages.length, setMobilePage);
-
-  const activeMobilePage = pages[mobileIndex] ?? pages[0];
+  useMobilePageSwipe(trackRef, pages.length);
+  useUnifiedReportMobileTrack(trackRef, reportType, pages.length);
 
   if (surface === "mobile") {
     return (
       <ReportRoot reportType={reportType} surface={surface}>
-        <div ref={stageRef} className="unified-report-mobile-stage">
-          <ReportPage
-            pageId={activeMobilePage.pageId}
-            pageNumber={activeMobilePage.pageNumber}
-            totalPages={activeMobilePage.totalPages}
-          >
-            {renderPageBody(activeMobilePage, data)}
-          </ReportPage>
+        <div
+          ref={trackRef}
+          className="mr-v2-page-track"
+          aria-label="Report pages"
+          role="region"
+        >
+          {pages.map((page) => (
+            <div key={page.pageId} id={page.pageId} className="mr-v2-page-panel">
+              <div
+                className={[
+                  "mr-v2-page-panel-inner",
+                  isMobilePageScrollable(page) ? "mr-v2-page-panel-inner--scroll" : "",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+              >
+                <ReportPage
+                  pageId={page.pageId}
+                  pageNumber={page.pageNumber}
+                  totalPages={page.totalPages}
+                >
+                  {renderPageBody(page, data)}
+                </ReportPage>
+              </div>
+            </div>
+          ))}
         </div>
-        <ReportNavigation
-          pageNumber={activeMobilePage.pageNumber}
-          totalPages={activeMobilePage.totalPages}
-          onPrevious={() => setMobilePage(mobileIndex - 1)}
-          onNext={() => setMobilePage(mobileIndex + 1)}
-          disablePrevious={mobileIndex <= 0}
-          disableNext={mobileIndex >= pages.length - 1}
-        />
       </ReportRoot>
     );
   }

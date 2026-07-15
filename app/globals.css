@@ -3912,7 +3912,7 @@ button {
 }
 
 /* —— Sacred Report Dashboard (Batch 6 / 5) —— */
-/* v3 1920×4048 — bg on .page-frame::before scrolls with full page */
+/* v3 1920×4048 — tiled on .page-frame::before (repeat-y, not cover-stretch) */
 
 .page-shell-inner:has(.report-page),
 .page-shell-inner:has(.inner-content-page) {
@@ -4037,9 +4037,9 @@ body:has(.page-shell--mobile-report) {
   background-image:
     linear-gradient(180deg, rgba(4, 8, 19, 0.02) 0%, rgba(4, 8, 19, 0.22) 55%, rgba(4, 8, 19, 0.34) 100%),
     url("/report-bg-v3-1920x4048.webp");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
+  background-repeat: no-repeat, repeat-y;
+  background-position: center top, center top;
+  background-size: 100% 100%, 100% auto;
   background-attachment: scroll;
 }
 
@@ -5025,6 +5025,9 @@ body:has(.page-shell--mobile-report) {
     background-image:
       linear-gradient(180deg, rgba(4, 8, 19, 0.02) 0%, rgba(4, 8, 19, 0.22) 55%, rgba(4, 8, 19, 0.34) 100%),
       url("/report-bg-v2.webp");
+    background-repeat: no-repeat, repeat-y;
+    background-position: center top, center top;
+    background-size: 100% 100%, 100% auto;
   }
 
   .report-dashboard {

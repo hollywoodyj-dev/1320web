@@ -1,3 +1,8 @@
+import {
+  REPORT_PDF_PAGE_HEIGHT_PX,
+  REPORT_PDF_PAGE_WIDTH_PX,
+} from "@/lib/report-system/report-pdf-page-size";
+
 type GenerateReportPdfOptions = {
   url: string;
   cookieHeader?: string | null;
@@ -35,7 +40,10 @@ export async function generateReportPdfFromUrl({
     args,
     executablePath,
     headless: true,
-    defaultViewport: { width: 1600, height: 900 },
+    defaultViewport: {
+      width: REPORT_PDF_PAGE_WIDTH_PX,
+      height: REPORT_PDF_PAGE_HEIGHT_PX,
+    },
   });
 
   try {
@@ -55,8 +63,7 @@ export async function generateReportPdfFromUrl({
 
     const pdf = await page.pdf({
       printBackground: true,
-      width: "1600px",
-      height: "900px",
+      preferCSSPageSize: true,
       margin: {
         top: "0px",
         right: "0px",

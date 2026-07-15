@@ -29,4 +29,12 @@
 
   --report-font-ui: Inter, "Avenir Next", Montserrat, Arial, sans-serif;
   --report-font-display: Georgia, "Times New Roman", serif;
+
+  --report-segment-s1: #d8b15c;
+  --report-segment-s3: #9b6edb;
+  --report-segment-s2: #4b8fe8;
+  --report-segment-s0: #2ec4b6;
+
+  --report-pdf-page-width: 900px;
+  --report-pdf-page-height: 1600px;
 }

@@ -1,17 +1,20 @@
 .report-root[data-surface="pdf"] {
   background: #050d19;
   padding: 0;
+  width: var(--report-pdf-page-width);
 }
 
 .report-root[data-surface="pdf"] .report-page {
-  width: 1600px;
-  height: 900px;
+  box-sizing: border-box;
+  width: var(--report-pdf-page-width);
+  min-height: var(--report-pdf-page-height);
+  height: auto;
   margin: 0;
-  padding: 44px 56px 40px;
+  padding: 36px 40px 32px;
   page-break-after: always;
   break-after: page;
   border-radius: 0;
-  overflow: hidden;
+  overflow: visible;
   border: none;
   background:
     radial-gradient(circle at 50% 18%, rgba(216, 183, 111, 0.16), transparent 28%),
@@ -19,14 +22,73 @@
     linear-gradient(180deg, var(--report-bg-deep), var(--report-bg-main));
 }
 
-.report-root[data-surface="pdf"] .report-card-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+.report-root[data-surface="pdf"] .report-header {
+  margin-bottom: 20px;
+}
+
+.report-root[data-surface="pdf"] .report-hero {
+  margin-bottom: 22px;
 }
 
 .report-root[data-surface="pdf"] .report-hero h1 {
-  font-size: 58px;
-  line-height: 1.02;
+  font-size: 40px;
+  line-height: 1.06;
+}
+
+.report-root[data-surface="pdf"] .report-hero p {
+  font-size: 14px;
+  line-height: 1.55;
+  max-width: none;
+}
+
+.report-root[data-surface="pdf"] .report-hero-title-icon {
+  margin: 6px auto 14px;
+}
+
+.report-root[data-surface="pdf"] .report-hero-title-icon .report-segment-card-icon {
+  width: 140px;
+  height: 140px;
+}
+
+.report-root[data-surface="pdf"] .report-hero-title-icon .report-segment-card-icon-fallback {
+  font-size: 56px;
+}
+
+.report-root[data-surface="pdf"] .report-card-grid {
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.report-root[data-surface="pdf"] .report-insight-card {
+  padding: 18px;
+  border-radius: 20px;
+}
+
+.report-root[data-surface="pdf"] .report-insight-card--segment {
+  grid-template-columns: 64px 1fr;
+  min-height: 0;
+}
+
+.report-root[data-surface="pdf"] .report-segment-card-icon {
+  width: 64px !important;
+  height: 64px !important;
+}
+
+.report-root[data-surface="pdf"] .report-cover-signature-card {
+  padding: 24px 28px 26px;
+}
+
+.report-root[data-surface="pdf"] .report-cover-seal {
+  width: min(132px, 36vw);
+  margin-bottom: 14px;
+}
+
+.report-root[data-surface="pdf"] .report-cover-signature-title {
+  font-size: 21px;
+}
+
+.report-root[data-surface="pdf"] .report-cover-signature-code {
+  font-size: 22px;
 }
 
 .report-root[data-surface="pdf"] .report-nav {

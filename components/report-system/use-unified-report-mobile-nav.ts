@@ -3,9 +3,6 @@
 import { type RefObject, useEffect } from "react";
 import type { ReportType } from "@/lib/report-system/report-surface";
 
-const AXIS_LOCK_PX = 10;
-const SWIPE_THRESHOLD_PX = 48;
-
 function storageKeyForReport(reportType: ReportType): string {
   return `1320-unified-report-mobile-index-${reportType}`;
 }
@@ -23,73 +20,41 @@ export function writeStoredMobilePageIndex(reportType: ReportType, index: number
   window.sessionStorage.setItem(storageKeyForReport(reportType), String(index));
 }
 
-export function useUnifiedReportMobileSwipe(
-  stageRef: RefObject<HTMLElement | null>,
-  pageIndex: number,
+/** Sync v2 viewport height + restore/persist horizontal page index on the swipe track. */
+export function useUnifiedReportMobileTrack(
+  trackRef: RefObject<HTMLDivElement | null>,
+  reportType: ReportType,
   pageCount: number,
-  onPageChange: (index: number) => void,
 ): void {
   useEffect(() => {
-    const stage = stageRef.current;
-    if (!stage || pageCount <= 1) return;
+    const track = trackRef.current;
+    if (!track || pageCount <= 0) return;
 
-    let startX = 0;
-    let startY = 0;
-    let tracking = false;
-    let axis: "none" | "horizontal" | "vertical" = "none";
+    let pageIndex = readStoredMobilePageIndex(reportType, pageCount);
 
-    const onTouchStart = (event: TouchEvent) => {
-      if (event.touches.length !== 1) return;
-      tracking = true;
-      axis = "none";
-      startX = event.touches[0].clientX;
-      startY = event.touches[0].clientY;
-    };
-
-    const onTouchMove = (event: TouchEvent) => {
-      if (!tracking || event.touches.length !== 1) return;
-      const dx = event.touches[0].clientX - startX;
-      const dy = event.touches[0].clientY - startY;
-
-      if (axis === "none") {
-        if (Math.abs(dx) < AXIS_LOCK_PX && Math.abs(dy) < AXIS_LOCK_PX) return;
-        axis = Math.abs(dx) > Math.abs(dy) ? "horizontal" : "vertical";
-      }
-
-      if (axis === "horizontal") {
-        event.preventDefault();
+    const syncViewport = () => {
+      track.style.setProperty("--mr-v2-viewport", `${track.clientHeight}px`);
+      const width = track.clientWidth;
+      if (width > 0) {
+        track.scrollLeft = pageIndex * width;
       }
     };
 
-    const onTouchEnd = (event: TouchEvent) => {
-      if (!tracking) return;
-      tracking = false;
-
-      if (axis !== "horizontal") {
-        axis = "none";
-        return;
-      }
-
-      const dx = event.changedTouches[0].clientX - startX;
-      if (dx <= -SWIPE_THRESHOLD_PX && pageIndex < pageCount - 1) {
-        onPageChange(pageIndex + 1);
-      } else if (dx >= SWIPE_THRESHOLD_PX && pageIndex > 0) {
-        onPageChange(pageIndex - 1);
-      }
-
-      axis = "none";
+    const onScroll = () => {
+      const width = track.clientWidth;
+      if (width <= 0) return;
+      pageIndex = Math.round(track.scrollLeft / width);
+      writeStoredMobilePageIndex(reportType, pageIndex);
     };
 
-    stage.addEventListener("touchstart", onTouchStart, { passive: true });
-    stage.addEventListener("touchmove", onTouchMove, { passive: false });
-    stage.addEventListener("touchend", onTouchEnd, { passive: true });
-    stage.addEventListener("touchcancel", onTouchEnd, { passive: true });
+    syncViewport();
+    const resizeObserver = new ResizeObserver(syncViewport);
+    resizeObserver.observe(track);
+    track.addEventListener("scroll", onScroll, { passive: true });
 
     return () => {
-      stage.removeEventListener("touchstart", onTouchStart);
-      stage.removeEventListener("touchmove", onTouchMove);
-      stage.removeEventListener("touchend", onTouchEnd);
-      stage.removeEventListener("touchcancel", onTouchEnd);
+      resizeObserver.disconnect();
+      track.removeEventListener("scroll", onScroll);
     };
-  }, [stageRef, pageIndex, pageCount, onPageChange]);
+  }, [trackRef, reportType, pageCount]);
 }

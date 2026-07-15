@@ -1,10 +1,14 @@
+@import "../mobile-report-v2/mobile-scroll.css";
+
 .report-root[data-surface="mobile"] {
   background: #020712;
   padding: 0;
-  min-height: 100dvh;
+  flex: 1;
+  min-height: 0;
   height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .unified-report-mobile-shell {
@@ -44,29 +48,30 @@
   line-height: 1;
 }
 
-.unified-report-mobile-stage {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-}
-
 .report-root[data-surface="mobile"] .report-page {
   width: 100%;
-  max-width: 430px;
-  min-height: 100%;
-  flex: 1;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
   padding: 26px 22px 18px;
   border-radius: 0;
   border: none;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
   background:
     radial-gradient(circle at 50% 10%, rgba(216, 183, 111, 0.16), transparent 25%),
     radial-gradient(circle at 82% 30%, rgba(112, 200, 255, 0.16), transparent 34%),
     radial-gradient(circle at 76% 54%, rgba(140, 92, 255, 0.22), transparent 34%),
     linear-gradient(180deg, #020712 0%, var(--report-bg-deep) 38%, var(--report-bg-main) 72%, #030814 100%);
+}
+
+.report-root[data-surface="mobile"] .mr-v2-page-panel-inner--scroll .report-page {
+  min-height: var(--mr-v2-viewport);
+  height: auto;
+  overflow: visible;
+}
+
+.report-root[data-surface="mobile"] .mr-v2-page-panel-inner:not(.mr-v2-page-panel-inner--scroll) .report-page {
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .report-root[data-surface="mobile"] .report-hero {
@@ -116,15 +121,49 @@
   gap: 12px;
 }
 
+.report-root[data-surface="mobile"] .report-cover-signature-shell {
+  margin-top: 0;
+}
+
+.report-root[data-surface="mobile"] .report-cover-signature-card {
+  padding: 24px 20px 26px;
+  border-radius: 24px;
+}
+
+.report-root[data-surface="mobile"] .report-hero-title-icon {
+  margin: 6px auto 14px;
+}
+
+.report-root[data-surface="mobile"] .report-hero-title-icon .report-segment-card-icon {
+  width: 176px !important;
+  height: 176px !important;
+}
+
+.report-root[data-surface="mobile"] .report-cover-seal {
+  width: min(132px, 38vw);
+  margin-bottom: 14px;
+}
+
+.report-root[data-surface="mobile"] .report-cover-signature-title {
+  font-size: 21px;
+}
+
+.report-root[data-surface="mobile"] .report-cover-signature-code {
+  font-size: 24px;
+  line-height: 1.12;
+}
+
+.report-root[data-surface="mobile"] .report-insight-card--segment {
+  grid-template-columns: 64px 1fr;
+  min-height: 0;
+}
+
+.report-root[data-surface="mobile"] .report-segment-card-icon {
+  width: 64px !important;
+  height: 64px !important;
+}
+
 .report-root[data-surface="mobile"] .report-insight-card {
   grid-template-columns: 42px 1fr;
   padding: 18px;
-}
-
-.report-root[data-surface="mobile"] .report-nav {
-  flex-shrink: 0;
-  max-width: 430px;
-  width: 100%;
-  margin-inline: auto;
-  padding: 12px 22px calc(16px + env(safe-area-inset-bottom, 0px));
 }

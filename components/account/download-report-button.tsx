@@ -1,6 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
+import {
+  buildEntitledReportPrintPath,
+} from "@/lib/report-system/report-print-urls";
 import { ACCOUNT_COPY } from "@/lib/auth/account-content";
 
 type DownloadReportButtonProps = {
@@ -8,19 +12,35 @@ type DownloadReportButtonProps = {
   className?: string;
 };
 
+function openPrintFallback(reportId: string) {
+  const printPath = `${buildEntitledReportPrintPath(reportId)}?autoprint=1`;
+  window.open(printPath, "_blank", "noopener,noreferrer");
+}
+
 export function DownloadReportButton({ reportId, className }: DownloadReportButtonProps) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [showPrintFallback, setShowPrintFallback] = useState(false);
 
   async function handleDownload() {
     setLoading(true);
     setError(null);
+    setShowPrintFallback(false);
 
     try {
       const response = await fetch(`/api/report/${reportId}/pdf`);
       if (!response.ok) {
         const payload = (await response.json().catch(() => null)) as { error?: string } | null;
-        throw new Error(payload?.error ?? `Download failed (${response.status})`);
+        const message = payload?.error ?? `Download failed (${response.status})`;
+
+        if (response.status === 504 || response.status === 408) {
+          openPrintFallback(reportId);
+          setShowPrintFallback(true);
+          setError(ACCOUNT_COPY.downloadReportOpenedPrintFallback);
+          return;
+        }
+
+        throw new Error(message);
       }
 
       const blob = await response.blob();
@@ -34,10 +54,13 @@ export function DownloadReportButton({ reportId, className }: DownloadReportButt
       setError(
         downloadError instanceof Error ? downloadError.message : ACCOUNT_COPY.downloadReportFailed,
       );
+      setShowPrintFallback(true);
     } finally {
       setLoading(false);
     }
   }
+
+  const printPath = `${buildEntitledReportPrintPath(reportId)}?autoprint=1`;
 
   return (
     <span className="inline-flex flex-col items-start">
@@ -54,6 +77,11 @@ export function DownloadReportButton({ reportId, className }: DownloadReportButt
         <span className="mt-2 text-sm text-red-300" role="alert">
           {error}
         </span>
+      ) : null}
+      {showPrintFallback ? (
+        <Link href={printPath} target="_blank" rel="noreferrer" className="blueprint-secondary-link mt-2 text-sm">
+          {ACCOUNT_COPY.downloadReportPrintLink}
+        </Link>
       ) : null}
     </span>
   );

@@ -29,6 +29,22 @@ export function getSiteUrl(): string {
   return process.env.NODE_ENV === "production" ? DEFAULT_SITE_URL : "http://localhost:3000";
 }
 
+/** Prefer the active request origin for in-app PDF rendering (avoids cross-host cold starts). */
+export function resolveReportPrintBaseUrl(request?: Request): string {
+  if (request) {
+    try {
+      const origin = new URL(request.url).origin;
+      if (origin && origin !== "null") {
+        return origin.replace(/\/$/, "");
+      }
+    } catch {
+      /* fall through */
+    }
+  }
+
+  return getSiteUrl().replace(/\/$/, "");
+}
+
 export const REPORT_CONTENT_VERSION = "2026-06-07";
 
 export const SESSION_COOKIE_NAME = "1320_session";

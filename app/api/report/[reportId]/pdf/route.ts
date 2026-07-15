@@ -1,10 +1,11 @@
 import { NextResponse } from "next/server";
 import { getEntitledReportAccess } from "@/lib/auth/access";
 import { generateReportPdfFromUrl, isReportPdfGenerationConfigured } from "@/lib/report-system/generate-report-pdf";
-import { buildEntitledReportPrintUrl } from "@/lib/report-system/report-print-urls";
+import { buildEntitledReportPrintUrlFromRequest } from "@/lib/report-system/report-print-urls";
 
 export const dynamic = "force-dynamic";
-export const maxDuration = 60;
+export const runtime = "nodejs";
+export const maxDuration = 300;
 
 type RouteContext = {
   params: Promise<{ reportId: string }>;
@@ -35,7 +36,7 @@ export async function GET(request: Request, context: RouteContext) {
     return NextResponse.json({ ok: false, error: access.reason }, { status });
   }
 
-  const printUrl = buildEntitledReportPrintUrl(reportId);
+  const printUrl = buildEntitledReportPrintUrlFromRequest(reportId, request);
 
   try {
     const pdf = await generateReportPdfFromUrl({

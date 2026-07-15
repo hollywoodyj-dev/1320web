@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
 import { UnifiedReportPrintDocument } from "@/components/report-system/UnifiedReportPrintDocument";
+import { ReportPrintAutoTrigger } from "@/components/report-system/ReportPrintAutoTrigger";
 import { resolveEntitledPrintReport } from "@/lib/report-system/resolve-print-report";
 import { SectionCard } from "@/components/section-card";
 import "@/styles/report-system/index.css";
@@ -62,5 +64,12 @@ export default async function EntitledReportPrintPage({ params }: PageProps) {
     );
   }
 
-  return <UnifiedReportPrintDocument reportType="full" data={resolved.report} />;
+  return (
+    <>
+      <Suspense fallback={null}>
+        <ReportPrintAutoTrigger />
+      </Suspense>
+      <UnifiedReportPrintDocument reportType="full" data={resolved.report} />
+    </>
+  );
 }

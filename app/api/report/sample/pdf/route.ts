@@ -1,10 +1,11 @@
 import { NextResponse } from "next/server";
 import { generateReportPdfFromUrl, isReportPdfGenerationConfigured } from "@/lib/report-system/generate-report-pdf";
-import { buildSampleReportPrintUrl } from "@/lib/report-system/report-print-urls";
+import { buildSampleReportPrintUrlFromRequest } from "@/lib/report-system/report-print-urls";
 import type { ReportType } from "@/lib/report-system/report-surface";
 
 export const dynamic = "force-dynamic";
-export const maxDuration = 60;
+export const runtime = "nodejs";
+export const maxDuration = 300;
 
 function parseReportType(value: string | null): ReportType {
   return value === "sample" ? "sample" : "full";
@@ -24,7 +25,7 @@ export async function GET(request: Request) {
 
   const { searchParams } = new URL(request.url);
   const reportType = parseReportType(searchParams.get("type"));
-  const printUrl = buildSampleReportPrintUrl(reportType);
+  const printUrl = buildSampleReportPrintUrlFromRequest(reportType, request);
 
   try {
     const pdf = await generateReportPdfFromUrl({

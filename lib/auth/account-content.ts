@@ -57,6 +57,9 @@ export const ACCOUNT_COPY = {
   downloadReport: "DOWNLOAD REPORT",
   downloadReportPreparing: "PREPARING PDF…",
   downloadReportFailed: "Could not download the report. Try again in a moment.",
+  downloadReportOpenedPrintFallback:
+    "Server PDF timed out — opened print view. Choose Save as PDF in your browser.",
+  downloadReportPrintLink: "Open print view to save PDF",
   unlockFullReport: "UNLOCK FULL REPORT",
   livingBlueprintTitle: "Living Blueprint",
   livingBlueprintBody: "Your membership dashboard — expression updates, relationship memory, and check-ins.",

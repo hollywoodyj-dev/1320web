@@ -9,6 +9,8 @@ type GenerateReportPdfOptions = {
   timeoutMs?: number;
 };
 
+const BLOCKED_RESOURCE_TYPES = new Set(["media", "websocket", "eventsource", "manifest"]);
+
 async function resolveExecutablePath(): Promise<string> {
   const localPath = process.env.PUPPETEER_EXECUTABLE_PATH?.trim();
   if (localPath) return localPath;
@@ -24,22 +26,24 @@ async function resolveLaunchArgs(): Promise<string[]> {
   }
 
   const chromium = await import("@sparticuz/chromium");
+  chromium.default.setGraphicsMode = false;
   return chromium.default.args;
 }
 
 export async function generateReportPdfFromUrl({
   url,
   cookieHeader,
-  timeoutMs = 60_000,
+  timeoutMs = 120_000,
 }: GenerateReportPdfOptions): Promise<Buffer> {
   const puppeteer = await import("puppeteer-core");
   const executablePath = await resolveExecutablePath();
   const args = await resolveLaunchArgs();
+  const isServerless = !process.env.PUPPETEER_EXECUTABLE_PATH?.trim();
 
   const browser = await puppeteer.default.launch({
     args,
     executablePath,
-    headless: true,
+    headless: isServerless ? ("shell" as const) : true,
     defaultViewport: {
       width: REPORT_PDF_PAGE_WIDTH_PX,
       height: REPORT_PDF_PAGE_HEIGHT_PX,
@@ -52,14 +56,26 @@ export async function generateReportPdfFromUrl({
       await page.setExtraHTTPHeaders({ Cookie: cookieHeader });
     }
 
+    await page.setRequestInterception(true);
+    page.on("request", (request) => {
+      if (BLOCKED_RESOURCE_TYPES.has(request.resourceType())) {
+        request.abort();
+        return;
+      }
+      request.continue();
+    });
+
     await page.goto(url, {
-      waitUntil: "networkidle0",
+      waitUntil: "load",
       timeout: timeoutMs,
     });
     await page.emulateMediaType("print");
 
     await page.waitForSelector(".report-root[data-surface='pdf']", { timeout: timeoutMs });
     await page.waitForSelector(".report-page", { timeout: timeoutMs });
+    await page.evaluate(async () => {
+      await document.fonts.ready;
+    });
 
     const pdf = await page.pdf({
       printBackground: true,

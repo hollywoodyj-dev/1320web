@@ -1,3 +1,5 @@
+import { ReportBrandBlock } from "@/components/report-system/ReportBrandBlock";
+
 type ReportHeaderProps = {
   pageNumber?: number;
   totalPages?: number;
@@ -6,15 +8,7 @@ type ReportHeaderProps = {
 export function ReportHeader({ pageNumber, totalPages }: ReportHeaderProps) {
   return (
     <header className="report-header">
-      <div className="brand-block">
-        <div className="brand-seal" aria-hidden="true">
-          ✦
-        </div>
-        <div>
-          <div className="brand-name">1320 Soulcode</div>
-          <div className="brand-subtitle">Soul Blueprint Report</div>
-        </div>
-      </div>
+      <ReportBrandBlock variant="header" />
 
       {pageNumber && totalPages ? (
         <div className="page-meta">

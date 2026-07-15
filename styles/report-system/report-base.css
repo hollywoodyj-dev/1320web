@@ -24,31 +24,70 @@
   margin-bottom: 28px;
 }
 
-.report-header .brand-block {
+.report-brand-block {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.report-brand-block--hero {
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.report-brand-logos {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-shrink: 0;
 }
 
-.report-header .brand-seal {
+.report-brand-block--hero .report-brand-logos {
+  gap: 18px;
+}
+
+.report-brand-logo-1320 {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
+  object-fit: cover;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 14px rgba(244, 216, 138, 0.22));
+}
+
+.report-brand-block--hero .report-brand-logo-1320 {
+  width: 72px;
+  height: 72px;
+}
+
+.report-brand-logo-seal {
+  flex-shrink: 0;
   color: var(--report-gold-bright);
-  background: rgba(216, 183, 111, 0.1);
-  border: 1px solid rgba(216, 183, 111, 0.28);
+  filter: drop-shadow(0 0 12px rgba(244, 216, 138, 0.18));
 }
 
-.report-header .brand-name {
+.report-brand-copy {
+  min-width: 0;
+}
+
+.report-brand-name {
+  color: var(--report-gold-bright);
+  font-family: var(--report-font-display);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.15;
 }
 
-.report-header .brand-subtitle {
+.report-brand-subtitle {
+  margin-top: 4px;
   color: var(--report-text-soft);
-  font-size: 12px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1.2;
 }
 
 .report-header .page-meta {

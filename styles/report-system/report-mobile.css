@@ -74,6 +74,31 @@
   margin-bottom: 24px;
 }
 
+.report-root[data-surface="mobile"] .report-header {
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.report-root[data-surface="mobile"] .report-brand-block--header .report-brand-copy {
+  display: none;
+}
+
+.report-root[data-surface="mobile"] .report-brand-logo-1320 {
+  width: 38px;
+  height: 38px;
+}
+
+.report-root[data-surface="mobile"] .report-brand-block--hero .report-brand-logo-1320 {
+  width: 64px;
+  height: 64px;
+}
+
+.report-root[data-surface="mobile"] .report-brand-block--hero .report-brand-logo-seal {
+  width: 58px;
+  height: 58px;
+}
+
 .report-root[data-surface="mobile"] .report-hero h1 {
   font-size: 34px;
   line-height: 1.06;

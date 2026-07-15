@@ -1,4 +1,5 @@
 export { LockedPreviewBlock } from "./LockedPreviewBlock";
+export { ReportBrandBlock } from "./ReportBrandBlock";
 export { ReportDisclaimerPage } from "./ReportDisclaimerPage";
 export { ReportHeader } from "./ReportHeader";
 export { ReportHero } from "./ReportHero";

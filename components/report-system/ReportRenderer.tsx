@@ -12,6 +12,7 @@ import { ReportPracticePage } from "@/components/report-system/ReportPracticePag
 import { ReportRoot } from "@/components/report-system/ReportRoot";
 import { ReportSegmentGrid } from "@/components/report-system/ReportSegmentGrid";
 import { ReportSegmentPage } from "@/components/report-system/ReportSegmentPage";
+import { ReportBrandBlock } from "@/components/report-system/ReportBrandBlock";
 import { ReportInsightCard } from "@/components/report-system/ReportInsightCard";
 import {
   readStoredMobilePageIndex,
@@ -28,8 +29,9 @@ function renderCoverPage(data: CanonicalFullReport) {
 
   return (
     <>
+      <ReportBrandBlock variant="hero" showLabels={false} />
       <ReportHero
-        eyebrow="1320 Soulcode"
+        eyebrow="1320 Soul Code System"
         title="Your Soul Blueprint"
         description={`Prepared for ${client.name} · ${client.birth_date_display}`}
       />

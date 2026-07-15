@@ -38,7 +38,10 @@ function renderCoverPage(data: CanonicalFullReport, surface: ReportSurface) {
         title="Your Soul Blueprint"
         description={`Prepared for ${client.name} · ${client.birth_date_display}`}
       />
-      <ReportCoverSignatureCard calculation={calculation} />
+      <ReportCoverSignatureCard
+        calculation={calculation}
+        codeLayout={surface === "mobile" ? "paired-rows" : "inline"}
+      />
     </>
   );
 }

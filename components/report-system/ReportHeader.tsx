@@ -3,6 +3,7 @@
 import { BrandSeal } from "@/components/full-report-v2/brand-seal";
 import { ReportBrandBlock } from "@/components/report-system/ReportBrandBlock";
 import { useReportSurface } from "@/components/report-system/report-surface-context";
+import { BRAND_LOGO_HEADER } from "@/lib/brand-assets";
 
 type ReportHeaderProps = {
   pageNumber?: number;
@@ -16,7 +17,14 @@ export function ReportHeader({ pageNumber, totalPages }: ReportHeaderProps) {
     return (
       <header className="report-header report-header--mobile">
         <div className="report-mobile-header-leading">
-          <BrandSeal size={34} className="report-mobile-header-seal" aria-hidden="true" />
+          <div className="report-mobile-header-logos" aria-hidden="true">
+            <img
+              className="report-mobile-header-logo-1320"
+              src={BRAND_LOGO_HEADER}
+              alt=""
+            />
+            <BrandSeal size={34} className="report-mobile-header-seal" />
+          </div>
           <div className="report-mobile-header-brand">
             <p className="report-mobile-header-title">1320 Soul Code System</p>
             <p className="report-mobile-header-subtitle">Sacred · Symbolic · Self-Awareness</p>

@@ -15,11 +15,27 @@ function getFoundationLayers(calculation: FullReportV2Calculation): FoundationLa
   }));
 }
 
+type ReportCoverSignatureCodeLayout = "inline" | "paired-rows";
+
 type ReportCoverSignatureCardProps = {
   calculation: FullReportV2Calculation;
+  codeLayout?: ReportCoverSignatureCodeLayout;
 };
 
-export function ReportCoverSignatureCard({ calculation }: ReportCoverSignatureCardProps) {
+function renderCodePart(layer: FoundationLayer) {
+  return (
+    <span
+      className={`report-cover-signature-code-part report-cover-signature-code-part--${layer.key}`}
+    >
+      {layer.code}
+    </span>
+  );
+}
+
+export function ReportCoverSignatureCard({
+  calculation,
+  codeLayout = "inline",
+}: ReportCoverSignatureCardProps) {
   const layers = getFoundationLayers(calculation);
 
   return (
@@ -40,17 +56,35 @@ export function ReportCoverSignatureCard({ calculation }: ReportCoverSignatureCa
         <p className="report-cover-signature-kicker">Signature</p>
         <h3 className="report-cover-signature-title">Four-Part Foundation</h3>
 
-        <div className="report-cover-signature-code">
-          {layers.map((layer, index) => (
-            <span key={layer.key}>
-              {index > 0 ? <span className="report-cover-signature-sep"> | </span> : null}
-              <span
-                className={`report-cover-signature-code-part report-cover-signature-code-part--${layer.key}`}
-              >
-                {layer.code}
+        <div
+          className={[
+            "report-cover-signature-code",
+            codeLayout === "paired-rows" ? "report-cover-signature-code--paired-rows" : null,
+          ]
+            .filter(Boolean)
+            .join(" ")}
+        >
+          {codeLayout === "paired-rows" ? (
+            <>
+              <div className="report-cover-signature-code-row">
+                {renderCodePart(layers[0])}
+                <span className="report-cover-signature-sep"> | </span>
+                {renderCodePart(layers[1])}
+              </div>
+              <div className="report-cover-signature-code-row">
+                {renderCodePart(layers[2])}
+                <span className="report-cover-signature-sep"> | </span>
+                {renderCodePart(layers[3])}
+              </div>
+            </>
+          ) : (
+            layers.map((layer, index) => (
+              <span key={layer.key}>
+                {index > 0 ? <span className="report-cover-signature-sep"> | </span> : null}
+                {renderCodePart(layer)}
               </span>
-            </span>
-          ))}
+            ))
+          )}
         </div>
       </article>
     </div>

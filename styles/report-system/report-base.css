@@ -359,6 +359,21 @@
   color: var(--report-segment-s0);
 }
 
+.report-cover-signature-code--paired-rows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.report-cover-signature-code-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
 .report-cover-signature-sep {
   color: var(--report-text-muted);
   text-shadow: none;

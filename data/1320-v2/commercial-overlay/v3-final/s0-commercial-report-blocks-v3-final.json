@@ -1,0 +1,394 @@
+{
+  "document": {
+    "title": "1320 Commercial Report Blocks v3 Final — S0",
+    "version": "commercial-v3-final",
+    "status": "Final archive module export — Step 5A",
+    "packaged_at": "2026-07-16",
+    "source_database": "s0-void-gate.json",
+    "entry_count": 20,
+    "purpose": "Commercial Report Output Layer blocks for Full Report / Mobile Report / PDF / API rendering. Symbolic source unchanged."
+  },
+  "module": "S0",
+  "entries": [
+    {
+      "code": "S0-00",
+      "display_name": "Zero Point Archetype",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Zero Point Archetype points to a place where life may invite you to see through a core belief or illusion: “Everything must be obtained from the outside world.” This is not a flaw or fixed identity; it is a threshold where your awareness can return to something quieter and more true.",
+        "how_this_may_show_up": "You may notice this gate in moments of: Unable to stop, continuously seeking confirmation. In those moments, the pattern can feel convincing because it tries to protect you, yet it may also pull you away from your own center.",
+        "core_gift": "When this gate begins to integrate, it can reveal this power: The ability to return completely to the inner center. What once felt like a contraction can become a doorway back to presence, choice, and inner steadiness.",
+        "growth_edge": "The growth edge is to recognize the illusion before it becomes a reflex. Instead of fighting the pattern or judging yourself for having it, you can pause and ask what part of you is trying to feel safe.",
+        "integration_key": "Integration begins with this practice: Stabilize presence and practice “doing nothing.”. Let it be simple, embodied, and repeatable rather than something you have to perfect.",
+        "one_week_practice": "For one week, pause once a day and ask: where did this illusion appear today, and what would help me return to a more grounded response? Write one honest sentence, then take one small grounded action.",
+        "wisewave_reflection": "The more you let go, the closer you come to truth."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S0-01",
+      "display_name": "Existence Illusion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Existence Illusion points to a place where life may invite you to see through a core belief or illusion: “Feeling that you are not good enough or not valuable enough.” This is not a flaw or fixed identity; it is a threshold where your awareness can return to something quieter and more true.",
+        "how_this_may_show_up": "You may notice this gate in moments of: Self-worth depends on external evaluation. In those moments, the pattern can feel convincing because it tries to protect you, yet it may also pull you away from your own center.",
+        "core_gift": "When this gate begins to integrate, it can reveal this power: Deep self-affirmation. What once felt like a contraction can become a doorway back to presence, choice, and inner steadiness.",
+        "growth_edge": "The growth edge is to recognize the illusion before it becomes a reflex. Instead of fighting the pattern or judging yourself for having it, you can pause and ask what part of you is trying to feel safe.",
+        "integration_key": "Integration begins with this practice: Practice not proving yourself. Let it be simple, embodied, and repeatable rather than something you have to perfect.",
+        "one_week_practice": "For one week, pause once a day and ask: where did this illusion appear today, and what would help me return to a more grounded response? Write one honest sentence, then take one small grounded action.",
+        "wisewave_reflection": "You are already enough; you do not need to be proven."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S0-02",
+      "display_name": "Control Illusion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Control Illusion points to a place where life may invite you to see through a core belief or illusion: “Believing everything must be controlled in order to feel safe.” This is not a flaw or fixed identity; it is a threshold where your awareness can return to something quieter and more true.",
+        "how_this_may_show_up": "You may notice this gate in moments of: Unable to trust the process. In those moments, the pattern can feel convincing because it tries to protect you, yet it may also pull you away from your own center.",
+        "core_gift": "When this gate begins to integrate, it can reveal this power: The power of letting go and flowing with life. What once felt like a contraction can become a doorway back to presence, choice, and inner steadiness.",
+        "growth_edge": "The growth edge is to recognize the illusion before it becomes a reflex. Instead of fighting the pattern or judging yourself for having it, you can pause and ask what part of you is trying to feel safe.",
+        "integration_key": "Integration begins with this practice: Practice allowing things to unfold naturally. Let it be simple, embodied, and repeatable rather than something you have to perfect.",
+        "one_week_practice": "For one week, pause once a day and ask: where did this illusion appear today, and what would help me return to a more grounded response? Write one honest sentence, then take one small grounded action.",
+        "wisewave_reflection": "Control is a reaction of fear; trust is true strength."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S0-03",
+      "display_name": "Separation Illusion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Separation Illusion points to a place where life may invite you to see through a core belief or illusion: “Believing that you are separate from the world.” This is not a flaw or fixed identity; it is a threshold where your awareness can return to something quieter and more true.",
+        "how_this_may_show_up": "You may notice this gate in moments of: Isolation, self-protection, and loneliness. In those moments, the pattern can feel convincing because it tries to protect you, yet it may also pull you away from your own center.",
+        "core_gift": "When this gate begins to integrate, it can reveal this power: The ability to build connection and a sense of unity. What once felt like a contraction can become a doorway back to presence, choice, and inner steadiness.",
+        "growth_edge": "The growth edge is to recognize the illusion before it becomes a reflex. Instead of fighting the pattern or judging yourself for having it, you can pause and ask what part of you is trying to feel safe.",
+        "integration_key": "Integration begins with this practice: Replace defense with openness. Let it be simple, embodied, and repeatable rather than something you have to perfect.",
+        "one_week_practice": "For one week, pause once a day and ask: where did this illusion appear today, and what would help me return to a more grounded response? Write one honest sentence, then take one small grounded action.",
+        "wisewave_reflection": "You have never truly been separate from the world."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S0-04",
+      "display_name": "Perfection Illusion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Perfection Illusion points to a place where life may invite you to see through a core belief or illusion: “Believing you must be perfect in order to be loved.” This is not a flaw or fixed identity; it is a threshold where your awareness can return to something quieter and more true.",
+        "how_this_may_show_up": "You may notice this gate in moments of: Chasing an ideal self. In those moments, the pattern can feel convincing because it tries to protect you, yet it may also pull you away from your own center.",
+        "core_gift": "When this gate begins to integrate, it can reveal this power: The ability to accept your real self. What once felt like a contraction can become a doorway back to presence, choice, and inner steadiness.",
+        "growth_edge": "The growth edge is to recognize the illusion before it becomes a reflex. Instead of fighting the pattern or judging yourself for having it, you can pause and ask what part of you is trying to feel safe.",
+        "integration_key": "Integration begins with this practice: See the beauty of imperfection. Let it be simple, embodied, and repeatable rather than something you have to perfect.",
+        "one_week_practice": "For one week, pause once a day and ask: where did this illusion appear today, and what would help me return to a more grounded response? Write one honest sentence, then take one small grounded action.",
+        "wisewave_reflection": "Perfection is not the goal; truth is."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S0-05",
+      "display_name": "Emotional Illusion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Emotional Illusion points to a place where life may invite you to see through a core belief or illusion: “Believing emotions are the same as truth.” This is not a flaw or fixed identity; it is a threshold where your awareness can return to something quieter and more true.",
+        "how_this_may_show_up": "You may notice this gate in moments of: Being pulled by intense reactions. In those moments, the pattern can feel convincing because it tries to protect you, yet it may also pull you away from your own center.",
+        "core_gift": "When this gate begins to integrate, it can reveal this power: The ability to become the observer of emotions. What once felt like a contraction can become a doorway back to presence, choice, and inner steadiness.",
+        "growth_edge": "The growth edge is to recognize the illusion before it becomes a reflex. Instead of fighting the pattern or judging yourself for having it, you can pause and ask what part of you is trying to feel safe.",
+        "integration_key": "Integration begins with this practice: Practice conscious breathing and separation from emotional identification. Let it be simple, embodied, and repeatable rather than something you have to perfect.",
+        "one_week_practice": "For one week, pause once a day and ask: where did this illusion appear today, and what would help me return to a more grounded response? Write one honest sentence, then take one small grounded action.",
+        "wisewave_reflection": "Emotion is speaking, but you are not the emotion."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S0-06",
+      "display_name": "Role Illusion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Role Illusion points to a place where life may invite you to see through a core belief or illusion: “Equating yourself with an identity or role.” This is not a flaw or fixed identity; it is a threshold where your awareness can return to something quieter and more true.",
+        "how_this_may_show_up": "You may notice this gate in moments of: Fear of losing identity. In those moments, the pattern can feel convincing because it tries to protect you, yet it may also pull you away from your own center.",
+        "core_gift": "When this gate begins to integrate, it can reveal this power: The ability to return to being itself. What once felt like a contraction can become a doorway back to presence, choice, and inner steadiness.",
+        "growth_edge": "The growth edge is to recognize the illusion before it becomes a reflex. Instead of fighting the pattern or judging yourself for having it, you can pause and ask what part of you is trying to feel safe.",
+        "integration_key": "Integration begins with this practice: Release identity labels. Let it be simple, embodied, and repeatable rather than something you have to perfect.",
+        "one_week_practice": "For one week, pause once a day and ask: where did this illusion appear today, and what would help me return to a more grounded response? Write one honest sentence, then take one small grounded action.",
+        "wisewave_reflection": "You are not the role; you are awareness."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S0-07",
+      "display_name": "Self-Worth Illusion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Self-Worth Illusion points to a place where life may invite you to see through a core belief or illusion: “Feeling that you are never enough.” This is not a flaw or fixed identity; it is a threshold where your awareness can return to something quieter and more true.",
+        "how_this_may_show_up": "You may notice this gate in moments of: Self-limitation and self-denial. In those moments, the pattern can feel convincing because it tries to protect you, yet it may also pull you away from your own center.",
+        "core_gift": "When this gate begins to integrate, it can reveal this power: The ability to see your own light. What once felt like a contraction can become a doorway back to presence, choice, and inner steadiness.",
+        "growth_edge": "The growth edge is to recognize the illusion before it becomes a reflex. Instead of fighting the pattern or judging yourself for having it, you can pause and ask what part of you is trying to feel safe.",
+        "integration_key": "Integration begins with this practice: Practice gratitude and allowing. Let it be simple, embodied, and repeatable rather than something you have to perfect.",
+        "one_week_practice": "For one week, pause once a day and ask: where did this illusion appear today, and what would help me return to a more grounded response? Write one honest sentence, then take one small grounded action.",
+        "wisewave_reflection": "Your worth is not the result; it is your essence."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S0-08",
+      "display_name": "Attachment Illusion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Attachment Illusion points to a place where life may invite you to see through a core belief or illusion: “Believing happiness must come from relationships.” This is not a flaw or fixed identity; it is a threshold where your awareness can return to something quieter and more true.",
+        "how_this_may_show_up": "You may notice this gate in moments of: A tendency to depend on others. In those moments, the pattern can feel convincing because it tries to protect you, yet it may also pull you away from your own center.",
+        "core_gift": "When this gate begins to integrate, it can reveal this power: The capacity for emotional self-sufficiency. What once felt like a contraction can become a doorway back to presence, choice, and inner steadiness.",
+        "growth_edge": "The growth edge is to recognize the illusion before it becomes a reflex. Instead of fighting the pattern or judging yourself for having it, you can pause and ask what part of you is trying to feel safe.",
+        "integration_key": "Integration begins with this practice: Return to your own inner security. Let it be simple, embodied, and repeatable rather than something you have to perfect.",
+        "one_week_practice": "For one week, pause once a day and ask: where did this illusion appear today, and what would help me return to a more grounded response? Write one honest sentence, then take one small grounded action.",
+        "wisewave_reflection": "Relationship is not the source; you are."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S0-09",
+      "display_name": "Judgment Illusion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Judgment Illusion points to a place where life may invite you to see through a core belief or illusion: “Believing others’ opinions matter more than your own truth.” This is not a flaw or fixed identity; it is a threshold where your awareness can return to something quieter and more true.",
+        "how_this_may_show_up": "You may notice this gate in moments of: Fear of being judged. In those moments, the pattern can feel convincing because it tries to protect you, yet it may also pull you away from your own center.",
+        "core_gift": "When this gate begins to integrate, it can reveal this power: The ability to define your own value. What once felt like a contraction can become a doorway back to presence, choice, and inner steadiness.",
+        "growth_edge": "The growth edge is to recognize the illusion before it becomes a reflex. Instead of fighting the pattern or judging yourself for having it, you can pause and ask what part of you is trying to feel safe.",
+        "integration_key": "Integration begins with this practice: Stop asking the outside world, “Am I okay?”. Let it be simple, embodied, and repeatable rather than something you have to perfect.",
+        "one_week_practice": "For one week, pause once a day and ask: where did this illusion appear today, and what would help me return to a more grounded response? Write one honest sentence, then take one small grounded action.",
+        "wisewave_reflection": "Other people’s voices are not your truth."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S0-10",
+      "display_name": "Time Illusion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Time Illusion points to a place where life may invite you to see through a core belief or illusion: “Fear of being too late or missing out.” This is not a flaw or fixed identity; it is a threshold where your awareness can return to something quieter and more true.",
+        "how_this_may_show_up": "You may notice this gate in moments of: Anxiety about the future and difficulty being present. In those moments, the pattern can feel convincing because it tries to protect you, yet it may also pull you away from your own center.",
+        "core_gift": "When this gate begins to integrate, it can reveal this power: The power of presence. What once felt like a contraction can become a doorway back to presence, choice, and inner steadiness.",
+        "growth_edge": "The growth edge is to recognize the illusion before it becomes a reflex. Instead of fighting the pattern or judging yourself for having it, you can pause and ask what part of you is trying to feel safe.",
+        "integration_key": "Integration begins with this practice: Return to this moment. Let it be simple, embodied, and repeatable rather than something you have to perfect.",
+        "one_week_practice": "For one week, pause once a day and ask: where did this illusion appear today, and what would help me return to a more grounded response? Write one honest sentence, then take one small grounded action.",
+        "wisewave_reflection": "The present moment is everything."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S0-11",
+      "display_name": "Responsibility Illusion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Responsibility Illusion points to a place where life may invite you to see through a core belief or illusion: “Believing you must carry everything.” This is not a flaw or fixed identity; it is a threshold where your awareness can return to something quieter and more true.",
+        "how_this_may_show_up": "You may notice this gate in moments of: Over-responsibility and self-exhaustion. In those moments, the pattern can feel convincing because it tries to protect you, yet it may also pull you away from your own center.",
+        "core_gift": "When this gate begins to integrate, it can reveal this power: Clear boundaries and wise discernment. What once felt like a contraction can become a doorway back to presence, choice, and inner steadiness.",
+        "growth_edge": "The growth edge is to recognize the illusion before it becomes a reflex. Instead of fighting the pattern or judging yourself for having it, you can pause and ask what part of you is trying to feel safe.",
+        "integration_key": "Integration begins with this practice: Carry only what belongs to you. Let it be simple, embodied, and repeatable rather than something you have to perfect.",
+        "one_week_practice": "For one week, pause once a day and ask: where did this illusion appear today, and what would help me return to a more grounded response? Write one honest sentence, then take one small grounded action.",
+        "wisewave_reflection": "Responsibility is not a burden; it is a choice."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S0-12",
+      "display_name": "Comparison Illusion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Comparison Illusion points to a place where life may invite you to see through a core belief or illusion: “Defining yourself through comparison.” This is not a flaw or fixed identity; it is a threshold where your awareness can return to something quieter and more true.",
+        "how_this_may_show_up": "You may notice this gate in moments of: A cycle of inferiority and superiority. In those moments, the pattern can feel convincing because it tries to protect you, yet it may also pull you away from your own center.",
+        "core_gift": "When this gate begins to integrate, it can reveal this power: Self-stability and independent self-worth. What once felt like a contraction can become a doorway back to presence, choice, and inner steadiness.",
+        "growth_edge": "The growth edge is to recognize the illusion before it becomes a reflex. Instead of fighting the pattern or judging yourself for having it, you can pause and ask what part of you is trying to feel safe.",
+        "integration_key": "Integration begins with this practice: Return from image to soul essence. Let it be simple, embodied, and repeatable rather than something you have to perfect.",
+        "one_week_practice": "For one week, pause once a day and ask: where did this illusion appear today, and what would help me return to a more grounded response? Write one honest sentence, then take one small grounded action.",
+        "wisewave_reflection": "You are a unique expression."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S0-13",
+      "display_name": "Meaning Illusion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Meaning Illusion points to a place where life may invite you to see through a core belief or illusion: “Believing life must have a “great purpose.”” This is not a flaw or fixed identity; it is a threshold where your awareness can return to something quieter and more true.",
+        "how_this_may_show_up": "You may notice this gate in moments of: Over-attachment to achievement and meaning. In those moments, the pattern can feel convincing because it tries to protect you, yet it may also pull you away from your own center.",
+        "core_gift": "When this gate begins to integrate, it can reveal this power: The ability to see truth in the ordinary. What once felt like a contraction can become a doorway back to presence, choice, and inner steadiness.",
+        "growth_edge": "The growth edge is to recognize the illusion before it becomes a reflex. Instead of fighting the pattern or judging yourself for having it, you can pause and ask what part of you is trying to feel safe.",
+        "integration_key": "Integration begins with this practice: Return from goal-orientation to being. Let it be simple, embodied, and repeatable rather than something you have to perfect.",
+        "one_week_practice": "For one week, pause once a day and ask: where did this illusion appear today, and what would help me return to a more grounded response? Write one honest sentence, then take one small grounded action.",
+        "wisewave_reflection": "Meaning is not something to find; it is something to be."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S0-14",
+      "display_name": "Guilt Illusion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Guilt Illusion points to a place where life may invite you to see through a core belief or illusion: “Feeling that you must compensate or atone.” This is not a flaw or fixed identity; it is a threshold where your awareness can return to something quieter and more true.",
+        "how_this_may_show_up": "You may notice this gate in moments of: Self-punishment and emotional heaviness. In those moments, the pattern can feel convincing because it tries to protect you, yet it may also pull you away from your own center.",
+        "core_gift": "When this gate begins to integrate, it can reveal this power: The ability to forgive yourself. What once felt like a contraction can become a doorway back to presence, choice, and inner steadiness.",
+        "growth_edge": "The growth edge is to recognize the illusion before it becomes a reflex. Instead of fighting the pattern or judging yourself for having it, you can pause and ask what part of you is trying to feel safe.",
+        "integration_key": "Integration begins with this practice: Release the weight of past memories. Let it be simple, embodied, and repeatable rather than something you have to perfect.",
+        "one_week_practice": "For one week, pause once a day and ask: where did this illusion appear today, and what would help me return to a more grounded response? Write one honest sentence, then take one small grounded action.",
+        "wisewave_reflection": "You have already been forgiven; you simply have not yet released yourself."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S0-15",
+      "display_name": "Loneliness Illusion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Loneliness Illusion points to a place where life may invite you to see through a core belief or illusion: “Feeling that no one understands or truly sees you.” This is not a flaw or fixed identity; it is a threshold where your awareness can return to something quieter and more true.",
+        "how_this_may_show_up": "You may notice this gate in moments of: Self-isolation and deep loneliness. In those moments, the pattern can feel convincing because it tries to protect you, yet it may also pull you away from your own center.",
+        "core_gift": "When this gate begins to integrate, it can reveal this power: The ability to connect with yourself. What once felt like a contraction can become a doorway back to presence, choice, and inner steadiness.",
+        "growth_edge": "The growth edge is to recognize the illusion before it becomes a reflex. Instead of fighting the pattern or judging yourself for having it, you can pause and ask what part of you is trying to feel safe.",
+        "integration_key": "Integration begins with this practice: Return from seeking connection outside to inner companionship. Let it be simple, embodied, and repeatable rather than something you have to perfect.",
+        "one_week_practice": "For one week, pause once a day and ask: where did this illusion appear today, and what would help me return to a more grounded response? Write one honest sentence, then take one small grounded action.",
+        "wisewave_reflection": "Loneliness is the doorway back to your soul."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S0-16",
+      "display_name": "Blame Illusion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Blame Illusion points to a place where life may invite you to see through a core belief or illusion: “Attributing pain to others.” This is not a flaw or fixed identity; it is a threshold where your awareness can return to something quieter and more true.",
+        "how_this_may_show_up": "You may notice this gate in moments of: Blame and victim consciousness. In those moments, the pattern can feel convincing because it tries to protect you, yet it may also pull you away from your own center.",
+        "core_gift": "When this gate begins to integrate, it can reveal this power: The ability to take responsibility for your own emotions and choices. What once felt like a contraction can become a doorway back to presence, choice, and inner steadiness.",
+        "growth_edge": "The growth edge is to recognize the illusion before it becomes a reflex. Instead of fighting the pattern or judging yourself for having it, you can pause and ask what part of you is trying to feel safe.",
+        "integration_key": "Integration begins with this practice: Let others step out of your story. Let it be simple, embodied, and repeatable rather than something you have to perfect.",
+        "one_week_practice": "For one week, pause once a day and ask: where did this illusion appear today, and what would help me return to a more grounded response? Write one honest sentence, then take one small grounded action.",
+        "wisewave_reflection": "Pain comes from misidentification, not from others."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S0-17",
+      "display_name": "Self-Denial Illusion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Self-Denial Illusion points to a place where life may invite you to see through a core belief or illusion: ““I am not worthy” / “I am not good enough.”” This is not a flaw or fixed identity; it is a threshold where your awareness can return to something quieter and more true.",
+        "how_this_may_show_up": "You may notice this gate in moments of: Deep denial of one’s own worth. In those moments, the pattern can feel convincing because it tries to protect you, yet it may also pull you away from your own center.",
+        "core_gift": "When this gate begins to integrate, it can reveal this power: Awakened self-affirmation. What once felt like a contraction can become a doorway back to presence, choice, and inner steadiness.",
+        "growth_edge": "The growth edge is to recognize the illusion before it becomes a reflex. Instead of fighting the pattern or judging yourself for having it, you can pause and ask what part of you is trying to feel safe.",
+        "integration_key": "Integration begins with this practice: Use awareness to see your own light. Let it be simple, embodied, and repeatable rather than something you have to perfect.",
+        "one_week_practice": "For one week, pause once a day and ask: where did this illusion appear today, and what would help me return to a more grounded response? Write one honest sentence, then take one small grounded action.",
+        "wisewave_reflection": "What you deny is the illusion, not the real you."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S0-18",
+      "display_name": "Effort Illusion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Effort Illusion points to a place where life may invite you to see through a core belief or illusion: “Believing effort can earn everything.” This is not a flaw or fixed identity; it is a threshold where your awareness can return to something quieter and more true.",
+        "how_this_may_show_up": "You may notice this gate in moments of: Using effort to avoid truth. In those moments, the pattern can feel convincing because it tries to protect you, yet it may also pull you away from your own center.",
+        "core_gift": "When this gate begins to integrate, it can reveal this power: The wisdom of flow and allowing. What once felt like a contraction can become a doorway back to presence, choice, and inner steadiness.",
+        "growth_edge": "The growth edge is to recognize the illusion before it becomes a reflex. Instead of fighting the pattern or judging yourself for having it, you can pause and ask what part of you is trying to feel safe.",
+        "integration_key": "Integration begins with this practice: Return from “doing more” to “being yourself.”. Let it be simple, embodied, and repeatable rather than something you have to perfect.",
+        "one_week_practice": "For one week, pause once a day and ask: where did this illusion appear today, and what would help me return to a more grounded response? Write one honest sentence, then take one small grounded action.",
+        "wisewave_reflection": "Effort is not power; truth is."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S0-19",
+      "display_name": "Survival Illusion",
+      "commercial_report_blocks": {
+        "opening_essence": "Your Survival Illusion points to a place where life may invite you to see through a core belief or illusion: “Believing the world is dangerous and must be defended against.” This is not a flaw or fixed identity; it is a threshold where your awareness can return to something quieter and more true.",
+        "how_this_may_show_up": "You may notice this gate in moments of: Anxiety, fear, and tension. In those moments, the pattern can feel convincing because it tries to protect you, yet it may also pull you away from your own center.",
+        "core_gift": "When this gate begins to integrate, it can reveal this power: Deep inner safety. What once felt like a contraction can become a doorway back to presence, choice, and inner steadiness.",
+        "growth_edge": "The growth edge is to recognize the illusion before it becomes a reflex. Instead of fighting the pattern or judging yourself for having it, you can pause and ask what part of you is trying to feel safe.",
+        "integration_key": "Integration begins with this practice: Practice relaxing, breathing, and trusting. Let it be simple, embodied, and repeatable rather than something you have to perfect.",
+        "one_week_practice": "For one week, pause once a day and ask: where did this illusion appear today, and what would help me return to a more grounded response? Write one honest sentence, then take one small grounded action.",
+        "wisewave_reflection": "You were never truly threatened."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    }
+  ]
+}

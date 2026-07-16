@@ -1,4 +1,4 @@
-import overlayData from "@/data/1320-v2/commercial-report-blocks-overlay.json";
+import overlayData from "@/data/1320-v2/commercial-report-blocks-overlay-v3-final.json";
 import type { SoulMissionSection } from "@/lib/types/s5-soul-mission";
 import type { LocalizedText, SegmentContent } from "@/lib/types/1320-content";
 import type { V2ModuleId } from "@/lib/types/1320-v2-content";

@@ -1,0 +1,964 @@
+{
+  "document": {
+    "title": "1320 Commercial Report Blocks v3 Final — S2",
+    "version": "commercial-v3-final",
+    "status": "Final archive module export — Step 5A",
+    "packaged_at": "2026-07-16",
+    "source_database": "s2-soul-mirror.json",
+    "entry_count": 50,
+    "purpose": "Commercial Report Output Layer blocks for Full Report / Mobile Report / PDF / API rendering. Symbolic source unchanged."
+  },
+  "module": "S2",
+  "entries": [
+    {
+      "code": "S2-01",
+      "display_name": "The Security Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Security Mirror points to a relationship mirror around this theme: The other person activates your deepest issues around safety and security. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Swinging between fear of abandonment and fear of closeness. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Build safety from within yourself, not from the relationship.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Inner-child repair and boundary practice. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "You are not lacking safety. You are finding your strength again."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-02",
+      "display_name": "The Control Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Control Mirror points to a relationship mirror around this theme: Both sides may try to control emotions, timing, direction, or the pace of the relationship. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: A recurring cycle of anger and resentment. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Release control and practice trust.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Return to the present moment instead of projecting into the future. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Control is fear wearing a mask. Trust is the deeper power."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-03",
+      "display_name": "The Self-Worth Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Self-Worth Mirror points to a relationship mirror around this theme: The other person reflects self-denial, self-doubt, or hidden questions around your value. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Expecting someone else to prove your worth. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Worth is your existence itself, not something granted by recognition.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Disconnect from comparison, shame, and people-pleasing. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Your worth has never been reduced. It has only been covered."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-04",
+      "display_name": "The Dependency Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Dependency Mirror points to a relationship mirror around this theme: Emotional attachment or energetic merging may easily arise. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Switching between separation anxiety and clingy attachment. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Practice independence without emotional separation.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Return to your own center of strength. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Love is not losing yourself."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-05",
+      "display_name": "The Projection Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Projection Mirror points to a relationship mirror around this theme: Both sides project feared or unowned parts of themselves onto the other. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Misunderstanding, blame, and emotional reactions. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: See the truth behind the projection.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Notice the fear beneath your first reaction. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "What you see is not only the other person; it is also the part of yourself you have not yet seen."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-06",
+      "display_name": "The Validation Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Validation Mirror points to a relationship mirror around this theme: There is a repeated need for the other person to prove love or affirmation. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Accumulated dissatisfaction and anxiety. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Close the pattern of seeking validation outside yourself.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Turn your attention back toward your own sense of worth. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "You do not need to be proven. You are the answer already."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-07",
+      "display_name": "The Frustration Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Frustration Mirror points to a relationship mirror around this theme: The other person amplifies your sense of failure or anxiety around goals. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Effort → disappointment → more effort → repeated failure. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Recognize the illusion of perfection-seeking.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Forgive your own imperfection. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Imperfection is an entrance for the soul to keep growing."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-08",
+      "display_name": "The Competition Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Competition Mirror points to a relationship mirror around this theme: The relationship becomes a field of comparison, ranking, or rivalry. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Win-loss dynamics, superiority, and jealousy. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Release comparison consciousness.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Practice growing together instead of opposing each other. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "You are not opponents. You are mirrors."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-09",
+      "display_name": "The Shame Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Shame Mirror points to a relationship mirror around this theme: The other person activates deep shame, embarrassment, or vulnerability. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Hiding yourself → being misunderstood → hiding even more. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: See the longing for love beneath shame.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Allow vulnerability to be seen. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Shame is a signal calling your soul home."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-10",
+      "display_name": "The Distance Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Distance Mirror points to a relationship mirror around this theme: The other person’s distance activates your insecurity. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: The more anxious you become, the more distance you may feel. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Release expectations around response speed or immediate reassurance.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Learn to stabilize your own energy. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "True intimacy begins within, not through distance or proximity."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-11",
+      "display_name": "The Responsibility Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Responsibility Mirror points to a relationship mirror around this theme: An imbalance of responsibility appears in the relationship. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: One side gives too much while the other withdraws. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Notice the need to rescue or be rescued.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Return to equal energetic exchange. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "You are not anyone’s savior."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-12",
+      "display_name": "The Avoidance Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Avoidance Mirror points to a relationship mirror around this theme: Conflict, communication, or emotional truth is avoided or frozen. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Avoidance → explosion → guilt → avoidance again. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Face the truth of the relationship directly.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Use conscious communication instead of silence. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Avoidance does not mean you do not care; it means you are afraid to face the truth."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-13",
+      "display_name": "The Judgment Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Judgment Mirror points to a relationship mirror around this theme: Both sides are triggered by criticism or perceived judgment. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Judgment → self-defense → more judgment. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: See the fear and insecurity beneath judgment.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Use understanding instead of attack. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Judgment is the protective color of a wounded place."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-14",
+      "display_name": "The Recognition Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Recognition Mirror points to a relationship mirror around this theme: A strong desire to be seen, recognized, and confirmed arises. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Depending on external recognition. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Stop handing your value to others.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Return to the strength of your own existence. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "You do not need to be seen in order to be light. You are light already."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-15",
+      "display_name": "The Trust Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Trust Mirror points to a relationship mirror around this theme: Deep trust issues arise between two people. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Suspicion, testing, and emotional tug-of-war. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Trust is not only something you give another person; it is something you give yourself.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Practice emotional stability and transparent communication. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "The more you trust yourself, the more you can trust relationship."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-16",
+      "display_name": "The Emotional Intensity Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Emotional Intensity Mirror points to a relationship mirror around this theme: The relationship moves through strong emotional highs and lows. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Intense closeness → cool distance → intense closeness again. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Find a stable frequency instead of emotional intensity.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Stop relying on intensity to confirm love. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Stability is closer to the soul than passion alone."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-17",
+      "display_name": "The Boundary Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Boundary Mirror points to a relationship mirror around this theme: It is difficult to establish or respect personal boundaries. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Intrusion, control, and energetic pulling. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Build clear boundaries.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Practice saying no. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "A boundary is not rejection. It is respect."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-18",
+      "display_name": "The Achievement Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Achievement Mirror points to a relationship mirror around this theme: Both sides trigger career, achievement, or goal-related anxiety. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Not enough → pushing harder → exhaustion → self-denial. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Release the pressure of having to be strong all the time.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Thank yourself for the stage you are currently in. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "The soul is not defined by achievement."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-19",
+      "display_name": "The Self-Expression Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Self-Expression Mirror points to a relationship mirror around this theme: You may fear expressing yourself, or feel misunderstood when you do. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Suppression → explosion → guilt → suppression again. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Allow truth to move through you.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Speak truth without attacking. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Your voice matters by nature."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-20",
+      "display_name": "The Attachment Pattern Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Attachment Pattern Mirror points to a relationship mirror around this theme: Attachment styles become amplified in the relationship. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Anxious attachment and avoidant attachment attract and activate each other. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Healing attachment is not about changing the other person; it is about changing your relationship to yourself.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Learn to stabilize your emotional system. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Attachment is the soul’s way of searching for home."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-21",
+      "display_name": "The Emotional Resonance Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Emotional Resonance Mirror points to a relationship mirror around this theme: Both people’s emotions strongly affect each other and may pull each other’s energy. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Absorbing another person’s emotions → losing center → relational confusion. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Practice distinguishing what belongs to you from what belongs to the other person.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Emotional boundaries and energy-centering practice. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Resonance is not merging. Understanding is not carrying."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-22",
+      "display_name": "The Expectation Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Expectation Mirror points to a relationship mirror around this theme: High expectations for the relationship can lead to frequent disappointment. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Higher expectations → deeper disappointment → even higher expectations. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Release role expectations placed on the other person.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Return to the truth of the connection in the present moment. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "The fewer expectations you hold, the more real love becomes."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-23",
+      "display_name": "The Overgiving Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Overgiving Mirror points to a relationship mirror around this theme: One side gives more than the other. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Unconditional giving → being overlooked → hurt → giving even more. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Stop using giving as a way to earn worth.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Return to balanced energy exchange. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "True love does not need to be proven."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-24",
+      "display_name": "The Emotional Suppression Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Emotional Suppression Mirror points to a relationship mirror around this theme: One person suppresses emotions while the other explodes. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Suppression → endurance → explosion → guilt. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Emotions need to be seen, not pushed down.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Express real needs gently. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Suppression is a form of coldness toward yourself."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-25",
+      "display_name": "The Being-Needed Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Being-Needed Mirror points to a relationship mirror around this theme: You may feel valuable only when the other person needs you. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Self-sacrifice → temporary sense of value → depletion. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Value comes from existence, not dependency.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Disconnect from the illusion that being needed equals being loved. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "You do not need to be needed. You already matter."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-26",
+      "display_name": "The Denial Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Denial Mirror points to a relationship mirror around this theme: You are deeply triggered when the other person does not understand your feelings. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Being denied → arguing → feeling even more denied. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Your emotions do not need approval from others.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Practice expression instead of fighting to be validated. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Not being understood does not make your experience unreal."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-27",
+      "display_name": "The Soul Shock Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Soul Shock Mirror points to a relationship mirror around this theme: The relationship creates a strong awakening effect. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Intimacy → activation → distance → closeness again. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Activation is an entrance into awakening.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Allow the shock to become growth. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "You did not meet for comfort alone. You met to awaken."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-28",
+      "display_name": "The Old Wound Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Old Wound Mirror points to a relationship mirror around this theme: The other person activates wounds from past relationships. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Past pain → projection → conflict → repetition. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Recognize: this is an old wound.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Respond to old pain in a new way. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "You are not the person you were in the past."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-29",
+      "display_name": "The Intimacy Avoidance Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Intimacy Avoidance Mirror points to a relationship mirror around this theme: You fear deep intimacy, yet also fear losing the connection. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Longing to be close → withdrawing once closeness appears. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Notice the fear connected to intimacy.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Practice opening slowly rather than forcing yourself. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "True intimacy does not require you to be perfect."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-30",
+      "display_name": "The Perfectionism Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Perfectionism Mirror points to a relationship mirror around this theme: You may hold unrealistically high standards for the relationship or the other person. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Not good enough → disappointment → criticism → repair → disappointment again. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Perfection is an illusion. Reality is the strength.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Release idealized expectations of relationship. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "There is no perfect love. There is only real love."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-31",
+      "display_name": "The Hidden Needs Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Hidden Needs Mirror points to a relationship mirror around this theme: You do not speak your needs, yet expect the other person to understand them. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Not speaking → not being met → anger → more silence. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Needs can only be understood when they are expressed.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Learn clear expression. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "You deserve to be heard."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-32",
+      "display_name": "The Value Exchange Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Value Exchange Mirror points to a relationship mirror around this theme: Love is equated with contribution, usefulness, or value exchange. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Giving to receive love → not receiving → giving even more. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Love is not a transaction.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Practice unconditional self-acceptance. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "You are not your contribution. You are your existence."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-33",
+      "display_name": "The Emotional Imbalance Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Emotional Imbalance Mirror points to a relationship mirror around this theme: Emotions pull each other back and forth, with one side high and the other low. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Emotional reaction → calm → emotional reaction again. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Emotion is not the truth; it is a response.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Build the position of an emotional observer. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Stability comes from within, not from outside."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-34",
+      "display_name": "The Fear of Failure Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Fear of Failure Mirror points to a relationship mirror around this theme: The other person’s sense of achievement activates anxiety in you. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Inferiority → avoidance → more inferiority. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Another person’s success is not your failure.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Build a system of self-recognition. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Success is not comparison. It is direction."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-35",
+      "display_name": "The Approval Dependency Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Approval Dependency Mirror points to a relationship mirror around this theme: You keep trying to confirm whether the other person is satisfied with you. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Pleasing → temporary harmony → inner emptiness. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: People-pleasing comes from fear of rejection.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Do not flatter, perform, or accommodate at the cost of truth. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Those who love you do not need you to be perfect."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-36",
+      "display_name": "The Challenge Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Challenge Mirror points to a relationship mirror around this theme: The other person repeatedly challenges your fixed patterns. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Being challenged → resisting → being challenged again. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Every challenge is an invitation to grow.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Release defensiveness and adopt openness. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Your discomfort is your breakthrough point."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-37",
+      "display_name": "The Meaning Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Meaning Mirror points to a relationship mirror around this theme: The relationship makes you question your direction and sense of meaning. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Doubt → self-denial → giving up → doubt again. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Meaning comes from within, not from another person.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Redefine the value of your existence. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Your meaning has never depended on anyone else."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-38",
+      "display_name": "The Loneliness Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Loneliness Mirror points to a relationship mirror around this theme: Even within relationship, you may still feel lonely. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Seeking closeness → still feeling lonely → craving more closeness. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Loneliness is the soul calling you back to yourself.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Build intimacy with yourself. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Loneliness is not a lack. It is a doorway."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-39",
+      "display_name": "The Idealization Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Idealization Mirror points to a relationship mirror around this theme: You place the other person on a pedestal. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Admiration → disappointment → devaluation → admiration again. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: See reality instead of fantasy.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Allow the other person to be human, not an ideal. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Idealization is a refusal to see what is real."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-40",
+      "display_name": "The Emotional Surrender Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Emotional Surrender Mirror points to a relationship mirror around this theme: You over-submit to the other person’s emotions. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Submission → resentment → explosion → guilt → submission again. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Submission is not gentleness; it is fear.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Build autonomy. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Gentleness is not abandoning yourself."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-41",
+      "display_name": "The Sacrifice Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Sacrifice Mirror points to a relationship mirror around this theme: You continually sacrifice yourself for the relationship. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Sacrifice → pain → being overlooked → more sacrifice. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Stop equating love with endurance.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Care for yourself before caring for the relationship. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Sacrifice is not love. It is self-abandonment."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-42",
+      "display_name": "The Rejection Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Rejection Mirror points to a relationship mirror around this theme: You fear being rejected, so you keep withdrawing. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Not expressing → not being seen → deeper fear. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Rejection is not a denial of who you are.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Practice expressing real needs. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Rejection is not harm. It is a boundary."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-43",
+      "display_name": "The Accusation Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Accusation Mirror points to a relationship mirror around this theme: Both sides may easily accuse or blame each other. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Accusation → defense → accusation again. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: The pain behind accusation needs to be understood.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Release blame and repair relationship through relationship. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Accusation is the voice of powerlessness."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-44",
+      "display_name": "The Guilt Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Guilt Mirror points to a relationship mirror around this theme: The other person makes you repeatedly feel guilty or burdened. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Guilt → compensation → exhaustion → more guilt. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Guilt is not love; it is fear that has not moved.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Practice self-forgiveness. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "You are not responsible for anyone else’s emotions."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-45",
+      "display_name": "The Emotional Neglect Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Emotional Neglect Mirror points to a relationship mirror around this theme: You feel ignored, misunderstood, or emotionally unseen. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Not being cared for → anger → coldness → being hurt again. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Seeking attention is an old wound calling for care.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Learn to see yourself. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Your emotions deserve companionship."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-46",
+      "display_name": "The Unequal Investment Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Unequal Investment Mirror points to a relationship mirror around this theme: The relationship moves at different speeds; one person moves faster, the other slower. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Pushing → the other withdraws → pushing harder. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Respect differences in rhythm.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Move from needing a result back to needing truth. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "Relationship is not synchronization. It is meeting."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-47",
+      "display_name": "The Self-Doubt Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Self-Doubt Mirror points to a relationship mirror around this theme: The relationship activates deep self-doubt. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Doubt → avoidance → more doubt. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: See that the fear behind doubt is not who you are.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Rebuild self-trust. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "What you doubt is not only the relationship. It is yourself."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-48",
+      "display_name": "The Commitment Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Commitment Mirror points to a relationship mirror around this theme: The other person’s relationship to commitment activates your insecurity. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Wanting commitment → demanding it → the other withdraws. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Commitment cannot be demanded. It can only be chosen.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Let commitment grow from free choice. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "You deserve to be chosen, not convinced."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-49",
+      "display_name": "The Fear of Investment Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Fear of Investment Mirror points to a relationship mirror around this theme: You fear investing too deeply or too quickly. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Withdrawal → longing → withdrawal again. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: Recognize that fear of investment is a protective mechanism.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Open slowly instead of forcing yourself forward. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "You do not need to reach the destination all at once."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S2-50",
+      "display_name": "The Soulmate Mirror",
+      "commercial_report_blocks": {
+        "opening_essence": "The Soulmate Mirror points to a relationship mirror around this theme: The other person activates the deepest growth lessons of your soul. This is not a prediction about who you will attract; it is a symbolic reflection of what connection may help you see more clearly within yourself.",
+        "how_this_may_show_up": "You may notice this mirror through a recurring loop such as: Intimacy → activation → separation → deeper connection. The same pattern may repeat in different forms until the deeper need, fear, boundary, or projection becomes visible.",
+        "core_gift": "The gift of this mirror is the chance to build a more conscious relationship with yourself while you relate to others. The core lesson is: A soulmate is not perfection. A soulmate is awakening.",
+        "growth_edge": "The growth edge is to slow down before making the other person the whole explanation. When something is activated, ask what the relationship is reflecting, what belongs to you, and what still needs honest communication or boundary repair.",
+        "integration_key": "Integration begins through: Take responsibility for your own growth within love. This keeps the mirror grounded in self-responsibility rather than blame, fantasy, or relationship destiny.",
+        "one_week_practice": "For one week, choose one relational trigger or recurring pattern. Write three lines: what happened, what it activated in me, and what response would keep me connected to myself without controlling the other person.",
+        "wisewave_reflection": "They did not come to give you the answer. They came to illuminate your truth."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    }
+  ]
+}

@@ -15,6 +15,7 @@
     "smoke:v2-content": "npx tsx scripts/smoke-v2-content.ts",
     "smoke:v2-get-content": "npx tsx scripts/smoke-v2-get-content.ts",
     "smoke:commercial-overlay": "npx tsx scripts/smoke-commercial-overlay.ts",
+    "package:commercial-v3-final": "npx tsx scripts/package-commercial-overlay-v3-final.ts",
     "smoke:commercial-overlay-step2": "npm run smoke:commercial-overlay",
     "smoke:full-report-payload": "npx tsx scripts/smoke-full-report-payload.ts",
     "smoke:full-report-v2-sample": "npx tsx scripts/smoke-full-report-v2-sample.ts",

@@ -388,27 +388,34 @@ The raw `data/1320-v2/*.json` files are the **Symbolic Source Layer**. Paid repo
 | Schema | `docs/specs/1320-v2-content/COMMERCIAL_REPORT_BLOCKS_SCHEMA_v1.md` |
 | Wisewave audit | `docs/specs/1320-v2-content/1320_DATABASE_COMMERCIAL_QUALITY_AUDIT_v1.md` |
 | Upgrade plan | `docs/specs/1320-v2-content/1320_DATABASE_UPGRADE_AND_REFINEMENT_PLAN_v1.md` |
-| Sample overlay | `data/1320-v2/commercial-report-blocks-overlay.json` |
-| Step 2 module exports | `data/1320-v2/commercial-overlay/step2-s0-s3/` |
+| Sample overlay (runtime) | `data/1320-v2/commercial-report-blocks-overlay-v3-final.json` |
+| v3-final module exports | `data/1320-v2/commercial-overlay/v3-final/` |
+| Step 2 module exports (archive) | `data/1320-v2/commercial-overlay/step2-s0-s3/` |
 | Nova renderer | `lib/1320-v2/commercial-report-layer.ts` |
 
 **Step 2 (2026-07-11):** Wisewave delivered 126 S0–S3 commercial blocks via overlay v3.
 
 **Step 3 (2026-07-13):** Wisewave delivered 108 S4–S6 commercial blocks (light normalization).
 
-**Step 4 (2026-07-14):** Wisewave delivered 24 S7–S9 commercial blocks (expansion). Full S0–S9 overlay complete pending Step 5 package consolidation.
+**Step 4 (2026-07-14):** Wisewave delivered 24 S7–S9 commercial blocks (expansion).
 
-| Step | Modules | Entries |
-|------|---------|--------:|
-| 2 | S0–S3 | 126 |
-| 3 | S4–S6 | 108 |
-| 4 | S7–S9 | 24 |
-| **Total overlay** | S0–S9 | **258** |
+**Step 5A (2026-07-16):** Final `commercial-v3-final` package — 258 entries consolidated, runtime overlay switched to v3-final, module exports archived under `v3-final/`.
+
+| Step | Version | Modules | Entries |
+|------|---------|---------|--------:|
+| 2 | `commercial-v3-step2` | S0–S3 | 126 |
+| 3 | `commercial-v3-step3` | S4–S6 | 108 |
+| 4 | `commercial-v3-step4` | S7–S9 | 24 |
+| **5A final** | **`commercial-v3-final`** | **S0–S9** | **258** |
 
 | Resource | Path |
 |---|---|
-| Step 4 module exports | `data/1320-v2/commercial-overlay/step4-s7-s9/` |
-| Step 4 QA summary | `docs/specs/1320-v2-content/1320_COMMERCIAL_REPORT_BLOCKS_STEP4_QA_SUMMARY.md` |
+| Final overlay | `data/1320-v2/commercial-report-blocks-overlay-v3-final.json` |
+| v3-final module exports | `data/1320-v2/commercial-overlay/v3-final/` |
+| Governance summary | `docs/specs/1320-v2-content/COMMERCIAL_REPORT_OUTPUT_LAYER_v3_FINAL_GOVERNANCE_SUMMARY.md` |
+| Changelog | `docs/specs/1320-v2-content/COMMERCIAL_REPORT_OUTPUT_LAYER_v3_FINAL_CHANGELOG.md` |
+| Nova integration notes | `docs/specs/1320-v2-content/COMMERCIAL_REPORT_OUTPUT_LAYER_v3_FINAL_NOVA_INTEGRATION_NOTES.md` |
+| Step 4 module exports (archive) | `data/1320-v2/commercial-overlay/step4-s7-s9/` |
 
 Renderer precedence: entry `commercial_report_blocks` → overlay file → legacy `output_blocks` / steward fields → symbolic source.
 

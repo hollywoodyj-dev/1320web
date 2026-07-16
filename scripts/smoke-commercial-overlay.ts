@@ -93,7 +93,7 @@ for (const sample of SAMPLE_DATES) {
       process.exit(1);
     }
     assert(seg.contentLayer === "commercial", `${sample.label} ${id} should use commercial layer`);
-    assert(seg.commercialBlocksVersion === "commercial-v3-step4", `${sample.label} ${id} version`);
+    assert(seg.commercialBlocksVersion === "commercial-v3-final", `${sample.label} ${id} version`);
     const text = segmentText(seg);
     for (const phrase of SOURCE_LAYER_PHRASES) {
       assert(!text.includes(phrase), `${sample.label} ${id} leaked source phrase: ${phrase}`);

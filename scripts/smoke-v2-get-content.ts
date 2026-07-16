@@ -101,7 +101,7 @@ assert(!containsCjk(s3Guidance), `S3 EN guidance should be English, got: ${s3Gui
 console.log("=== v2 commercial output layer — sample blueprint overlay ===");
 assert(full.s1Content!.contentLayer === "commercial", "S1-18 should use commercial layer");
 assert(
-  full.s1Content!.commercialBlocksVersion === "commercial-v3-step4",
+  full.s1Content!.commercialBlocksVersion === "commercial-v3-final",
   "S1 should use Step 4 commercial overlay version",
 );
 assert(

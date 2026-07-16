@@ -1,0 +1,394 @@
+{
+  "document": {
+    "title": "1320 Commercial Report Blocks v3 Final — S4",
+    "version": "commercial-v3-final",
+    "status": "Final archive module export — Step 5A",
+    "packaged_at": "2026-07-16",
+    "source_database": "s4-core-shadow.json",
+    "entry_count": 20,
+    "purpose": "Commercial Report Output Layer blocks for Full Report / Mobile Report / PDF / API rendering. Symbolic source unchanged."
+  },
+  "module": "S4",
+  "entries": [
+    {
+      "code": "S4-00",
+      "display_name": "The Loop of Disconnection",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S4 pattern, The Loop of Disconnection, is not a flaw in who you are. It is a protective pattern that may become active when life feels difficult to hold. When life becomes uncertain, this pattern may create a subtle sense of separation from the body, from others, or from the present moment.",
+        "how_this_may_show_up": "You may notice it most when you feel unseen, overwhelmed, emotionally unsafe, or unable to influence what is happening. The protective reflex may be to step back internally, become neutral too quickly, minimize needs, or act as if nothing matters as much as it actually does. In relationships, this may show up as silence, delayed responses, difficulty naming feelings, or leaving others unsure of what is happening inside. In work and daily life, this may appear as functioning well externally while feeling internally absent, uninspired, or disconnected from deeper motivation.",
+        "core_gift": "The gift hidden inside this loop is the sensitivity to notice what safety, honesty, and presence are asking for. The hidden need is to feel safe enough to remain present without having to disappear emotionally. As this pattern softens, the energy that once went into protection can return to choice, contact, and grounded self-trust.",
+        "growth_edge": "Your growth edge is to recognize the loop before it takes over the whole field of your attention. This pattern invites you to notice where you withdraw from direct experience and move into distance, numbness, or quiet self-protection. It does not mean you are detached by nature. It may suggest that disconnection may have become a protective habit when reality feels too much to hold.",
+        "integration_key": "Integration begins by returning to small, honest contact with the present moment rather than forcing immediate emotional openness.",
+        "one_week_practice": "For one week, pause three times a day and name one body sensation, one emotion, and one need without judging any of them.",
+        "wisewave_reflection": "You do not have to leave yourself in order to survive the moment. Presence can begin in a very small way. When you return to one breath, one sensation, and one honest feeling, the loop of disconnection begins to soften."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S4-01",
+      "display_name": "The Loop of Proving",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S4 pattern, The Loop of Proving, is not a flaw in who you are. It is a protective pattern that may become active when life feels difficult to hold. This pattern may turn life into a quiet attempt to prove worth through achievement, usefulness, strength, or constant improvement.",
+        "how_this_may_show_up": "You may notice it most when you feel compared, overlooked, criticized, or unsure whether your contribution is enough. The protective reflex may be overworking, over-explaining, taking on too much, or trying to become impressive enough to feel secure. In relationships, this may appear as trying to earn love, becoming overly helpful, or feeling anxious when appreciation is not expressed clearly. In work and daily life, this may appear as high standards, difficulty resting, and a constant sense that the next achievement will finally bring peace.",
+        "core_gift": "The gift hidden inside this loop is the sensitivity to notice what safety, honesty, and presence are asking for. The hidden need is to feel worthy before producing, pleasing, or proving anything. As this pattern softens, the energy that once went into protection can return to choice, contact, and grounded self-trust.",
+        "growth_edge": "Your growth edge is to recognize the loop before it takes over the whole field of your attention. This pattern invites you to observe where your actions are driven less by genuine alignment and more by the need to be validated. It does not say you lack value. It points to a place where value may have been outsourced to performance.",
+        "integration_key": "Integration begins when you practice acting from inner clarity instead of acting to secure external confirmation.",
+        "one_week_practice": "For one week, choose one small action each day that is valuable even if nobody notices it, and write down why it mattered to you.",
+        "wisewave_reflection": "Your worth is not waiting at the end of another accomplishment. The more you act from worth rather than for worth, the more your effort becomes clean, grounded, and free."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S4-02",
+      "display_name": "The Loop of Seeking Approval",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S4 pattern, The Loop of Seeking Approval, is not a flaw in who you are. It is a protective pattern that may become active when life feels difficult to hold. This pattern may cause you to monitor others’ reactions before trusting your own inner knowing.",
+        "how_this_may_show_up": "You may notice this most when there is conflict, silence, disagreement, or the possibility of disappointing someone. The protective reflex may be people-pleasing, softening the truth, asking repeatedly for reassurance, or delaying decisions until others approve. In relationships, this may show up as difficulty saying no, fear of being disliked, or adapting so quickly that true needs disappear. In work and daily life, this may appear as hesitation to lead, excessive consultation, or choosing acceptable paths over authentic ones.",
+        "core_gift": "The gift hidden inside this loop is the sensitivity to notice what safety, honesty, and presence are asking for. The hidden need is to feel safe belonging to oneself, even when external agreement is not guaranteed. As this pattern softens, the energy that once went into protection can return to choice, contact, and grounded self-trust.",
+        "growth_edge": "Your growth edge is to recognize the loop before it takes over the whole field of your attention. This pattern invites you to notice where you shape themselves around approval, acceptance, or emotional permission from others. It does not mean you are weak. It may suggest that belonging may have become more important than self-alignment.",
+        "integration_key": "Integration begins by practicing small expressions of truth that do not require immediate approval.",
+        "one_week_practice": "For one week, name one honest preference each day without apologizing for having it.",
+        "wisewave_reflection": "Approval can feel like safety, but it cannot replace inner alignment. When you allow your truth to exist gently, you begin to belong to yourself again."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S4-03",
+      "display_name": "The Loop of Overthinking",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S4 pattern, The Loop of Overthinking, is not a flaw in who you are. It is a protective pattern that may become active when life feels difficult to hold. This pattern may turn uncertainty into endless analysis, making the mind work harder than the moment actually requires.",
+        "how_this_may_show_up": "You may notice this most when a decision has emotional consequences, when outcomes cannot be guaranteed, or when you fears making the wrong move. The protective reflex may be researching excessively, replaying conversations, postponing action, or seeking perfect certainty before moving. In relationships, this may appear as interpreting every signal, questioning every tone, or mentally preparing for every possible rejection. In work and daily life, this may appear as planning without beginning, refining without releasing, or delaying decisions until energy is depleted.",
+        "core_gift": "The gift hidden inside this loop is the sensitivity to notice what safety, honesty, and presence are asking for. The hidden need is to feel supported enough to take a grounded step without total certainty. As this pattern softens, the energy that once went into protection can return to choice, contact, and grounded self-trust.",
+        "growth_edge": "Your growth edge is to recognize the loop before it takes over the whole field of your attention. This pattern invites you to observe where thinking becomes a way to avoid feeling, choosing, or entering the unknown. It does not mean intelligence is the problem. It means the mind may be trying to create safety where trust is also needed.",
+        "integration_key": "Integration begins when you learns to pair clear thinking with embodied action.",
+        "one_week_practice": "For one week, when a decision feels circular, write down the next smallest honest step and take it within twenty-four hours.",
+        "wisewave_reflection": "Your mind is a powerful instrument, but it was not meant to replace life. Clarity grows when thought touches action."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S4-04",
+      "display_name": "The Loop of Control",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S4 pattern, The Loop of Control, is not a flaw in who you are. It is a protective pattern that may become active when life feels difficult to hold. This pattern may create a strong need to manage outcomes, timing, emotions, or other people’s responses in order to feel safe.",
+        "how_this_may_show_up": "You may notice this most when plans change, people behave unpredictably, or important outcomes are outside your direct influence. The protective reflex may be micromanaging, insisting on certainty, becoming rigid, or trying to prevent discomfort before it appears. In relationships, this may show up as trying to direct conversations, anticipate reactions, or manage closeness through structure and rules. In work and daily life, this may appear as difficulty delegating, fear of improvisation, and stress when others do not follow the expected path.",
+        "core_gift": "The gift hidden inside this loop is the sensitivity to notice what safety, honesty, and presence are asking for. The hidden need is to feel stable inside even when life is not fully controllable outside. As this pattern softens, the energy that once went into protection can return to choice, contact, and grounded self-trust.",
+        "growth_edge": "Your growth edge is to recognize the loop before it takes over the whole field of your attention. This pattern invites you to notice where control has become a substitute for trust. It does not mean you are controlling as an identity. It may suggest that uncertainty may feel too threatening unless everything is held tightly.",
+        "integration_key": "Integration begins by distinguishing responsibility from control.",
+        "one_week_practice": "For one week, choose one small situation each day where you allow something to unfold without correcting it immediately.",
+        "wisewave_reflection": "Control often begins as protection. Yet life becomes lighter when you realize that steadiness is not the same as holding everything."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S4-05",
+      "display_name": "The Loop of Avoidance",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S4 pattern, The Loop of Avoidance, is not a flaw in who you are. It is a protective pattern that may become active when life feels difficult to hold. This pattern may lead you away from discomfort before the deeper message of the discomfort can be understood.",
+        "how_this_may_show_up": "You may notice this most when something requires vulnerability, sustained attention, honest confrontation, or emotional maturity. The protective reflex may be distraction, busyness, humor, spiritual bypassing, changing the topic, or choosing a new path before completing the current one. In relationships, this may appear as pulling away when conversations deepen or becoming unavailable when repair is needed. In work and daily life, this may appear as unfinished projects, shifting goals, or repeatedly seeking a fresh start instead of facing the current edge.",
+        "core_gift": "The gift hidden inside this loop is the sensitivity to notice what safety, honesty, and presence are asking for. The hidden need is to feel capable of staying with discomfort without being consumed by it. As this pattern softens, the energy that once went into protection can return to choice, contact, and grounded self-trust.",
+        "growth_edge": "Your growth edge is to recognize the loop before it takes over the whole field of your attention. This pattern invites you to observe where you move away too quickly from conflict, responsibility, grief, commitment, or necessary change. It does not frame avoidance as failure. It sees avoidance as an old strategy that may no longer serve growth.",
+        "integration_key": "Integration begins by staying with one honest thing long enough for it to reveal its teaching.",
+        "one_week_practice": "For one week, choose one avoided task or conversation and take a small, concrete step toward it.",
+        "wisewave_reflection": "Avoidance is not the absence of courage. It is often the memory of overwhelm. You can return slowly. One honest step is enough to begin changing the pattern."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S4-06",
+      "display_name": "The Loop of Emotional Absorption",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S4 pattern, The Loop of Emotional Absorption, is not a flaw in who you are. It is a protective pattern that may become active when life feels difficult to hold. This pattern may cause you to absorb the emotions of others and mistake them for personal responsibility.",
+        "how_this_may_show_up": "You may notice this most when someone nearby is disappointed, upset, anxious, or in need of support. The protective reflex may be caretaking, fixing, absorbing tension, anticipating needs, or calming others before checking in with oneself. In relationships, this may appear as taking responsibility for another person’s mood or feeling guilty when others are not okay. In work and daily life, this may appear as emotional fatigue, over-functioning in teams, or becoming the one who silently carries the atmosphere.",
+        "core_gift": "The gift hidden inside this loop is the sensitivity to notice what safety, honesty, and presence are asking for. The hidden need is to remain connected without losing the boundary of self. As this pattern softens, the energy that once went into protection can return to choice, contact, and grounded self-trust.",
+        "growth_edge": "Your growth edge is to recognize the loop before it takes over the whole field of your attention. This pattern invites you to notice where empathy turns into energetic over-involvement. It does not mean sensitivity is a flaw. It may suggest that the gift of feeling may need stronger boundaries to become sustainable.",
+        "integration_key": "Integration begins by learning the difference between compassion and absorption.",
+        "one_week_practice": "For one week, before helping someone, ask internally: “Is this mine to hold, or mine to witness?”.",
+        "wisewave_reflection": "Your sensitivity is not asking you to carry everything. It is asking you to listen clearly while remaining rooted in yourself."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S4-07",
+      "display_name": "The Loop of Self-Doubt",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S4 pattern, The Loop of Self-Doubt, is not a flaw in who you are. It is a protective pattern that may become active when life feels difficult to hold. This pattern may cause you to question your own perception even when your inner signal is already clear.",
+        "how_this_may_show_up": "You may notice this most when a choice matters, when others disagree, or when you fears being responsible for the outcome. The protective reflex may be indecision, asking too many people, shrinking the original desire, or waiting until circumstances decide for them. In relationships, this may appear as doubting personal feelings, excusing discomfort, or letting others define what happened. In work and daily life, this may appear as underclaiming ability, delaying visibility, or choosing safe options over aligned ones.",
+        "core_gift": "The gift hidden inside this loop is the sensitivity to notice what safety, honesty, and presence are asking for. The hidden need is to feel allowed to trust an inner signal without needing it to be perfect. As this pattern softens, the energy that once went into protection can return to choice, contact, and grounded self-trust.",
+        "growth_edge": "Your growth edge is to recognize the loop before it takes over the whole field of your attention. This pattern invites you to notice where you abandon your own knowing in favor of hesitation, second-guessing, or external validation. It does not mean you lack intuition. It may suggest that trust in the self may need to be rebuilt through small, consistent choices.",
+        "integration_key": "Integration begins by honoring small inner signals and observing your results over time.",
+        "one_week_practice": "For one week, make one low-risk decision each day based on your first clear inner signal, and record what you notice.",
+        "wisewave_reflection": "Self-trust is not built through perfect decisions. It is built through returning to yourself after every decision."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S4-08",
+      "display_name": "The Loop of Scarcity",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S4 pattern, The Loop of Scarcity, is not a flaw in who you are. It is a protective pattern that may become active when life feels difficult to hold. This pattern may interpret life through the fear that there is not enough time, love, opportunity, resources, or support.",
+        "how_this_may_show_up": "You may notice this most when resources feel uncertain, when others receive what you want, or when progress seems slower than expected. The protective reflex may be grasping, comparing, rushing, withholding, or making choices from fear rather than clarity. In relationships, this may appear as fear of losing attention, jealousy, or difficulty trusting that care can remain available. In work and daily life, this may appear as undercharging, overworking, taking misaligned opportunities, or feeling behind even while moving forward.",
+        "core_gift": "The gift hidden inside this loop is the sensitivity to notice what safety, honesty, and presence are asking for. The hidden need is to feel resourced internally before seeking evidence of support externally. As this pattern softens, the energy that once went into protection can return to choice, contact, and grounded self-trust.",
+        "growth_edge": "Your growth edge is to recognize the loop before it takes over the whole field of your attention. This pattern invites you to observe where scarcity becomes the lens through which choices are made. It does not mean scarcity is imaginary. It means the inner system may continue to operate from lack even when new possibilities are present.",
+        "integration_key": "Integration begins by noticing where urgency is not the same as truth.",
+        "one_week_practice": "For one week, before making a choice from pressure, pause and ask: “What would I choose if I believed there was enough space to respond clearly?”.",
+        "wisewave_reflection": "Scarcity narrows the field of vision. When you return to steadiness, you may still act wisely, but you no longer act as if fear is the only reality."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S4-09",
+      "display_name": "The Loop of Restlessness",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S4 pattern, The Loop of Restlessness, is not a flaw in who you are. It is a protective pattern that may become active when life feels difficult to hold. This pattern may keep you moving, searching, changing, or improving before the current experience has been fully integrated.",
+        "how_this_may_show_up": "You may notice this most when life becomes quiet, repetitive, emotionally intimate, or slower than your inner pace. The protective reflex may be chasing novelty, starting many things, leaving too soon, or turning discomfort into a need for immediate change. In relationships, this may appear as craving intensity, fearing routine, or mistaking calmness for disconnection. In work and daily life, this may appear as scattered focus, frequent reinvention, or difficulty sustaining one direction long enough to receive its fruits.",
+        "core_gift": "The gift hidden inside this loop is the sensitivity to notice what safety, honesty, and presence are asking for. The hidden need is to feel alive without needing constant stimulation. As this pattern softens, the energy that once went into protection can return to choice, contact, and grounded self-trust.",
+        "growth_edge": "Your growth edge is to recognize the loop before it takes over the whole field of your attention. This pattern invites you to observe where movement becomes an escape from depth. It does not mean change is wrong. It may suggest that the desire for expansion may sometimes bypass the need for grounding.",
+        "integration_key": "Integration begins by allowing depth to become as valuable as movement.",
+        "one_week_practice": "For one week, choose one ongoing commitment and give it steady attention for fifteen minutes each day without adding something new.",
+        "wisewave_reflection": "Not every new beginning is freedom. Sometimes freedom begins when you stay long enough to meet the part of you that wants to run."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S4-10",
+      "display_name": "The Loop of Protection",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S4 pattern, The Loop of Protection, is not a flaw in who you are. It is a protective pattern that may become active when life feels difficult to hold. This pattern may create strong protective walls around the heart, the body, or your deeper needs.",
+        "how_this_may_show_up": "You may notice this most when trust is uncertain, when closeness increases, or when old memories of being hurt are activated. The protective reflex may be guardedness, emotional testing, suspicion, withdrawal, or presenting strength while hiding tenderness. In relationships, this may appear as difficulty receiving care, expecting disappointment, or needing repeated proof before relaxing. In work and daily life, this may appear as independence taken to the point of isolation, reluctance to ask for support, or keeping creative work hidden.",
+        "core_gift": "The gift hidden inside this loop is the sensitivity to notice what safety, honesty, and presence are asking for. The hidden need is to feel protected without having to remain closed. As this pattern softens, the energy that once went into protection can return to choice, contact, and grounded self-trust.",
+        "growth_edge": "Your growth edge is to recognize the loop before it takes over the whole field of your attention. This pattern invites you to notice where protection has become automatic, even in situations where openness may be possible. It does not judge the wall. It recognizes that the wall may once have been necessary, while also asking whether it is still the only option.",
+        "integration_key": "Integration begins by letting protection become flexible rather than permanent.",
+        "one_week_practice": "For one week, practice one small act of safe receptivity, such as accepting help, naming a need, or allowing appreciation to land.",
+        "wisewave_reflection": "Your protection deserves respect. It kept something precious intact. Now it can learn to open by choice, not by force."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S4-11",
+      "display_name": "The Loop of Idealization",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S4 pattern, The Loop of Idealization, is not a flaw in who you are. It is a protective pattern that may become active when life feels difficult to hold. This pattern may cause you to attach to an ideal image of a person, path, role, or future before seeing reality clearly.",
+        "how_this_may_show_up": "You may notice this most when you deeply wants meaning, belonging, love, or a sense of destined direction. The protective reflex may be romanticizing, overlooking inconsistencies, projecting potential, or staying loyal to what something could be rather than what it is. In relationships, this may appear as seeing the best in someone while ignoring the pattern of how you actually show up. In work and daily life, this may appear as committing to a vision before checking capacity, structure, timing, or real-world alignment.",
+        "core_gift": "The gift hidden inside this loop is the sensitivity to notice what safety, honesty, and presence are asking for. The hidden need is to keep hope without abandoning discernment. As this pattern softens, the energy that once went into protection can return to choice, contact, and grounded self-trust.",
+        "growth_edge": "Your growth edge is to recognize the loop before it takes over the whole field of your attention. This pattern invites you to observe where imagination becomes stronger than direct evidence. It does not mean vision is wrong. It may suggest that vision needs contact with reality in order to mature.",
+        "integration_key": "Integration begins when you allow truth to refine hope rather than destroy it.",
+        "one_week_practice": "For one week, choose one area of life and write two lists: what I imagine, and what reality is consistently showing me.",
+        "wisewave_reflection": "Hope is beautiful when it stays connected to truth. What is real does not need to be forced into an image in order to matter."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S4-12",
+      "display_name": "The Loop of Rescuing",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S4 pattern, The Loop of Rescuing, is not a flaw in who you are. It is a protective pattern that may become active when life feels difficult to hold. This pattern may place you in the role of helper, fixer, or emotional rescuer before mutual responsibility is established.",
+        "how_this_may_show_up": "You may notice this most when someone appears vulnerable, lost, wounded, or unable to hold your own responsibility. The protective reflex may be over-giving, over-advising, taking responsibility for another person’s growth, or confusing love with repair work. In relationships, this may appear as choosing people who need support more than you can offer reciprocity. In work and daily life, this may appear as carrying the emotional or practical weight of a team, family, or project without clear consent or balance.",
+        "core_gift": "The gift hidden inside this loop is the sensitivity to notice what safety, honesty, and presence are asking for. The hidden need is to feel loved without having to become necessary. As this pattern softens, the energy that once went into protection can return to choice, contact, and grounded self-trust.",
+        "growth_edge": "Your growth edge is to recognize the loop before it takes over the whole field of your attention. This pattern invites you to notice where helping becomes a way to feel needed, safe, or valuable. It does not make care wrong. It asks whether care is being offered from freedom or from an unconscious need to secure connection.",
+        "integration_key": "Integration begins by honoring compassion while returning responsibility to its rightful place.",
+        "one_week_practice": "For one week, before stepping in to help, ask: “Was I asked, am I resourced, and does this support their responsibility?”.",
+        "wisewave_reflection": "You can care deeply without becoming the bridge someone refuses to build within themselves. Love does not require self-abandonment."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S4-13",
+      "display_name": "The Loop of Resistance",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S4 pattern, The Loop of Resistance, is not a flaw in who you are. It is a protective pattern that may become active when life feels difficult to hold. This pattern may meet guidance, structure, authority, or feedback with immediate resistance before the deeper truth has been considered.",
+        "how_this_may_show_up": "You may notice it most when you feel told what to do, misunderstood, restricted, or placed inside a framework you did not choose. The protective reflex may be refusal, argument, withdrawal, dismissing support, or defining oneself through opposition. In relationships, this may appear as pushing back against care, advice, or requests even when the connection itself is not unsafe. In work and daily life, this may appear as difficulty collaborating with systems, mentors, managers, or structures that could actually support progress.",
+        "core_gift": "The gift hidden inside this loop is the sensitivity to notice what safety, honesty, and presence are asking for. The hidden need is to feel free while still being able to receive what is useful. As this pattern softens, the energy that once went into protection can return to choice, contact, and grounded self-trust.",
+        "growth_edge": "Your growth edge is to recognize the loop before it takes over the whole field of your attention. This pattern invites you to observe where resistance protects autonomy but may also block growth. It does not make rebellion wrong. It asks whether you are responding to the present moment or reacting to an old experience of being controlled.",
+        "integration_key": "Integration begins by separating true inner authority from automatic opposition.",
+        "one_week_practice": "For one week, when resistance arises, pause and ask: “What part of this is control, and what part of this may be useful information?”.",
+        "wisewave_reflection": "Freedom is not the same as rejecting everything. True sovereignty can listen, discern, and choose without needing to fight every form."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S4-14",
+      "display_name": "The Loop of Perfection",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S4 pattern, The Loop of Perfection, is not a flaw in who you are. It is a protective pattern that may become active when life feels difficult to hold. This pattern may delay expression, intimacy, or action until you feel polished, ready, certain, or beyond criticism.",
+        "how_this_may_show_up": "You may notice this most when you are evaluated, misunderstood, compared, or seen before you feel fully prepared. The protective reflex may be refinement without release, harsh self-correction, postponement, or hiding behind preparation. In relationships, this may appear as editing emotions before sharing them, fearing neediness, or trying to be easy to love. In work and daily life, this may appear as unfinished projects, reluctance to publish, or difficulty learning publicly.",
+        "core_gift": "The gift hidden inside this loop is the sensitivity to notice what safety, honesty, and presence are asking for. The hidden need is to feel safe being in process, not only admired when complete. As this pattern softens, the energy that once went into protection can return to choice, contact, and grounded self-trust.",
+        "growth_edge": "Your growth edge is to recognize the loop before it takes over the whole field of your attention. This pattern invites you to notice where the desire to do things well becomes a reason not to begin, reveal, or risk being seen. It does not make excellence wrong. It shows where excellence may have become tied to emotional safety.",
+        "integration_key": "Integration begins when you allow honest participation to matter more than flawless presentation.",
+        "one_week_practice": "For one week, share or complete one small imperfect action that moves something real forward.",
+        "wisewave_reflection": "Perfection often promises protection, but it can quietly prevent life from touching you. What is real is allowed to begin unfinished."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S4-15",
+      "display_name": "The Loop of Spiritual Bypassing",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S4 pattern, The Loop of Spiritual Bypassing, is not a flaw in who you are. It is a protective pattern that may become active when life feels difficult to hold. This pattern may use insight, acceptance, or higher perspective to move away from emotions that still need honest contact.",
+        "how_this_may_show_up": "You may notice it most when you feel pain that does not fit your preferred self-image of being calm, wise, loving, or evolved. The protective reflex may be over-accepting, explaining pain too quickly, forgiving before feeling, or turning every wound into a lesson before the body has been heard. In relationships, this may appear as avoiding conflict through spiritual explanations or minimizing personal hurt in the name of compassion. In work and daily life, this may appear as vision without structure, insight without action, or inner work without outer accountability.",
+        "core_gift": "The gift hidden inside this loop is the sensitivity to notice what safety, honesty, and presence are asking for. The hidden need is to be allowed to be human without losing the path of awareness. As this pattern softens, the energy that once went into protection can return to choice, contact, and grounded self-trust.",
+        "growth_edge": "Your growth edge is to recognize the loop before it takes over the whole field of your attention. This pattern invites you to notice where spiritual language or reflective understanding becomes a way to avoid grief, anger, boundaries, or practical responsibility. It does not reject spirituality. It asks for spirituality to become embodied and truthful.",
+        "integration_key": "Integration begins by letting truth include the body, emotions, boundaries, and behavior.",
+        "one_week_practice": "For one week, when you explain a feeling, first pause and name the feeling plainly before giving it meaning.",
+        "wisewave_reflection": "Awareness is not an escape from being human. The higher view becomes real only when it can hold the raw truth of the moment."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S4-16",
+      "display_name": "The Loop of Self-Sacrifice",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S4 pattern, The Loop of Self-Sacrifice, is not a flaw in who you are. It is a protective pattern that may become active when life feels difficult to hold. This pattern may lead you to give, support, tolerate, or endure beyond what is honest for your own energy.",
+        "how_this_may_show_up": "You may notice this most when someone needs help, when conflict may arise, or when you fears being seen as selfish. The protective reflex may be over-tolerance, saying yes too quickly, minimizing exhaustion, or believing love must be proven through endurance. In relationships, this may appear as unequal giving, quiet resentment, or staying in roles that no longer feel truthful. In work and daily life, this may appear as burnout, invisible labor, or being relied upon because you rarely reveals your limits.",
+        "core_gift": "The gift hidden inside this loop is the sensitivity to notice what safety, honesty, and presence are asking for. The hidden need is to know that care can include the self without becoming selfish. As this pattern softens, the energy that once went into protection can return to choice, contact, and grounded self-trust.",
+        "growth_edge": "Your growth edge is to recognize the loop before it takes over the whole field of your attention. This pattern invites you to observe where goodness becomes self-erasure. It does not criticize generosity. It points to the moment when giving loses its clarity because the self has been left out of the equation.",
+        "integration_key": "Integration begins by allowing boundaries to become part of love.",
+        "one_week_practice": "For one week, notice every automatic yes and pause before responding. Ask: “Do I have the capacity to give this honestly?”.",
+        "wisewave_reflection": "Your care becomes clearer when you are included in it. A boundary is not the end of love; it is where love becomes sustainable."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S4-17",
+      "display_name": "The Loop of Isolation",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S4 pattern, The Loop of Isolation, is not a flaw in who you are. It is a protective pattern that may become active when life feels difficult to hold. This pattern may convince you that you must process, solve, or carry things alone.",
+        "how_this_may_show_up": "You may notice it most when you feel misunderstood, disappointed by others, or afraid that needing support will create vulnerability. The protective reflex may be self-containment, emotional privacy, disappearing during difficulty, or assuming others will not understand. In relationships, this may appear as keeping struggles private, helping others more than being helped, or leaving before dependence can form. In work and daily life, this may appear as carrying excessive responsibility, avoiding collaboration, or not showing work until it feels completely safe.",
+        "core_gift": "The gift hidden inside this loop is the sensitivity to notice what safety, honesty, and presence are asking for. The hidden need is to experience support without feeling weak, exposed, or indebted. As this pattern softens, the energy that once went into protection can return to choice, contact, and grounded self-trust.",
+        "growth_edge": "Your growth edge is to recognize the loop before it takes over the whole field of your attention. This pattern invites you to notice where independence becomes isolation. It does not deny your strength. It asks whether strength has become a place to hide from receiving support.",
+        "integration_key": "Integration begins by practicing chosen, discerning openness rather than total self-reliance.",
+        "one_week_practice": "For one week, share one real but manageable truth with someone who has shown consistency and care.",
+        "wisewave_reflection": "You do not have to collapse to receive support. You can remain whole and still allow another person to stand beside you."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S4-18",
+      "display_name": "The Loop of Intensity",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S4 pattern, The Loop of Intensity, is not a flaw in who you are. It is a protective pattern that may become active when life feels difficult to hold. This pattern may make emotional intensity feel like truth, urgency, chemistry, or transformation.",
+        "how_this_may_show_up": "You may notice this most when there is uncertainty, attraction, conflict, crisis, or the possibility of deep change. The protective reflex may be dramatizing, escalating, seeking catharsis, or choosing situations that feel powerful but not necessarily nourishing. In relationships, this may appear as confusing anxiety with passion, conflict with intimacy, or rupture with importance. In work and daily life, this may appear as thriving in crisis while struggling with steady growth, maintenance, or quiet consistency.",
+        "core_gift": "The gift hidden inside this loop is the sensitivity to notice what safety, honesty, and presence are asking for. The hidden need is to feel alive, moved, and transformed without needing chaos to create meaning. As this pattern softens, the energy that once went into protection can return to choice, contact, and grounded self-trust.",
+        "growth_edge": "Your growth edge is to recognize the loop before it takes over the whole field of your attention. This pattern invites you to observe where intensity is mistaken for depth. It does not make strong feeling wrong. It asks whether the nervous system has learned to recognize activation more easily than steadiness.",
+        "integration_key": "Integration begins when you learns to recognize calm depth as real, not empty.",
+        "one_week_practice": "For one week, notice when urgency rises and ask: “Is this truth, activation, or a familiar intensity?”.",
+        "wisewave_reflection": "Depth does not always arrive as fire. Sometimes the most transformative thing is the steady presence that no longer requires chaos."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    },
+    {
+      "code": "S4-19",
+      "display_name": "The Loop of Unexpressed Truth",
+      "commercial_report_blocks": {
+        "opening_essence": "Your S4 pattern, The Loop of Unexpressed Truth, is not a flaw in who you are. It is a protective pattern that may become active when life feels difficult to hold. This pattern may keep your truth inside until it becomes tension, resentment, confusion, or distance.",
+        "how_this_may_show_up": "You may notice this most when speaking honestly may disappoint someone, change a dynamic, or reveal a need that feels vulnerable. The protective reflex may be withholding, hinting, overthinking words, pretending to agree, or waiting until pressure turns into sudden release. In relationships, this may appear as unspoken needs, delayed honesty, or expecting others to sense what has not been named. In work and daily life, this may appear as not advocating for oneself, avoiding necessary feedback, or letting misalignment continue too long.",
+        "core_gift": "The gift hidden inside this loop is the sensitivity to notice what safety, honesty, and presence are asking for. The hidden need is to trust that truth can be expressed without destroying connection. As this pattern softens, the energy that once went into protection can return to choice, contact, and grounded self-trust.",
+        "growth_edge": "Your growth edge is to recognize the loop before it takes over the whole field of your attention. This pattern invites you to notice where silence protects peace on the surface while creating separation underneath. It does not demand harsh expression. It asks for honest expression that is grounded, timely, and respectful.",
+        "integration_key": "Integration begins when the integration begins with simple, direct, non-accusatory truth spoken before the body has to carry it as pressure.",
+        "one_week_practice": "For one week, practice one clean sentence each day: “What is true for me is…”.",
+        "wisewave_reflection": "Your truth does not have to be loud to be real. When spoken clearly and early, it becomes a bridge rather than a rupture."
+      },
+      "governance": {
+        "non_predictive": true,
+        "non_diagnostic": true,
+        "non_ranking": true,
+        "user_agency_required": true
+      }
+    }
+  ]
+}

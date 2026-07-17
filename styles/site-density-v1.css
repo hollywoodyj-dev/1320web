@@ -200,15 +200,16 @@ h3 {
   margin-top: var(--homepage-section-gap);
 }
 
-/* Keep topbar→hero spacing from globals; no extra gap under hero */
+/* Keep topbar→hero spacing from globals */
 .page-shell #main-content > .home-section--hero {
   margin-top: 22px;
   margin-bottom: 0;
 }
 
+/* Same gap under hero as between every other block */
 .page-shell #main-content > .home-section.entry-panel,
 .page-shell #main-content > .entry-panel--refined {
-  margin-top: 0;
+  margin-top: var(--homepage-section-gap);
 }
 
 .page-shell #main-content > .home-section--closing {
@@ -400,7 +401,8 @@ h3 {
     margin-top: 14px;
   }
 
-  .page-shell #main-content > .home-section.entry-panel {
-    margin-top: 0;
+  .page-shell #main-content > .home-section.entry-panel,
+  .page-shell #main-content > .entry-panel--refined {
+    margin-top: 14px;
   }
 }

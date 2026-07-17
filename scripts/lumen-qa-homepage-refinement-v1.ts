@@ -37,6 +37,14 @@ async function noHorizontalOverflow(page: import("puppeteer-core").Page): Promis
   return page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1);
 }
 
+function normalizeText(text: string): string {
+  return text.toLowerCase().replace(/\s+/g, " ").trim();
+}
+
+async function pageTextNormalized(page: import("puppeteer-core").Page): Promise<string> {
+  return page.evaluate(() => (document.body.textContent ?? "").toLowerCase().replace(/\s+/g, " ").trim());
+}
+
 const FORBIDDEN_PHRASES = [
   "does this sound familiar",
   "who you attract",
@@ -80,7 +88,7 @@ async function main() {
     await page.goto(`${BASE}/`, { waitUntil: "networkidle2", timeout: 90_000 });
     await page.waitForSelector(".hero-panel", { timeout: 30_000 });
 
-    const pageText = await page.evaluate(() => (document.body.innerText ?? "").toLowerCase());
+    const pageText = await pageTextNormalized(page);
     const notes: string[] = [];
 
     // Removed sections
@@ -144,8 +152,11 @@ async function main() {
     notes.push(`pillar order: ${pillarCodes.join(" → ")}`);
     const pillarOrderOk = pillarCodes.join(",") === "S1,S3,S2,S0";
 
-    // S6 label
-    notes.push(`S6 Value & Receiving present: ${pageText.includes("value & receiving") ? "yes" : "NO"}`);
+    // S6 label (include compact list even when hidden on mobile)
+    const s6Present = await page.evaluate(() =>
+      (document.body.textContent ?? "").toLowerCase().includes("value & receiving"),
+    );
+    notes.push(`S6 Value & Receiving present: ${s6Present ? "yes" : "NO"}`);
 
     // Full report CTAs (max 2 in section)
     const previewCtas = await page.evaluate(() =>
@@ -207,6 +218,7 @@ async function main() {
       bodyFont >= 16.5 &&
       overflow &&
       heroCtaVisible &&
+      s6Present &&
       mantra.toLowerCase().includes("your blueprint is a mirror") &&
       orderOk &&
       !pageText.includes("does this sound familiar");

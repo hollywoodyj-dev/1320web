@@ -1856,12 +1856,12 @@ button {
 
   .hero-banner {
     position: relative;
-    order: 1;
+    order: 2;
     flex: 0 0 auto;
     width: 100%;
-    height: clamp(300px, 78vw, 460px);
-    min-height: 300px;
-    border-radius: 22px 22px 0 0;
+    height: clamp(240px, 62vw, 400px);
+    min-height: 240px;
+    border-radius: 0 0 22px 22px;
     background: #050a15;
   }
 
@@ -1881,15 +1881,15 @@ button {
   }
 
   .hero-copy {
-    order: 2;
+    order: 1;
     position: relative;
     z-index: 2;
     max-width: none;
     width: 100%;
     min-height: auto;
-    padding: 28px 22px 36px;
-    background: linear-gradient(180deg, rgba(5, 10, 21, 0.72), rgba(5, 10, 21, 0.98));
-    border-radius: 0 0 22px 22px;
+    padding: 28px 22px 32px;
+    background: linear-gradient(180deg, rgba(5, 10, 21, 0.98), rgba(5, 10, 21, 0.88));
+    border-radius: 22px 22px 0 0;
   }
 
   .hero-detail {

@@ -142,7 +142,7 @@ export default function HomePage() {
           </section>
 
           <section className="home-section home-section--compact">
-            <div className="home-section-inner home-section-inner--wide pillar-grid">
+            <div className="home-section-inner pillar-grid">
               {HOMEPAGE_PILLARS.map((pillar) => (
                 <article key={pillar.code} className={`pillar-card pillar-${pillar.tone} pillar-card--refined`}>
                   <p className="pillar-code">{pillar.code}</p>

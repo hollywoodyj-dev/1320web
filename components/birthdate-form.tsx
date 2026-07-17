@@ -186,12 +186,6 @@ export function BirthDateForm({ variant = "default", idPrefix }: BirthDateFormPr
             </p>
           ) : null}
           {submitButton}
-          <p className="privacy-note small">
-            {BIRTH_FORM.privacy}{" "}
-            <Link href="/privacy" className="blueprint-secondary-link">
-              Privacy Policy
-            </Link>
-          </p>
         </div>
       </form>
     );

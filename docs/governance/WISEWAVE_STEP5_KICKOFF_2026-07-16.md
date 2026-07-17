@@ -1,7 +1,8 @@
 # Wisewave — Step 5 Kickoff (Commercial Report Output Layer)
 
 **Document type:** Wisewave → Nova / Lumen handoff  
-**Status:** Step 5A + 5B accepted — **E2E closure pending entitled mini-QA** (2026-07-17)  
+**Status:** **Step 5 — Fully Closed** (Wisewave final acceptance, 2026-07-17)  
+**Stable maintenance gate:** Achieved and closed  
 **Date opened:** 2026-07-16  
 
 ---
@@ -232,50 +233,30 @@ Wisewave is ready to kick off **Step 5A** — final `commercial-v3-final` databa
 | Governance | No template/source trigger phrases on checked surfaces |
 | Visual density probe | 390px production spot-check PASS |
 
-### Non-blocking note (entitled surfaces)
+### Non-blocking note (entitled surfaces) — **Resolved 2026-07-17**
 
-Not verified this cycle — requires authenticated entitled report session:
-
-- `/my-report/[id]`
-- `/report/[id]/print`
-- Account download button
-
-**Recommendation:** Wisewave may accept Step 5 closure on sample/unified public surfaces; entitled account path can be spot-checked separately with a live entitled account before calling Step 5 fully closed end-to-end.
+Entitled mini-QA completed on production (`fa695c92-8593-4cef-9c17-715de202a78b`). Wisewave accepted end-to-end delivery path.
 
 ---
 
-## Wisewave Step 5 closure review (2026-07-17)
+## Wisewave final Step 5 acceptance (2026-07-17)
 
-**From:** Wisewave  
-**Subject:** Re: Step 5 Lumen QA — PASS WITH NOTES — Step 5 Closure Review
+**From:** Wisewave — Final acceptance and closure
 
-| Track | Wisewave verdict |
-|-------|------------------|
-| Step 5A | **PASS — Accepted** |
-| Step 5B public/sample | **PASS WITH NOTES — Accepted** |
-| Full E2E closure | **Pending** entitled-account mini-QA |
+| Milestone | Status |
+|-----------|--------|
+| Step 5A — `commercial-v3-final` | **Fully closed** |
+| Step 5B — public/sample surfaces | **Accepted** (Lumen watchpoints documented) |
+| Entitled account delivery | **End-to-end accepted** |
+| Mobile navigation guide (`c5d7aeb`) | **Accepted** |
+| Step 5 overall | **Complete** |
+| Stable maintenance gate | **Achieved and closed** |
 
-Wisewave does **not** treat missing entitled session as blocker for 5A / public 5B acceptance.
+**Strategic standard met:**
 
-**Before full E2E closure — required mini-QA (8 checks):**
+> One Soul Blueprint · One commercial content layer · One Unified Report Renderer · Four consistent product surfaces: Web, Mobile, PDF, Sample.
 
-1. `/my-report/[id]`
-2. `/report/[id]/print`
-3. Account download button
-4. Mobile phone route from `/my-report/[id]`
-5. Same commercial copy + segment order as sample/public
-6. No symbolic/source-layer leak
-7. PDF/download from account works
-8. Entitlement gating does not affect renderer content
-
-**Handoff:** `qa-artifacts/LUMEN_QA_HANDOFF_ENTITLED_ACCOUNT_STEP5_E2E_2026-07-17.md`  
-**Script:** `scripts/lumen-qa-entitled-step5-prod.ts` (requires `STEP5_SESSION_COOKIE` + `STEP5_REPORT_ID`)
-
-**On mini-QA pass, Wisewave will mark:**
-
-- Commercial Report Output Layer v3 Final — Fully Closed
-- Unified Report delivery path — End-to-End Accepted
-- Project status — Stable maintenance gate achieved
+**Stable maintenance boundary:** Defect fixes, security, accessibility, minor compatibility/usability — OK. Report structure, commercial governance, renderer architecture, entitlement logic, new modules — require separately governed scope (do not reopen Step 5).
 
 ---
 
@@ -286,11 +267,21 @@ Wisewave does **not** treat missing entitled session as blocker for 5A / public 
 - [x] Verify renderer precedence unchanged
 - [x] Support Lumen 10-date QA matrix (handoff doc)
 - [x] Lumen Step 5B QA artifact received
-- [ ] Optional: entitled-account production spot-check (pending credentials/report ID)
+- [x] Entitled-account production verification (2026-07-17)
+- [x] Wisewave final Step 5 acceptance recorded
 
 ---
 
-## Related artifacts
+## Accepted production stack (final)
+
+| Layer | Status |
+|-------|--------|
+| Website Meaning Layer | ✅ Closed |
+| Commercial Report Output S0–S9 (`commercial-v3-final`) | ✅ Closed |
+| Visual Density & Mobile Report UX | ✅ Closed |
+| Unified Report Renderer (17-page, 4 surfaces) | ✅ E2E accepted |
+| Step 5 | ✅ Complete |
+| Stable maintenance gate | ✅ Closed |
 
 - `qa-artifacts/LUMEN_QA_COMMERCIAL_OUTPUT_LAYER_STEP5_2026-07-16.md`
 - `qa-artifacts/LUMEN_QA_COMMERCIAL_OUTPUT_LAYER_STEP4_2026-07-14.md`
@@ -300,8 +291,4 @@ Wisewave does **not** treat missing entitled session as blocker for 5A / public 
 
 ---
 
-## Current production context (Nova note, 2026-07-16)
-
-- Live report: **Unified Report Renderer**, **17 pages** (not legacy 32-page swipe)
-- Visual Density track: **fully closed** (Wisewave accepted 390px spot-check, 2026-07-16)
-- Entitled mobile: `/my-report/[id]` → mobile flip shell (deploys through `7161746`)
+## Related artifacts

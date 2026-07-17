@@ -28,30 +28,78 @@ h3 {
 .page-shell .homepage-section-body,
 .page-shell .hero-text,
 .page-shell .entry-text,
-.page-shell .pillar-card p,
+.page-shell .pillar-card-copy,
 .page-shell .step-card p {
   font-weight: 400;
   line-height: 1.65;
   max-width: 680px;
 }
 
+.page-shell .section-copy {
+  max-width: 680px;
+  margin-inline: auto;
+}
+
 .page-shell .homepage-section-title,
+.page-shell .section-title,
+.page-shell .how-section .section-title,
 .page-shell .how-section h2,
+.page-shell .pillar-card-title,
 .page-shell .pillar-card h2,
+.page-shell .pillar-card h3,
 .page-shell .step-card h3 {
   font-weight: 600;
 }
 
-/* Homepage density — more air between sections */
-.page-shell .homepage-curiosity,
+.page-shell .hero-title {
+  font-size: clamp(52px, 8vw, 92px);
+  line-height: 0.95;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.page-shell .section-title {
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.05;
+}
+
+.page-shell .card-title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.page-shell .pillar-card-copy {
+  font-size: 15.5px;
+  line-height: 1.55;
+}
+
+/* Homepage section rhythm — Refinement Spec v1.0 */
+.page-shell .home-section {
+  padding-block: clamp(84px, 10vw, 148px);
+}
+
+.page-shell .home-section--compact {
+  padding-block: clamp(56px, 7vw, 96px);
+}
+
+.page-shell .home-section--hero {
+  padding-block: 0;
+}
+
+.page-shell .home-section-inner {
+  width: min(1120px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
 .page-shell .homepage-what-is,
 .page-shell .homepage-origin,
 .page-shell .homepage-blueprint-intro,
 .page-shell .homepage-not-this,
 .page-shell .how-section,
-.page-shell .homepage-preview-stack {
-  padding-top: clamp(28px, 6vw, 48px);
-  padding-bottom: clamp(28px, 6vw, 48px);
+.page-shell .homepage-preview-stack,
+.page-shell .homepage-reflection,
+.page-shell .homepage-final-cta {
+  text-align: center;
 }
 
 .page-shell .homepage-section-body + .homepage-section-body {
@@ -60,48 +108,126 @@ h3 {
 
 .page-shell .pillar-grid {
   gap: 18px;
+  margin-top: 0;
 }
 
-.page-shell .pillar-card {
+.page-shell .pillar-card--refined {
+  min-height: 320px;
   padding: 22px;
 }
 
-.page-shell .pillar-card p:not(.pillar-plain-language) {
-  font-size: 15.5px;
-  line-height: 1.58;
-  color: var(--density-text-soft);
+.page-shell .pillar-card--refined .pillar-card-body {
+  padding-top: clamp(7rem, 14vw, 9rem);
 }
 
-/* Reduce homepage visible density on mobile — defer detail to inner pages */
+.page-shell .pillar-card--refined .pillar-card-body p {
+  min-height: auto;
+  margin-top: 10px;
+}
+
+.page-shell .entry-panel--refined {
+  display: block;
+  margin-top: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.page-shell .entry-panel-inner {
+  text-align: center;
+}
+
+.page-shell .entry-form-shell--refined {
+  max-width: 420px;
+  margin: 28px auto 0;
+  padding: 28px 24px 32px;
+  border-radius: 18px;
+  border: 1px solid rgba(216, 177, 92, 0.14);
+  background: rgba(8, 14, 28, 0.38);
+}
+
+.page-shell .entry-form-shell--refined .entry-label {
+  margin-bottom: 16px;
+}
+
+.page-shell .entry-form .birthdate-field-grid {
+  gap: 14px;
+}
+
+.page-shell .hero-eyebrow {
+  margin: 0 0 10px;
+  color: rgba(239, 195, 111, 0.92);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.page-shell .hero-mirror-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 20px;
+}
+
+.page-shell .hero-mirror-line {
+  display: block;
+}
+
+.page-shell .homepage-boundary-block {
+  border-radius: 16px;
+  border: 1px solid rgba(216, 177, 92, 0.16);
+  background: rgba(8, 14, 28, 0.42);
+}
+
+.page-shell .homepage-reflection-inner {
+  max-width: 720px;
+}
+
+.page-shell .homepage-module-groups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 24px auto 20px;
+  max-width: 640px;
+}
+
+.page-shell .homepage-module-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(216, 177, 92, 0.14);
+  background: rgba(8, 14, 28, 0.35);
+}
+
+.page-shell .homepage-module-group-label {
+  color: #efc36f;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.page-shell .homepage-module-group-codes {
+  color: rgba(240, 236, 227, 0.88);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.page-shell .homepage-preview-list--compact li {
+  padding: 10px 0;
+}
+
 @media (max-width: 860px) {
-  .homepage-curiosity {
-    display: none;
-  }
-
-  .homepage-what-is .homepage-section-body:nth-child(n + 4) {
-    display: none;
-  }
-
-  .homepage-origin .homepage-section-body:nth-child(n + 3) {
-    display: none;
-  }
-
-  .homepage-not-this .homepage-not-this-list {
-    display: grid;
+  .page-shell .homepage-module-groups {
     grid-template-columns: 1fr;
-    gap: 8px;
+    max-width: 360px;
   }
 
-  .homepage-not-this .homepage-not-this-list li {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  .homepage-preview-list li span {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  .page-shell .homepage-preview-list--compact {
+    display: none;
   }
 
   .hero-text {
@@ -118,5 +244,21 @@ h3 {
 @media (max-width: 640px) {
   body {
     font-size: 16.5px;
+  }
+
+  .page-shell .hero-title {
+    font-size: 46px;
+  }
+
+  .page-shell .section-title {
+    font-size: 32px;
+  }
+
+  .page-shell .home-section {
+    padding-block: 72px;
+  }
+
+  .page-shell .home-section-inner {
+    width: min(100% - 32px, 430px);
   }
 }

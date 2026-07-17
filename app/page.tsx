@@ -6,24 +6,19 @@ import { HomeBirthdateEntry } from "@/components/home-birthdate-entry";
 import { HomeTopbar } from "@/components/home-topbar";
 import { SkipLink } from "@/components/skip-link";
 import {
-  HOMEPAGE_ABOUT_PREVIEW,
   HOMEPAGE_BLUEPRINT_INTRO,
   HOMEPAGE_CALCULATOR,
-  HOMEPAGE_CURIOSITY,
   HOMEPAGE_FINAL_CTA,
   HOMEPAGE_FOOTER_BRAND,
   HOMEPAGE_FULL_REPORT_PREVIEW,
   HOMEPAGE_HERO,
   HOMEPAGE_ORIGIN,
   FOOTER_ORIGIN,
-  HOMEPAGE_SECONDARY_LINKS,
   HOMEPAGE_HOW,
   HOMEPAGE_META,
-  HOMEPAGE_MID_CTA,
   HOMEPAGE_NOT_THIS,
-  HOMEPAGE_PILLAR_NOTE,
   HOMEPAGE_PILLARS,
-  HOMEPAGE_STATS,
+  HOMEPAGE_REFLECTION,
   HOMEPAGE_WHAT_IS,
 } from "@/lib/homepage-content";
 import { FOOTER_LEGAL_LINKS, HOMEPAGE_FOOTER_COLUMNS } from "@/lib/site-nav";
@@ -45,288 +40,215 @@ export default function HomePage() {
         <HomeTopbar />
 
         <div id="main-content" tabIndex={-1}>
-        <section className="hero-panel">
-          <div className="hero-banner" aria-hidden="true">
-            <Image
-              src="/hero-banner-desktop-v1.webp"
-              alt=""
-              fill
-              priority
-              sizes="(max-width: 860px) 0px, 1240px"
-              className="hero-banner-image hero-banner-image-desktop"
-            />
-            <Image
-              src="/hero-banner-v5.webp"
-              alt=""
-              fill
-              priority
-              sizes="(max-width: 860px) 100vw, 0px"
-              className="hero-banner-image hero-banner-image-mobile"
-            />
-          </div>
-
-          <div className="hero-copy">
-            <h1>
-              <span className="hero-title-line">{HOMEPAGE_HERO.titleLines[0]}</span>
-              <span className="hero-title-line">{HOMEPAGE_HERO.titleLines[1]}</span>
-            </h1>
-            <div className="hero-detail">
-              <p className="hero-text">{HOMEPAGE_HERO.subheadline}</p>
-              <p className="hero-text hero-text--journey">{HOMEPAGE_HERO.journeyLine}</p>
-              <ul className="hero-mini-labels" aria-label="1320 dimensions">
-                {HOMEPAGE_HERO.miniLabels.map((item) => (
-                  <li key={item.digit}>
-                    <span className="hero-mini-digit">{item.digit}</span>
-                    <span className="hero-mini-label">{item.label}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="hero-trust-micro">{HOMEPAGE_HERO.trustMicroLine}</p>
-              <div className="hero-actions hero-actions--primary-only">
-                <Link href={HOMEPAGE_HERO.primaryHref} className="gold-button">
-                  {HOMEPAGE_HERO.primaryCta}
-                </Link>
-                <p className="hero-cta-support">{HOMEPAGE_HERO.ctaSupportLine}</p>
-              </div>
+          <section className="hero-panel home-section home-section--hero">
+            <div className="hero-banner" aria-hidden="true">
+              <Image
+                src="/hero-banner-desktop-v1.webp"
+                alt=""
+                fill
+                priority
+                sizes="(max-width: 860px) 0px, 1240px"
+                className="hero-banner-image hero-banner-image-desktop"
+              />
+              <Image
+                src="/hero-banner-v5.webp"
+                alt=""
+                fill
+                priority
+                sizes="(max-width: 860px) 100vw, 0px"
+                className="hero-banner-image hero-banner-image-mobile"
+              />
             </div>
-          </div>
-        </section>
 
-        <section className="entry-panel" id="entry-panel">
-          <div className="entry-intro">
-            <div className="entry-icon" aria-hidden="true">
-              <div className="entry-icon-inner">
-                <span className="entry-icon-top entry-icon-top-left" />
-                <span className="entry-icon-top entry-icon-top-right" />
-                <span className="entry-icon-bar" />
-                <span className="entry-icon-dot entry-icon-dot-1" />
-                <span className="entry-icon-dot entry-icon-dot-2" />
-                <span className="entry-icon-dot entry-icon-dot-3" />
-                <span className="entry-icon-dot entry-icon-dot-4" />
-                <span className="entry-icon-dot entry-icon-dot-5" />
-                <span className="entry-icon-dot entry-icon-dot-6" />
-              </div>
-            </div>
-            <div className="entry-copy-block">
-              <p className="entry-eyebrow">{HOMEPAGE_CALCULATOR.eyebrow}</p>
-              <p className="entry-title">
-                <span>{HOMEPAGE_CALCULATOR.titleLines[0]}</span>
-                <span>{HOMEPAGE_CALCULATOR.titleLines[1]}</span>
-              </p>
-              <p className="entry-text">
-                <span>{HOMEPAGE_CALCULATOR.body}</span>
-              </p>
-            </div>
-          </div>
-
-          <div className="entry-form-shell">
-            <p className="entry-label">{HOMEPAGE_CALCULATOR.formLabel}</p>
-            <HomeBirthdateEntry />
-          </div>
-        </section>
-
-        <section className="homepage-curiosity">
-          <p className="homepage-section-eyebrow">{HOMEPAGE_CURIOSITY.eyebrow}</p>
-          <h2 className="homepage-section-title">{HOMEPAGE_CURIOSITY.title}</h2>
-          <ul className="homepage-curiosity-list">
-            {HOMEPAGE_CURIOSITY.questions.map((question) => (
-              <li key={question}>{question}</li>
-            ))}
-          </ul>
-          <p className="homepage-section-body">{HOMEPAGE_CURIOSITY.closing}</p>
-        </section>
-
-        <section className="homepage-what-is">
-          <p className="homepage-section-eyebrow">{HOMEPAGE_WHAT_IS.eyebrow}</p>
-          <h2 className="homepage-section-title">{HOMEPAGE_WHAT_IS.title}</h2>
-          {HOMEPAGE_WHAT_IS.body.map((paragraph) => (
-            <p key={paragraph} className="homepage-section-body">
-              {paragraph}
-            </p>
-          ))}
-        </section>
-
-        <section className="homepage-origin">
-          <p className="homepage-section-eyebrow">{HOMEPAGE_ORIGIN.eyebrow}</p>
-          <h2 className="homepage-section-title">{HOMEPAGE_ORIGIN.title}</h2>
-          {HOMEPAGE_ORIGIN.body.map((paragraph) => (
-            <p key={paragraph} className="homepage-section-body">
-              {paragraph}
-            </p>
-          ))}
-          <Link href={HOMEPAGE_ORIGIN.href} className="hero-secondary-link mt-3 inline-block">
-            {HOMEPAGE_ORIGIN.cta}
-          </Link>
-        </section>
-
-        <nav className="homepage-secondary-links" aria-label="Explore 1320">
-          {HOMEPAGE_SECONDARY_LINKS.map((link) => (
-            <Link key={link.href} href={link.href} className="hero-secondary-link">
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-
-        <section className="homepage-blueprint-intro">
-          <p className="homepage-section-eyebrow">{HOMEPAGE_BLUEPRINT_INTRO.eyebrow}</p>
-          <h2 className="homepage-section-title">{HOMEPAGE_BLUEPRINT_INTRO.title}</h2>
-          <p className="homepage-section-body">{HOMEPAGE_BLUEPRINT_INTRO.body}</p>
-          <p className="homepage-section-body-short">{HOMEPAGE_BLUEPRINT_INTRO.mobileShort}</p>
-        </section>
-
-        <section className="pillar-grid">
-          {HOMEPAGE_PILLARS.map((pillar) => (
-            <article key={pillar.code} className={`pillar-card pillar-${pillar.tone}`}>
-              <p className="pillar-code">{pillar.code}</p>
-              <div className="pillar-card-body">
-                <h2>{pillar.title}</h2>
-                <p className="pillar-plain-language">{pillar.plainLanguage}</p>
-                <p className="pillar-headline">{pillar.headline}</p>
-                <p>{pillar.text}</p>
-                <Link href={pillar.learnMoreHref}>LEARN MORE</Link>
-              </div>
-            </article>
-          ))}
-        </section>
-        <p className="homepage-pillar-note">{HOMEPAGE_PILLAR_NOTE}</p>
-
-        <section className="homepage-not-this">
-          <p className="homepage-section-eyebrow">{HOMEPAGE_NOT_THIS.eyebrow}</p>
-          <h2 className="homepage-section-title">{HOMEPAGE_NOT_THIS.title}</h2>
-          <p className="homepage-section-body">{HOMEPAGE_NOT_THIS.body}</p>
-          <ul className="homepage-not-this-list">
-            {HOMEPAGE_NOT_THIS.items.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-          <p className="homepage-section-body homepage-section-body--emphasis">
-            {HOMEPAGE_NOT_THIS.closing}
-          </p>
-        </section>
-
-        <section className="how-section">
-          <p className="homepage-section-eyebrow">{HOMEPAGE_HOW.eyebrow}</p>
-          <h2>{HOMEPAGE_HOW.title}</h2>
-          <p className="homepage-section-body how-section-lead">{HOMEPAGE_HOW.body}</p>
-          <div className="steps-grid">
-            {HOMEPAGE_HOW.steps.map((step) => (
-              <article key={step.number} className={`step-card step-${step.tone}`}>
-                <div className={`step-icon-wrap ${step.frameClass}`.trim()}>
-                  <div className={`step-icon-stage ${step.sizeClass}`.trim()}>
-                    <Image
-                      src={step.image}
-                      alt=""
-                      width={260}
-                      height={260}
-                      className={`step-icon-image ${step.imageClass}`.trim()}
-                    />
-                  </div>
+            <div className="hero-copy">
+              <p className="hero-eyebrow">{HOMEPAGE_HERO.eyebrow}</p>
+              <h1 className="hero-title">
+                <span className="hero-title-line">{HOMEPAGE_HERO.titleLines[0]}</span>
+                <span className="hero-title-line">{HOMEPAGE_HERO.titleLines[1]}</span>
+              </h1>
+              <div className="hero-detail">
+                <p className="hero-text section-copy">{HOMEPAGE_HERO.subheadline}</p>
+                <p className="hero-trust-micro hero-mirror-lines">
+                  {HOMEPAGE_HERO.mirrorLines.map((line) => (
+                    <span key={line} className="hero-mirror-line">
+                      {line}
+                    </span>
+                  ))}
+                </p>
+                <div className="hero-actions">
+                  <Link href={HOMEPAGE_HERO.primaryHref} className="gold-button">
+                    {HOMEPAGE_HERO.primaryCta}
+                  </Link>
+                  <Link href={HOMEPAGE_HERO.secondaryHref} className="hero-secondary-link">
+                    {HOMEPAGE_HERO.secondaryCta}
+                  </Link>
                 </div>
-                <p className="step-number">{step.number}</p>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
+              </div>
+            </div>
+          </section>
+
+          <section className="home-section entry-panel entry-panel--refined" id="entry-panel">
+            <div className="home-section-inner entry-panel-inner">
+              <h2 className="homepage-section-title">{HOMEPAGE_CALCULATOR.title}</h2>
+              <p className="homepage-section-body section-copy">{HOMEPAGE_CALCULATOR.body}</p>
+              <div className="entry-form-shell entry-form-shell--refined">
+                <p className="entry-label">{HOMEPAGE_CALCULATOR.formLabel}</p>
+                <HomeBirthdateEntry />
+              </div>
+            </div>
+          </section>
+
+          <section className="home-section homepage-what-is">
+            <div className="home-section-inner">
+              <p className="homepage-section-eyebrow">{HOMEPAGE_WHAT_IS.eyebrow}</p>
+              <h2 className="homepage-section-title section-title">{HOMEPAGE_WHAT_IS.title}</h2>
+              {HOMEPAGE_WHAT_IS.body.map((paragraph) => (
+                <p key={paragraph} className="homepage-section-body section-copy">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </section>
+
+          <section className="home-section homepage-origin">
+            <div className="home-section-inner">
+              <p className="homepage-section-eyebrow">{HOMEPAGE_ORIGIN.eyebrow}</p>
+              <h2 className="homepage-section-title section-title">{HOMEPAGE_ORIGIN.title}</h2>
+              {HOMEPAGE_ORIGIN.body.map((paragraph) => (
+                <p key={paragraph} className="homepage-section-body section-copy">
+                  {paragraph}
+                </p>
+              ))}
+              <Link href={HOMEPAGE_ORIGIN.href} className="hero-secondary-link mt-3 inline-block">
+                {HOMEPAGE_ORIGIN.cta}
+              </Link>
+            </div>
+          </section>
+
+          <section className="home-section homepage-blueprint-intro">
+            <div className="home-section-inner">
+              <p className="homepage-section-eyebrow">{HOMEPAGE_BLUEPRINT_INTRO.eyebrow}</p>
+              <h2 className="homepage-section-title section-title">{HOMEPAGE_BLUEPRINT_INTRO.title}</h2>
+              <p className="homepage-section-body section-copy">{HOMEPAGE_BLUEPRINT_INTRO.body}</p>
+            </div>
+          </section>
+
+          <section className="home-section home-section--compact">
+            <div className="home-section-inner pillar-grid">
+              {HOMEPAGE_PILLARS.map((pillar) => (
+                <article key={pillar.code} className={`pillar-card pillar-${pillar.tone} pillar-card--refined`}>
+                  <p className="pillar-code">{pillar.code}</p>
+                  <div className="pillar-card-body">
+                    <h3 className="pillar-card-title">{pillar.title}</h3>
+                    <p className="pillar-headline">{pillar.headline}</p>
+                    <p className="pillar-card-copy">{pillar.text}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="home-section homepage-not-this homepage-boundary-block">
+            <div className="home-section-inner">
+              <p className="homepage-section-eyebrow">{HOMEPAGE_NOT_THIS.eyebrow}</p>
+              <h2 className="homepage-section-title section-title">{HOMEPAGE_NOT_THIS.title}</h2>
+              {HOMEPAGE_NOT_THIS.body.map((paragraph) => (
+                <p key={paragraph} className="homepage-section-body section-copy">
+                  {paragraph}
+                </p>
+              ))}
+              <Link href={HOMEPAGE_NOT_THIS.href} className="hero-secondary-link mt-3 inline-block">
+                {HOMEPAGE_NOT_THIS.cta}
+              </Link>
+            </div>
+          </section>
+
+          <section className="home-section how-section">
+            <div className="home-section-inner">
+              <p className="homepage-section-eyebrow">{HOMEPAGE_HOW.eyebrow}</p>
+              <h2 className="section-title">{HOMEPAGE_HOW.title}</h2>
+              <p className="homepage-section-body section-copy how-section-lead">{HOMEPAGE_HOW.body}</p>
+              <div className="steps-grid">
+                {HOMEPAGE_HOW.steps.map((step) => (
+                  <article key={step.number} className={`step-card step-${step.tone}`}>
+                    <div className={`step-icon-wrap ${step.frameClass}`.trim()}>
+                      <div className={`step-icon-stage ${step.sizeClass}`.trim()}>
+                        <Image
+                          src={step.image}
+                          alt=""
+                          width={260}
+                          height={260}
+                          className={`step-icon-image ${step.imageClass}`.trim()}
+                        />
+                      </div>
+                    </div>
+                    <p className="step-number">{step.number}</p>
+                    <h3>{step.title}</h3>
+                    <p>{step.text}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="home-section homepage-preview-stack">
+            <div className="home-section-inner">
+              <article className="homepage-preview-card">
+                <p className="homepage-section-eyebrow">{HOMEPAGE_FULL_REPORT_PREVIEW.eyebrow}</p>
+                <h2 className="homepage-section-title section-title">{HOMEPAGE_FULL_REPORT_PREVIEW.title}</h2>
+                <p className="homepage-section-body section-copy">{HOMEPAGE_FULL_REPORT_PREVIEW.body}</p>
+                <div className="homepage-module-groups">
+                  {HOMEPAGE_FULL_REPORT_PREVIEW.moduleGroups.map((group) => (
+                    <div key={group.label} className="homepage-module-group">
+                      <span className="homepage-module-group-label">{group.label}</span>
+                      <span className="homepage-module-group-codes">{group.codes}</span>
+                    </div>
+                  ))}
+                </div>
+                <ul className="homepage-preview-list homepage-preview-list--compact">
+                  {HOMEPAGE_FULL_REPORT_PREVIEW.advancedLayers.map((item) => (
+                    <li key={item.code}>
+                      <strong>
+                        {item.code} · {item.title}
+                      </strong>
+                      <span>{item.detail}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="homepage-preview-actions">
+                  <Link href={HOMEPAGE_FULL_REPORT_PREVIEW.checkoutHref} className="gold-button">
+                    {HOMEPAGE_FULL_REPORT_PREVIEW.checkoutCta}
+                  </Link>
+                  <Link href={HOMEPAGE_FULL_REPORT_PREVIEW.sampleHref} className="hero-secondary-link">
+                    {HOMEPAGE_FULL_REPORT_PREVIEW.sampleCta}
+                  </Link>
+                </div>
               </article>
-            ))}
-          </div>
-          <div className="homepage-mid-cta">
-            <h3>
-              {HOMEPAGE_MID_CTA.headline[0]}
-              <br />
-              {HOMEPAGE_MID_CTA.headline[1]}
-            </h3>
-            <p>{HOMEPAGE_MID_CTA.body}</p>
-            <div className="homepage-mid-cta-actions">
-              <Link href="/your-code" className="gold-button">
-                {HOMEPAGE_MID_CTA.primaryCta}
-              </Link>
-              <Link href={HOMEPAGE_MID_CTA.secondaryHref} className="hero-secondary-link">
-                {HOMEPAGE_MID_CTA.secondaryCta}
-              </Link>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section className="stats-band">
-          {HOMEPAGE_STATS.items.map((stat) => (
-            <div key={stat.label}>
-              <strong>{stat.value}</strong>
-              <span>{stat.label}</span>
-            </div>
-          ))}
-          <p className="stats-supporting">{HOMEPAGE_STATS.supporting}</p>
-        </section>
-
-        <section className="homepage-preview-stack">
-          <article className="homepage-preview-card">
-            <p className="homepage-section-eyebrow">{HOMEPAGE_FULL_REPORT_PREVIEW.eyebrow}</p>
-            <h2 className="homepage-section-title">{HOMEPAGE_FULL_REPORT_PREVIEW.title}</h2>
-            <p className="homepage-section-body homepage-section-body--emphasis">
-              {HOMEPAGE_FULL_REPORT_PREVIEW.transition}
-            </p>
-            <p className="homepage-section-body">{HOMEPAGE_FULL_REPORT_PREVIEW.body}</p>
-            <ul className="homepage-preview-list">
-              {HOMEPAGE_FULL_REPORT_PREVIEW.advancedLayers.map((item) => (
-                <li key={item.code}>
-                  <strong>
-                    {item.code} · {item.title}
-                  </strong>
-                  <span>{item.detail}</span>
-                </li>
+          <section className="home-section homepage-reflection home-section--compact">
+            <div className="home-section-inner homepage-reflection-inner">
+              <p className="homepage-section-eyebrow">{HOMEPAGE_REFLECTION.eyebrow}</p>
+              <h2 className="homepage-section-title section-title">{HOMEPAGE_REFLECTION.title}</h2>
+              {HOMEPAGE_REFLECTION.body.map((paragraph) => (
+                <p key={paragraph} className="homepage-section-body section-copy">
+                  {paragraph}
+                </p>
               ))}
-            </ul>
-            <ul className="homepage-preview-list mt-4">
-              {HOMEPAGE_FULL_REPORT_PREVIEW.includes.map((item) => (
-                <li key={item.title}>
-                  <strong>{item.title}</strong>
-                  <span>{item.detail}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="homepage-preview-actions">
-              <Link href={HOMEPAGE_FULL_REPORT_PREVIEW.checkoutHref} className="gold-button">
-                {HOMEPAGE_FULL_REPORT_PREVIEW.checkoutCta}
-              </Link>
-              <Link href={HOMEPAGE_FULL_REPORT_PREVIEW.primaryHref} className="hero-secondary-link">
-                {HOMEPAGE_FULL_REPORT_PREVIEW.primaryCta}
-              </Link>
-              <Link
-                href={HOMEPAGE_FULL_REPORT_PREVIEW.sampleHref}
-                className="hero-secondary-link"
-              >
-                {HOMEPAGE_FULL_REPORT_PREVIEW.sampleCta}
-              </Link>
-              <Link
-                href={HOMEPAGE_FULL_REPORT_PREVIEW.readingHref}
-                className="hero-secondary-link hero-secondary-link--muted"
-              >
-                {HOMEPAGE_FULL_REPORT_PREVIEW.readingCta}
-              </Link>
             </div>
-          </article>
+          </section>
 
-          <article className="homepage-preview-card">
-            <p className="homepage-section-eyebrow">{HOMEPAGE_ABOUT_PREVIEW.eyebrow}</p>
-            <h2 className="homepage-section-title">{HOMEPAGE_ABOUT_PREVIEW.title}</h2>
-            {HOMEPAGE_ABOUT_PREVIEW.body.map((paragraph) => (
-              <p key={paragraph} className="homepage-section-body">
-                {paragraph}
-              </p>
-            ))}
-            <Link href={HOMEPAGE_ABOUT_PREVIEW.href} className="hero-secondary-link homepage-preview-cta">
-              {HOMEPAGE_ABOUT_PREVIEW.cta}
-            </Link>
-          </article>
-        </section>
-
-        <section className="homepage-final-cta">
-          {HOMEPAGE_FINAL_CTA.lines.map((line) => (
-            <p key={line}>{line}</p>
-          ))}
-          <Link href="/your-code" className="gold-button">
-            {HOMEPAGE_FINAL_CTA.cta}
-          </Link>
-          <p className="privacy-note">{HOMEPAGE_FINAL_CTA.trustNote}</p>
-        </section>
+          <section className="home-section homepage-final-cta">
+            <div className="home-section-inner">
+              <h2 className="homepage-section-title section-title">{HOMEPAGE_FINAL_CTA.headline}</h2>
+              <p className="homepage-section-body section-copy">{HOMEPAGE_FINAL_CTA.body}</p>
+              <Link href="#entry-panel" className="gold-button">
+                {HOMEPAGE_FINAL_CTA.cta}
+              </Link>
+              <p className="privacy-note small">{HOMEPAGE_FINAL_CTA.trustNote}</p>
+            </div>
+          </section>
         </div>
 
         <footer className="site-footer">
@@ -351,7 +273,6 @@ export default function HomePage() {
               </div>
             </div>
             <p className="footer-copy">{HOMEPAGE_FOOTER_BRAND}</p>
-            <p className="footer-copy text-sm opacity-80 mt-2">{FOOTER_ORIGIN.microcopy}</p>
             <nav className="footer-legal-nav" aria-label="Legal and support">
               <Link href={FOOTER_ORIGIN.originHref}>{FOOTER_ORIGIN.originLabel}</Link>
               {FOOTER_LEGAL_LINKS.map((link) => (

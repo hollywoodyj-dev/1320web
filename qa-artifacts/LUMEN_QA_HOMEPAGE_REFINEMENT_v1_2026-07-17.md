@@ -1,7 +1,7 @@
 # Lumen QA — Homepage Refinement Spec v1.0
 
-**Date:** 2026-07-17T06:41:57.945Z
-**Base URL:** http://localhost:3000
+**Date:** 2026-07-17T06:44:37.557Z
+**Base URL:** https://www.1320soulcode.com
 **Overall:** PASS
 
 ## Results

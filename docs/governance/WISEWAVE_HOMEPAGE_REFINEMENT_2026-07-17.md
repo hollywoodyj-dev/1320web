@@ -26,4 +26,4 @@
 - Removed: curiosity block, stats band, secondary links nav, mid-CTA, about preview card
 - Birth date entry: quieter shell; privacy note moved off homepage form
 
-**Next:** Lumen QA against spec §7 watchpoints
+**Next:** Lumen QA against spec §7 watchpoints — **PASS on production (2026-07-17)**

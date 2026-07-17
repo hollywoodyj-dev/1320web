@@ -60,7 +60,7 @@ export default async function ResultPage({ searchParams }: { searchParams: Promi
   });
 
   return (
-    <div className="report-page report-page--free-refined">
+    <div className="report-page">
       <ReportDashboard
         key={code.codeString}
         viewModel={viewModel}

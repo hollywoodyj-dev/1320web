@@ -1,39 +1,39 @@
 {
   "_meta": {
     "module": "Free Result Copy",
-    "version": "1.0.0",
-    "updatedAt": "2026-05-29"
+    "version": "1.1.0",
+    "updatedAt": "2026-07-18"
   },
   "pageTitle": {
     "en": "Your 1320 Soul Origin Code",
     "zh": "你的 1320 灵魂本源编码"
   },
   "pageSubtitle": {
-    "en": "A four-part soul blueprint for awareness, reflection, and conscious integration.",
-    "zh": "四段式灵魂蓝图，用于觉察、反思与有意识整合。"
+    "en": "Your Code Has Opened",
+    "zh": "你的编码已开启"
   },
   "boundaryNote": {
-    "en": "This is a first-layer reflection. Your code is a mirror, not fixed destiny.",
-    "zh": "这是第一层反思。你的编码是一面镜子，而非固定的命运。"
+    "en": "This is a four-part mirror for awareness, not prediction or fixed identity.",
+    "zh": "这是一面四段式觉察之镜，而非预测或固定身份。"
   },
   "integratedTitle": {
-    "en": "Integrated Soul Blueprint",
-    "zh": "整合灵魂蓝图"
+    "en": "Your Integrated Soul Blueprint",
+    "zh": "你的整合灵魂蓝图"
   },
   "integratedLead": {
-    "en": "When your four codes are read together, a whole pattern emerges — a mirror for awareness, not prediction.",
-    "zh": "当四段编码被一起阅读时，一个整体模式会浮现——这是一面觉察之镜，而非预测。"
+    "en": "When your four codes are read together, they form a living mirror of how your essence, expression, relationships, and return pattern move through life.",
+    "zh": "当四段编码被一起阅读时，它们形成一面活的镜子，映照你的本质、表达、关系与归返模式如何在生命中流动。"
   },
   "reflectionTitle": {
     "en": "Reflection Question",
     "zh": "反思问题"
   },
   "missingEntryFallback": {
-    "en": "This section is being prepared for the full report. Your current code still offers a meaningful first-layer reflection.",
-    "zh": "此部分正在完整报告中完善。你当前的编码仍可提供有意义的第一层反思。"
+    "en": "Unlock the Full Report to open this segment’s complete mirror.",
+    "zh": "解锁完整报告以打开此段的完整镜像。"
   },
   "lockedTeaserLabel": {
-    "en": "Available in the Full Soul Origin Report",
-    "zh": "完整灵魂本源报告中提供"
+    "en": "Available in the Full Soul Blueprint",
+    "zh": "完整灵魂蓝图中提供"
   }
 }

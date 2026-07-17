@@ -2,9 +2,9 @@
 
 import { useEffect } from "react";
 import { saveBirthCookie } from "@/lib/birth-cookie";
+import { SAMPLE_REPORT_HREF } from "@/lib/site-nav";
 import type { ReportViewModel } from "@/lib/report/build-report-view-model";
 import { REPORT_NAV, type ReportSectionId } from "@/lib/report/report-nav";
-import { FREE_RESULT_MODULE, FREE_RESULT_NAV } from "@/lib/result-content";
 import { BlueprintOverviewRow } from "@/components/report/blueprint-overview-row";
 import { IntegratedSummaryCard } from "@/components/report/integrated-summary-card";
 import { IntegrationPracticeGrid } from "@/components/report/integration-practice-grid";
@@ -24,13 +24,11 @@ type ReportDashboardProps = {
 };
 
 export function ReportDashboard({ viewModel, analyticsEvent }: ReportDashboardProps) {
-  const isFreeRefined = viewModel.mode === "free";
-  const navItems = isFreeRefined
-    ? FREE_RESULT_NAV
-    : viewModel.mode === "full"
+  const navItems =
+    viewModel.mode === "full"
       ? REPORT_NAV
       : REPORT_NAV.filter((item) => item.id !== "integration");
-  const sectionIds = navItems.map((item) => item.id) as ReportSectionId[];
+  const sectionIds = navItems.map((item) => item.id);
   const activeSection = useReportScrollSpy(sectionIds);
 
   useEffect(() => {
@@ -57,25 +55,14 @@ export function ReportDashboard({ viewModel, analyticsEvent }: ReportDashboardPr
   }, [viewModel.birthDateLabel]);
 
   return (
-    <div className={`report-dashboard${isFreeRefined ? " report-dashboard--refined" : ""}`}>
+    <div className="report-dashboard">
       <ReportSidebar
         navItems={navItems}
         activeSection={activeSection}
-        onNavigate={(id) => {
+        onNavigate={(id: ReportSectionId) => {
           document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
         }}
-        refined={isFreeRefined}
       />
-
-      {isFreeRefined ? (
-        <nav className="report-mobile-chips" aria-label="Result sections">
-          {FREE_RESULT_NAV.map((item) => (
-            <a key={item.id} href={`#${item.id}`} className={activeSection === item.id ? "is-active" : undefined}>
-              {item.label}
-            </a>
-          ))}
-        </nav>
-      ) : null}
 
       <div className="report-dashboard-main">
         <ReportHeader
@@ -83,14 +70,30 @@ export function ReportDashboard({ viewModel, analyticsEvent }: ReportDashboardPr
           subtitle={viewModel.headerSubtitle}
           codeString={viewModel.codeString}
           fictionBanner={viewModel.fictionBanner}
-          refined={isFreeRefined}
-          mirrorLine={viewModel.boundaryNote}
-          checkoutHref={viewModel.checkoutHref}
         />
 
-        {!isFreeRefined ? <p className="report-boundary-note">{viewModel.boundaryNote}</p> : null}
+        <p className="report-boundary-note">{viewModel.boundaryNote}</p>
 
-        <BlueprintOverviewRow cards={viewModel.overviewCards} refined={isFreeRefined} />
+        {viewModel.mode === "free" && viewModel.showFullUpsell ? (
+          <p className="report-free-layer-note glass-card">
+            This page shows your <strong>free first layer</strong> — overview fields only. The paid{" "}
+            <strong>Full Soul Origin Report</strong> (~32 pages) unlocks at checkout.{" "}
+            <a href={viewModel.checkoutHref} className="blueprint-secondary-link">
+              Unlock my full blueprint
+            </a>{" "}
+            or{" "}
+            <a href="/my-report" className="blueprint-secondary-link">
+              open My Report
+            </a>{" "}
+            if you already purchased. See the{" "}
+            <a href={SAMPLE_REPORT_HREF} className="blueprint-secondary-link">
+              sample full report
+            </a>{" "}
+            for the same free layer with a fictional code.
+          </p>
+        ) : null}
+
+        <BlueprintOverviewRow cards={viewModel.overviewCards} />
 
         <IntegratedSummaryCard
           title={viewModel.integratedTitle}
@@ -99,20 +102,16 @@ export function ReportDashboard({ viewModel, analyticsEvent }: ReportDashboardPr
           sections={viewModel.integratedSections}
           integrationTheme={viewModel.integrationTheme}
           error={viewModel.synthesisError}
-          refined={isFreeRefined}
         />
 
-        <section className="report-modules-section" id="segments">
-          <h2 className="report-section-title">
-            {isFreeRefined ? FREE_RESULT_MODULE.sectionTitle : "Your Segment Blueprint"}
-          </h2>
+        <section className="report-modules-section">
+          <h2 className="report-section-title">Your Segment Blueprint</h2>
           <div className="report-modules-grid">
             {viewModel.modules.map((module) => (
               <ReportModuleCard
                 key={`${module.segmentId}-${module.codeLabel}`}
                 module={module}
                 checkoutHref={viewModel.checkoutHref}
-                preview={isFreeRefined}
               />
             ))}
           </div>
@@ -130,26 +129,20 @@ export function ReportDashboard({ viewModel, analyticsEvent }: ReportDashboardPr
           </section>
         )}
 
-        {viewModel.showFullUpsell ? (
-          <ReportFullUpsell checkoutHref={viewModel.checkoutHref} refined={isFreeRefined} />
-        ) : null}
+        {viewModel.showFullUpsell ? <ReportFullUpsell checkoutHref={viewModel.checkoutHref} /> : null}
 
-        {!isFreeRefined ? (
-          <ReportFinalCta
-            title={viewModel.finalCta.title}
-            body={viewModel.finalCta.body}
-            unlock={viewModel.finalCta.unlock}
-            unlockHref={viewModel.checkoutHref}
-            book={viewModel.finalCta.book}
-            bookHref={viewModel.finalCta.bookHref}
-            profile={viewModel.finalCta.profile}
-            profileNote={viewModel.finalCta.profileNote}
-          />
-        ) : null}
+        <ReportFinalCta
+          title={viewModel.finalCta.title}
+          body={viewModel.finalCta.body}
+          unlock={viewModel.finalCta.unlock}
+          unlockHref={viewModel.checkoutHref}
+          book={viewModel.finalCta.book}
+          bookHref={viewModel.finalCta.bookHref}
+          profile={viewModel.finalCta.profile}
+          profileNote={viewModel.finalCta.profileNote}
+        />
 
-        {viewModel.mode === "free" ? (
-          <ResultExtras codeString={viewModel.codeString} refined={isFreeRefined} />
-        ) : null}
+        {viewModel.mode === "free" ? <ResultExtras codeString={viewModel.codeString} /> : null}
 
         {viewModel.debug ? <ReportDebugPanel debug={viewModel.debug} /> : null}
       </div>

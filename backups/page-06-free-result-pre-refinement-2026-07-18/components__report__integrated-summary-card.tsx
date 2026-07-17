@@ -13,7 +13,6 @@ type IntegratedSummaryCardProps = {
   integrationTheme?: string;
   error?: string;
   sections?: IntegratedSummarySection[];
-  refined?: boolean;
 };
 
 export function IntegratedSummaryCard({
@@ -23,20 +22,9 @@ export function IntegratedSummaryCard({
   integrationTheme,
   error,
   sections,
-  refined = false,
 }: IntegratedSummaryCardProps) {
-  const bodyParagraphs = refined
-    ? body
-        .split(/\n\n+/)
-        .map((p) => p.trim())
-        .filter(Boolean)
-    : [];
-
   return (
-    <section
-      className={`report-integrated glass-card${refined ? " report-integrated--refined" : ""}`}
-      id="integrated"
-    >
+    <section className="report-integrated glass-card" id="integrated">
       <div className="report-integrated-ring" aria-hidden>
         <div className="report-integrated-ring-glow" />
         <div className="report-integrated-ring-art">
@@ -52,17 +40,9 @@ export function IntegratedSummaryCard({
       </div>
       <div className="report-integrated-copy">
         <h2 className="report-integrated-title text-gold-gradient">{title}</h2>
-        {lead ? <p className="report-integrated-lead">{lead}</p> : null}
+        <p className="report-integrated-lead">{lead}</p>
         {error ? <p className="report-synthesis-error">{error}</p> : null}
-        {refined ? (
-          <div className="report-integrated-body-stack">
-            {bodyParagraphs.map((paragraph) => (
-              <p key={paragraph} className="report-integrated-body">
-                {paragraph}
-              </p>
-            ))}
-          </div>
-        ) : sections?.length ? (
+        {sections?.length ? (
           <div className="report-integrated-sections">
             {sections.map((section) => (
               <div key={section.label} className="report-integrated-section">
@@ -74,7 +54,7 @@ export function IntegratedSummaryCard({
         ) : body ? (
           <p className="report-integrated-body">{body}</p>
         ) : null}
-        {!refined && integrationTheme ? (
+        {integrationTheme ? (
           <p className="report-integration-theme">
             <strong>Main Integration Theme:</strong> {integrationTheme}
           </p>

@@ -1,0 +1,198 @@
+/* Free Result page — Refinement Spec v1.0 */
+
+.report-dashboard--refined {
+  gap: clamp(20px, 3vw, 28px);
+}
+
+.report-dashboard--refined .report-sidebar--refined {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+  padding: 18px 16px;
+  background: rgba(8, 14, 28, 0.35);
+  border-color: rgba(216, 177, 92, 0.12);
+}
+
+.report-dashboard--refined .report-sidebar--refined .report-sidebar-nav a {
+  font-size: 0.82rem;
+  padding: 8px 10px;
+  letter-spacing: 0.04em;
+}
+
+.report-mobile-chips {
+  display: none;
+}
+
+.report-header--refined .report-header-eyebrow {
+  margin: 0 0 10px;
+  color: #efc36f;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+}
+
+.report-header--refined .report-code-strip--hero {
+  margin: 18px 0 14px;
+  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+}
+
+.report-header--refined .report-header-mirror {
+  margin: 0 0 22px;
+  max-width: 34rem;
+  color: rgba(245, 234, 214, 0.78);
+  font-size: 16.5px;
+  line-height: 1.6;
+}
+
+.report-header--refined .report-header-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 20px;
+}
+
+.report-dashboard--refined .report-pillar-card--refined .pillar-card-body h3 {
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: none;
+}
+
+.report-dashboard--refined .report-pillar-essence {
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: rgba(245, 234, 214, 0.78);
+}
+
+.report-dashboard--refined .report-integrated--refined {
+  text-align: center;
+  padding: clamp(28px, 4vw, 40px) clamp(22px, 3.5vw, 36px);
+}
+
+.report-dashboard--refined .report-integrated--refined .report-integrated-ring {
+  margin-inline: auto;
+}
+
+.report-dashboard--refined .report-integrated-body-stack {
+  display: grid;
+  gap: 12px;
+  max-width: 42rem;
+  margin-inline: auto;
+}
+
+.report-dashboard--refined .report-integrated-body {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.65;
+  color: rgba(245, 234, 214, 0.8);
+}
+
+.report-dashboard--refined .report-module-card--preview .report-module-preview-essence {
+  margin: 0 0 16px;
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: rgba(245, 234, 214, 0.82);
+}
+
+.report-dashboard--refined .report-module-card--preview .report-module-locked-cta {
+  display: inline-flex;
+  margin-top: 8px;
+}
+
+.report-dashboard--refined .report-free-reflection {
+  text-align: center;
+  padding: clamp(28px, 4vw, 40px) clamp(22px, 3.5vw, 36px);
+}
+
+.report-dashboard--refined .report-free-reflection p {
+  margin: 0 auto;
+  max-width: 36rem;
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(245, 234, 214, 0.88);
+}
+
+.report-dashboard--refined .report-full-upsell--refined {
+  text-align: center;
+  padding: clamp(28px, 4vw, 40px) clamp(22px, 3.5vw, 36px);
+}
+
+.report-dashboard--refined .report-full-upsell--refined .report-full-upsell-lead,
+.report-dashboard--refined .report-full-upsell--refined .report-full-upsell-body {
+  max-width: 40rem;
+  margin-inline: auto;
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: rgba(245, 234, 214, 0.8);
+}
+
+.report-dashboard--refined .report-full-upsell-actions {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px 20px;
+}
+
+.report-dashboard--refined .report-extras--refined .report-extras-card {
+  background: rgba(8, 14, 28, 0.32);
+}
+
+.report-dashboard--refined .report-extras-card-hint {
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: rgba(245, 234, 214, 0.72);
+}
+
+@media (max-width: 900px) {
+  .report-dashboard--refined .report-sidebar--desktop {
+    display: none;
+  }
+
+  .report-dashboard--refined .report-mobile-chips {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 4px 2px 10px;
+    margin-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .report-dashboard--refined .report-mobile-chips a {
+    flex: 0 0 auto;
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(216, 177, 92, 0.22);
+    background: rgba(8, 14, 28, 0.45);
+    color: rgba(245, 234, 214, 0.78);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .report-dashboard--refined .report-mobile-chips a.is-active {
+    border-color: rgba(239, 195, 111, 0.55);
+    color: #efc36f;
+  }
+
+  .report-header--refined .report-header-copy {
+    text-align: center;
+  }
+
+  .report-header--refined .report-header-cta-row {
+    justify-content: center;
+  }
+
+  .report-header--refined .report-header-mirror {
+    margin-inline: auto;
+    font-size: 16.5px;
+  }
+
+  .report-dashboard--refined .report-integrated-body,
+  .report-dashboard--refined .report-module-preview-essence,
+  .report-dashboard--refined .report-full-upsell--refined .report-full-upsell-body {
+    font-size: 16.5px;
+  }
+}

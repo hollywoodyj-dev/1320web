@@ -2,47 +2,48 @@
 
 import Link from "next/link";
 import { LeadCaptureForm } from "@/components/lead-capture-form";
-import { SAMPLE_REPORT_HREF } from "@/lib/site-nav";
-import { REPORT_FULL_UPSELL, RESULT_EXTRAS } from "@/lib/report/report-static-content";
+import { RESULT_EXTRAS } from "@/lib/report/report-static-content";
+import { FREE_RESULT_FAQ, FREE_RESULT_KEEP } from "@/lib/result-content";
 
 type ResultExtrasProps = {
   codeString: string;
+  refined?: boolean;
 };
 
-export function ResultExtras({ codeString }: ResultExtrasProps) {
+export function ResultExtras({ codeString, refined = false }: ResultExtrasProps) {
   function copyCode() {
     void navigator.clipboard?.writeText(codeString);
   }
 
-  return (
-    <div className="report-extras space-y-5">
-      <section className="glass-card report-extras-card">
-        <h2 className="report-section-title">{RESULT_EXTRAS.goDeeperTitle}</h2>
-        <p>{RESULT_EXTRAS.goDeeperBody}</p>
-        <Link href={REPORT_FULL_UPSELL.primaryHref} className="gold-button mt-4 inline-flex">
-          {REPORT_FULL_UPSELL.primaryCta}
-        </Link>
-        <Link href={SAMPLE_REPORT_HREF} className="blueprint-secondary-link block mt-3">
-          VIEW SAMPLE REPORT
-        </Link>
-      </section>
+  const faq = refined ? FREE_RESULT_FAQ : RESULT_EXTRAS.faq;
 
-      <div className="report-extras-duo">
+  return (
+    <div className={`report-extras space-y-5${refined ? " report-extras--refined" : ""}`}>
+      <div className="report-extras-duo" id="keep-code">
         <section className="glass-card report-extras-card report-extras-card--duo">
-          <h2 className="report-section-title">{RESULT_EXTRAS.shareTitle}</h2>
-          <p className="report-extras-card-hint">{RESULT_EXTRAS.shareHint}</p>
+          <h2 className="report-section-title">
+            {refined ? FREE_RESULT_KEEP.title : RESULT_EXTRAS.shareTitle}
+          </h2>
+          <p className="report-extras-card-hint">
+            {refined ? FREE_RESULT_KEEP.body : RESULT_EXTRAS.shareHint}
+          </p>
           <div className="report-extras-card-actions">
             <button type="button" className="lead-submit-button" onClick={copyCode}>
-              {RESULT_EXTRAS.shareCopyLabel}
+              {refined ? FREE_RESULT_KEEP.copyLabel : RESULT_EXTRAS.shareCopyLabel}
             </button>
           </div>
         </section>
 
         <section className="glass-card report-extras-card report-extras-card--duo">
-          <h2 className="report-section-title">{RESULT_EXTRAS.emailTitle}</h2>
+          <h2 className="report-section-title">
+            {refined ? FREE_RESULT_KEEP.emailLabel : RESULT_EXTRAS.emailTitle}
+          </h2>
+          {refined ? (
+            <p className="report-extras-card-hint">{RESULT_EXTRAS.emailHint}</p>
+          ) : null}
           <LeadCaptureForm
             source="result_email_code"
-            buttonText="Send My Code to Email"
+            buttonText={refined ? FREE_RESULT_KEEP.emailLabel : "Send My Code to Email"}
             className="report-extras-email-form"
           />
         </section>
@@ -51,13 +52,18 @@ export function ResultExtras({ codeString }: ResultExtrasProps) {
       <section className="glass-card report-extras-card">
         <h2 className="report-section-title">{RESULT_EXTRAS.faqTitle}</h2>
         <div className="blueprint-faq">
-          {RESULT_EXTRAS.faq.map((item) => (
+          {faq.map((item) => (
             <details key={item.q} className="blueprint-faq-item">
               <summary>{item.q}</summary>
               <p>{item.a}</p>
             </details>
           ))}
         </div>
+        {refined ? (
+          <Link href="/faq" className="blueprint-secondary-link block mt-4">
+            View Full FAQ
+          </Link>
+        ) : null}
       </section>
     </div>
   );

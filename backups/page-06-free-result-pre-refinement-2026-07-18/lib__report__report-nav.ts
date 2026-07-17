@@ -2,17 +2,12 @@ import type { SegmentId } from "@/lib/segments";
 
 export type ReportSectionId =
   | "overview"
-  | "four-part"
-  | "integrated"
-  | "segments"
   | "s1"
   | "s3"
   | "s2"
   | "s0"
   | "integration"
-  | "reflection"
-  | "go-deeper"
-  | "keep-code";
+  | "reflection";
 
 export type ReportNavItem = {
   id: ReportSectionId;

@@ -19,7 +19,6 @@ import {
   REPORT_FINAL_CTA,
   SAMPLE_REPORT_META,
 } from "@/lib/report/report-static-content";
-import { FREE_RESULT_FOUNDATION, FREE_RESULT_INTEGRATED } from "@/lib/result-content";
 
 export type ReportMode = "full" | "free";
 
@@ -33,8 +32,6 @@ export type ReportOverviewCard = {
   segmentId: SegmentId;
   code: string;
   title: string;
-  /** Product display name for free result (e.g. Soul Origin). */
-  productTitle?: string;
   shortLabel: string;
   essence: string;
   metaNote?: string;
@@ -210,13 +207,14 @@ function buildFreeModuleFields(
   segment: SegmentContent,
   locale: Locale,
 ): ReportField[] {
-  const essence = pickLocalized(segment.freeEssence, locale).trim();
-  if (!essence) return [];
-  // Preview-only: keep a short essence sentence, not a full interpretation block.
-  const firstSentence = essence.split(/(?<=[.!?。！？])\s+/)[0]?.trim() || essence;
-  const preview =
-    firstSentence.length > 180 ? `${firstSentence.slice(0, 177).trimEnd()}…` : firstSentence;
-  return [{ label: "Essence", value: preview.endsWith(".") || preview.endsWith("…") ? preview : `${preview}.` }];
+  const labelBySegment: Record<SegmentId, string> = {
+    s1: "Origin Essence",
+    s3: "Vibration Essence",
+    s2: "Reflective Summary",
+    s0: "Reflective Summary",
+  };
+  const essence = field(locale, labelBySegment[segmentId], segment.freeEssence);
+  return essence ? [essence] : [];
 }
 
 function buildS2Fields(
@@ -365,8 +363,8 @@ export function buildReportViewModel(
       : undefined;
 
   const integratedSummary =
-    mode === "free"
-      ? FREE_RESULT_INTEGRATED.body.join("\n\n")
+    mode === "free" && blueprint
+      ? [blueprint.coreEssenceSummary, blueprint.relationshipMirrorSummary].filter(Boolean).join("\n\n")
       : mode === "full" && blueprint
         ? blueprint.integratedSummary
         : blueprint?.integratedSummary ?? pickLocalized(content.integratedFreeSummary, locale);
@@ -382,25 +380,15 @@ export function buildReportViewModel(
     const meta = getSegment(id);
     const seg = segmentContent[id];
     const code = segmentCodeLabel(content, id);
-    const foundation = FREE_RESULT_FOUNDATION.find((item) => item.segmentId === id);
-
-    if (mode === "free" && foundation) {
-      return {
-        segmentId: id,
-        code,
-        title: foundation.productTitle,
-        productTitle: foundation.productTitle,
-        shortLabel: foundation.shortLabel,
-        essence: foundation.essence,
-      };
-    }
-
     return {
       segmentId: id,
       code,
       title: meta.title.en,
       shortLabel: id === "s2" ? "Relationship Mirror" : meta.shortLabel.en,
-      essence: truncateOverview(buildOverviewEssence(id, seg, locale)),
+      essence:
+        mode === "free"
+          ? buildOverviewEssence(id, seg, locale)
+          : truncateOverview(buildOverviewEssence(id, seg, locale)),
     };
   });
 
@@ -413,14 +401,13 @@ export function buildReportViewModel(
     const lockedTeaser =
       pickLocalized(seg.lockedPreview, locale) ||
       pickLocalized(content.freeResultCopy.missingEntryFallback, locale);
-    const foundation = FREE_RESULT_FOUNDATION.find((item) => item.segmentId === id);
 
     if (mode === "free") {
       return {
         segmentId: id,
         codeLabel: segmentCodeLabel(content, id),
         archetype,
-        shortLabel: foundation?.productTitle ?? pickLocalized(seg.shortLabel, locale),
+        shortLabel: id === "s2" ? "Relationship Mirror" : pickLocalized(seg.shortLabel, locale),
         cardImageUrl: getSegmentCardImageUrl(id, codeNum),
         fields: buildFreeModuleFields(id, seg, locale),
         reflectionQuestion: reflection || undefined,
@@ -471,15 +458,11 @@ export function buildReportViewModel(
     boundaryNote: pickLocalized(content.freeResultCopy.boundaryNote, locale),
     fictionBanner: variant === "sample" ? SAMPLE_REPORT_META.fictionBanner : undefined,
     synthesisError: content.synthesisError,
-    integratedTitle:
-      mode === "free"
-        ? FREE_RESULT_INTEGRATED.title
-        : pickLocalized(content.freeResultCopy.integratedTitle, locale),
-    integratedLead:
-      mode === "free" ? "" : pickLocalized(content.freeResultCopy.integratedLead, locale),
+    integratedTitle: pickLocalized(content.freeResultCopy.integratedTitle, locale),
+    integratedLead: pickLocalized(content.freeResultCopy.integratedLead, locale),
     integratedSummary,
     integratedSections,
-    integrationTheme: mode === "free" ? undefined : blueprint?.integrationTheme,
+    integrationTheme: blueprint?.integrationTheme,
     showFullUpsell: variant === "result",
     overviewCards,
     modules,

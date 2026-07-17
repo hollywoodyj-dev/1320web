@@ -9,19 +9,11 @@ type ReportSidebarProps = {
   navItems: ReportNavItem[];
   activeSection: ReportSectionId;
   onNavigate: (id: ReportSectionId) => void;
-  refined?: boolean;
 };
 
-export function ReportSidebar({
-  navItems,
-  activeSection,
-  onNavigate,
-  refined = false,
-}: ReportSidebarProps) {
+export function ReportSidebar({ navItems, activeSection, onNavigate }: ReportSidebarProps) {
   return (
-    <aside
-      className={`report-sidebar report-sidebar--desktop glass-card${refined ? " report-sidebar--refined" : ""}`}
-    >
+    <aside className="report-sidebar report-sidebar--desktop glass-card">
       <div className="report-sidebar-brand">
         <Link href="/" className="brand-lockup-link">
           <div className="brand-image-shell brand-image-shell-small">
@@ -56,15 +48,13 @@ export function ReportSidebar({
           </a>
         ))}
       </nav>
-      {!refined ? (
-        <div className="report-sidebar-journey glass-card">
-          <p className="report-sidebar-journey-title">Your Soul Journey</p>
-          <p>
-            This report is a mirror for awareness — read slowly, integrate gently, and return when
-            you are ready.
-          </p>
-        </div>
-      ) : null}
+      <div className="report-sidebar-journey glass-card">
+        <p className="report-sidebar-journey-title">Your Soul Journey</p>
+        <p>
+          This report is a mirror for awareness — read slowly, integrate gently, and return when
+          you are ready.
+        </p>
+      </div>
     </aside>
   );
 }

@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-18  
 **Spec:** `docs/specs/1320_FULL_REPORT_PAGE_REFINEMENT_SPEC_v1.md`  
-**Status:** Implemented — pending Lumen QA  
+**Status:** Lumen QA PASS — ready for Wisewave visual acceptance  
 
 ## Backup
 
@@ -18,4 +18,10 @@
 - FAQ preview: 5 questions + View Full FAQ
 - CSS: `styles/full-report-density-v1.css`
 
-**Next:** Lumen light QA → Wisewave visual acceptance
+## Lumen QA
+
+- **Overall:** PASS (390px + 1280px)
+- Artifact: `qa-artifacts/LUMEN_QA_FULL_REPORT_REFINEMENT_v1_2026-07-17.md`
+- Commits: `eb30c2a`, `a941ba2`
+
+**Next:** Wisewave visual acceptance

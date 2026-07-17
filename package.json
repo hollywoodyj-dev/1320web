@@ -23,6 +23,7 @@
     "qa:your-code-refinement-v1": "npx tsx scripts/lumen-qa-your-code-refinement-v1.ts",
     "qa:generating-refinement-v1": "npx tsx scripts/lumen-qa-generating-refinement-v1.ts",
     "qa:free-result-refinement-v1": "npx tsx scripts/lumen-qa-free-result-refinement-v1.ts",
+    "qa:full-report-refinement-v1": "npx tsx scripts/lumen-qa-full-report-refinement-v1.ts",
     "smoke:commercial-overlay-step2": "npm run smoke:commercial-overlay",
     "smoke:full-report-payload": "npx tsx scripts/smoke-full-report-payload.ts",
     "smoke:full-report-v2-sample": "npx tsx scripts/smoke-full-report-v2-sample.ts",

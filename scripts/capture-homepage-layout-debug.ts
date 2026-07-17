@@ -30,8 +30,11 @@ async function main() {
     const page = await browser.newPage();
     await page.setViewport({ width: w, height: h });
     await page.goto(`${BASE}/`, { waitUntil: "networkidle2", timeout: 90_000 });
-    await page.screenshot({ path: path.join(OUT, `${name}-full.png`), fullPage: true });
-    await page.screenshot({ path: path.join(OUT, `${name}-viewport.png`), fullPage: false });
+    await page.screenshot({ path: path.join(OUT, `${name}-full.png`) as `${string}.png`, fullPage: true });
+    await page.screenshot({
+      path: path.join(OUT, `${name}-viewport.png`) as `${string}.png`,
+      fullPage: false,
+    });
     await page.close();
     console.log(`saved ${name}`);
   }

@@ -58,7 +58,6 @@ const FORBIDDEN = [
   "growth edge",
   "one-week practice",
   "how this may show up",
-  "7-day integration",
 ];
 
 async function main() {

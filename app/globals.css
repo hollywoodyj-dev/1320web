@@ -458,6 +458,7 @@ button {
   max-width: 640px;
   padding: 86px 32px 84px 40px;
   min-height: 760px;
+  overflow: visible;
 }
 
 .eyebrow {
@@ -495,7 +496,8 @@ button {
 
 .hero-title-line {
   display: block;
-  white-space: nowrap;
+  white-space: normal;
+  text-wrap: balance;
 }
 
 .hero-detail {
@@ -1510,15 +1512,14 @@ button {
 }
 
 .homepage-preview-stack {
-  display: grid;
+  display: block;
   gap: 16px;
-  margin-top: 22px;
+  margin-top: 0;
 }
 
-@media (min-width: 900px) {
-  .homepage-preview-stack {
-    grid-template-columns: 1fr 1fr;
-  }
+.homepage-preview-stack .homepage-preview-card {
+  max-width: 820px;
+  margin-inline: auto;
 }
 
 .homepage-preview-card {
@@ -1888,13 +1889,22 @@ button {
     width: 100%;
     min-height: auto;
     padding: 28px 22px 32px;
+    text-align: center;
     background: linear-gradient(180deg, rgba(5, 10, 21, 0.98), rgba(5, 10, 21, 0.88));
     border-radius: 22px 22px 0 0;
   }
 
   .hero-detail {
     max-width: none;
-    margin: 22px 0 0;
+    margin: 22px auto 0;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-text.section-copy {
+    margin-inline: auto;
   }
 
   .hero-title-line {

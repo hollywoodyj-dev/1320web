@@ -52,7 +52,7 @@ h3 {
 }
 
 .page-shell .hero-title {
-  font-size: clamp(52px, 8vw, 92px);
+  font-size: clamp(3.25rem, 6vw, 5.45rem);
   line-height: 0.95;
   font-weight: 600;
   letter-spacing: -0.04em;
@@ -102,6 +102,16 @@ h3 {
   text-align: center;
 }
 
+.page-shell .homepage-preview-stack .homepage-preview-list {
+  text-align: left;
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.page-shell .homepage-preview-actions {
+  justify-content: center;
+}
+
 .page-shell .homepage-section-body + .homepage-section-body {
   margin-top: 12px;
 }
@@ -131,6 +141,7 @@ h3 {
   padding: 0;
   border: none;
   background: transparent;
+  box-shadow: none;
 }
 
 .page-shell .entry-panel-inner {

@@ -88,53 +88,61 @@ export default function HomePage() {
           </section>
 
           <section className="home-section entry-panel entry-panel--refined" id="entry-panel">
-            <div className="home-section-inner entry-panel-inner">
-              <h2 className="homepage-section-title">{HOMEPAGE_CALCULATOR.title}</h2>
-              <p className="homepage-prose-copy">{HOMEPAGE_CALCULATOR.body}</p>
-              <div className="entry-form-shell entry-form-shell--refined">
-                <p className="entry-label">{HOMEPAGE_CALCULATOR.formLabel}</p>
-                <HomeBirthdateEntry />
+            <div className="home-section-inner">
+              <div className="homepage-block homepage-block--entry">
+                <h2 className="homepage-section-title">{HOMEPAGE_CALCULATOR.title}</h2>
+                <p className="homepage-prose-copy">{HOMEPAGE_CALCULATOR.body}</p>
+                <div className="homepage-block-form">
+                  <p className="entry-label">{HOMEPAGE_CALCULATOR.formLabel}</p>
+                  <HomeBirthdateEntry />
+                </div>
               </div>
             </div>
           </section>
 
           <section className="home-section home-section--prose homepage-what-is">
-            <div className="home-section-inner homepage-prose">
-              <p className="homepage-section-eyebrow">{HOMEPAGE_WHAT_IS.eyebrow}</p>
-              <h2 className="homepage-section-title">{HOMEPAGE_WHAT_IS.title}</h2>
-              <div className="homepage-prose-copy">
-                {HOMEPAGE_WHAT_IS.body.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
+            <div className="home-section-inner">
+              <div className="homepage-block">
+                <p className="homepage-section-eyebrow">{HOMEPAGE_WHAT_IS.eyebrow}</p>
+                <h2 className="homepage-section-title">{HOMEPAGE_WHAT_IS.title}</h2>
+                <div className="homepage-prose-copy">
+                  {HOMEPAGE_WHAT_IS.body.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
               </div>
             </div>
           </section>
 
           <section className="home-section home-section--prose homepage-origin">
-            <div className="home-section-inner homepage-prose">
-              <p className="homepage-section-eyebrow">{HOMEPAGE_ORIGIN.eyebrow}</p>
-              <h2 className="homepage-section-title">{HOMEPAGE_ORIGIN.title}</h2>
-              <div className="homepage-prose-copy">
-                {HOMEPAGE_ORIGIN.body.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
+            <div className="home-section-inner">
+              <div className="homepage-block">
+                <p className="homepage-section-eyebrow">{HOMEPAGE_ORIGIN.eyebrow}</p>
+                <h2 className="homepage-section-title">{HOMEPAGE_ORIGIN.title}</h2>
+                <div className="homepage-prose-copy">
+                  {HOMEPAGE_ORIGIN.body.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+                <Link href={HOMEPAGE_ORIGIN.href} className="hero-secondary-link homepage-prose-link">
+                  {HOMEPAGE_ORIGIN.cta}
+                </Link>
               </div>
-              <Link href={HOMEPAGE_ORIGIN.href} className="hero-secondary-link homepage-prose-link">
-                {HOMEPAGE_ORIGIN.cta}
-              </Link>
             </div>
           </section>
 
           <section className="home-section home-section--prose homepage-blueprint-intro">
-            <div className="home-section-inner homepage-prose">
-              <p className="homepage-section-eyebrow">{HOMEPAGE_BLUEPRINT_INTRO.eyebrow}</p>
-              <h2 className="homepage-section-title">{HOMEPAGE_BLUEPRINT_INTRO.title}</h2>
-              <p className="homepage-prose-copy">{HOMEPAGE_BLUEPRINT_INTRO.body}</p>
+            <div className="home-section-inner">
+              <div className="homepage-block">
+                <p className="homepage-section-eyebrow">{HOMEPAGE_BLUEPRINT_INTRO.eyebrow}</p>
+                <h2 className="homepage-section-title">{HOMEPAGE_BLUEPRINT_INTRO.title}</h2>
+                <p className="homepage-prose-copy">{HOMEPAGE_BLUEPRINT_INTRO.body}</p>
+              </div>
             </div>
           </section>
 
           <section className="home-section home-section--compact">
-            <div className="home-section-inner pillar-grid">
+            <div className="home-section-inner home-section-inner--wide pillar-grid">
               {HOMEPAGE_PILLARS.map((pillar) => (
                 <article key={pillar.code} className={`pillar-card pillar-${pillar.tone} pillar-card--refined`}>
                   <p className="pillar-code">{pillar.code}</p>
@@ -149,53 +157,55 @@ export default function HomePage() {
           </section>
 
           <section className="home-section home-section--prose homepage-not-this">
-            <div className="home-section-inner homepage-prose">
-              <p className="homepage-section-eyebrow">{HOMEPAGE_NOT_THIS.eyebrow}</p>
-              <h2 className="homepage-section-title">{HOMEPAGE_NOT_THIS.title}</h2>
-              <div className="homepage-prose-copy">
-                {HOMEPAGE_NOT_THIS.body.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
+            <div className="home-section-inner">
+              <div className="homepage-block">
+                <p className="homepage-section-eyebrow">{HOMEPAGE_NOT_THIS.eyebrow}</p>
+                <h2 className="homepage-section-title">{HOMEPAGE_NOT_THIS.title}</h2>
+                <div className="homepage-prose-copy">
+                  {HOMEPAGE_NOT_THIS.body.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+                <Link href={HOMEPAGE_NOT_THIS.href} className="hero-secondary-link homepage-prose-link">
+                  {HOMEPAGE_NOT_THIS.cta}
+                </Link>
               </div>
-              <Link href={HOMEPAGE_NOT_THIS.href} className="hero-secondary-link homepage-prose-link">
-                {HOMEPAGE_NOT_THIS.cta}
-              </Link>
             </div>
           </section>
 
           <section className="home-section how-section">
-            <div className="home-section-inner">
-              <div className="homepage-prose homepage-prose--center">
+            <div className="home-section-inner home-section-inner--wide">
+              <div className="homepage-block homepage-block--wide">
                 <p className="homepage-section-eyebrow">{HOMEPAGE_HOW.eyebrow}</p>
                 <h2 className="homepage-section-title">{HOMEPAGE_HOW.title}</h2>
                 <p className="homepage-prose-copy how-section-lead">{HOMEPAGE_HOW.body}</p>
-              </div>
-              <div className="steps-grid">
-                {HOMEPAGE_HOW.steps.map((step) => (
-                  <article key={step.number} className={`step-card step-${step.tone}`}>
-                    <div className={`step-icon-wrap ${step.frameClass}`.trim()}>
-                      <div className={`step-icon-stage ${step.sizeClass}`.trim()}>
-                        <Image
-                          src={step.image}
-                          alt=""
-                          width={260}
-                          height={260}
-                          className={`step-icon-image ${step.imageClass}`.trim()}
-                        />
+                <div className="steps-grid">
+                  {HOMEPAGE_HOW.steps.map((step) => (
+                    <article key={step.number} className={`step-card step-${step.tone}`}>
+                      <div className={`step-icon-wrap ${step.frameClass}`.trim()}>
+                        <div className={`step-icon-stage ${step.sizeClass}`.trim()}>
+                          <Image
+                            src={step.image}
+                            alt=""
+                            width={260}
+                            height={260}
+                            className={`step-icon-image ${step.imageClass}`.trim()}
+                          />
+                        </div>
                       </div>
-                    </div>
-                    <p className="step-number">{step.number}</p>
-                    <h3>{step.title}</h3>
-                    <p>{step.text}</p>
-                  </article>
-                ))}
+                      <p className="step-number">{step.number}</p>
+                      <h3>{step.title}</h3>
+                      <p>{step.text}</p>
+                    </article>
+                  ))}
+                </div>
               </div>
             </div>
           </section>
 
           <section className="home-section homepage-preview-stack">
             <div className="home-section-inner">
-              <article className="homepage-preview-card">
+              <div className="homepage-block homepage-block--wide">
                 <p className="homepage-section-eyebrow">{HOMEPAGE_FULL_REPORT_PREVIEW.eyebrow}</p>
                 <h2 className="homepage-section-title">{HOMEPAGE_FULL_REPORT_PREVIEW.title}</h2>
                 <p className="homepage-prose-copy">{HOMEPAGE_FULL_REPORT_PREVIEW.body}</p>
@@ -225,19 +235,17 @@ export default function HomePage() {
                     {HOMEPAGE_FULL_REPORT_PREVIEW.sampleCta}
                   </Link>
                 </div>
-              </article>
+              </div>
             </div>
           </section>
 
           <section className="home-section home-section--closing">
             <div className="home-section-inner">
-              <div className="homepage-closing-panel">
+              <div className="homepage-block homepage-block--closing">
                 <div className="homepage-closing-reflection">
                   <p className="homepage-section-eyebrow">{HOMEPAGE_REFLECTION.eyebrow}</p>
                   <p className="homepage-closing-quote">{HOMEPAGE_REFLECTION.title}</p>
-                  <p className="homepage-closing-copy">
-                    {HOMEPAGE_REFLECTION.body.join(" ")}
-                  </p>
+                  <p className="homepage-closing-copy">{HOMEPAGE_REFLECTION.body.join(" ")}</p>
                 </div>
 
                 <div className="homepage-closing-divider" aria-hidden="true" />

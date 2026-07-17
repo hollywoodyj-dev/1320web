@@ -17,4 +17,5 @@ Scope: `/about-1320` UI/copy/density only. Step 5 entitled watchpoints unchanged
 - Footer mantra aligned with homepage
 - Shared block layout via `styles/about-density-v1.css`
 
-**Next:** Lumen QA against spec §7
+**Next:** Lumen QA against spec §7 — **PASS on production (2026-07-18)**  
+**Artifact:** `qa-artifacts/LUMEN_QA_ABOUT_REFINEMENT_v1_2026-07-17.md`

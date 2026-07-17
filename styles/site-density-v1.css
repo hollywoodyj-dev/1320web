@@ -59,8 +59,108 @@ h3 {
 }
 
 .page-shell .section-title {
-  font-size: clamp(34px, 5vw, 58px);
-  line-height: 1.05;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.08;
+}
+
+.page-shell .homepage-section-title {
+  font-size: clamp(1.65rem, 2.8vw, 2.35rem);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  margin-bottom: 14px;
+}
+
+.page-shell .homepage-prose {
+  max-width: 640px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.page-shell .homepage-prose--center {
+  margin-bottom: 24px;
+}
+
+.page-shell .homepage-prose-copy {
+  margin: 0;
+  color: rgba(240, 236, 227, 0.86);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.page-shell .homepage-prose-copy p + p {
+  margin-top: 12px;
+}
+
+.page-shell .homepage-prose-link {
+  display: inline-block;
+  margin-top: 18px;
+}
+
+.page-shell .homepage-closing-panel {
+  position: relative;
+  max-width: 680px;
+  margin-inline: auto;
+  padding: clamp(32px, 4.5vw, 48px) clamp(24px, 4vw, 40px);
+  border-radius: 24px;
+  border: 1px solid rgba(216, 177, 92, 0.18);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(239, 195, 111, 0.1), transparent 58%),
+    linear-gradient(180deg, rgba(10, 16, 30, 0.82), rgba(5, 10, 21, 0.94));
+  box-shadow:
+    0 28px 80px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  text-align: center;
+}
+
+.page-shell .homepage-closing-quote {
+  margin: 0 0 14px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.55rem, 2.6vw, 2rem);
+  font-style: italic;
+  line-height: 1.3;
+  color: rgba(248, 244, 234, 0.96);
+}
+
+.page-shell .homepage-closing-copy {
+  margin: 0 auto;
+  max-width: 560px;
+  color: rgba(240, 236, 227, 0.78);
+  font-size: 0.98rem;
+  line-height: 1.72;
+}
+
+.page-shell .homepage-closing-divider {
+  height: 1px;
+  margin: clamp(24px, 4vw, 32px) auto;
+  max-width: 96px;
+  background: linear-gradient(90deg, transparent, rgba(216, 177, 92, 0.55), transparent);
+}
+
+.page-shell .homepage-closing-title {
+  margin: 0 0 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.45rem, 2.4vw, 1.9rem);
+  line-height: 1.2;
+  color: #f8f4ea;
+}
+
+.page-shell .homepage-closing-lead {
+  margin: 0 auto 22px;
+  max-width: 420px;
+  color: rgba(240, 236, 227, 0.84);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.page-shell .homepage-closing-button {
+  min-width: min(100%, 280px);
+}
+
+.page-shell .homepage-closing-note {
+  margin: 16px 0 0;
+  color: rgba(233, 237, 245, 0.62);
+  font-size: 0.84rem;
+  line-height: 1.55;
 }
 
 .page-shell .card-title {
@@ -75,10 +175,18 @@ h3 {
 
 /* Homepage section rhythm — Refinement Spec v1.0 */
 .page-shell .home-section {
-  padding-block: clamp(84px, 10vw, 148px);
+  padding-block: clamp(44px, 5.5vw, 80px);
+}
+
+.page-shell .home-section--prose {
+  padding-block: clamp(36px, 4.5vw, 64px);
 }
 
 .page-shell .home-section--compact {
+  padding-block: clamp(40px, 5vw, 72px);
+}
+
+.page-shell .home-section--closing {
   padding-block: clamp(56px, 7vw, 96px);
 }
 
@@ -96,9 +204,7 @@ h3 {
 .page-shell .homepage-blueprint-intro,
 .page-shell .homepage-not-this,
 .page-shell .how-section,
-.page-shell .homepage-preview-stack,
-.page-shell .homepage-reflection,
-.page-shell .homepage-final-cta {
+.page-shell .homepage-preview-stack {
   text-align: center;
 }
 
@@ -186,9 +292,9 @@ h3 {
 }
 
 .page-shell .homepage-boundary-block {
-  border-radius: 16px;
-  border: 1px solid rgba(216, 177, 92, 0.16);
-  background: rgba(8, 14, 28, 0.42);
+  border-radius: 0;
+  border: none;
+  background: transparent;
 }
 
 .page-shell .homepage-reflection-inner {
@@ -227,8 +333,12 @@ h3 {
   line-height: 1.45;
 }
 
-.page-shell .homepage-preview-list--compact li {
-  padding: 10px 0;
+.page-shell .homepage-preview-card {
+  padding: clamp(28px, 4vw, 36px) clamp(22px, 3vw, 32px);
+  border-color: rgba(216, 177, 92, 0.14);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(239, 195, 111, 0.06), transparent 52%),
+    rgba(8, 14, 28, 0.45);
 }
 
 @media (max-width: 860px) {
@@ -266,7 +376,11 @@ h3 {
   }
 
   .page-shell .home-section {
-    padding-block: 72px;
+    padding-block: 56px;
+  }
+
+  .page-shell .home-section--prose {
+    padding-block: 44px;
   }
 
   .page-shell .home-section-inner {

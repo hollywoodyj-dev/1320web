@@ -132,6 +132,7 @@ async function main() {
           if (el.classList.contains("homepage-not-this")) return "boundary";
           if (el.classList.contains("how-section")) return "integration";
           if (el.classList.contains("homepage-preview-stack")) return "full-report";
+          if (el.classList.contains("home-section--closing")) return "closing";
           if (el.classList.contains("homepage-reflection")) return "reflection";
           if (el.classList.contains("homepage-final-cta")) return "final-cta";
           return el.className.split(" ").slice(0, 2).join("-");
@@ -143,7 +144,11 @@ async function main() {
       sectionOrder.indexOf("hero") === 0 &&
       sectionOrder.indexOf("birth-date") > 0 &&
       sectionOrder.indexOf("what-is") > sectionOrder.indexOf("birth-date") &&
-      sectionOrder.indexOf("pillar-grid") > sectionOrder.indexOf("origin");
+      sectionOrder.indexOf("pillar-grid") > sectionOrder.indexOf("origin") &&
+      sectionOrder.indexOf("full-report") > sectionOrder.indexOf("integration") &&
+      (sectionOrder.includes("closing") ||
+        (sectionOrder.indexOf("reflection") > sectionOrder.indexOf("full-report") &&
+          sectionOrder.indexOf("final-cta") > sectionOrder.indexOf("reflection")));
 
     // Foundation mirror order
     const pillarCodes = await page.evaluate(() =>

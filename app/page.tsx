@@ -90,7 +90,7 @@ export default function HomePage() {
           <section className="home-section entry-panel entry-panel--refined" id="entry-panel">
             <div className="home-section-inner entry-panel-inner">
               <h2 className="homepage-section-title">{HOMEPAGE_CALCULATOR.title}</h2>
-              <p className="homepage-section-body section-copy">{HOMEPAGE_CALCULATOR.body}</p>
+              <p className="homepage-prose-copy">{HOMEPAGE_CALCULATOR.body}</p>
               <div className="entry-form-shell entry-form-shell--refined">
                 <p className="entry-label">{HOMEPAGE_CALCULATOR.formLabel}</p>
                 <HomeBirthdateEntry />
@@ -98,38 +98,38 @@ export default function HomePage() {
             </div>
           </section>
 
-          <section className="home-section homepage-what-is">
-            <div className="home-section-inner">
+          <section className="home-section home-section--prose homepage-what-is">
+            <div className="home-section-inner homepage-prose">
               <p className="homepage-section-eyebrow">{HOMEPAGE_WHAT_IS.eyebrow}</p>
-              <h2 className="homepage-section-title section-title">{HOMEPAGE_WHAT_IS.title}</h2>
-              {HOMEPAGE_WHAT_IS.body.map((paragraph) => (
-                <p key={paragraph} className="homepage-section-body section-copy">
-                  {paragraph}
-                </p>
-              ))}
+              <h2 className="homepage-section-title">{HOMEPAGE_WHAT_IS.title}</h2>
+              <div className="homepage-prose-copy">
+                {HOMEPAGE_WHAT_IS.body.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
             </div>
           </section>
 
-          <section className="home-section homepage-origin">
-            <div className="home-section-inner">
+          <section className="home-section home-section--prose homepage-origin">
+            <div className="home-section-inner homepage-prose">
               <p className="homepage-section-eyebrow">{HOMEPAGE_ORIGIN.eyebrow}</p>
-              <h2 className="homepage-section-title section-title">{HOMEPAGE_ORIGIN.title}</h2>
-              {HOMEPAGE_ORIGIN.body.map((paragraph) => (
-                <p key={paragraph} className="homepage-section-body section-copy">
-                  {paragraph}
-                </p>
-              ))}
-              <Link href={HOMEPAGE_ORIGIN.href} className="hero-secondary-link mt-3 inline-block">
+              <h2 className="homepage-section-title">{HOMEPAGE_ORIGIN.title}</h2>
+              <div className="homepage-prose-copy">
+                {HOMEPAGE_ORIGIN.body.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+              <Link href={HOMEPAGE_ORIGIN.href} className="hero-secondary-link homepage-prose-link">
                 {HOMEPAGE_ORIGIN.cta}
               </Link>
             </div>
           </section>
 
-          <section className="home-section homepage-blueprint-intro">
-            <div className="home-section-inner">
+          <section className="home-section home-section--prose homepage-blueprint-intro">
+            <div className="home-section-inner homepage-prose">
               <p className="homepage-section-eyebrow">{HOMEPAGE_BLUEPRINT_INTRO.eyebrow}</p>
-              <h2 className="homepage-section-title section-title">{HOMEPAGE_BLUEPRINT_INTRO.title}</h2>
-              <p className="homepage-section-body section-copy">{HOMEPAGE_BLUEPRINT_INTRO.body}</p>
+              <h2 className="homepage-section-title">{HOMEPAGE_BLUEPRINT_INTRO.title}</h2>
+              <p className="homepage-prose-copy">{HOMEPAGE_BLUEPRINT_INTRO.body}</p>
             </div>
           </section>
 
@@ -148,16 +148,16 @@ export default function HomePage() {
             </div>
           </section>
 
-          <section className="home-section homepage-not-this homepage-boundary-block">
-            <div className="home-section-inner">
+          <section className="home-section home-section--prose homepage-not-this">
+            <div className="home-section-inner homepage-prose">
               <p className="homepage-section-eyebrow">{HOMEPAGE_NOT_THIS.eyebrow}</p>
-              <h2 className="homepage-section-title section-title">{HOMEPAGE_NOT_THIS.title}</h2>
-              {HOMEPAGE_NOT_THIS.body.map((paragraph) => (
-                <p key={paragraph} className="homepage-section-body section-copy">
-                  {paragraph}
-                </p>
-              ))}
-              <Link href={HOMEPAGE_NOT_THIS.href} className="hero-secondary-link mt-3 inline-block">
+              <h2 className="homepage-section-title">{HOMEPAGE_NOT_THIS.title}</h2>
+              <div className="homepage-prose-copy">
+                {HOMEPAGE_NOT_THIS.body.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+              <Link href={HOMEPAGE_NOT_THIS.href} className="hero-secondary-link homepage-prose-link">
                 {HOMEPAGE_NOT_THIS.cta}
               </Link>
             </div>
@@ -165,9 +165,11 @@ export default function HomePage() {
 
           <section className="home-section how-section">
             <div className="home-section-inner">
-              <p className="homepage-section-eyebrow">{HOMEPAGE_HOW.eyebrow}</p>
-              <h2 className="section-title">{HOMEPAGE_HOW.title}</h2>
-              <p className="homepage-section-body section-copy how-section-lead">{HOMEPAGE_HOW.body}</p>
+              <div className="homepage-prose homepage-prose--center">
+                <p className="homepage-section-eyebrow">{HOMEPAGE_HOW.eyebrow}</p>
+                <h2 className="homepage-section-title">{HOMEPAGE_HOW.title}</h2>
+                <p className="homepage-prose-copy how-section-lead">{HOMEPAGE_HOW.body}</p>
+              </div>
               <div className="steps-grid">
                 {HOMEPAGE_HOW.steps.map((step) => (
                   <article key={step.number} className={`step-card step-${step.tone}`}>
@@ -195,8 +197,8 @@ export default function HomePage() {
             <div className="home-section-inner">
               <article className="homepage-preview-card">
                 <p className="homepage-section-eyebrow">{HOMEPAGE_FULL_REPORT_PREVIEW.eyebrow}</p>
-                <h2 className="homepage-section-title section-title">{HOMEPAGE_FULL_REPORT_PREVIEW.title}</h2>
-                <p className="homepage-section-body section-copy">{HOMEPAGE_FULL_REPORT_PREVIEW.body}</p>
+                <h2 className="homepage-section-title">{HOMEPAGE_FULL_REPORT_PREVIEW.title}</h2>
+                <p className="homepage-prose-copy">{HOMEPAGE_FULL_REPORT_PREVIEW.body}</p>
                 <div className="homepage-module-groups">
                   {HOMEPAGE_FULL_REPORT_PREVIEW.moduleGroups.map((group) => (
                     <div key={group.label} className="homepage-module-group">
@@ -227,26 +229,28 @@ export default function HomePage() {
             </div>
           </section>
 
-          <section className="home-section homepage-reflection home-section--compact">
-            <div className="home-section-inner homepage-reflection-inner">
-              <p className="homepage-section-eyebrow">{HOMEPAGE_REFLECTION.eyebrow}</p>
-              <h2 className="homepage-section-title section-title">{HOMEPAGE_REFLECTION.title}</h2>
-              {HOMEPAGE_REFLECTION.body.map((paragraph) => (
-                <p key={paragraph} className="homepage-section-body section-copy">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-          </section>
-
-          <section className="home-section homepage-final-cta">
+          <section className="home-section home-section--closing">
             <div className="home-section-inner">
-              <h2 className="homepage-section-title section-title">{HOMEPAGE_FINAL_CTA.headline}</h2>
-              <p className="homepage-section-body section-copy">{HOMEPAGE_FINAL_CTA.body}</p>
-              <Link href="#entry-panel" className="gold-button">
-                {HOMEPAGE_FINAL_CTA.cta}
-              </Link>
-              <p className="privacy-note small">{HOMEPAGE_FINAL_CTA.trustNote}</p>
+              <div className="homepage-closing-panel">
+                <div className="homepage-closing-reflection">
+                  <p className="homepage-section-eyebrow">{HOMEPAGE_REFLECTION.eyebrow}</p>
+                  <p className="homepage-closing-quote">{HOMEPAGE_REFLECTION.title}</p>
+                  <p className="homepage-closing-copy">
+                    {HOMEPAGE_REFLECTION.body.join(" ")}
+                  </p>
+                </div>
+
+                <div className="homepage-closing-divider" aria-hidden="true" />
+
+                <div className="homepage-closing-action">
+                  <h2 className="homepage-closing-title">{HOMEPAGE_FINAL_CTA.headline}</h2>
+                  <p className="homepage-closing-lead">{HOMEPAGE_FINAL_CTA.body}</p>
+                  <Link href="#entry-panel" className="gold-button homepage-closing-button">
+                    {HOMEPAGE_FINAL_CTA.cta}
+                  </Link>
+                  <p className="homepage-closing-note">{HOMEPAGE_FINAL_CTA.trustNote}</p>
+                </div>
+              </div>
             </div>
           </section>
         </div>

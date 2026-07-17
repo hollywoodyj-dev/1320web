@@ -21,12 +21,13 @@ export function BlueprintSegmentSection({ block }: BlueprintSegmentSectionProps)
         <p className="pillar-code">{segment.code}</p>
         <div className="pillar-card-body">
           <h2>{segment.title.en.toUpperCase()}</h2>
-          <p className="pillar-headline">{segment.shortLabel.en}</p>
+          <p className="pillar-headline">{block.essence}</p>
           <p className="report-module-pillar-archetype">{block.headline}</p>
         </div>
       </header>
 
       <div className="blueprint-segment-content">
+        <p className="blueprint-segment-tagline">{block.tagline}</p>
         <p className="blueprint-segment-body">{block.body}</p>
         <h3 className="blueprint-segment-reveals-title">{block.revealsTitle}</h3>
         <ul className="blueprint-segment-list">
@@ -34,7 +35,10 @@ export function BlueprintSegmentSection({ block }: BlueprintSegmentSectionProps)
             <li key={item}>{item}</li>
           ))}
         </ul>
-        <Link href={GENERATE_CODE_CTA.href} className="gold-button blueprint-segment-cta">
+        <Link
+          href={GENERATE_CODE_CTA.href}
+          className="blueprint-secondary-link blueprint-segment-cta"
+        >
           {block.cta}
         </Link>
       </div>

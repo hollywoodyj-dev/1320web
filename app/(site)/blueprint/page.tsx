@@ -1,28 +1,22 @@
 import type { Metadata } from "next";
-import { SAMPLE_REPORT_HREF } from "@/lib/site-nav";
 import Link from "next/link";
 import { BlueprintViewTracker } from "@/components/blueprint/blueprint-view-tracker";
 import { BlueprintSegmentSection } from "@/components/blueprint/blueprint-segment-section";
 import { InnerPageHero } from "@/components/inner-page-hero";
 import { InnerPageLayout } from "@/components/inner-page-layout";
-import { SectionCard } from "@/components/section-card";
-import { SymbolPillarGrid } from "@/components/symbol-pillar-grid";
 import {
   BLUEPRINT_DISCLAIMER,
-  BLUEPRINT_FAQ,
+  BLUEPRINT_FAQ_PREVIEW,
+  BLUEPRINT_FINAL_CTA,
   BLUEPRINT_HERO,
   BLUEPRINT_META,
   BLUEPRINT_OVERVIEW,
-  BLUEPRINT_PATH,
   EXAMPLE_BLUEPRINT,
   FOUR_TOGETHER,
-  HOW_TO_READ,
   MEANING_1320,
   SEGMENT_BLOCKS,
   VS_IDENTITY,
-  WHY_MATTERS,
 } from "@/lib/blueprint-content";
-import { GENERATE_CODE_CTA } from "@/lib/site-nav";
 
 export const metadata: Metadata = {
   title: BLUEPRINT_META.title,
@@ -30,38 +24,65 @@ export const metadata: Metadata = {
 };
 
 export default function BlueprintPage() {
+  const heroTitle = BLUEPRINT_HERO.title.includes("\n")
+    ? BLUEPRINT_HERO.title.split("\n").map((line) => (
+        <span key={line} className="block">
+          {line}
+        </span>
+      ))
+    : BLUEPRINT_HERO.title;
+
   return (
-    <InnerPageLayout className="blueprint-page">
+    <InnerPageLayout className="blueprint-page blueprint-page--refined">
       <BlueprintViewTracker />
-      <InnerPageHero
-        eyebrow={BLUEPRINT_HERO.eyebrow}
-        title={BLUEPRINT_HERO.title}
-        lead={BLUEPRINT_HERO.body}
-      >
-        <Link href={GENERATE_CODE_CTA.href} className="gold-button">
-          {GENERATE_CODE_CTA.label}
+      <InnerPageHero eyebrow={BLUEPRINT_HERO.eyebrow} title={heroTitle} lead={BLUEPRINT_HERO.body}>
+        <Link href={BLUEPRINT_HERO.primaryHref} className="gold-button">
+          {BLUEPRINT_HERO.primaryCta}
         </Link>
-        <Link href={SAMPLE_REPORT_HREF} className="blueprint-secondary-link">
-          VIEW SAMPLE REPORT
+        <Link href={BLUEPRINT_HERO.secondaryHref} className="blueprint-secondary-link">
+          {BLUEPRINT_HERO.secondaryCta}
         </Link>
       </InnerPageHero>
 
-      <SectionCard title={BLUEPRINT_OVERVIEW.title}>
-        <p>{BLUEPRINT_OVERVIEW.intro}</p>
-        <ul className="blueprint-layer-grid mt-4">
-          {BLUEPRINT_OVERVIEW.layers.map((layer) => (
-            <li key={layer.code} className="blueprint-layer-item">
-              <span className="blueprint-layer-code">{layer.code}</span>
-              <span className="blueprint-layer-label">{layer.label}</span>
-              <p>{layer.text}</p>
-            </li>
-          ))}
-        </ul>
-      </SectionCard>
+      <section className="blueprint-section">
+        <div className="blueprint-block">
+          <h2 className="blueprint-title">{BLUEPRINT_OVERVIEW.title}</h2>
+          <p className="blueprint-copy">{BLUEPRINT_OVERVIEW.intro}</p>
+          <ul className="blueprint-foundation-grid">
+            {BLUEPRINT_OVERVIEW.layers.map((layer) => (
+              <li key={layer.code} className="blueprint-foundation-card">
+                <span className="blueprint-foundation-code">
+                  {layer.code} · {layer.label}
+                </span>
+                <p>{layer.text}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
-      <SectionCard title={MEANING_1320.title}>
-        <SymbolPillarGrid blocks={MEANING_1320.blocks} />
-      </SectionCard>
+      <section className="blueprint-section blueprint-section--compact">
+        <div className="blueprint-block">
+          <h2 className="blueprint-title">{MEANING_1320.title}</h2>
+          <div className="blueprint-copy">
+            {MEANING_1320.body.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+          <div className="blueprint-meaning-grid">
+            {MEANING_1320.blocks.map((block) => (
+              <article key={block.digit} className="blueprint-meaning-card">
+                <p className="blueprint-meaning-digit">{block.digit}</p>
+                <h3>
+                  {block.digit} · {block.name}
+                </h3>
+                <p className="blueprint-meaning-mystic">{block.mystic}</p>
+                <p>{block.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <div className="blueprint-segments-grid">
         {SEGMENT_BLOCKS.map((block) => (
@@ -69,78 +90,78 @@ export default function BlueprintPage() {
         ))}
       </div>
 
-      <SectionCard title={FOUR_TOGETHER.title}>
-        <ul className="blueprint-together-list">
-          {FOUR_TOGETHER.questions.map((item) => (
-            <li key={item.code}>
-              <strong>{item.code}</strong> — {item.q}
-            </li>
-          ))}
-        </ul>
-      </SectionCard>
-
-      <SectionCard title={EXAMPLE_BLUEPRINT.title} subtitle={EXAMPLE_BLUEPRINT.code}>
-        <p>
-          S3 raw value: <strong>{EXAMPLE_BLUEPRINT.s3Raw}</strong>
-        </p>
-        <p>{EXAMPLE_BLUEPRINT.note}</p>
-        <Link href={SAMPLE_REPORT_HREF} className="gold-button mt-4 inline-flex">
-          VIEW SAMPLE REPORT
-        </Link>
-      </SectionCard>
-
-      <SectionCard title={WHY_MATTERS.title}>
-        <p>{WHY_MATTERS.body}</p>
-      </SectionCard>
-
-      <SectionCard title={VS_IDENTITY.title}>
-        <p>{VS_IDENTITY.body}</p>
-      </SectionCard>
-
-      <SectionCard title={HOW_TO_READ.title}>
-        <ol className="blueprint-steps-list">
-          {HOW_TO_READ.steps.map((step, index) => (
-            <li key={step}>
-              <span className="blueprint-step-num">{String(index + 1).padStart(2, "0")}</span>
-              {step}
-            </li>
-          ))}
-        </ol>
-      </SectionCard>
-
-      <SectionCard title={BLUEPRINT_PATH.title}>
-        <div className="blueprint-path-grid">
-          {BLUEPRINT_PATH.steps.map((step) => (
-            <article key={step.number} className="blueprint-path-step">
-              <p className="blueprint-path-num">{step.number}</p>
-              <h3>{step.title}</h3>
-              <p>{step.text}</p>
-            </article>
-          ))}
+      <section className="blueprint-section blueprint-section--compact">
+        <div className="blueprint-block">
+          <h2 className="blueprint-title">{FOUR_TOGETHER.title}</h2>
+          <ul className="blueprint-together-list">
+            {FOUR_TOGETHER.questions.map((item) => (
+              <li key={item.code}>
+                <strong>{item.code} asks:</strong> {item.q}
+              </li>
+            ))}
+          </ul>
+          <p className="blueprint-copy blueprint-copy--emphasis">{FOUR_TOGETHER.closing}</p>
         </div>
-      </SectionCard>
-
-      <section className="inner-final-cta glass-card">
-        <h2 className="inner-page-title text-gold-gradient">Ready to see your blueprint?</h2>
-        <p>Enter your birth date to generate your personal four-part code.</p>
-        <Link href={GENERATE_CODE_CTA.href} className="gold-button">
-          {GENERATE_CODE_CTA.label}
-        </Link>
-        <Link href="/full-report" className="blueprint-secondary-link block mt-3">
-          EXPLORE FULL REPORT
-        </Link>
       </section>
 
-      <SectionCard title="Frequently Asked Questions">
-        <div className="blueprint-faq">
-          {BLUEPRINT_FAQ.map((item) => (
-            <details key={item.q} className="blueprint-faq-item">
-              <summary>{item.q}</summary>
-              <p>{item.a}</p>
-            </details>
-          ))}
+      <section className="blueprint-section blueprint-section--compact">
+        <div className="blueprint-block">
+          <h2 className="blueprint-title">{EXAMPLE_BLUEPRINT.title}</h2>
+          <p className="blueprint-copy">{EXAMPLE_BLUEPRINT.intro}</p>
+          <ul className="blueprint-example-codes">
+            {EXAMPLE_BLUEPRINT.codes.map((code) => (
+              <li key={code}>{code}</li>
+            ))}
+          </ul>
+          <p className="blueprint-copy">{EXAMPLE_BLUEPRINT.note}</p>
+          <Link href={EXAMPLE_BLUEPRINT.href} className="blueprint-secondary-link about-prose-link">
+            {EXAMPLE_BLUEPRINT.cta}
+          </Link>
         </div>
-      </SectionCard>
+      </section>
+
+      <section className="blueprint-section blueprint-section--compact">
+        <div className="blueprint-block">
+          <h2 className="blueprint-title">{VS_IDENTITY.title}</h2>
+          <div className="blueprint-copy">
+            {VS_IDENTITY.body.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="blueprint-section">
+        <div className="blueprint-block blueprint-block--cta">
+          <h2 className="blueprint-title">{BLUEPRINT_FINAL_CTA.title}</h2>
+          <p className="blueprint-copy">{BLUEPRINT_FINAL_CTA.body}</p>
+          <div className="blueprint-cta-actions">
+            <Link href={BLUEPRINT_FINAL_CTA.primaryHref} className="gold-button">
+              {BLUEPRINT_FINAL_CTA.primaryCta}
+            </Link>
+            <Link href={BLUEPRINT_FINAL_CTA.secondaryHref} className="blueprint-secondary-link">
+              {BLUEPRINT_FINAL_CTA.secondaryCta}
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="blueprint-section blueprint-section--compact">
+        <div className="blueprint-block">
+          <h2 className="blueprint-title">{BLUEPRINT_FAQ_PREVIEW.title}</h2>
+          <ul className="blueprint-faq-preview">
+            {BLUEPRINT_FAQ_PREVIEW.items.map((item) => (
+              <li key={item.q}>
+                <strong>{item.q}</strong>
+                <span>{item.a}</span>
+              </li>
+            ))}
+          </ul>
+          <Link href={BLUEPRINT_FAQ_PREVIEW.href} className="blueprint-secondary-link about-prose-link">
+            {BLUEPRINT_FAQ_PREVIEW.cta}
+          </Link>
+        </div>
+      </section>
 
       <p className="blueprint-disclaimer">{BLUEPRINT_DISCLAIMER}</p>
     </InnerPageLayout>

@@ -4,8 +4,8 @@ import { BirthDateForm } from "@/components/birthdate-form";
 import { InnerPageHero } from "@/components/inner-page-hero";
 import { InnerPageLayout } from "@/components/inner-page-layout";
 import { ReceivePillarGrid } from "@/components/receive-pillar-grid";
-import { SectionCard } from "@/components/section-card";
 import {
+  BIRTH_FORM,
   FINAL_CTA,
   WHAT_YOU_RECEIVE,
   WHY_BIRTH_DATE,
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function YourCodePage() {
   return (
-    <InnerPageLayout className="your-code-page">
+    <InnerPageLayout className="your-code-page your-code-page--refined">
       <InnerPageHero
         eyebrow={YOUR_CODE_HERO.eyebrow}
         title={YOUR_CODE_HERO.title}
@@ -33,47 +33,72 @@ export default function YourCodePage() {
           </>
         }
       >
-        <a href="#birth-date-form" className="blueprint-secondary-link">
+        <a href="#birth-date-form" className="gold-button">
           {YOUR_CODE_HERO.anchorLabel}
         </a>
       </InnerPageHero>
 
-      <SectionCard title="Generate Your Code" subtitle="Enter your birth date">
-        <div id="birth-date-form">
-          <BirthDateForm />
+      <section className="your-code-section" id="birth-date-form">
+        <div className="your-code-block your-code-block--form">
+          <h2 className="your-code-title">{BIRTH_FORM.title}</h2>
+          <p className="your-code-copy">{BIRTH_FORM.helper}</p>
+          <div className="your-code-form-shell">
+            <BirthDateForm />
+          </div>
         </div>
-      </SectionCard>
+      </section>
 
-      <SectionCard title={WHAT_YOU_RECEIVE.title}>
-        <ReceivePillarGrid items={WHAT_YOU_RECEIVE.items} />
-      </SectionCard>
-
-      <SectionCard title={WHY_BIRTH_DATE.title}>
-        <p>{WHY_BIRTH_DATE.body}</p>
-      </SectionCard>
-
-      <p className="blueprint-disclaimer">{YOUR_CODE_DISCLAIMER}</p>
-
-      <SectionCard title="Frequently Asked Questions">
-        <div className="blueprint-faq">
-          {YOUR_CODE_FAQ.map((item) => (
-            <details key={item.q} className="blueprint-faq-item">
-              <summary>{item.q}</summary>
-              <p>{item.a}</p>
-            </details>
-          ))}
+      <section className="your-code-section your-code-section--compact">
+        <div className="your-code-block">
+          <h2 className="your-code-title">{WHAT_YOU_RECEIVE.title}</h2>
+          <p className="your-code-copy">{WHAT_YOU_RECEIVE.intro}</p>
+          <ReceivePillarGrid items={WHAT_YOU_RECEIVE.items} />
         </div>
-      </SectionCard>
+      </section>
 
-      <section className="inner-final-cta glass-card">
-        <h2 className="inner-page-title text-gold-gradient">{FINAL_CTA.title}</h2>
-        <p>{FINAL_CTA.body}</p>
-        <a href="#birth-date-form" className="gold-button inline-flex">
-          {FINAL_CTA.button}
-        </a>
-        <Link href="/blueprint" className="blueprint-secondary-link block mt-3">
-          EXPLORE THE BLUEPRINT
-        </Link>
+      <section className="your-code-section your-code-section--compact">
+        <div className="your-code-block">
+          <h2 className="your-code-title">{WHY_BIRTH_DATE.title}</h2>
+          <div className="your-code-copy">
+            {WHY_BIRTH_DATE.body.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <p className="blueprint-disclaimer your-code-boundary">{YOUR_CODE_DISCLAIMER}</p>
+
+      <section className="your-code-section your-code-section--compact">
+        <div className="your-code-block">
+          <h2 className="your-code-title">FAQ</h2>
+          <ul className="your-code-faq-preview">
+            {YOUR_CODE_FAQ.map((item) => (
+              <li key={item.q}>
+                <strong>{item.q}</strong>
+                <span>{item.a}</span>
+              </li>
+            ))}
+          </ul>
+          <Link href="/faq" className="blueprint-secondary-link your-code-prose-link">
+            View Full FAQ
+          </Link>
+        </div>
+      </section>
+
+      <section className="your-code-section">
+        <div className="your-code-block your-code-block--cta">
+          <h2 className="your-code-title">{FINAL_CTA.title}</h2>
+          <p className="your-code-copy">{FINAL_CTA.body}</p>
+          <div className="your-code-cta-actions">
+            <a href="#birth-date-form" className="gold-button">
+              {FINAL_CTA.button}
+            </a>
+            <Link href={FINAL_CTA.secondaryHref} className="blueprint-secondary-link">
+              {FINAL_CTA.secondaryCta}
+            </Link>
+          </div>
+        </div>
       </section>
     </InnerPageLayout>
   );

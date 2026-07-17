@@ -1,93 +1,94 @@
-/** English copy for `/your-code` — Living Blueprint entry (Addendum v1.0). */
-
-import { FORM_CONSENT } from "@/lib/form-consent";
+/** Your Code page copy — Refinement Spec v1.0 (Wisewave). */
 
 export const YOUR_CODE_META = {
   title: "Your Code | Begin Your Soul Blueprint",
   description:
-    "Enter your birth year, month, and day to generate your first-layer Soul Blueprint — a symbolic mirror for awareness, not prediction.",
+    "Enter your birth date to generate your first-layer Soul Blueprint — a symbolic mirror for awareness, not prediction. Birth time and location are not required.",
 };
 
 export const YOUR_CODE_HERO = {
-  eyebrow: "BEGIN YOUR SOUL BLUEPRINT",
+  eyebrow: "Begin Your Soul Blueprint",
   title: "Start With Your Birth Date",
-  body: "1320 uses your birth year, month, and day to generate your first-layer Soul Blueprint — a symbolic mirror of your origin, expression, relational patterns, and return path.",
-  birthNote: "Birth time and birth location are not required for the current 1320 calculation engine.",
-  anchorLabel: "ENTER MY BIRTH DATE",
+  body: "Your birth date opens the first layer of your Soul Blueprint — a symbolic mirror for origin, expression, relationship, and return.",
+  birthNote: "Birth time and location are not required for the current 1320 calculation.",
+  anchorLabel: "Enter My Birth Date",
 };
 
 export const BIRTH_FORM = {
   title: "Generate Your Code",
+  helper: "Enter your birth date to reveal your first-layer Soul Blueprint.",
   labels: { year: "Year", month: "Month", day: "Day" },
-  submit: "GENERATE MY CODE",
-  privacy: `Your birth date is used only to calculate your blueprint. We do not sell your data. ${FORM_CONSENT.calculator}`,
+  submit: "Generate My Code",
+  privacy: "Your birth date is used only to calculate your blueprint. We do not sell your data.",
 };
 
 export const WHAT_YOU_RECEIVE = {
   title: "What You Will Receive",
+  intro: "Your free result reveals the four foundation mirrors of your Soul Blueprint.",
   items: [
     {
       code: "S1",
       title: "Soul Origin",
-      text: "Your original essence and inner source pattern — gifts, shadows, and soul direction.",
+      text: "Your original essence beneath adaptation.",
     },
     {
       code: "S3",
       title: "Soul Vibration",
-      text: "How your natural frequency moves, expresses, and becomes visible in life.",
+      text: "How your natural frequency expresses in life.",
     },
     {
       code: "S2",
       title: "Soul Mirror",
-      text: "What relationships mirror back to you — recurring emotional and relational lessons.",
+      text: "What relationships reflect back to you.",
     },
     {
       code: "S0",
       title: "Void Gate",
-      text: "How you meet uncertainty, transition, surrender, and the unknown.",
+      text: "How you meet uncertainty and return to self.",
     },
   ],
 };
 
 export const WHY_BIRTH_DATE = {
-  title: "Why Your Birth Date",
-  body: "1320 reads the structural pattern of your birth date — year, month, and day — not to predict fate, but to mirror patterns you can integrate with conscious choice. Birth time and birth location are not used in the current calculation engine.",
+  title: "Why Your Birth Date?",
+  body: [
+    "1320 reads your birth date as a symbolic structure — not to predict fate, but to reflect patterns you can recognize and integrate with conscious choice.",
+    "Birth time and birth location are not used in the current calculation.",
+  ],
 };
 
 export const YOUR_CODE_DISCLAIMER =
-  "1320 is a reflective intelligence platform for self-awareness. It is not fortune-telling, medical advice, or a substitute for professional support.";
+  "1320 is a reflective intelligence platform for self-awareness. It is not fortune-telling, diagnosis, or professional advice.";
 
 export const YOUR_CODE_FAQ = [
   {
     q: "Do I need an exact time of birth?",
-    a: "No. The current 1320 calculation engine uses birth year, month, and day only. Birth time and birth location are not required.",
+    a: "No. The current 1320 calculation uses only your birth year, month, and day.",
   },
   {
     q: "Is my data stored?",
-    a: "Your code is calculated in your session. Account sign-in is optional until you purchase or create a profile.",
+    a: "Your birth date is used to generate your result. Please refer to the Privacy Policy for full details.",
   },
   {
     q: "How long does it take?",
-    a: "Calculation is instant. You will pass through a brief activation screen before your result.",
+    a: "Your first result is generated immediately after you submit your birth date.",
   },
   {
-    q: "Is this a horoscope or astrology tool?",
-    a: "No. 1320 is a standalone reflective intelligence system — not astrology, tarot, or Human Design.",
-  },
-  {
-    q: "What if I enter the wrong date?",
-    a: "Return here and generate again with the correct date. Your code updates with the new input.",
+    q: "Is this astrology or a horoscope?",
+    a: "No. 1320 is not astrology, tarot, Human Design, numerology, or fortune-telling. It is a symbolic reflection system.",
   },
   {
     q: "What happens after my free result?",
-    a: "You may explore the sample report, unlock the Full Report (S0–S9), or book a Personal Integration Session for live application.",
+    a: "You can explore your foundation code, view a sample report, or unlock the complete S0–S9 Full Report.",
   },
 ];
 
 export const FINAL_CTA = {
   title: "Your Blueprint Is Waiting",
-  body: "Enter your birth date to open your first-layer Soul Blueprint mirror.",
-  button: "GENERATE MY CODE",
+  body: "Enter your birth date to receive your first Soul Blueprint mirror.",
+  button: "Generate My Code",
+  secondaryCta: "Explore the Blueprint",
+  secondaryHref: "/blueprint",
 };
 
 export const VALIDATION = {

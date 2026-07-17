@@ -1,0 +1,151 @@
+/* Your Code page — Refinement Spec v1.0 */
+
+.your-code-page--refined .your-code-section {
+  padding-block: clamp(16px, 2.2vw, 22px);
+}
+
+.your-code-page--refined .your-code-section--compact {
+  padding-block: clamp(12px, 1.8vw, 18px);
+}
+
+.your-code-page--refined .your-code-block {
+  width: 100%;
+  margin-inline: auto;
+  padding: clamp(28px, 4vw, 36px) clamp(22px, 3.5vw, 32px);
+  border-radius: 16px;
+  border: 1px solid rgba(216, 177, 92, 0.16);
+  background: rgba(8, 14, 28, 0.42);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.your-code-page--refined .your-code-block--form {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(239, 195, 111, 0.07), transparent 55%),
+    rgba(8, 14, 28, 0.42);
+}
+
+.your-code-page--refined .your-code-block--cta {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(239, 195, 111, 0.08), transparent 58%),
+    rgba(8, 14, 28, 0.42);
+}
+
+.your-code-page--refined .your-code-title {
+  margin: 0 0 14px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.65rem, 2.8vw, 2.35rem);
+  line-height: 1.12;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: #f8f4ea;
+}
+
+.your-code-page--refined .your-code-copy {
+  margin: 0 auto 20px;
+  max-width: 700px;
+  font-size: 17px;
+  line-height: 1.65;
+  color: rgba(245, 234, 214, 0.78);
+}
+
+.your-code-page--refined .your-code-copy p + p {
+  margin-top: 12px;
+}
+
+.your-code-page--refined .your-code-form-shell {
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.your-code-page--refined .your-code-form-shell .birthdate-form {
+  gap: 18px;
+}
+
+.your-code-page--refined .your-code-form-shell .birthdate-field-grid {
+  gap: 14px;
+}
+
+.your-code-page--refined .your-code-form-shell input {
+  min-height: 52px;
+  font-size: 16px;
+}
+
+.your-code-page--refined .your-code-form-shell .gold-button {
+  min-height: 52px;
+  width: 100%;
+  font-weight: 700;
+}
+
+.your-code-page--refined .your-code-boundary {
+  margin: 8px auto;
+  max-width: 720px;
+  text-align: center;
+}
+
+.your-code-page--refined .your-code-faq-preview {
+  margin: 0 auto 18px;
+  padding: 0;
+  list-style: none;
+  max-width: 640px;
+  text-align: left;
+}
+
+.your-code-page--refined .your-code-faq-preview li {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(216, 177, 92, 0.12);
+}
+
+.your-code-page--refined .your-code-faq-preview li:last-child {
+  border-bottom: none;
+}
+
+.your-code-page--refined .your-code-faq-preview strong {
+  display: block;
+  margin-bottom: 6px;
+  color: rgba(248, 244, 234, 0.94);
+}
+
+.your-code-page--refined .your-code-faq-preview span {
+  display: block;
+  color: rgba(240, 236, 227, 0.78);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.your-code-page--refined .your-code-prose-link {
+  display: inline-block;
+  margin-top: 4px;
+}
+
+.your-code-page--refined .your-code-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.your-code-page--refined .inner-receive-pillar-grid {
+  margin-top: 8px;
+}
+
+@media (max-width: 640px) {
+  .your-code-page--refined .your-code-copy {
+    font-size: 16.5px;
+    line-height: 1.65;
+  }
+
+  .your-code-page--refined .your-code-form-shell .birthdate-field-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .your-code-page--refined .your-code-form-shell input,
+  .your-code-page--refined .your-code-form-shell .gold-button {
+    width: 100%;
+  }
+}

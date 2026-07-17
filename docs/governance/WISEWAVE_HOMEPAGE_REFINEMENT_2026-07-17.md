@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-17  
 **Spec:** `docs/specs/1320_HOMEPAGE_REFINEMENT_SPEC_v1.md`  
-**Status:** Implemented — pending Lumen QA  
+**Status:** Wisewave visual acceptance — **Accepted** (2026-07-17)  
 **Context:** Post Step 5 stable maintenance gate — separately governed scope (UI/copy/density)
 
 ---
@@ -25,5 +25,8 @@
 - Simplified pillar cards; compressed boundary + full-report preview
 - Removed: curiosity block, stats band, secondary links nav, mid-CTA, about preview card
 - Birth date entry: quieter shell; privacy note moved off homepage form
+- Unified block width to page-frame; even section gaps
 
-**Next:** Lumen QA against spec §7 watchpoints — **PASS on production (2026-07-17)**
+**Lumen QA:** PASS on production (390px + 1280px)  
+**Artifact:** `qa-artifacts/LUMEN_QA_HOMEPAGE_REFINEMENT_v1_2026-07-17.md`  
+**Wisewave:** Page 01 · Home — **Accepted** (visual acceptance confirmed)

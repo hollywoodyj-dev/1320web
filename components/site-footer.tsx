@@ -65,7 +65,7 @@ export function SiteFooter({ leadsEnabled }: SiteFooterProps) {
       <FooterSubscribeSlot variant="inner" enabled={leadsEnabled} />
 
       <p className="footer-mantra inner-footer-mantra">
-        YOUR CODE IS A MIRROR — NOT A SENTENCE.
+        YOUR BLUEPRINT IS A MIRROR — NOT A FIXED IDENTITY.
       </p>
     </footer>
   );

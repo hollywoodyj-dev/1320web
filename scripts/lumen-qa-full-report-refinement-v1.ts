@@ -80,9 +80,11 @@ async function main() {
         .filter((code) => /^S[0-9]$/.test(code));
       const faqCount = document.querySelectorAll(".blueprint-faq-item").length;
       const bodyFont = parseFloat(getComputedStyle(document.body).fontSize);
-      const advancedDup = (document.body.textContent ?? "").match(
-        /Advanced Integration Layers/gi,
-      )?.length;
+      const advancedGroupTitles = Array.from(
+        document.querySelectorAll(".full-report-group-title"),
+      ).filter((el) =>
+        (el.textContent ?? "").toLowerCase().includes("advanced integration layers"),
+      ).length;
       return {
         text,
         heroGold,
@@ -90,7 +92,7 @@ async function main() {
         foundation,
         faqCount,
         bodyFont,
-        advancedDup: advancedDup ?? 0,
+        advancedGroupTitles,
         hasLivePath: Boolean(document.querySelector(".full-report-live-path")),
         liveIsGold: Boolean(
           document.querySelector(".full-report-live-path .gold-button"),
@@ -121,7 +123,7 @@ async function main() {
       `hero booking not gold: ${!mobile.heroBookingGold ? "yes" : "NO"}`,
       `foundation order: ${mobile.foundation.slice(0, 4).join(" → ")}`,
       `advanced order: ${mobile.foundation.slice(4, 10).join(" → ")}`,
-      `advanced section not duplicated: ${mobile.advancedDup <= 1 ? "yes" : "NO (" + mobile.advancedDup + ")"}`,
+      `advanced group title count: ${mobile.advancedGroupTitles}`,
       `live path secondary (no gold): ${mobile.hasLivePath && !mobile.liveIsGold ? "yes" : "NO"}`,
       `FAQ count: ${mobile.faqCount}`,
       `body font: ${mobile.bodyFont}px`,
@@ -135,7 +137,7 @@ async function main() {
       mobile.heroGold.length === 1 &&
       foundationOk &&
       advancedOk &&
-      mobile.advancedDup <= 1 &&
+      mobile.advancedGroupTitles === 1 &&
       mobile.hasLivePath &&
       !mobile.liveIsGold &&
       mobile.faqCount <= 5 &&

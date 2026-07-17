@@ -37,12 +37,18 @@ export default async function MyReportPage({ params }: PageProps) {
     }
 
     if (access.reason === "unauthenticated") {
+      const loginNext = `/my-report/${reportId}`;
       return (
-        <SectionCard title="Magic Link Required">
-          <p>Open the secure link from your purchase email to view this Full Report.</p>
-          <Link href="/checkout" className="gold-button mt-4 inline-flex">
-            REQUEST ACCESS LINK
-          </Link>
+        <SectionCard title="Sign In Required">
+          <p>Sign in to view your Full Report. Use your account password or the secure link from your purchase email.</p>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <Link href={`/login?next=${encodeURIComponent(loginNext)}`} className="gold-button inline-flex">
+              SIGN IN
+            </Link>
+            <Link href="/checkout" className="blueprint-secondary-link inline-flex items-center">
+              Request access link
+            </Link>
+          </div>
         </SectionCard>
       );
     }

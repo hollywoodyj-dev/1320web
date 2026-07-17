@@ -1,7 +1,7 @@
 # Wisewave — Step 5 Kickoff (Commercial Report Output Layer)
 
 **Document type:** Wisewave → Nova / Lumen handoff  
-**Status:** Step 5A complete — ready for Lumen Step 5B  
+**Status:** Step 5A + 5B accepted — **E2E closure pending entitled mini-QA** (2026-07-17)  
 **Date opened:** 2026-07-16  
 
 ---
@@ -208,8 +208,74 @@ Wisewave is ready to kick off **Step 5A** — final `commercial-v3-final` databa
 - [x] Content index updated
 - [x] Lumen Step 5B handoff prepared
 - [x] Validation script: `npm run package:commercial-v3-final`
-- [ ] Deploy to production (pending push)
-- [ ] Lumen Step 5B QA (pending)
+- [x] Deploy to production (`9c44e1a`)
+- [x] Lumen Step 5B QA — **PASS WITH NOTES**
+
+---
+
+## Lumen Step 5B QA (2026-07-16)
+
+**Artifact:** `qa-artifacts/LUMEN_QA_COMMERCIAL_OUTPUT_LAYER_STEP5_2026-07-16.md`  
+**Verdict:** **PASS WITH NOTES**  
+**Commit checked:** `9c44e1a`
+
+### Passed
+
+| Area | Result |
+|------|--------|
+| Step 5A package | 258 entries, module counts match |
+| Local gates | package, commercial-overlay, v2-get-content, full-report sample, report-system, report-pdf, tsc |
+| Web sample | `/full-report-v2` — 10 dates |
+| Mobile sample | `/mobile-report-v2` — 10 dates, 390px overflow check |
+| Print HTML | `/sample-report/print` (full + sample) |
+| Sample PDF API | `/api/report/sample/pdf` (full + sample) |
+| Governance | No template/source trigger phrases on checked surfaces |
+| Visual density probe | 390px production spot-check PASS |
+
+### Non-blocking note (entitled surfaces)
+
+Not verified this cycle — requires authenticated entitled report session:
+
+- `/my-report/[id]`
+- `/report/[id]/print`
+- Account download button
+
+**Recommendation:** Wisewave may accept Step 5 closure on sample/unified public surfaces; entitled account path can be spot-checked separately with a live entitled account before calling Step 5 fully closed end-to-end.
+
+---
+
+## Wisewave Step 5 closure review (2026-07-17)
+
+**From:** Wisewave  
+**Subject:** Re: Step 5 Lumen QA — PASS WITH NOTES — Step 5 Closure Review
+
+| Track | Wisewave verdict |
+|-------|------------------|
+| Step 5A | **PASS — Accepted** |
+| Step 5B public/sample | **PASS WITH NOTES — Accepted** |
+| Full E2E closure | **Pending** entitled-account mini-QA |
+
+Wisewave does **not** treat missing entitled session as blocker for 5A / public 5B acceptance.
+
+**Before full E2E closure — required mini-QA (8 checks):**
+
+1. `/my-report/[id]`
+2. `/report/[id]/print`
+3. Account download button
+4. Mobile phone route from `/my-report/[id]`
+5. Same commercial copy + segment order as sample/public
+6. No symbolic/source-layer leak
+7. PDF/download from account works
+8. Entitlement gating does not affect renderer content
+
+**Handoff:** `qa-artifacts/LUMEN_QA_HANDOFF_ENTITLED_ACCOUNT_STEP5_E2E_2026-07-17.md`  
+**Script:** `scripts/lumen-qa-entitled-step5-prod.ts` (requires `STEP5_SESSION_COOKIE` + `STEP5_REPORT_ID`)
+
+**On mini-QA pass, Wisewave will mark:**
+
+- Commercial Report Output Layer v3 Final — Fully Closed
+- Unified Report delivery path — End-to-End Accepted
+- Project status — Stable maintenance gate achieved
 
 ---
 
@@ -219,12 +285,14 @@ Wisewave is ready to kick off **Step 5A** — final `commercial-v3-final` databa
 - [x] Bump `_manifest.json` and overlay path
 - [x] Verify renderer precedence unchanged
 - [x] Support Lumen 10-date QA matrix (handoff doc)
-- [ ] Step 5B regression after Lumen QA
+- [x] Lumen Step 5B QA artifact received
+- [ ] Optional: entitled-account production spot-check (pending credentials/report ID)
 
 ---
 
 ## Related artifacts
 
+- `qa-artifacts/LUMEN_QA_COMMERCIAL_OUTPUT_LAYER_STEP5_2026-07-16.md`
 - `qa-artifacts/LUMEN_QA_COMMERCIAL_OUTPUT_LAYER_STEP4_2026-07-14.md`
 - `docs/specs/1320-v2-content/1320_Content_Database_Index_v2.md`
 - `docs/specs/1320_UNIFIED_REPORT_RENDERER_SPEC_v1.md`

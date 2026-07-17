@@ -10,6 +10,7 @@
   --density-body-size: 17px;
   --density-body-lh: 1.65;
   --homepage-content-width: min(1240px, calc(100% - 32px));
+  --homepage-section-gap: clamp(16px, 2.2vw, 22px);
 }
 
 body {
@@ -193,25 +194,25 @@ h3 {
   line-height: 1.55;
 }
 
-/* Homepage section rhythm — Refinement Spec v1.0 */
-.page-shell .home-section {
-  padding-block: clamp(44px, 5.5vw, 80px);
-}
-
-.page-shell .home-section--prose {
-  padding-block: clamp(36px, 4.5vw, 64px);
-}
-
-.page-shell .home-section--compact {
-  padding-block: clamp(40px, 5vw, 72px);
-}
-
-.page-shell .home-section--closing {
-  padding-block: clamp(56px, 7vw, 96px);
-}
-
-.page-shell .home-section--hero {
+/* Homepage section rhythm — even gaps between blocks */
+.page-shell #main-content > .home-section {
   padding-block: 0;
+  margin-top: var(--homepage-section-gap);
+}
+
+/* Keep topbar→hero spacing from globals; no extra gap under hero */
+.page-shell #main-content > .home-section--hero {
+  margin-top: 22px;
+  margin-bottom: 0;
+}
+
+.page-shell #main-content > .home-section.entry-panel,
+.page-shell #main-content > .entry-panel--refined {
+  margin-top: 0;
+}
+
+.page-shell #main-content > .home-section--closing {
+  padding-bottom: clamp(28px, 4vw, 40px);
 }
 
 .page-shell .home-section-inner,
@@ -391,15 +392,15 @@ h3 {
     font-size: 32px;
   }
 
-  .page-shell .home-section {
-    padding-block: 56px;
-  }
-
-  .page-shell .home-section--prose {
-    padding-block: 44px;
-  }
-
   .page-shell .homepage-block .steps-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .page-shell #main-content > .home-section {
+    margin-top: 14px;
+  }
+
+  .page-shell #main-content > .home-section.entry-panel {
+    margin-top: 0;
   }
 }

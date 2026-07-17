@@ -77,9 +77,9 @@ async function main() {
     const forbidden = FORBIDDEN.filter((p) => pageText.includes(p));
     notes.push(`forbidden found: ${forbidden.join(", ") || "none"}`);
 
-    const mysticDominant =
-      pageText.includes("trinity") || pageText.includes("duality") || pageText.includes("emptiness");
-    notes.push(`trinity/duality/emptiness dominant risk: ${mysticDominant ? "PRESENT" : "none"}`);
+    // Trinity/Duality as primary labels only — "emptiness" may appear in S0 body copy per spec
+    const mysticDominant = pageText.includes("trinity") || pageText.includes("duality");
+    notes.push(`trinity/duality as labels: ${mysticDominant ? "PRESENT" : "none"}`);
 
     const foundationOrder = await page.evaluate(() =>
       Array.from(document.querySelectorAll(".blueprint-foundation-code")).map(

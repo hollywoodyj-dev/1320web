@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-18  
 **Spec:** `docs/specs/1320_GENERATING_PAGE_REFINEMENT_SPEC_v1.md`  
-**Status:** Implemented — pending Lumen QA  
+**Status:** Lumen QA PASS — ready for Wisewave visual acceptance  
 
 ## Backup
 
@@ -19,4 +19,10 @@ Pre-refinement snapshot: `backups/page-05-generating-pre-refinement-2026-07-18/`
 - Mobile: hide mandala node labels; sticky CTA area
 - CSS: `styles/generating-density-v1.css`
 
-**Next:** Lumen light QA on production → Wisewave visual acceptance
+## Lumen QA
+
+- **Overall:** PASS (loading / complete / error / desktop)
+- Artifact: `qa-artifacts/LUMEN_QA_GENERATING_REFINEMENT_v1_2026-07-17.md`
+- Commits: `b5cd504`, `81bf74a`
+
+**Next:** Wisewave visual acceptance on production

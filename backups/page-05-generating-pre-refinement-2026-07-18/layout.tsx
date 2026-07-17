@@ -3,8 +3,7 @@ import { ImmersiveShell } from "@/components/immersive-shell";
 
 export const metadata: Metadata = {
   title: "Opening Your 1320 Soul Blueprint",
-  description:
-    "Your Soul Blueprint is opening — mapping Origin, Vibration, Mirror, and Void as a symbolic mirror for awareness.",
+  description: "Your four-part Soul Code is forming through Origin Frequency, Vibration Tier, Mirror Path, and Void Gate.",
 };
 
 export default function GeneratingLayout({ children }: { children: React.ReactNode }) {

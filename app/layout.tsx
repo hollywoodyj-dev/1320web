@@ -7,6 +7,7 @@ import "@/styles/site-density-v1.css";
 import "@/styles/about-density-v1.css";
 import "@/styles/blueprint-density-v1.css";
 import "@/styles/your-code-density-v1.css";
+import "@/styles/generating-density-v1.css";
 import "@/styles/full-report-v2/report-global.css";
 import "@/styles/full-report-v2/report-theme-dark.css";
 import "@/styles/full-report-v2/report-components.css";

@@ -1,0 +1,175 @@
+/* Generating page — Refinement Spec v1.0 (quiet ceremonial loading) */
+
+.generating-chamber--refined .generating-body {
+  max-width: 32rem;
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: rgba(248, 244, 234, 0.78);
+}
+
+.generating-chamber--refined .generating-eyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: none;
+}
+
+/* Inactive nodes quieter; past softer than active */
+.generating-chamber--refined .generating-node {
+  opacity: 0.32;
+  filter: saturate(0.7);
+}
+
+.generating-chamber--refined .generating-node.is-past {
+  opacity: 0.72;
+  filter: saturate(0.9);
+}
+
+.generating-chamber--refined .generating-node.is-active {
+  opacity: 1;
+  filter: saturate(1);
+}
+
+.generating-chamber--refined .generating-node-title {
+  font-size: 0.86rem;
+  letter-spacing: 0.08em;
+}
+
+.generating-chamber--refined .generating-node-desc {
+  font-size: 0.82rem;
+  color: rgba(248, 244, 234, 0.62);
+}
+
+/* Progress cards — shorter labels + status */
+.generating-chamber--refined .generating-step-rail li {
+  opacity: 0.38;
+  text-align: center;
+}
+
+.generating-chamber--refined .generating-step-rail li.is-active,
+.generating-chamber--refined .generating-step-rail li.is-past {
+  opacity: 1;
+}
+
+.generating-chamber--refined .generating-rail-label {
+  display: block;
+  margin-bottom: 4px;
+  color: #f8f4ea;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.generating-chamber--refined .generating-rail-status {
+  display: block;
+  color: rgba(248, 244, 234, 0.62);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+}
+
+.generating-chamber--refined .generating-step-rail li.is-active .generating-rail-status {
+  color: #efc36f;
+}
+
+/* Boundary — two calm lines */
+.generating-chamber--refined .generating-boundary {
+  text-align: center;
+  justify-content: center;
+}
+
+.generating-chamber--refined .generating-boundary-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  color: rgba(248, 244, 234, 0.78);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.generating-chamber--refined .generating-boundary-line {
+  display: block;
+}
+
+.generating-chamber--refined .generating-boundary-logo {
+  display: none;
+}
+
+/* CTA disabled while forming */
+.generating-chamber--refined .generating-cta.is-disabled,
+.generating-chamber--refined .generating-cta:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+.generating-chamber--refined .generating-encryption {
+  max-width: 28rem;
+  margin-inline: auto;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  line-height: 1.45;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.generating-chamber--refined .generating-privacy-link {
+  color: rgba(239, 195, 111, 0.9);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.generating-chamber--refined .generating-privacy-link:hover {
+  color: #efc36f;
+}
+
+.generating-page--error {
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .generating-chamber--refined .generating-node-title,
+  .generating-chamber--refined .generating-node-desc {
+    display: none;
+  }
+
+  .generating-chamber--refined .generating-portal-wrap {
+    margin-bottom: 28px;
+  }
+
+  .generating-chamber--refined .generating-body {
+    font-size: 16px;
+  }
+
+  .generating-chamber--refined .generating-boundary-copy {
+    font-size: 0.88rem;
+  }
+
+  .generating-chamber--refined .generating-step-rail {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .generating-chamber--refined .generating-actions {
+    position: sticky;
+    bottom: 0;
+    padding-top: 8px;
+    padding-bottom: max(8px, env(safe-area-inset-bottom, 0px));
+    background: linear-gradient(180deg, transparent, rgba(2, 2, 13, 0.88) 28%);
+  }
+
+  .generating-chamber--refined .generating-cta {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .generating-chamber--refined .generating-chamber-header {
+    margin-bottom: 16px;
+  }
+
+  .generating-chamber--refined .generating-status-sub {
+    font-size: 0.9rem;
+  }
+}

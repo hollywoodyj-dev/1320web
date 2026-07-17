@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { GeneratingChamber } from "@/components/generating/generating-chamber";
 import {
-  GENERATING_COPY,
   GENERATING_REDIRECT_DELAY_MS,
   GENERATING_STEP_MS,
   GENERATING_STEPS,
@@ -29,13 +28,14 @@ export default async function GeneratingPage({ searchParams }: GeneratingPagePro
 
   if (!isValidBirthDate(year, month, day)) {
     return (
-      <div className="generating-page generating-page--error glass-card">
+      <div className="generating-page glass-card">
         <h1 className="generating-title">
-          <span>{GENERATING_COPY.errorInvalidTitle}</span>
+          <span>Unable to open your</span>
+          <span>1320 Soul Blueprint</span>
         </h1>
-        <p className="generating-body">{GENERATING_COPY.errorInvalidBody}</p>
+        <p className="generating-body">Please enter a valid birth date to open your blueprint.</p>
         <Link href="/your-code" className="gold-button generating-cta mt-6">
-          {GENERATING_COPY.ctaError}
+          BACK TO YOUR CODE
         </Link>
       </div>
     );

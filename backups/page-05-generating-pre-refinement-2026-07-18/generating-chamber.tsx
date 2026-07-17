@@ -12,9 +12,6 @@ import {
   GENERATING_REDIRECT_DELAY_MS,
   GENERATING_STEP_MS,
   GENERATING_STEPS,
-  getStepStatus,
-  getStepStatusLabel,
-  type BlueprintGenerationState,
 } from "@/lib/generating-content";
 import { saveSession1320, toSessionPayload } from "@/lib/session1320";
 import { SEGMENTS, getSegment } from "@/lib/segments";
@@ -46,40 +43,29 @@ export function GeneratingChamber({
 }: GeneratingChamberProps) {
   const [activeStep, setActiveStep] = useState(1);
   const [complete, setComplete] = useState(false);
-  const [generationState, setGenerationState] = useState<BlueprintGenerationState>("loading");
   const redirectFormRef = useRef<HTMLFormElement>(null);
   const redirectedRef = useRef(false);
 
   const current = GENERATING_STEPS[activeStep - 1] ?? GENERATING_STEPS[0];
-  const progressPct = complete || generationState === "complete" ? 100 : (activeStep / GENERATING_STEPS.length) * 100;
-  const isReady = generationState === "complete";
-  const isError = generationState === "error";
+  const progressPct = complete ? 100 : (activeStep / GENERATING_STEPS.length) * 100;
 
   useLayoutEffect(() => {
-    try {
-      saveBirthCookie(year, month, day);
-      void fetch("/api/birth-cookie", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ year, month, day }),
-        credentials: "same-origin",
-      }).catch(() => {
-        // Client cookie + form fields still back up result page.
-      });
-      const code = calculate1320Code(year, month, day);
-      saveSession1320(toSessionPayload(code));
-      trackEvent("generating_view");
-    } catch (err) {
-      devLog("generating calculation failed", { err });
-      setGenerationState("error");
-      trackEvent("generating_error");
-    }
+    saveBirthCookie(year, month, day);
+    void fetch("/api/birth-cookie", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ year, month, day }),
+      credentials: "same-origin",
+    }).catch(() => {
+      // Client cookie + form fields still back up result page.
+    });
+    const code = calculate1320Code(year, month, day);
+    saveSession1320(toSessionPayload(code));
+    trackEvent("generating_view");
   }, [year, month, day]);
 
   /** Step animation only — redirect via server meta refresh + native form GET (no window.location / router). */
   useEffect(() => {
-    if (isError) return;
-
     const started = Date.now();
     devLog("generating sequence start", { totalMs: TOTAL_MS, resultHref, redirectSeconds });
 
@@ -101,7 +87,6 @@ export function GeneratingChamber({
 
       if (elapsed >= GENERATING_STEPS.length * GENERATING_STEP_MS) {
         setComplete(true);
-        setGenerationState("complete");
       }
 
       if (elapsed >= TOTAL_MS) {
@@ -118,12 +103,10 @@ export function GeneratingChamber({
       window.clearInterval(interval);
       window.clearTimeout(formTimer);
     };
-  }, [resultHref, redirectSeconds, isError]);
+  }, [resultHref, redirectSeconds]);
 
   return (
-    <div
-      className={`generating-chamber generating-chamber--refined${isReady ? " is-complete" : ""}${isError ? " is-error" : ""}`}
-    >
+    <div className="generating-chamber">
       <form
         ref={redirectFormRef}
         action="/result"
@@ -197,9 +180,8 @@ export function GeneratingChamber({
 
           {SEGMENTS.map((segment) => {
             const step = GENERATING_STEPS.find((s) => s.segmentId === segment.id);
-            const status = getStepStatus(step?.index ?? 0, activeStep, isReady);
-            const isActive = !isError && status === "active";
-            const isPast = !isError && status === "complete";
+            const isActive = current.segmentId === segment.id;
+            const isPast = activeStep > (step?.index ?? 0);
             const positionClass = `generating-node-${segment.id}`;
             const isTopNode = segment.id === "s1" || segment.id === "s3";
 
@@ -247,54 +229,35 @@ export function GeneratingChamber({
       </div>
 
       <section className="generating-status" aria-live="polite">
-        {isError ? (
-          <>
-            <h2 className="generating-status-title">{GENERATING_COPY.errorTitle}</h2>
-            <p className="generating-status-sub">{GENERATING_COPY.errorBody}</p>
-          </>
-        ) : (
-          <>
-            {!isReady ? (
-              <p className="generating-status-label">{GENERATING_COPY.currentStepLabel}</p>
-            ) : null}
-            <h2 className="generating-status-title">
-              {isReady
-                ? GENERATING_COPY.completeTitle
-                : `${String(activeStep).padStart(2, "0")} · ${current.activeLabel}`}
-            </h2>
-            <p className="generating-status-sub">
-              {isReady ? GENERATING_COPY.completeBody : current.subcopy}
-            </p>
-          </>
-        )}
+        <p className="generating-status-label">{GENERATING_COPY.currentStepLabel}</p>
+        <h2 className="generating-status-title">
+          {complete ? GENERATING_COPY.completeTitle : `${String(activeStep).padStart(2, "0")} ${current.title}`}
+        </h2>
+        <p className="generating-status-sub">
+          {complete ? GENERATING_COPY.completeBody : current.subcopy}
+        </p>
 
-        {!isError ? (
-          <div className="generating-progress-track" aria-hidden>
-            <span className="generating-progress-fill" style={{ width: `${progressPct}%` }} />
-          </div>
-        ) : null}
+        <div className="generating-progress-track" aria-hidden>
+          <span className="generating-progress-fill" style={{ width: `${progressPct}%` }} />
+        </div>
 
-        {!isError ? (
-          <ol className="generating-step-rail">
-            {GENERATING_STEPS.map((step) => {
-              const segment = getSegment(step.segmentId);
-              const status = getStepStatus(step.index, activeStep, isReady);
-              const isActive = status === "active";
-              const isPast = status === "complete";
-              return (
-                <li
-                  key={step.index}
-                  className={`${isActive ? "is-active" : ""} ${isPast ? "is-past" : ""}`}
-                  style={{ "--rail-color": segment.color } as CSSProperties}
-                >
-                  <span className="generating-rail-num">{String(step.index).padStart(2, "0")}</span>
-                  <span className="generating-rail-label">{step.label}</span>
-                  <span className="generating-rail-status">{getStepStatusLabel(step, activeStep, isReady)}</span>
-                </li>
-              );
-            })}
-          </ol>
-        ) : null}
+        <ol className="generating-step-rail">
+          {GENERATING_STEPS.map((step) => {
+            const segment = getSegment(step.segmentId);
+            const isActive = !complete && activeStep === step.index;
+            const isPast = complete || activeStep > step.index;
+            return (
+              <li
+                key={step.index}
+                className={`${isActive ? "is-active" : ""} ${isPast ? "is-past" : ""}`}
+                style={{ "--rail-color": segment.color } as CSSProperties}
+              >
+                <span className="generating-rail-num">{String(step.index).padStart(2, "0")}</span>
+                <span className="generating-rail-text">{step.railLabel}</span>
+              </li>
+            );
+          })}
+        </ol>
       </section>
 
       <div className="generating-boundary glass-card">
@@ -307,35 +270,19 @@ export function GeneratingChamber({
             className="brand-image brand-image-small"
           />
         </div>
-        <p className="generating-boundary-copy">
-          <span className="generating-boundary-line">{GENERATING_COPY.boundaryLine1}</span>
-          <span className="generating-boundary-line">{GENERATING_COPY.boundaryLine2}</span>
-        </p>
+        <p>{GENERATING_COPY.boundary}</p>
       </div>
 
       <div className="generating-actions">
-        {isError ? (
-          <Link href="/your-code" className="gold-button generating-cta">
-            {GENERATING_COPY.ctaError}
-          </Link>
-        ) : isReady ? (
-          <a href={resultHref} className="gold-button generating-cta">
-            {GENERATING_COPY.ctaComplete}
-          </a>
-        ) : (
-          <button type="button" className="gold-button generating-cta is-disabled" disabled aria-disabled="true">
-            {GENERATING_COPY.ctaLoading}
-          </button>
-        )}
+        <a href={resultHref} className="gold-button generating-cta">
+          {GENERATING_COPY.cta}
+          <span aria-hidden> ›</span>
+        </a>
         <p className="generating-encryption">
           <span className="generating-lock" aria-hidden>
             🔒
           </span>
-          {GENERATING_COPY.privacy}
-          {" "}
-          <Link href="/privacy" className="generating-privacy-link">
-            Privacy Policy
-          </Link>
+          {GENERATING_COPY.encryption}
         </p>
       </div>
     </div>

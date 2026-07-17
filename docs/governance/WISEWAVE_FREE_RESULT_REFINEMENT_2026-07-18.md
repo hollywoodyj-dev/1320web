@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-18  
 **Spec:** `docs/specs/1320_FREE_RESULT_PAGE_REFINEMENT_SPEC_v1.md`  
-**Status:** Content-depth adjust implemented — pending Lumen QA  
+**Status:** Content-depth adjust Lumen QA PASS — ready for Wisewave re-check  
 
 ## Backup
 
@@ -31,7 +31,8 @@ Note: some codes have short source `freeEssence` (1 sentence). Preview shows ava
 
 ## Lumen QA
 
-- Prior PASS: `qa-artifacts/LUMEN_QA_FREE_RESULT_REFINEMENT_v1_2026-07-17.md`
-- Re-run after depth adjust
+- **Overall:** PASS after depth adjust
+- Artifact: `qa-artifacts/LUMEN_QA_FREE_RESULT_REFINEMENT_v1_2026-07-17.md`
+- Commits: `f64356a`, `fe2f77b`
 
-**Next:** Lumen QA → Wisewave re-check
+**Next:** Wisewave visual re-check of segment preview depth

@@ -89,7 +89,7 @@ export default function HomePage() {
 
           <section className="home-section entry-panel entry-panel--refined" id="entry-panel">
             <div className="home-section-inner">
-              <div className="homepage-block homepage-block--entry">
+              <div className="homepage-block">
                 <h2 className="homepage-section-title">{HOMEPAGE_CALCULATOR.title}</h2>
                 <p className="homepage-prose-copy">{HOMEPAGE_CALCULATOR.body}</p>
                 <div className="homepage-block-form">
@@ -174,8 +174,8 @@ export default function HomePage() {
           </section>
 
           <section className="home-section how-section">
-            <div className="home-section-inner home-section-inner--wide">
-              <div className="homepage-block homepage-block--wide">
+            <div className="home-section-inner">
+              <div className="homepage-block">
                 <p className="homepage-section-eyebrow">{HOMEPAGE_HOW.eyebrow}</p>
                 <h2 className="homepage-section-title">{HOMEPAGE_HOW.title}</h2>
                 <p className="homepage-prose-copy how-section-lead">{HOMEPAGE_HOW.body}</p>
@@ -205,7 +205,7 @@ export default function HomePage() {
 
           <section className="home-section homepage-preview-stack">
             <div className="home-section-inner">
-              <div className="homepage-block homepage-block--wide">
+              <div className="homepage-block">
                 <p className="homepage-section-eyebrow">{HOMEPAGE_FULL_REPORT_PREVIEW.eyebrow}</p>
                 <h2 className="homepage-section-title">{HOMEPAGE_FULL_REPORT_PREVIEW.title}</h2>
                 <p className="homepage-prose-copy">{HOMEPAGE_FULL_REPORT_PREVIEW.body}</p>

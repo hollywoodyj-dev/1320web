@@ -98,4 +98,7 @@ export const FREE_RESULT_MODULE = {
   unlockCta: "Unlock Full Segment",
   sectionTitle: "Your Segment Blueprint",
   viewSection: "View Section",
+  /** Wisewave depth: 2–3 short freeEssence lines, ≤ ~55 words. */
+  freeEssenceMaxLines: 3,
+  freeEssenceMaxWords: 55,
 };

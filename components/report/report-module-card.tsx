@@ -20,7 +20,14 @@ export function ReportModuleCard({
   const meta = getSegment(module.segmentId);
   const tone = PILLAR_TONE[module.segmentId];
   const showCard = Boolean(module.cardImageUrl);
-  const essence = module.fields[0]?.value;
+  const essenceLines =
+    module.freeEssenceLines?.length
+      ? module.freeEssenceLines
+      : module.fields[0]?.items?.length
+        ? module.fields[0].items
+        : module.fields[0]?.value
+          ? [module.fields[0].value]
+          : [];
 
   return (
     <article
@@ -60,7 +67,15 @@ export function ReportModuleCard({
       <div className="report-module-content">
         {preview ? (
           <>
-            {essence ? <p className="report-module-preview-essence">{essence}</p> : null}
+            {essenceLines.length ? (
+              <div className="report-module-preview-essence-stack">
+                {essenceLines.map((line) => (
+                  <p key={line} className="report-module-preview-essence">
+                    {line}
+                  </p>
+                ))}
+              </div>
+            ) : null}
             {module.reflectionQuestion ? (
               <div className="report-module-reflection">
                 <h4 className="report-field-label">Reflection</h4>

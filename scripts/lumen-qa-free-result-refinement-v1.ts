@@ -54,6 +54,11 @@ const FORBIDDEN = [
   "not a sentence",
   "your code is only the beginning",
   "this page shows your free first layer",
+  "core gift",
+  "growth edge",
+  "one-week practice",
+  "how this may show up",
+  "7-day integration",
 ];
 
 async function main() {
@@ -87,6 +92,18 @@ async function main() {
         return style.display !== "none" && style.visibility !== "hidden";
       });
       const bodyFont = parseFloat(getComputedStyle(document.body).fontSize);
+      const previewCards = Array.from(document.querySelectorAll(".report-module-card--preview")).map(
+        (card) => {
+          const lines = Array.from(card.querySelectorAll(".report-module-preview-essence")).map(
+            (el) => (el.textContent ?? "").trim(),
+          );
+          const words = lines.join(" ").split(/\s+/).filter(Boolean).length;
+          const hasReflection = Boolean(
+            card.querySelector(".report-module-reflection")?.textContent?.trim(),
+          );
+          return { lines: lines.length, words, hasReflection };
+        },
+      );
       return {
         text,
         sidebarHidden,
@@ -95,7 +112,8 @@ async function main() {
         goldCtaCount: goldCtas.length,
         bodyFont,
         faqCount: document.querySelectorAll(".report-extras .blueprint-faq-item").length,
-        hasPreviewCards: document.querySelectorAll(".report-module-card--preview").length,
+        hasPreviewCards: previewCards.length,
+        previewCards,
         hasGoDeeperBlock: Boolean(document.querySelector("#go-deeper")),
         hasFinalBeginning: text.includes("your code is only the beginning"),
       };
@@ -104,6 +122,16 @@ async function main() {
     const missing = REQUIRED.filter((p) => !mobile.text.includes(p));
     const forbidden = FORBIDDEN.filter((p) => mobile.text.includes(p));
     const overflow = await noHorizontalOverflow(page);
+    const essenceOk =
+      mobile.previewCards.length === 4 &&
+      mobile.previewCards.every(
+        (card) =>
+          card.lines >= 1 &&
+          card.lines <= 3 &&
+          card.words >= 1 &&
+          card.words <= 55 &&
+          card.hasReflection,
+      );
 
     const notes = [
       `required missing (${missing.length}): ${missing.join(", ") || "none"}`,
@@ -112,6 +140,10 @@ async function main() {
       `sidebar hidden on mobile: ${mobile.sidebarHidden ? "yes" : "NO"}`,
       `mobile chips visible: ${mobile.chipsVisible ? "yes" : "NO"}`,
       `preview segment cards: ${mobile.hasPreviewCards}`,
+      `freeEssence depth: ${mobile.previewCards
+        .map((c, i) => `#${i + 1} ${c.lines} lines / ${c.words} words`)
+        .join("; ")}`,
+      `freeEssence within 1–3 lines & ≤55 words + reflection: ${essenceOk ? "yes" : "NO"}`,
       `FAQ count: ${mobile.faqCount}`,
       `upgrade block present: ${mobile.hasGoDeeperBlock ? "yes" : "NO"}`,
       `body font: ${mobile.bodyFont}px`,
@@ -132,6 +164,7 @@ async function main() {
       mobile.sidebarHidden &&
       mobile.chipsVisible &&
       mobile.hasPreviewCards === 4 &&
+      essenceOk &&
       mobile.faqCount <= 4 &&
       mobile.hasGoDeeperBlock &&
       !mobile.hasFinalBeginning &&

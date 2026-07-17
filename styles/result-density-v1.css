@@ -88,8 +88,14 @@
   color: rgba(245, 234, 214, 0.8);
 }
 
-.report-dashboard--refined .report-module-card--preview .report-module-preview-essence {
+.report-dashboard--refined .report-module-preview-essence-stack {
+  display: grid;
+  gap: 10px;
   margin: 0 0 16px;
+}
+
+.report-dashboard--refined .report-module-card--preview .report-module-preview-essence {
+  margin: 0;
   font-size: 16.5px;
   line-height: 1.6;
   color: rgba(245, 234, 214, 0.82);

@@ -47,10 +47,58 @@ export type ReportModuleViewModel = {
   shortLabel: string;
   cardImageUrl?: string;
   fields: ReportField[];
+  /** Free Result preview only — 2–3 short freeEssence lines (≤ ~55 words). */
+  freeEssenceLines?: string[];
   reflectionQuestion?: string;
   showLocked: boolean;
   lockedTeaser?: string;
 };
+
+/** Wisewave Page 06 depth adjust: 2–3 short lines, max ~55 words. No commercial blocks. */
+const FREE_ESSENCE_MAX_LINES = 3;
+const FREE_ESSENCE_MAX_WORDS = 55;
+
+export function buildFreeEssenceLines(freeEssence: string): string[] {
+  const text = freeEssence.trim();
+  if (!text) return [];
+
+  const sentences = text
+    .split(/(?<=[.!?。！？])\s+/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  const source = sentences.length > 0 ? sentences : [text];
+  const lines: string[] = [];
+  let wordCount = 0;
+
+  for (const sentence of source) {
+    if (lines.length >= FREE_ESSENCE_MAX_LINES) break;
+    const words = sentence.split(/\s+/).filter(Boolean);
+    if (!words.length) continue;
+
+    if (lines.length === 0 && words.length > FREE_ESSENCE_MAX_WORDS) {
+      lines.push(`${words.slice(0, FREE_ESSENCE_MAX_WORDS).join(" ")}…`);
+      break;
+    }
+
+    if (wordCount + words.length > FREE_ESSENCE_MAX_WORDS) {
+      const remaining = FREE_ESSENCE_MAX_WORDS - wordCount;
+      if (remaining >= 8) {
+        lines.push(`${words.slice(0, remaining).join(" ")}…`);
+      }
+      break;
+    }
+
+    const normalized =
+      /[.!?…。！？]$/.test(sentence) || sentence.endsWith("…")
+        ? sentence
+        : `${sentence}.`;
+    lines.push(normalized);
+    wordCount += words.length;
+  }
+
+  return lines;
+}
 
 export type ReportViewModel = {
   locale: Locale;
@@ -206,17 +254,13 @@ function buildS3Fields(
 }
 
 function buildFreeModuleFields(
-  segmentId: SegmentId,
+  _segmentId: SegmentId,
   segment: SegmentContent,
   locale: Locale,
 ): ReportField[] {
-  const essence = pickLocalized(segment.freeEssence, locale).trim();
-  if (!essence) return [];
-  // Preview-only: keep a short essence sentence, not a full interpretation block.
-  const firstSentence = essence.split(/(?<=[.!?。！？])\s+/)[0]?.trim() || essence;
-  const preview =
-    firstSentence.length > 180 ? `${firstSentence.slice(0, 177).trimEnd()}…` : firstSentence;
-  return [{ label: "Essence", value: preview.endsWith(".") || preview.endsWith("…") ? preview : `${preview}.` }];
+  const lines = buildFreeEssenceLines(pickLocalized(segment.freeEssence, locale));
+  if (!lines.length) return [];
+  return [{ label: "Essence", value: lines.join(" "), items: lines }];
 }
 
 function buildS2Fields(
@@ -416,13 +460,15 @@ export function buildReportViewModel(
     const foundation = FREE_RESULT_FOUNDATION.find((item) => item.segmentId === id);
 
     if (mode === "free") {
+      const freeFields = buildFreeModuleFields(id, seg, locale);
       return {
         segmentId: id,
         codeLabel: segmentCodeLabel(content, id),
         archetype,
         shortLabel: foundation?.productTitle ?? pickLocalized(seg.shortLabel, locale),
         cardImageUrl: getSegmentCardImageUrl(id, codeNum),
-        fields: buildFreeModuleFields(id, seg, locale),
+        fields: freeFields,
+        freeEssenceLines: freeFields[0]?.items ?? buildFreeEssenceLines(pickLocalized(seg.freeEssence, locale)),
         reflectionQuestion: reflection || undefined,
         showLocked: true,
         lockedTeaser,

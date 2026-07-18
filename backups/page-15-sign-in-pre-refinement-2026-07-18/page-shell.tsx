@@ -50,16 +50,6 @@ function isMobileReportRoute(pathname: string | null): boolean {
   return pathname === "/mobile-report-v2";
 }
 
-function isAuthRoute(pathname: string | null): boolean {
-  if (!pathname) return false;
-  return (
-    pathname === "/login" ||
-    pathname === "/signup" ||
-    pathname === "/forgot-password" ||
-    pathname.startsWith("/auth/")
-  );
-}
-
 /** Cosmic layout for inner routes — homepage keeps its own shell in `app/page.tsx`. */
 export function PageShell({ children, leadsEnabled, headerAccount, preferMobileReportShell = false }: PageShellProps) {
   const pathname = usePathname();
@@ -69,7 +59,6 @@ export function PageShell({ children, leadsEnabled, headerAccount, preferMobileR
     (isEntitledReportRoute(pathname) && preferMobileReportShell);
   const unifiedWebReport = isUnifiedReportWebRoute(pathname) && !mobileReport;
   const printReport = isPrintReportRoute(pathname);
-  const authRoute = isAuthRoute(pathname);
 
   if (printReport) {
     return (
@@ -126,10 +115,7 @@ export function PageShell({ children, leadsEnabled, headerAccount, preferMobileR
         <div id="main-content" className="inner-main" tabIndex={-1}>
           {children}
         </div>
-        <SiteFooter
-          leadsEnabled={authRoute ? false : leadsEnabled}
-          variant={authRoute ? "compact" : "full"}
-        />
+        <SiteFooter leadsEnabled={leadsEnabled} />
       </div>
     </main>
   );

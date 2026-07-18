@@ -38,7 +38,13 @@ export async function POST(request: Request) {
   try {
     const auth = await getUserPasswordHashByEmail(email);
     if (!auth?.passwordHash || !(await verifyPassword(password, auth.passwordHash))) {
-      return NextResponse.json({ ok: false, error: "Invalid email or password." }, { status: 401 });
+      return NextResponse.json(
+        {
+          ok: false,
+          error: "We couldn’t sign you in with those details. Please check your email and password.",
+        },
+        { status: 401 },
+      );
     }
 
     await setUserSession(auth.id);

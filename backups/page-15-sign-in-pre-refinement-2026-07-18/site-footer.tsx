@@ -6,28 +6,10 @@ import { FOOTER_LEGAL_LINKS, HOMEPAGE_FOOTER_COLUMNS } from "@/lib/site-nav";
 
 type SiteFooterProps = {
   leadsEnabled?: boolean;
-  variant?: "full" | "compact";
 };
 
-/** Shared footer — full marketing grid, or compact auth/legal gateway. */
-export function SiteFooter({ leadsEnabled, variant = "full" }: SiteFooterProps) {
-  if (variant === "compact") {
-    return (
-      <footer className="auth-compact-footer">
-        <p className="auth-compact-footer-brand">1320 Soul Origin Code System</p>
-        <nav className="auth-compact-footer-nav" aria-label="Legal">
-          {FOOTER_LEGAL_LINKS.map((link) => (
-            <Link key={link.href} href={link.href}>
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-        <p className="auth-compact-footer-meta">© 2026 1320 Soul Origin Code System</p>
-        <p className="footer-mantra auth-compact-footer-mantra">{HOMEPAGE_FINAL_CTA.mantra}</p>
-      </footer>
-    );
-  }
-
+/** Shared footer — aligned with homepage refinement (short brand + same columns + mantra). */
+export function SiteFooter({ leadsEnabled }: SiteFooterProps) {
   return (
     <>
       <footer className="site-footer">

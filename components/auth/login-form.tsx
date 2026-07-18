@@ -11,6 +11,7 @@ type LoginFormProps = {
 export function LoginForm({ nextPath = "/account" }: LoginFormProps) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -32,13 +33,17 @@ export function LoginForm({ nextPath = "/account" }: LoginFormProps) {
       };
 
       if (!response.ok || !json.ok) {
-        setStatus(json.error ?? "Could not sign in.");
+        if (response.status === 401) {
+          setStatus(LOGIN_COPY.errorGeneric);
+        } else {
+          setStatus(json.error ?? LOGIN_COPY.errorGeneric);
+        }
         return;
       }
 
       window.location.href = json.redirect ?? nextPath;
     } catch {
-      setStatus("Network error. Please try again.");
+      setStatus(LOGIN_COPY.errorNetwork);
     } finally {
       setLoading(false);
     }
@@ -46,8 +51,8 @@ export function LoginForm({ nextPath = "/account" }: LoginFormProps) {
 
   return (
     <form className="auth-form" onSubmit={onSubmit}>
-      <label className="conversion-field">
-        Email
+      <label className="conversion-field auth-field">
+        {LOGIN_COPY.emailLabel}
         <input
           type="email"
           value={email}
@@ -55,25 +60,49 @@ export function LoginForm({ nextPath = "/account" }: LoginFormProps) {
           required
           autoComplete="email"
           className="conversion-input"
-          placeholder="you@example.com"
+          placeholder={LOGIN_COPY.emailPlaceholder}
         />
       </label>
-      <label className="conversion-field">
-        Password
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-          autoComplete="current-password"
-          className="conversion-input"
-          placeholder="Letters and numbers, 8+ characters"
-        />
+      <label className="conversion-field auth-field">
+        {LOGIN_COPY.passwordLabel}
+        <span className="auth-password-row">
+          <input
+            type={showPassword ? "text" : "password"}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            autoComplete="current-password"
+            className="conversion-input"
+            placeholder={LOGIN_COPY.passwordPlaceholder}
+          />
+          <button
+            type="button"
+            className="auth-password-toggle"
+            onClick={() => setShowPassword((value) => !value)}
+            aria-pressed={showPassword}
+          >
+            {showPassword ? "Hide" : "Show"}
+          </button>
+        </span>
       </label>
-      <button type="submit" className="gold-button auth-form-submit" disabled={loading}>
-        {loading ? "SIGNING IN…" : LOGIN_COPY.submit}
+
+      <div className="auth-links">
+        <Link
+          href={`${LOGIN_COPY.forgotPasswordHref}?next=${encodeURIComponent(nextPath)}`}
+          className="blueprint-secondary-link"
+        >
+          {LOGIN_COPY.forgotPassword}
+        </Link>
+      </div>
+
+      <button type="submit" className="gold-button auth-form-submit auth-submit" disabled={loading}>
+        {loading ? LOGIN_COPY.submitting : LOGIN_COPY.submit}
       </button>
-      {status ? <p className="conversion-status auth-form-status">{status}</p> : null}
+      {status ? (
+        <p className="conversion-status auth-form-status" role="alert">
+          {status}
+        </p>
+      ) : null}
       <p className="auth-form-footer">
         {LOGIN_COPY.signupPrompt}{" "}
         <Link href={`/signup?next=${encodeURIComponent(nextPath)}`} className="blueprint-secondary-link">

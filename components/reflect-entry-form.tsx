@@ -1,8 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
-import { REFLECT_FORM, REFLECT_HERO } from "@/lib/wisewave/reflect-content";
+import { parseBirthDateInput } from "@/lib/parse-birth-date-input";
+import { REFLECT_FORM } from "@/lib/wisewave/reflect-content";
 
 export type ReflectEntryPrefill = {
   firstName: string;
@@ -15,6 +17,8 @@ export type ReflectEntryPrefill = {
 type ReflectEntryFormProps = {
   prefill?: ReflectEntryPrefill;
   compact?: boolean;
+  /** Show return link when user arrived from a report. */
+  returnReportHref?: string | null;
 };
 
 type StartPayload = {
@@ -23,6 +27,20 @@ type StartPayload = {
   accessToken?: string;
   error?: string;
 };
+
+function toIsoBirthDate(month: string, day: string, year: string): string | null {
+  const parts = parseBirthDateInput(year, month, day);
+  const y = Number(parts.year);
+  const m = Number(parts.month);
+  const d = Number(parts.day);
+  if (!Number.isFinite(y) || !Number.isFinite(m) || !Number.isFinite(d)) return null;
+  if (y < 1900 || y > 2100 || m < 1 || m > 12 || d < 1 || d > 31) return null;
+  const probe = new Date(Date.UTC(y, m - 1, d));
+  if (probe.getUTCFullYear() !== y || probe.getUTCMonth() !== m - 1 || probe.getUTCDate() !== d) {
+    return null;
+  }
+  return `${String(y).padStart(4, "0")}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+}
 
 async function parseStartResponse(response: Response): Promise<StartPayload> {
   const text = await response.text();
@@ -47,7 +65,11 @@ async function postReflectStart(body: Record<string, unknown>): Promise<{ respon
   return { response, payload };
 }
 
-export function ReflectEntryForm({ prefill, compact = false }: ReflectEntryFormProps) {
+export function ReflectEntryForm({
+  prefill,
+  compact = false,
+  returnReportHref = null,
+}: ReflectEntryFormProps) {
   const router = useRouter();
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
@@ -58,7 +80,7 @@ export function ReflectEntryForm({ prefill, compact = false }: ReflectEntryFormP
 
     if (
       accountMode &&
-      prefill &&
+      prefill?.birthDate &&
       (!response.ok || !payload.ok || !payload.sessionId || !payload.accessToken) &&
       body.useAccountProfile
     ) {
@@ -109,16 +131,19 @@ export function ReflectEntryForm({ prefill, compact = false }: ReflectEntryFormP
         return;
       }
 
-      const firstName = String(data.get("firstName") ?? "").trim();
       const email = String(data.get("email") ?? "").trim();
-      const birthDate = String(data.get("birthDate") ?? "").trim();
+      const birthDate = toIsoBirthDate(
+        String(data.get("month") ?? ""),
+        String(data.get("day") ?? ""),
+        String(data.get("year") ?? ""),
+      );
 
-      if (!firstName || !email || !birthDate) {
-        setStatus(REFLECT_FORM.error);
+      if (!email || !birthDate) {
+        setStatus(REFLECT_FORM.connectRequired);
         return;
       }
 
-      await startSession({ firstName, email, birthDate, openingMessage }, openingMessage);
+      await startSession({ email, birthDate, openingMessage }, openingMessage);
     } catch {
       setStatus(REFLECT_FORM.networkError);
     } finally {
@@ -126,77 +151,97 @@ export function ReflectEntryForm({ prefill, compact = false }: ReflectEntryFormP
     }
   }
 
+  const signInHref = `/login?next=${encodeURIComponent("/reflect")}`;
+
   return (
-    <form className="conversion-form" onSubmit={onSubmit}>
-      {!compact ? <p className="conversion-lead mb-4">{REFLECT_HERO.body}</p> : null}
+    <form className="reflect-entry-form" onSubmit={onSubmit}>
+      {accountMode && !compact ? (
+        <p className="reflect-entry-lead">{REFLECT_FORM.accountLead}</p>
+      ) : null}
 
-      {accountMode && prefill ? (
-        <>
-          <input type="hidden" name="firstName" value={prefill.firstName} />
-          <input type="hidden" name="email" value={prefill.email} />
-          <input type="hidden" name="birthDate" value={prefill.birthDate} />
-          <dl className="reflect-prefill-summary grid gap-3 sm:grid-cols-2 mb-4">
-            <div>
-              <dt className="text-xs uppercase tracking-wide opacity-70">{REFLECT_FORM.firstName}</dt>
-              <dd>{prefill.firstName}</dd>
-            </div>
-            <div>
-              <dt className="text-xs uppercase tracking-wide opacity-70">{REFLECT_FORM.email}</dt>
-              <dd>{prefill.email}</dd>
-            </div>
-            <div>
-              <dt className="text-xs uppercase tracking-wide opacity-70">{REFLECT_FORM.birthDate}</dt>
-              <dd>{prefill.birthDate}</dd>
-            </div>
-          </dl>
-        </>
-      ) : (
-        <>
-          <label className="conversion-field">
-            {REFLECT_FORM.firstName}
-            <input
-              name="firstName"
-              required
-              defaultValue={prefill?.firstName}
-              className="conversion-input"
-            />
-          </label>
-          <label className="conversion-field">
-            {REFLECT_FORM.email}
-            <input
-              name="email"
-              type="email"
-              required
-              defaultValue={prefill?.email}
-              className="conversion-input"
-            />
-          </label>
-          <label className="conversion-field">
-            {REFLECT_FORM.birthDate}
-            <input
-              name="birthDate"
-              type="date"
-              required
-              defaultValue={prefill?.birthDate}
-              className="conversion-input"
-            />
-          </label>
-        </>
-      )}
-
-      <label className="conversion-field">
+      <label className="conversion-field reflect-opening-field">
         {REFLECT_FORM.opening}
         <textarea
           name="openingMessage"
           required
+          rows={5}
           className="conversion-input conversion-textarea"
           placeholder={REFLECT_FORM.openingPlaceholder}
+          autoComplete="off"
         />
       </label>
-      <button type="submit" className="gold-button" disabled={loading}>
-        {loading ? "Starting…" : REFLECT_FORM.submit}
+
+      {!accountMode ? (
+        <fieldset className="reflect-connect">
+          <legend className="reflect-connect-title">{REFLECT_FORM.connectTitle}</legend>
+          <p className="reflect-connect-hint">{REFLECT_FORM.connectHint}</p>
+          <label className="conversion-field">
+            {REFLECT_FORM.email}
+            <input name="email" type="email" className="conversion-input" autoComplete="email" />
+          </label>
+          <div className="reflect-birth-row" role="group" aria-label="Birth date">
+            <label className="conversion-field">
+              {REFLECT_FORM.birthMonth}
+              <input
+                name="month"
+                inputMode="numeric"
+                autoComplete="bday-month"
+                placeholder="MM"
+                className="conversion-input"
+              />
+            </label>
+            <label className="conversion-field">
+              {REFLECT_FORM.birthDay}
+              <input
+                name="day"
+                inputMode="numeric"
+                autoComplete="bday-day"
+                placeholder="DD"
+                className="conversion-input"
+              />
+            </label>
+            <label className="conversion-field">
+              {REFLECT_FORM.birthYear}
+              <input
+                name="year"
+                inputMode="numeric"
+                autoComplete="bday-year"
+                placeholder="YYYY"
+                className="conversion-input"
+              />
+            </label>
+          </div>
+          <p className="reflect-connect-paths">
+            <Link href="/your-code" className="blueprint-secondary-link">
+              {REFLECT_FORM.generateCode}
+            </Link>
+            <span aria-hidden="true"> · </span>
+            <Link href={signInHref} className="blueprint-secondary-link">
+              {REFLECT_FORM.signIn}
+            </Link>
+          </p>
+        </fieldset>
+      ) : null}
+
+      <button type="submit" className="gold-button reflect-entry-submit" disabled={loading}>
+        {loading ? REFLECT_FORM.submitting : REFLECT_FORM.submit}
       </button>
-      {status ? <p className="conversion-status">{status}</p> : null}
+
+      <p className="reflect-form-boundary">{REFLECT_FORM.formBoundary}</p>
+
+      {returnReportHref ? (
+        <p className="reflect-secondary-path">
+          <Link href={returnReportHref} className="blueprint-secondary-link">
+            {REFLECT_FORM.returnReport}
+          </Link>
+        </p>
+      ) : null}
+
+      {status ? (
+        <p className="conversion-status" role="alert">
+          {status}
+        </p>
+      ) : null}
     </form>
   );
 }

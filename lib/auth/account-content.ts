@@ -98,8 +98,9 @@ export const ACCOUNT_COPY = {
   livingBlueprintLocked: "Living Blueprint is included with Full Report access.",
   reflectTitle: "Reflect with Wisewave",
   reflectBody: "Symbolic reflection grounded in your Soul Blueprint — invitational, not predictive.",
-  reflectAccountLead: "Your profile is already saved. Share what brings you here today to begin.",
-  reflectNeedsBirthDate: "Add your birth date in Your profile (or complete signup) before starting a reflection.",
+  reflectAccountLead: "Your Soul Blueprint is already with you. Share what feels most present to begin.",
+  reflectNeedsBirthDate:
+    "Connect a birth date or report to your account before starting a Blueprint-linked reflection.",
   reflectBegin: "BEGIN REFLECTION",
   accountQuickLinks: "Quick links",
   bookingTitle: "Personal Integration Session",

@@ -34,15 +34,16 @@ export default async function AccountPage() {
   const displayName =
     [account.user.first_name, account.user.last_name].filter(Boolean).join(" ") || account.user.email;
 
-  const reflectPrefill = account.birthDate
-    ? {
-        firstName: account.user.first_name?.trim() || account.user.email.split("@")[0] || "Friend",
-        email: account.user.email,
-        birthDate: account.birthDate,
-        useAccountProfile: true as const,
-        reportId: account.entitledReportId ?? account.report?.id,
-      }
-    : null;
+  const reflectPrefill =
+    account.birthDate || account.report || account.entitledReportId
+      ? {
+          firstName: account.user.first_name?.trim() || account.user.email.split("@")[0] || "Friend",
+          email: account.user.email,
+          birthDate: account.birthDate ?? "",
+          useAccountProfile: true as const,
+          reportId: account.entitledReportId ?? account.report?.id,
+        }
+      : null;
 
   return (
     <div className="conversion-page space-y-5">

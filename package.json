@@ -33,6 +33,7 @@
     "qa:terms-refinement-v1": "npx tsx scripts/lumen-qa-terms-refinement-v1.ts",
     "qa:sign-in-refinement-v1": "npx tsx scripts/lumen-qa-sign-in-refinement-v1.ts",
     "qa:sign-up-refinement-v1": "npx tsx scripts/lumen-qa-sign-up-refinement-v1.ts",
+    "qa:reflect-entry-refinement-v1": "npx tsx scripts/lumen-qa-reflect-entry-refinement-v1.ts",
     "smoke:commercial-overlay-step2": "npm run smoke:commercial-overlay",
     "smoke:full-report-payload": "npx tsx scripts/smoke-full-report-payload.ts",
     "smoke:full-report-v2-sample": "npx tsx scripts/smoke-full-report-v2-sample.ts",

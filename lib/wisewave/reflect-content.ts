@@ -1,30 +1,47 @@
-/** FS-007 — Reflect / Wisewave UI copy. */
+/** FS-007 — Reflect / Wisewave UI copy. Page 18 entry refinement. */
 
 export const REFLECT_META = {
-  title: "Reflect with Wisewave | 1320 Soul Code",
+  title: "Wisewave Reflection | 1320 Soul Blueprint",
   description:
-    "A symbolic reflection space grounded in your Soul Blueprint — invitational, not predictive.",
+    "Reflect with your Soul Blueprint — quiet, invitational symbolic self-awareness. Not therapy, diagnosis, or prediction.",
 };
 
 export const REFLECT_HERO = {
   eyebrow: "WISEWAVE REFLECTION",
   title: "Reflect With Your Soul Blueprint",
-  body: "Wisewave connects your lived experience to your S1–S0 codes through calm, invitational dialogue. It does not predict, diagnose, or replace your choices.",
+  body: "Bring one thought, feeling, question, or pattern. Wisewave will reflect with your Soul Blueprint quietly — not to predict, diagnose, or decide for you.",
   boundary:
-    "Symbolic self-awareness support only — not therapy, medical, legal, or financial advice.",
+    "Symbolic self-awareness only. Not therapy, medical, legal, financial, or crisis support.",
+  authority: "You remain the authority of your life.",
+  connectLine:
+    "Wisewave connects your lived experience to your Soul Blueprint through calm, invitational reflection.",
 };
 
 export const REFLECT_FORM = {
-  firstName: "First name",
-  email: "Email",
-  birthDate: "Birth date",
-  opening: "What brings you here today?",
-  openingPlaceholder: "Share what feels most present — no need to be polished…",
+  beginTitle: "Begin",
+  opening: "What feels most present today?",
+  openingPlaceholder: "Share what feels most present — no need to polish it.",
   submit: "BEGIN REFLECTION",
-  error: "Please complete all required fields.",
-  openingRequired: "Please share what brings you here today.",
+  submitting: "Starting…",
+  formBoundary:
+    "Wisewave offers symbolic self-awareness support only. It does not predict, diagnose, or replace your choices.",
+  connectTitle: "Connect this reflection to your Soul Blueprint",
+  connectHint: "Used only to connect this reflection to your Soul Blueprint.",
+  email: "Email",
+  birthMonth: "Month",
+  birthDay: "Day",
+  birthYear: "Year",
+  generateCode: "Generate My Code",
+  signIn: "Sign In",
+  returnReport: "Return to My Report",
+  sessionSecondary: "Prefer a live facilitator?",
+  sessionCta: "Request a Personal Integration Session",
+  error: "Please share what feels most present, then connect your Soul Blueprint to begin.",
+  openingRequired: "Please share what feels most present today.",
+  connectRequired:
+    "Add your email and birth date below to connect this reflection — or Generate My Code / Sign In.",
   networkError: "Network error. Please try again.",
-  accountLead: "Your profile details are already saved — share what feels most present to begin.",
+  accountLead: "Your Soul Blueprint is already with you. Share what feels most present to begin.",
 };
 
 export const REFLECT_CHAT = {

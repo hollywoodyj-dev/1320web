@@ -60,12 +60,6 @@ function isAuthRoute(pathname: string | null): boolean {
   );
 }
 
-/** Quiet compact footer — auth gateways + Wisewave reflection entry. */
-function isCompactFooterRoute(pathname: string | null): boolean {
-  if (!pathname) return false;
-  return isAuthRoute(pathname) || pathname === "/reflect";
-}
-
 /** Cosmic layout for inner routes — homepage keeps its own shell in `app/page.tsx`. */
 export function PageShell({ children, leadsEnabled, headerAccount, preferMobileReportShell = false }: PageShellProps) {
   const pathname = usePathname();
@@ -76,7 +70,6 @@ export function PageShell({ children, leadsEnabled, headerAccount, preferMobileR
   const unifiedWebReport = isUnifiedReportWebRoute(pathname) && !mobileReport;
   const printReport = isPrintReportRoute(pathname);
   const authRoute = isAuthRoute(pathname);
-  const compactFooter = isCompactFooterRoute(pathname);
 
   if (printReport) {
     return (
@@ -134,8 +127,8 @@ export function PageShell({ children, leadsEnabled, headerAccount, preferMobileR
           {children}
         </div>
         <SiteFooter
-          leadsEnabled={compactFooter ? false : leadsEnabled}
-          variant={compactFooter ? "compact" : "full"}
+          leadsEnabled={authRoute ? false : leadsEnabled}
+          variant={authRoute ? "compact" : "full"}
         />
       </div>
     </main>

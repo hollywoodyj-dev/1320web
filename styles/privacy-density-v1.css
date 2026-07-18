@@ -1,0 +1,182 @@
+/* Privacy Policy density — calm data transparency page (Page 13). */
+
+.privacy-page--refined {
+  --privacy-gap: clamp(18px, 3.5vw, 28px);
+  max-width: 920px;
+  margin: 0 auto;
+  padding-bottom: 48px;
+}
+
+.privacy-page--refined .privacy-hero {
+  margin-bottom: var(--privacy-gap);
+  text-align: center;
+}
+
+.privacy-page--refined .privacy-hero-subline {
+  margin: 14px 0 0;
+  color: rgba(230, 199, 120, 0.9);
+  font-size: 16.5px;
+  line-height: 1.55;
+}
+
+.privacy-stack {
+  display: grid;
+  gap: var(--privacy-gap);
+}
+
+.privacy-page--refined .privacy-card {
+  border: 1px solid rgba(214, 181, 109, 0.18);
+  border-radius: 22px;
+  background: rgba(5, 14, 27, 0.62);
+  padding: clamp(24px, 4vw, 36px);
+  box-shadow: none;
+}
+
+.privacy-page--refined .privacy-subtitle {
+  margin: 0 0 14px;
+  color: #f4d88a;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.privacy-page--refined .privacy-copy {
+  font-size: 16.5px;
+  line-height: 1.68;
+  color: rgba(245, 234, 214, 0.78);
+}
+
+.privacy-page--refined .privacy-copy p {
+  margin: 0 0 12px;
+}
+
+.privacy-page--refined .privacy-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-summary-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.privacy-summary-list li {
+  position: relative;
+  padding: 12px 14px 12px 36px;
+  border-radius: 14px;
+  border: 1px solid rgba(214, 181, 109, 0.14);
+  background: rgba(8, 14, 30, 0.45);
+  font-size: 16.5px;
+  line-height: 1.55;
+  color: rgba(245, 234, 214, 0.82);
+}
+
+.privacy-summary-list li::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 1.15em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(244, 216, 138, 0.85);
+}
+
+.privacy-subsections {
+  display: grid;
+  gap: 22px;
+}
+
+.privacy-subsection h3 {
+  margin: 0 0 10px;
+  color: rgba(246, 240, 228, 0.92);
+  font-size: 1.05rem;
+  font-weight: 650;
+}
+
+.privacy-collect-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.privacy-collect-list li {
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(214, 181, 109, 0.14);
+  background: rgba(8, 14, 30, 0.4);
+}
+
+.privacy-collect-list strong {
+  display: block;
+  margin-bottom: 6px;
+  color: rgba(246, 240, 228, 0.95);
+  font-size: 15px;
+}
+
+.privacy-collect-list p {
+  margin: 0;
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: rgba(245, 234, 214, 0.76);
+}
+
+.privacy-page--refined .privacy-cta {
+  margin-top: calc(var(--privacy-gap) + 8px);
+  padding: clamp(24px, 4vw, 36px);
+  text-align: center;
+  border: 1px solid rgba(214, 181, 109, 0.18);
+  border-radius: 22px;
+  background: rgba(5, 14, 27, 0.62);
+}
+
+.privacy-page--refined .privacy-cta h2 {
+  margin: 0 0 12px;
+  color: #f4d88a;
+  font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+}
+
+.privacy-page--refined .privacy-cta > p {
+  margin: 0 auto 20px;
+  max-width: 34rem;
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: rgba(245, 234, 214, 0.78);
+}
+
+.privacy-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .privacy-page--refined .privacy-card,
+  .privacy-page--refined .privacy-cta {
+    padding: 24px;
+  }
+
+  .privacy-page--refined .privacy-copy,
+  .privacy-summary-list li,
+  .privacy-collect-list p,
+  .privacy-page--refined .privacy-cta > p {
+    font-size: 16.5px;
+    line-height: 1.65;
+  }
+
+  .privacy-cta-actions {
+    flex-direction: column;
+  }
+
+  .privacy-cta-actions .gold-button,
+  .privacy-cta-actions .blueprint-secondary-link {
+    width: 100%;
+  }
+}

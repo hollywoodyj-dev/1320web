@@ -22,5 +22,5 @@ Verdict: **PASS**
 
 ## Mobile sign-in tap targets: PASS
 - input font: 16.5
-- input height: 52
+- input height: 53.21875
 - no horizontal overflow: true

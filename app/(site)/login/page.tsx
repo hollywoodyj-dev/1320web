@@ -5,7 +5,6 @@ import { LOGIN_COPY, LOGIN_META } from "@/lib/auth/account-content";
 import { getAccountContext } from "@/lib/auth/account-context";
 import { safeNextPath } from "@/lib/auth/next-path";
 import {
-  authReturnContextLead,
   authReturnContextNote,
   resolveAuthReturnContext,
 } from "@/lib/auth/return-context";
@@ -32,9 +31,7 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
     redirect(nextPath);
   }
 
-  const context = resolveAuthReturnContext(nextPath);
-  const contextLead = authReturnContextLead(context);
-  const contextNote = authReturnContextNote(context);
+  const contextNote = authReturnContextNote(resolveAuthReturnContext(nextPath));
 
   return (
     <div className="auth-page auth-page--refined">
@@ -43,7 +40,7 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
           <header className="auth-card-header">
             <p className="auth-card-eyebrow">{LOGIN_META.title}</p>
             <h1 className="auth-card-title">{LOGIN_COPY.title}</h1>
-            <p className="auth-card-lead">{contextLead ?? LOGIN_COPY.body}</p>
+            <p className="auth-card-lead">{LOGIN_COPY.body}</p>
             {contextNote ? <p className="auth-card-note">{contextNote}</p> : null}
           </header>
           <LoginForm nextPath={nextPath} />

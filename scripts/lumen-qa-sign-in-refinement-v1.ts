@@ -92,7 +92,7 @@ async function main() {
 
     const required = [
       "welcome back",
-      "sign in to continue to your report",
+      "sign in to access your full report",
       "return to your report",
       "forgot password",
       "create an account",

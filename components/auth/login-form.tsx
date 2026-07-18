@@ -63,33 +63,33 @@ export function LoginForm({ nextPath = "/account" }: LoginFormProps) {
           placeholder={LOGIN_COPY.emailPlaceholder}
         />
       </label>
-      <label className="conversion-field auth-field">
-        {LOGIN_COPY.passwordLabel}
-        <span className="auth-password-row">
-          <input
-            type={showPassword ? "text" : "password"}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-            autoComplete="current-password"
-            className="conversion-input"
-            placeholder={LOGIN_COPY.passwordPlaceholder}
-          />
-          <button
-            type="button"
-            className="auth-password-toggle"
-            onClick={() => setShowPassword((value) => !value)}
-            aria-pressed={showPassword}
-          >
-            {showPassword ? "Hide" : "Show"}
-          </button>
-        </span>
-      </label>
 
-      <div className="auth-links">
+      <div className="auth-password-block">
+        <label className="conversion-field auth-field">
+          {LOGIN_COPY.passwordLabel}
+          <span className="auth-password-row">
+            <input
+              type={showPassword ? "text" : "password"}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              autoComplete="current-password"
+              className="conversion-input"
+              placeholder={LOGIN_COPY.passwordPlaceholder}
+            />
+            <button
+              type="button"
+              className="auth-password-toggle"
+              onClick={() => setShowPassword((value) => !value)}
+              aria-pressed={showPassword}
+            >
+              {showPassword ? "Hide" : "Show"}
+            </button>
+          </span>
+        </label>
         <Link
           href={`${LOGIN_COPY.forgotPasswordHref}?next=${encodeURIComponent(nextPath)}`}
-          className="blueprint-secondary-link"
+          className="auth-inline-link"
         >
           {LOGIN_COPY.forgotPassword}
         </Link>
@@ -105,7 +105,7 @@ export function LoginForm({ nextPath = "/account" }: LoginFormProps) {
       ) : null}
       <p className="auth-form-footer">
         {LOGIN_COPY.signupPrompt}{" "}
-        <Link href={`/signup?next=${encodeURIComponent(nextPath)}`} className="blueprint-secondary-link">
+        <Link href={`/signup?next=${encodeURIComponent(nextPath)}`} className="auth-inline-link auth-inline-link--strong">
           {LOGIN_COPY.signupLink}
         </Link>
       </p>

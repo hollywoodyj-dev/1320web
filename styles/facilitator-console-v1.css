@@ -3,11 +3,16 @@
 .facilitator-page--internal {
   width: min(100% - 32px, 1100px);
   margin: 0 auto;
-  padding: 24px 0 40px;
+  padding: 28px 0 24px;
+}
+
+.facilitator-page--internal.facilitator-page--gated {
+  width: min(100% - 32px, 520px);
 }
 
 .facilitator-page--internal .facilitator-hero {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+  text-align: center;
 }
 
 .facilitator-page--internal .facilitator-eyebrow {
@@ -20,30 +25,32 @@
 
 .facilitator-page--internal .facilitator-title {
   margin: 0 0 10px;
-  font-size: clamp(1.55rem, 3vw, 1.95rem);
+  font-size: clamp(1.45rem, 3vw, 1.85rem);
   line-height: 1.2;
   color: #f2eee6;
 }
 
-.facilitator-page--internal .facilitator-lead,
-.facilitator-page--internal .facilitator-support {
-  margin: 0 0 6px;
-  max-width: 40rem;
+.facilitator-page--internal .facilitator-lead {
+  margin: 0 auto;
+  max-width: 34rem;
   font-size: 0.95rem;
   line-height: 1.5;
   color: rgba(210, 218, 230, 0.84);
 }
 
 .facilitator-page--internal .facilitator-support {
-  font-size: 0.88rem;
-  color: rgba(180, 192, 208, 0.72);
+  display: none;
 }
 
 .facilitator-access {
-  padding: 18px 18px 16px;
-  border-radius: 14px;
-  border: 1px solid rgba(214, 181, 109, 0.16);
-  max-width: 480px;
+  margin: 0 auto;
+  padding: 22px 22px 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(214, 181, 109, 0.18);
+  max-width: 440px;
+  background:
+    linear-gradient(180deg, rgba(12, 20, 38, 0.92), rgba(5, 12, 26, 0.88));
+  text-align: left;
 }
 
 .facilitator-section-title {
@@ -71,14 +78,40 @@
   gap: 10px;
 }
 
+.facilitator-access-form--inline {
+  grid-template-columns: 1fr auto;
+  align-items: end;
+}
+
+.facilitator-access--compact {
+  max-width: none;
+  margin: 0 0 16px;
+  padding: 14px 16px;
+}
+
+.facilitator-console--open ~ .facilitator-hero,
+.facilitator-page--internal:has(.facilitator-console--open) {
+  width: min(100% - 32px, 1100px);
+}
+
+.facilitator-page--internal:has(.facilitator-console--open) .facilitator-hero {
+  text-align: left;
+}
+
 .facilitator-load {
   width: 100%;
   min-height: 46px;
 }
 
+.facilitator-access-form--inline .facilitator-load {
+  width: auto;
+  min-width: 140px;
+  padding-inline: 18px;
+}
+
 .facilitator-status {
-  margin: 14px 0 0;
-  font-size: 0.9rem;
+  margin: 12px 0 0;
+  font-size: 0.88rem;
   color: rgba(230, 199, 120, 0.9);
 }
 
@@ -89,7 +122,7 @@
 }
 
 .facilitator-workspace {
-  margin-top: 22px;
+  margin-top: 8px;
   display: grid;
   gap: 16px;
 }
@@ -241,16 +274,13 @@
   margin-top: 8px;
 }
 
-.auth-compact-footer-internal {
-  margin: 0 0 8px;
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
-  color: rgba(180, 192, 208, 0.72);
-  text-align: center;
+.page-shell-inner:has(.facilitator-page--internal) .inner-main {
+  padding-bottom: 8px;
 }
 
-.page-shell-inner:has(.facilitator-page--internal) .inner-main {
-  padding-bottom: 12px;
+.page-shell-inner:has(.facilitator-page--gated) .auth-compact-footer {
+  width: min(100% - 32px, 440px);
+  padding-top: 28px;
 }
 
 .page-shell--facilitator .topbar-cta {

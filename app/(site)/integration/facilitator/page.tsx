@@ -26,12 +26,11 @@ export const metadata: Metadata = {
 
 export default function PersonalIntegrationFacilitatorPage() {
   return (
-    <div className="facilitator-page facilitator-page--internal">
+    <div className="facilitator-page facilitator-page--internal facilitator-page--gated">
       <header className="facilitator-hero">
         <p className="facilitator-eyebrow">{FACILITATOR_COPY.eyebrow}</p>
         <h1 className="facilitator-title">{FACILITATOR_COPY.title}</h1>
         <p className="facilitator-lead">{FACILITATOR_COPY.body}</p>
-        <p className="facilitator-support">{FACILITATOR_COPY.support}</p>
       </header>
       <PersonalIntegrationFacilitatorConsole />
     </div>

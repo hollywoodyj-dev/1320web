@@ -13,6 +13,11 @@ type SiteFooterProps = {
 /** Shared footer — full marketing grid, or compact auth/legal/internal gateway. */
 export function SiteFooter({ leadsEnabled, variant = "full", internalLabel }: SiteFooterProps) {
   if (variant === "compact" || variant === "internal") {
+    const legalLinks =
+      variant === "internal"
+        ? FOOTER_LEGAL_LINKS.filter((link) => link.href !== "/faq")
+        : FOOTER_LEGAL_LINKS;
+
     return (
       <footer className="auth-compact-footer">
         <p className="auth-compact-footer-brand">1320 Soul Origin Code System</p>
@@ -20,7 +25,7 @@ export function SiteFooter({ leadsEnabled, variant = "full", internalLabel }: Si
           <p className="auth-compact-footer-internal">{internalLabel}</p>
         ) : null}
         <nav className="auth-compact-footer-nav" aria-label="Legal">
-          {FOOTER_LEGAL_LINKS.map((link) => (
+          {legalLinks.map((link) => (
             <Link key={link.href} href={link.href}>
               {link.label}
             </Link>

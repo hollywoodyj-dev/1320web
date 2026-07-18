@@ -204,40 +204,64 @@ export function PersonalIntegrationFacilitatorConsole() {
   }
 
   return (
-    <div className="facilitator-console">
-      <section className="facilitator-access glass-card" aria-labelledby="facilitator-access-title">
-        <h2 id="facilitator-access-title" className="facilitator-section-title">
-          {FACILITATOR_COPY.keyLabel}
-        </h2>
-        <p className="facilitator-access-help">{FACILITATOR_COPY.keyHelp}</p>
-        <p className="facilitator-access-helper">{FACILITATOR_COPY.keyHelper}</p>
-        <form className="facilitator-access-form" onSubmit={loadSessions}>
-          <label className="conversion-field">
-            <span className="sr-only">{FACILITATOR_COPY.keyLabel}</span>
-            <input
-              type="password"
-              className="conversion-input"
-              value={accessKey}
-              onChange={(event) => setAccessKey(event.target.value)}
-              autoComplete="off"
-              spellCheck={false}
-            />
-          </label>
-          <button type="submit" className="gold-button facilitator-load" disabled={loading}>
-            {loading ? FACILITATOR_COPY.loading : FACILITATOR_COPY.load}
-          </button>
-        </form>
-      </section>
-
-      {status ? (
-        <p className="facilitator-status" role="status">
-          {status}
-        </p>
-      ) : null}
-
+    <div className={authorized ? "facilitator-console facilitator-console--open" : "facilitator-console"}>
       {!authorized ? (
-        <p className="facilitator-empty-hint">{FACILITATOR_COPY.emptyHint}</p>
+        <section className="facilitator-access glass-card" aria-labelledby="facilitator-access-title">
+          <h2 id="facilitator-access-title" className="facilitator-section-title">
+            {FACILITATOR_COPY.keyLabel}
+          </h2>
+          <p className="facilitator-access-help">{FACILITATOR_COPY.keyHelp}</p>
+          <p className="facilitator-access-helper">{FACILITATOR_COPY.keyHelper}</p>
+          <form className="facilitator-access-form" onSubmit={loadSessions}>
+            <label className="conversion-field">
+              <span className="sr-only">{FACILITATOR_COPY.keyLabel}</span>
+              <input
+                type="password"
+                className="conversion-input"
+                value={accessKey}
+                onChange={(event) => setAccessKey(event.target.value)}
+                autoComplete="off"
+                spellCheck={false}
+              />
+            </label>
+            <button type="submit" className="gold-button facilitator-load" disabled={loading}>
+              {loading ? FACILITATOR_COPY.loading : FACILITATOR_COPY.load}
+            </button>
+          </form>
+          {status ? (
+            <p className="facilitator-status" role="status">
+              {status}
+            </p>
+          ) : null}
+        </section>
       ) : (
+        <>
+          <section className="facilitator-access facilitator-access--compact glass-card" aria-labelledby="facilitator-access-title">
+            <h2 id="facilitator-access-title" className="facilitator-section-title">
+              {FACILITATOR_COPY.keyLabel}
+            </h2>
+            <form className="facilitator-access-form facilitator-access-form--inline" onSubmit={loadSessions}>
+              <label className="conversion-field">
+                <span className="sr-only">{FACILITATOR_COPY.keyLabel}</span>
+                <input
+                  type="password"
+                  className="conversion-input"
+                  value={accessKey}
+                  onChange={(event) => setAccessKey(event.target.value)}
+                  autoComplete="off"
+                  spellCheck={false}
+                />
+              </label>
+              <button type="submit" className="gold-button facilitator-load" disabled={loading}>
+                {loading ? FACILITATOR_COPY.loading : FACILITATOR_COPY.load}
+              </button>
+            </form>
+            {status ? (
+              <p className="facilitator-status" role="status">
+                {status}
+              </p>
+            ) : null}
+          </section>
         <div className="facilitator-workspace">
           <section className="facilitator-panel" aria-labelledby="facilitator-filters-title">
             <h2 id="facilitator-filters-title" className="facilitator-section-title">
@@ -439,6 +463,7 @@ export function PersonalIntegrationFacilitatorConsole() {
             </section>
           </div>
         </div>
+        </>
       )}
     </div>
   );

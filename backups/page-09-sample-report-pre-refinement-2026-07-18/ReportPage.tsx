@@ -12,7 +12,7 @@ type ReportPageProps = {
 
 export function ReportPage({ pageId, pageNumber, totalPages, children }: ReportPageProps) {
   return (
-    <article className="report-page" id={pageId} data-page-id={pageId}>
+    <article className="report-page" data-page-id={pageId}>
       <ReportHeader pageNumber={pageNumber} totalPages={totalPages} />
       {children}
     </article>

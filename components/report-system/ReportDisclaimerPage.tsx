@@ -2,13 +2,19 @@ import { ReportHero } from "@/components/report-system/ReportHero";
 import { ReportInsightCard } from "@/components/report-system/ReportInsightCard";
 import { ReportSegmentGrid } from "@/components/report-system/ReportSegmentGrid";
 import type { CanonicalFullReport } from "@/lib/canonical-report/types";
+import { SAMPLE_CLOSING_BOUNDARY } from "@/lib/sample-report-content";
 
 type ReportDisclaimerPageProps = {
   data: CanonicalFullReport;
   variant?: "closing" | "disclaimer";
+  previewMode?: boolean;
 };
 
-export function ReportDisclaimerPage({ data, variant = "disclaimer" }: ReportDisclaimerPageProps) {
+export function ReportDisclaimerPage({
+  data,
+  variant = "disclaimer",
+  previewMode = false,
+}: ReportDisclaimerPageProps) {
   if (variant === "closing") {
     const closing = data.payload.closing_reflection;
     const reminders = [
@@ -31,6 +37,29 @@ export function ReportDisclaimerPage({ data, variant = "disclaimer" }: ReportDis
               kicker="Closing"
               title={item.title}
               body={item.body}
+            />
+          ))}
+        </ReportSegmentGrid>
+      </>
+    );
+  }
+
+  if (previewMode) {
+    const [lead, ...rest] = SAMPLE_CLOSING_BOUNDARY.lines;
+    return (
+      <>
+        <ReportHero
+          eyebrow="Final Boundary"
+          title={SAMPLE_CLOSING_BOUNDARY.title}
+          description={lead}
+        />
+        <ReportSegmentGrid>
+          {rest.map((line) => (
+            <ReportInsightCard
+              key={line.slice(0, 24)}
+              kicker="Boundary"
+              title="Remember"
+              body={line}
             />
           ))}
         </ReportSegmentGrid>

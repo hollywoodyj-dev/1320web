@@ -20,43 +20,16 @@ import {
   SIGNATURE_CODE_CARD_META,
   type SignatureCodeCardKey,
 } from "@/lib/full-report-v2/signature-static";
-import { toReportSegmentIconKey } from "@/lib/report-system/report-segment-card-image";
+import {
+  toReportSegmentIconKey,
+} from "@/lib/report-system/report-segment-card-image";
 import type { CanonicalFullReport } from "@/lib/canonical-report/types";
 import { LOCKED_PREVIEW_COPY } from "@/lib/report-system/report-access";
 import { buildReportPages } from "@/lib/report-system/buildReportPages";
-import type {
-  BuiltReportPage,
-  ReportRendererProps,
-  ReportSegmentCode,
-  ReportSurface,
-  ReportType,
-} from "@/lib/report-system/report-surface";
-import { SAMPLE_COVER, SAMPLE_FOUNDATION } from "@/lib/sample-report-content";
+import type { BuiltReportPage, ReportRendererProps, ReportSegmentCode, ReportSurface } from "@/lib/report-system/report-surface";
 
-function renderCoverPage(
-  data: CanonicalFullReport,
-  surface: ReportSurface,
-  reportType: ReportType,
-) {
+function renderCoverPage(data: CanonicalFullReport, surface: ReportSurface) {
   const { client, calculation } = data.payload;
-
-  if (reportType === "sample") {
-    return (
-      <>
-        <div className="sample-preview-badge">Preview Mode</div>
-        <ReportHero
-          eyebrow={SAMPLE_COVER.eyebrow}
-          title={SAMPLE_COVER.title}
-          description={SAMPLE_COVER.description}
-        />
-        <p className="sample-cover-boundary">{SAMPLE_COVER.boundary}</p>
-        <ReportCoverSignatureCard
-          calculation={calculation}
-          codeLayout={surface === "mobile" ? "paired-rows" : "inline"}
-        />
-      </>
-    );
-  }
 
   return (
     <>
@@ -73,38 +46,8 @@ function renderCoverPage(
   );
 }
 
-function renderOverviewPage(data: CanonicalFullReport, reportType: ReportType) {
+function renderOverviewPage(data: CanonicalFullReport) {
   const { calculation } = data.payload;
-
-  if (reportType === "sample") {
-    return (
-      <>
-        <ReportHero
-          eyebrow={SAMPLE_FOUNDATION.eyebrow}
-          title={SAMPLE_FOUNDATION.title}
-          description={SAMPLE_FOUNDATION.description}
-        />
-        <ReportSegmentGrid>
-          {SAMPLE_FOUNDATION.layers.map((layer) => {
-            const key = layer.code.toLowerCase() as SignatureCodeCardKey;
-            return (
-              <ReportInsightCard
-                key={layer.code}
-                kicker={layer.code}
-                title={layer.title}
-                body={layer.text}
-                segmentKey={toReportSegmentIconKey(layer.code as ReportSegmentCode)}
-                segmentCode={calculation[key].code}
-                icon={SIGNATURE_CODE_CARD_META[key].icon}
-                iconImageSrc={getSignatureCardImageUrl(key, calculation)}
-              />
-            );
-          })}
-        </ReportSegmentGrid>
-      </>
-    );
-  }
-
   const layers: Array<{
     segment: ReportSegmentCode;
     key: SignatureCodeCardKey;
@@ -142,43 +85,27 @@ function renderOverviewPage(data: CanonicalFullReport, reportType: ReportType) {
   );
 }
 
-function renderPageBody(
-  page: BuiltReportPage,
-  data: CanonicalFullReport,
-  surface: ReportSurface,
-  reportType: ReportType,
-) {
+function renderPageBody(page: BuiltReportPage, data: CanonicalFullReport, surface: ReportSurface) {
   if (page.access === "locked-preview") {
     const copy = LOCKED_PREVIEW_COPY[page.pageId as keyof typeof LOCKED_PREVIEW_COPY];
     return (
       <LockedPreviewBlock
         title={copy?.title || page.title}
-        description={copy?.description || "Available in the Full Report."}
-        badge={reportType === "sample" ? "Locked" : "Full Report"}
+        description={copy?.description || "Unlock the Full Report to continue this section."}
       />
     );
   }
 
   switch (page.pageType) {
     case "cover":
-      return renderCoverPage(data, surface, reportType);
+      return renderCoverPage(data, surface);
     case "overview":
-      return renderOverviewPage(data, reportType);
+      return renderOverviewPage(data);
     case "segment":
-      return page.segment ? (
-        <ReportSegmentPage
-          segment={page.segment}
-          data={data}
-          previewMode={reportType === "sample"}
-        />
-      ) : null;
+      return page.segment ? <ReportSegmentPage segment={page.segment} data={data} /> : null;
     case "integration":
       return page.segments ? (
-        <ReportIntegrationPage
-          segments={page.segments}
-          data={data}
-          previewMode={reportType === "sample"}
-        />
+        <ReportIntegrationPage segments={page.segments} data={data} />
       ) : null;
     case "practice":
       return <ReportPracticePage data={data} />;
@@ -187,13 +114,7 @@ function renderPageBody(
     case "closing":
       return <ReportDisclaimerPage data={data} variant="closing" />;
     case "disclaimer":
-      return (
-        <ReportDisclaimerPage
-          data={data}
-          variant="disclaimer"
-          previewMode={reportType === "sample"}
-        />
-      );
+      return <ReportDisclaimerPage data={data} variant="disclaimer" />;
     default:
       return null;
   }
@@ -234,7 +155,7 @@ export function ReportRenderer({ reportType, surface, data }: ReportRendererProp
                   pageNumber={page.pageNumber}
                   totalPages={page.totalPages}
                 >
-                  {renderPageBody(page, data, surface, reportType)}
+                  {renderPageBody(page, data, surface)}
                 </ReportPage>
               </div>
             </div>
@@ -253,7 +174,7 @@ export function ReportRenderer({ reportType, surface, data }: ReportRendererProp
           pageNumber={page.pageNumber}
           totalPages={page.totalPages}
         >
-          {renderPageBody(page, data, surface, reportType)}
+          {renderPageBody(page, data, surface)}
         </ReportPage>
       ))}
     </ReportRoot>

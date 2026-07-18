@@ -22,8 +22,6 @@ export const SAMPLE_REPORT_ACCESS = {
 
 export type SampleReportPageId = keyof typeof SAMPLE_REPORT_ACCESS;
 
-const AVAILABLE_IN_FULL = "Available in the Full Report.";
-
 export const LOCKED_PREVIEW_COPY: Record<
   SampleReportPageId,
   { title: string; description: string }
@@ -37,39 +35,48 @@ export const LOCKED_PREVIEW_COPY: Record<
   "integrated-foundation": { title: "", description: "" },
   "s4-shadow": {
     title: "S4 · Core Shadow Pattern",
-    description: AVAILABLE_IN_FULL,
+    description:
+      "Explore the protective pattern that once kept you safe — and how it may limit connection today.",
   },
   "s5-mission": {
     title: "S5 · Soul Mission",
-    description: AVAILABLE_IN_FULL,
+    description:
+      "Reconnect with directional themes for contribution — symbolic orientation, not a fixed career command.",
   },
   "s6-value": {
     title: "S6 · Value & Receiving",
-    description: AVAILABLE_IN_FULL,
+    description:
+      "Understand how you relate to worth, support, and receiving — without money or wealth framing.",
   },
   "s7-sovereignty": {
     title: "S7 · Soul Sovereignty",
-    description: AVAILABLE_IN_FULL,
+    description:
+      "Strengthen boundaries, choice, and self-authority through qualitative integration and lived discernment.",
   },
   "s8-contribution": {
     title: "S8 · Soul Contribution",
-    description: AVAILABLE_IN_FULL,
+    description:
+      "See how your blueprint may express through contribution — not a measure of public success.",
   },
   "s9-return": {
     title: "S9 · Return to Source",
-    description: AVAILABLE_IN_FULL,
+    description:
+      "Return-path reflection and remembrance — not a claim of spiritual superiority or final attainment.",
   },
   "seven-day-practice": {
     title: "7-Day Integration Practice",
-    description: AVAILABLE_IN_FULL,
+    description:
+      "Seven guided daily themes to integrate your full S0–S9 Soul Blueprint through reflection and action.",
   },
   "reflection-journal": {
     title: "Reflection Journal",
-    description: AVAILABLE_IN_FULL,
+    description:
+      "Journal prompts and practices that support awareness before action across your complete blueprint.",
   },
   "closing-reflection": {
     title: "Closing Reflection",
-    description: AVAILABLE_IN_FULL,
+    description:
+      "Integration reminders and closing reflection to help you embody what you have recognized.",
   },
   "final-disclaimer": { title: "", description: "" },
 };

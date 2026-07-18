@@ -1,16 +1,40 @@
+import type { CanonicalFullReport } from "@/lib/canonical-report/types";
 import { ReportHero } from "@/components/report-system/ReportHero";
 import { ReportInsightCard } from "@/components/report-system/ReportInsightCard";
 import { ReportSegmentGrid } from "@/components/report-system/ReportSegmentGrid";
-import type { CanonicalFullReport } from "@/lib/canonical-report/types";
 import { REPORT_SEGMENT_NAMES, type ReportSegmentCode } from "@/lib/report-system/report-surface";
 
 type ReportIntegrationPageProps = {
   segments: ReportSegmentCode[];
   data: CanonicalFullReport;
+  previewMode?: boolean;
 };
 
-export function ReportIntegrationPage({ segments, data }: ReportIntegrationPageProps) {
+export function ReportIntegrationPage({
+  segments,
+  data,
+  previewMode = false,
+}: ReportIntegrationPageProps) {
   const blueprint = data.payload.integrated_blueprint;
+
+  if (previewMode) {
+    return (
+      <>
+        <ReportHero
+          eyebrow="Integrated Foundation"
+          title="Four Layers · One Mirror"
+          description="When S1, S3, S2, and S0 are read together, they form the first foundation of your Soul Blueprint."
+        />
+        <ReportSegmentGrid>
+          <ReportInsightCard
+            kicker="Boundary"
+            title="Not a fixed identity"
+            body="It is a mirror for awareness, reflection, and integration."
+          />
+        </ReportSegmentGrid>
+      </>
+    );
+  }
 
   const cards = [
     {

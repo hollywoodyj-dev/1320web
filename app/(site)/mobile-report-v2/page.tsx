@@ -2,21 +2,18 @@ import type { Metadata } from "next";
 import { UnifiedReportMobileShell } from "@/components/report-system/UnifiedReportMobileShell";
 import { buildCanonicalReportFromPreview } from "@/lib/report-system/buildCanonicalReportFromPreview";
 import { resolveBirthDateFromRequest } from "@/lib/resolve-birth-date";
+import { SAMPLE_REPORT_BANNER, SAMPLE_REPORT_META } from "@/lib/sample-report-content";
 import "@/styles/report-system/index.css";
 
 export const metadata: Metadata = {
-  title: "Sample Full Report | 1320 Soul Code",
-  description:
-    "Mobile sample report — foundation layers open, advanced sections show locked previews.",
+  title: SAMPLE_REPORT_META.title,
+  description: SAMPLE_REPORT_META.description,
   robots: { index: false },
 };
 
 export const dynamic = "force-dynamic";
 
 type SearchParams = Record<string, string | string[] | undefined>;
-
-const SAMPLE_BANNER =
-  "Sample report — S1–S0 open. Advanced sections show locked previews until you unlock the Full Report.";
 
 export default async function MobileReportV2Page({
   searchParams,
@@ -31,6 +28,10 @@ export default async function MobileReportV2Page({
   });
 
   return (
-    <UnifiedReportMobileShell reportType="sample" data={report} banner={SAMPLE_BANNER} />
+    <UnifiedReportMobileShell
+      reportType="sample"
+      data={report}
+      banner={SAMPLE_REPORT_BANNER}
+    />
   );
 }

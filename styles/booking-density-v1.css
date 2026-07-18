@@ -1,0 +1,158 @@
+/* Personal Integration Session / booking — Refinement Spec v1.0 */
+
+.booking-page--refined {
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.booking-page--refined .booking-hero {
+  text-align: center;
+  padding: clamp(32px, 5vw, 48px) clamp(22px, 4vw, 40px);
+}
+
+.booking-page--refined .booking-hero-title span {
+  display: block;
+}
+
+.booking-page--refined .booking-boundary {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 36rem;
+  margin: 16px auto 22px;
+  font-size: 16.5px;
+  line-height: 1.55;
+  color: rgba(245, 234, 214, 0.72);
+}
+
+.booking-page--refined .booking-boundary-line {
+  display: block;
+}
+
+.booking-page--refined .blueprint-hero-actions {
+  justify-content: center;
+  gap: 14px 22px;
+}
+
+.booking-page--refined .booking-prose {
+  max-width: 40rem;
+  font-size: 17px;
+  line-height: 1.65;
+  color: rgba(245, 234, 214, 0.8);
+}
+
+.booking-page--refined .booking-prose p + p {
+  margin-top: 12px;
+}
+
+.booking-page--refined .booking-positioning-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  max-width: 40rem;
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: rgba(245, 234, 214, 0.82);
+}
+
+.booking-page--refined .booking-positioning-list li {
+  padding-left: 0;
+}
+
+.booking-page--refined .booking-who-lead,
+.booking-page--refined .booking-form-lead,
+.booking-page--refined .booking-after-note {
+  margin: 0 0 12px;
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: rgba(245, 234, 214, 0.78);
+}
+
+.booking-page--refined .booking-shows-up-grid .blueprint-layer-item p {
+  font-size: 15.5px;
+  line-height: 1.5;
+}
+
+.booking-page--refined .booking-session-card {
+  text-align: left;
+}
+
+.booking-page--refined .booking-session-card h3 {
+  margin-bottom: 6px;
+}
+
+.booking-page--refined .booking-reflection-questions {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 10px;
+  font-size: 16.5px;
+  line-height: 1.55;
+  color: rgba(245, 234, 214, 0.82);
+}
+
+.booking-page--refined .booking-continue-path {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  font-size: 15.5px;
+  color: rgba(239, 195, 111, 0.9);
+}
+
+.booking-page--refined .booking-continue-path li::before {
+  content: "· ";
+  opacity: 0.7;
+}
+
+.booking-page--refined .booking-login-gate-lead {
+  margin: 0 0 16px;
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: rgba(245, 234, 214, 0.8);
+}
+
+.booking-page--refined .booking-login-gate-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 20px;
+}
+
+.booking-page--refined .booking-form-secondary-path {
+  margin: 14px 0 0;
+}
+
+.booking-page--refined .booking-faq-more {
+  margin: -8px 0 0;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .booking-page--refined .conversion-pair,
+  .booking-page--refined .conversion-reading-grid,
+  .booking-page--refined .booking-shows-up-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-page--refined .booking-prose,
+  .booking-page--refined .booking-boundary,
+  .booking-page--refined .booking-who-lead,
+  .booking-page--refined .booking-positioning-list {
+    font-size: 16.5px;
+  }
+
+  .booking-page--refined .blueprint-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .booking-page--refined .blueprint-hero-actions .gold-button {
+    width: 100%;
+    text-align: center;
+  }
+}

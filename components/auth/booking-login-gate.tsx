@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SectionCard } from "@/components/section-card";
+import { BOOKING_FORM_SECTION } from "@/lib/booking-content";
 
 type BookingLoginGateProps = {
   nextPath?: string;
@@ -9,19 +9,16 @@ export function BookingLoginGate({ nextPath = "/booking" }: BookingLoginGateProp
   const next = encodeURIComponent(nextPath);
 
   return (
-    <SectionCard title="Sign in to book">
-      <p className="mb-4">
-        Create a free account once with your name and birth date. After that, booking only asks about
-        your session — no repeating the same details.
-      </p>
-      <div className="flex flex-wrap gap-3">
+    <div className="booking-login-gate">
+      <p className="booking-login-gate-lead">{BOOKING_FORM_SECTION.anonymousLead}</p>
+      <div className="booking-login-gate-actions">
         <Link href={`/signup?next=${next}`} className="gold-button">
-          CREATE ACCOUNT
+          {BOOKING_FORM_SECTION.createAccountCta}
         </Link>
-        <Link href={`/login?next=${next}`} className="blueprint-secondary-link self-center">
-          Sign in
+        <Link href={`/login?next=${next}`} className="blueprint-secondary-link">
+          {BOOKING_FORM_SECTION.signInCta}
         </Link>
       </div>
-    </SectionCard>
+    </div>
   );
 }

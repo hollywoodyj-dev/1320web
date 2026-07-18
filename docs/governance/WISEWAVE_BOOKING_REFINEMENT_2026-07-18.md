@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-18  
 **Spec:** `docs/specs/1320_BOOKING_PAGE_REFINEMENT_SPEC_v1.md`  
-**Status:** Implemented — pending Lumen QA  
+**Status:** Lumen QA PASS — ready for Wisewave visual acceptance  
 
 ## Backup
 
@@ -18,4 +18,10 @@
 - Sign-in return path preserved (`next` → booking + type hash)
 - CSS: `styles/booking-density-v1.css`
 
-**Next:** Lumen light QA → Wisewave visual acceptance
+## Lumen QA
+
+- **Overall:** PASS (390px + 1280px)
+- Artifact: `qa-artifacts/LUMEN_QA_BOOKING_REFINEMENT_v1_2026-07-18.md`
+- Commit: `21307ca`
+
+**Next:** Wisewave visual acceptance

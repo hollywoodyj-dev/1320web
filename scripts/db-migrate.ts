@@ -23,6 +23,7 @@ const schemaFiles = [
   "platform-domain-v1.6-booking-checkout.sql",
   "schema-v2-user-profile.sql",
   "schema-v2-password-auth.sql",
+  "schema-v2-optional-birth-date.sql",
 ];
 
 async function main() {

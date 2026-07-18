@@ -8,8 +8,7 @@ export const LOGIN_META = {
 
 export const SIGNUP_META = {
   title: "Create Account",
-  description:
-    "Create an account to save your Soul Blueprint, access your Full Report, and return to your bookings.",
+  description: "Create your 1320 account once — we save your details for Full Report access and Personal Integration booking.",
 };
 
 export const ACCOUNT_META = {
@@ -53,13 +52,10 @@ export const FORGOT_PASSWORD_COPY = {
 
 export const SIGNUP_COPY = {
   title: "Create your account",
-  body: "Create an account to save your Soul Blueprint, access your Full Report, and return to your bookings.",
-  bodyFromBlueprint:
-    "Create an account to save this Soul Blueprint and return to it later.",
-  afterNote: "You can connect your birth date or report after creating your account.",
+  body: "Tell us once who you are and your birth date. We use this for your Soul Code, Full Report, and session booking — you will not need to fill it again.",
   submit: "CREATE ACCOUNT",
   loginPrompt: "Already have an account?",
-  loginLink: "Sign In",
+  loginLink: "Sign in",
 };
 
 export const ACCOUNT_COPY = {

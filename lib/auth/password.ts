@@ -6,7 +6,7 @@ const HAS_DIGIT = /\d/;
 const HAS_LETTER = /[a-zA-Z]/;
 
 export const PASSWORD_REQUIREMENTS =
-  "At least 8 characters, with both letters (a–z) and numbers (0–9). Example: soul1320";
+  "Password must be at least 8 characters and include letters and numbers.";
 
 export function validatePassword(password: string): string | null {
   if (password.length < MIN_PASSWORD_LENGTH) {

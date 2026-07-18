@@ -133,6 +133,12 @@
   font-weight: 700;
 }
 
+.auth-page--refined .auth-form-after-note {
+  margin-top: 0.35rem;
+  text-align: center;
+  opacity: 0.78;
+}
+
 .auth-password-block .auth-inline-link {
   justify-self: end;
 }

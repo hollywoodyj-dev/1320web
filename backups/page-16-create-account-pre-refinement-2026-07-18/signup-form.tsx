@@ -23,6 +23,7 @@ export function SignupForm({ nextPath = "/account" }: SignupFormProps) {
     const email = String(data.get("email") ?? "").trim();
     const firstName = String(data.get("firstName") ?? "").trim();
     const lastName = String(data.get("lastName") ?? "").trim();
+    const birthDate = String(data.get("birthDate") ?? "").trim();
     const password = String(data.get("password") ?? "");
     const confirmPassword = String(data.get("confirmPassword") ?? "");
 
@@ -43,7 +44,7 @@ export function SignupForm({ nextPath = "/account" }: SignupFormProps) {
       const response = await fetch("/api/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, firstName, lastName, password, next: nextPath }),
+        body: JSON.stringify({ email, firstName, lastName, birthDate, password, next: nextPath }),
       });
       const json = (await response.json()) as {
         ok?: boolean;
@@ -81,6 +82,10 @@ export function SignupForm({ nextPath = "/account" }: SignupFormProps) {
         <input name="email" type="email" required className="conversion-input" autoComplete="email" />
       </label>
       <label className="conversion-field">
+        Birth Date
+        <input name="birthDate" type="date" required className="conversion-input" />
+      </label>
+      <label className="conversion-field">
         Password
         <input
           name="password"
@@ -106,21 +111,13 @@ export function SignupForm({ nextPath = "/account" }: SignupFormProps) {
       <button type="submit" className="gold-button auth-form-submit" disabled={loading}>
         {loading ? "CREATING ACCOUNT…" : SIGNUP_COPY.submit}
       </button>
-      {status ? (
-        <p className="conversion-status auth-form-status" role="alert">
-          {status}
-        </p>
-      ) : null}
+      {status ? <p className="conversion-status auth-form-status">{status}</p> : null}
       <p className="auth-form-footer">
         {SIGNUP_COPY.loginPrompt}{" "}
-        <Link
-          href={`/login?next=${encodeURIComponent(nextPath)}`}
-          className="auth-inline-link auth-inline-link--strong"
-        >
+        <Link href={`/login?next=${encodeURIComponent(nextPath)}`} className="blueprint-secondary-link">
           {SIGNUP_COPY.loginLink}
         </Link>
       </p>
-      <p className="auth-form-hint auth-form-after-note">{SIGNUP_COPY.afterNote}</p>
     </form>
   );
 }

@@ -51,3 +51,25 @@ export function authReturnContextLead(context: AuthReturnContext): string | null
       return null;
   }
 }
+
+/** Signup card note when `next` points at a protected destination. */
+export function signupReturnContextNote(context: AuthReturnContext): string | null {
+  switch (context) {
+    case "full_report":
+    case "mobile_report":
+      return "You’ll return to your report after creating your account.";
+    case "booking":
+      return "You’ll return to your booking flow after creating your account.";
+    case "checkout_recovery":
+      return "You’ll continue recovery after creating your account.";
+    case "account":
+      return "You’ll open your account after signing up.";
+    default:
+      return null;
+  }
+}
+
+/** True when signup copy should emphasize saving “this” Soul Blueprint. */
+export function isBlueprintReturnContext(context: AuthReturnContext): boolean {
+  return context === "full_report" || context === "mobile_report";
+}

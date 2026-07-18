@@ -32,23 +32,21 @@ export type UpsertUserAccountInput = {
   email: string;
   firstName: string;
   lastName: string;
-  /** Optional at signup — connect Soul Blueprint / report later when absent. */
-  birthDate?: string | null;
+  birthDate: string;
   passwordHash?: string;
 };
 
-/** Signup — save profile (name required; birth date optional) and return user row. */
+/** Signup — save profile once (name + birth date) and return user row. */
 export async function upsertUserAccount(input: UpsertUserAccountInput): Promise<UserRow> {
   const db = getSql();
   const normalized = input.email.trim().toLowerCase();
-  const birthDate = input.birthDate?.trim() || null;
   const rows = await db<UserRow[]>`
     INSERT INTO users (email, first_name, last_name, birth_date, password_hash)
     VALUES (
       ${normalized},
       ${input.firstName.trim()},
       ${input.lastName.trim()},
-      ${birthDate},
+      ${input.birthDate},
       ${input.passwordHash ?? null}
     )
     ON CONFLICT (email) DO UPDATE SET

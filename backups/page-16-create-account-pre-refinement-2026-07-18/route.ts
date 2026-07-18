@@ -39,20 +39,12 @@ export async function POST(request: Request) {
   const email = body.email?.trim();
   const firstName = body.firstName?.trim();
   const lastName = body.lastName?.trim();
-  const birthDateRaw = body.birthDate?.trim();
-  const birthDate = birthDateRaw && isValidBirthDate(birthDateRaw) ? birthDateRaw : null;
+  const birthDate = body.birthDate?.trim();
   const password = body.password ?? "";
 
-  if (!isValidEmail(email) || !firstName || !lastName) {
+  if (!isValidEmail(email) || !firstName || !lastName || !isValidBirthDate(birthDate)) {
     return NextResponse.json(
-      { ok: false, error: "Email, first name, and last name are required." },
-      { status: 400 },
-    );
-  }
-
-  if (birthDateRaw && !birthDate) {
-    return NextResponse.json(
-      { ok: false, error: "Birth date must be a valid YYYY-MM-DD value when provided." },
+      { ok: false, error: "Email, first name, last name, and birth date are required." },
       { status: 400 },
     );
   }
@@ -71,9 +63,7 @@ export async function POST(request: Request) {
       birthDate,
       passwordHash,
     });
-    if (birthDate) {
-      await ensureSoulReportForUserBirthDate({ userId: user.id, birthDate });
-    }
+    await ensureSoulReportForUserBirthDate({ userId: user.id, birthDate });
     await setUserSession(user.id);
 
     return NextResponse.json({

@@ -1,0 +1,152 @@
+/* Disclaimer density — calm legal boundary page (Page 12). */
+
+.disclaimer-page--refined {
+  --disclaimer-gap: clamp(18px, 3.5vw, 28px);
+  max-width: 920px;
+  margin: 0 auto;
+  padding-bottom: 48px;
+}
+
+.disclaimer-page--refined .disclaimer-hero {
+  margin-bottom: var(--disclaimer-gap);
+  text-align: center;
+}
+
+.disclaimer-page--refined .disclaimer-hero-subline {
+  margin: 14px 0 0;
+  color: rgba(230, 199, 120, 0.9);
+  font-size: 16.5px;
+  line-height: 1.55;
+}
+
+.disclaimer-stack {
+  display: grid;
+  gap: var(--disclaimer-gap);
+}
+
+.disclaimer-page--refined .disclaimer-card {
+  border: 1px solid rgba(214, 181, 109, 0.18);
+  border-radius: 22px;
+  background: rgba(5, 14, 27, 0.62);
+  padding: clamp(24px, 4vw, 36px);
+  box-shadow: none;
+}
+
+.disclaimer-page--refined .disclaimer-subtitle {
+  margin: 0 0 14px;
+  color: #f4d88a;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.disclaimer-page--refined .disclaimer-copy {
+  font-size: 16.5px;
+  line-height: 1.68;
+  color: rgba(245, 234, 214, 0.78);
+}
+
+.disclaimer-page--refined .disclaimer-copy p {
+  margin: 0 0 12px;
+}
+
+.disclaimer-page--refined .disclaimer-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.disclaimer-segment-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.disclaimer-segment-item {
+  padding: 16px 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(214, 181, 109, 0.16);
+  background: rgba(8, 14, 30, 0.45);
+}
+
+.disclaimer-segment-item h3 {
+  margin: 0 0 8px;
+  color: rgba(246, 240, 228, 0.95);
+  font-size: 15.5px;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+
+.disclaimer-segment-item p {
+  margin: 0;
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: rgba(245, 234, 214, 0.76);
+}
+
+.disclaimer-subsections {
+  display: grid;
+  gap: 22px;
+}
+
+.disclaimer-subsection h3 {
+  margin: 0 0 10px;
+  color: rgba(246, 240, 228, 0.92);
+  font-size: 1.05rem;
+  font-weight: 650;
+}
+
+.disclaimer-page--refined .disclaimer-cta {
+  margin-top: calc(var(--disclaimer-gap) + 8px);
+  padding: clamp(24px, 4vw, 36px);
+  text-align: center;
+  border: 1px solid rgba(214, 181, 109, 0.18);
+  border-radius: 22px;
+  background: rgba(5, 14, 27, 0.62);
+}
+
+.disclaimer-page--refined .disclaimer-cta h2 {
+  margin: 0 0 12px;
+  color: #f4d88a;
+  font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+}
+
+.disclaimer-page--refined .disclaimer-cta > p {
+  margin: 0 auto 20px;
+  max-width: 34rem;
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: rgba(245, 234, 214, 0.78);
+}
+
+.disclaimer-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .disclaimer-page--refined .disclaimer-card,
+  .disclaimer-page--refined .disclaimer-cta {
+    padding: 24px;
+  }
+
+  .disclaimer-page--refined .disclaimer-copy,
+  .disclaimer-segment-item p,
+  .disclaimer-page--refined .disclaimer-cta > p {
+    font-size: 16.5px;
+    line-height: 1.65;
+  }
+
+  .disclaimer-cta-actions {
+    flex-direction: column;
+  }
+
+  .disclaimer-cta-actions .gold-button,
+  .disclaimer-cta-actions .blueprint-secondary-link {
+    width: 100%;
+  }
+}

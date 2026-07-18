@@ -30,6 +30,7 @@
     "qa:faq-refinement-v1": "npx tsx scripts/lumen-qa-faq-refinement-v1.ts",
     "qa:disclaimer-refinement-v1": "npx tsx scripts/lumen-qa-disclaimer-refinement-v1.ts",
     "qa:privacy-refinement-v1": "npx tsx scripts/lumen-qa-privacy-refinement-v1.ts",
+    "qa:terms-refinement-v1": "npx tsx scripts/lumen-qa-terms-refinement-v1.ts",
     "smoke:commercial-overlay-step2": "npm run smoke:commercial-overlay",
     "smoke:full-report-payload": "npx tsx scripts/smoke-full-report-payload.ts",
     "smoke:full-report-v2-sample": "npx tsx scripts/smoke-full-report-v2-sample.ts",

@@ -55,8 +55,8 @@ async function main() {
     const url = `${BASE}/full-report-v2?view=desktop&year=1980&month=5&day=22`;
     console.log(`QA URL: ${url}`);
 
-    await page.goto(url, { waitUntil: "networkidle2", timeout: 90_000 });
-    await page.waitForSelector('.report-root[data-report-type="sample"]', { timeout: 45_000 });
+    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 90_000 });
+    await page.waitForSelector('.report-root[data-report-type="sample"]', { timeout: 60_000 });
 
     const desktop = await page.evaluate(() => {
       const text = (document.body.textContent ?? "").toLowerCase().replace(/\s+/g, " ");

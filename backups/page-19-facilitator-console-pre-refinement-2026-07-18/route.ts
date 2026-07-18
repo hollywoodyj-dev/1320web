@@ -4,44 +4,27 @@ import {
   verifyFacilitatorRequest,
 } from "@/lib/personal-integration/facilitator-auth";
 import {
-  isFollowUpEmailConfigured,
   isPlatformSessionStatus,
   listFacilitatorSessions,
   updateFacilitatorSession,
 } from "@/lib/personal-integration/facilitator-sessions";
 import { isDatabaseConfigured } from "@/lib/platform-config";
 
-export const dynamic = "force-dynamic";
-
-function jsonNoStore(body: unknown, init?: { status?: number }) {
-  return NextResponse.json(body, {
-    status: init?.status ?? 200,
-    headers: {
-      "Cache-Control": "no-store",
-      "X-Robots-Tag": "noindex, nofollow, noarchive",
-    },
-  });
-}
-
-/** FS-006.1 — List Personal Integration sessions (facilitator). Server-side key required. */
+/** FS-006.1 — List Personal Integration sessions (facilitator). */
 export async function GET(request: Request) {
   if (!isDatabaseConfigured() || !isFacilitatorAccessConfigured()) {
-    return jsonNoStore({ ok: false, error: "Facilitator console not configured." }, { status: 503 });
+    return NextResponse.json({ ok: false, error: "Facilitator console not configured." }, { status: 503 });
   }
   if (!verifyFacilitatorRequest(request)) {
-    return jsonNoStore({ ok: false, error: "Unauthorized." }, { status: 401 });
+    return NextResponse.json({ ok: false, error: "Unauthorized." }, { status: 401 });
   }
 
   try {
     const sessions = await listFacilitatorSessions();
-    return jsonNoStore({
-      ok: true,
-      sessions,
-      followUpEmailConfigured: isFollowUpEmailConfigured(),
-    });
+    return NextResponse.json({ ok: true, sessions });
   } catch (error) {
     console.error("[facilitator/sessions] list failed", error);
-    return jsonNoStore({ ok: false, error: "Failed to list sessions." }, { status: 500 });
+    return NextResponse.json({ ok: false, error: "Failed to list sessions." }, { status: 500 });
   }
 }
 
@@ -51,27 +34,27 @@ type PatchBody = {
   summary?: string | null;
 };
 
-/** FS-006.1 — Update session status / summary (facilitator). Server-side key required. */
+/** FS-006.1 — Update session status / summary (facilitator). */
 export async function PATCH(request: Request) {
   if (!isDatabaseConfigured() || !isFacilitatorAccessConfigured()) {
-    return jsonNoStore({ ok: false, error: "Facilitator console not configured." }, { status: 503 });
+    return NextResponse.json({ ok: false, error: "Facilitator console not configured." }, { status: 503 });
   }
   if (!verifyFacilitatorRequest(request)) {
-    return jsonNoStore({ ok: false, error: "Unauthorized." }, { status: 401 });
+    return NextResponse.json({ ok: false, error: "Unauthorized." }, { status: 401 });
   }
 
   let body: PatchBody;
   try {
     body = (await request.json()) as PatchBody;
   } catch {
-    return jsonNoStore({ ok: false, error: "Invalid JSON body." }, { status: 400 });
+    return NextResponse.json({ ok: false, error: "Invalid JSON body." }, { status: 400 });
   }
 
   const sessionId = body.sessionId?.trim();
   const status = body.status?.trim();
 
   if (!sessionId || !status || !isPlatformSessionStatus(status)) {
-    return jsonNoStore({ ok: false, error: "sessionId and valid status required." }, { status: 400 });
+    return NextResponse.json({ ok: false, error: "sessionId and valid status required." }, { status: 400 });
   }
 
   try {
@@ -81,12 +64,11 @@ export async function PATCH(request: Request) {
       summary: body.summary?.trim() || null,
     });
     if (!updated) {
-      return jsonNoStore({ ok: false, error: "Session not found." }, { status: 404 });
+      return NextResponse.json({ ok: false, error: "Session not found." }, { status: 404 });
     }
 
-    return jsonNoStore({
+    return NextResponse.json({
       ok: true,
-      followUpEmailConfigured: isFollowUpEmailConfigured(),
       session: {
         id: updated.id,
         status: updated.status,
@@ -98,6 +80,6 @@ export async function PATCH(request: Request) {
     });
   } catch (error) {
     console.error("[facilitator/sessions] update failed", error);
-    return jsonNoStore({ ok: false, error: "Failed to update session." }, { status: 500 });
+    return NextResponse.json({ ok: false, error: "Failed to update session." }, { status: 500 });
   }
 }

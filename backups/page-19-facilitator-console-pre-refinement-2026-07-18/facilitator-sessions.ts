@@ -16,49 +16,33 @@ export function isPlatformSessionStatus(value: string): value is PlatformSession
   return (VALID_STATUSES as string[]).includes(value);
 }
 
-function metaString(meta: Record<string, unknown> | null | undefined, key: string): string | null {
-  const value = meta?.[key];
-  return typeof value === "string" && value.trim() ? value.trim() : null;
-}
-
 export async function listFacilitatorSessions() {
   const rows = await listPersonalIntegrationSessions(50);
-  return rows.map((row) => {
-    const meta = (row.meta ?? {}) as Record<string, unknown>;
-    return {
-      id: row.id,
-      status: row.status,
-      sessionVariant: row.session_variant,
-      sessionVariantLabel:
-        row.session_variant && row.session_variant in SESSION_VARIANT_LABELS
-          ? SESSION_VARIANT_LABELS[row.session_variant as keyof typeof SESSION_VARIANT_LABELS]
-          : "Personal Integration Session",
-      growthEdge: row.growth_edge,
-      summary: row.summary,
-      clientName:
-        typeof meta.clientName === "string" ? meta.clientName : row.user_first_name ?? "Guest",
-      clientEmail: row.user_email,
-      bookingNotes: metaString(meta, "notes") ?? metaString(meta, "bookingNotes"),
-      birthDate: metaString(meta, "birthDate"),
-      createdAt: row.created_at.toISOString(),
-      updatedAt: (row.completed_at ?? row.started_at ?? row.created_at).toISOString(),
-      startedAt: row.started_at?.toISOString() ?? null,
-      completedAt: row.completed_at?.toISOString() ?? null,
-      prepUrl: row.prep_access_token
-        ? `/integration/prep/${row.id}?token=${row.prep_access_token}`
-        : null,
-      followUpUrl: row.follow_up_access_token
-        ? `/integration/follow-up/${row.id}?token=${row.follow_up_access_token}`
-        : null,
-      followUpEmailSentAt: metaString(meta, "followUpEmailSentAt"),
-      followUpEmailFailedAt: metaString(meta, "followUpEmailFailedAt"),
-    };
-  });
-}
-
-/** Public boolean only — never expose provider or env names. */
-export function isFollowUpEmailConfigured(): boolean {
-  return Boolean(process.env.RESEND_API_KEY?.trim());
+  return rows.map((row) => ({
+    id: row.id,
+    status: row.status,
+    sessionVariant: row.session_variant,
+    sessionVariantLabel:
+      row.session_variant && row.session_variant in SESSION_VARIANT_LABELS
+        ? SESSION_VARIANT_LABELS[row.session_variant as keyof typeof SESSION_VARIANT_LABELS]
+        : "Personal Integration Session",
+    growthEdge: row.growth_edge,
+    summary: row.summary,
+    clientName:
+      typeof row.meta?.clientName === "string"
+        ? row.meta.clientName
+        : row.user_first_name ?? "Guest",
+    clientEmail: row.user_email,
+    createdAt: row.created_at.toISOString(),
+    startedAt: row.started_at?.toISOString() ?? null,
+    completedAt: row.completed_at?.toISOString() ?? null,
+    prepUrl: row.prep_access_token
+      ? `/integration/prep/${row.id}?token=${row.prep_access_token}`
+      : null,
+    followUpUrl: row.follow_up_access_token
+      ? `/integration/follow-up/${row.id}?token=${row.follow_up_access_token}`
+      : null,
+  }));
 }
 
 export async function updateFacilitatorSession(input: {

@@ -8,33 +8,24 @@ import { GENERATE_CODE_CTA, isNavActive, PRIMARY_NAV } from "@/lib/site-nav";
 
 type SiteHeaderProps = {
   headerAccount?: { label: string; entitledReportId: string | null } | null;
-  variant?: "default" | "internal";
 };
 
-export function SiteHeader({ headerAccount, variant = "default" }: SiteHeaderProps) {
+export function SiteHeader({ headerAccount }: SiteHeaderProps) {
   const pathname = usePathname();
-  const internal = variant === "internal";
 
-  const nav = internal
-    ? [
-        { href: "/integration/facilitator", label: "FACILITATOR CONSOLE" },
-        headerAccount
-          ? { href: "/account", label: "RETURN TO ACCOUNT" }
-          : { href: "/login?next=/integration/facilitator", label: "SIGN IN" },
-      ]
-    : [
-        ...PRIMARY_NAV,
-        headerAccount
-          ? { href: "/account", label: "MY ACCOUNT", matchPrefix: true as const }
-          : { href: "/login", label: "SIGN IN", matchPrefix: true as const },
-      ];
+  const nav = [
+    ...PRIMARY_NAV,
+    headerAccount
+      ? { href: "/account", label: "MY ACCOUNT", matchPrefix: true as const }
+      : { href: "/login", label: "SIGN IN", matchPrefix: true as const },
+  ];
 
   return (
     <TopbarShell
       className="inner-topbar"
       brand={
         <div className="brand-lockup">
-          <Link href={internal ? "/integration/facilitator" : "/"} className="brand-lockup-link">
+          <Link href="/" className="brand-lockup-link">
             <div className="brand-image-shell brand-image-shell-small">
               <Image
                 src="/1320-logo.jpeg"
@@ -58,19 +49,11 @@ export function SiteHeader({ headerAccount, variant = "default" }: SiteHeaderPro
       nav={nav}
       linkClassName={(item) => (isNavActive(pathname, item) ? "active" : undefined)}
       ctaHref={
-        internal
-          ? undefined
-          : headerAccount?.entitledReportId
-            ? `/my-report/${headerAccount.entitledReportId}`
-            : GENERATE_CODE_CTA.href
+        headerAccount?.entitledReportId
+          ? `/my-report/${headerAccount.entitledReportId}`
+          : GENERATE_CODE_CTA.href
       }
-      ctaLabel={
-        internal
-          ? undefined
-          : headerAccount?.entitledReportId
-            ? "MY FULL REPORT"
-            : GENERATE_CODE_CTA.label
-      }
+      ctaLabel={headerAccount?.entitledReportId ? "MY FULL REPORT" : GENERATE_CODE_CTA.label}
     />
   );
 }

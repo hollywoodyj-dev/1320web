@@ -12,22 +12,8 @@ function withMobileReportHeader(request: NextRequest): NextResponse {
   return NextResponse.next({ request: { headers: requestHeaders } });
 }
 
-function withInternalNoStore(request: NextRequest): NextResponse {
-  const response = NextResponse.next();
-  response.headers.set("Cache-Control", "no-store");
-  response.headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
-  return response;
-}
-
 export function middleware(request: NextRequest) {
   const { pathname, searchParams } = request.nextUrl;
-
-  if (
-    pathname === "/integration/facilitator" ||
-    pathname.startsWith("/api/personal-integration/facilitator")
-  ) {
-    return withInternalNoStore(request);
-  }
 
   if (ENTITLED_REPORT_PATH.test(pathname)) {
     if (searchParams.get("view") !== "desktop" && preferMobileReportFromRequest(request)) {
@@ -61,11 +47,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: [
-    "/full-report-v2",
-    "/full-report-v2-phase1",
-    "/my-report/:reportId",
-    "/integration/facilitator",
-    "/api/personal-integration/facilitator/:path*",
-  ],
+  matcher: ["/full-report-v2", "/full-report-v2-phase1", "/my-report/:reportId"],
 };

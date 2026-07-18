@@ -13,6 +13,24 @@ const nextConfig: NextConfig = {
     "http://localhost:3000",
     "http://172.16.0.21:3000",
   ],
+  async headers() {
+    return [
+      {
+        source: "/integration/facilitator",
+        headers: [
+          { key: "Cache-Control", value: "no-store" },
+          { key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" },
+        ],
+      },
+      {
+        source: "/api/personal-integration/facilitator/:path*",
+        headers: [
+          { key: "Cache-Control", value: "no-store" },
+          { key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

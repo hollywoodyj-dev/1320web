@@ -60,14 +60,10 @@ function isAuthRoute(pathname: string | null): boolean {
   );
 }
 
-function isFacilitatorConsoleRoute(pathname: string | null): boolean {
-  return pathname === "/integration/facilitator";
-}
-
-/** Quiet compact footer — auth gateways, reflection entry, internal console. */
+/** Quiet compact footer — auth gateways + Wisewave reflection entry. */
 function isCompactFooterRoute(pathname: string | null): boolean {
   if (!pathname) return false;
-  return isAuthRoute(pathname) || pathname === "/reflect" || isFacilitatorConsoleRoute(pathname);
+  return isAuthRoute(pathname) || pathname === "/reflect";
 }
 
 /** Cosmic layout for inner routes — homepage keeps its own shell in `app/page.tsx`. */
@@ -80,7 +76,6 @@ export function PageShell({ children, leadsEnabled, headerAccount, preferMobileR
   const unifiedWebReport = isUnifiedReportWebRoute(pathname) && !mobileReport;
   const printReport = isPrintReportRoute(pathname);
   const authRoute = isAuthRoute(pathname);
-  const facilitatorConsole = isFacilitatorConsoleRoute(pathname);
   const compactFooter = isCompactFooterRoute(pathname);
 
   if (printReport) {
@@ -128,31 +123,19 @@ export function PageShell({ children, leadsEnabled, headerAccount, preferMobileR
   }
 
   return (
-    <main
-      className={[
-        "page-shell",
-        "page-shell-inner",
-        facilitatorConsole ? "page-shell--facilitator" : "",
-      ]
-        .filter(Boolean)
-        .join(" ")}
-    >
+    <main className="page-shell page-shell-inner">
       <SkipLink />
       <div className="page-stars" aria-hidden="true" />
       <div className="page-glow page-glow-left" aria-hidden="true" />
       <div className="page-glow page-glow-right" aria-hidden="true" />
       <div className="page-frame">
-        <SiteHeader
-          headerAccount={headerAccount}
-          variant={facilitatorConsole ? "internal" : "default"}
-        />
+        <SiteHeader headerAccount={headerAccount} />
         <div id="main-content" className="inner-main" tabIndex={-1}>
           {children}
         </div>
         <SiteFooter
           leadsEnabled={compactFooter ? false : leadsEnabled}
-          variant={facilitatorConsole ? "internal" : compactFooter ? "compact" : "full"}
-          internalLabel={facilitatorConsole ? "Internal Facilitator Console" : undefined}
+          variant={compactFooter ? "compact" : "full"}
         />
       </div>
     </main>

@@ -3,18 +3,13 @@ import { SectionCard } from "@/components/section-card";
 type FaqItem = { q: string; a: string };
 
 type FaqSectionProps = {
-  id?: string;
   title?: string;
   items: FaqItem[];
 };
 
-export function FaqSection({
-  id,
-  title = "Frequently Asked Questions",
-  items,
-}: FaqSectionProps) {
+export function FaqSection({ title = "Frequently Asked Questions", items }: FaqSectionProps) {
   return (
-    <SectionCard id={id} title={title}>
+    <SectionCard title={title}>
       <div className="blueprint-faq">
         {items.map((item) => (
           <details key={item.q} className="blueprint-faq-item">

@@ -82,7 +82,7 @@ export function ReportSegmentPage({
 
       {unlockLabel ? (
         <div className="sample-segment-unlock">
-          <Link href="/full-report" className="locked-cta">
+          <Link href="/full-report" className="blueprint-secondary-link sample-segment-unlock-link">
             {unlockLabel}
           </Link>
         </div>

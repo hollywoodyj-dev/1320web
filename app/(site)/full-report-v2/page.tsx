@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { UnifiedReportWebShell } from "@/components/report-system/UnifiedReportWebShell";
 import { buildCanonicalReportFromPreview } from "@/lib/report-system/buildCanonicalReportFromPreview";
 import { resolveBirthDateFromRequest } from "@/lib/resolve-birth-date";
-import { SAMPLE_REPORT_BANNER, SAMPLE_REPORT_META } from "@/lib/sample-report-content";
+import { SAMPLE_REPORT_META } from "@/lib/sample-report-content";
 import "@/styles/report-system/index.css";
 
 export const metadata: Metadata = {
@@ -27,11 +27,5 @@ export default async function FullReportV2Page({
     birth_date_display: "May 22, 1980",
   });
 
-  return (
-    <UnifiedReportWebShell
-      reportType="sample"
-      data={report}
-      banner={SAMPLE_REPORT_BANNER}
-    />
-  );
+  return <UnifiedReportWebShell reportType="sample" data={report} />;
 }

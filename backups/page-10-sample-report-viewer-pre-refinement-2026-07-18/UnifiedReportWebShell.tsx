@@ -28,19 +28,13 @@ export function UnifiedReportWebShell({
 
   return (
     <div
-      className={[
-        "unified-report-web-shell",
-        isSample ? "unified-report-web-shell--sample sample-report-viewer" : "",
-      ]
+      className={["unified-report-web-shell", isSample ? "unified-report-web-shell--sample" : ""]
         .filter(Boolean)
         .join(" ")}
-      data-report-type={isSample ? "sample" : undefined}
-      data-surface={isSample ? "web" : undefined}
     >
       {isSample ? <SampleReportIntro /> : null}
 
-      {/* Sample viewer uses intro + sticky nav; skip sticky banner to reduce preview repetition. */}
-      {!isSample && banner ? (
+      {banner ? (
         <div className="unified-report-web-banner" role="note">
           {banner}
         </div>

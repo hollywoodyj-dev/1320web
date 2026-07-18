@@ -14,10 +14,6 @@ import { ReportSegmentGrid } from "@/components/report-system/ReportSegmentGrid"
 import { ReportSegmentPage } from "@/components/report-system/ReportSegmentPage";
 import { ReportCoverSignatureCard } from "@/components/report-system/ReportCoverSignatureCard";
 import { ReportInsightCard } from "@/components/report-system/ReportInsightCard";
-import {
-  SampleLockedPreviewSection,
-  SampleReportChapterLabel,
-} from "@/components/report-system/SampleReportChrome";
 import { useUnifiedReportMobileTrack } from "@/components/report-system/use-unified-report-mobile-nav";
 import { getSignatureCardImageUrl } from "@/lib/full-report-v2/signature-card-images";
 import {
@@ -35,12 +31,7 @@ import type {
   ReportSurface,
   ReportType,
 } from "@/lib/report-system/report-surface";
-import {
-  isSampleLockedPageId,
-  SAMPLE_CHAPTERS,
-  SAMPLE_COVER,
-  SAMPLE_FOUNDATION,
-} from "@/lib/sample-report-content";
+import { SAMPLE_COVER, SAMPLE_FOUNDATION } from "@/lib/sample-report-content";
 
 function renderCoverPage(
   data: CanonicalFullReport,
@@ -212,53 +203,6 @@ function isMobilePageScrollable(page: BuiltReportPage): boolean {
   return page.pageType !== "cover";
 }
 
-function SampleWebReportStack({
-  pages,
-  data,
-}: {
-  pages: BuiltReportPage[];
-  data: CanonicalFullReport;
-}) {
-  const byId = useMemo(() => new Map(pages.map((page) => [page.pageId, page])), [pages]);
-
-  return (
-    <>
-      {SAMPLE_CHAPTERS.map((chapter) => {
-        if (chapter.id === "chapter-locked") {
-          return (
-            <div key={chapter.id} className="report-chapter-group">
-              <SampleReportChapterLabel label={chapter.label} />
-              <SampleLockedPreviewSection />
-            </div>
-          );
-        }
-
-        const chapterPages = chapter.pageIds
-          .map((pageId) => byId.get(pageId))
-          .filter((page): page is BuiltReportPage => Boolean(page));
-
-        if (!chapterPages.length) return null;
-
-        return (
-          <div key={chapter.id} className="report-chapter-group">
-            <SampleReportChapterLabel label={chapter.label} />
-            {chapterPages.map((page) => (
-              <ReportPage
-                key={page.pageId}
-                pageId={page.pageId}
-                pageNumber={page.pageNumber}
-                totalPages={page.totalPages}
-              >
-                {renderPageBody(page, data, "web", "sample")}
-              </ReportPage>
-            ))}
-          </div>
-        );
-      })}
-    </>
-  );
-}
-
 export function ReportRenderer({ reportType, surface, data }: ReportRendererProps) {
   const pages = useMemo(() => buildReportPages(reportType), [reportType]);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -296,15 +240,6 @@ export function ReportRenderer({ reportType, surface, data }: ReportRendererProp
             </div>
           ))}
         </div>
-      </ReportRoot>
-    );
-  }
-
-  if (reportType === "sample") {
-    const openPages = pages.filter((page) => !isSampleLockedPageId(page.pageId));
-    return (
-      <ReportRoot reportType={reportType} surface={surface} className="sample-report-stack">
-        <SampleWebReportStack pages={openPages} data={data} />
       </ReportRoot>
     );
   }

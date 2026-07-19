@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { MagicLinkVerifyForm } from "@/components/auth/magic-link-verify-form";
 import { SectionCard } from "@/components/section-card";
+import { safeNextPath } from "@/lib/auth/next-path";
 import { isDatabaseConfigured } from "@/lib/platform-config";
 
 export const metadata: Metadata = {
@@ -18,8 +19,8 @@ export default async function MagicLinkVerifyPage({
 }) {
   const params = await searchParams;
   const token = typeof params.token === "string" ? params.token : "";
-  const nextPath =
-    typeof params.next === "string" && params.next.startsWith("/") ? params.next : "/my-report";
+  const nextRaw = Array.isArray(params.next) ? params.next[0] : params.next;
+  const nextPath = safeNextPath(nextRaw, "/my-report");
 
   if (!isDatabaseConfigured()) {
     return (

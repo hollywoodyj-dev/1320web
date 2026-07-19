@@ -126,6 +126,31 @@ async function main() {
       `footer mantra: ${desktop.mantra}`,
     ]);
 
+    const passwordPlaceholderOk = desktop.passwordPlaceholder === "enter your password";
+    record("Password placeholder", passwordPlaceholderOk, [
+      `placeholder: ${desktop.passwordPlaceholder}`,
+    ]);
+
+    // Compact footer on sibling auth routes
+    for (const route of ["/signup", "/forgot-password", "/auth/verify"]) {
+      await page.goto(`${BASE}${route}`, { waitUntil: "domcontentloaded", timeout: 90_000 });
+      const authRoute = await page.evaluate(() => {
+        return {
+          compactFooter: Boolean(document.querySelector(".auth-compact-footer")),
+          fullFooterGrid: Boolean(document.querySelector(".site-footer .footer-column")),
+          mantra: (
+            document.querySelector(".auth-compact-footer-mantra, .footer-mantra")?.textContent ?? ""
+          ).trim(),
+        };
+      });
+      const mantraOk = authRoute.mantra.toUpperCase().includes("NOT A FIXED IDENTITY");
+      record(`Compact footer ${route}`, authRoute.compactFooter && !authRoute.fullFooterGrid && mantraOk, [
+        `compact footer: ${authRoute.compactFooter}`,
+        `full footer grid: ${authRoute.fullFooterGrid}`,
+        `footer mantra: ${authRoute.mantra}`,
+      ]);
+    }
+
     await page.goto(`${BASE}/forgot-password`, {
       waitUntil: "domcontentloaded",
       timeout: 90_000,
@@ -145,6 +170,49 @@ async function main() {
       `back to sign in: ${forgotPage.hasBack}`,
       `compact footer: ${forgotPage.compactFooter}`,
     ]);
+
+    // Return-context notes for protected destinations
+    for (const [nextPath, expected] of [
+      ["/my-report/demo", "return to your report"],
+      ["/booking", "return to your booking flow"],
+      ["/checkout", "return to checkout"],
+      ["/account", "return to your account"],
+    ] as const) {
+      await page.goto(`${BASE}/login?next=${encodeURIComponent(nextPath)}`, {
+        waitUntil: "domcontentloaded",
+        timeout: 90_000,
+      });
+      const note = await page.evaluate(() =>
+        (document.body.textContent ?? "").toLowerCase().replace(/\s+/g, " "),
+      );
+      record(`Return context next=${nextPath}`, note.includes(expected), [
+        `expected note fragment: ${expected}`,
+        `present: ${note.includes(expected)}`,
+      ]);
+    }
+
+    // Safe next path — external / protocol-relative must not appear as form action next
+    const { safeNextPath } = await import("@/lib/auth/next-path");
+    const safeCases = [
+      [safeNextPath("/my-report/abc"), "/my-report/abc"],
+      [safeNextPath("https://evil.example/phish"), "/account"],
+      [safeNextPath("//evil.example"), "/account"],
+      [safeNextPath("/\\evil"), "/account"],
+      [safeNextPath(""), "/account"],
+      [safeNextPath(null), "/account"],
+    ] as const;
+    const safeOk = safeCases.every(([got, want]) => got === want);
+    record("safeNextPath rejects external redirects", safeOk, safeCases.map(([got, want], i) => {
+      const inputs = [
+        "/my-report/abc",
+        "https://evil.example/phish",
+        "//evil.example",
+        "/\\evil",
+        '""',
+        "null",
+      ];
+      return `${inputs[i]} → ${got} (want ${want})`;
+    }));
 
     await page.goto(url, { waitUntil: "domcontentloaded", timeout: 90_000 });
     await page.setViewport(VIEWPORT);
@@ -174,7 +242,7 @@ async function main() {
   const md = [
     "# Lumen QA — Sign In Page Refinement v1.0",
     "",
-    `Date: 2026-07-18`,
+    `Date: 2026-07-19`,
     `Base: ${BASE}`,
     `Verdict: **${allPass ? "PASS" : "FAIL"}**`,
     "",

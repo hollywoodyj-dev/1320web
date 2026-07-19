@@ -3,7 +3,7 @@
 **Date:** 2026-07-18  
 **Spec:** `docs/specs/1320_PRIVACY_POLICY_PAGE_REFINEMENT_SPEC_v1.md`  
 **Route:** `/privacy`  
-**Status:** Visual accepted (2026-07-19) — content-state PASS WITH REQUIRED COPY FIXES applied
+**Status:** Visual accepted + required copy fixes deployed — production Lumen PASS (2026-07-19); ready for Wisewave content closure
 
 ## Acceptance notes
 
@@ -29,7 +29,9 @@ What is working:
 
 ## Evidence
 
+**Lumen production QA:** **PASS** (no Phase 1 / waitlist-era framing)  
 **Live:** https://www.1320soulcode.com/privacy  
-**Artifact:** `qa-artifacts/LUMEN_QA_PRIVACY_REFINEMENT_v1_2026-07-18.md`
+**Artifact:** `qa-artifacts/LUMEN_QA_PRIVACY_REFINEMENT_v1_2026-07-18.md`  
+**Commit:** `0747502`
 
-**Page 13 · Privacy Policy is visually accepted; content closure pending deploy of the Phase 1 / waitlist copy fixes above.**
+**Page 13 · Privacy Policy is visually accepted; required copy fixes are live. Ready for Wisewave final content closure.**

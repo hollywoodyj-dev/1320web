@@ -31,7 +31,7 @@ export const PRIVACY_OVERVIEW: PrivacyBlock = {
   id: "overview",
   title: "Overview",
   paragraphs: [
-    `This Privacy Policy explains how ${LEGAL_PLACEHOLDERS.companyName} collects and uses information when you use 1320SoulCode.com and related Phase 1 experiences.`,
+    `This Privacy Policy explains how ${LEGAL_PLACEHOLDERS.companyName} collects and uses information when you use 1320SoulCode.com and related 1320 experiences.`,
     "1320 is a symbolic self-awareness system. We collect only what is needed to provide the calculator, forms, reports, and support you request.",
     `Effective date: ${LEGAL_PLACEHOLDERS.effectiveDate}`,
     `Questions: ${LEGAL_PLACEHOLDERS.contactEmail}`,
@@ -60,7 +60,7 @@ export const PRIVACY_COLLECT = {
     },
     {
       title: "Form Information",
-      body: "Name, email, optional birth date, booking preferences, and messages you submit through waitlist, email capture, or booking forms.",
+      body: "Name, email, optional birth date, booking preferences, and messages you submit through email capture, account, report-access, or booking forms.",
     },
     {
       title: "Technical Data",
@@ -74,7 +74,7 @@ export const PRIVACY_USE: PrivacyBlock = {
   title: "How We Use Information",
   paragraphs: [
     "We use information to calculate and display your 1320 Soul Origin Code result.",
-    "We use it to respond to waitlist sign-ups, email capture requests, and booking inquiries.",
+    "We use it to respond to email capture requests, report access support, account support, and booking or session inquiries.",
     "We may send updates you opted into, with unsubscribe options when available.",
     "We use aggregate usage signals to improve the site, fix errors, and understand reliability.",
     "We do not use your personal information to sell your data.",
@@ -95,7 +95,7 @@ export const PRIVACY_STORAGE: PrivacyBlock = {
   id: "storage",
   title: "Storage, Retention & Sharing",
   paragraphs: [
-    "Phase 1 may store form submissions in email or internal tools as configured by the site operator.",
+    "1320 may store form submissions in email or internal tools as configured by the site operator.",
     "Birth date may be stored on your browser through session or local storage so your result page can reload.",
     "Submitted form data is retained only as long as needed for the purpose collected or as required by law.",
     "We may share data with service providers who help us host the site, send email, or operate forms under confidentiality obligations.",

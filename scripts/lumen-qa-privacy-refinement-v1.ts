@@ -90,6 +90,10 @@ async function main() {
     const framingFail = [
       desktop.text.includes("never store") ? "never store" : "",
       desktop.text.includes("not a sentence") ? "not a sentence" : "",
+      desktop.text.includes("phase 1") ? "phase 1 language" : "",
+      desktop.text.includes("waitlist sign-ups") || desktop.text.includes("waitlist sign-up")
+        ? "waitlist-era phrasing"
+        : "",
     ].filter(Boolean);
     const mantraOk = desktop.mantra.toUpperCase().includes("NOT A FIXED IDENTITY");
 

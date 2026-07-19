@@ -1,0 +1,117 @@
+/* Checkout success — quiet transactional post-purchase bridge */
+
+.checkout-success-page--refined {
+  width: min(100% - 32px, 520px);
+  margin: 0 auto;
+  padding: 36px 0 28px;
+}
+
+.checkout-success-card {
+  padding: 28px 26px 24px;
+  border-radius: 18px;
+  border: 1px solid rgba(214, 181, 109, 0.2);
+  background:
+    linear-gradient(180deg, rgba(12, 20, 38, 0.92), rgba(5, 12, 26, 0.88));
+  text-align: center;
+}
+
+.checkout-success-eyebrow {
+  margin: 0 0 10px;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(230, 199, 120, 0.88);
+}
+
+.checkout-success-title {
+  margin: 0 0 12px;
+  font-size: clamp(1.45rem, 3.2vw, 1.85rem);
+  line-height: 1.25;
+  color: #f3efe6;
+}
+
+.checkout-success-reassure {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgba(232, 226, 214, 0.92);
+}
+
+.checkout-success-body {
+  margin: 0 0 18px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: rgba(190, 200, 214, 0.8);
+}
+
+.checkout-success-actions {
+  display: grid;
+  gap: 12px;
+  justify-items: stretch;
+}
+
+.checkout-success-status {
+  margin: 0;
+  font-size: 0.88rem;
+  color: rgba(230, 199, 120, 0.86);
+}
+
+.checkout-success-primary {
+  width: 100%;
+  min-height: 50px;
+}
+
+.checkout-success-primary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.checkout-success-secondary {
+  display: grid;
+  gap: 10px;
+  margin-top: 4px;
+  justify-items: center;
+}
+
+.checkout-success-support {
+  margin: 0;
+  font-size: 0.86rem;
+  color: rgba(180, 192, 208, 0.75);
+}
+
+.checkout-success-home {
+  margin-top: 4px;
+  font-size: 0.82rem;
+  color: rgba(160, 172, 190, 0.65);
+  text-decoration: none;
+}
+
+.checkout-success-home:hover {
+  color: rgba(230, 199, 120, 0.8);
+  text-decoration: underline;
+}
+
+.page-shell-inner:has(.checkout-success-page--refined) .inner-main {
+  padding-bottom: 8px;
+}
+
+.page-shell-inner:has(.checkout-success-page--refined) .auth-compact-footer {
+  width: min(100% - 32px, 440px);
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.page-shell--transactional .topbar-cta {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .checkout-success-page--refined {
+    width: min(100% - 24px, 520px);
+    padding-top: 24px;
+  }
+
+  .checkout-success-card {
+    padding: 22px 18px 20px;
+  }
+}

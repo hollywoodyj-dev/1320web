@@ -64,20 +64,10 @@ function isFacilitatorConsoleRoute(pathname: string | null): boolean {
   return pathname === "/integration/facilitator";
 }
 
-/** Post-purchase / transactional bridges — compact footer, quiet header. */
-function isTransactionalRoute(pathname: string | null): boolean {
-  return pathname === "/checkout/success" || pathname === "/booking/success";
-}
-
-/** Quiet compact footer — auth gateways, reflection entry, internal console, checkout success. */
+/** Quiet compact footer — auth gateways, reflection entry, internal console. */
 function isCompactFooterRoute(pathname: string | null): boolean {
   if (!pathname) return false;
-  return (
-    isAuthRoute(pathname) ||
-    pathname === "/reflect" ||
-    isFacilitatorConsoleRoute(pathname) ||
-    isTransactionalRoute(pathname)
-  );
+  return isAuthRoute(pathname) || pathname === "/reflect" || isFacilitatorConsoleRoute(pathname);
 }
 
 /** Cosmic layout for inner routes — homepage keeps its own shell in `app/page.tsx`. */
@@ -91,7 +81,6 @@ export function PageShell({ children, leadsEnabled, headerAccount, preferMobileR
   const printReport = isPrintReportRoute(pathname);
   const authRoute = isAuthRoute(pathname);
   const facilitatorConsole = isFacilitatorConsoleRoute(pathname);
-  const transactional = isTransactionalRoute(pathname);
   const compactFooter = isCompactFooterRoute(pathname);
 
   if (printReport) {
@@ -144,7 +133,6 @@ export function PageShell({ children, leadsEnabled, headerAccount, preferMobileR
         "page-shell",
         "page-shell-inner",
         facilitatorConsole ? "page-shell--facilitator" : "",
-        transactional ? "page-shell--transactional" : "",
       ]
         .filter(Boolean)
         .join(" ")}
@@ -156,9 +144,7 @@ export function PageShell({ children, leadsEnabled, headerAccount, preferMobileR
       <div className="page-frame">
         <SiteHeader
           headerAccount={headerAccount}
-          variant={
-            facilitatorConsole ? "internal" : transactional ? "transactional" : "default"
-          }
+          variant={facilitatorConsole ? "internal" : "default"}
         />
         <div id="main-content" className="inner-main" tabIndex={-1}>
           {children}

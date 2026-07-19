@@ -22,6 +22,7 @@ export function CheckoutSuccessClient({ sessionId }: CheckoutSuccessClientProps)
 
   useEffect(() => {
     if (!sessionId) return;
+    const checkoutSessionId = sessionId;
 
     let cancelled = false;
     let polls = 0;
@@ -30,7 +31,7 @@ export function CheckoutSuccessClient({ sessionId }: CheckoutSuccessClientProps)
       polls += 1;
       try {
         const response = await fetch(
-          `/api/checkout/status?session_id=${encodeURIComponent(sessionId)}`,
+          `/api/checkout/status?session_id=${encodeURIComponent(checkoutSessionId)}`,
           { cache: "no-store" },
         );
         const json = (await response.json()) as {

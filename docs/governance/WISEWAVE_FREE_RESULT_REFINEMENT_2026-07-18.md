@@ -2,37 +2,45 @@
 
 **Date:** 2026-07-18  
 **Spec:** `docs/specs/1320_FREE_RESULT_PAGE_REFINEMENT_SPEC_v1.md`  
-**Status:** Content-depth adjust Lumen QA PASS — ready for Wisewave re-check  
+**Status:** ✅ Accepted by Wisewave (2026-07-19) — PASS WITH LIGHT WATCHPOINTS
 
-## Backup
+## Scope accepted
 
-`backups/page-06-free-result-pre-refinement-2026-07-18/`
+- UI / copy / content-depth for Free Result (`/result`)
+- Free Result page only
+- Step 5 entitled account / report watchpoints unchanged
 
-## Nova implementation
+## Acceptance notes
 
-- Free mode refined into a sacred first-mirror experience
-- Section order: Hero → Four-Part → Integrated → Segment previews → Reflection → one Upgrade → Keep/Share → FAQ
-- Removed competing upgrade blocks (“free first layer” note, final “Only the Beginning”, Go Deeper duplicate)
-- Foundation cards use short product copy (S1→S3→S2→S0)
-- Segment cards are preview-only
-- Mobile: sidebar hidden; section chips shown
-- CSS: `styles/result-density-v1.css`
+Visual / content-depth acceptance: **PASS WITH LIGHT WATCHPOINTS.**
 
-## Content-depth adjust (Wisewave 2026-07-18)
+`freeEssence` depth approved. Segment previews (S1 → S3 → S2 → S0) feel meaningful without giving away the Full Report.
 
-One essence sentence was too light. Updated segment previews to:
+What is working:
 
-- `freeEssence`: 2–3 short lines when source allows (max ~55 words)
-- one reflection question
-- CTA: Unlock Full Segment
-- still no `commercial_report_blocks`
+- Hero clear: code opened; mirror, not prediction or fixed identity
+- Four-Part Blueprint light and product-aligned
+- Integrated Soul Blueprint short and reflective
+- Segment previews deep enough to feel personal, not empty
+- Reflection question + Unlock Full Segment rhythm
+- Full commercial depth gated
+- S4–S9, 7-day practice, journal, `commercial_report_blocks` protected
+- Upgrade block frames Full Report as complete S0–S9 pathway
+- Governance intact
 
-Note: some codes have short source `freeEssence` (1 sentence). Preview shows available freeEssence only — does not invent copy or pull paid blocks.
+## Light watchpoints (ongoing)
 
-## Lumen QA
+1. Keep each `freeEssence` capped at around 55 words  
+2. Do not expand segment preview into full `commercial_report_blocks`  
+3. Keep only one reflection question per segment  
+4. Keep S4–S9 unavailable on Free Result  
+5. Keep upgrade language invitational, not pushy  
+6. Ensure mobile cards remain visually breathable after longer preview copy  
 
-- **Overall:** PASS after depth adjust
-- Artifact: `qa-artifacts/LUMEN_QA_FREE_RESULT_REFINEMENT_v1_2026-07-17.md`
-- Commits: `f64356a`, `fe2f77b`
+Implementation caps remain in `lib/report/build-report-view-model.ts` (`FREE_ESSENCE_MAX_WORDS = 55`) and Lumen QA.
 
-**Next:** Wisewave visual re-check of segment preview depth
+## Evidence
+
+**Lumen QA:** PASS after depth adjust  
+**Artifact:** `qa-artifacts/LUMEN_QA_FREE_RESULT_REFINEMENT_v1_2026-07-17.md`  
+**Live:** https://www.1320soulcode.com/result

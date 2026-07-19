@@ -69,11 +69,6 @@ function isTransactionalRoute(pathname: string | null): boolean {
   return pathname === "/checkout/success" || pathname === "/booking/success";
 }
 
-/** Living Blueprint member space — quiet header + compact footer (no marketing newsletter). */
-function isMemberSpaceRoute(pathname: string | null): boolean {
-  return Boolean(pathname?.startsWith("/living-blueprint/"));
-}
-
 /** Quiet compact footer — auth gateways, reflection entry, internal console, checkout success. */
 function isCompactFooterRoute(pathname: string | null): boolean {
   if (!pathname) return false;
@@ -81,8 +76,7 @@ function isCompactFooterRoute(pathname: string | null): boolean {
     isAuthRoute(pathname) ||
     pathname === "/reflect" ||
     isFacilitatorConsoleRoute(pathname) ||
-    isTransactionalRoute(pathname) ||
-    isMemberSpaceRoute(pathname)
+    isTransactionalRoute(pathname)
   );
 }
 
@@ -98,8 +92,6 @@ export function PageShell({ children, leadsEnabled, headerAccount, preferMobileR
   const authRoute = isAuthRoute(pathname);
   const facilitatorConsole = isFacilitatorConsoleRoute(pathname);
   const transactional = isTransactionalRoute(pathname);
-  const memberSpace = isMemberSpaceRoute(pathname);
-  const quietChrome = transactional || memberSpace;
   const compactFooter = isCompactFooterRoute(pathname);
 
   if (printReport) {
@@ -152,8 +144,7 @@ export function PageShell({ children, leadsEnabled, headerAccount, preferMobileR
         "page-shell",
         "page-shell-inner",
         facilitatorConsole ? "page-shell--facilitator" : "",
-        transactional || memberSpace ? "page-shell--transactional" : "",
-        memberSpace ? "page-shell--member" : "",
+        transactional ? "page-shell--transactional" : "",
       ]
         .filter(Boolean)
         .join(" ")}
@@ -166,7 +157,7 @@ export function PageShell({ children, leadsEnabled, headerAccount, preferMobileR
         <SiteHeader
           headerAccount={headerAccount}
           variant={
-            facilitatorConsole ? "internal" : quietChrome ? "transactional" : "default"
+            facilitatorConsole ? "internal" : transactional ? "transactional" : "default"
           }
         />
         <div id="main-content" className="inner-main" tabIndex={-1}>

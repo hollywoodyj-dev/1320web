@@ -7,7 +7,6 @@ import { getSoulReportById } from "@/lib/db/reports";
 import { listReflectionsForReport } from "@/lib/db/reflections";
 import { toSoulBlueprintRef } from "@/lib/platform-domain";
 import { buildContinuityNote, validateContinuityPresentation } from "@/lib/living-blueprint/continuity-qa";
-import { expressionStateLabel } from "@/lib/living-blueprint/expression-labels";
 import { MEMORY_LAYER_LABELS } from "@/lib/living-blueprint/memory-layers";
 import type { LivingBlueprintSnapshot, MemoryLayer } from "@/lib/living-blueprint/types";
 import { LIVING_BLUEPRINT_VERSION } from "@/lib/living-blueprint/types";
@@ -68,12 +67,12 @@ export async function buildLivingBlueprintSnapshot(input: {
     ];
   }
 
-  // Expression memory — state movement note (user-facing labels only)
+  // Expression memory — state movement note
   if (memoriesByLayer.expression.length === 0 && expression) {
     memoriesByLayer.expression = [
       {
         id: "expression-state",
-        content: `Current Expression State: ${expressionStateLabel(expression.state)}`,
+        content: `Current Expression Framework stage: ${expression.state}`,
         kind: "expression_state",
       },
     ];
@@ -83,8 +82,7 @@ export async function buildLivingBlueprintSnapshot(input: {
     version: LIVING_BLUEPRINT_VERSION,
     reportId: report.id,
     clientName,
-    // Email is never rendered in the member UI (privacy / QA safety).
-    email: null,
+    email: input.email ?? null,
     birthDate: soulReportBirthDateIso(report),
     codes: blueprintRef.codes,
     expressionState: expression?.state ?? "dormant",

@@ -7,14 +7,17 @@ import {
   ACCESS_DENIED,
   LIVING_BLUEPRINT_HERO,
   LIVING_BLUEPRINT_META,
+  MEMBERSHIP_SECTION,
 } from "@/lib/living-blueprint/content";
 import { buildLivingBlueprintSnapshot } from "@/lib/living-blueprint/build-snapshot";
+import "@/styles/living-blueprint-v1.css";
 
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: LIVING_BLUEPRINT_META.title,
   description: LIVING_BLUEPRINT_META.description,
+  robots: { index: false, follow: false, nocache: true },
 };
 
 type PageProps = { params: Promise<{ reportId: string }> };
@@ -24,19 +27,26 @@ export default async function LivingBlueprintPage({ params }: PageProps) {
   const access = await getEntitledReportAccess(reportId);
 
   if (!access.allowed) {
+    const signInHref = `/login?next=${encodeURIComponent(`/living-blueprint/${reportId}`)}`;
     return (
-      <div className="conversion-page space-y-5">
+      <div className="living-blueprint-page living-blueprint-page--gate">
         <SectionCard title={ACCESS_DENIED.title}>
           <p>
             {access.reason === "unauthenticated"
               ? ACCESS_DENIED.unauthenticated
               : ACCESS_DENIED.noEntitlement}
           </p>
-          <div className="mt-4 flex flex-wrap gap-3">
-            <Link href="/checkout" className="gold-button">
-              {ACCESS_DENIED.ctaCheckout}
-            </Link>
-            <Link href="/my-report" className="blueprint-secondary-link">
+          <div className="living-blueprint-gate-actions">
+            {access.reason === "unauthenticated" ? (
+              <Link href={signInHref} className="gold-button">
+                {ACCESS_DENIED.ctaSignIn}
+              </Link>
+            ) : (
+              <Link href="/checkout" className="gold-button">
+                {ACCESS_DENIED.ctaCheckout}
+              </Link>
+            )}
+            <Link href="/account" className="blueprint-secondary-link">
               {ACCESS_DENIED.ctaMyReport}
             </Link>
           </div>
@@ -49,37 +59,35 @@ export default async function LivingBlueprintPage({ params }: PageProps) {
     userId: access.user.id,
     reportId,
     clientName: access.user.first_name ?? undefined,
-    email: access.user.email,
   });
 
   if (!snapshot) {
     return (
-      <SectionCard title="Living Blueprint">
-        <p>Could not load your Living Blueprint.</p>
-      </SectionCard>
+      <div className="living-blueprint-page living-blueprint-page--gate">
+        <SectionCard title="Living Blueprint">
+          <p>Could not load your Living Blueprint.</p>
+        </SectionCard>
+      </div>
     );
   }
 
   return (
-    <div className="conversion-page space-y-5">
-      <section className="conversion-hero">
-        <p className="conversion-eyebrow">{LIVING_BLUEPRINT_HERO.eyebrow}</p>
-        <h1 className="conversion-title">{LIVING_BLUEPRINT_HERO.title}</h1>
-        <p className="conversion-lead">{LIVING_BLUEPRINT_HERO.body}</p>
-        <p className="text-sm opacity-80">{LIVING_BLUEPRINT_HERO.boundary}</p>
+    <div className="living-blueprint-page living-blueprint-page--member">
+      <section className="living-blueprint-hero" aria-labelledby="living-blueprint-title">
+        <p className="living-blueprint-eyebrow">{LIVING_BLUEPRINT_HERO.eyebrow}</p>
+        <h1 id="living-blueprint-title" className="living-blueprint-title">
+          {LIVING_BLUEPRINT_HERO.title}
+        </h1>
+        <p className="living-blueprint-lead">{LIVING_BLUEPRINT_HERO.body}</p>
+        <p className="living-blueprint-boundary">{LIVING_BLUEPRINT_HERO.boundary}</p>
       </section>
-      <SectionCard title={`Tier: ${snapshot.membershipTier ?? "living_blueprint"}`}>
+
+      <section className="living-blueprint-main" aria-labelledby="living-blueprint-membership-title">
+        <h2 id="living-blueprint-membership-title" className="living-blueprint-membership-title">
+          {MEMBERSHIP_SECTION.title}
+        </h2>
         <LivingBlueprintDashboard reportId={reportId} initialSnapshot={snapshot} />
-      </SectionCard>
-      <p className="text-sm">
-        <Link href={`/my-report/${reportId}`} className="blueprint-secondary-link">
-          View Full Report
-        </Link>
-        {" · "}
-        <Link href="/reflect" className="blueprint-secondary-link">
-          Reflect with Wisewave
-        </Link>
-      </p>
+      </section>
     </div>
   );
 }

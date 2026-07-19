@@ -15,10 +15,9 @@ export function memoryLayerForKind(kind: RelationshipMemoryKind): MemoryLayer {
   }
 }
 
-/** Softened member-facing memory section labels. */
 export const MEMORY_LAYER_LABELS: Record<MemoryLayer, string> = {
   blueprint: "Blueprint Memory",
-  reflection: "Recent Reflection",
-  expression: "Current Expression",
-  journey: "Journey Notes",
+  reflection: "Reflection Memory",
+  expression: "Expression Memory",
+  journey: "Journey Memory",
 };

@@ -1,0 +1,213 @@
+/* Living Blueprint — quiet member space (not a dashboard) */
+
+.living-blueprint-page--member,
+.living-blueprint-page--gate {
+  width: min(100% - 32px, 720px);
+  margin: 0 auto;
+  padding: 28px 0 24px;
+}
+
+.living-blueprint-hero {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.living-blueprint-eyebrow {
+  margin: 0 0 10px;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(230, 199, 120, 0.88);
+}
+
+.living-blueprint-title {
+  margin: 0 0 12px;
+  font-size: clamp(1.55rem, 3.2vw, 2rem);
+  line-height: 1.22;
+  color: #f3efe6;
+}
+
+.living-blueprint-lead {
+  margin: 0 auto 10px;
+  max-width: 36rem;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: rgba(210, 218, 230, 0.88);
+}
+
+.living-blueprint-boundary {
+  margin: 0 auto;
+  max-width: 34rem;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: rgba(170, 182, 198, 0.72);
+}
+
+.living-blueprint-main {
+  display: grid;
+  gap: 18px;
+}
+
+.living-blueprint-membership-title {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(230, 199, 120, 0.86);
+  text-align: center;
+}
+
+.living-blueprint-dashboard {
+  display: grid;
+  gap: 16px;
+}
+
+.living-blueprint-section-title {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: rgba(243, 239, 230, 0.94);
+}
+
+.living-blueprint-soft-note {
+  margin: 0 0 12px;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: rgba(180, 192, 208, 0.78);
+}
+
+.living-blueprint-panel,
+.living-blueprint-next,
+.living-blueprint-form {
+  padding: 16px 16px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.living-blueprint-next-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.living-blueprint-next-primary {
+  width: 100%;
+  min-height: 46px;
+  text-align: center;
+}
+
+.living-blueprint-next-link {
+  display: block;
+  padding: 10px 4px;
+  font-size: 0.92rem;
+  color: rgba(220, 200, 140, 0.9);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.living-blueprint-next-link:hover {
+  color: rgba(230, 199, 120, 1);
+}
+
+.living-blueprint-profile-grid,
+.living-blueprint-codes-grid {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+@media (min-width: 560px) {
+  .living-blueprint-profile-grid,
+  .living-blueprint-codes-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.living-blueprint-profile-grid dt,
+.living-blueprint-codes-grid dt,
+.living-blueprint-dt {
+  margin: 0 0 4px;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(170, 182, 198, 0.7);
+}
+
+.living-blueprint-profile-grid dd,
+.living-blueprint-codes-grid dd {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(230, 234, 240, 0.92);
+}
+
+.living-blueprint-codes {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.living-blueprint-codes-value {
+  margin: 0;
+  font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  color: rgba(230, 199, 120, 0.92);
+}
+
+.living-blueprint-continuity {
+  margin: 0;
+  padding: 0 4px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(200, 210, 222, 0.84);
+}
+
+.living-blueprint-field {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.living-blueprint-memory-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.living-blueprint-memory-list li {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: rgba(200, 210, 222, 0.86);
+}
+
+.living-blueprint-gate-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+  align-items: center;
+}
+
+.page-shell-inner:has(.living-blueprint-page) .inner-main {
+  padding-bottom: 8px;
+}
+
+.page-shell-inner:has(.living-blueprint-page) .auth-compact-footer {
+  width: min(100% - 32px, 520px);
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+@media (max-width: 640px) {
+  .living-blueprint-page--member,
+  .living-blueprint-page--gate {
+    width: min(100% - 24px, 720px);
+    padding-top: 20px;
+  }
+}

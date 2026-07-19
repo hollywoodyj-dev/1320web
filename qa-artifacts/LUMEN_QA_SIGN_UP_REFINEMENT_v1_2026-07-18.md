@@ -1,7 +1,7 @@
 # Lumen QA — Create Account Page Refinement v1.0
 
 Date: 2026-07-18
-Base: http://localhost:3000
+Base: https://www.1320soulcode.com
 Verdict: **PASS**
 
 ## Desktop create-account gateway: PASS

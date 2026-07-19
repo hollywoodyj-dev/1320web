@@ -79,11 +79,11 @@
 .generating-chamber--refined .generating-boundary-copy {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 0.55em;
   margin: 0;
   color: rgba(248, 244, 234, 0.78);
   font-size: 0.92rem;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 .generating-chamber--refined .generating-boundary-line {

@@ -2,27 +2,37 @@
 
 **Date:** 2026-07-18  
 **Spec:** `docs/specs/1320_GENERATING_PAGE_REFINEMENT_SPEC_v1.md`  
-**Status:** Lumen QA PASS — ready for Wisewave visual acceptance  
+**Status:** ✅ Accepted by Wisewave (2026-07-19) — with minor microcopy spacing note
 
-## Backup
+## Scope accepted
 
-Pre-refinement snapshot: `backups/page-05-generating-pre-refinement-2026-07-18/`
+- UI / copy / loading-state refinement only
+- Generating page only
+- Step 5 entitled account / report watchpoints unchanged
 
-## Nova implementation
+## Acceptance notes
 
-- Quieter ceremonial loading experience (refine, not rebuild)
-- States: `loading` | `complete` | `error`
-- CTA disabled until ready: “Forming Your Blueprint…” → “View My Result”
-- Shorter hero, node labels, progress cards (Origin / Vibration / Mirror / Void)
-- Privacy: removed “never stored”; safer handling line + Privacy Policy link
-- Boundary split into two calm lines
-- Mobile: hide mandala node labels; sticky CTA area
-- CSS: `styles/generating-density-v1.css`
+Direction confirmed: quieter, more ceremonial Opening Blueprint.
 
-## Lumen QA
+- Backup taken before implementation
+- Sacred geometry intact
+- Progress language: Origin · Vibration · Mirror · Void
+- CTA locked until ready: “Forming Your Blueprint…” → “View My Result”
+- Loading / complete / error states implemented
+- Privacy language no longer overclaims “never stored”
+- Mobile node labels simplified; CTA easier to reach
 
-- **Overall:** PASS (loading / complete / error / desktop)
-- Artifact: `qa-artifacts/LUMEN_QA_GENERATING_REFINEMENT_v1_2026-07-17.md`
-- Commits: `b5cd504`, `81bf74a`
+## Non-blocking note (addressed)
 
-**Next:** Wisewave visual acceptance on production
+Boundary line spacing in rendered DOM for:
+
+> This is not a prediction.  
+> It is a mirror for awareness, reflection, and conscious choice.
+
+Two-line split preserved; vertical gap between lines increased slightly for clearer separation.
+
+## Evidence
+
+**Lumen QA:** PASS (loading / complete / error / desktop)  
+**Artifact:** `qa-artifacts/LUMEN_QA_GENERATING_REFINEMENT_v1_2026-07-17.md`  
+**Live:** https://www.1320soulcode.com/generating (via Your Code flow)

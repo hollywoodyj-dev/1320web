@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { BookingSuccessClient } from "@/components/booking/booking-success-client";
-import { SectionCard } from "@/components/section-card";
+import { BOOKING_SUCCESS_COPY, BOOKING_SUCCESS_META } from "@/lib/booking/success-content";
+import "@/styles/booking-success-v1.css";
 
 export const metadata: Metadata = {
-  title: "Session Booked — Choose Your Time",
-  description: "Your Personal Integration Session payment is confirmed. Pick a time on the calendar.",
+  title: BOOKING_SUCCESS_META.title,
+  description: BOOKING_SUCCESS_META.description,
+  robots: { index: false, follow: false, nocache: true },
 };
+
+export const dynamic = "force-dynamic";
 
 type SearchParams = Record<string, string | string[] | undefined>;
 
@@ -19,22 +22,15 @@ export default async function BookingSuccessPage({
   const sessionId = typeof params.session_id === "string" ? params.session_id : undefined;
 
   return (
-    <div className="conversion-page space-y-5">
-      <SectionCard title="Payment Confirmed — Schedule Your Session">
-        <p>
-          Thank you. Your Personal Integration Session is paid. Choose a time on the calendar
-          below, then open your session prep space when you are ready.
-        </p>
-        {sessionId ? <BookingSuccessClient sessionId={sessionId} /> : null}
-        <div className="mt-4 flex flex-wrap gap-3">
-          <Link href="/account" className="blueprint-secondary-link">
-            Return to account
-          </Link>
-          <Link href="/booking" className="blueprint-secondary-link">
-            Book another session
-          </Link>
-        </div>
-      </SectionCard>
+    <div className="booking-success-page booking-success-page--refined">
+      <section className="booking-success-card glass-card" aria-labelledby="booking-success-title">
+        <p className="booking-success-eyebrow">Personal Integration Session</p>
+        <h1 id="booking-success-title" className="booking-success-title">
+          {BOOKING_SUCCESS_COPY.title}
+        </h1>
+        <p className="booking-success-body">{BOOKING_SUCCESS_COPY.body}</p>
+        <BookingSuccessClient sessionId={sessionId} />
+      </section>
     </div>
   );
 }

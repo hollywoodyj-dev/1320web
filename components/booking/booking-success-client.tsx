@@ -3,41 +3,83 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BookingSchedulePanel } from "@/components/booking/booking-schedule-panel";
+import { BOOKING_SUCCESS_COPY } from "@/lib/booking/success-content";
 
-export function BookingSuccessClient({ sessionId }: { sessionId: string }) {
-  const [status, setStatus] = useState("Confirming your payment…");
+type BridgeState = "confirming" | "ready" | "unavailable";
+
+type BookingSuccessClientProps = {
+  sessionId?: string;
+};
+
+const MAX_POLLS = 30;
+const POLL_MS = 2000;
+
+export function BookingSuccessClient({ sessionId }: BookingSuccessClientProps) {
+  const [bridgeState, setBridgeState] = useState<BridgeState>(sessionId ? "confirming" : "unavailable");
+  const [status, setStatus] = useState(
+    sessionId ? BOOKING_SUCCESS_COPY.confirmingPayment : BOOKING_SUCCESS_COPY.noSession,
+  );
   const [prepUrl, setPrepUrl] = useState<string | null>(null);
   const [scheduleUrl, setScheduleUrl] = useState<string | null>(null);
 
   useEffect(() => {
+    if (!sessionId) return;
+    const checkoutSessionId = sessionId;
+
     let cancelled = false;
+    let polls = 0;
 
     async function poll() {
-      const response = await fetch(
-        `/api/booking/checkout/status?session_id=${encodeURIComponent(sessionId)}`,
-      );
-      const json = (await response.json()) as {
-        ok?: boolean;
-        status?: string;
-        prepUrl?: string;
-        scheduleUrl?: string | null;
-      };
+      polls += 1;
+      try {
+        const response = await fetch(
+          `/api/booking/checkout/status?session_id=${encodeURIComponent(checkoutSessionId)}`,
+          { cache: "no-store" },
+        );
+        const json = (await response.json()) as {
+          ok?: boolean;
+          status?: string;
+          prepUrl?: string;
+          scheduleUrl?: string | null;
+        };
 
-      if (cancelled) return;
+        if (cancelled) return;
 
-      if (json.ok && json.prepUrl) {
-        setPrepUrl(json.prepUrl);
-        setScheduleUrl(json.scheduleUrl ?? null);
-        setStatus("Payment confirmed. Choose your time below, then open session prep.");
-        return;
+        if (json.ok && json.prepUrl) {
+          setPrepUrl(json.prepUrl);
+          setScheduleUrl(json.scheduleUrl ?? null);
+          setBridgeState("ready");
+          setStatus(
+            json.scheduleUrl
+              ? BOOKING_SUCCESS_COPY.calendarReady
+              : BOOKING_SUCCESS_COPY.calendarUnavailable,
+          );
+          return;
+        }
+
+        if (polls >= MAX_POLLS) {
+          setBridgeState("unavailable");
+          setStatus(BOOKING_SUCCESS_COPY.calendarUnavailable);
+          return;
+        }
+
+        setBridgeState("confirming");
+        setStatus(
+          json.status === "fulfilling"
+            ? BOOKING_SUCCESS_COPY.fulfilling
+            : BOOKING_SUCCESS_COPY.confirmingPayment,
+        );
+        window.setTimeout(poll, POLL_MS);
+      } catch {
+        if (cancelled) return;
+        if (polls >= MAX_POLLS) {
+          setBridgeState("unavailable");
+          setStatus(BOOKING_SUCCESS_COPY.calendarUnavailable);
+          return;
+        }
+        setStatus(BOOKING_SUCCESS_COPY.confirmingPayment);
+        window.setTimeout(poll, POLL_MS);
       }
-
-      setStatus(
-        json.status === "fulfilling"
-          ? "Setting up your session space…"
-          : "Still confirming payment…",
-      );
-      window.setTimeout(poll, 2000);
     }
 
     void poll();
@@ -47,27 +89,50 @@ export function BookingSuccessClient({ sessionId }: { sessionId: string }) {
   }, [sessionId]);
 
   return (
-    <div className="mt-4 space-y-4">
-      <p className="text-sm text-[#B9C1D0]">{status}</p>
-      {prepUrl ? (
+    <div className="booking-success-bridge">
+      <p className="booking-success-status" role="status" aria-live="polite">
+        {status}
+      </p>
+
+      {bridgeState === "confirming" ? <BookingSchedulePanel scheduleUrl={null} loading /> : null}
+
+      {bridgeState === "ready" ? (
         <>
           <BookingSchedulePanel scheduleUrl={scheduleUrl} />
-          <div className="glass-card p-4 text-sm space-y-3">
-            <p className="font-medium">Session prep</p>
-            <p className="opacity-80">
-              After you pick a time, open your prep space to set your integration focus before the
-              live session.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Link href={prepUrl} className="gold-button inline-flex">
-                OPEN SESSION PREP
+          {prepUrl ? (
+            <section className="booking-success-prep" aria-labelledby="booking-success-prep-title">
+              <h2 id="booking-success-prep-title" className="booking-success-section-title">
+                {BOOKING_SUCCESS_COPY.prepTitle}
+              </h2>
+              <p className="booking-success-prep-body">{BOOKING_SUCCESS_COPY.prepBody}</p>
+              <Link href={prepUrl} className="gold-button booking-success-primary">
+                {BOOKING_SUCCESS_COPY.prepCta}
               </Link>
-              <Link href="/account" className="blueprint-secondary-link">
-                Return to account
-              </Link>
-            </div>
-          </div>
+            </section>
+          ) : null}
         </>
+      ) : null}
+
+      {bridgeState === "unavailable" ? (
+        <BookingSchedulePanel scheduleUrl={null} />
+      ) : null}
+
+      {bridgeState !== "confirming" ? (
+        <div className="booking-success-links">
+          <Link href="/account" className="gold-button booking-success-primary">
+            {BOOKING_SUCCESS_COPY.accountCta}
+          </Link>
+          <p className="booking-success-support">
+            {BOOKING_SUCCESS_COPY.supportLead}{" "}
+            <a href={BOOKING_SUCCESS_COPY.supportHref} className="blueprint-secondary-link">
+              {BOOKING_SUCCESS_COPY.supportCta}
+            </a>
+            .
+          </p>
+          <Link href="/booking" className="booking-success-tertiary">
+            {BOOKING_SUCCESS_COPY.bookAnotherCta}
+          </Link>
+        </div>
       ) : null}
     </div>
   );

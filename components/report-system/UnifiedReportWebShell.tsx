@@ -8,6 +8,7 @@ import {
   SampleReportReadingGuide,
 } from "@/components/report-system/SampleReportChrome";
 import type { CanonicalFullReport } from "@/lib/canonical-report/types";
+import { SAMPLE_REPORT_MANTRA } from "@/lib/sample-report-content";
 import type { ReportType } from "@/lib/report-system/report-surface";
 import "@/styles/sample-report-density-v1.css";
 
@@ -57,6 +58,11 @@ export function UnifiedReportWebShell({
       <ReportRenderer reportType={reportType} surface="web" data={data} />
 
       {isSample ? <SampleReportFinalCta /> : null}
+      {isSample ? (
+        <p className="sample-report-mantra footer-mantra" role="note">
+          {SAMPLE_REPORT_MANTRA}
+        </p>
+      ) : null}
     </div>
   );
 }

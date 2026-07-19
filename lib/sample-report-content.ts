@@ -8,6 +8,9 @@ export const SAMPLE_REPORT_META = {
     "Explore the structure, tone, and depth of a 1320 Full Report — a guided preview of selected S0–S9 Soul Blueprint pages. Not your personal full report.",
 };
 
+/** Quiet close for immersive sample shell (no marketing footer). */
+export const SAMPLE_REPORT_MANTRA = "YOUR BLUEPRINT IS A MIRROR — NOT A FIXED IDENTITY.";
+
 export const SAMPLE_REPORT_INTRO = {
   eyebrow: "Sample Report · Preview Mode",
   title: "Sample Soul Blueprint Report",

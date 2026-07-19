@@ -1,5 +1,6 @@
 /**
- * Lumen QA — Sample Report Page Refinement Spec v1.0
+ * Lumen QA — Sample Report Page Refinement Spec v1.0 (Page 09)
+ * Aligned with current Unified Report viewer chrome (report-viewer-nav + compact locked grid).
  * Run: npx tsx scripts/lumen-qa-sample-report-refinement-v1.ts
  * Optional: QA_BASE_URL=http://localhost:3000
  */
@@ -57,6 +58,7 @@ async function main() {
 
     await page.goto(url, { waitUntil: "domcontentloaded", timeout: 90_000 });
     await page.waitForSelector('.report-root[data-report-type="sample"]', { timeout: 60_000 });
+    await page.waitForSelector(".report-viewer-nav", { timeout: 45_000 });
 
     const desktop = await page.evaluate(() => {
       const text = (document.body.textContent ?? "").toLowerCase().replace(/\s+/g, " ");
@@ -67,102 +69,113 @@ async function main() {
       const foundationIdx = foundationOrder.map((id) => pageIds.indexOf(id));
       const orderOk = foundationIdx.every((v, i, arr) => v >= 0 && (i === 0 || v > arr[i - 1]!));
 
-      const s1Cards = document.querySelectorAll('[data-page-id="s1-origin"] .report-insight-card, [data-page-id="s1-origin"] .report-card');
-      const lockedBlocks = document.querySelectorAll(".locked-preview-block").length;
-      const hasSideNav = Boolean(document.querySelector(".sample-report-side-nav"));
-      const introTitle = (document.querySelector(".sample-report-intro-title")?.textContent ?? "")
-        .trim()
-        .toLowerCase();
+      const s1Cards = document.querySelectorAll(
+        '[data-page-id="s1-origin"] .report-insight-card, [data-page-id="s1-origin"] .report-card',
+      );
+      const lockedItems = document.querySelectorAll(".sample-locked-item").length;
+      const navLinks = document.querySelectorAll(".report-viewer-nav a").length;
       const goldInIntro = document.querySelectorAll(".sample-report-intro .gold-button").length;
-      const previewBadge = text.includes("preview mode");
-      const availableInFull = (document.body.textContent ?? "").includes("Available in the Full Report.");
+      const mantra = (
+        document.querySelector(".auth-compact-footer-mantra, .footer-mantra")?.textContent ?? ""
+      ).trim();
 
       return {
         text,
         orderOk,
-        pageIds,
         s1CardCount: s1Cards.length,
-        lockedBlocks,
-        hasSideNav,
-        introTitle,
+        lockedItems,
+        navLinks,
         goldInIntro,
-        previewBadge,
-        availableInFull,
+        mantra,
         hasRenderer: Boolean(document.querySelector('.report-root[data-report-type="sample"]')),
-        hasUnlock: text.includes("unlock"),
-        hasGenerate: text.includes("generate my code"),
-        hasBoundary: text.includes("symbolic mirror") && text.includes("authority"),
+        hasViewer: Boolean(document.querySelector(".sample-report-viewer")),
+        hasLockedSection: Boolean(document.querySelector("#locked.sample-locked-preview")),
+        hasFinal: Boolean(document.querySelector(".sample-report-final")),
+        previewMode: text.includes("preview mode"),
+        availableInFull: text.includes("available in the full report"),
       };
     });
 
     const required = [
       "sample soul blueprint report",
       "preview mode",
-      "four foundation layers",
       "s1",
       "s3",
       "s2",
       "s0",
       "available in the full report",
-      "reflection, not instruction",
-      "you remain the authority",
+      "unlock",
+      "generate my code",
     ];
     const missing = required.filter((p) => !desktop.text.includes(p));
-    // Boundary intentionally contains "does not predict/diagnose" — only fail positive framing
     const framingFail = ["who you attract", "spiritual maturity"].filter((p) =>
       desktop.text.includes(p),
     );
+    const mantraOk =
+      desktop.mantra.toUpperCase().includes("YOUR BLUEPRINT IS A MIRROR") &&
+      desktop.mantra.toUpperCase().includes("NOT A FIXED IDENTITY");
 
     const desktopPass =
       missing.length === 0 &&
       framingFail.length === 0 &&
       desktop.orderOk &&
       desktop.hasRenderer &&
-      desktop.hasSideNav &&
+      desktop.hasViewer &&
+      desktop.navLinks >= 6 &&
       desktop.goldInIntro === 1 &&
       desktop.s1CardCount > 0 &&
       desktop.s1CardCount <= 6 &&
-      desktop.lockedBlocks >= 6 &&
-      desktop.availableInFull;
+      desktop.lockedItems >= 8 &&
+      desktop.hasLockedSection &&
+      desktop.hasFinal &&
+      desktop.previewMode &&
+      desktop.availableInFull &&
+      mantraOk;
 
     record("Desktop sample preview framing", desktopPass, [
       `required missing (${missing.length}): ${missing.join(", ") || "none"}`,
       `framing fail: ${framingFail.join(", ") || "none"}`,
       `foundation order S1→S3→S2→S0: ${desktop.orderOk}`,
-      `side nav: ${desktop.hasSideNav}`,
+      `viewer nav links: ${desktop.navLinks}`,
       `intro gold CTAs: ${desktop.goldInIntro}`,
       `S1 insight cards: ${desktop.s1CardCount}`,
-      `locked blocks: ${desktop.lockedBlocks}`,
-      `available-in-full copy: ${desktop.availableInFull}`,
+      `compact locked items: ${desktop.lockedItems}`,
+      `preview mode: ${desktop.previewMode}`,
+      `available-in-full: ${desktop.availableInFull}`,
+      `footer mantra: ${desktop.mantra}`,
     ]);
 
-    // Mobile viewport on same desktop URL (view=desktop) for overflow + chips
     await page.setViewport(VIEWPORT);
     await page.setUserAgent(MOBILE_UA);
-    await page.reload({ waitUntil: "networkidle2", timeout: 90_000 });
-    await page.waitForSelector(".sample-report-chip-nav", { timeout: 45_000 });
+    await page.reload({ waitUntil: "domcontentloaded", timeout: 90_000 });
+    await page.waitForSelector(".report-viewer-nav", { timeout: 45_000 });
 
     const mobile = await page.evaluate(() => {
       const text = (document.body.textContent ?? "").toLowerCase().replace(/\s+/g, " ");
       const bodyFont = parseFloat(getComputedStyle(document.body).fontSize);
-      const chips = document.querySelectorAll(".sample-report-chip").length;
+      const nav = document.querySelector(".report-viewer-nav") as HTMLElement | null;
+      const navLinks = document.querySelectorAll(".report-viewer-nav a").length;
+      const navOverflowX = nav ? getComputedStyle(nav).overflowX : "";
       return {
         text,
         bodyFont,
-        chips,
+        navLinks,
+        navOverflowX,
         hasFinal: Boolean(document.querySelector(".sample-report-final")),
+        previewMode: text.includes("preview mode"),
       };
     });
     const overflow = await noHorizontalOverflow(page);
     const mobilePass =
-      mobile.chips >= 6 &&
+      mobile.navLinks >= 6 &&
       mobile.hasFinal &&
       overflow &&
       mobile.bodyFont >= 16 &&
-      mobile.text.includes("preview mode");
+      mobile.previewMode;
 
     record("Mobile sample chrome", mobilePass, [
-      `chips: ${mobile.chips}`,
+      `viewer nav links: ${mobile.navLinks}`,
+      `nav overflow-x: ${mobile.navOverflowX || "(n/a)"}`,
       `final CTA: ${mobile.hasFinal}`,
       `no horizontal overflow: ${overflow}`,
       `body font: ${mobile.bodyFont}`,
@@ -175,7 +188,7 @@ async function main() {
   const md = [
     "# Lumen QA — Sample Report Refinement v1.0",
     "",
-    `Date: 2026-07-18`,
+    `Date: 2026-07-19`,
     `Base: ${BASE}`,
     `Verdict: **${allPass ? "PASS" : "FAIL"}**`,
     "",

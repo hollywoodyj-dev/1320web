@@ -24,7 +24,10 @@ export function middleware(request: NextRequest) {
 
   if (
     pathname === "/integration/facilitator" ||
-    pathname.startsWith("/api/personal-integration/facilitator")
+    pathname.startsWith("/facilitator/") ||
+    pathname.startsWith("/integration/intake/") ||
+    pathname.startsWith("/api/personal-integration/facilitator") ||
+    pathname.startsWith("/api/personal-integration/intake")
   ) {
     return withInternalNoStore(request);
   }
@@ -66,6 +69,9 @@ export const config = {
     "/full-report-v2-phase1",
     "/my-report/:reportId",
     "/integration/facilitator",
+    "/facilitator/:path*",
+    "/integration/intake/:path*",
     "/api/personal-integration/facilitator/:path*",
+    "/api/personal-integration/intake/:path*",
   ],
 };

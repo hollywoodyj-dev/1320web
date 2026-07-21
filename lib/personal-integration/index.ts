@@ -21,3 +21,7 @@ export type {
   PersonalIntegrationPrepPayload,
   PersonalIntegrationSessionVariant,
 } from "@/lib/personal-integration/types";
+export { FOUNDATION_ORDER, MAX_ADVANCED_SUGGESTIONS } from "@/lib/personal-integration/ops/constants";
+export { INTAKE_SECTIONS } from "@/lib/personal-integration/ops/intake-schema";
+export { SESSION_GUIDE_STAGES } from "@/lib/personal-integration/ops/session-guide";
+export { emptySummaryContent } from "@/lib/personal-integration/ops/summary-template";

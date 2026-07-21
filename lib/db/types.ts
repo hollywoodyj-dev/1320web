@@ -82,6 +82,16 @@ export type PlatformSessionRow = {
   completed_at: Date | null;
   authorship: string;
   created_at: Date;
+  assigned_facilitator_id?: string | null;
+  facilitator_id?: string | null;
+  intake_status?: string;
+  summary_status?: string;
+  scheduled_at?: Date | null;
+  timezone?: string | null;
+  booking_id?: string | null;
+  assigned_at?: Date | null;
+  assigned_by?: string | null;
+  last_facilitator_accessed_at?: Date | null;
 };
 
 export type ReflectionRow = {

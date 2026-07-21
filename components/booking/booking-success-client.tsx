@@ -105,8 +105,14 @@ export function BookingSuccessClient({ sessionId }: BookingSuccessClientProps) {
                 {BOOKING_SUCCESS_COPY.prepTitle}
               </h2>
               <p className="booking-success-prep-body">{BOOKING_SUCCESS_COPY.prepBody}</p>
-              <Link href={prepUrl} className="gold-button booking-success-primary">
+              <Link
+                href={prepUrl.replace("/integration/prep/", "/integration/intake/")}
+                className="gold-button booking-success-primary"
+              >
                 {BOOKING_SUCCESS_COPY.prepCta}
+              </Link>
+              <Link href={prepUrl} className="blueprint-secondary-link" style={{ marginTop: 10, display: "inline-block" }}>
+                {BOOKING_SUCCESS_COPY.openPrepCta}
               </Link>
             </section>
           ) : null}

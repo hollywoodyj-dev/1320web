@@ -16,8 +16,12 @@ export type HeaderAccountSummary = {
 export type AccountIntegrationSession = {
   sessionId: string;
   prepPath: string;
+  intakePath: string;
+  summaryPath: string;
   variantLabel: string;
   status: string;
+  intakeStatus: string;
+  summaryStatus: string;
   growthEdge: string | null;
   createdAt: string;
 };
@@ -117,8 +121,12 @@ export async function getAccountContext(): Promise<AccountContext | null> {
         return {
           sessionId: session.id,
           prepPath: `/integration/prep/${session.id}?token=${session.prep_access_token}`,
+          intakePath: `/integration/intake/${session.id}?token=${session.prep_access_token}`,
+          summaryPath: `/account/integration-sessions/${session.id}`,
           variantLabel: variant,
           status: session.status,
+          intakeStatus: session.intake_status ?? "not_started",
+          summaryStatus: session.summary_status ?? "none",
           growthEdge: session.growth_edge,
           createdAt: session.created_at.toISOString().slice(0, 10),
         };

@@ -71,7 +71,12 @@ function isTransactionalRoute(pathname: string | null): boolean {
 
 /** Living Blueprint member space — quiet header + compact footer (no marketing newsletter). */
 function isMemberSpaceRoute(pathname: string | null): boolean {
-  return Boolean(pathname?.startsWith("/living-blueprint/"));
+  return Boolean(
+    pathname?.startsWith("/living-blueprint/") ||
+      pathname?.startsWith("/facilitator/") ||
+      pathname?.startsWith("/integration/intake/") ||
+      pathname?.startsWith("/account/integration-sessions/"),
+  );
 }
 
 /** Quiet compact footer — auth gateways, reflection entry, internal console, checkout success. */

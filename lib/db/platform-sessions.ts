@@ -195,3 +195,13 @@ export async function updatePlatformSessionFacilitator(input: {
   `;
   return rows[0] ?? null;
 }
+
+export async function touchFacilitatorSessionAccess(sessionId: string): Promise<void> {
+  const db = getSql();
+  await db`
+    UPDATE platform_sessions
+    SET last_facilitator_accessed_at = now()
+    WHERE id = ${sessionId}
+      AND kind = 'personal_integration'
+  `;
+}

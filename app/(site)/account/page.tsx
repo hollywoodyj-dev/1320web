@@ -180,14 +180,24 @@ export default async function AccountPage() {
                 <li key={session.sessionId} className="list-none">
                   <p className="font-medium">{session.variantLabel}</p>
                   <p className="text-sm opacity-80">
-                    Requested {session.createdAt} · {session.status}
+                    Requested {session.createdAt} · {session.status} · Intake {session.intakeStatus}
                   </p>
                   {session.growthEdge ? (
                     <p className="text-sm opacity-80 mt-1 line-clamp-2">{session.growthEdge}</p>
                   ) : null}
-                  <Link href={session.prepPath} className="gold-button mt-3 inline-flex">
-                    {ACCOUNT_COPY.viewSessionPrep}
-                  </Link>
+                  <div className="mt-3 flex flex-wrap gap-3">
+                    <Link href={session.intakePath} className="gold-button inline-flex">
+                      Pre-Session Intake
+                    </Link>
+                    <Link href={session.prepPath} className="gold-button inline-flex">
+                      {ACCOUNT_COPY.viewSessionPrep}
+                    </Link>
+                    {session.summaryStatus === "published" || session.summaryStatus === "sent" ? (
+                      <Link href={session.summaryPath} className="gold-button inline-flex">
+                        Integration Summary
+                      </Link>
+                    ) : null}
+                  </div>
                 </li>
               ))}
             </ul>

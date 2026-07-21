@@ -1,0 +1,197 @@
+/* Personal Integration Operating Flow — Phase 1 surfaces */
+
+.pi-ops-page {
+  width: min(100% - 32px, 760px);
+  margin: 0 auto;
+  padding: 28px 0 40px;
+}
+
+.pi-ops-eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(230, 199, 120, 0.88);
+  text-align: center;
+}
+
+.pi-ops-title {
+  margin: 0 0 10px;
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+  color: #f3efe6;
+  text-align: center;
+}
+
+.pi-ops-lead,
+.pi-ops-boundary {
+  margin: 0 auto 12px;
+  max-width: 38rem;
+  line-height: 1.5;
+  text-align: center;
+  color: rgba(200, 210, 222, 0.86);
+}
+
+.pi-ops-boundary {
+  font-size: 0.88rem;
+  color: rgba(170, 182, 198, 0.75);
+}
+
+.pi-intake-section,
+.pi-intake-card,
+.pi-workspace-panel {
+  margin: 16px 0;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.pi-intake-section h2,
+.pi-workspace-panel h2,
+.pi-workspace-panel h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  color: rgba(230, 199, 120, 0.92);
+}
+
+.pi-intake-intro,
+.pi-intake-help,
+.pi-intake-status,
+.pi-intake-message {
+  font-size: 0.9rem;
+  color: rgba(180, 192, 208, 0.8);
+}
+
+.pi-intake-field {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.pi-intake-check {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  font-size: 0.92rem;
+  color: rgba(210, 218, 230, 0.9);
+}
+
+.pi-intake-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.pi-facilitator-gate,
+.pi-session-list,
+.pi-workspace {
+  width: min(100% - 32px, 980px);
+  margin: 0 auto;
+  padding: 24px 0 40px;
+}
+
+.pi-session-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.pi-session-list-table th,
+.pi-session-list-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: left;
+  color: rgba(210, 218, 230, 0.88);
+}
+
+.pi-session-list-table a {
+  color: rgba(230, 199, 120, 0.95);
+}
+
+.pi-workspace-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.pi-workspace-tabs button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(210, 218, 230, 0.85);
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.pi-workspace-tabs button[aria-selected="true"] {
+  border-color: rgba(230, 199, 120, 0.55);
+  color: rgba(230, 199, 120, 0.95);
+}
+
+.pi-guide-stage {
+  margin-bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.pi-guide-stage summary {
+  cursor: pointer;
+  padding: 12px 14px;
+  background: rgba(0, 0, 0, 0.2);
+  color: rgba(230, 199, 120, 0.9);
+}
+
+.pi-guide-stage-body {
+  padding: 12px 14px 14px;
+  font-size: 0.9rem;
+  color: rgba(200, 210, 222, 0.88);
+}
+
+.pi-notes-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.pi-notes-grid label {
+  display: grid;
+  gap: 6px;
+}
+
+.pi-saved-indicator {
+  font-size: 0.82rem;
+  color: rgba(170, 182, 198, 0.75);
+}
+
+.pi-bucket-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.pi-bucket-row button {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  color: rgba(200, 210, 222, 0.85);
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.82rem;
+}
+
+.pi-bucket-row button[aria-pressed="true"] {
+  border-color: rgba(230, 199, 120, 0.5);
+  color: rgba(230, 199, 120, 0.95);
+}
+
+@media (max-width: 720px) {
+  .pi-session-list-table {
+    display: block;
+    overflow-x: auto;
+  }
+}

@@ -20,10 +20,11 @@ export const BOOKING_SUCCESS_COPY = {
     "We could not load the scheduling calendar right now. You can return to your account or contact support for help scheduling your session.",
   noSession:
     "We could not confirm this payment session. Return to your account or contact support for help.",
-  prepTitle: "Session prep",
+  prepTitle: "Next: Pre-Session Intake",
   prepBody:
-    "After you pick a time, open your prep space to set your integration focus before the live session.",
-  prepCta: "Open Session Prep Space",
+    "After you pick a time, complete your Pre-Session Intake so your Facilitator can prepare with your Soul Blueprint.",
+  prepCta: "Complete Pre-Session Intake",
+  openPrepCta: "Open Session Prep Space",
   accountCta: "Return to Account",
   supportLead: "Need help?",
   supportCta: "Contact Support",

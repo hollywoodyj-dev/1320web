@@ -1,0 +1,112 @@
+{
+  "_meta": {
+    "version": "1320-experience-profile-v1",
+    "note": "Approved external tags only. Separate from Full Report commercial source. No formulas."
+  },
+  "defaults": {
+    "en": {
+      "essence_traits": ["reflective", "symbolic", "quietly expressive"],
+      "style_traits": ["structured", "layered", "soft contrast"],
+      "palette_traits": ["deep navy", "mineral blue", "soft gold"],
+      "texture_traits": ["soft wool", "silk", "matte leather"],
+      "visual_traits": ["threshold", "light through shadow", "renewal"],
+      "travel_traits": ["slow exploration", "cultural depth", "quiet renewal"],
+      "reading_traits": {
+        "core_themes": ["self-recognition", "meaning", "inner authority"],
+        "preferred_depth": "deep",
+        "preferred_styles": ["reflective nonfiction", "psychology", "philosophy"],
+        "learning_orientation": ["pattern recognition", "inner inquiry", "lived integration"]
+      },
+      "brand_affinity_traits": ["craftsmanship", "timelessness", "quiet presence"]
+    },
+    "zh-CN": {
+      "essence_traits": ["内省", "象征性", "安静地表达"],
+      "style_traits": ["有结构", "层次感", "柔和对比"],
+      "palette_traits": ["深蓝", "矿物蓝", "柔金"],
+      "texture_traits": ["软羊毛", "丝质", "哑光皮革"],
+      "visual_traits": ["门槛", "影中之光", "更新"],
+      "travel_traits": ["慢速探索", "文化深度", "安静更新"],
+      "reading_traits": {
+        "core_themes": ["自我认识", "意义", "内在权威"],
+        "preferred_depth": "deep",
+        "preferred_styles": ["反思性非虚构", "心理学", "哲学"],
+        "learning_orientation": ["模式识别", "内在探问", "生活整合"]
+      },
+      "brand_affinity_traits": ["工艺", "经典感", "安静存在"]
+    }
+  },
+  "by_s1": {
+    "S1-18": {
+      "en": {
+        "essence_traits": ["transformative", "deep", "quietly expressive"],
+        "style_traits": ["structured", "layered", "fluid contrast"],
+        "palette_traits": ["deep navy", "mineral blue", "soft gold"],
+        "reading_traits": {
+          "core_themes": ["transformation", "self-recognition", "meaning", "inner authority"],
+          "preferred_depth": "deep",
+          "preferred_styles": ["reflective nonfiction", "psychology", "philosophy", "literary fiction"],
+          "learning_orientation": ["pattern recognition", "inner inquiry", "lived integration"]
+        },
+        "brand_affinity_traits": ["craftsmanship", "timelessness", "quiet luxury"]
+      },
+      "zh-CN": {
+        "essence_traits": ["转化性", "有深度", "安静地表达"],
+        "style_traits": ["有结构", "层次感", "流动对比"],
+        "palette_traits": ["深蓝", "矿物蓝", "柔金"],
+        "reading_traits": {
+          "core_themes": ["转化", "自我认识", "意义", "内在权威"],
+          "preferred_depth": "deep",
+          "preferred_styles": ["反思性非虚构", "心理学", "哲学", "文学小说"],
+          "learning_orientation": ["模式识别", "内在探问", "生活整合"]
+        },
+        "brand_affinity_traits": ["工艺", "经典感", "安静奢华"]
+      }
+    }
+  },
+  "by_s3": {
+    "S3-03": {
+      "en": {
+        "travel_traits": ["slow exploration", "cultural depth", "quiet renewal"],
+        "visual_traits": ["threshold", "open horizon", "renewal"]
+      },
+      "zh-CN": {
+        "travel_traits": ["慢速探索", "文化深度", "安静更新"],
+        "visual_traits": ["门槛", "开阔地平线", "更新"]
+      }
+    }
+  },
+  "by_s2": {
+    "S2-27": {
+      "en": {
+        "essence_traits": ["transformative", "mirror-aware", "deep"],
+        "texture_traits": ["soft wool", "silk", "matte leather"]
+      },
+      "zh-CN": {
+        "essence_traits": ["转化性", "镜像觉察", "有深度"],
+        "texture_traits": ["软羊毛", "丝质", "哑光皮革"]
+      }
+    }
+  },
+  "by_s0": {
+    "S0-07": {
+      "en": {
+        "visual_traits": ["threshold", "light through shadow", "self-return"],
+        "reading_traits": {
+          "core_themes": ["self-worth", "self-recognition", "inner authority"],
+          "preferred_depth": "deep",
+          "preferred_styles": ["psychology", "reflective nonfiction", "philosophy"],
+          "learning_orientation": ["inner inquiry", "lived integration", "pattern recognition"]
+        }
+      },
+      "zh-CN": {
+        "visual_traits": ["门槛", "影中之光", "回归自我"],
+        "reading_traits": {
+          "core_themes": ["自我价值", "自我认识", "内在权威"],
+          "preferred_depth": "deep",
+          "preferred_styles": ["心理学", "反思性非虚构", "哲学"],
+          "learning_orientation": ["内在探问", "生活整合", "模式识别"]
+        }
+      }
+    }
+  }
+}

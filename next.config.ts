@@ -1,6 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Coze / Blueprint Experience OpenAPI paths (`/v1/...`) → Next route handlers.
+  async rewrites() {
+    return [
+      { source: "/v1/health", destination: "/api/v1/health" },
+      { source: "/v1/blueprints/resolve", destination: "/api/v1/blueprints/resolve" },
+      {
+        source: "/v1/blueprints/:blueprint_id/experience-profile",
+        destination: "/api/v1/blueprints/:blueprint_id/experience-profile",
+      },
+    ];
+  },
   // Allow phone/tablet on LAN IP to load dev assets (fixes broken client router + HMR).
   allowedDevOrigins: [
     "127.0.0.1",

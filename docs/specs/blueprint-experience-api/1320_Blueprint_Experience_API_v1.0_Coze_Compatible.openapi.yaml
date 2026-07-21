@@ -1,0 +1,459 @@
+openapi: 3.0.3
+info:
+  title: 1320 Blueprint Experience API
+  version: 1.0.0
+  description: |
+    Private API for resolving approved 1320 Soul Blueprint experience profiles.
+    This API does not include tarot, card drawing, predictions, Full Report export,
+    protected formulas, mapping tables, or complete S0-S9 databases.
+servers:
+  - url: https://www.1320soulcode.com
+    description: Production (Next.js rewrites /v1 → /api/v1)
+  - url: https://api.1320soulcode.com
+    description: Dedicated API host (future)
+  - url: https://staging-api.1320soulcode.com
+    description: Staging
+
+security:
+  - bearerAuth: []
+
+tags:
+  - name: Blueprint
+  - name: System
+
+paths:
+  /v1/blueprints/resolve:
+    post:
+      tags: [Blueprint]
+      operationId: resolveBlueprintProfile
+      summary: Resolve an approved external Blueprint experience profile
+      description: |
+        Supply either an existing blueprint_id or a valid birth_date.
+        Birth time and birth location are not accepted in v1.
+        Protected calculation details are never returned.
+      parameters:
+        - $ref: '#/components/parameters/ClientIdHeader'
+        - $ref: '#/components/parameters/IdempotencyKeyHeader'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BlueprintResolveRequest'
+            examples:
+              byBlueprintId:
+                value:
+                  blueprint_id: bp_01JEXAMPLE
+                  locale: zh-CN
+                  purpose: combined
+              byBirthDate:
+                value:
+                  birth_date: '1980-05-22'
+                  locale: zh-CN
+                  purpose: lifestyle_expression
+                  consent:
+                    blueprint_generation: true
+                    personalized_expression: true
+      responses:
+        '200':
+          description: Approved external Blueprint profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BlueprintResolveResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          $ref: '#/components/responses/Conflict'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+
+  /v1/blueprints/{blueprint_id}/experience-profile:
+    get:
+      tags: [Blueprint]
+      operationId: getBlueprintExperienceProfile
+      summary: Get an existing approved Blueprint experience profile
+      parameters:
+        - $ref: '#/components/parameters/ClientIdHeader'
+        - name: blueprint_id
+          in: path
+          required: true
+          schema:
+            type: string
+            minLength: 6
+            maxLength: 128
+          example: bp_01JEXAMPLE
+        - name: locale
+          in: query
+          required: true
+          schema:
+            $ref: '#/components/schemas/Locale'
+        - name: purpose
+          in: query
+          required: true
+          schema:
+            $ref: '#/components/schemas/Purpose'
+        - name: profile_version
+          in: query
+          required: false
+          schema:
+            type: string
+          example: 1320-experience-profile-v1
+      responses:
+        '200':
+          description: Approved external Blueprint profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BlueprintResolveResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          $ref: '#/components/responses/Conflict'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+        '500':
+          $ref: '#/components/responses/InternalError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+
+  /v1/health:
+    get:
+      tags: [System]
+      operationId: getHealth
+      summary: Check API availability
+      security: []
+      responses:
+        '200':
+          description: Service health
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - status
+                  - api_version
+                  - blueprint_service
+                  - experience_profile_service
+                properties:
+                  status:
+                    type: string
+                    enum: [ok]
+                  api_version:
+                    type: string
+                    example: '1.0'
+                  blueprint_service:
+                    type: string
+                    enum: [available, degraded, unavailable]
+                  experience_profile_service:
+                    type: string
+                    enum: [available, degraded, unavailable]
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API_KEY
+
+  parameters:
+    ClientIdHeader:
+      name: X-Client-Id
+      in: header
+      required: true
+      schema:
+        type: string
+      example: coze-lifestyle-v1
+
+    IdempotencyKeyHeader:
+      name: Idempotency-Key
+      in: header
+      required: false
+      schema:
+        type: string
+        minLength: 8
+        maxLength: 128
+
+  schemas:
+    Locale:
+      type: string
+      enum: [zh-CN, en]
+
+    Purpose:
+      type: string
+      enum:
+        - lifestyle_expression
+        - soul_reading
+        - visual_expression
+        - travel_inspiration
+        - brand_matching
+        - combined
+
+    Consent:
+      type: object
+      additionalProperties: false
+      required:
+        - blueprint_generation
+        - personalized_expression
+      properties:
+        blueprint_generation:
+          type: boolean
+        personalized_expression:
+          type: boolean
+
+    BlueprintResolveRequest:
+      type: object
+      additionalProperties: false
+      properties:
+        blueprint_id:
+          type: string
+          minLength: 6
+          maxLength: 128
+        birth_date:
+          type: string
+          format: date
+        locale:
+          $ref: '#/components/schemas/Locale'
+        purpose:
+          $ref: '#/components/schemas/Purpose'
+        consent:
+          $ref: '#/components/schemas/Consent'
+      required: [locale, purpose]
+      oneOf:
+        - required: [blueprint_id]
+          not:
+            required: [birth_date]
+        - required: [birth_date, consent]
+          not:
+            required: [blueprint_id]
+
+    FoundationSegment:
+      type: object
+      additionalProperties: false
+      required: [code, display_name]
+      properties:
+        code:
+          type: string
+        display_name:
+          type: string
+
+    ReadingTraits:
+      type: object
+      additionalProperties: false
+      required:
+        - core_themes
+        - preferred_depth
+        - preferred_styles
+        - learning_orientation
+      properties:
+        core_themes:
+          type: array
+          items: { type: string }
+        preferred_depth:
+          type: string
+          enum: [light, accessible, medium, deep, professional]
+        preferred_styles:
+          type: array
+          items: { type: string }
+        learning_orientation:
+          type: array
+          items: { type: string }
+
+    ExperienceProfile:
+      type: object
+      additionalProperties: false
+      required:
+        - essence_traits
+        - style_traits
+        - palette_traits
+        - texture_traits
+        - visual_traits
+        - travel_traits
+        - reading_traits
+        - brand_affinity_traits
+      properties:
+        essence_traits:
+          type: array
+          items: { type: string }
+        style_traits:
+          type: array
+          items: { type: string }
+        palette_traits:
+          type: array
+          items: { type: string }
+        texture_traits:
+          type: array
+          items: { type: string }
+        visual_traits:
+          type: array
+          items: { type: string }
+        travel_traits:
+          type: array
+          items: { type: string }
+        reading_traits:
+          $ref: '#/components/schemas/ReadingTraits'
+        brand_affinity_traits:
+          type: array
+          items: { type: string }
+
+    Governance:
+      type: object
+      additionalProperties: false
+      required:
+        - symbolic_only
+        - non_predictive
+        - non_diagnostic
+        - user_agency_required
+      properties:
+        symbolic_only:
+          type: boolean
+          enum: [true]
+        non_predictive:
+          type: boolean
+          enum: [true]
+        non_diagnostic:
+          type: boolean
+          enum: [true]
+        user_agency_required:
+          type: boolean
+          enum: [true]
+
+    BlueprintResolveResponse:
+      type: object
+      additionalProperties: false
+      required:
+        - request_id
+        - api_version
+        - profile_version
+        - blueprint_id
+        - signature
+        - foundation_order
+        - foundation
+        - experience_profile
+        - governance
+      properties:
+        request_id:
+          type: string
+        api_version:
+          type: string
+          example: '1.0'
+        profile_version:
+          type: string
+          example: 1320-experience-profile-v1
+        blueprint_id:
+          type: string
+        signature:
+          type: string
+          example: S1-18/S3-03/S2-27/S0-07
+        foundation_order:
+          type: array
+          minItems: 4
+          maxItems: 4
+          items:
+            type: string
+            enum: [S1, S3, S2, S0]
+          example: [S1, S3, S2, S0]
+        foundation:
+          type: object
+          additionalProperties: false
+          required: [s1, s3, s2, s0]
+          properties:
+            s1:
+              $ref: '#/components/schemas/FoundationSegment'
+            s3:
+              $ref: '#/components/schemas/FoundationSegment'
+            s2:
+              $ref: '#/components/schemas/FoundationSegment'
+            s0:
+              $ref: '#/components/schemas/FoundationSegment'
+        experience_profile:
+          $ref: '#/components/schemas/ExperienceProfile'
+        governance:
+          $ref: '#/components/schemas/Governance'
+
+    ErrorBody:
+      type: object
+      additionalProperties: false
+      required: [request_id, error]
+      properties:
+        request_id:
+          type: string
+        error:
+          type: object
+          additionalProperties: false
+          required: [code, message, safe_message_zh, retryable]
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            safe_message_zh:
+              type: string
+            retryable:
+              type: boolean
+
+  responses:
+    BadRequest:
+      description: Invalid request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorBody'
+    Unauthorized:
+      description: Missing or invalid API key
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorBody'
+    Forbidden:
+      description: Client is not allowed
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorBody'
+    NotFound:
+      description: Requested resource was not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorBody'
+    Conflict:
+      description: Version or idempotency conflict
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorBody'
+    RateLimited:
+      description: Rate limit exceeded
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorBody'
+    InternalError:
+      description: Safe generic server failure
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorBody'
+    ServiceUnavailable:
+      description: Required service is temporarily unavailable
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorBody'

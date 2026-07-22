@@ -2,7 +2,7 @@
 
 **Version:** 1.0  
 **Owner:** Nova  
-**Status:** Book → Prep → Follow-up shipped (FS-006 + FS-006.1) — facilitator ops live  
+**Status:** Operating Flow Phase 1 accepted & closed — Book → Schedule → Intake → Facilitator Workspace → Summary shipped; shared facilitator key OK for single-Facilitator launch (see [OPERATING_FLOW_ROADMAP_v1.md](./OPERATING_FLOW_ROADMAP_v1.md))  
 **Authority:** Wisewave FS-005A sign-off (9.6/10)  
 **Domain model:** [PLATFORM_DOMAIN_MODEL_v1.md](../canonical-soul-blueprint/PLATFORM_DOMAIN_MODEL_v1.md)  
 **Page revision:** [FS006_PAGE_REVISION_v2.md](../personal-integration/FS006_PAGE_REVISION_v2.md)  

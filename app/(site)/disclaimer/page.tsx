@@ -30,7 +30,7 @@ function DisclaimerBlockCard({
 }) {
   return (
     <section id={id} className="disclaimer-card">
-      <p className="disclaimer-subtitle">{title}</p>
+      <h2 className="disclaimer-subtitle">{title}</h2>
       <div className="disclaimer-copy">
         {paragraphs.map((paragraph) => (
           <p key={paragraph.slice(0, 48)}>{paragraph}</p>
@@ -55,7 +55,7 @@ export default function DisclaimerPage() {
         <DisclaimerBlockCard {...DISCLAIMER_AUTHORITY} />
 
         <section id={DISCLAIMER_SEGMENTS.id} className="disclaimer-card">
-          <p className="disclaimer-subtitle">{DISCLAIMER_SEGMENTS.title}</p>
+          <h2 className="disclaimer-subtitle">{DISCLAIMER_SEGMENTS.title}</h2>
           <ul className="disclaimer-segment-grid">
             {DISCLAIMER_SEGMENTS.items.map((item) => (
               <li key={item.code} className="disclaimer-segment-item">
@@ -72,7 +72,7 @@ export default function DisclaimerPage() {
         <DisclaimerBlockCard {...DISCLAIMER_HEALTH} />
 
         <section id={DISCLAIMER_REPORTS_GROUP.id} className="disclaimer-card">
-          <p className="disclaimer-subtitle">{DISCLAIMER_REPORTS_GROUP.title}</p>
+          <h2 className="disclaimer-subtitle">{DISCLAIMER_REPORTS_GROUP.title}</h2>
           <div className="disclaimer-subsections">
             {DISCLAIMER_REPORTS_GROUP.subsections.map((sub) => (
               <div key={sub.title} className="disclaimer-subsection">

@@ -1,8 +1,8 @@
-/* Terms of Service density — calm current legal page (Page 14). */
+/* Terms of Service — quieter reading hierarchy (P0). */
 
 .terms-page--refined {
-  --terms-gap: clamp(18px, 3.5vw, 28px);
-  max-width: 920px;
+  --terms-gap: clamp(22px, 4vw, 32px);
+  max-width: 760px;
   margin: 0 auto;
   padding-bottom: 48px;
 }
@@ -10,6 +10,9 @@
 .terms-page--refined .terms-hero {
   margin-bottom: var(--terms-gap);
   text-align: center;
+  background: transparent;
+  border-color: rgba(214, 181, 109, 0.12);
+  box-shadow: none;
 }
 
 .terms-stack {
@@ -18,26 +21,28 @@
 }
 
 .terms-page--refined .terms-card {
-  border: 1px solid rgba(214, 181, 109, 0.18);
-  border-radius: 22px;
-  background: rgba(5, 14, 27, 0.62);
-  padding: clamp(24px, 4vw, 36px);
+  border: none;
+  border-top: 1px solid rgba(214, 181, 109, 0.14);
+  border-radius: 0;
+  background: transparent;
+  padding: clamp(8px, 2vw, 12px) 0 clamp(4px, 1vw, 8px);
   box-shadow: none;
 }
 
 .terms-page--refined .terms-subtitle {
   margin: 0 0 14px;
   color: #f4d88a;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 0.78rem;
+  font-weight: 650;
 }
 
 .terms-page--refined .terms-copy {
   font-size: 16.5px;
-  line-height: 1.68;
-  color: rgba(245, 234, 214, 0.78);
+  line-height: 1.7;
+  color: rgba(245, 234, 214, 0.8);
+  max-width: 40rem;
 }
 
 .terms-page--refined .terms-copy p {
@@ -53,29 +58,29 @@
   margin: 0 0 14px;
   padding: 0;
   display: grid;
-  gap: 10px;
+  gap: 8px;
 }
 
 .terms-bullet-list li {
   position: relative;
-  padding: 10px 12px 10px 34px;
-  border-radius: 12px;
-  border: 1px solid rgba(214, 181, 109, 0.14);
-  background: rgba(8, 14, 30, 0.4);
+  padding: 2px 0 2px 1.1rem;
+  border: none;
+  border-radius: 0;
+  background: transparent;
   font-size: 16.5px;
   line-height: 1.55;
-  color: rgba(245, 234, 214, 0.82);
+  color: rgba(245, 234, 214, 0.84);
 }
 
 .terms-bullet-list li::before {
   content: "";
   position: absolute;
-  left: 14px;
-  top: 1.1em;
-  width: 7px;
-  height: 7px;
+  left: 0;
+  top: 0.72em;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
-  background: rgba(244, 216, 138, 0.85);
+  background: rgba(244, 216, 138, 0.75);
 }
 
 .terms-subsections {
@@ -92,11 +97,11 @@
 
 .terms-page--refined .terms-cta {
   margin-top: calc(var(--terms-gap) + 8px);
-  padding: clamp(24px, 4vw, 36px);
+  padding: clamp(24px, 4vw, 32px);
   text-align: center;
-  border: 1px solid rgba(214, 181, 109, 0.18);
-  border-radius: 22px;
-  background: rgba(5, 14, 27, 0.62);
+  border: 1px solid rgba(214, 181, 109, 0.16);
+  border-radius: 18px;
+  background: rgba(5, 14, 27, 0.35);
 }
 
 .terms-page--refined .terms-cta h2 {
@@ -122,9 +127,8 @@
 }
 
 @media (max-width: 640px) {
-  .terms-page--refined .terms-card,
   .terms-page--refined .terms-cta {
-    padding: 24px;
+    padding: 22px;
   }
 
   .terms-page--refined .terms-copy,

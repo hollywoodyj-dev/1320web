@@ -1,23 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
-  TERMS_ACCEPTABLE_USE,
   TERMS_AGREEMENT,
+  TERMS_BOUNDARY_GROUP,
   TERMS_CHANGES,
   TERMS_COMMERCE_GROUP,
   TERMS_CONTACT,
   TERMS_CTA,
-  TERMS_GOVERNING,
   TERMS_HERO,
-  TERMS_INDEMNITY,
-  TERMS_IP,
-  TERMS_LIABILITY,
+  TERMS_LEGAL_GROUP,
   TERMS_META,
-  TERMS_NO_ADVICE,
-  TERMS_NO_GUARANTEES,
   TERMS_PROVIDES,
   TERMS_PROVIDES_CLOSING,
   TERMS_THIRD_PARTY,
+  TERMS_USE_GROUP,
   type TermsBlock,
 } from "@/lib/terms-content";
 import "@/styles/terms-density-v1.css";
@@ -30,7 +26,7 @@ export const metadata: Metadata = {
 function TermsBlockCard({ block, closing }: { block: TermsBlock; closing?: string }) {
   return (
     <section id={block.id} className="terms-card">
-      <p className="terms-subtitle">{block.title}</p>
+      <h2 className="terms-subtitle">{block.title}</h2>
       <div className="terms-copy">
         {block.paragraphs.map((paragraph) => (
           <p key={paragraph.slice(0, 56)}>{paragraph}</p>
@@ -48,6 +44,41 @@ function TermsBlockCard({ block, closing }: { block: TermsBlock; closing?: strin
   );
 }
 
+function TermsGroupCard({
+  id,
+  title,
+  blocks,
+}: {
+  id: string;
+  title: string;
+  blocks: TermsBlock[];
+}) {
+  return (
+    <section id={id} className="terms-card">
+      <h2 className="terms-subtitle">{title}</h2>
+      <div className="terms-subsections">
+        {blocks.map((block) => (
+          <div key={block.id} id={block.id} className="terms-subsection">
+            <h3>{block.title}</h3>
+            <div className="terms-copy">
+              {block.paragraphs.map((paragraph) => (
+                <p key={paragraph.slice(0, 56)}>{paragraph}</p>
+              ))}
+              {block.bullets?.length ? (
+                <ul className="terms-bullet-list">
+                  {block.bullets.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              ) : null}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export default function TermsPage() {
   return (
     <div className="conversion-page legal-page terms-page terms-page--refined">
@@ -60,32 +91,12 @@ export default function TermsPage() {
       <div className="terms-stack">
         <TermsBlockCard block={TERMS_AGREEMENT} />
         <TermsBlockCard block={TERMS_PROVIDES} closing={TERMS_PROVIDES_CLOSING} />
-        <TermsBlockCard block={TERMS_NO_ADVICE} />
-        <TermsBlockCard block={TERMS_NO_GUARANTEES} />
-
-        <section id={TERMS_COMMERCE_GROUP.id} className="terms-card">
-          <p className="terms-subtitle">{TERMS_COMMERCE_GROUP.title}</p>
-          <div className="terms-subsections">
-            {TERMS_COMMERCE_GROUP.blocks.map((block) => (
-              <div key={block.id} id={block.id} className="terms-subsection">
-                <h3>{block.title}</h3>
-                <div className="terms-copy">
-                  {block.paragraphs.map((paragraph) => (
-                    <p key={paragraph.slice(0, 56)}>{paragraph}</p>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <TermsBlockCard block={TERMS_ACCEPTABLE_USE} />
-        <TermsBlockCard block={TERMS_IP} />
+        <TermsGroupCard {...TERMS_BOUNDARY_GROUP} />
+        <TermsGroupCard {...TERMS_COMMERCE_GROUP} />
+        <TermsGroupCard {...TERMS_USE_GROUP} />
         <TermsBlockCard block={TERMS_THIRD_PARTY} />
-        <TermsBlockCard block={TERMS_LIABILITY} />
-        <TermsBlockCard block={TERMS_INDEMNITY} />
+        <TermsGroupCard {...TERMS_LEGAL_GROUP} />
         <TermsBlockCard block={TERMS_CHANGES} />
-        <TermsBlockCard block={TERMS_GOVERNING} />
         <TermsBlockCard block={TERMS_CONTACT} />
       </div>
 

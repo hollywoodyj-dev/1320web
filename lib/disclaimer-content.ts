@@ -106,8 +106,9 @@ export const DISCLAIMER_REPORTS_GROUP = {
       title: "Reports & Sessions",
       paragraphs: [
         "Sample reports use fictional data for structure preview.",
-        "Your personal report is generated from your own birth date.",
-        "Personal Integration Sessions and written reports support reflection only. They do not guarantee outcomes, replace licensed professionals, or determine life decisions.",
+        "Your personal Free Soul Blueprint and Full Report are generated from your own birth date.",
+        "Personal Integration Sessions are reflective conversations guided by a Blueprint Integration Consultant. They support integration only and do not guarantee outcomes, replace licensed professionals, or determine life decisions.",
+        "The consultant role is facilitative, reflective, and non-directive. It does not imply authority over your meaning, prediction, diagnosis, spiritual rank, or decisions made on your behalf.",
       ],
     },
     {
@@ -132,8 +133,8 @@ export const DISCLAIMER_CONTACT: DisclaimerBlock = {
 export const DISCLAIMER_CTA = {
   title: "Continue With Clarity",
   body: "Use 1320 as a mirror for reflection — not as a substitute for your own judgment or professional support.",
-  primaryCta: "Generate My Code",
-  primaryHref: "/your-code",
+  primaryCta: "Discover My Free Soul Blueprint",
+  primaryHref: "/free-soul-blueprint",
   secondaryCta: "Read FAQ",
   secondaryHref: "/faq",
 };

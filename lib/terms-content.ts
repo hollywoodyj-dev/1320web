@@ -1,17 +1,17 @@
-/** Terms of Service — Page 14 Refinement Spec v1.0 (product-state aligned draft). */
+/** Terms of Service — Conversion UI Refinement · Launch v1 · P0 product-state alignment. */
 
 import { LEGAL_PLACEHOLDERS } from "@/lib/legal-placeholders";
 
 export const TERMS_META = {
   title: "Terms of Service | 1320 Soul Code",
   description:
-    "Terms for using the 1320 website, code generator, reports, account access, purchases, and related reflective services.",
+    "Terms for using the 1320 website, Free Soul Blueprint, Full Report, accounts, purchases, and Personal Integration Sessions.",
 };
 
 export const TERMS_HERO = {
   eyebrow: "Legal",
   title: "Terms of Service",
-  body: "Terms for using the 1320 website, code generator, reports, account access, purchases, and related reflective services.",
+  body: "Terms for using the 1320 website, Free Soul Blueprint, Full Report, account access, purchases, and related reflective services.",
 };
 
 export type TermsBlock = {
@@ -36,17 +36,17 @@ export const TERMS_PROVIDES: TermsBlock = {
   id: "provides",
   title: "What 1320 Provides",
   paragraphs: [
-    "1320 provides symbolic self-awareness and reflection experiences, including:",
+    "1320 currently provides symbolic self-awareness and reflection experiences, including:",
   ],
   bullets: [
-    "birth-date based Soul Blueprint code generation",
-    "Free Result preview",
-    "Sample Report preview",
-    "Full Soul Blueprint Report",
-    "account-based report access where available",
-    "mobile and PDF report surfaces",
-    "Personal Integration Session booking or inquiry pathways",
-    "email updates or related communications when you opt in",
+    "Free Soul Blueprint generation from your birth date (day, month, year)",
+    "Sample Report access for structure preview",
+    "Full Soul Blueprint Report purchase (complete S0–S9 pattern)",
+    "Account-based entitled access to your purchased Full Report",
+    "Web, Mobile, and PDF report surfaces for entitled Full Report access",
+    "Personal Integration Session purchase and booking",
+    "Transactional emails related to purchases, access, booking, and account activity",
+    "Optional marketing communications only where you have opted in or recorded consent",
   ],
 };
 
@@ -77,11 +77,13 @@ export const TERMS_ACCOUNTS: TermsBlock = {
   id: "accounts",
   title: "Accounts, Purchases & Payments",
   paragraphs: [
-    "Some 1320 services may require an account, sign-in, purchase, or payment process.",
+    "1320 offers paid products through online checkout, including the Full Soul Blueprint Report and Personal Integration Sessions.",
+    "Creating an account may be required to complete purchase, access entitled Full Report content, or manage booking-related access.",
     "If you create an account, you are responsible for keeping your login information secure.",
-    "Paid products, including Full Report access or related services, may be processed through third-party payment providers. Their terms and privacy practices may also apply.",
-    "Access to purchased or entitled reports may require sign-in.",
-    "Prices, availability, product scope, and access methods may change over time.",
+    "Payments are processed by third-party payment providers (such as Stripe). Their terms and privacy practices also apply.",
+    "After a successful Full Report purchase and entitlement confirmation, you may access your report through sign-in on Web, Mobile, and PDF surfaces as available.",
+    "Personal Integration Sessions are purchased first and then scheduled through the booking flow provided after payment.",
+    "Displayed prices follow the live production catalog. Availability, product scope, and access methods may change over time; historical purchases are not rewritten.",
   ],
 };
 
@@ -90,7 +92,7 @@ export const TERMS_REFUNDS: TermsBlock = {
   title: "Purchases, Access & Refunds",
   paragraphs: [
     "Digital report purchases may provide access to generated content after checkout or entitlement confirmation.",
-    "Because digital content may be delivered immediately, refunds may be limited unless required by applicable law or stated otherwise at checkout.",
+    "Because digital content may be delivered immediately, refunds may be limited unless required by applicable law or stated otherwise at checkout or in a published refund policy.",
     `If you experience access issues, contact us at ${LEGAL_PLACEHOLDERS.contactEmail}.`,
   ],
 };
@@ -119,7 +121,7 @@ export const TERMS_THIRD_PARTY: TermsBlock = {
   id: "third-party",
   title: "Third-Party Services",
   paragraphs: [
-    "The site may use third-party providers for hosting, analytics, email, forms, checkout, payment processing, authentication, or scheduling.",
+    "The site uses third-party providers for hosting, analytics, email, forms, checkout, payment processing, authentication, and scheduling.",
     "Their terms and privacy practices may also apply.",
   ],
 };
@@ -169,8 +171,8 @@ export const TERMS_CONTACT: TermsBlock = {
 export const TERMS_CTA = {
   title: "Continue With Clarity",
   body: "Use 1320 as a reflective symbolic system — you remain responsible for your own choices.",
-  primaryCta: "Generate My Code",
-  primaryHref: "/your-code",
+  primaryCta: "Discover My Free Soul Blueprint",
+  primaryHref: "/free-soul-blueprint",
   secondaryCta: "Read Privacy Policy",
   secondaryHref: "/privacy",
 };
@@ -180,6 +182,24 @@ export const TERMS_COMMERCE_GROUP = {
   id: "commerce",
   title: "Accounts, Purchases & Access",
   blocks: [TERMS_ACCOUNTS, TERMS_REFUNDS],
+};
+
+export const TERMS_BOUNDARY_GROUP = {
+  id: "boundaries",
+  title: "Boundaries & Responsibility",
+  blocks: [TERMS_NO_ADVICE, TERMS_NO_GUARANTEES],
+};
+
+export const TERMS_USE_GROUP = {
+  id: "use-rights",
+  title: "Acceptable Use & Intellectual Property",
+  blocks: [TERMS_ACCEPTABLE_USE, TERMS_IP],
+};
+
+export const TERMS_LEGAL_GROUP = {
+  id: "legal-limits",
+  title: "Liability, Indemnity & Law",
+  blocks: [TERMS_LIABILITY, TERMS_INDEMNITY, TERMS_GOVERNING],
 };
 
 export const TERMS_BLOCKS: TermsBlock[] = [

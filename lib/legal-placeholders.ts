@@ -2,7 +2,7 @@
 
 export const LEGAL_PLACEHOLDERS = {
   contactEmail: "info@1320soulcode.com",
-  effectiveDate: "June 6, 2026",
+  effectiveDate: "July 28, 2026",
   companyName: "1320 Soul Origin Code System",
 } as const;
 

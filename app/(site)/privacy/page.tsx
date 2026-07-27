@@ -32,7 +32,7 @@ function PrivacyBlockCard({
 }) {
   return (
     <section id={id} className="privacy-card">
-      <p className="privacy-subtitle">{title}</p>
+      <h2 className="privacy-subtitle">{title}</h2>
       <div className="privacy-copy">
         {paragraphs.map((paragraph) => (
           <p key={paragraph.slice(0, 56)}>{paragraph}</p>
@@ -56,7 +56,7 @@ export default function PrivacyPage() {
         <PrivacyBlockCard {...PRIVACY_OVERVIEW} />
 
         <section id={PRIVACY_SUMMARY.id} className="privacy-card privacy-summary-card">
-          <p className="privacy-subtitle">{PRIVACY_SUMMARY.title}</p>
+          <h2 className="privacy-subtitle">{PRIVACY_SUMMARY.title}</h2>
           <ul className="privacy-summary-list">
             {PRIVACY_SUMMARY.items.map((item) => (
               <li key={item}>{item}</li>
@@ -65,7 +65,7 @@ export default function PrivacyPage() {
         </section>
 
         <section id="data" className="privacy-card">
-          <p className="privacy-subtitle">Data Collection & Use</p>
+          <h2 className="privacy-subtitle">Data Collection & Use</h2>
           <div className="privacy-subsections">
             <div className="privacy-subsection">
               <h3>{PRIVACY_COLLECT.title}</h3>
@@ -100,7 +100,7 @@ export default function PrivacyPage() {
         <PrivacyBlockCard {...PRIVACY_STORAGE} />
 
         <section id="rights" className="privacy-card">
-          <p className="privacy-subtitle">Choices & Audience</p>
+          <h2 className="privacy-subtitle">Choices & Audience</h2>
           <div className="privacy-subsections">
             <div className="privacy-subsection">
               <h3>{PRIVACY_CHOICES.title}</h3>
@@ -124,7 +124,7 @@ export default function PrivacyPage() {
         </section>
 
         <section id={PRIVACY_CHANGES_CONTACT.id} className="privacy-card">
-          <p className="privacy-subtitle">{PRIVACY_CHANGES_CONTACT.title}</p>
+          <h2 className="privacy-subtitle">{PRIVACY_CHANGES_CONTACT.title}</h2>
           <div className="privacy-subsections">
             {PRIVACY_CHANGES_CONTACT.subsections.map((sub) => (
               <div key={sub.title} className="privacy-subsection">

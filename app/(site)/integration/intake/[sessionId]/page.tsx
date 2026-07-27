@@ -26,7 +26,10 @@ export default async function IntegrationIntakePage({ params, searchParams }: Pa
       <header className="pi-ops-hero">
         <p className="pi-ops-eyebrow">{INTAKE_COPY.eyebrow}</p>
         <h1 className="pi-ops-title">{INTAKE_COPY.title}</h1>
-        <p className="pi-ops-lead">{INTAKE_COPY.lead}</p>
+        <p className="pi-ops-lead" style={{ whiteSpace: "pre-line" }}>
+          {INTAKE_COPY.lead}
+        </p>
+        <p className="pi-intake-time">{INTAKE_COPY.timeEstimate}</p>
         <p className="pi-ops-boundary">{INTAKE_COPY.boundary}</p>
       </header>
       <PersonalIntegrationIntakeForm sessionId={sessionId} token={token} />

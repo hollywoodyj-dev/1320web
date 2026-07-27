@@ -9,13 +9,16 @@ import { soulReportBirthDateIso } from "@/lib/db/normalize-soul-report-row";
 import {
   getPlatformSessionById,
   getPlatformSessionByPrepToken,
-  updatePlatformSessionGrowthEdge,
 } from "@/lib/db/platform-sessions";
 import { getSoulReportById } from "@/lib/db/reports";
 import { getUserById } from "@/lib/db/users";
 import { getCurrentUser } from "@/lib/auth/session";
 import { INTAKE_CONSENT_VERSION } from "@/lib/personal-integration/ops/constants";
-import { INTAKE_SECTIONS, type IntakeResponses } from "@/lib/personal-integration/ops/intake-schema";
+import {
+  INTAKE_SECTIONS,
+  validateEasyAccessIntake,
+  type IntakeResponses,
+} from "@/lib/personal-integration/ops/intake-schema";
 import { formatSessionHeading } from "@/lib/personal-integration/format-session-heading";
 
 export type IntakeAccess = {
@@ -65,6 +68,8 @@ export async function buildIntakePrefill(sessionId: string) {
     email: user?.email ?? "",
     birthDate: soulReportBirthDateIso(report),
     reportId: report.id,
+    reportHref: `/my-report/${report.id}`,
+    /** Facilitator-side context only — not shown in Easy Access client questions. */
     foundationCodes: `${report.s1_code} → ${report.s3_code} → ${report.s2_code} → ${report.s0_code}`,
     advancedCodes: `${code.s4Code} · ${code.s5Code} · ${code.s6Code} · ${code.s7Code} · ${code.s8Code} · ${code.s9Code}`,
     sessionType: variantLabel,
@@ -75,6 +80,7 @@ export async function buildIntakePrefill(sessionId: string) {
       ? `/integration/prep/${session.id}?token=${session.prep_access_token}`
       : null,
     sections: INTAKE_SECTIONS,
+    formVersion: "pre-session-intake-v1.1-easy-access",
   };
 }
 
@@ -87,8 +93,7 @@ export async function loadIntakeFormState(sessionId: string) {
     email: prefill.email,
     birth_date: prefill.birthDate,
     report_id: prefill.reportId,
-    foundation_codes: prefill.foundationCodes,
-    advanced_codes: prefill.advancedCodes,
+    report_link: prefill.reportHref,
     session_type: prefill.sessionType,
     session_date: prefill.sessionDate,
     timezone: prefill.timezone,
@@ -105,17 +110,21 @@ export async function loadIntakeFormState(sessionId: string) {
 
 function extractWellbeingFlags(responses: IntakeResponses): Record<string, unknown> {
   return {
+    scope_acknowledgement: responses.scope_acknowledgement === true,
+    form_version: "pre-session-intake-v1.1-easy-access",
+    // Historical v1.0 keys preserved if still present on older drafts
     in_crisis: responses.in_crisis ?? null,
     professional_care: responses.professional_care ?? null,
-    scope_acknowledgement: responses.scope_acknowledgement === true,
   };
 }
 
 export async function saveIntakeDraft(sessionId: string, responses: IntakeResponses) {
   const session = await getPlatformSessionById(sessionId);
   if (!session) return null;
-  if ((session.intake_status === "submitted" || session.intake_status === "reviewed") &&
-      (await getIntegrationIntakeBySessionId(sessionId))?.status !== "draft") {
+  if (
+    (session.intake_status === "submitted" || session.intake_status === "reviewed") &&
+    (await getIntegrationIntakeBySessionId(sessionId))?.status !== "draft"
+  ) {
     return { error: "already_submitted" as const };
   }
 
@@ -129,47 +138,25 @@ export async function saveIntakeDraft(sessionId: string, responses: IntakeRespon
 }
 
 export async function submitIntakeForm(sessionId: string, responses: IntakeResponses) {
-  const requiredChecks = [
-    responses.what_brings_you,
-    responses.why_now,
-    responses.current_experience,
-    responses.session_intention,
-    responses.growth_edge,
-    responses.support_style,
-    responses.in_crisis,
-    responses.professional_care,
-  ];
-  if (requiredChecks.some((value) => !value || (typeof value === "string" && !value.trim()))) {
+  const validation = validateEasyAccessIntake(responses);
+  if (validation === "missing_required") {
     return { error: "missing_required" as const };
   }
-  if (
-    responses.scope_acknowledgement !== true ||
-    responses.consent_blueprint_use !== true ||
-    responses.consent_record !== true ||
-    responses.consent_agency !== true
-  ) {
+  if (validation === "consent_required") {
     return { error: "consent_required" as const };
-  }
-  if (responses.in_crisis === "yes") {
-    return { error: "scope_blocked" as const };
   }
 
   const row = await submitIntegrationIntake({
     sessionId,
-    responses: responses as Record<string, unknown>,
+    responses: {
+      ...(responses as Record<string, unknown>),
+      form_version: "pre-session-intake-v1.1-easy-access",
+    },
     wellbeingFlags: extractWellbeingFlags(responses),
     consentVersion: INTAKE_CONSENT_VERSION,
   });
   await setSessionIntakeStatus(sessionId, "submitted");
 
-  const growthEdge = typeof responses.growth_edge === "string" ? responses.growth_edge.trim() : "";
-  if (growthEdge) {
-    await updatePlatformSessionGrowthEdge({
-      sessionId,
-      growthEdge,
-      authorship: "user",
-    });
-  }
-
+  // Easy Access Intake does not collect Growth Edge — facilitator prepares that privately.
   return { intake: row };
 }

@@ -85,6 +85,116 @@
   margin-top: 18px;
 }
 
+.pi-intake-time {
+  margin: 0 auto 14px;
+  text-align: center;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  color: rgba(230, 199, 120, 0.9);
+}
+
+.pi-intake-required {
+  color: rgba(230, 199, 120, 0.95);
+}
+
+.pi-intake-fieldset {
+  border: none;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.pi-intake-fieldset legend {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: rgba(230, 210, 180, 0.95);
+}
+
+.pi-intake-options {
+  display: grid;
+  gap: 8px;
+}
+
+.pi-intake-option {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.16);
+  font-size: 0.92rem;
+  color: rgba(210, 218, 230, 0.92);
+  cursor: pointer;
+}
+
+.pi-intake-option.is-selected {
+  border-color: rgba(214, 181, 109, 0.45);
+  background: rgba(214, 181, 109, 0.08);
+}
+
+.pi-intake-option input {
+  margin-top: 0.2rem;
+}
+
+.pi-intake-link-row {
+  margin: 0 0 12px;
+}
+
+.pi-intake-prep {
+  display: grid;
+  gap: 14px;
+}
+
+.pi-intake-prep article {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pi-intake-prep h3 {
+  margin: 0 0 6px;
+  font-size: 0.92rem;
+  color: rgba(230, 199, 120, 0.92);
+}
+
+.pi-intake-prep ul {
+  margin: 0 0 6px;
+  padding-left: 1.1rem;
+}
+
+.pi-intake-prep p {
+  margin: 0;
+  line-height: 1.5;
+  color: rgba(210, 218, 230, 0.9);
+}
+
+@media (max-width: 430px) {
+  .pi-ops-page {
+    width: min(100% - 20px, 760px);
+    padding: 20px 0 32px;
+  }
+
+  .pi-intake-section,
+  .pi-intake-card {
+    padding: 14px;
+  }
+
+  .pi-intake-option {
+    padding: 12px;
+    min-height: 44px;
+  }
+
+  .pi-intake-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pi-intake-actions .gold-button,
+  .pi-intake-actions .blueprint-secondary-link {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .pi-facilitator-gate,
 .pi-session-list,
 .pi-workspace {

@@ -149,11 +149,28 @@ export async function buildBlueprintContext(
     return layerCard(segmentCode, displayName, `Advanced reference for ${segmentCode}.`);
   });
 
+  const exploreNote = str(responses, "explore_note");
+  const whatIsHappening = str(responses, "what_is_happening");
+  const whyNowNote = str(responses, "why_now_note");
+  const anythingToKnow = str(responses, "anything_to_know");
+
+  // Easy Access first; legacy v1.0 keys only as fallback for older submissions.
   const sessionFocus =
-    str(responses, "growth_edge") || session.growth_edge || str(responses, "session_intention") || "Not yet named";
+    exploreNote ||
+    str(responses, "growth_edge") ||
+    session.growth_edge ||
+    str(responses, "session_intention") ||
+    "See client preparation panel — categories are starting points, not Blueprint interpretation.";
   const currentSituation =
-    str(responses, "current_experience") || str(responses, "what_brings_you") || "Awaiting intake.";
-  const clientIntention = str(responses, "session_intention") || sessionFocus;
+    whatIsHappening ||
+    str(responses, "current_experience") ||
+    str(responses, "what_brings_you") ||
+    "Awaiting intake.";
+  const clientIntention =
+    whyNowNote ||
+    anythingToKnow ||
+    str(responses, "session_intention") ||
+    sessionFocus;
 
   const safetyWatchpoints: string[] = [];
   if (wellbeing.in_crisis === "yes" || responses.in_crisis === "yes") {

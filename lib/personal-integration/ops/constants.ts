@@ -21,4 +21,4 @@ export type IntakeStatus = (typeof INTAKE_STATUSES)[number];
 export const SUMMARY_STATUSES = ["none", "draft", "ready_for_review", "published", "sent"] as const;
 export type SummaryStatus = (typeof SUMMARY_STATUSES)[number];
 
-export const INTAKE_CONSENT_VERSION = "pi-intake-consent-v1" as const;
+export const INTAKE_CONSENT_VERSION = "pi-intake-consent-v1.1-easy-access" as const;

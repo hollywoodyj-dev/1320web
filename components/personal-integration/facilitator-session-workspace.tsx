@@ -58,6 +58,16 @@ type WorkspacePayload = {
     status: string;
     responses: Record<string, unknown>;
     wellbeingFlags: Record<string, unknown>;
+    preparation?: {
+      formVersion: string;
+      mainArea: { labels: string[]; note: string };
+      whatIsHappening: string;
+      whyNow: { labels: string[]; note: string };
+      whatWouldFeelHelpful: { labels: string[]; disclaimer: string };
+      anythingToKnow: string;
+      scopeAcknowledged: boolean;
+      legacyPresent: boolean;
+    };
   } | null;
   notes: Record<string, unknown> | null;
   summary: { status: string; content: SummaryContent } | null;
@@ -320,15 +330,65 @@ export function FacilitatorSessionWorkspace({ sessionId }: { sessionId: string }
 
       {tab === "intake" ? (
         <section className="pi-workspace-panel">
-          <h2>Intake (read-only)</h2>
+          <h2>Client preparation (read-only)</h2>
+          <p className="pi-intake-intro">
+            Ordinary-language answers from Easy Access Intake. Do not treat selected categories as
+            definitive Blueprint interpretation. Blueprint Context stays on the Soul Blueprint tab.
+            Private notes stay on the Notes tab.
+          </p>
           {!data.intake ? (
             <p>No intake submitted yet.</p>
+          ) : data.intake.preparation ? (
+            <div className="pi-intake-prep">
+              <article>
+                <h3>Main area</h3>
+                <ul>
+                  {data.intake.preparation.mainArea.labels.map((label) => (
+                    <li key={label}>{label}</li>
+                  ))}
+                </ul>
+                {data.intake.preparation.mainArea.note ? (
+                  <p>{data.intake.preparation.mainArea.note}</p>
+                ) : null}
+              </article>
+              <article>
+                <h3>What is happening</h3>
+                <p>{data.intake.preparation.whatIsHappening || "—"}</p>
+              </article>
+              <article>
+                <h3>Why now</h3>
+                <ul>
+                  {data.intake.preparation.whyNow.labels.map((label) => (
+                    <li key={label}>{label}</li>
+                  ))}
+                </ul>
+                {data.intake.preparation.whyNow.note ? <p>{data.intake.preparation.whyNow.note}</p> : null}
+              </article>
+              <article>
+                <h3>What would feel helpful</h3>
+                <ul>
+                  {data.intake.preparation.whatWouldFeelHelpful.labels.map((label) => (
+                    <li key={label}>{label}</li>
+                  ))}
+                </ul>
+                <p className="pi-intake-help">{data.intake.preparation.whatWouldFeelHelpful.disclaimer}</p>
+              </article>
+              <article>
+                <h3>Anything to know</h3>
+                <p>{data.intake.preparation.anythingToKnow || "—"}</p>
+              </article>
+              <p className="pi-intake-help">
+                Scope acknowledged: {data.intake.preparation.scopeAcknowledged ? "Yes" : "No"} · Form{" "}
+                {data.intake.preparation.formVersion}
+                {data.intake.preparation.legacyPresent ? " · Legacy v1.0 fields also present in raw JSON" : ""}
+              </p>
+            </div>
           ) : (
             <dl>
               {Object.entries(data.intake.responses).map(([key, value]) => (
                 <div key={key}>
                   <dt>{key}</dt>
-                  <dd>{String(value)}</dd>
+                  <dd>{Array.isArray(value) ? value.join(", ") : String(value)}</dd>
                 </div>
               ))}
             </dl>

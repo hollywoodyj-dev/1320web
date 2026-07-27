@@ -3,12 +3,22 @@
 import Link from "next/link";
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import { INTAKE_COPY } from "@/lib/personal-integration/ops/intake-content";
-import { INTAKE_SECTIONS, type IntakeResponses } from "@/lib/personal-integration/ops/intake-schema";
+import {
+  INTAKE_SECTIONS,
+  type IntakeFieldDef,
+  type IntakeResponses,
+} from "@/lib/personal-integration/ops/intake-schema";
 
 type IntakeFormProps = {
   sessionId: string;
   token?: string;
 };
+
+function asStringList(value: unknown): string[] {
+  if (Array.isArray(value)) return value.map(String).filter(Boolean);
+  if (typeof value === "string" && value.trim()) return [value.trim()];
+  return [];
+}
 
 export function PersonalIntegrationIntakeForm({ sessionId, token }: IntakeFormProps) {
   const [loading, setLoading] = useState(true);
@@ -17,6 +27,7 @@ export function PersonalIntegrationIntakeForm({ sessionId, token }: IntakeFormPr
   const [responses, setResponses] = useState<IntakeResponses>({});
   const [message, setMessage] = useState("");
   const [prepUrl, setPrepUrl] = useState<string | null>(null);
+  const [reportHref, setReportHref] = useState<string | null>(null);
   const query = useMemo(() => (token ? `?token=${encodeURIComponent(token)}` : ""), [token]);
 
   useEffect(() => {
@@ -33,7 +44,7 @@ export function PersonalIntegrationIntakeForm({ sessionId, token }: IntakeFormPr
           error?: string;
           responses?: IntakeResponses;
           status?: string;
-          prefill?: { prepUrl?: string | null };
+          prefill?: { prepUrl?: string | null; reportHref?: string | null };
         };
         if (!res.ok || !json.ok) {
           if (!cancelled) setError(json.error === "unauthorized" ? INTAKE_COPY.unauthorized : INTAKE_COPY.notFound);
@@ -43,6 +54,7 @@ export function PersonalIntegrationIntakeForm({ sessionId, token }: IntakeFormPr
           setResponses(json.responses ?? {});
           setStatus(json.status ?? "not_started");
           setPrepUrl(json.prefill?.prepUrl ?? null);
+          setReportHref(json.prefill?.reportHref ?? null);
         }
       } catch {
         if (!cancelled) setError(INTAKE_COPY.notFound);
@@ -56,8 +68,16 @@ export function PersonalIntegrationIntakeForm({ sessionId, token }: IntakeFormPr
     };
   }, [sessionId, query]);
 
-  function setField(id: string, value: string | boolean) {
+  function setField(id: string, value: string | boolean | string[]) {
     setResponses((prev) => ({ ...prev, [id]: value }));
+  }
+
+  function toggleMulti(id: string, optionValue: string) {
+    const current = asStringList(responses[id]);
+    const next = current.includes(optionValue)
+      ? current.filter((item) => item !== optionValue)
+      : [...current, optionValue];
+    setField(id, next);
   }
 
   async function saveDraft() {
@@ -87,15 +107,144 @@ export function PersonalIntegrationIntakeForm({ sessionId, token }: IntakeFormPr
     const json = (await res.json()) as { ok?: boolean; error?: string };
     if (!res.ok || !json.ok) {
       const map: Record<string, string> = {
-        consent_required: "Please complete the consent checkboxes.",
-        missing_required: "Please complete the required fields.",
-        scope_blocked:
-          "If you need crisis or clinical support, please contact appropriate local services. This Session cannot replace that care.",
+        consent_required: INTAKE_COPY.consentRequired,
+        missing_required: INTAKE_COPY.missingRequired,
       };
       setMessage(map[json.error ?? ""] ?? "Could not submit intake.");
       return;
     }
     setStatus("submitted");
+  }
+
+  function renderField(field: IntakeFieldDef) {
+    const value = responses[field.id];
+
+    if (field.type === "link") {
+      const href =
+        (typeof responses.report_link === "string" && responses.report_link) ||
+        reportHref ||
+        (typeof value === "string" ? value : null);
+      if (!href) return null;
+      return (
+        <p key={field.id} className="pi-intake-link-row">
+          <Link href={href} className="blueprint-secondary-link">
+            {INTAKE_COPY.openReport}
+          </Link>
+        </p>
+      );
+    }
+
+    if (field.type === "readonly") {
+      return (
+        <label key={field.id} className="pi-intake-field">
+          <span>{field.label}</span>
+          <input className="conversion-input" value={String(value ?? "")} readOnly />
+        </label>
+      );
+    }
+
+    if (field.type === "checkbox") {
+      return (
+        <label key={field.id} className="pi-intake-check">
+          <input
+            type="checkbox"
+            checked={value === true}
+            onChange={(e) => setField(field.id, e.target.checked)}
+          />
+          <span>{field.label}</span>
+        </label>
+      );
+    }
+
+    if (field.type === "multiselect") {
+      const selected = asStringList(value);
+      return (
+        <fieldset key={field.id} className="pi-intake-fieldset">
+          <legend>
+            {field.label}
+            {field.required ? <span className="pi-intake-required"> *</span> : null}
+          </legend>
+          {field.help ? <p className="pi-intake-help">{field.help}</p> : null}
+          <div className="pi-intake-options" role="group" aria-label={field.label}>
+            {field.options?.map((opt) => {
+              const checked = selected.includes(opt.value);
+              return (
+                <label key={opt.value} className={`pi-intake-option${checked ? " is-selected" : ""}`}>
+                  <input
+                    type="checkbox"
+                    checked={checked}
+                    onChange={() => toggleMulti(field.id, opt.value)}
+                  />
+                  <span>{opt.label}</span>
+                </label>
+              );
+            })}
+          </div>
+        </fieldset>
+      );
+    }
+
+    if (field.type === "select") {
+      return (
+        <label key={field.id} className="pi-intake-field">
+          <span>
+            {field.label}
+            {field.required ? <span className="pi-intake-required"> *</span> : null}
+          </span>
+          <select
+            className="conversion-input"
+            value={typeof value === "string" ? value : ""}
+            onChange={(e) => setField(field.id, e.target.value)}
+            required={field.required}
+          >
+            <option value="">Select…</option>
+            {field.options?.map((opt) => (
+              <option key={opt.value} value={opt.value}>
+                {opt.label}
+              </option>
+            ))}
+          </select>
+        </label>
+      );
+    }
+
+    if (field.type === "textarea") {
+      return (
+        <label key={field.id} className="pi-intake-field">
+          <span>
+            {field.label}
+            {field.required ? <span className="pi-intake-required"> *</span> : null}
+          </span>
+          {field.help ? <span className="pi-intake-help">{field.help}</span> : null}
+          <textarea
+            className="conversion-input conversion-textarea"
+            value={typeof value === "string" ? value : ""}
+            onChange={(e) => setField(field.id, e.target.value)}
+            required={field.required}
+            rows={field.short ? 3 : 4}
+            placeholder={field.placeholder}
+            maxLength={field.short ? 600 : 2000}
+          />
+        </label>
+      );
+    }
+
+    return (
+      <label key={field.id} className="pi-intake-field">
+        <span>
+          {field.label}
+          {field.required ? <span className="pi-intake-required"> *</span> : null}
+        </span>
+        {field.help ? <span className="pi-intake-help">{field.help}</span> : null}
+        <input
+          className="conversion-input"
+          value={typeof value === "string" ? value : ""}
+          onChange={(e) => setField(field.id, e.target.value)}
+          required={field.required}
+          placeholder={field.placeholder}
+        />
+      </label>
+    );
   }
 
   if (loading) {
@@ -122,6 +271,11 @@ export function PersonalIntegrationIntakeForm({ sessionId, token }: IntakeFormPr
               {INTAKE_COPY.openPrep}
             </Link>
           ) : null}
+          {reportHref ? (
+            <Link href={reportHref} className="blueprint-secondary-link">
+              {INTAKE_COPY.openReport}
+            </Link>
+          ) : null}
           <Link href="/account" className="blueprint-secondary-link">
             {INTAKE_COPY.returnAccount}
           </Link>
@@ -136,75 +290,7 @@ export function PersonalIntegrationIntakeForm({ sessionId, token }: IntakeFormPr
         <section key={section.id} className="pi-intake-section">
           <h2>{section.title}</h2>
           {section.intro ? <p className="pi-intake-intro">{section.intro}</p> : null}
-          {section.fields.map((field) => {
-            const value = responses[field.id];
-            if (field.type === "readonly") {
-              return (
-                <label key={field.id} className="pi-intake-field">
-                  <span>{field.label}</span>
-                  <input className="conversion-input" value={String(value ?? "")} readOnly />
-                </label>
-              );
-            }
-            if (field.type === "checkbox") {
-              return (
-                <label key={field.id} className="pi-intake-check">
-                  <input
-                    type="checkbox"
-                    checked={value === true}
-                    onChange={(e) => setField(field.id, e.target.checked)}
-                  />
-                  <span>{field.label}</span>
-                </label>
-              );
-            }
-            if (field.type === "select") {
-              return (
-                <label key={field.id} className="pi-intake-field">
-                  <span>{field.label}</span>
-                  <select
-                    className="conversion-input"
-                    value={typeof value === "string" ? value : ""}
-                    onChange={(e) => setField(field.id, e.target.value)}
-                    required={field.required}
-                  >
-                    <option value="">Select…</option>
-                    {field.options?.map((opt) => (
-                      <option key={opt.value} value={opt.value}>
-                        {opt.label}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-              );
-            }
-            if (field.type === "textarea") {
-              return (
-                <label key={field.id} className="pi-intake-field">
-                  <span>{field.label}</span>
-                  <textarea
-                    className="conversion-input conversion-textarea"
-                    value={typeof value === "string" ? value : ""}
-                    onChange={(e) => setField(field.id, e.target.value)}
-                    required={field.required}
-                    rows={4}
-                  />
-                </label>
-              );
-            }
-            return (
-              <label key={field.id} className="pi-intake-field">
-                <span>{field.label}</span>
-                {field.help ? <span className="pi-intake-help">{field.help}</span> : null}
-                <input
-                  className="conversion-input"
-                  value={typeof value === "string" ? value : ""}
-                  onChange={(e) => setField(field.id, e.target.value)}
-                  required={field.required}
-                />
-              </label>
-            );
-          })}
+          {section.fields.map((field) => renderField(field))}
         </section>
       ))}
 

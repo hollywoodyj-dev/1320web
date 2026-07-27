@@ -1,5 +1,10 @@
 import { getIntegrationIntakeBySessionId, markIntegrationIntakeReviewed, setSessionIntakeStatus } from "@/lib/db/integration-intakes";
 import {
+  buildIntakePreparationPanel,
+  type IntakePreparationPanel,
+  type IntakeResponses,
+} from "@/lib/personal-integration/ops/intake-schema";
+import {
   getIntegrationNotesBySessionId,
   upsertIntegrationNotes,
   type IntegrationNotesInput,
@@ -139,6 +144,9 @@ export async function getFacilitatorWorkspaceSession(sessionId: string) {
           wellbeingFlags: intake.wellbeing_flags,
           submittedAt: intake.submitted_at?.toISOString() ?? null,
           reviewedAt: intake.reviewed_at?.toISOString() ?? null,
+          preparation: buildIntakePreparationPanel(
+            (intake.responses_json ?? {}) as IntakeResponses,
+          ) satisfies IntakePreparationPanel,
         }
       : null,
     notes,

@@ -6,6 +6,7 @@ import {
   PRIVACY_CHOICES,
   PRIVACY_COLLECT,
   PRIVACY_CTA,
+  PRIVACY_DATA_CATEGORIES,
   PRIVACY_DO_NOT,
   PRIVACY_HERO,
   PRIVACY_META,
@@ -60,6 +61,18 @@ export default function PrivacyPage() {
           <ul className="privacy-summary-list">
             {PRIVACY_SUMMARY.items.map((item) => (
               <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </section>
+
+        <section id={PRIVACY_DATA_CATEGORIES.id} className="privacy-card">
+          <h2 className="privacy-subtitle">{PRIVACY_DATA_CATEGORIES.title}</h2>
+          <ul className="privacy-collect-list">
+            {PRIVACY_DATA_CATEGORIES.items.map((item) => (
+              <li key={item.title}>
+                <strong>{item.title}</strong>
+                <p>{item.body}</p>
+              </li>
             ))}
           </ul>
         </section>

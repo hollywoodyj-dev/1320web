@@ -81,28 +81,64 @@ async function main() {
     await page.goto(`${BASE}/privacy`, { waitUntil: "networkidle2", timeout: 90_000 });
     const privacy = await page.evaluate(() => {
       const text = (document.body.textContent ?? "").replace(/\s+/g, " ");
+      const residual =
+        /related Phase 1 experiences|Phase 1 may store|waitlist sign-ups|waitlist sign-up|booking inquiries|booking inquiry/i.test(
+          text,
+        );
       return {
-        purchase: /purchase|checkout|entitlement/i.test(text),
-        transactional: /Transactional emails/i.test(text),
-        marketing: /opted in|recorded consent/i.test(text),
+        freeBlueprint: /Free Soul Blueprint/i.test(text),
+        account: /account creation and authentication|Account and entitlement/i.test(text),
+        fullReport: /Full Report purchase/i.test(text),
+        delivery: /Web, Mobile, and PDF/i.test(text),
+        personalIntegration:
+          /Personal Integration.*(purchase|scheduling|Intake)|Personal Integration data/i.test(text),
+        transactional: /Transactional (emails|data)/i.test(text),
+        marketing: /Optional marketing consent|opted in|recorded consent/i.test(text),
+        categories:
+          /Report-generation data/i.test(text) &&
+          /Account and entitlement data/i.test(text) &&
+          /Transactional data/i.test(text) &&
+          /Personal Integration data/i.test(text) &&
+          /Optional marketing consent/i.test(text) &&
+          /Technical and analytics data/i.test(text),
         noSell: /do not sell your personal information/i.test(text),
         freeNoAccount: /without creating an account/i.test(text),
+        residual,
       };
     });
     await page.screenshot({ path: path.join(OUT_DIR, "privacy-desktop-1280.png"), fullPage: true });
     record(
       "Privacy live product-state",
-      privacy.purchase && privacy.transactional && privacy.marketing && privacy.noSell && privacy.freeNoAccount,
+      privacy.freeBlueprint &&
+        privacy.account &&
+        privacy.fullReport &&
+        privacy.delivery &&
+        privacy.personalIntegration &&
+        privacy.transactional &&
+        privacy.marketing &&
+        privacy.categories &&
+        privacy.noSell &&
+        privacy.freeNoAccount &&
+        !privacy.residual,
       [JSON.stringify(privacy)],
     );
+    record("Privacy residual Phase 1 / waitlist / inquiry absent", !privacy.residual, [
+      privacy.residual ? "residual phrasing still present" : "none",
+    ]);
+
+    await page.setViewport({ width: 390, height: 844 });
+    await page.reload({ waitUntil: "networkidle2", timeout: 90_000 });
+    await page.screenshot({ path: path.join(OUT_DIR, "privacy-mobile-390.png"), fullPage: true });
+    record("Privacy mobile no overflow", await noOverflow(page));
 
     // Disclaimer
+    await page.setViewport({ width: 1280, height: 900 });
     await page.goto(`${BASE}/disclaimer`, { waitUntil: "networkidle2", timeout: 90_000 });
     const disclaimer = await page.evaluate(() => {
       const text = (document.body.textContent ?? "").replace(/\s+/g, " ");
       return {
         consultant: /Blueprint Integration Consultant/i.test(text),
-        nonDirective: /facilitative, reflective, and non-directive/i.test(text),
+        nonDirective: /facilitative,\s*reflective(?:,)?\s*and\s*non-directive/i.test(text),
         notPrediction: /prediction|diagnosis/i.test(text),
       };
     });

@@ -9,7 +9,7 @@ import {
   SESSION_CATALOG,
   SESSION_PRODUCT_ORDER,
 } from "../lib/personal-integration/session-catalog";
-import { getBookingLineItems, getBookingAmountCents } from "../lib/stripe/booking-client";
+import { getBookingAmountCents, resolveBookingLineItems } from "../lib/stripe/booking-client";
 import { getStripe } from "../lib/stripe/client";
 
 function loadEnvLocal() {
@@ -43,7 +43,7 @@ async function main() {
   for (const id of SESSION_PRODUCT_ORDER) {
     const product = SESSION_CATALOG[id];
     const amountCents = getBookingAmountCents(id);
-    const lineItems = getBookingLineItems(id);
+    const lineItems = await resolveBookingLineItems(id, stripe);
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       customer_email: "pricing-verify@example.com",

@@ -55,11 +55,15 @@ async function main() {
       const text = (document.body.textContent ?? "").replace(/\s+/g, " ");
       const cards = Array.from(document.querySelectorAll(".booking-session-card")).map((card) => {
         const title = (card.querySelector("h3")?.textContent ?? "").trim();
-        const meta = (card.querySelector(".conversion-reading-duration")?.textContent ?? "").trim();
+        const meta = (card.querySelector(".conversion-reading-duration")?.textContent ?? "")
+          .replace(/\s+/g, " ")
+          .trim();
+        const positioning = (card.querySelector(".booking-session-positioning")?.textContent ?? "")
+          .trim();
         const cta = (card.querySelector(".conversion-reading-cta")?.textContent ?? "").trim();
         const badge = (card.querySelector(".booking-session-badge")?.textContent ?? "").trim();
         const recommended = card.classList.contains("booking-session-card--recommended");
-        return { title, meta, cta, badge, recommended };
+        return { title, meta, positioning, cta, badge, recommended };
       });
       const bannedPatterns = [
         /\bbasic\b/i,
@@ -78,6 +82,8 @@ async function main() {
         hasUsd119: /USD\s*119/.test(text),
         hasUsd159: /USD\s*159/.test(text),
         hasUsd209: /USD\s*209/.test(text),
+        consultant: /Blueprint Integration Consultant/i.test(text),
+        meetHeading: /Meet With a Blueprint Integration Consultant/i.test(text),
         bannedHits: bannedPatterns.filter((re) => re.test(text)).map((re) => String(re)),
         payCtaCount: (text.match(/Pay & Book Session/g) ?? []).length,
       };
@@ -100,6 +106,13 @@ async function main() {
       desktop.cards[1]?.recommended === true &&
       /Most Recommended/i.test(desktop.cards[1]?.badge ?? "");
     const ctasOk = desktop.cards.every((c) => c.cta === "Pay & Book Session");
+    const positioningOk =
+      desktop.cards[0]?.positioning ===
+        "For one clear question or an initial focused integration." &&
+      desktop.cards[1]?.positioning ===
+        "For one main life theme, recurring pattern or current decision." &&
+      desktop.cards[2]?.positioning ===
+        "For transitions or several interconnected themes requiring more space.";
 
     record("Session cards — titles, order, prices", titlesOk && orderPricesOk, [
       `cards: ${desktop.cards.map((c) => `${c.title} | ${c.meta}`).join(" || ")}`,
@@ -107,7 +120,13 @@ async function main() {
     record("Most Recommended on 60-minute card", recommendedOk, [
       `badge=${desktop.cards[1]?.badge ?? "(none)"} recommendedClass=${desktop.cards[1]?.recommended}`,
     ]);
+    record("Approved best-fit positioning", positioningOk, [
+      desktop.cards.map((c) => c.positioning).join(" | "),
+    ]);
     record("CTA Pay & Book Session on all cards", ctasOk, desktop.cards.map((c) => c.cta));
+    record("Blueprint Integration Consultant visible", desktop.consultant && desktop.meetHeading, [
+      `consultant=${desktop.consultant} meetHeading=${desktop.meetHeading}`,
+    ]);
     record("No banned tier / discount / GST language", desktop.bannedHits.length === 0, [
       desktop.bannedHits.length ? `hits: ${desktop.bannedHits.join(", ")}` : "none",
     ]);
@@ -122,7 +141,23 @@ async function main() {
       path: path.join(OUT_DIR, "booking-mobile-390.png"),
       fullPage: true,
     });
+    // Crop-ish second shot: scroll session cards into view for mobile evidence
+    await page.evaluate(() => {
+      document.querySelector(".conversion-reading-grid")?.scrollIntoView({ block: "start" });
+    });
+    await page.screenshot({
+      path: path.join(OUT_DIR, "booking-session-cards-mobile-390.png"),
+    });
     record("Mobile no horizontal overflow", await noHorizontalOverflow(page), []);
+
+    await page.setViewport({ width: 1280, height: 900 });
+    await page.reload({ waitUntil: "networkidle2", timeout: 90_000 });
+    await page.evaluate(() => {
+      document.querySelector(".conversion-reading-grid")?.scrollIntoView({ block: "start" });
+    });
+    await page.screenshot({
+      path: path.join(OUT_DIR, "booking-session-cards-desktop-1280.png"),
+    });
 
     // Catalog / API sanity (no charge)
     const catalog = await import("../lib/personal-integration/session-catalog");

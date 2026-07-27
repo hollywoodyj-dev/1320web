@@ -67,6 +67,12 @@ export function getBookingLineItems(
     return [{ price: priceId, quantity: 1 }];
   }
 
+  return bookingPriceDataLineItems(variant);
+}
+
+function bookingPriceDataLineItems(
+  variant: PersonalIntegrationSessionVariant,
+): Stripe.Checkout.SessionCreateParams.LineItem[] {
   const product = SESSION_CATALOG[variant];
   const amountCents = getBookingAmountCents(variant);
 
@@ -84,4 +90,35 @@ export function getBookingLineItems(
       quantity: 1,
     },
   ];
+}
+
+/**
+ * Prefer configured Price IDs only when they match Launch v1 USD amounts.
+ * Otherwise fall back to price_data so Checkout cannot silently charge AUD/other currencies.
+ */
+export async function resolveBookingLineItems(
+  variant: PersonalIntegrationSessionVariant,
+  stripe: Stripe,
+): Promise<Stripe.Checkout.SessionCreateParams.LineItem[]> {
+  const priceId = getBookingPriceId(variant);
+  if (!priceId) return bookingPriceDataLineItems(variant);
+
+  const expectedCents = getBookingAmountCents(variant);
+  try {
+    const price = await stripe.prices.retrieve(priceId);
+    if (
+      price.active !== false &&
+      price.currency === SESSION_CURRENCY_STRIPE &&
+      price.unit_amount === expectedCents
+    ) {
+      return [{ price: priceId, quantity: 1 }];
+    }
+    console.warn(
+      `[booking] Price ${priceId} rejected for ${variant}: currency=${price.currency} unit_amount=${price.unit_amount} expected=${SESSION_CURRENCY_STRIPE}/${expectedCents}; using price_data`,
+    );
+  } catch (error) {
+    console.warn(`[booking] Price ${priceId} retrieve failed for ${variant}; using price_data`, error);
+  }
+
+  return bookingPriceDataLineItems(variant);
 }

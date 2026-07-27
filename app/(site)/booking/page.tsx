@@ -172,7 +172,11 @@ export default async function BookingPage({
               ) : null}
               <h3>{option.title}</h3>
               <p className="conversion-reading-duration">
-                {option.duration} · {option.price}
+                <span className="booking-session-duration">{option.duration}</span>
+                <span className="booking-session-price-sep" aria-hidden="true">
+                  ·
+                </span>
+                <span className="booking-session-price">{option.price}</span>
               </p>
               <p className="booking-session-positioning">{option.text}</p>
               <ul className="booking-session-includes">

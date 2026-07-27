@@ -15,7 +15,7 @@ import {
   getSiteUrl,
   isBookingCheckoutConfigured,
 } from "@/lib/platform-config";
-import { getBookingAmountCents, getBookingLineItems } from "@/lib/stripe/booking-client";
+import { getBookingAmountCents, resolveBookingLineItems } from "@/lib/stripe/booking-client";
 import { getStripe } from "@/lib/stripe/client";
 
 type BookingCheckoutBody = {
@@ -104,7 +104,7 @@ export async function POST(request: Request) {
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       customer_email: email,
-      line_items: getBookingLineItems(sessionVariant),
+      line_items: await resolveBookingLineItems(sessionVariant, stripe),
       success_url: `${siteUrl}/booking/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${siteUrl}/booking?cancelled=1`,
       metadata: {

@@ -1,6 +1,6 @@
 # Conversion UI Refinement · Launch v1 — P0–P4 Return Package
 
-**Status:** Implemented · awaiting Wisewave acceptance  
+**Status:** PASS WITH CORRECTIONS · closure patch in `CONVERSION_UI_LAUNCH_V1_P0_P4_CORRECTION_RETURN.md`  
 **Pricing unchanged:** Full Report USD 49 · Sessions USD 119 / 159 / 209  
 
 ## Commits

@@ -1,13 +1,15 @@
 # Lumen QA — P0 Legal Product-State Alignment
 
 Base: http://localhost:3000
-Date: 2026-07-27T15:07:21.617Z
+Date: 2026-07-27T15:35:54.348Z
 Result: PASS
 
 - **Terms live product-state**: PASS — {"free":true,"full":true,"account":true,"surfaces":true,"sessions":true,"outdated":false,"cta":true}
 - **Terms desktop no overflow**: PASS — 
 - **Terms mobile no overflow**: PASS — 
-- **Privacy live product-state**: PASS — {"purchase":true,"transactional":true,"marketing":true,"noSell":true,"freeNoAccount":true}
+- **Privacy live product-state**: PASS — {"freeBlueprint":true,"account":true,"fullReport":true,"delivery":true,"personalIntegration":true,"transactional":true,"marketing":true,"categories":true,"noSell":true,"freeNoAccount":true,"residual":false}
+- **Privacy residual Phase 1 / waitlist / inquiry absent**: PASS — none
+- **Privacy mobile no overflow**: PASS — 
 - **Disclaimer consultant posture**: PASS — {"consultant":true,"nonDirective":true,"notPrediction":true}
 - **Disclaimer mobile no overflow**: PASS — 
 

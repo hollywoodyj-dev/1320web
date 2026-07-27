@@ -1,12 +1,14 @@
 # Lumen QA — Session Pricing Launch v1
 
 Base: http://localhost:3000
-Date: 2026-07-27T05:54:51.823Z
+Date: 2026-07-27T15:34:49.605Z
 Result: PASS
 
-- **Session cards — titles, order, prices**: PASS — cards: Blueprint Integration Session | 45 minutes · USD 119 || Focused Life Integration Session | 60 minutes · USD 159 || Deep Blueprint Integration Session | 75 minutes · USD 209
+- **Session cards — titles, order, prices**: PASS — cards: Blueprint Integration Session | 45 minutes·USD 119 || Focused Life Integration Session | 60 minutes·USD 159 || Deep Blueprint Integration Session | 75 minutes·USD 209
 - **Most Recommended on 60-minute card**: PASS — badge=Most Recommended recommendedClass=true
+- **Approved best-fit positioning**: PASS — For one clear question or an initial focused integration. | For one main life theme, recurring pattern or current decision. | For transitions or several interconnected themes requiring more space.
 - **CTA Pay & Book Session on all cards**: PASS — Pay & Book Session; Pay & Book Session; Pay & Book Session
+- **Blueprint Integration Consultant visible**: PASS — consultant=true meetHeading=true
 - **No banned tier / discount / GST language**: PASS — none
 - **Launch prices present**: PASS — 119=true 159=true 209=true
 - **Desktop no horizontal overflow**: PASS — 

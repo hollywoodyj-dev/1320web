@@ -88,10 +88,6 @@
   line-height: 1.25;
 }
 
-.booking-page--refined .booking-session-card--recommended {
-  /* Badge only — do not keep a permanent border highlight (that is for selection). */
-}
-
 .booking-page--refined .booking-session-badge {
   margin: 0;
   font-size: 0.72rem;

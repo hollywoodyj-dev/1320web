@@ -10,7 +10,7 @@ export const BOOKING_SUCCESS_META = {
 
 export const BOOKING_SUCCESS_COPY = {
   title: "Payment Confirmed — Schedule Your Session",
-  body: "Thank you. Your Personal Integration Session is paid. Choose a time below to schedule your session, then complete Pre-Session Intake so your Facilitator can prepare.",
+  body: "Thank you. Your Personal Integration Session is paid. Choose a time below to schedule your session, then complete Pre-Session Intake so your Blueprint Integration Consultant can prepare.",
   scheduleTitle: "Schedule Your Session",
   loadingCalendar: "Loading scheduling calendar…",
   confirmingPayment: "Confirming your payment…",
@@ -22,7 +22,7 @@ export const BOOKING_SUCCESS_COPY = {
     "We could not confirm this payment session. Return to your account or contact support for help.",
   prepTitle: "Next: Pre-Session Intake",
   prepBody:
-    "After you pick a time, complete your Pre-Session Intake so your Facilitator can prepare with your Soul Blueprint.",
+    "After you pick a time, complete your Pre-Session Intake so your Blueprint Integration Consultant can prepare with your Soul Blueprint.",
   prepCta: "Complete Pre-Session Intake",
   openPrepCta: "Open Session Prep Space",
   accountCta: "Return to Account",

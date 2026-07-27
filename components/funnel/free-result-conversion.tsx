@@ -25,15 +25,14 @@ export function FreeResultConversionBlock({
 }: FreeResultConversionProps) {
   const checkoutWithAttr = appendAttributionToHref(checkoutHref);
   const sampleWithAttr = appendAttributionToHref(SAMPLE_REPORT_HREF);
-  const salesWithAttr = appendAttributionToHref("/full-report");
 
   useEffect(() => {
     trackEvent("full_report_offer_viewed", attributionToAnalyticsProps());
   }, []);
 
   return (
-    <div className="fsb-result-conversion space-y-5">
-      <section className="glass-card fsb-missing-map" id="missing-map" aria-labelledby="missing-map-title">
+    <div className="fsb-result-conversion">
+      <section className="fsb-missing-map" id="missing-map" aria-labelledby="missing-map-title">
         <h2 id="missing-map-title" className="report-section-title">
           {FREE_RESULT_MISSING_MAP.title}
         </h2>
@@ -50,7 +49,7 @@ export function FreeResultConversionBlock({
             </ul>
           </div>
           <p className="fsb-map-arrow" aria-hidden="true">
-            ↓
+            →
           </p>
           <div className="fsb-map-col">
             <p className="fsb-map-label">{FREE_RESULT_MISSING_MAP.fullLabel}</p>
@@ -65,7 +64,7 @@ export function FreeResultConversionBlock({
         </div>
       </section>
 
-      <section className="glass-card report-full-upsell report-full-upsell--refined" id="go-deeper">
+      <section className="fsb-full-offer" id="go-deeper">
         <h2 className="report-section-title">{FREE_RESULT_FULL_OFFER.title}</h2>
         <p className="report-full-upsell-lead">{FREE_RESULT_FULL_OFFER.doorway}</p>
         <ul className="fsb-offer-pillars">
@@ -96,9 +95,6 @@ export function FreeResultConversionBlock({
             onClick={() => trackEvent("full_report_sample_clicked", attributionToAnalyticsProps())}
           >
             {FREE_RESULT_FULL_OFFER.secondaryCta}
-          </Link>
-          <Link href={salesWithAttr} className="blueprint-secondary-link">
-            Learn about the Full Report
           </Link>
         </div>
       </section>

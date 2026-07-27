@@ -34,9 +34,10 @@ export const POSITIONING = {
 export const WHAT_IS_READING = {
   title: "What Is a Personal Integration Session?",
   body: [
-    "A Personal Integration Session is a guided reflective conversation based on your 1320 Soul Blueprint.",
-    "Together, we explore how your blueprint may be showing up in your current season — through identity, relationships, choices, transitions, and growth edges.",
+    "A Personal Integration Session is a guided reflective conversation with a Blueprint Integration Consultant, based on your 1320 Soul Blueprint.",
+    "Together, you explore how your blueprint may be showing up in your current season — through identity, relationships, choices, transitions, and growth edges.",
     "It is not here to tell you what to do. It is here to help you see more clearly.",
+    "The consultant posture is facilitative, reflective, and non-directive — not predictive, diagnostic, or decision-making on your behalf.",
   ],
 };
 
@@ -125,7 +126,7 @@ export const BEFORE_SESSION = {
     "Come as you are — no perfect preparation is needed.",
   ],
   afterNote:
-    "After payment you will schedule your Session, then complete Pre-Session Intake so your Facilitator can prepare with your Soul Blueprint.",
+    "After payment you will schedule your Session, then complete Pre-Session Intake so your Blueprint Integration Consultant can prepare with your Soul Blueprint.",
 };
 
 export const BOOKING_FORM_SECTION = {
@@ -168,7 +169,7 @@ export const BOOKING_FAQ = [
   },
   {
     q: "What happens after booking?",
-    a: "After payment you schedule your Session, complete Pre-Session Intake, meet with your Facilitator, and receive a reviewed Personal Integration Summary.",
+    a: "After payment you schedule your Session, complete Pre-Session Intake, meet with your Blueprint Integration Consultant, and receive a reviewed Personal Integration Summary.",
   },
 ];
 

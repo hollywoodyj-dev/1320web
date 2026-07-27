@@ -102,6 +102,22 @@ export function ReportDashboard({
 
         <BlueprintOverviewRow cards={viewModel.overviewCards} refined={isFreeRefined} />
 
+        {isFreeRefined ? (
+          <section className="report-modules-section" id="segments">
+            <h2 className="report-section-title">{FREE_RESULT_MODULE.sectionTitle}</h2>
+            <div className="report-modules-grid">
+              {viewModel.modules.map((module) => (
+                <ReportModuleCard
+                  key={`${module.segmentId}-${module.codeLabel}`}
+                  module={module}
+                  checkoutHref={viewModel.checkoutHref}
+                  preview
+                />
+              ))}
+            </div>
+          </section>
+        ) : null}
+
         <IntegratedSummaryCard
           title={viewModel.integratedTitle}
           lead={viewModel.integratedLead}
@@ -112,21 +128,21 @@ export function ReportDashboard({
           refined={isFreeRefined}
         />
 
-        <section className="report-modules-section" id="segments">
-          <h2 className="report-section-title">
-            {isFreeRefined ? FREE_RESULT_MODULE.sectionTitle : "Your Segment Blueprint"}
-          </h2>
-          <div className="report-modules-grid">
-            {viewModel.modules.map((module) => (
-              <ReportModuleCard
-                key={`${module.segmentId}-${module.codeLabel}`}
-                module={module}
-                checkoutHref={viewModel.checkoutHref}
-                preview={isFreeRefined}
-              />
-            ))}
-          </div>
-        </section>
+        {!isFreeRefined ? (
+          <section className="report-modules-section" id="segments">
+            <h2 className="report-section-title">Your Segment Blueprint</h2>
+            <div className="report-modules-grid">
+              {viewModel.modules.map((module) => (
+                <ReportModuleCard
+                  key={`${module.segmentId}-${module.codeLabel}`}
+                  module={module}
+                  checkoutHref={viewModel.checkoutHref}
+                  preview={false}
+                />
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         {viewModel.mode === "full" ? (
           <>
@@ -134,7 +150,7 @@ export function ReportDashboard({
             <ReflectionJournal prompts={viewModel.journalPrompts} />
           </>
         ) : (
-          <section className="glass-card report-free-reflection" id="reflection">
+          <section className="report-free-reflection" id="reflection">
             <h2 className="report-section-title">Reflection Question</h2>
             <p>{viewModel.reflectionQuestion}</p>
           </section>

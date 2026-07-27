@@ -52,7 +52,7 @@ export const SESSION_CATALOG: Record<PersonalIntegrationSessionVariant, SessionP
       "A focused one-to-one session for exploring one clear question or understanding how a core Soul Blueprint pattern is showing up in the client’s current life.",
     includes: [
       "Pre-Session Intake",
-      "Facilitator Blueprint review",
+      "Blueprint Integration Consultant review",
       "Foundation reflection using S1 → S3 → S2 → S0",
       "Up to one relevant advanced layer",
       "Personal Integration Summary",
@@ -76,7 +76,7 @@ export const SESSION_CATALOG: Record<PersonalIntegrationSessionVariant, SessionP
       "A complete guided exploration of one primary life theme, such as relationships, direction, value, boundaries, work, identity, or a current transition.",
     includes: [
       "Complete Pre-Session Intake review",
-      "Facilitator Blueprint preparation",
+      "Blueprint Integration Consultant preparation",
       "Foundation Blueprint reflection",
       "Up to two relevant advanced layers",
       "Core Recognition",

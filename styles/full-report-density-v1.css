@@ -173,3 +173,165 @@
     text-align: center;
   }
 }
+
+/* P3 · Premium invitation density */
+.full-report-marketing--invite {
+  max-width: 760px;
+  display: grid;
+  gap: clamp(1.75rem, 4vw, 2.75rem);
+  padding-bottom: 2.5rem;
+}
+
+.full-report-marketing--invite .full-report-hero {
+  text-align: center;
+  padding: clamp(1.5rem, 4vw, 2.5rem) 0 0.5rem;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.full-report-invite-title {
+  margin: 0 0 0.85rem;
+  color: #f4d88a;
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+  font-weight: 650;
+  text-align: center;
+}
+
+.full-report-invite-section {
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(214, 181, 109, 0.12);
+}
+
+.full-report-invite-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.full-report-invite-list li {
+  line-height: 1.5;
+  color: rgba(245, 234, 214, 0.84);
+}
+
+.full-report-invite-list strong {
+  display: block;
+  color: rgba(246, 240, 228, 0.95);
+  margin-bottom: 0.15rem;
+}
+
+.full-report-invite-list span {
+  display: block;
+  opacity: 0.88;
+}
+
+.full-report-invite-compare {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.full-report-invite-compare h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  color: rgba(246, 240, 228, 0.94);
+}
+
+.full-report-invite-compare p {
+  margin: 0 0 0.55rem;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+.full-report-invite-layers {
+  display: grid;
+  gap: 1.35rem;
+}
+
+.full-report-invite-layers h3 {
+  margin: 0 0 0.55rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(232, 205, 150, 0.9);
+}
+
+.full-report-personal-foundation {
+  text-align: center;
+  padding: 0.75rem 0;
+  border-top: 1px solid rgba(214, 181, 109, 0.12);
+}
+
+.full-report-foundation-codes {
+  list-style: none;
+  margin: 0 0 0.65rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgba(232, 205, 150, 0.95);
+}
+
+.full-report-purchase {
+  text-align: center;
+}
+
+.full-report-price {
+  margin: 0.75rem 0 1rem;
+  font-size: 1.35rem;
+  font-weight: 650;
+  color: rgba(232, 205, 150, 0.95);
+}
+
+.full-report-marketing--invite .full-report-live-path {
+  text-align: center;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(214, 181, 109, 0.1);
+  background: transparent;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  box-shadow: none;
+  opacity: 0.9;
+}
+
+.full-report-marketing--invite .full-report-live-path h2 {
+  font-size: 1.05rem;
+  margin: 0 0 0.45rem;
+}
+
+.full-report-marketing--invite .full-report-live-path p {
+  max-width: 34rem;
+  margin: 0 auto 0.65rem;
+  font-size: 0.95rem;
+  opacity: 0.82;
+}
+
+.full-report-final {
+  text-align: center;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(214, 181, 109, 0.12);
+}
+
+.full-report-final h2 {
+  margin: 0 0 0.55rem;
+  color: #f4d88a;
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+}
+
+.full-report-final > p {
+  margin: 0 auto 1rem;
+  max-width: 34rem;
+  opacity: 0.88;
+}
+
+@media (max-width: 720px) {
+  .full-report-invite-compare {
+    grid-template-columns: 1fr;
+  }
+}

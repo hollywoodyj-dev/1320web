@@ -1,4 +1,4 @@
-/** Full Report purchase page (`/full-report`) — Refinement Spec v1.0 (Wisewave). */
+/** Full Report purchase page — Conversion UI Refinement · P3 (premium invitation). */
 
 export type AdvancedModuleSymbolId = "s5" | "s6" | "shadow" | "s7" | "s8" | "s9";
 
@@ -10,24 +10,26 @@ export const FULL_REPORT_META = {
 
 export const FULL_REPORT_HERO = {
   eyebrow: "Full Soul Blueprint Report",
-  title: "Your Complete Soul Blueprint",
-  body: "See how your foundation, shadow, mission, value, sovereignty, contribution, and return form one living pattern.",
+  title: "Explore Your Complete Soul Blueprint",
+  body: "The Full Report opens your complete S0–S9 Soul Blueprint—from foundation patterns to shadow, mission, value, sovereignty, contribution and return.",
   boundaryLine1: "A symbolic mirror for reflection and integration.",
   boundaryLine2: "Not prediction, diagnosis, or fixed identity.",
   primaryCta: "Unlock My Full Report",
   secondaryCta: "View Sample Report",
   productDetails: [
-    "Personalised S0–S9 Report",
-    "Web · Mobile · PDF",
+    "Complete S0–S9 Blueprint",
+    "Integrated Pattern",
+    "Growth Edge",
     "7-Day Integration Practice",
     "Reflection Journal",
+    "Web · Mobile · PDF",
     "Account Access",
     "USD 49 · One-Time Purchase",
   ],
 };
 
 export const REPORT_PROMISE = {
-  title: "A Mirror, Not a Verdict",
+  title: "Why This Matters",
   body: [
     "A complete pattern, not isolated traits.",
     "Reflection and practice, not prediction.",
@@ -36,111 +38,63 @@ export const REPORT_PROMISE = {
   ],
 };
 
+/** Compact Free → Full relationship (not a competing purchase block). */
 export const FREE_VS_FULL = {
-  title: "Free Result vs Full Report",
+  title: "From Foundation to Complete Pattern",
   free: {
-    label: "Free Result",
-    lead: "Your free result reveals your four foundation mirrors:",
-    items: [
-      "S1 · Soul Origin",
-      "S3 · Soul Vibration",
-      "S2 · Soul Mirror",
-      "S0 · Void Gate",
-    ],
+    label: "Free Soul Blueprint",
+    lead: "Foundation recognition:",
+    items: ["S1 · Origin", "S3 · Expression", "S2 · Mirror", "S0 · Return"],
   },
   full: {
     label: "Full Report",
-    lead: "The Full Report opens your complete S0–S9 Soul Blueprint, including shadow patterns, soul mission, value and receiving, sovereignty, contribution, return, and 7-day integration practice.",
+    lead: "Complete S0–S9 relationship — including shadow, mission, value, sovereignty, contribution, return, and integration tools.",
     items: [] as string[],
   },
 };
 
 export const FULL_INCLUDES = {
-  title: "What the Full Report Includes",
+  title: "What Opens",
   advancedLead:
-    "The advanced layers help you see how your blueprint moves through shadow, mission, value, sovereignty, contribution, and return.",
-  foundationTitle: "Foundation Mirrors",
-  advancedTitle: "Advanced Integration Layers",
-  integrationTitle: "Integration Tools",
+    "The Full Report opens the complete pattern beyond your foundation mirrors.",
+  foundationTitle: "Foundation",
+  advancedTitle: "Complete layers",
+  integrationTitle: "Integration",
   foundation: [
-    { code: "S1", title: "Soul Origin", text: "Who you are beneath adaptation." },
-    { code: "S3", title: "Soul Vibration", text: "How your natural frequency expresses." },
-    { code: "S2", title: "Soul Mirror", text: "What relationships reflect back to you." },
-    { code: "S0", title: "Void Gate", text: "How you meet uncertainty and return to self." },
+    { code: "S1", title: "Origin", text: "Who you are beneath adaptation." },
+    { code: "S3", title: "Expression", text: "How your natural frequency expresses." },
+    { code: "S2", title: "Mirror", text: "What relationships reflect back to you." },
+    { code: "S0", title: "Return", text: "How you meet uncertainty and return to self." },
   ],
   advanced: [
-    {
-      code: "S4",
-      title: "Core Shadow Pattern",
-      text: "The protective loop asking to be seen and integrated.",
-    },
-    {
-      code: "S5",
-      title: "Soul Mission",
-      text: "The deeper direction of contribution and meaning.",
-    },
-    {
-      code: "S6",
-      title: "Value & Receiving",
-      text: "How value, support, and receiving move through your life.",
-    },
-    {
-      code: "S7",
-      title: "Soul Sovereignty",
-      text: "How you reclaim choice, boundaries, and inner authority.",
-    },
-    {
-      code: "S8",
-      title: "Soul Contribution",
-      text: "How your blueprint may serve life through presence and expression.",
-    },
-    {
-      code: "S9",
-      title: "Return to Source",
-      text: "How you return to wholeness, simplicity, and remembrance.",
-    },
+    { code: "S4", title: "Shadow", text: "Protective patterns asking to be seen." },
+    { code: "S5", title: "Mission", text: "Deeper direction of contribution and meaning." },
+    { code: "S6", title: "Value & Receiving", text: "How value and support move through your life." },
+    { code: "S7", title: "Sovereignty", text: "Choice, boundaries, and inner authority." },
+    { code: "S8", title: "Contribution", text: "How your blueprint may serve through presence." },
+    { code: "S9", title: "Return to Source", text: "Wholeness, simplicity, and remembrance." },
   ],
   integration: [
-    {
-      code: "∫",
-      title: "Integrated Soul Blueprint",
-      text: "A synthesized reading of your S0–S9 pattern.",
-    },
-    {
-      code: "◎",
-      title: "7-Day Integration Practice",
-      text: "A gentle practice path for bringing insight into daily life.",
-    },
-    {
-      code: "◇",
-      title: "Reflection Journal",
-      text: "Prompts for clarity, integration, and self-reflection.",
-    },
+    { code: "∫", title: "Integrated Pattern", text: "How the layers live together." },
+    { code: "◎", title: "7-Day Practice", text: "Gentle daily integration." },
+    { code: "◇", title: "Reflection Journal", text: "Prompts for clarity and return." },
   ],
 };
 
 export const REPORT_EXPERIENCE = {
   title: "The Report Experience",
   points: [
-    {
-      title: "See",
-      text: "Understand your complete S0–S9 blueprint.",
-    },
-    {
-      title: "Reflect",
-      text: "Receive language for patterns, mirrors, and growth edges.",
-    },
-    {
-      title: "Integrate",
-      text: "Use practices and journal prompts to bring insight into daily life.",
-    },
+    { title: "See", text: "Understand your complete S0–S9 blueprint." },
+    { title: "Reflect", text: "Receive language for patterns and growth edges." },
+    { title: "Integrate", text: "Bring insight into daily life with practice." },
   ],
 };
 
 export const UNLOCK_SECTION = {
-  title: "Unlock Your Full Report",
-  body: "The Full Report is available now. Open your complete S0–S9 Soul Blueprint and begin your deeper integration path.",
-  primaryCta: "Go to Checkout",
+  title: "Price & Purchase",
+  body: "One-time purchase. Unlock your complete S0–S9 Soul Blueprint with Web, Mobile, PDF, and account access.",
+  priceDisplay: "USD 49",
+  primaryCta: "Unlock My Full Report",
   secondaryCta: "Already Purchased? Sign In",
 };
 
@@ -173,7 +127,7 @@ export const WHO_NOT_FOR = {
 
 export const FULL_REPORT_FAQ = [
   {
-    q: "Is this a prediction?",
+    q: "Is this prediction?",
     a: "No. 1320 is a symbolic mirror for reflection and integration — not prediction, destiny, or fixed identity.",
   },
   {
@@ -185,7 +139,7 @@ export const FULL_REPORT_FAQ = [
     a: "Complete S0–S9 Soul Blueprint, Growth Edge, 7-Day Integration Practice, Reflection Journal, plus web, mobile, PDF, and account access.",
   },
   {
-    q: "Can I read it on mobile and download a PDF?",
+    q: "Can I access Web, Mobile and PDF?",
     a: "Yes. After purchase you can read on web or mobile and download a PDF from your account.",
   },
   {
@@ -200,6 +154,11 @@ export const FULL_REPORT_DISCLAIMER =
 export const FULL_REPORT_FINAL_CTA = {
   title: "Ready to Continue Your Blueprint?",
   body: "Open the complete S0–S9 Soul Blueprint and begin your deeper integration path.",
-  primaryCta: "Unlock Full Report",
+  primaryCta: "Unlock My Full Report",
   secondaryCta: "Discover My Free Soul Blueprint",
+};
+
+export const PERSONAL_FOUNDATION_CONTEXT = {
+  title: "Your Foundation",
+  supporting: "Your Full Report will build from this personal foundation.",
 };

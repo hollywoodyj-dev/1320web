@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FaqSection } from "@/components/conversion/faq-section";
-import { SectionCard } from "@/components/section-card";
 import {
   FREE_VS_FULL,
   FULL_INCLUDES,
@@ -11,31 +10,48 @@ import {
   FULL_REPORT_HERO,
   FULL_REPORT_META,
   LIVE_INTEGRATION,
-  REPORT_EXPERIENCE,
+  PERSONAL_FOUNDATION_CONTEXT,
   REPORT_PROMISE,
   UNLOCK_SECTION,
-  WHO_FOR,
-  WHO_NOT_FOR,
 } from "@/lib/full-report-content";
 import { SAMPLE_REPORT_HREF } from "@/lib/site-nav";
 import { FullReportSalesTracker } from "@/components/funnel/full-report-sales-tracker";
+import { calculate1320Code } from "@/lib/calculate1320Code";
+import { resolveBirthDateFromRequest } from "@/lib/resolve-birth-date";
 
 export const metadata: Metadata = {
   title: FULL_REPORT_META.title,
   description: FULL_REPORT_META.description,
 };
 
-const SEGMENT_BG_CODES = new Set(["S1", "S3", "S2", "S0", "S4", "S5", "S6", "S7", "S8", "S9"]);
+export const dynamic = "force-dynamic";
 
-function segmentBgClass(code: string): string {
-  return SEGMENT_BG_CODES.has(code) ? ` segment-bg segment-bg--${code.toLowerCase()}` : "";
-}
+type SearchParams = Record<string, string | string[] | undefined>;
 
-export default function FullReportPage() {
+export default async function FullReportPage({
+  searchParams,
+}: {
+  searchParams: Promise<SearchParams>;
+}) {
+  const params = await searchParams;
+  const birth = await resolveBirthDateFromRequest(params);
+  const foundationCodes = birth
+    ? (() => {
+        const code = calculate1320Code(birth.year, birth.month, birth.day);
+        return [
+          { label: "S1", value: code.s1 },
+          { label: "S3", value: code.s3Raw },
+          { label: "S2", value: code.s2 },
+          { label: "S0", value: code.s0 },
+        ];
+      })()
+    : null;
+
   return (
-    <div className="conversion-page full-report-marketing full-report-marketing--refined space-y-5">
+    <div className="conversion-page full-report-marketing full-report-marketing--refined full-report-marketing--invite">
       <FullReportSalesTracker />
-      <header className="blueprint-hero glass-card full-report-hero">
+
+      <header className="full-report-hero">
         <p className="blueprint-eyebrow">{FULL_REPORT_HERO.eyebrow}</p>
         <h1 className="blueprint-title">{FULL_REPORT_HERO.title}</h1>
         <p className="blueprint-lead">{FULL_REPORT_HERO.body}</p>
@@ -58,87 +74,96 @@ export default function FullReportPage() {
         </ul>
       </header>
 
-      <SectionCard title={REPORT_PROMISE.title}>
-        <div className="full-report-prose">
-          {REPORT_PROMISE.body.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
-      </SectionCard>
+      {foundationCodes ? (
+        <section className="full-report-personal-foundation" aria-label={PERSONAL_FOUNDATION_CONTEXT.title}>
+          <h2 className="full-report-invite-title">{PERSONAL_FOUNDATION_CONTEXT.title}</h2>
+          <ul className="full-report-foundation-codes">
+            {foundationCodes.map((item) => (
+              <li key={item.label}>
+                {item.label}-{String(item.value)}
+              </li>
+            ))}
+          </ul>
+          <p>{PERSONAL_FOUNDATION_CONTEXT.supporting}</p>
+        </section>
+      ) : null}
 
-      <SectionCard title={FREE_VS_FULL.title}>
-        <div className="conversion-compare full-report-compare">
-          <div className="conversion-compare-col glass-card">
+      <section className="full-report-invite-section">
+        <h2 className="full-report-invite-title">{REPORT_PROMISE.title}</h2>
+        <ul className="full-report-invite-list">
+          {REPORT_PROMISE.body.map((line) => (
+            <li key={line}>{line}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="full-report-invite-section">
+        <h2 className="full-report-invite-title">{FREE_VS_FULL.title}</h2>
+        <div className="full-report-invite-compare">
+          <div>
             <h3>{FREE_VS_FULL.free.label}</h3>
-            <p className="full-report-compare-lead">{FREE_VS_FULL.free.lead}</p>
-            <ul className="conversion-bullet-list">
+            <p>{FREE_VS_FULL.free.lead}</p>
+            <ul className="full-report-invite-list">
               {FREE_VS_FULL.free.items.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
           </div>
-          <div className="conversion-compare-col glass-card conversion-compare-col-full">
+          <div>
             <h3>{FREE_VS_FULL.full.label}</h3>
-            <p className="full-report-compare-lead">{FREE_VS_FULL.full.lead}</p>
+            <p>{FREE_VS_FULL.full.lead}</p>
           </div>
         </div>
-      </SectionCard>
+      </section>
 
-      <SectionCard title={FULL_INCLUDES.title}>
-        <h3 className="full-report-group-title">{FULL_INCLUDES.foundationTitle}</h3>
-        <div className="conversion-module-grid mb-6">
-          {FULL_INCLUDES.foundation.map((module) => (
-            <article
-              key={module.code}
-              className={`conversion-module-card full-report-module-card${segmentBgClass(module.code)}`}
-            >
-              <p className="conversion-module-code">{module.code}</p>
-              <h3>{module.title}</h3>
-              <p>{module.text}</p>
-            </article>
-          ))}
-        </div>
-
-        <h3 className="full-report-group-title">{FULL_INCLUDES.advancedTitle}</h3>
+      <section className="full-report-invite-section">
+        <h2 className="full-report-invite-title">{FULL_INCLUDES.title}</h2>
         <p className="full-report-group-lead">{FULL_INCLUDES.advancedLead}</p>
-        <div className="conversion-module-grid conversion-module-grid--advanced mb-6">
-          {FULL_INCLUDES.advanced.map((module) => (
-            <article
-              key={module.code}
-              className={`conversion-module-card full-report-module-card full-report-module-card--compact${segmentBgClass(module.code)}`}
-            >
-              <p className="conversion-module-code">{module.code}</p>
-              <h3>{module.title}</h3>
-              <p>{module.text}</p>
-            </article>
-          ))}
+        <div className="full-report-invite-layers">
+          <div>
+            <h3>{FULL_INCLUDES.foundationTitle}</h3>
+            <ul className="full-report-invite-list">
+              {FULL_INCLUDES.foundation.map((m) => (
+                <li key={m.code}>
+                  <strong>
+                    {m.code} · {m.title}
+                  </strong>
+                  <span>{m.text}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3>{FULL_INCLUDES.advancedTitle}</h3>
+            <ul className="full-report-invite-list">
+              {FULL_INCLUDES.advanced.map((m) => (
+                <li key={m.code}>
+                  <strong>
+                    {m.code} · {m.title}
+                  </strong>
+                  <span>{m.text}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3>{FULL_INCLUDES.integrationTitle}</h3>
+            <ul className="full-report-invite-list">
+              {FULL_INCLUDES.integration.map((m) => (
+                <li key={m.code}>
+                  <strong>{m.title}</strong>
+                  <span>{m.text}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
+      </section>
 
-        <h3 className="full-report-group-title">{FULL_INCLUDES.integrationTitle}</h3>
-        <div className="conversion-module-grid">
-          {FULL_INCLUDES.integration.map((module) => (
-            <article key={module.code} className="conversion-module-card full-report-module-card">
-              <p className="conversion-module-code">{module.code}</p>
-              <h3>{module.title}</h3>
-              <p>{module.text}</p>
-            </article>
-          ))}
-        </div>
-      </SectionCard>
-
-      <SectionCard title={REPORT_EXPERIENCE.title}>
-        <div className="blueprint-path-grid full-report-experience-grid">
-          {REPORT_EXPERIENCE.points.map((point) => (
-            <article key={point.title} className="blueprint-path-step">
-              <p className="blueprint-path-num">{point.title}</p>
-              <p>{point.text}</p>
-            </article>
-          ))}
-        </div>
-      </SectionCard>
-
-      <SectionCard title={UNLOCK_SECTION.title} id="checkout">
-        <p className="full-report-prose mb-4">{UNLOCK_SECTION.body}</p>
+      <section className="full-report-invite-section full-report-purchase" id="checkout">
+        <h2 className="full-report-invite-title">{UNLOCK_SECTION.title}</h2>
+        <p className="full-report-prose">{UNLOCK_SECTION.body}</p>
+        <p className="full-report-price">{UNLOCK_SECTION.priceDisplay}</p>
         <div className="full-report-cta-row">
           <Link href="/checkout" className="gold-button inline-flex">
             {UNLOCK_SECTION.primaryCta}
@@ -147,47 +172,19 @@ export default function FullReportPage() {
             {UNLOCK_SECTION.secondaryCta}
           </Link>
         </div>
-      </SectionCard>
+      </section>
 
-      <section className="blueprint-final-cta glass-card full-report-live-path">
+      <section className="full-report-live-path">
         <h2>{LIVE_INTEGRATION.title}</h2>
         <p>{LIVE_INTEGRATION.body}</p>
         <Link href="/booking" className="blueprint-secondary-link full-report-live-cta">
           {LIVE_INTEGRATION.primaryCta}
         </Link>
-        <Link href={SAMPLE_REPORT_HREF} className="blueprint-secondary-link block mt-3">
-          {LIVE_INTEGRATION.secondaryCta}
-        </Link>
       </section>
 
-      <div className="conversion-pair">
-        <SectionCard title={WHO_FOR.title}>
-          <p className="full-report-compare-lead">{WHO_FOR.lead}</p>
-          <ul className="conversion-bullet-list">
-            {WHO_FOR.items.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </SectionCard>
-
-        <SectionCard title={WHO_NOT_FOR.title}>
-          <p className="full-report-compare-lead">{WHO_NOT_FOR.lead}</p>
-          <ul className="conversion-bullet-list">
-            {WHO_NOT_FOR.items.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </SectionCard>
-      </div>
-
       <FaqSection title="FAQ" items={FULL_REPORT_FAQ} />
-      <p className="full-report-faq-more">
-        <Link href="/faq" className="blueprint-secondary-link">
-          View Full FAQ
-        </Link>
-      </p>
 
-      <section className="blueprint-final-cta glass-card">
+      <section className="full-report-final">
         <h2>{FULL_REPORT_FINAL_CTA.title}</h2>
         <p>{FULL_REPORT_FINAL_CTA.body}</p>
         <Link href="/checkout" className="gold-button">

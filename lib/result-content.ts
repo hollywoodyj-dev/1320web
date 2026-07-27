@@ -88,8 +88,8 @@ export const FREE_RESULT_FAQ = [
 export const FREE_RESULT_NAV = [
   { id: "overview" as const, label: "Overview" },
   { id: "four-part" as const, label: "Four-Part Code" },
+  { id: "segments" as const, label: "Foundation Mirrors" },
   { id: "integrated" as const, label: "Integrated Mirror" },
-  { id: "segments" as const, label: "Segment Blueprint" },
   { id: "reflection" as const, label: "Reflection" },
   { id: "missing-map" as const, label: "Complete Pattern" },
   { id: "go-deeper" as const, label: "Full Report" },

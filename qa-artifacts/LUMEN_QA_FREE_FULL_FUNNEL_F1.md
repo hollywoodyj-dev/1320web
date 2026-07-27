@@ -10,7 +10,7 @@ Result: **PASS** (F1 closure corrections)
 | Commit | Note |
 |--------|------|
 | `45ba5ef` | Ship Free→Full Funnel Phase F1 with USD Full Report pricing |
-| 0671291 | Spec USD lock + superseded AUD + Full Report USD 49 display + Live Integration secondary polish |
+| `54d9c1c` | Spec USD lock + superseded AUD + Full Report USD 49 display + Live Integration secondary polish |
 
 ## Wisewave F1 review
 

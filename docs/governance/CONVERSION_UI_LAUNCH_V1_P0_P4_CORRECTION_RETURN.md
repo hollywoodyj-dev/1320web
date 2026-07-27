@@ -1,6 +1,10 @@
 # Conversion UI Refinement · Launch v1 — P0–P4 Closure Correction Patch
 
 **Wisewave status:** PASS WITH CORRECTIONS → this patch closes P0 Privacy + P4 Session presentation only  
+**Lumen production QA (2026-07-27):** **PASS** on `https://www.1320soulcode.com`  
+- P0: `qa-artifacts/LUMEN_QA_P0_LEGAL.md`  
+- P4: `qa-artifacts/LUMEN_QA_SESSION_PRICING_LAUNCH_V1.md`  
+
 **P1–P3:** No rework (Accepted)  
 **Holds unchanged:** P5–P8 · Intake Easy Access rebuild · Full homepage rebuild  
 
@@ -53,6 +57,6 @@
 
 ## Requested Wisewave action
 
-Once Lumen verifies this patch on production, mark full P0–P4:
+Lumen has verified this patch on production. Please mark full P0–P4:
 
 **Accepted and Closed**

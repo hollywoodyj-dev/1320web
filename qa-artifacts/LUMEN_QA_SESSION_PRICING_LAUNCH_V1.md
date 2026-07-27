@@ -1,7 +1,7 @@
 # Lumen QA — Session Pricing Launch v1
 
-Base: http://localhost:3000
-Date: 2026-07-27T15:34:49.605Z
+Base: https://www.1320soulcode.com
+Date: 2026-07-27T15:41:39.750Z
 Result: PASS
 
 - **Session cards — titles, order, prices**: PASS — cards: Blueprint Integration Session | 45 minutes·USD 119 || Focused Life Integration Session | 60 minutes·USD 159 || Deep Blueprint Integration Session | 75 minutes·USD 209

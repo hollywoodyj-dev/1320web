@@ -1,7 +1,7 @@
 # Lumen QA — P0 Legal Product-State Alignment
 
-Base: http://localhost:3000
-Date: 2026-07-27T15:35:54.348Z
+Base: https://www.1320soulcode.com
+Date: 2026-07-27T15:41:28.648Z
 Result: PASS
 
 - **Terms live product-state**: PASS — {"free":true,"full":true,"account":true,"surfaces":true,"sessions":true,"outdated":false,"cta":true}

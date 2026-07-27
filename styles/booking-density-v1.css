@@ -89,8 +89,7 @@
 }
 
 .booking-page--refined .booking-session-card--recommended {
-  border-color: rgba(212, 175, 105, 0.55);
-  box-shadow: 0 0 0 1px rgba(212, 175, 105, 0.22);
+  /* Badge only — do not keep a permanent border highlight (that is for selection). */
 }
 
 .booking-page--refined .booking-session-badge {
@@ -99,6 +98,13 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: rgba(232, 205, 150, 0.95);
+}
+
+.booking-page--refined .booking-session-card--selected {
+  border-color: rgba(232, 205, 150, 0.85);
+  box-shadow:
+    0 0 0 1px rgba(232, 205, 150, 0.45),
+    0 0 18px rgba(212, 175, 105, 0.18);
 }
 
 .booking-page--refined .booking-session-positioning {
@@ -132,11 +138,6 @@
   align-self: stretch;
   margin-top: 0.35rem;
   text-align: center;
-}
-
-.booking-page--refined .booking-session-card--selected {
-  border-color: rgba(232, 205, 150, 0.7);
-  box-shadow: 0 0 0 1px rgba(232, 205, 150, 0.28);
 }
 
 .booking-page--refined .conversion-reading-cta.gold-button {

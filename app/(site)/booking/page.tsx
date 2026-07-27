@@ -150,12 +150,16 @@ export default async function BookingPage({
 
       <SectionCard title={READING_OPTIONS.title}>
         <div className="conversion-reading-grid">
-          {READING_OPTIONS.options.map((option) => (
+          {READING_OPTIONS.options.map((option) => {
+            const selectedType = defaultReadingType ?? DEFAULT_SESSION_VARIANT;
+            const isSelected = selectedType === option.id;
+            return (
             <article
               key={option.id}
               className={`conversion-reading-card glass-card booking-session-card${
                 option.mostRecommended ? " booking-session-card--recommended" : ""
-              }${defaultReadingType === option.id ? " booking-session-card--selected" : ""}`}
+              }${isSelected ? " booking-session-card--selected" : ""}`}
+              aria-current={isSelected ? "true" : undefined}
             >
               {option.mostRecommended ? (
                 <p className="booking-session-badge">{READING_OPTIONS.mostRecommendedLabel}</p>
@@ -178,7 +182,8 @@ export default async function BookingPage({
                 {option.cta}
               </Link>
             </article>
-          ))}
+            );
+          })}
         </div>
       </SectionCard>
 

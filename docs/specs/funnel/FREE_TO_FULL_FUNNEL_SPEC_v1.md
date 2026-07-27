@@ -1,9 +1,10 @@
 # 1320 Free Report → Full Report Landing Page Funnel · Spec Lock v1.0
 
-**Status:** Phase F1 · Core Funnel — Accepted (Wisewave); documentation closure  
-**Authority:** Wisewave Funnel Spec v1.0 · F1 review PASS WITH LIGHT CORRECTIONS  
+**Status:** Phase F1 · Core Funnel — ✅ Accepted and Closed (Wisewave 2026-07-28)  
+**Authority:** Wisewave Funnel Spec v1.0  
 **Target:** `/free-soul-blueprint` → existing generator → `/result` → `/full-report` → `/checkout` → entitlement  
 
+**Next-phase boundary:** F2 (email nurture) and F3 (A/B / retargeting) remain **unauthorised**. Do not begin automatically. Production observation of F1 precedes any next-phase authorization.
 ## Production commercial lock (canonical)
 
 Current production currency: **USD**  

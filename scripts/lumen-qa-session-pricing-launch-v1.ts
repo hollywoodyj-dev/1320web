@@ -75,9 +75,9 @@ async function main() {
       return {
         cards,
         hasMostRecommended: /Most Recommended/i.test(text),
-        hasAud168: /AUD\s*168/.test(text),
-        hasAud228: /AUD\s*228/.test(text),
-        hasAud298: /AUD\s*298/.test(text),
+        hasUsd119: /USD\s*119/.test(text),
+        hasUsd159: /USD\s*159/.test(text),
+        hasUsd209: /USD\s*209/.test(text),
         bannedHits: bannedPatterns.filter((re) => re.test(text)).map((re) => String(re)),
         payCtaCount: (text.match(/Pay & Book Session/g) ?? []).length,
       };
@@ -93,9 +93,9 @@ async function main() {
       desktop.cards[1]?.title === "Focused Life Integration Session" &&
       desktop.cards[2]?.title === "Deep Blueprint Integration Session";
     const orderPricesOk =
-      /45 minutes.*AUD 168/i.test(desktop.cards[0]?.meta ?? "") &&
-      /60 minutes.*AUD 228/i.test(desktop.cards[1]?.meta ?? "") &&
-      /75 minutes.*AUD 298/i.test(desktop.cards[2]?.meta ?? "");
+      /45 minutes.*USD 119/i.test(desktop.cards[0]?.meta ?? "") &&
+      /60 minutes.*USD 159/i.test(desktop.cards[1]?.meta ?? "") &&
+      /75 minutes.*USD 209/i.test(desktop.cards[2]?.meta ?? "");
     const recommendedOk =
       desktop.cards[1]?.recommended === true &&
       /Most Recommended/i.test(desktop.cards[1]?.badge ?? "");
@@ -111,8 +111,8 @@ async function main() {
     record("No banned tier / discount / GST language", desktop.bannedHits.length === 0, [
       desktop.bannedHits.length ? `hits: ${desktop.bannedHits.join(", ")}` : "none",
     ]);
-    record("Launch prices present", desktop.hasAud168 && desktop.hasAud228 && desktop.hasAud298, [
-      `168=${desktop.hasAud168} 228=${desktop.hasAud228} 298=${desktop.hasAud298}`,
+    record("Launch prices present", desktop.hasUsd119 && desktop.hasUsd159 && desktop.hasUsd209, [
+      `119=${desktop.hasUsd119} 159=${desktop.hasUsd159} 209=${desktop.hasUsd209}`,
     ]);
     record("Desktop no horizontal overflow", await noHorizontalOverflow(page), []);
 
@@ -127,9 +127,13 @@ async function main() {
     // Catalog / API sanity (no charge)
     const catalog = await import("../lib/personal-integration/session-catalog");
     const products = catalog.SESSION_PRODUCT_ORDER.map((id) => catalog.SESSION_CATALOG[id]);
-    record("Catalog snapshot launch-v1", products.every((p) => p.pricingVersion === "launch-v1"), [
-      products.map((p) => `${p.id}:${p.durationMinutes}:${p.priceAmount}:${p.currency}`).join(" | "),
-    ]);
+    record(
+      "Catalog snapshot launch-v1-usd",
+      products.every((p) => p.pricingVersion === "launch-v1-usd" && p.currency === "USD"),
+      [
+        products.map((p) => `${p.id}:${p.durationMinutes}:${p.priceAmount}:${p.currency}`).join(" | "),
+      ],
+    );
     record(
       "Focused Life is default + most recommended",
       catalog.DEFAULT_SESSION_VARIANT === "focused_life_integration" &&

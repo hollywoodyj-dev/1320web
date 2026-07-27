@@ -1,6 +1,6 @@
 /**
  * Creates (then expires) Stripe Checkout Sessions for each Launch v1 product.
- * Verifies currency AUD and unit amounts — does not complete payment.
+ * Verifies currency USD and unit amounts — does not complete payment.
  * Run: npx tsx scripts/verify-booking-checkout-pricing.ts
  */
 import fs from "node:fs";
@@ -63,8 +63,8 @@ async function main() {
       `${id}: checkout=${session.id} amount_total=${line} expected=${amountCents} currency=${session.currency} url=${Boolean(session.url)}`,
     );
 
-    if (session.currency !== "aud") {
-      throw new Error(`${id}: expected currency aud, got ${session.currency}`);
+    if (session.currency !== "usd") {
+      throw new Error(`${id}: expected currency usd, got ${session.currency}`);
     }
     if (line !== amountCents) {
       throw new Error(`${id}: expected amount ${amountCents}, got ${line}`);

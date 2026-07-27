@@ -2,7 +2,7 @@
 
 **Version:** 1.0  
 **Owner:** Nova  
-**Status:** Operating Flow Phase 1 accepted & closed; Session Pricing Launch v1 (AUD 168 / 228 / 298) — see [SESSION_PRICING_LAUNCH_V1.md](./SESSION_PRICING_LAUNCH_V1.md) and [OPERATING_FLOW_ROADMAP_v1.md](./OPERATING_FLOW_ROADMAP_v1.md)  
+**Status:** Operating Flow Phase 1 accepted & closed; Session Pricing Launch v1 (USD 119 / 159 / 209) — see [SESSION_PRICING_LAUNCH_V1.md](./SESSION_PRICING_LAUNCH_V1.md) and [OPERATING_FLOW_ROADMAP_v1.md](./OPERATING_FLOW_ROADMAP_v1.md)  
 **Authority:** Wisewave FS-005A sign-off (9.6/10)  
 **Domain model:** [PLATFORM_DOMAIN_MODEL_v1.md](../canonical-soul-blueprint/PLATFORM_DOMAIN_MODEL_v1.md)  
 **Page revision:** [FS006_PAGE_REVISION_v2.md](../personal-integration/FS006_PAGE_REVISION_v2.md)  

@@ -160,7 +160,7 @@ export const BOOKING_FAQ = [
   },
   {
     q: "What session should I choose?",
-    a: "The options are different depths and time containers — not different levels of personal worth. Blueprint Integration Session (45 minutes · AUD 168) is focused on one clear question or core pattern. Focused Life Integration Session (60 minutes · AUD 228) is the most recommended complete exploration of one primary life theme. Deep Blueprint Integration Session (75 minutes · AUD 298) offers more space for transitions, recurring patterns, or several interconnected themes.",
+    a: "The options are different depths and time containers — not different levels of personal worth. Blueprint Integration Session (45 minutes · USD 119) is focused on one clear question or core pattern. Focused Life Integration Session (60 minutes · USD 159) is the most recommended complete exploration of one primary life theme. Deep Blueprint Integration Session (75 minutes · USD 209) offers more space for transitions, recurring patterns, or several interconnected themes.",
   },
   {
     q: "Will you tell me my future?",

@@ -3,9 +3,9 @@
  * Single source of truth for bookable Session products.
  */
 
-export const SESSION_PRICING_VERSION = "launch-v1" as const;
-export const SESSION_CURRENCY = "AUD" as const;
-export const SESSION_CURRENCY_STRIPE = "aud" as const;
+export const SESSION_PRICING_VERSION = "launch-v1-usd" as const;
+export const SESSION_CURRENCY = "USD" as const;
+export const SESSION_CURRENCY_STRIPE = "usd" as const;
 
 /** Canonical bookable Session types (Launch v1). */
 export type PersonalIntegrationSessionVariant =
@@ -43,11 +43,11 @@ export const SESSION_CATALOG: Record<PersonalIntegrationSessionVariant, SessionP
     title: "Blueprint Integration Session",
     durationMinutes: 45,
     durationLabel: "45 minutes",
-    priceAmount: 168,
-    priceCents: 16800,
+    priceAmount: 119,
+    priceCents: 11900,
     currency: SESSION_CURRENCY,
     pricingVersion: SESSION_PRICING_VERSION,
-    priceDisplay: "AUD 168",
+    priceDisplay: "USD 119",
     positioning:
       "A focused one-to-one session for exploring one clear question or understanding how a core Soul Blueprint pattern is showing up in the client’s current life.",
     includes: [
@@ -67,11 +67,11 @@ export const SESSION_CATALOG: Record<PersonalIntegrationSessionVariant, SessionP
     title: "Focused Life Integration Session",
     durationMinutes: 60,
     durationLabel: "60 minutes",
-    priceAmount: 228,
-    priceCents: 22800,
+    priceAmount: 159,
+    priceCents: 15900,
     currency: SESSION_CURRENCY,
     pricingVersion: SESSION_PRICING_VERSION,
-    priceDisplay: "AUD 228",
+    priceDisplay: "USD 159",
     positioning:
       "A complete guided exploration of one primary life theme, such as relationships, direction, value, boundaries, work, identity, or a current transition.",
     includes: [
@@ -96,11 +96,11 @@ export const SESSION_CATALOG: Record<PersonalIntegrationSessionVariant, SessionP
     title: "Deep Blueprint Integration Session",
     durationMinutes: 75,
     durationLabel: "75 minutes",
-    priceAmount: 298,
-    priceCents: 29800,
+    priceAmount: 209,
+    priceCents: 20900,
     currency: SESSION_CURRENCY,
     pricingVersion: SESSION_PRICING_VERSION,
-    priceDisplay: "AUD 298",
+    priceDisplay: "USD 209",
     positioning:
       "A deeper integration space for significant life transitions, recurring patterns, or situations involving several interconnected themes. The longer duration is additional space for expression, reflection, and integration — not a more deterministic or exhaustive reading.",
     includes: [

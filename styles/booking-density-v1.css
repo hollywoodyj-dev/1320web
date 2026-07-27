@@ -134,6 +134,11 @@
   text-align: center;
 }
 
+.booking-page--refined .booking-session-card--selected {
+  border-color: rgba(232, 205, 150, 0.7);
+  box-shadow: 0 0 0 1px rgba(232, 205, 150, 0.28);
+}
+
 .booking-page--refined .conversion-reading-cta.gold-button {
   width: 100%;
 }

@@ -1,11 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { trackEvent } from "@/lib/analytics";
 import { BOOKING_FINAL, READING_OPTIONS } from "@/lib/booking-content";
 import { FORM_CONSENT, FORM_MESSAGES } from "@/lib/form-consent";
-import { DEFAULT_SESSION_VARIANT } from "@/lib/personal-integration/session-variants";
+import {
+  DEFAULT_SESSION_VARIANT,
+  isBookableSessionVariant,
+} from "@/lib/personal-integration/session-variants";
 
 export type BookingAccountProfile = {
   email: string;
@@ -20,9 +23,21 @@ type BookingRequestFormProps = {
   account?: BookingAccountProfile | null;
 };
 
+function resolveInitialType(value?: string): string {
+  if (value && isBookableSessionVariant(value)) return value;
+  return DEFAULT_SESSION_VARIANT;
+}
+
 export function BookingRequestForm({ defaultReadingType, account }: BookingRequestFormProps) {
   const [status, setStatus] = useState("");
+  const [selectedReadingType, setSelectedReadingType] = useState(() =>
+    resolveInitialType(defaultReadingType),
+  );
   const signedIn = Boolean(account?.email);
+
+  useEffect(() => {
+    setSelectedReadingType(resolveInitialType(defaultReadingType));
+  }, [defaultReadingType]);
 
   function onFocus() {
     trackEvent("booking_click", { source: "booking_form" });
@@ -32,7 +47,7 @@ export function BookingRequestForm({ defaultReadingType, account }: BookingReque
     event.preventDefault();
     const form = event.currentTarget;
     const formData = new FormData(form);
-    const readingType = String(formData.get("readingType") ?? "").trim();
+    const readingType = String(formData.get("readingType") ?? "").trim() || selectedReadingType;
     const timezone = String(formData.get("timezone") ?? "").trim();
     const message = String(formData.get("message") ?? "").trim();
     const consent = formData.get("consent") === "on";
@@ -153,7 +168,8 @@ export function BookingRequestForm({ defaultReadingType, account }: BookingReque
           name="readingType"
           required
           className="conversion-input"
-          defaultValue={defaultReadingType ?? DEFAULT_SESSION_VARIANT}
+          value={selectedReadingType}
+          onChange={(event) => setSelectedReadingType(event.target.value)}
         >
           {READING_OPTIONS.options.map((option) => (
             <option key={option.id} value={option.id}>

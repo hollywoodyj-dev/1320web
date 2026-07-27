@@ -24,7 +24,10 @@ import {
 } from "@/lib/booking-content";
 import { GENERATE_CODE_CTA, SAMPLE_REPORT_HREF } from "@/lib/site-nav";
 import { getAccountContext } from "@/lib/auth/account-context";
-import { resolveSessionVariant } from "@/lib/personal-integration/session-variants";
+import {
+  DEFAULT_SESSION_VARIANT,
+  resolveSessionVariant,
+} from "@/lib/personal-integration/session-variants";
 
 export const metadata: Metadata = {
   title: BOOKING_META.title,
@@ -152,7 +155,7 @@ export default async function BookingPage({
               key={option.id}
               className={`conversion-reading-card glass-card booking-session-card${
                 option.mostRecommended ? " booking-session-card--recommended" : ""
-              }`}
+              }${defaultReadingType === option.id ? " booking-session-card--selected" : ""}`}
             >
               {option.mostRecommended ? (
                 <p className="booking-session-badge">{READING_OPTIONS.mostRecommendedLabel}</p>
@@ -169,11 +172,8 @@ export default async function BookingPage({
               </ul>
               <Link
                 href={`/booking?type=${option.id}#booking-form`}
-                className={
-                  option.mostRecommended
-                    ? "gold-button conversion-reading-cta"
-                    : "blueprint-secondary-link conversion-reading-cta"
-                }
+                className="gold-button conversion-reading-cta"
+                scroll
               >
                 {option.cta}
               </Link>
@@ -205,7 +205,11 @@ export default async function BookingPage({
                 </Link>
               </p>
             ) : null}
-            <BookingRequestForm defaultReadingType={defaultReadingType} account={bookingProfile} />
+            <BookingRequestForm
+              key={defaultReadingType ?? DEFAULT_SESSION_VARIANT}
+              defaultReadingType={defaultReadingType}
+              account={bookingProfile}
+            />
           </>
         ) : (
           <>

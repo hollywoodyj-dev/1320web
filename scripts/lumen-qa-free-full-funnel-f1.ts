@@ -59,7 +59,7 @@ async function main() {
       return {
         hasHeroCta: gold.some((g) => /Discover My Free Soul Blueprint/i.test(g)),
         hasBuyPrimary: /Buy Full Report/i.test(text) && gold.some((g) => /Buy/i.test(g)),
-        hasSessionPrices: /USD 119|USD 159|USD 209|AUD 168/.test(text),
+        hasSessionPrices: /USD 119|USD 159|USD 209|AUD 168|AUD 228|AUD 298/.test(text),
         hasFoundations: /Four Foundations/i.test(text),
         hasBoundary: /Not prediction/i.test(text),
         hasSampleLabel: /Sample Content/i.test(text),
@@ -129,8 +129,26 @@ async function main() {
     });
     await page.screenshot({ path: path.join(OUT_DIR, "full-report-desktop-1280.png"), fullPage: true });
     record("Full Report sales Spec alignment", sales.title && sales.mirror && sales.unlock, []);
-    record("Full Report sales keeps USD (no AUD)", !sales.hasAud, [
+    record("Full Report sales keeps USD (no AUD)", sales.hasUsd && !sales.hasAud, [
       `usd=${sales.hasUsd} aud=${sales.hasAud}`,
+    ]);
+    const liveSecondary = await page.evaluate(() => {
+      const live = document.querySelector(".full-report-live-path");
+      const liveCta = live?.querySelector("a");
+      const heroUnlock = document.querySelector(".full-report-hero .gold-button");
+      const liveIsGold = liveCta?.classList.contains("gold-button") === true;
+      const hasSessionCards = /USD 119|USD 159|USD 209|Most Recommended/.test(
+        document.body.textContent ?? "",
+      );
+      return {
+        hasLive: !!live,
+        liveIsGold,
+        hasHeroUnlock: !!heroUnlock,
+        hasSessionCards,
+      };
+    });
+    record("Session continuation secondary (no Session cards / no gold CTA)", liveSecondary.hasLive && liveSecondary.hasHeroUnlock && !liveSecondary.liveIsGold && !liveSecondary.hasSessionCards, [
+      `liveGold=${liveSecondary.liveIsGold} sessionCards=${liveSecondary.hasSessionCards}`,
     ]);
 
     // Alias rewrite

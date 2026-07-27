@@ -1,9 +1,11 @@
 # Personal Integration Session Pricing & Product Tier Update · Launch v1
 
-**Status:** Authorized for implementation  
-**Authority:** Wisewave (2026-07-27); currency adjusted to USD by founder  
+**Status:** Active production pricing  
+**Authority:** Wisewave (2026-07-27); currency locked to USD by founder; F1 Spec correction 2026-07-28  
 **Pricing version:** `launch-v1-usd`  
-**Currency:** USD
+**Currency:** USD  
+
+Production checkout configuration is the source of truth for amounts charged.
 
 ## Products
 
@@ -14,6 +16,12 @@
 | 3 | `deep_blueprint_integration` | Deep Blueprint Integration Session | 75 | USD 209 |
 
 CTA (all cards): **Pay & Book Session**
+
+## Superseded pricing (not production)
+
+Earlier draft Session prices **AUD 168 / AUD 228 / AUD 298** are a **superseded launch-pricing proposal**, not current production pricing.  
+Do not use AUD figures in active Specs, marketing copy, QA fixtures, or F2 email.  
+Do not convert historical purchase records.
 
 ## Operating flow (unchanged)
 

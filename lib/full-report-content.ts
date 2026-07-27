@@ -22,7 +22,7 @@ export const FULL_REPORT_HERO = {
     "7-Day Integration Practice",
     "Reflection Journal",
     "Account Access",
-    "One-Time Purchase",
+    "USD 49 · One-Time Purchase",
   ],
 };
 

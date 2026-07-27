@@ -114,16 +114,33 @@
   gap: 14px 20px;
 }
 
+/* Secondary to Unlock — quiet continuation, never a competing Hero CTA */
 .full-report-marketing--refined .full-report-live-path {
   text-align: center;
-  background: rgba(8, 14, 28, 0.32);
-  border-color: rgba(216, 177, 92, 0.12);
+  background: transparent;
+  border-color: rgba(216, 177, 92, 0.08);
+  box-shadow: none;
+  opacity: 0.92;
+}
+
+.full-report-marketing--refined .full-report-live-path h2 {
+  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.full-report-marketing--refined .full-report-live-path p {
+  max-width: 36rem;
+  margin-inline: auto;
+  font-size: 0.95rem;
+  opacity: 0.82;
 }
 
 .full-report-marketing--refined .full-report-live-cta {
   display: inline-block;
   margin-top: 8px;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 0.95rem;
 }
 
 .full-report-marketing--refined .full-report-faq-more {

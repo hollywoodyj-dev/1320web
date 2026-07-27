@@ -29,6 +29,30 @@
   display: block;
 }
 
+.booking-page--refined .booking-meet-heading {
+  margin: 0.85rem auto 0.35rem;
+  max-width: 28rem;
+  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  color: rgba(232, 205, 150, 0.95);
+  line-height: 1.35;
+}
+
+.booking-page--refined .booking-role-boundary {
+  max-width: 38rem;
+  margin: 0 auto 1.1rem;
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: rgba(245, 234, 214, 0.78);
+}
+
+.booking-page--refined .booking-role-boundary p {
+  margin: 0;
+}
+
 .booking-page--refined .blueprint-hero-actions {
   justify-content: center;
   gap: 14px 22px;

@@ -1,6 +1,7 @@
 /** Standalone Disclaimer — Page 12 Refinement Spec v1.0 (Wisewave). */
 
 import { LEGAL_PLACEHOLDERS } from "@/lib/legal-placeholders";
+import { ROLE_TITLE_SHORT, ROLE_BOUNDARY } from "@/lib/personal-integration/role-titles";
 
 export const DISCLAIMER_META = {
   title: "Disclaimer | 1320 Soul Code",
@@ -107,8 +108,8 @@ export const DISCLAIMER_REPORTS_GROUP = {
       paragraphs: [
         "Sample reports use fictional data for structure preview.",
         "Your personal Free Soul Blueprint and Full Report are generated from your own birth date.",
-        "Personal Integration Sessions are reflective conversations guided by a Blueprint Integration Consultant. They support integration only and do not guarantee outcomes, replace licensed professionals, or determine life decisions.",
-        "The consultant role is facilitative, reflective, and non-directive. It does not imply authority over your meaning, prediction, diagnosis, spiritual rank, or decisions made on your behalf.",
+        `Personal Integration Sessions are reflective conversations guided by a ${ROLE_TITLE_SHORT}. They support integration only and do not guarantee outcomes, replace licensed professionals, or determine life decisions.`,
+        ROLE_BOUNDARY.posture,
       ],
     },
     {

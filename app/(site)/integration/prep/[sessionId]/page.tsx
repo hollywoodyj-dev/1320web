@@ -101,7 +101,7 @@ export default async function PersonalIntegrationPrepPage({
         </dl>
       </SectionCard>
 
-      <SectionCard title="Optional notes for your facilitator">
+      <SectionCard title="Optional notes for your Blueprint Integration Consultant">
         <PersonalIntegrationPrepForm
           sessionId={context.session.id}
           prepToken={token}

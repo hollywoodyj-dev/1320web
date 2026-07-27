@@ -148,7 +148,7 @@ export function FacilitatorSessionWorkspace({ sessionId }: { sessionId: string }
       json.summary?.content ?? {
         client_name: json.context?.clientOverview.preferredName ?? "",
         session_date: json.context?.clientOverview.scheduledAt ?? "",
-        facilitator_label: "1320 Facilitator",
+        facilitator_label: "1320 Soul Blueprint Integration Consultant",
         session_type: json.context?.clientOverview.sessionType ?? "",
         report_id: json.session.reportId,
         session_focus: json.context?.sessionFocus ?? "",

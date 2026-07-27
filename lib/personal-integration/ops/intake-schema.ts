@@ -3,6 +3,8 @@
  * Client-facing questions stay ordinary-language; legacy v1.0 fields archived.
  */
 
+import { ROLE_TITLE_SHORT } from "@/lib/personal-integration/role-titles";
+
 export type IntakeFieldType =
   | "text"
   | "textarea"
@@ -169,7 +171,7 @@ export const INTAKE_SECTIONS: IntakeSectionDef[] = [
       {
         id: "anything_to_know",
         type: "textarea",
-        label: "Is there anything you would like your Blueprint Integration Consultant to know before you meet?",
+        label: `Is there anything you would like your ${ROLE_TITLE_SHORT} to know before you meet?`,
         help: "This is optional. You may leave it blank.",
         short: true,
         placeholder: "Optional",

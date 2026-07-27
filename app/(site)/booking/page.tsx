@@ -75,11 +75,17 @@ export default async function BookingPage({
           <span>{BOOKING_HERO.titleLine1}</span>
           <span>{BOOKING_HERO.titleLine2}</span>
         </h1>
+        <p className="booking-meet-heading">{BOOKING_HERO.meetHeading}</p>
         <p className="blueprint-lead">{BOOKING_HERO.body}</p>
         <p className="conversion-boundary booking-boundary">
           <span className="booking-boundary-line">{BOOKING_HERO.boundaryLine1}</span>
           <span className="booking-boundary-line">{BOOKING_HERO.boundaryLine2}</span>
         </p>
+        <div className="booking-role-boundary">
+          {BOOKING_HERO.roleBoundary.map((line) => (
+            <p key={line}>{line}</p>
+          ))}
+        </div>
         <div className="blueprint-hero-actions">
           <a href="#booking-form" className="gold-button">
             {BOOKING_HERO.primaryCta}

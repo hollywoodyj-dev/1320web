@@ -1,3 +1,5 @@
+import { ROLE_TITLE_SHORT } from "@/lib/personal-integration/role-titles";
+
 type SummaryEmailInput = {
   email: string;
   clientName: string;
@@ -15,7 +17,7 @@ export async function sendIntegrationSummaryEmail(
   const text = [
     `Hello ${input.clientName},`,
     "",
-    "Your Facilitator has published your Personal Integration Summary.",
+    `Your ${ROLE_TITLE_SHORT} has published your Personal Integration Summary.`,
     "",
     "You can read it in your account:",
     input.accountUrl,

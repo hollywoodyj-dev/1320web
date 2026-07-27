@@ -4,20 +4,27 @@ import {
   SESSION_CATALOG,
   SESSION_PRODUCT_ORDER,
 } from "@/lib/personal-integration/session-catalog";
+import {
+  ROLE_BOUNDARY,
+  ROLE_MEET_HEADING,
+  ROLE_SESSION_SUPPORTING,
+  ROLE_TITLE_SHORT,
+} from "@/lib/personal-integration/role-titles";
 
 export const BOOKING_META = {
   title: "Personal Integration Session | 1320 Soul Code",
-  description:
-    "A guided one-on-one conversation to help you understand how your Soul Blueprint is showing up in real life — reflective integration, not therapy or prediction.",
+  description: ROLE_SESSION_SUPPORTING,
 };
 
 export const BOOKING_HERO = {
   eyebrow: "Personal Integration Session",
   titleLine1: "Your Blueprint Does Not Change.",
   titleLine2: "Your Relationship With It Does.",
-  body: "A guided one-on-one conversation to help you understand how your Soul Blueprint is showing up in your real life, relationships, decisions, and growth.",
+  meetHeading: ROLE_MEET_HEADING,
+  body: ROLE_SESSION_SUPPORTING,
   boundaryLine1: "Reflective integration only.",
   boundaryLine2: "Not therapy, diagnosis, prediction, legal, financial, or medical advice.",
+  roleBoundary: ROLE_BOUNDARY.lines,
   primaryCta: "Pay & Book Session",
   secondaryCta: "Explore Full Report",
 };
@@ -34,10 +41,10 @@ export const POSITIONING = {
 export const WHAT_IS_READING = {
   title: "What Is a Personal Integration Session?",
   body: [
-    "A Personal Integration Session is a guided reflective conversation with a Blueprint Integration Consultant, based on your 1320 Soul Blueprint.",
+    `A Personal Integration Session is a guided reflective conversation with a ${ROLE_TITLE_SHORT}, based on your 1320 Soul Blueprint.`,
     "Together, you explore how your blueprint may be showing up in your current season — through identity, relationships, choices, transitions, and growth edges.",
     "It is not here to tell you what to do. It is here to help you see more clearly.",
-    "The consultant posture is facilitative, reflective, and non-directive — not predictive, diagnostic, or decision-making on your behalf.",
+    ROLE_BOUNDARY.posture,
   ],
 };
 
@@ -166,6 +173,10 @@ export const BOOKING_FAQ = [
   {
     q: "Will you tell me my future?",
     a: "No. 1320 does not predict your future. The session helps you reflect on patterns, choices, and integration. It is guided reflection and personal integration — non-diagnostic, non-predictive, and non-deterministic. It is not therapy, medical, legal, financial, or crisis support. You remain the author and decision-maker.",
+  },
+  {
+    q: "Who will I meet with?",
+    a: "You meet with a Blueprint Integration Consultant (full title: 1320 Soul Blueprint Integration Consultant). The Session supports reflection, recognition and conscious choice. Your Consultant will not define you, predict your future, diagnose you, or make decisions on your behalf.",
   },
   {
     q: "What happens after booking?",

@@ -1,3 +1,5 @@
+import { ROLE_TITLE_SHORT } from "@/lib/personal-integration/role-titles";
+
 type ReminderEmailInput = {
   email: string;
   clientName: string;
@@ -18,7 +20,7 @@ export async function sendIntakeReminderEmail(input: ReminderEmailInput): Promis
     "When you are ready, please complete your Pre-Session Intake:",
     input.intakeUrl,
     "",
-    "This helps your Facilitator prepare with your Soul Blueprint. There is no rush — complete it when you can.",
+    `This helps your ${ROLE_TITLE_SHORT} prepare with your Soul Blueprint. There is no rush — complete it when you can.`,
     "",
     "If you already submitted your intake, you can ignore this email.",
   ]

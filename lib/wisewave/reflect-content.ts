@@ -34,7 +34,7 @@ export const REFLECT_FORM = {
   generateCode: "Generate My Code",
   signIn: "Sign In",
   returnReport: "Return to My Report",
-  sessionSecondary: "Prefer a live facilitator?",
+  sessionSecondary: "Prefer a live Blueprint Integration Consultant?",
   sessionCta: "Request a Personal Integration Session",
   error: "Please share what feels most present, then connect your Soul Blueprint to begin.",
   openingRequired: "Please share what feels most present today.",

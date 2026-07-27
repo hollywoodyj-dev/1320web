@@ -54,7 +54,7 @@ export default async function AccountIntegrationSessionPage({ params }: PageProp
         <p className="pi-ops-eyebrow">PERSONAL INTEGRATION</p>
         <h1 className="pi-ops-title">Integration Summary</h1>
         <p className="pi-ops-boundary">
-          Your Soul Blueprint is a mirror — not a fixed identity. Facilitator private notes are never
+          Your Soul Blueprint is a mirror — not a fixed identity. Private session notes are never
           shown here.
         </p>
       </header>
@@ -92,7 +92,10 @@ export default async function AccountIntegrationSessionPage({ params }: PageProp
         </SectionCard>
       ) : (
         <SectionCard title="Summary">
-          <p>Your Integration Summary will appear here after your Facilitator publishes it.</p>
+          <p>
+            Your Integration Summary will appear here after your Blueprint Integration Consultant
+            publishes it.
+          </p>
         </SectionCard>
       )}
 

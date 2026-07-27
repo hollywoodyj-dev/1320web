@@ -1,10 +1,13 @@
 /** Personal Integration Summary Template v1.0 — client-facing structure only. */
 
+import { ROLE_TITLE_FULL, ROLE_TITLE_SHORT } from "@/lib/personal-integration/role-titles";
+
 export const SUMMARY_TEMPLATE_VERSION = "personal-integration-summary-v1.0" as const;
 
 export type SummaryContent = {
   client_name: string;
   session_date: string;
+  /** Internal JSON key retained; client-facing value uses Blueprint Integration Consultant. */
   facilitator_label: string;
   session_type: string;
   report_id: string;
@@ -28,7 +31,7 @@ export const SUMMARY_FIELD_META: Array<{
 }> = [
   { key: "client_name", label: "Client name" },
   { key: "session_date", label: "Session date" },
-  { key: "facilitator_label", label: "Facilitator" },
+  { key: "facilitator_label", label: ROLE_TITLE_SHORT },
   { key: "session_type", label: "Session type" },
   { key: "report_id", label: "Report ID" },
   { key: "session_focus", label: "Session focus", autofillFromNotes: "primary_focus" },
@@ -58,14 +61,15 @@ export const SUMMARY_COPY = {
   publish: "Publish Summary",
   send: "Send to Client",
   publishedNote: "Published summaries are visible in the client account. Private notes are never included.",
-  separationNote: "Facilitator private notes are stored separately and are not sent with this Summary.",
+  separationNote:
+    "Private session notes are stored separately and are not sent with this client-facing Summary.",
 };
 
 export function emptySummaryContent(): SummaryContent {
   return {
     client_name: "",
     session_date: "",
-    facilitator_label: "1320 Facilitator",
+    facilitator_label: ROLE_TITLE_FULL,
     session_type: "",
     report_id: "",
     session_focus: "",

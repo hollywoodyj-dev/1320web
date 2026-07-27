@@ -1,14 +1,16 @@
 /** Pre-Session Intake Form v1.1 · Easy Access Edition — page chrome. */
 
+import { ROLE_TITLE_SHORT } from "@/lib/personal-integration/role-titles";
+
 export const INTAKE_META = {
   title: "Pre-Session Intake | Personal Integration",
-  description: "A short, simple form to help your Blueprint Integration Consultant know where to begin.",
+  description: `A short, simple form to help your ${ROLE_TITLE_SHORT} know where to begin.`,
 };
 
 export const INTAKE_COPY = {
   eyebrow: "PERSONAL INTEGRATION",
   title: "Pre-Session Intake",
-  lead: "You do not need to prepare the perfect answer.\n\nA few simple words are enough. This form only helps your Blueprint Integration Consultant understand where you would like to begin.",
+  lead: `You do not need to prepare the perfect answer.\n\nA few simple words are enough. This form helps your ${ROLE_TITLE_SHORT} understand where you would like to begin.`,
   timeEstimate: "About 3–5 minutes",
   boundary:
     "Personal Integration is a reflective service. You do not need technical Blueprint language — ordinary words are enough.",
@@ -17,14 +19,15 @@ export const INTAKE_COPY = {
   submit: "Submit Intake",
   savedDraft: "Draft saved. You can return and continue later.",
   submittedTitle: "Your intake has been received.",
-  submittedBody: "Your Blueprint Integration Consultant will review it before the Session.",
+  submittedBody: `Your ${ROLE_TITLE_SHORT} will review it before the Session.`,
   returnAccount: "Return to Account",
   openPrep: "Open Session Prep Space",
   openReport: "Open My Full Report",
   unauthorized: "Sign in or use your session link to complete this intake.",
   notFound: "We could not find this Personal Integration Session.",
   alreadySubmitted: "This intake has already been submitted.",
-  missingRequired: "Please answer the required questions (explore topics, what has been happening, and what would feel helpful).",
+  missingRequired:
+    "Please answer the required questions (explore topics, what has been happening, and what would feel helpful).",
   consentRequired: "Please confirm that you understand the reflective-service boundary.",
 };
 

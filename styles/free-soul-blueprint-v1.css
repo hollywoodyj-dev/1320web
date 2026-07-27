@@ -1,0 +1,200 @@
+/* Free Soul Blueprint Landing Page — Funnel Spec v1.0 · Phase F1 */
+
+.fsb-page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.fsb-hero-title {
+  max-width: 18ch;
+}
+
+.fsb-boundary {
+  margin-top: 0.75rem;
+}
+
+.fsb-hero-form {
+  margin-top: 1.25rem;
+  max-width: 420px;
+}
+
+.fsb-trust {
+  margin: 0.65rem 0 0;
+  font-size: 0.88rem;
+  opacity: 0.78;
+}
+
+.fsb-trust--secondary {
+  margin-top: 0.25rem;
+}
+
+.fsb-section-lead {
+  margin: 0 0 1rem;
+  opacity: 0.9;
+}
+
+.fsb-foundation-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.fsb-foundation-card {
+  padding: 1rem 1.05rem;
+  border-radius: 12px;
+  min-width: 0;
+}
+
+.fsb-foundation-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.fsb-foundation-code {
+  margin: 0.2rem 0 0.55rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+.fsb-prose {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.fsb-prose p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.fsb-bridge {
+  opacity: 0.92;
+}
+
+.fsb-sample-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(232, 205, 150, 0.92);
+}
+
+.fsb-sample-grid {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.fsb-sample-card {
+  padding: 1rem;
+}
+
+.fsb-sample-card h3 {
+  margin: 0 0 0.45rem;
+  font-size: 0.95rem;
+}
+
+.fsb-sample-cover {
+  margin: 0;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  color: rgba(232, 205, 150, 0.95);
+}
+
+.fsb-compare {
+  gap: 0.85rem;
+}
+
+.fsb-legal-links {
+  margin-top: 0.35rem !important;
+}
+
+.fsb-final {
+  padding: 1.35rem 1.25rem 1.5rem;
+}
+
+.fsb-final .blueprint-title {
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+}
+
+@media (max-width: 720px) {
+  .fsb-foundation-grid,
+  .fsb-sample-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fsb-hero-title {
+    max-width: none;
+  }
+}
+
+.fsb-result-conversion .fsb-missing-map {
+  padding: 1.15rem 1.2rem;
+}
+
+.fsb-map-columns {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+}
+
+.fsb-map-col ul {
+  margin: 0.4rem 0 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.28rem;
+}
+
+.fsb-map-label {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(232, 205, 150, 0.9);
+}
+
+.fsb-map-arrow {
+  margin: 0;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.fsb-offer-pillars {
+  list-style: none;
+  margin: 0.75rem 0;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.fsb-offer-pillars li {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.fsb-offer-pillars strong {
+  color: rgba(245, 234, 214, 0.95);
+}
+
+.fsb-offer-price {
+  margin: 0.75rem 0;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgba(232, 205, 150, 0.95);
+}
+
+@media (min-width: 720px) {
+  .fsb-map-columns {
+    grid-template-columns: 1fr auto 1fr;
+    align-items: start;
+  }
+
+  .fsb-map-arrow {
+    padding-top: 1.5rem;
+  }
+}

@@ -10,19 +10,29 @@ export const FULL_REPORT_META = {
 
 export const FULL_REPORT_HERO = {
   eyebrow: "Full Soul Blueprint Report",
-  title: "Explore Your Complete Soul Blueprint",
-  body: "The Full Report opens your complete S0–S9 Soul Blueprint — from foundation patterns to shadow, mission, value, sovereignty, contribution, and return.",
+  title: "Your Complete Soul Blueprint",
+  body: "See how your foundation, shadow, mission, value, sovereignty, contribution, and return form one living pattern.",
   boundaryLine1: "A symbolic mirror for reflection and integration.",
   boundaryLine2: "Not prediction, diagnosis, or fixed identity.",
   primaryCta: "Unlock My Full Report",
   secondaryCta: "View Sample Report",
+  productDetails: [
+    "Personalised S0–S9 Report",
+    "Web · Mobile · PDF",
+    "7-Day Integration Practice",
+    "Reflection Journal",
+    "Account Access",
+    "One-Time Purchase",
+  ],
 };
 
 export const REPORT_PROMISE = {
-  title: "A Deeper Map — Not a Fixed Identity",
+  title: "A Mirror, Not a Verdict",
   body: [
-    "Your Full Report does not define who you are.",
-    "It gives you a deeper mirror for understanding your patterns, gifts, growth edges, and integration path.",
+    "A complete pattern, not isolated traits.",
+    "Reflection and practice, not prediction.",
+    "Symbolic guidance, not diagnosis.",
+    "Your authority remains intact — no spiritual ranking, no fixed identity.",
   ],
 };
 
@@ -136,8 +146,8 @@ export const UNLOCK_SECTION = {
 
 export const LIVE_INTEGRATION = {
   title: "Prefer Live Integration?",
-  body: "Book a Personal Integration Session to explore your Soul Blueprint in a focused one-on-one conversation.",
-  primaryCta: "Book Personal Integration Session",
+  body: "After you begin your Full Report, you may choose a Personal Integration Session as a separate human-guided continuation — not required for reading your Blueprint.",
+  primaryCta: "Explore Personal Integration",
   secondaryCta: "View Sample Report",
 };
 
@@ -163,24 +173,24 @@ export const WHO_NOT_FOR = {
 
 export const FULL_REPORT_FAQ = [
   {
-    q: "Can I buy the Full Report now?",
-    a: "Yes. The Full Report is available now through checkout.",
-  },
-  {
-    q: "What do I get in the Full Report?",
-    a: "You receive your complete S0–S9 Soul Blueprint, including advanced integration layers, practices, and reflection prompts.",
-  },
-  {
     q: "Is this a prediction?",
-    a: "No. 1320 is a symbolic mirror for reflection, not a prediction or fixed identity system.",
+    a: "No. 1320 is a symbolic mirror for reflection and integration — not prediction, destiny, or fixed identity.",
   },
   {
-    q: "How is the Full Report different from the Free Result?",
-    a: "The Free Result shows your four foundation mirrors. The Full Report opens the complete S0–S9 blueprint and integration pathway.",
+    q: "How is my report generated?",
+    a: "Your birth date opens your personal foundation codes. The Full Report builds from that foundation into the complete S0–S9 pattern.",
   },
   {
-    q: "Do I need birth time or birth location?",
-    a: "No. The current 1320 calculation uses only birth year, month, and day.",
+    q: "What is included?",
+    a: "Complete S0–S9 Soul Blueprint, Growth Edge, 7-Day Integration Practice, Reflection Journal, plus web, mobile, PDF, and account access.",
+  },
+  {
+    q: "Can I read it on mobile and download a PDF?",
+    a: "Yes. After purchase you can read on web or mobile and download a PDF from your account.",
+  },
+  {
+    q: "Is this therapy or professional advice?",
+    a: "No. 1320 is not therapy, medical, legal, or financial advice. You remain the author and decision-maker.",
   },
 ];
 
@@ -191,5 +201,5 @@ export const FULL_REPORT_FINAL_CTA = {
   title: "Ready to Continue Your Blueprint?",
   body: "Open the complete S0–S9 Soul Blueprint and begin your deeper integration path.",
   primaryCta: "Unlock Full Report",
-  secondaryCta: "Generate My Code",
+  secondaryCta: "Discover My Free Soul Blueprint",
 };

@@ -1,5 +1,10 @@
 import { calculate1320Code } from "@/lib/calculate1320Code";
 import { trackEvent } from "@/lib/analytics";
+import {
+  appendAttributionToHref,
+  attributionToAnalyticsProps,
+  loadFunnelAttribution,
+} from "@/lib/funnel/attribution";
 import { devLog } from "@/lib/dev-log";
 import { birthPartsToNumbers, parseBirthDateInput } from "@/lib/parse-birth-date-input";
 import { buildGeneratingHref, saveSession1320, toSessionPayload } from "@/lib/session1320";
@@ -9,25 +14,36 @@ export type SubmitBirthDateResult =
   | { ok: true; href: string }
   | { ok: false; message: string };
 
+export type SubmitBirthDateSource = "homepage" | "your-code" | "free-soul-blueprint";
+
 export function submitBirthDate(
   yearRaw: string,
   monthRaw: string,
   dayRaw: string,
-  options?: { source?: "homepage" | "your-code" },
+  options?: { source?: SubmitBirthDateSource },
 ): SubmitBirthDateResult {
-  if (options?.source === "homepage") {
+  const source = options?.source ?? "your-code";
+  const attrProps = attributionToAnalyticsProps(loadFunnelAttribution());
+
+  if (source === "homepage") {
     trackEvent("homepage_generate_click");
   }
-  trackEvent("calculator_submit", { source: options?.source ?? "your-code" });
+  if (source === "free-soul-blueprint") {
+    trackEvent("free_blueprint_birthdate_submitted", attrProps);
+  }
+  trackEvent("calculator_submit", { source, ...attrProps });
 
   const parts = parseBirthDateInput(yearRaw, monthRaw, dayRaw);
   const { year, month, day } = birthPartsToNumbers(parts);
 
-  devLog("submitBirthDate", { parts, year, month, day, source: options?.source });
+  devLog("submitBirthDate", { parts, year, month, day, source });
 
   const validationMessage = getBirthDateValidationMessage(year, month, day);
   if (validationMessage) {
-    trackEvent("calculator_error", { reason: "validation" });
+    trackEvent("calculator_error", { reason: "validation", source });
+    if (source === "free-soul-blueprint") {
+      trackEvent("free_blueprint_generation_failed", { reason: "validation", ...attrProps });
+    }
     return { ok: false, message: validationMessage };
   }
 
@@ -39,10 +55,18 @@ export function submitBirthDate(
       s3: code.s3Raw,
       s2: code.s2,
       s0: code.s0,
+      source,
     });
-    return { ok: true, href: buildGeneratingHref(year, month, day) };
+    if (source === "free-soul-blueprint") {
+      trackEvent("free_blueprint_generation_started", attrProps);
+    }
+    const href = appendAttributionToHref(buildGeneratingHref(year, month, day));
+    return { ok: true, href };
   } catch {
-    trackEvent("calculator_error", { reason: "system" });
+    trackEvent("calculator_error", { reason: "system", source });
+    if (source === "free-soul-blueprint") {
+      trackEvent("free_blueprint_generation_failed", { reason: "system", ...attrProps });
+    }
     return { ok: false, message: "Something went wrong. Please try again in a moment." };
   }
 }

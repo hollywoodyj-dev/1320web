@@ -11,6 +11,7 @@ export type ReportSectionId =
   | "s0"
   | "integration"
   | "reflection"
+  | "missing-map"
   | "go-deeper"
   | "keep-code";
 

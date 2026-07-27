@@ -1,4 +1,4 @@
-/** Canonical analytics event names — 11/15 §17 (+ generating chamber). */
+/** Canonical analytics event names — 11/15 §17 (+ generating chamber + Funnel Spec v1.0 F1). */
 
 export const ANALYTICS_EVENTS = [
   "homepage_generate_click",
@@ -18,6 +18,23 @@ export const ANALYTICS_EVENTS = [
   "booking_click",
   "booking_submit",
   "booking_success",
+  // Funnel Spec v1.0 · Phase F1
+  "free_blueprint_landing_view",
+  "free_blueprint_birthdate_started",
+  "free_blueprint_birthdate_submitted",
+  "free_blueprint_generation_started",
+  "free_blueprint_generation_completed",
+  "free_blueprint_generation_failed",
+  "free_blueprint_result_viewed",
+  "free_blueprint_foundation_viewed",
+  "free_blueprint_integrated_mirror_viewed",
+  "full_report_offer_viewed",
+  "full_report_cta_clicked",
+  "full_report_sample_clicked",
+  "full_report_sales_page_viewed",
+  "full_report_checkout_started",
+  "full_report_checkout_completed",
+  "full_report_checkout_abandoned",
 ] as const;
 
 export type AnalyticsEvent = (typeof ANALYTICS_EVENTS)[number];

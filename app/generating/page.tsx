@@ -34,7 +34,7 @@ export default async function GeneratingPage({ searchParams }: GeneratingPagePro
           <span>{GENERATING_COPY.errorInvalidTitle}</span>
         </h1>
         <p className="generating-body">{GENERATING_COPY.errorInvalidBody}</p>
-        <Link href="/your-code" className="gold-button generating-cta mt-6">
+        <Link href="/free-soul-blueprint" className="gold-button generating-cta mt-6">
           {GENERATING_COPY.ctaError}
         </Link>
       </div>

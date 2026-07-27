@@ -91,11 +91,12 @@ export const FREE_RESULT_NAV = [
   { id: "integrated" as const, label: "Integrated Mirror" },
   { id: "segments" as const, label: "Segment Blueprint" },
   { id: "reflection" as const, label: "Reflection" },
-  { id: "go-deeper" as const, label: "Go Deeper" },
+  { id: "missing-map" as const, label: "Complete Pattern" },
+  { id: "go-deeper" as const, label: "Full Report" },
 ];
 
 export const FREE_RESULT_MODULE = {
-  unlockCta: "Unlock Full Segment",
+  unlockCta: "Explore This Layer in My Full Report",
   sectionTitle: "Your Segment Blueprint",
   viewSection: "View Section",
   /** Wisewave depth: 2–3 short freeEssence lines, ≤ ~55 words. */

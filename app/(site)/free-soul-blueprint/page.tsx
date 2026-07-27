@@ -1,0 +1,153 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { FreeSoulBlueprintBirthForm } from "@/components/funnel/free-soul-blueprint-birth-form";
+import { SectionCard } from "@/components/section-card";
+import {
+  FREE_SOUL_BLUEPRINT_COMPARE,
+  FREE_SOUL_BLUEPRINT_FINAL,
+  FREE_SOUL_BLUEPRINT_FOUNDATIONS,
+  FREE_SOUL_BLUEPRINT_HERO,
+  FREE_SOUL_BLUEPRINT_INCLUDES,
+  FREE_SOUL_BLUEPRINT_META,
+  FREE_SOUL_BLUEPRINT_SAMPLE,
+  FREE_SOUL_BLUEPRINT_TRUST,
+  FREE_SOUL_BLUEPRINT_WHY,
+} from "@/lib/free-soul-blueprint-content";
+
+export const metadata: Metadata = {
+  title: FREE_SOUL_BLUEPRINT_META.title,
+  description: FREE_SOUL_BLUEPRINT_META.description,
+  openGraph: {
+    title: FREE_SOUL_BLUEPRINT_META.title,
+    description: FREE_SOUL_BLUEPRINT_META.description,
+  },
+  alternates: {
+    canonical: "/free-soul-blueprint",
+  },
+};
+
+export default function FreeSoulBlueprintPage() {
+  return (
+    <div className="fsb-page conversion-page space-y-5">
+      <header className="blueprint-hero glass-card fsb-hero" id="discover">
+        <p className="blueprint-eyebrow">{FREE_SOUL_BLUEPRINT_HERO.eyebrow}</p>
+        <h1 className="blueprint-title fsb-hero-title">{FREE_SOUL_BLUEPRINT_HERO.title}</h1>
+        <p className="blueprint-lead">{FREE_SOUL_BLUEPRINT_HERO.body}</p>
+        <p className="conversion-boundary fsb-boundary">{FREE_SOUL_BLUEPRINT_HERO.boundary}</p>
+        <div className="fsb-hero-form">
+          <FreeSoulBlueprintBirthForm idPrefix="fsb-hero" />
+          <p className="fsb-trust">{FREE_SOUL_BLUEPRINT_HERO.trustLine}</p>
+          <p className="fsb-trust fsb-trust--secondary">{FREE_SOUL_BLUEPRINT_HERO.trustLine2}</p>
+        </div>
+      </header>
+
+      <SectionCard title={FREE_SOUL_BLUEPRINT_FOUNDATIONS.title}>
+        <p className="fsb-section-lead">{FREE_SOUL_BLUEPRINT_FOUNDATIONS.body}</p>
+        <ul className="fsb-foundation-grid">
+          {FREE_SOUL_BLUEPRINT_FOUNDATIONS.cards.map((card) => (
+            <li key={card.code} className={`fsb-foundation-card segment-bg segment-bg--${card.code.toLowerCase()}`}>
+              <p className="fsb-foundation-title">{card.title}</p>
+              <p className="fsb-foundation-code">{card.code}</p>
+              <p>{card.text}</p>
+            </li>
+          ))}
+        </ul>
+      </SectionCard>
+
+      <SectionCard title={FREE_SOUL_BLUEPRINT_WHY.title}>
+        <div className="fsb-prose">
+          {FREE_SOUL_BLUEPRINT_WHY.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+          <p className="fsb-bridge">{FREE_SOUL_BLUEPRINT_WHY.bridge}</p>
+          <a href="#discover" className="blueprint-secondary-link">
+            {FREE_SOUL_BLUEPRINT_WHY.returnLink}
+          </a>
+        </div>
+      </SectionCard>
+
+      <SectionCard title={FREE_SOUL_BLUEPRINT_INCLUDES.title}>
+        <ul className="conversion-bullet-list">
+          {FREE_SOUL_BLUEPRINT_INCLUDES.items.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </SectionCard>
+
+      <SectionCard title={FREE_SOUL_BLUEPRINT_SAMPLE.title}>
+        <p className="fsb-sample-label">{FREE_SOUL_BLUEPRINT_SAMPLE.sampleLabel}</p>
+        <p className="fsb-section-lead">{FREE_SOUL_BLUEPRINT_SAMPLE.sampleNote}</p>
+        <div className="fsb-sample-grid">
+          <article className="fsb-sample-card glass-card">
+            <h3>{FREE_SOUL_BLUEPRINT_SAMPLE.coverTitle}</h3>
+            <p className="fsb-sample-cover">1320 Soul Blueprint</p>
+          </article>
+          <article className="fsb-sample-card glass-card">
+            <h3>{FREE_SOUL_BLUEPRINT_SAMPLE.overviewTitle}</h3>
+            <p>{FREE_SOUL_BLUEPRINT_SAMPLE.overviewCodes}</p>
+          </article>
+          <article className="fsb-sample-card glass-card">
+            <h3>{FREE_SOUL_BLUEPRINT_SAMPLE.cardTitle}</h3>
+            <p>{FREE_SOUL_BLUEPRINT_SAMPLE.cardBody}</p>
+          </article>
+          <article className="fsb-sample-card glass-card">
+            <h3>{FREE_SOUL_BLUEPRINT_SAMPLE.questionLabel}</h3>
+            <p>{FREE_SOUL_BLUEPRINT_SAMPLE.question}</p>
+          </article>
+        </div>
+      </SectionCard>
+
+      <SectionCard title={FREE_SOUL_BLUEPRINT_COMPARE.title}>
+        <div className="conversion-compare fsb-compare">
+          <div className="conversion-compare-col glass-card">
+            <h3>{FREE_SOUL_BLUEPRINT_COMPARE.isTitle}</h3>
+            <ul className="conversion-bullet-list">
+              {FREE_SOUL_BLUEPRINT_COMPARE.isItems.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="conversion-compare-col glass-card">
+            <h3>{FREE_SOUL_BLUEPRINT_COMPARE.isNotTitle}</h3>
+            <ul className="conversion-bullet-list">
+              {FREE_SOUL_BLUEPRINT_COMPARE.isNotItems.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </SectionCard>
+
+      <SectionCard title={FREE_SOUL_BLUEPRINT_TRUST.title}>
+        <div className="fsb-prose">
+          {FREE_SOUL_BLUEPRINT_TRUST.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+          <p className="fsb-legal-links">
+            <Link href="/privacy" className="blueprint-secondary-link">
+              Privacy Policy
+            </Link>
+            {" · "}
+            <Link href="/disclaimer" className="blueprint-secondary-link">
+              Disclaimer
+            </Link>
+            {" · "}
+            <Link href="/terms" className="blueprint-secondary-link">
+              Terms of Service
+            </Link>
+          </p>
+        </div>
+      </SectionCard>
+
+      <section className="glass-card fsb-final" id="discover-again" aria-labelledby="fsb-final-title">
+        <h2 id="fsb-final-title" className="blueprint-title">
+          {FREE_SOUL_BLUEPRINT_FINAL.title}
+        </h2>
+        <p className="blueprint-lead">{FREE_SOUL_BLUEPRINT_FINAL.body}</p>
+        <div className="fsb-hero-form">
+          <FreeSoulBlueprintBirthForm idPrefix="fsb-final" />
+        </div>
+      </section>
+    </div>
+  );
+}

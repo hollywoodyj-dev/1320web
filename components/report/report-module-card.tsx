@@ -110,7 +110,7 @@ export function ReportModuleCard({
                 <p>{module.lockedTeaser}</p>
                 <p className="report-module-locked-label">Available in the Full Soul Origin Report</p>
                 <Link href={checkoutHref} className="report-module-locked-cta">
-                  Unlock My Full Report
+                  Explore This Layer in My Full Report
                 </Link>
               </div>
             ) : (

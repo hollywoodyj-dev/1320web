@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
         source: "/v1/blueprints/:blueprint_id/experience-profile",
         destination: "/api/v1/blueprints/:blueprint_id/experience-profile",
       },
+      {
+        source: "/free-soul-blueprint/result",
+        destination: "/result",
+      },
     ];
   },
   // Allow phone/tablet on LAN IP to load dev assets (fixes broken client router + HMR).

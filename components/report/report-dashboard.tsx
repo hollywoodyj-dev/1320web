@@ -16,14 +16,21 @@ import { ReportModuleCard } from "@/components/report/report-module-card";
 import { ReportSidebar, useReportScrollSpy } from "@/components/report/report-sidebar";
 import { ReportDebugPanel } from "@/components/report/report-debug-panel";
 import { ResultExtras } from "@/components/report/result-extras";
+import { FreeResultConversionBlock } from "@/components/funnel/free-result-conversion";
 import { trackEvent } from "@/lib/analytics";
+import { attributionToAnalyticsProps } from "@/lib/funnel/attribution";
 
 type ReportDashboardProps = {
   viewModel: ReportViewModel;
   analyticsEvent?: "sample_report_view" | "result_view";
+  fullReportPriceDisplay?: string;
 };
 
-export function ReportDashboard({ viewModel, analyticsEvent }: ReportDashboardProps) {
+export function ReportDashboard({
+  viewModel,
+  analyticsEvent,
+  fullReportPriceDisplay = "USD 49",
+}: ReportDashboardProps) {
   const isFreeRefined = viewModel.mode === "free";
   const navItems = isFreeRefined
     ? FREE_RESULT_NAV
@@ -35,7 +42,10 @@ export function ReportDashboard({ viewModel, analyticsEvent }: ReportDashboardPr
 
   useEffect(() => {
     if (analyticsEvent) trackEvent(analyticsEvent);
-  }, [analyticsEvent]);
+    if (viewModel.mode === "free") {
+      trackEvent("free_blueprint_result_viewed", attributionToAnalyticsProps());
+    }
+  }, [analyticsEvent, viewModel.mode]);
 
   useEffect(() => {
     if (!viewModel.birthDateLabel) return;
@@ -131,7 +141,14 @@ export function ReportDashboard({ viewModel, analyticsEvent }: ReportDashboardPr
         )}
 
         {viewModel.showFullUpsell ? (
-          <ReportFullUpsell checkoutHref={viewModel.checkoutHref} refined={isFreeRefined} />
+          isFreeRefined ? (
+            <FreeResultConversionBlock
+              checkoutHref={viewModel.checkoutHref}
+              priceDisplay={fullReportPriceDisplay}
+            />
+          ) : (
+            <ReportFullUpsell checkoutHref={viewModel.checkoutHref} refined={false} />
+          )
         ) : null}
 
         {!isFreeRefined ? (

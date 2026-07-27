@@ -8,11 +8,19 @@ import { submitBirthDate } from "@/lib/submitBirthDate";
 import { BIRTH_FORM } from "@/lib/your-code-content";
 
 type BirthDateFormProps = {
-  variant?: "default" | "homepage";
+  variant?: "default" | "homepage" | "free-soul-blueprint";
   idPrefix?: string;
+  /** Override primary submit label (Funnel Spec CTA). */
+  submitLabel?: string;
+  onFieldFocus?: () => void;
 };
 
-export function BirthDateForm({ variant = "default", idPrefix }: BirthDateFormProps) {
+export function BirthDateForm({
+  variant = "default",
+  idPrefix,
+  submitLabel,
+  onFieldFocus,
+}: BirthDateFormProps) {
   const formId = useId();
   const prefix = idPrefix ?? formId.replace(/:/g, "");
   const formRef = useRef<HTMLFormElement>(null);
@@ -57,7 +65,12 @@ export function BirthDateForm({ variant = "default", idPrefix }: BirthDateFormPr
     });
 
     const result = submitBirthDate(values.year, values.month, values.day, {
-      source: variant === "homepage" ? "homepage" : "your-code",
+      source:
+        variant === "homepage"
+          ? "homepage"
+          : variant === "free-soul-blueprint"
+            ? "free-soul-blueprint"
+            : "your-code",
     });
 
     if (!result.ok) {
@@ -101,18 +114,19 @@ export function BirthDateForm({ variant = "default", idPrefix }: BirthDateFormPr
     onSubmit,
   };
 
+  const ctaLabel = submitLabel ?? (submitting ? "OPENING…" : BIRTH_FORM.submit);
   const submitButton = (
     <button
       type="submit"
       className={
-        variant === "homepage"
+        variant === "homepage" || variant === "free-soul-blueprint"
           ? "gold-button gold-button--secondary"
           : "gold-button inline-flex"
       }
       disabled={submitting}
       onPointerUp={onGeneratePointer}
     >
-      {submitting ? "OPENING…" : BIRTH_FORM.submit}
+      {submitting ? "OPENING…" : ctaLabel}
     </button>
   );
 
@@ -132,6 +146,7 @@ export function BirthDateForm({ variant = "default", idPrefix }: BirthDateFormPr
           value={month}
           onChange={(e) => setMonth(e.target.value)}
           onInput={(e) => setMonth(e.currentTarget.value)}
+          onFocus={onFieldFocus}
         />
       </label>
       <label className="birthdate-field" htmlFor={`${prefix}-day`}>
@@ -148,6 +163,7 @@ export function BirthDateForm({ variant = "default", idPrefix }: BirthDateFormPr
           value={day}
           onChange={(e) => setDay(e.target.value)}
           onInput={(e) => setDay(e.currentTarget.value)}
+          onFocus={onFieldFocus}
         />
       </label>
       <label className="birthdate-field birthdate-field-year" htmlFor={`${prefix}-year`}>
@@ -164,6 +180,7 @@ export function BirthDateForm({ variant = "default", idPrefix }: BirthDateFormPr
           value={year}
           onChange={(e) => setYear(e.target.value)}
           onInput={(e) => setYear(e.currentTarget.value)}
+          onFocus={onFieldFocus}
           onBlur={(e) => {
             const parsed = parseBirthDateInput(e.target.value, month, day);
             setYear(parsed.year);
@@ -175,9 +192,12 @@ export function BirthDateForm({ variant = "default", idPrefix }: BirthDateFormPr
     </div>
   );
 
-  if (variant === "homepage") {
+  if (variant === "homepage" || variant === "free-soul-blueprint") {
     return (
-      <form {...formProps} className="entry-form">
+      <form
+        {...formProps}
+        className={variant === "free-soul-blueprint" ? "fsb-birth-form entry-form" : "entry-form"}
+      >
         {fieldGrid}
         <div className="entry-form-actions">
           {error ? (

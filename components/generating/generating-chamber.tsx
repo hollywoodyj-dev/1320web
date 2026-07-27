@@ -2,10 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { saveBirthCookie } from "@/lib/birth-cookie";
 import { calculate1320Code } from "@/lib/calculate1320Code";
 import { trackEvent } from "@/lib/analytics";
+import { attributionToAnalyticsProps, loadFunnelAttribution } from "@/lib/funnel/attribution";
 import { devLog } from "@/lib/dev-log";
 import {
   GENERATING_COPY,
@@ -48,6 +49,15 @@ export function GeneratingChamber({
   const [complete, setComplete] = useState(false);
   const [generationState, setGenerationState] = useState<BlueprintGenerationState>("loading");
   const redirectFormRef = useRef<HTMLFormElement>(null);
+  const attributionFields = useMemo(() => {
+    if (typeof window === "undefined") return [] as Array<[string, string]>;
+    const attr = loadFunnelAttribution() ?? {};
+    return (
+      ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "ref", "language"] as const
+    )
+      .map((key) => [key, attr[key] ?? ""] as [string, string])
+      .filter(([, value]) => Boolean(value));
+  }, []);
   const redirectedRef = useRef(false);
 
   const current = GENERATING_STEPS[activeStep - 1] ?? GENERATING_STEPS[0];
@@ -69,10 +79,15 @@ export function GeneratingChamber({
       const code = calculate1320Code(year, month, day);
       saveSession1320(toSessionPayload(code));
       trackEvent("generating_view");
+      trackEvent("free_blueprint_generation_started", attributionToAnalyticsProps(loadFunnelAttribution()));
     } catch (err) {
       devLog("generating calculation failed", { err });
       setGenerationState("error");
       trackEvent("generating_error");
+      trackEvent("free_blueprint_generation_failed", {
+        reason: "system",
+        ...attributionToAnalyticsProps(loadFunnelAttribution()),
+      });
     }
   }, [year, month, day]);
 
@@ -87,6 +102,10 @@ export function GeneratingChamber({
       if (redirectedRef.current) return;
       redirectedRef.current = true;
       trackEvent("generating_complete");
+      trackEvent(
+        "free_blueprint_generation_completed",
+        attributionToAnalyticsProps(loadFunnelAttribution()),
+      );
       devLog("generating form redirect", { reason, resultHref });
       redirectFormRef.current?.requestSubmit();
     };
@@ -134,6 +153,9 @@ export function GeneratingChamber({
         <input type="hidden" name="year" value={year} />
         <input type="hidden" name="month" value={month} />
         <input type="hidden" name="day" value={day} />
+        {attributionFields.map(([key, value]) => (
+          <input key={key} type="hidden" name={key} value={value} />
+        ))}
         <button type="submit" tabIndex={-1}>
           Continue to result
         </button>

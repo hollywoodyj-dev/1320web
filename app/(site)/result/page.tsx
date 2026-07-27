@@ -8,11 +8,19 @@ import { calculate1320Code } from "@/lib/calculate1320Code";
 import { get1320Content } from "@/lib/get1320Content";
 import { resolveBirthDateFromRequest } from "@/lib/resolve-birth-date";
 import { RESULT_META } from "@/lib/result-content";
+import { getFullReportAmountCents } from "@/lib/stripe/client";
 
 export const metadata: Metadata = {
   title: RESULT_META.title,
   description: RESULT_META.description,
+  robots: { index: false, follow: false, nocache: true },
 };
+
+function formatFullReportPriceDisplay(): string {
+  const cents = getFullReportAmountCents();
+  const amount = cents / 100;
+  return `USD ${amount % 1 === 0 ? amount.toFixed(0) : amount.toFixed(2)}`;
+}
 
 /** Never cache — each birth date must render fresh segment content. */
 export const dynamic = "force-dynamic";
@@ -30,8 +38,8 @@ export default async function ResultPage({ searchParams }: { searchParams: Promi
           We could not read a valid birth date from this link. Start fresh to open your four-part
           mirror.
         </p>
-        <Link href="/your-code" className="gold-button mt-4 inline-flex">
-          GENERATE MY CODE
+        <Link href="/free-soul-blueprint" className="gold-button mt-4 inline-flex">
+          Discover My Free Soul Blueprint
         </Link>
       </SectionCard>
     );
@@ -65,6 +73,7 @@ export default async function ResultPage({ searchParams }: { searchParams: Promi
         key={code.codeString}
         viewModel={viewModel}
         analyticsEvent="result_view"
+        fullReportPriceDisplay={formatFullReportPriceDisplay()}
       />
     </div>
   );

@@ -5,6 +5,7 @@ Canonical product and content specs copied from the founder content pack for imp
 | Path | Purpose |
 |------|---------|
 | `phase-2/PHASE2_ROADMAP_v1.md` | **Phase 2** five-step roadmap (FS-005–FS-008) |
+| `funnel/FREE_TO_FULL_FUNNEL_SPEC_v1.md` | **Free → Full Report** Funnel Spec lock · Phase F1 |
 | `personal-integration/OPERATING_FLOW_ROADMAP_v1.md` | **Personal Integration** Phase 1 closed + revised Phase 2A–2D order |
 | `personal-integration/SESSION_PRICING_LAUNCH_V1.md` | **Personal Integration** Session pricing & product tiers (Launch v1 · USD) |
 | `canonical-soul-blueprint/` | **FS-005** Canonical Soul Blueprint spec package |

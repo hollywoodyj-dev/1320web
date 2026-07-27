@@ -11,6 +11,7 @@ import "@/styles/generating-density-v1.css";
 import "@/styles/result-density-v1.css";
 import "@/styles/full-report-density-v1.css";
 import "@/styles/booking-density-v1.css";
+import "@/styles/free-soul-blueprint-v1.css";
 import "@/styles/full-report-v2/report-global.css";
 import "@/styles/full-report-v2/report-theme-dark.css";
 import "@/styles/full-report-v2/report-components.css";

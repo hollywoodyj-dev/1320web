@@ -17,7 +17,8 @@ import {
   WHO_FOR,
   WHO_NOT_FOR,
 } from "@/lib/full-report-content";
-import { GENERATE_CODE_CTA, SAMPLE_REPORT_HREF } from "@/lib/site-nav";
+import { SAMPLE_REPORT_HREF } from "@/lib/site-nav";
+import { FullReportSalesTracker } from "@/components/funnel/full-report-sales-tracker";
 
 export const metadata: Metadata = {
   title: FULL_REPORT_META.title,
@@ -33,6 +34,7 @@ function segmentBgClass(code: string): string {
 export default function FullReportPage() {
   return (
     <div className="conversion-page full-report-marketing full-report-marketing--refined space-y-5">
+      <FullReportSalesTracker />
       <header className="blueprint-hero glass-card full-report-hero">
         <p className="blueprint-eyebrow">{FULL_REPORT_HERO.eyebrow}</p>
         <h1 className="blueprint-title">{FULL_REPORT_HERO.title}</h1>
@@ -49,6 +51,11 @@ export default function FullReportPage() {
             {FULL_REPORT_HERO.secondaryCta}
           </Link>
         </div>
+        <ul className="full-report-product-details">
+          {FULL_REPORT_HERO.productDetails.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
       </header>
 
       <SectionCard title={REPORT_PROMISE.title}>
@@ -186,7 +193,7 @@ export default function FullReportPage() {
         <Link href="/checkout" className="gold-button">
           {FULL_REPORT_FINAL_CTA.primaryCta}
         </Link>
-        <Link href={GENERATE_CODE_CTA.href} className="blueprint-secondary-link block mt-3">
+        <Link href="/free-soul-blueprint" className="blueprint-secondary-link block mt-3">
           {FULL_REPORT_FINAL_CTA.secondaryCta}
         </Link>
       </section>

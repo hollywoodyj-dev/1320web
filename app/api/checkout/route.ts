@@ -14,6 +14,7 @@ type CheckoutBody = {
   year?: number;
   month?: number;
   day?: number;
+  attribution?: Record<string, string>;
 };
 
 function isValidEmail(value: unknown): value is string {
@@ -80,6 +81,9 @@ export async function POST(request: Request) {
         reportId: report.id,
         combinationSignature: content.combinationSignature,
         birthDate: birthDateLabel,
+        product: "full_report",
+        pricing_version: "full-report-v1",
+        ...(body.attribution ?? {}),
       },
     });
 

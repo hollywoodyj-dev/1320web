@@ -18,13 +18,19 @@ export const REPORT_HEADER_ACTIONS = {
 };
 
 export const REPORT_FULL_UPSELL = {
-  title: "Go Deeper Into Your Full Soul Blueprint",
-  lead: "Your free result reveals your four foundation mirrors.",
-  body: "The Full Report expands your blueprint into the complete S0–S9 Soul Blueprint, including shadow patterns, soul mission, value and receiving, sovereignty, contribution, return, and 7-day integration practice.",
-  items: [] as string[],
-  primaryCta: "Unlock My Full Report",
+  title: "Meet Your Complete Soul Blueprint",
+  lead: "Your Free Report opens the doorway.",
+  body: "Your Full Report shows how the whole Blueprint lives together — shadow, mission, value, sovereignty, contribution, return, practice, and journal.",
+  items: [
+    "Complete S0–S9 Soul Blueprint",
+    "7-Day Integration Practice",
+    "Reflection Journal",
+    "Web · Mobile · PDF",
+    "Account Access",
+  ] as string[],
+  primaryCta: "Unlock My Full Soul Blueprint",
   primaryHref: "/checkout",
-  secondaryCta: "View Sample Report",
+  secondaryCta: "View Sample Full Report",
   secondaryHref: "/full-report-v2",
 };
 

@@ -4,6 +4,11 @@ import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { trackEvent } from "@/lib/analytics";
 import { FORM_CONSENT } from "@/lib/form-consent";
+import {
+  attributionToAnalyticsProps,
+  attributionToCheckoutMetadata,
+  loadFunnelAttribution,
+} from "@/lib/funnel/attribution";
 
 type UnlockCheckoutFormProps = {
   defaultYear?: number;
@@ -48,12 +53,23 @@ export function UnlockCheckoutForm({
     }
 
     trackEvent("checkout_start", { source });
+    trackEvent("full_report_checkout_started", {
+      source,
+      ...attributionToAnalyticsProps(loadFunnelAttribution()),
+    });
 
     try {
       const response = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, firstName, year, month, day }),
+        body: JSON.stringify({
+          email,
+          firstName,
+          year,
+          month,
+          day,
+          attribution: attributionToCheckoutMetadata(loadFunnelAttribution()),
+        }),
       });
 
       let json: { ok?: boolean; url?: string; error?: string } = {};
@@ -72,9 +88,18 @@ export function UnlockCheckoutForm({
       }
 
       trackEvent("checkout_redirect", { source });
+      trackEvent("full_report_checkout_completed", {
+        source,
+        ...attributionToAnalyticsProps(loadFunnelAttribution()),
+      });
       window.location.href = json.url;
     } catch {
       setStatus("Network error. Please try again.");
+      trackEvent("full_report_checkout_abandoned", {
+        source,
+        reason: "network",
+        ...attributionToAnalyticsProps(loadFunnelAttribution()),
+      });
       setLoading(false);
     }
   }

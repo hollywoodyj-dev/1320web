@@ -6,7 +6,10 @@ import {
 } from "@/lib/db/purchases";
 import { getBookingScheduleUrl } from "@/lib/booking/scheduling-urls";
 import { createPersonalIntegrationRequest } from "@/lib/personal-integration/create-booking-request";
-import { isPersonalIntegrationSessionVariant } from "@/lib/personal-integration/session-variants";
+import {
+  isPersonalIntegrationSessionVariant,
+  resolveSessionVariant,
+} from "@/lib/personal-integration/session-variants";
 import { BOOKING_PRODUCT } from "@/lib/platform-config";
 import { getSiteUrl } from "@/lib/platform-config";
 import type Stripe from "stripe";
@@ -29,9 +32,9 @@ async function buildBookingResult(
   if (!session?.prep_access_token) return null;
 
   const prepUrl = `${getSiteUrl()}/integration/prep/${session.id}?token=${session.prep_access_token}`;
-  const scheduleUrl = isPersonalIntegrationSessionVariant(readingType)
-    ? getBookingScheduleUrl(readingType)
-    : getBookingScheduleUrl("not-sure");
+  const scheduleUrl = getBookingScheduleUrl(
+    isPersonalIntegrationSessionVariant(readingType) ? readingType : "focused_life_integration",
+  );
 
   return {
     userId,
@@ -48,7 +51,7 @@ export async function getBookingFulfillmentForCheckoutSession(
   const purchase = await getPurchaseBySessionId(checkoutSessionId);
   if (!purchase?.platform_session_id || !purchase.report_id) return null;
 
-  let readingType = "not-sure";
+  let readingType = "focused_life_integration";
   try {
     const { getStripe } = await import("@/lib/stripe/client");
     const session = await getStripe().checkout.sessions.retrieve(checkoutSessionId);
@@ -77,7 +80,7 @@ export async function fulfillBookingCheckoutSession(
   if (!purchase) return null;
 
   if (purchase.platform_session_id && purchase.report_id) {
-    const readingType = meta.readingType ?? "not-sure";
+    const readingType = meta.readingType ?? "focused_life_integration";
     return buildBookingResult(purchase.user_id, purchase.report_id, purchase.platform_session_id, readingType);
   }
 
@@ -91,7 +94,7 @@ export async function fulfillBookingCheckoutSession(
   }
 
   if (purchase.platform_session_id && purchase.report_id) {
-    const readingType = meta.readingType ?? "not-sure";
+    const readingType = meta.readingType ?? "focused_life_integration";
     return buildBookingResult(purchase.user_id, purchase.report_id, purchase.platform_session_id, readingType);
   }
 
@@ -102,14 +105,16 @@ export async function fulfillBookingCheckoutSession(
   const readingType = meta.readingType?.trim();
   const message = meta.message?.trim();
 
+  const sessionVariant = readingType ? resolveSessionVariant(readingType) : null;
+
   if (
     !firstName ||
     !lastName ||
     !email ||
     !birthDate ||
-    !readingType ||
+    !sessionVariant ||
     !message ||
-    !isPersonalIntegrationSessionVariant(readingType) ||
+    !isPersonalIntegrationSessionVariant(readingType ?? "") ||
     !purchase.report_id
   ) {
     console.error("[fulfillBookingCheckoutSession] missing metadata or report", {
@@ -125,7 +130,7 @@ export async function fulfillBookingCheckoutSession(
       lastName,
       email,
       birthDate,
-      readingType,
+      readingType: sessionVariant,
       timezone: meta.timezone?.trim() || undefined,
       message,
       code: meta.code?.trim() || undefined,
@@ -144,6 +149,6 @@ export async function fulfillBookingCheckoutSession(
     reportId: result.reportId,
     sessionId: result.sessionId,
     prepUrl: result.prepUrl,
-    scheduleUrl: getBookingScheduleUrl(readingType),
+    scheduleUrl: getBookingScheduleUrl(sessionVariant),
   };
 }

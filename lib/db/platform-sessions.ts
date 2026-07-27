@@ -11,6 +11,11 @@ export type CreatePlatformSessionInput = {
   status?: PlatformSessionStatus;
   growthEdge?: string | null;
   sessionVariant?: string | null;
+  sessionTitle?: string | null;
+  durationMinutes?: number | null;
+  priceAmount?: number | null;
+  currency?: string | null;
+  pricingVersion?: string | null;
   meta?: Record<string, unknown>;
   authorship?: DomainAuthorship;
 };
@@ -34,6 +39,11 @@ export async function createPlatformSession(input: CreatePlatformSessionInput): 
       status,
       growth_edge,
       session_variant,
+      session_title,
+      duration_minutes,
+      price_amount,
+      currency,
+      pricing_version,
       meta,
       authorship,
       prep_access_token
@@ -45,6 +55,11 @@ export async function createPlatformSession(input: CreatePlatformSessionInput): 
       ${input.status ?? "scheduled"},
       ${input.growthEdge ?? null},
       ${input.sessionVariant ?? null},
+      ${input.sessionTitle ?? null},
+      ${input.durationMinutes ?? null},
+      ${input.priceAmount ?? null},
+      ${input.currency ?? null},
+      ${input.pricingVersion ?? null},
       ${db.json((input.meta ?? {}) as postgres.JSONValue)},
       ${input.authorship ?? "system"},
       ${prepToken}

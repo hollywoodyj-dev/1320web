@@ -6,6 +6,7 @@ Canonical product and content specs copied from the founder content pack for imp
 |------|---------|
 | `phase-2/PHASE2_ROADMAP_v1.md` | **Phase 2** five-step roadmap (FS-005–FS-008) |
 | `personal-integration/OPERATING_FLOW_ROADMAP_v1.md` | **Personal Integration** Phase 1 closed + revised Phase 2A–2D order |
+| `personal-integration/SESSION_PRICING_LAUNCH_V1.md` | **Personal Integration** Session pricing & product tiers (Launch v1 · AUD) |
 | `canonical-soul-blueprint/` | **FS-005** Canonical Soul Blueprint spec package |
 | `full-report/` | Full Report v2 UI + parity + release QA |
 | `1320-v2-content/IMPLEMENTATION_PHASES.md` | Phased build plan (Phase 0–6) |

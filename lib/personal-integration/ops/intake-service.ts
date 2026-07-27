@@ -16,7 +16,7 @@ import { getUserById } from "@/lib/db/users";
 import { getCurrentUser } from "@/lib/auth/session";
 import { INTAKE_CONSENT_VERSION } from "@/lib/personal-integration/ops/constants";
 import { INTAKE_SECTIONS, type IntakeResponses } from "@/lib/personal-integration/ops/intake-schema";
-import { SESSION_VARIANT_LABELS } from "@/lib/personal-integration/session-variants";
+import { formatSessionHeading } from "@/lib/personal-integration/format-session-heading";
 
 export type IntakeAccess = {
   sessionId: string;
@@ -49,10 +49,7 @@ export async function buildIntakePrefill(sessionId: string) {
   if (!report) return null;
   const user = await getUserById(session.user_id);
   const code = calculate1320Code(report.birth_year, report.birth_month, report.birth_day);
-  const variantLabel =
-    session.session_variant && session.session_variant in SESSION_VARIANT_LABELS
-      ? SESSION_VARIANT_LABELS[session.session_variant as keyof typeof SESSION_VARIANT_LABELS]
-      : "Personal Integration Session";
+  const variantLabel = formatSessionHeading(session);
 
   const preferredName =
     (typeof session.meta?.clientName === "string" && session.meta.clientName) ||

@@ -11,7 +11,7 @@ import {
   FOUNDATION_ORDER,
   MAX_ADVANCED_SUGGESTIONS,
 } from "@/lib/personal-integration/ops/constants";
-import { SESSION_VARIANT_LABELS } from "@/lib/personal-integration/session-variants";
+import { formatSessionHeading } from "@/lib/personal-integration/format-session-heading";
 import { toSoulBlueprintRef } from "@/lib/platform-domain";
 
 export type FacilitatorLayerCard = {
@@ -167,10 +167,7 @@ export async function buildBlueprintContext(
   }
   safetyWatchpoints.push("Blueprint is symbolic only — no diagnosis, prediction, or fixed-identity language.");
 
-  const variantLabel =
-    session.session_variant && session.session_variant in SESSION_VARIANT_LABELS
-      ? SESSION_VARIANT_LABELS[session.session_variant as keyof typeof SESSION_VARIANT_LABELS]
-      : "Personal Integration Session";
+  const variantLabel = formatSessionHeading(session);
 
   return {
     clientOverview: {

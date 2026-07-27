@@ -75,6 +75,11 @@ export type PlatformSessionRow = {
   growth_edge: string | null;
   summary: string | null;
   session_variant: string | null;
+  session_title?: string | null;
+  duration_minutes?: number | null;
+  price_amount?: string | number | null;
+  currency?: string | null;
+  pricing_version?: string | null;
   meta: Record<string, unknown>;
   prep_access_token: string | null;
   follow_up_access_token: string | null;

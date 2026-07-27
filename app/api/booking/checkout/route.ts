@@ -4,7 +4,12 @@ import { ensureSoulReportForUserBirthDate } from "@/lib/db/ensure-soul-report";
 import { createPendingPurchase } from "@/lib/db/purchases";
 import { upsertUserByEmail } from "@/lib/db/users";
 import { parseBirthDateString } from "@/lib/personal-integration/parse-birth-date";
-import { isPersonalIntegrationSessionVariant } from "@/lib/personal-integration/session-variants";
+import {
+  isBookableSessionVariant,
+  resolveSessionVariant,
+  sessionPricingSnapshot,
+  SESSION_CURRENCY_STRIPE,
+} from "@/lib/personal-integration/session-variants";
 import {
   BOOKING_PRODUCT,
   getSiteUrl,
@@ -73,7 +78,8 @@ export async function POST(request: Request) {
     );
   }
 
-  if (!isPersonalIntegrationSessionVariant(readingType)) {
+  const sessionVariant = resolveSessionVariant(readingType);
+  if (!sessionVariant || !isBookableSessionVariant(sessionVariant)) {
     return NextResponse.json({ ok: false, error: "Invalid session type." }, { status: 400 });
   }
 
@@ -91,13 +97,14 @@ export async function POST(request: Request) {
 
     const stripe = getStripe();
     const siteUrl = getSiteUrl();
-    const amountCents = getBookingAmountCents(readingType);
+    const pricing = sessionPricingSnapshot(sessionVariant);
+    const amountCents = getBookingAmountCents(sessionVariant);
     const code = body.code?.trim() || account?.codeString || "";
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       customer_email: email,
-      line_items: getBookingLineItems(readingType),
+      line_items: getBookingLineItems(sessionVariant),
       success_url: `${siteUrl}/booking/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${siteUrl}/booking?cancelled=1`,
       metadata: {
@@ -108,7 +115,13 @@ export async function POST(request: Request) {
         lastName,
         email,
         birthDate: birth.isoDate,
-        readingType,
+        readingType: sessionVariant,
+        session_type: pricing.session_type,
+        session_title: pricing.session_title,
+        duration_minutes: String(pricing.duration_minutes),
+        price_amount: String(pricing.price_amount),
+        currency: pricing.currency,
+        pricing_version: pricing.pricing_version,
         timezone: body.timezone?.trim() || "",
         message: truncateMetadata(message),
         code: truncateMetadata(code, 120),
@@ -124,6 +137,7 @@ export async function POST(request: Request) {
       reportId: report.id,
       stripeCheckoutSessionId: session.id,
       amountCents,
+      currency: SESSION_CURRENCY_STRIPE,
       product: BOOKING_PRODUCT,
     });
 

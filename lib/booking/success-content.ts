@@ -10,7 +10,7 @@ export const BOOKING_SUCCESS_META = {
 
 export const BOOKING_SUCCESS_COPY = {
   title: "Payment Confirmed — Schedule Your Session",
-  body: "Thank you. Your Personal Integration Session is paid. Choose a time below to schedule your session, then return to your account when you are ready to prepare.",
+  body: "Thank you. Your Personal Integration Session is paid. Choose a time below to schedule your session, then complete Pre-Session Intake so your Facilitator can prepare.",
   scheduleTitle: "Schedule Your Session",
   loadingCalendar: "Loading scheduling calendar…",
   confirmingPayment: "Confirming your payment…",

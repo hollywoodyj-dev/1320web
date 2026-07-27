@@ -4,7 +4,7 @@ import { getPlatformSessionByPrepToken, updatePlatformSessionGrowthEdge } from "
 import { getSoulReportById } from "@/lib/db/reports";
 import { createReflection, listReflectionsForSession } from "@/lib/db/reflections";
 import { toSoulBlueprintRef } from "@/lib/platform-domain";
-import { SESSION_VARIANT_LABELS } from "@/lib/personal-integration/session-variants";
+import { formatSessionHeading } from "@/lib/personal-integration/format-session-heading";
 
 export async function getPersonalIntegrationPrepContext(sessionId: string, prepToken: string) {
   const session = await getPlatformSessionByPrepToken(sessionId, prepToken);
@@ -26,10 +26,7 @@ export async function getPersonalIntegrationPrepContext(sessionId: string, prepT
 
   const blueprintRef = toSoulBlueprintRef(report, canonical);
   const reflections = await listReflectionsForSession(session.id);
-  const variantLabel =
-    session.session_variant && session.session_variant in SESSION_VARIANT_LABELS
-      ? SESSION_VARIANT_LABELS[session.session_variant as keyof typeof SESSION_VARIANT_LABELS]
-      : "Personal Integration Session";
+  const variantLabel = formatSessionHeading(session);
 
   return {
     session,

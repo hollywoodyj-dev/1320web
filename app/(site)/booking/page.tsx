@@ -24,6 +24,7 @@ import {
 } from "@/lib/booking-content";
 import { GENERATE_CODE_CTA, SAMPLE_REPORT_HREF } from "@/lib/site-nav";
 import { getAccountContext } from "@/lib/auth/account-context";
+import { resolveSessionVariant } from "@/lib/personal-integration/session-variants";
 
 export const metadata: Metadata = {
   title: BOOKING_META.title,
@@ -36,8 +37,7 @@ function readType(params: SearchParams): string | undefined {
   const value = params.type;
   const raw = Array.isArray(value) ? value[0] : value;
   if (!raw) return undefined;
-  if (raw === "not-sure") return raw;
-  return READING_OPTIONS.options.some((o) => o.id === raw) ? raw : undefined;
+  return resolveSessionVariant(raw) ?? undefined;
 }
 
 export default async function BookingPage({
@@ -148,13 +148,32 @@ export default async function BookingPage({
       <SectionCard title={READING_OPTIONS.title}>
         <div className="conversion-reading-grid">
           {READING_OPTIONS.options.map((option) => (
-            <article key={option.id} className="conversion-reading-card glass-card booking-session-card">
+            <article
+              key={option.id}
+              className={`conversion-reading-card glass-card booking-session-card${
+                option.mostRecommended ? " booking-session-card--recommended" : ""
+              }`}
+            >
+              {option.mostRecommended ? (
+                <p className="booking-session-badge">{READING_OPTIONS.mostRecommendedLabel}</p>
+              ) : null}
               <h3>{option.title}</h3>
-              <p className="conversion-reading-duration">{option.duration}</p>
-              <p>{option.text}</p>
+              <p className="conversion-reading-duration">
+                {option.duration} · {option.price}
+              </p>
+              <p className="booking-session-positioning">{option.text}</p>
+              <ul className="booking-session-includes">
+                {option.includes.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
               <Link
                 href={`/booking?type=${option.id}#booking-form`}
-                className="blueprint-secondary-link conversion-reading-cta"
+                className={
+                  option.mostRecommended
+                    ? "gold-button conversion-reading-cta"
+                    : "blueprint-secondary-link conversion-reading-cta"
+                }
               >
                 {option.cta}
               </Link>

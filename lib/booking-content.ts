@@ -1,4 +1,9 @@
-/** Personal Integration Session (`/booking`) — Refinement Spec v1.0 (Wisewave). */
+/** Personal Integration Session (`/booking`) — Launch v1 pricing & product tiers. */
+
+import {
+  SESSION_CATALOG,
+  SESSION_PRODUCT_ORDER,
+} from "@/lib/personal-integration/session-catalog";
 
 export const BOOKING_META = {
   title: "Personal Integration Session | 1320 Soul Code",
@@ -92,43 +97,35 @@ export const BOOKING_WHO_NOT = {
   ],
 };
 
-/** Keep ids stable for Stripe / checkout (`intro` | `deep` | `integration`). */
+/** Launch v1 Session products — order: 45 → 60 (Most Recommended) → 75. */
 export const READING_OPTIONS = {
   title: "Session Options",
-  options: [
-    {
-      id: "intro",
-      title: "Blueprint Integration Session",
-      duration: "45 minutes",
-      text: "For first-time integration after receiving your report.",
-      cta: "Book This Session",
-    },
-    {
-      id: "deep",
-      title: "Deep Blueprint Integration",
-      duration: "75 minutes",
-      text: "For deeper exploration of patterns, relationships, transitions, or mission.",
-      cta: "Book This Session",
-    },
-    {
-      id: "integration",
-      title: "Focused Life Integration",
-      duration: "60 minutes",
-      text: "For one specific life question or current decision point.",
-      cta: "Book This Session",
-    },
-  ],
+  mostRecommendedLabel: "Most Recommended",
+  options: SESSION_PRODUCT_ORDER.map((id) => {
+    const product = SESSION_CATALOG[id];
+    return {
+      id: product.id,
+      title: product.title,
+      duration: product.durationLabel,
+      price: product.priceDisplay,
+      text: product.positioning,
+      includes: product.includes,
+      mostRecommended: product.mostRecommended,
+      cta: product.cta,
+    };
+  }),
 };
 
 export const BEFORE_SESSION = {
   title: "Before Your Session",
   items: [
-    "Complete your booking.",
-    "Bring your birth date or report link.",
-    "Choose one current life area you want to reflect on.",
+    "Pay & book your Session.",
+    "Schedule your time on the confirmation page.",
+    "Complete your Pre-Session Intake.",
     "Come as you are — no perfect preparation is needed.",
   ],
-  afterNote: "After booking, you will receive confirmation and session details by email.",
+  afterNote:
+    "After payment you will schedule your Session, then complete Pre-Session Intake so your Facilitator can prepare with your Soul Blueprint.",
 };
 
 export const BOOKING_FORM_SECTION = {
@@ -163,15 +160,15 @@ export const BOOKING_FAQ = [
   },
   {
     q: "What session should I choose?",
-    a: "Choose Blueprint Integration for first-time support, Deep Blueprint Integration for more layered exploration, and Focused Life Integration for one specific current situation.",
+    a: "The options are different depths and time containers — not different levels of personal worth. Blueprint Integration Session (45 minutes · AUD 168) is focused on one clear question or core pattern. Focused Life Integration Session (60 minutes · AUD 228) is the most recommended complete exploration of one primary life theme. Deep Blueprint Integration Session (75 minutes · AUD 298) offers more space for transitions, recurring patterns, or several interconnected themes.",
   },
   {
     q: "Will you tell me my future?",
-    a: "No. 1320 does not predict your future. The session helps you reflect on patterns, choices, and integration.",
+    a: "No. 1320 does not predict your future. The session helps you reflect on patterns, choices, and integration. It is guided reflection and personal integration — non-diagnostic, non-predictive, and non-deterministic. It is not therapy, medical, legal, financial, or crisis support. You remain the author and decision-maker.",
   },
   {
     q: "What happens after booking?",
-    a: "You will receive booking confirmation and session details by email.",
+    a: "After payment you schedule your Session, complete Pre-Session Intake, meet with your Facilitator, and receive a reviewed Personal Integration Summary.",
   },
 ];
 

@@ -1,4 +1,8 @@
-export type PersonalIntegrationSessionVariant = "intro" | "deep" | "integration" | "not-sure";
+export type {
+  PersonalIntegrationSessionVariant,
+  LegacySessionVariant,
+  StoredSessionVariant,
+} from "@/lib/personal-integration/session-catalog";
 
 export const PERSONAL_INTEGRATION_SESSION_KIND = "personal_integration" as const;
 

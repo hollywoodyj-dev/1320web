@@ -21,6 +21,8 @@ const schemaFiles = [
   "platform-domain-v1.4-wisewave.sql",
   "platform-domain-v1.5-membership.sql",
   "platform-domain-v1.6-booking-checkout.sql",
+  "platform-domain-v1.7-integration-ops.sql",
+  "platform-domain-v1.8-session-pricing-launch-v1.sql",
   "schema-v2-user-profile.sql",
   "schema-v2-password-auth.sql",
   "schema-v2-optional-birth-date.sql",

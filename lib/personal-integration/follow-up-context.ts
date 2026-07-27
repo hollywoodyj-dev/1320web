@@ -2,7 +2,7 @@ import { getSiteUrl } from "@/lib/platform-config";
 import { getPlatformSessionByFollowUpToken } from "@/lib/db/platform-sessions";
 import { getSoulReportById } from "@/lib/db/reports";
 import { createReflection, listReflectionsForSession } from "@/lib/db/reflections";
-import { SESSION_VARIANT_LABELS } from "@/lib/personal-integration/session-variants";
+import { formatSessionHeading } from "@/lib/personal-integration/format-session-heading";
 
 export async function getPersonalIntegrationFollowUpContext(sessionId: string, followUpToken: string) {
   const session = await getPlatformSessionByFollowUpToken(sessionId, followUpToken);
@@ -16,10 +16,7 @@ export async function getPersonalIntegrationFollowUpContext(sessionId: string, f
   const clientName =
     typeof session.meta?.clientName === "string" ? session.meta.clientName : "Guest";
 
-  const variantLabel =
-    session.session_variant && session.session_variant in SESSION_VARIANT_LABELS
-      ? SESSION_VARIANT_LABELS[session.session_variant as keyof typeof SESSION_VARIANT_LABELS]
-      : "Personal Integration Session";
+  const variantLabel = formatSessionHeading(session);
 
   const reflections = await listReflectionsForSession(session.id);
 

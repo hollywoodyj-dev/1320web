@@ -23,7 +23,7 @@ import {
   emptySummaryContent,
   type SummaryContent,
 } from "@/lib/personal-integration/ops/summary-template";
-import { SESSION_VARIANT_LABELS } from "@/lib/personal-integration/session-variants";
+import { formatSessionHeading } from "@/lib/personal-integration/format-session-heading";
 import type { PlatformSessionStatus } from "@/lib/platform-domain";
 import { sendIntegrationSummaryEmail } from "@/lib/email/send-integration-summary";
 import { getUserById } from "@/lib/db/users";
@@ -81,9 +81,7 @@ export async function listFacilitatorWorkspaceSessions() {
         row.created_at.toISOString(),
       timezone: row.timezone ?? metaString(meta, "timezone"),
       sessionType:
-        row.session_variant && row.session_variant in SESSION_VARIANT_LABELS
-          ? SESSION_VARIANT_LABELS[row.session_variant as keyof typeof SESSION_VARIANT_LABELS]
-          : "Personal Integration Session",
+        formatSessionHeading(row),
       intakeStatus: row.intake_status ?? "not_started",
       reportConnected: Boolean(row.report_id),
       sessionStatus: row.status,

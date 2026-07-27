@@ -1,7 +1,10 @@
 import { NextResponse } from "next/server";
 import { getAccountContext } from "@/lib/auth/account-context";
 import { createPersonalIntegrationRequest } from "@/lib/personal-integration/create-booking-request";
-import { isPersonalIntegrationSessionVariant } from "@/lib/personal-integration/session-variants";
+import {
+  isPersonalIntegrationSessionVariant,
+  resolveSessionVariant,
+} from "@/lib/personal-integration/session-variants";
 import { isDatabaseConfigured } from "@/lib/platform-config";
 import type { LeadPayload } from "@/lib/analytics";
 
@@ -49,9 +52,14 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "Invalid session type." }, { status: 400 });
   }
 
+  const sessionVariant = resolveSessionVariant(readingType);
+  if (!sessionVariant) {
+    return NextResponse.json({ ok: false, error: "Invalid session type." }, { status: 400 });
+  }
+
   if (!isDatabaseConfigured()) {
     if (process.env.NODE_ENV !== "production") {
-      console.info("[personal-integration/request]", { email, readingType, birthDate });
+      console.info("[personal-integration/request]", { email, readingType: sessionVariant, birthDate });
     }
     return NextResponse.json({ ok: true, stored: false });
   }
@@ -62,7 +70,7 @@ export async function POST(request: Request) {
       lastName,
       email,
       birthDate,
-      readingType,
+      readingType: sessionVariant,
       timezone: body.timezone?.trim(),
       message,
       code: body.code?.trim() || account?.codeString || undefined,

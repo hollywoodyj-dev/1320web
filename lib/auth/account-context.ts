@@ -2,10 +2,7 @@ import { cookies } from "next/headers";
 import { fetchAccountCoreBundle } from "@/lib/db/account-bundle";
 import { getSql } from "@/lib/db/client";
 import type { SoulReportRow, UserRow } from "@/lib/db/types";
-import {
-  isPersonalIntegrationSessionVariant,
-  SESSION_VARIANT_LABELS,
-} from "@/lib/personal-integration/session-variants";
+import { formatSessionHeading } from "@/lib/personal-integration/format-session-heading";
 import { isDatabaseConfigured, FULL_REPORT_PRODUCT, SESSION_COOKIE_NAME } from "@/lib/platform-config";
 
 export type HeaderAccountSummary = {
@@ -114,16 +111,12 @@ export async function getAccountContext(): Promise<AccountContext | null> {
     const integrationSessions: AccountIntegrationSession[] = rawSessions
       .filter((session) => session.prep_access_token)
       .map((session) => {
-        const variant =
-          session.session_variant && isPersonalIntegrationSessionVariant(session.session_variant)
-            ? SESSION_VARIANT_LABELS[session.session_variant]
-            : "Personal Integration Session";
         return {
           sessionId: session.id,
           prepPath: `/integration/prep/${session.id}?token=${session.prep_access_token}`,
           intakePath: `/integration/intake/${session.id}?token=${session.prep_access_token}`,
           summaryPath: `/account/integration-sessions/${session.id}`,
-          variantLabel: variant,
+          variantLabel: formatSessionHeading(session),
           status: session.status,
           intakeStatus: session.intake_status ?? "not_started",
           summaryStatus: session.summary_status ?? "none",

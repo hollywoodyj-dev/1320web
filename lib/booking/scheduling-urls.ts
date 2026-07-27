@@ -1,10 +1,18 @@
-import type { PersonalIntegrationSessionVariant } from "@/lib/personal-integration/types";
+import {
+  resolveSessionVariant,
+  type PersonalIntegrationSessionVariant,
+} from "@/lib/personal-integration/session-catalog";
 
 const VARIANT_ENV_KEYS: Record<PersonalIntegrationSessionVariant, string> = {
-  intro: "BOOKING_SCHEDULE_URL_INTRO",
-  deep: "BOOKING_SCHEDULE_URL_DEEP",
-  integration: "BOOKING_SCHEDULE_URL_INTEGRATION",
-  "not-sure": "BOOKING_SCHEDULE_URL_DEFAULT",
+  blueprint_integration: "BOOKING_SCHEDULE_URL_BLUEPRINT_INTEGRATION",
+  focused_life_integration: "BOOKING_SCHEDULE_URL_FOCUSED_LIFE",
+  deep_blueprint_integration: "BOOKING_SCHEDULE_URL_DEEP_BLUEPRINT",
+};
+
+const LEGACY_ENV_KEYS: Partial<Record<PersonalIntegrationSessionVariant, string[]>> = {
+  blueprint_integration: ["BOOKING_SCHEDULE_URL_INTRO"],
+  focused_life_integration: ["BOOKING_SCHEDULE_URL_INTEGRATION", "BOOKING_SCHEDULE_URL_DEFAULT"],
+  deep_blueprint_integration: ["BOOKING_SCHEDULE_URL_DEEP"],
 };
 
 function trimUrl(value: string | undefined): string | null {
@@ -13,9 +21,15 @@ function trimUrl(value: string | undefined): string | null {
 }
 
 /** Calendar or scheduling link shown after booking payment (Cal.com, Calendly, etc.). */
-export function getBookingScheduleUrl(variant: PersonalIntegrationSessionVariant): string | null {
-  const variantUrl = trimUrl(process.env[VARIANT_ENV_KEYS[variant]]);
-  if (variantUrl) return variantUrl;
+export function getBookingScheduleUrl(
+  variant: string | PersonalIntegrationSessionVariant,
+): string | null {
+  const resolved = resolveSessionVariant(variant) ?? "focused_life_integration";
+  const keys = [VARIANT_ENV_KEYS[resolved], ...(LEGACY_ENV_KEYS[resolved] ?? [])];
+  for (const key of keys) {
+    const url = trimUrl(process.env[key]);
+    if (url) return url;
+  }
   return trimUrl(process.env.BOOKING_SCHEDULE_URL);
 }
 

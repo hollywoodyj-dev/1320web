@@ -5,6 +5,7 @@ import { FormEvent, useState } from "react";
 import { trackEvent } from "@/lib/analytics";
 import { BOOKING_FINAL, READING_OPTIONS } from "@/lib/booking-content";
 import { FORM_CONSENT, FORM_MESSAGES } from "@/lib/form-consent";
+import { DEFAULT_SESSION_VARIANT } from "@/lib/personal-integration/session-variants";
 
 export type BookingAccountProfile = {
   email: string;
@@ -152,17 +153,14 @@ export function BookingRequestForm({ defaultReadingType, account }: BookingReque
           name="readingType"
           required
           className="conversion-input"
-          defaultValue={defaultReadingType ?? ""}
+          defaultValue={defaultReadingType ?? DEFAULT_SESSION_VARIANT}
         >
-          <option value="" disabled>
-            Select a session type
-          </option>
           {READING_OPTIONS.options.map((option) => (
             <option key={option.id} value={option.id}>
-              {option.title} ({option.duration})
+              {option.title} · {option.duration} · {option.price}
+              {option.mostRecommended ? ` · ${READING_OPTIONS.mostRecommendedLabel}` : ""}
             </option>
           ))}
-          <option value="not-sure">Not Sure Yet</option>
         </select>
       </label>
       <label className="conversion-field">

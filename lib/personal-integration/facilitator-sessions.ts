@@ -7,7 +7,7 @@ import {
 import { getUserById } from "@/lib/db/users";
 import { sendFollowUpLinkEmail } from "@/lib/email/send-follow-up-link";
 import { buildFollowUpUrl } from "@/lib/personal-integration/follow-up-context";
-import { SESSION_VARIANT_LABELS } from "@/lib/personal-integration/session-variants";
+import { formatSessionHeading } from "@/lib/personal-integration/format-session-heading";
 import type { PlatformSessionStatus } from "@/lib/platform-domain";
 
 const VALID_STATUSES: PlatformSessionStatus[] = ["scheduled", "active", "completed", "cancelled"];
@@ -29,10 +29,7 @@ export async function listFacilitatorSessions() {
       id: row.id,
       status: row.status,
       sessionVariant: row.session_variant,
-      sessionVariantLabel:
-        row.session_variant && row.session_variant in SESSION_VARIANT_LABELS
-          ? SESSION_VARIANT_LABELS[row.session_variant as keyof typeof SESSION_VARIANT_LABELS]
-          : "Personal Integration Session",
+      sessionVariantLabel: formatSessionHeading(row),
       growthEdge: row.growth_edge,
       summary: row.summary,
       clientName:

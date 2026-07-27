@@ -11,7 +11,10 @@ import { upsertUserByEmail } from "@/lib/db/users";
 import { sendPrepLinkEmail } from "@/lib/email/send-prep-link";
 import { getSiteUrl } from "@/lib/platform-config";
 import { parseBirthDateString } from "@/lib/personal-integration/parse-birth-date";
-import { SESSION_VARIANT_LABELS } from "@/lib/personal-integration/session-variants";
+import {
+  getSessionVariantLabel,
+  sessionPricingSnapshot,
+} from "@/lib/personal-integration/session-variants";
 import type { PersonalIntegrationSessionVariant } from "@/lib/personal-integration/types";
 
 export type PersonalIntegrationRequestInput = {
@@ -61,13 +64,19 @@ export async function createPersonalIntegrationRequest(
   });
 
   const growthEdge = truncateGrowthEdge(input.message);
+  const pricing = sessionPricingSnapshot(input.readingType);
   const session = await createPlatformSession({
     userId: user.id,
     reportId: report.id,
     kind: "personal_integration",
     status: "scheduled",
     growthEdge,
-    sessionVariant: input.readingType,
+    sessionVariant: pricing.session_type,
+    sessionTitle: pricing.session_title,
+    durationMinutes: pricing.duration_minutes,
+    priceAmount: pricing.price_amount,
+    currency: pricing.currency,
+    pricingVersion: pricing.pricing_version,
     authorship: "system",
     meta: {
       timezone: input.timezone ?? null,
@@ -77,6 +86,12 @@ export async function createPersonalIntegrationRequest(
       paymentStatus: options?.paymentStatus ?? null,
       stripeCheckoutSessionId: options?.stripeCheckoutSessionId ?? null,
       schedulingStatus: options?.paymentStatus === "paid" ? "awaiting_selection" : null,
+      session_type: pricing.session_type,
+      session_title: pricing.session_title,
+      duration_minutes: pricing.duration_minutes,
+      price_amount: pricing.price_amount,
+      currency: pricing.currency,
+      pricing_version: pricing.pricing_version,
     },
   });
 
@@ -111,7 +126,7 @@ export async function createPersonalIntegrationRequest(
 
   const prepUrl = `${getSiteUrl()}/integration/prep/${session.id}?token=${session.prep_access_token}`;
 
-  const variantLabel = SESSION_VARIANT_LABELS[input.readingType];
+  const variantLabel = getSessionVariantLabel(input.readingType);
   const { sent: prepEmailSent } = await sendPrepLinkEmail({
     email: input.email,
     clientName: `${input.firstName} ${input.lastName}`.trim(),

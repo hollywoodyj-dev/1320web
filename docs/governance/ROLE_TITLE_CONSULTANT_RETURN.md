@@ -1,6 +1,10 @@
 # Role Title Refinement — Blueprint Integration Consultant
 
-## Approved titles
+**Status:** ✅ Accepted and Closed (Wisewave, 2026-07-28)  
+**Implementation commit:** `64ee0af`  
+**Lumen QA:** PASS — `qa-artifacts/LUMEN_QA_ROLE_TITLE_CONSULTANT.md`
+
+## Canonical titles
 
 | Form | Text |
 |------|------|
@@ -9,7 +13,46 @@
 | ZH | 1320 灵魂蓝图整合顾问 |
 | ZH short | 蓝图整合顾问 |
 
-Shared source: `lib/personal-integration/role-titles.ts`
+**Single source of truth:** `lib/personal-integration/role-titles.ts`
+
+## Architecture distinction (locked)
+
+| Layer | Term |
+|-------|------|
+| Internal operational role | Facilitator (`facilitator_id`, `assigned_facilitator_id`, Facilitator Console, auth) |
+| Client-facing professional title | Blueprint Integration Consultant |
+
+No database migration, permission migration, or role-model change.
+
+## Governance posture (locked)
+
+Service posture: **Facilitative · Reflective · Non-directive**
+
+The Blueprint Integration Consultant may:
+
+- help the client connect the Blueprint with lived experience
+- support recognition of themes and recurring patterns
+- offer structured reflection
+- help the client identify a possible next step
+- support integration into real life
+
+The title must **not** imply that the Consultant:
+
+- defines the client
+- owns the correct interpretation of the Blueprint
+- predicts future outcomes
+- diagnoses psychological or medical conditions
+- determines the client’s mission or life direction
+- makes decisions on the client’s behalf
+- holds spiritual authority over the client
+
+The user remains the author and decision-maker in their own life.
+
+## Accepted client journey coverage
+
+Booking → Payment → Scheduling → Intake → Preparation → Session → Summary → Follow-up
+
+Surfaces accepted: Personal Integration booking · meet-with positioning · role boundary · Booking Success · Pre-Session Intake · Session Prep · Account summary · reminder emails · client summary emails · summary template defaults · Reflect CTA · Disclaimer
 
 ## Copy diff (client-facing)
 
@@ -37,5 +80,6 @@ Shared source: `lib/personal-integration/role-titles.ts`
 
 ## Evidence
 
-- `qa-artifacts/LUMEN_QA_ROLE_TITLE_CONSULTANT.md`
+- Return: this document
+- Lumen: `qa-artifacts/LUMEN_QA_ROLE_TITLE_CONSULTANT.md`
 - Screenshots: `qa-artifacts/role-title-consultant/`

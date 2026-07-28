@@ -39,8 +39,11 @@
 ## Explicit holds (not started)
 
 - P5 Auth chrome · P6 Footer variants · P7 Navigation · P8 Visual system
-- Pre-Session Intake Easy Access rebuild
 - Full homepage rebuild
+
+## Closed related track
+
+- Pre-Session Intake v1.1 · Easy Access — ✅ Accepted and Closed (`7c23421` · `docs/governance/INTAKE_EASY_ACCESS_V1_1_RETURN.md`)
 
 ## Owner decisions still open
 

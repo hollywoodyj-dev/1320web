@@ -6,7 +6,8 @@
 - P4: `qa-artifacts/LUMEN_QA_SESSION_PRICING_LAUNCH_V1.md`  
 
 **P1–P3:** No rework (Accepted)  
-**Holds unchanged:** P5–P8 · Intake Easy Access rebuild · Full homepage rebuild  
+**Holds unchanged:** P5–P8 · Full homepage rebuild  
+**Pre-Session Intake v1.1 Easy Access:** ✅ Accepted and Closed (separate track; commit `7c23421`)  
 
 **Pricing / checkout / Operating Flow:** Unchanged in catalog and product logic  
 - Full Report: USD 49  

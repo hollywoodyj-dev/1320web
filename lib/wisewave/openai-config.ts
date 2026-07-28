@@ -1,6 +1,6 @@
 /** OpenAI provider config for Wisewave response generation. */
 
-const DEFAULT_MODEL = "gpt-4o-mini";
+const DEFAULT_MODEL = "gpt-5.5";
 
 export function isOpenAiConfigured(): boolean {
   return Boolean(process.env.OPENAI_API_KEY?.trim());

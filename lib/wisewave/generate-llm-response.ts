@@ -21,6 +21,7 @@ type GenerateLlmResponseInput = {
 
 export async function generateWisewaveLlmResponse(input: GenerateLlmResponseInput): Promise<string> {
   const client = new OpenAI(getOpenAiClientOptions());
+  const model = getOpenAiModel();
   const system = buildWisewaveSystemPrompt(input);
 
   const history = input.priorTurns
@@ -31,10 +32,13 @@ export async function generateWisewaveLlmResponse(input: GenerateLlmResponseInpu
       content: turn.content,
     }));
 
+  // GPT-5.x Chat Completions prefer max_completion_tokens; some reject custom temperature.
+  const isGpt5Family = /^gpt-5/i.test(model);
   const completion = await client.chat.completions.create({
-    model: getOpenAiModel(),
-    temperature: 0.65,
-    max_tokens: 600,
+    model,
+    ...(isGpt5Family
+      ? { max_completion_tokens: 600 }
+      : { temperature: 0.65, max_tokens: 600 }),
     messages: [{ role: "system", content: system }, ...history, { role: "user", content: input.userMessage }],
   });
 

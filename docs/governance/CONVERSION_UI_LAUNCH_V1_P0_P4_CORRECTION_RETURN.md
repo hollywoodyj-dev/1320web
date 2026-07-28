@@ -1,63 +1,40 @@
 # Conversion UI Refinement · Launch v1 — P0–P4 Closure Correction Patch
 
-**Wisewave status:** PASS WITH CORRECTIONS → this patch closes P0 Privacy + P4 Session presentation only  
-**Lumen production QA (2026-07-27):** **PASS** on `https://www.1320soulcode.com`  
+**Status:** ✅ Accepted and Closed (Wisewave, 2026-07-28)  
+**Correction commit:** `5bb76c1`  
+**Parent scope:** Conversion UI Refinement · Launch v1 · P0–P4 — Fully Accepted and Closed
+
+**Lumen production QA:** **PASS** on `https://www.1320soulcode.com`  
 - P0: `qa-artifacts/LUMEN_QA_P0_LEGAL.md`  
 - P4: `qa-artifacts/LUMEN_QA_SESSION_PRICING_LAUNCH_V1.md`  
+- USD checkout verification: PASS  
 
-**P1–P3:** No rework (Accepted)  
-**Holds unchanged:** P5–P8 · Full homepage rebuild  
-**Pre-Session Intake v1.1 Easy Access:** ✅ Accepted and Closed (separate track; commit `7c23421`)  
+## What this patch closed
 
-**Pricing / checkout / Operating Flow:** Unchanged in catalog and product logic  
-- Full Report: USD 49  
-- Sessions: USD 119 / USD 159 / USD 209 (`launch-v1-usd`)  
-- Catalog cents: 11900 / 15900 / 20900  
-- Personal Integration Operating Flow unchanged  
+### P0 · Privacy
+- Removed residual Phase 1 / waitlist / booking-inquiry framing
+- Live categories: report-generation · account/entitlement · transactional · Personal Integration · marketing consent · technical/analytics
+- External legal-review flags remain appropriate and non-blocking (`LEGAL_EXTERNAL_REVIEW_FLAGS_P0_2026-07-28.md`)
 
-**Checkout confirmation:** Session card UI and catalog remain USD with locked cents (11900 / 15900 / 20900). Checkout now rejects non-USD Stripe Price IDs and falls back to `price_data` USD so amounts stay Launch v1 USD even if env still points at legacy AUD Price objects. Prefer replacing those Price IDs with USD prices in Stripe Dashboard when convenient.
+### P4 · Session cards
+- Visible USD 119 / 159 / 209 before checkout
+- Order 45 → 60 → 75 · Most Recommended on 60m · approved best-fit · Pay & Book Session · Consultant title
 
-## Correction scope
+### Checkout safeguard (accepted · keep under regression)
+- Catalog: 11900 / 15900 / 20900 USD
+- Non-USD Stripe Price IDs rejected → fall back to USD `price_data`
+- Operating Flow unchanged · historical records unaltered
 
-### P0 · Privacy Policy
-- Removed / replaced residual Phase 1, waitlist, and booking-inquiry framing
-- Explicit live product-state categories:
-  - Report-generation data
-  - Account and entitlement data
-  - Transactional data
-  - Personal Integration data
-  - Optional marketing consent
-  - Technical and analytics data
-- External legal flags remain in `docs/governance/LEGAL_EXTERNAL_REVIEW_FLAGS_P0_2026-07-28.md` (Nova does not independently resolve counsel items)
+## Stable boundaries (unchanged)
 
-### P4 · Session cards (`/booking`)
-- Visible prices on cards before checkout: USD 119 / 159 / 209
-- Display order: 45 → 60 → 75
-- Most Recommended on 60-minute Focused Life card (visually primary)
-- Approved best-fit positioning copy
-- Consistent CTA: **Pay & Book Session**
-- Client-facing **Blueprint Integration Consultant** title retained in service-positioning / hero
+Unified Report Renderer · Web/Mobile/PDF · Full Report entitlement · Booking Success bridge · PI Operating Flow · Facilitator Workspace · Phase 2A · Wisewave runtime/memory · P1–P3 not reopened
 
-## Evidence
+## Holds (unchanged)
 
-| Artifact | Path |
-|----------|------|
-| P0 Legal QA | `qa-artifacts/LUMEN_QA_P0_LEGAL.md` |
-| P0 screenshots | `qa-artifacts/conversion-ui-p0-legal/` |
-| P4 Session Pricing QA | `qa-artifacts/LUMEN_QA_SESSION_PRICING_LAUNCH_V1.md` |
-| P4 Session card screenshots | `qa-artifacts/session-pricing-launch-v1/booking-session-cards-desktop-1280.png` · `…-mobile-390.png` |
-| Role title QA | `qa-artifacts/LUMEN_QA_ROLE_TITLE_CONSULTANT.md` |
+- P5–P8: ⏸ Remain on hold — do not begin without separate authorisation
+- Full homepage rebuild: ⏸ Not authorised
 
-## Explicit non-scope
+## Related closed tracks
 
-- No P1 Free Landing rework  
-- No P2 Free Result rhythm change  
-- No P3 Full Report structure reopen  
-- No F2/F3 funnel work  
-- No catalog price or Operating Flow redesign  
-
-## Requested Wisewave action
-
-Lumen has verified this patch on production. Please mark full P0–P4:
-
-**Accepted and Closed**
+- Pre-Session Intake v1.1 Easy Access — ✅ Accepted and Closed
+- Client-facing Consultant title — ✅ Accepted and Closed

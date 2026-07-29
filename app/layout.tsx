@@ -31,6 +31,9 @@ const geistMono = Geist_Mono({
 
 const siteUrl = getSiteUrl();
 
+const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
+const bingVerification = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION?.trim();
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
@@ -44,6 +47,20 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "1320 Soul Origin Code System",
   },
+  ...(googleVerification || bingVerification
+    ? {
+        verification: {
+          ...(googleVerification ? { google: googleVerification } : {}),
+          ...(bingVerification
+            ? {
+                other: {
+                  "msvalidate.01": bingVerification,
+                },
+              }
+            : {}),
+        },
+      }
+    : {}),
 };
 
 export default function RootLayout({

@@ -9,7 +9,7 @@ import {
   isFacilitatorAccessConfigured,
   verifyFacilitatorRequest,
 } from "@/lib/personal-integration/facilitator-auth";
-import { isDatabaseConfigured } from "@/lib/platform-config";
+import { getSiteUrl, isDatabaseConfigured } from "@/lib/platform-config";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
@@ -57,8 +57,8 @@ export async function POST(request: Request) {
     if (!user?.email || !row.prep_access_token) continue;
     const clientName =
       typeof row.meta?.clientName === "string" ? row.meta.clientName : user.first_name ?? "Guest";
-    const intakeUrl = `${process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://www.1320soulcode.com"}/integration/intake/${row.id}?token=${row.prep_access_token}`;
-    const prepUrl = `${process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://www.1320soulcode.com"}/integration/prep/${row.id}?token=${row.prep_access_token}`;
+    const intakeUrl = `${getSiteUrl()}/integration/intake/${row.id}?token=${row.prep_access_token}`;
+    const prepUrl = `${getSiteUrl()}/integration/prep/${row.id}?token=${row.prep_access_token}`;
 
     if (kind === "intake_incomplete") {
       const result = await sendIntakeReminderEmail({

@@ -3,7 +3,7 @@
 export const LEGAL_PLACEHOLDERS = {
   contactEmail: "info@1320soulcode.com",
   effectiveDate: "July 28, 2026",
-  companyName: "1320 Soul Origin Code System",
+  companyName: "1320 Soul Code",
 } as const;
 
 export function withPlaceholders(text: string): string {

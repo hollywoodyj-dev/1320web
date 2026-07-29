@@ -1,9 +1,9 @@
 import type { MetadataRoute } from "next";
-import { getSiteUrl } from "@/lib/platform-config";
+import { CANONICAL_SITE_URL } from "@/lib/platform-config";
 import { ROBOTS_DISALLOW_PATHS } from "@/lib/seo/public-routes";
 
 export default function robots(): MetadataRoute.Robots {
-  const siteUrl = getSiteUrl().replace(/\/$/, "");
+  const siteUrl = CANONICAL_SITE_URL.replace(/\/$/, "");
 
   return {
     rules: {

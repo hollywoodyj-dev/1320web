@@ -65,7 +65,7 @@ export const REPORT_FINAL_CTA = {
   unlockHref: "/checkout",
   book: "Book a 1320 Reading",
   bookHref: "/booking",
-  profile: "Save to My Soul Profile",
+  profile: "Save to My Account",
   profileNote: "Coming soon",
 };
 

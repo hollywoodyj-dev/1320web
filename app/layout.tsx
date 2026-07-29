@@ -37,15 +37,19 @@ const bingVerification = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION?.trim();
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "1320 Soul Origin Code System",
-    template: "%s | 1320 Soul Origin Code",
+    default: "1320 Soul Code | Meet Your Soul Blueprint",
+    template: "%s | 1320 Soul Code",
   },
   description:
-    "Discover your 1320 Soul Origin Code — a four-part frequency-based blueprint for self-awareness, reflection, and conscious integration.",
+    "Discover your Free Soul Blueprint with 1320 Soul Code — a symbolic mirror for self-awareness, reflection, and conscious integration.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "1320 Soul Origin Code System",
+    url: siteUrl,
+    siteName: "1320 Soul Code",
   },
   ...(googleVerification || bingVerification
     ? {

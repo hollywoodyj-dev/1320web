@@ -23,6 +23,7 @@ import {
   updatePlatformSessionFacilitator,
 } from "@/lib/db/platform-sessions";
 import { buildBlueprintContext } from "@/lib/personal-integration/ops/blueprint-context";
+import { getSiteUrl } from "@/lib/platform-config";
 import type { SummaryStatus } from "@/lib/personal-integration/ops/constants";
 import {
   emptySummaryContent,
@@ -202,7 +203,7 @@ export async function sendFacilitatorSummary(sessionId: string) {
   const { sent } = await sendIntegrationSummaryEmail({
     email: user.email,
     clientName: content.client_name || "Guest",
-    accountUrl: `${process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://www.1320soulcode.com"}/account/integration-sessions/${sessionId}`,
+    accountUrl: `${getSiteUrl()}/account/integration-sessions/${sessionId}`,
   });
 
   if (sent) {

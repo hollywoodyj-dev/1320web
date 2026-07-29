@@ -1,5 +1,6 @@
 import { NextResponse, userAgent } from "next/server";
 import type { NextRequest } from "next/server";
+import { CANONICAL_SITE_URL, shouldRedirectHostToCanonical } from "@/lib/platform-config";
 import { isMobileReportClient } from "@/lib/report/is-mobile-report-client";
 import { preferMobileReportFromRequest } from "@/lib/report/prefer-mobile-report";
 
@@ -19,7 +20,19 @@ function withInternalNoStore(request: NextRequest): NextResponse {
   return response;
 }
 
+/** Path-to-path 301 onto the Wisewave-approved canonical host. */
+function redirectToCanonicalHost(request: NextRequest): NextResponse | null {
+  const hostname = request.headers.get("host") ?? request.nextUrl.hostname;
+  if (!shouldRedirectHostToCanonical(hostname)) return null;
+
+  const target = new URL(request.nextUrl.pathname + request.nextUrl.search, CANONICAL_SITE_URL);
+  return NextResponse.redirect(target, 301);
+}
+
 export function middleware(request: NextRequest) {
+  const hostRedirect = redirectToCanonicalHost(request);
+  if (hostRedirect) return hostRedirect;
+
   const { pathname, searchParams } = request.nextUrl;
 
   if (
@@ -65,13 +78,10 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/full-report-v2",
-    "/full-report-v2-phase1",
-    "/my-report/:reportId",
-    "/integration/facilitator",
-    "/facilitator/:path*",
-    "/integration/intake/:path*",
-    "/api/personal-integration/facilitator/:path*",
-    "/api/personal-integration/intake/:path*",
+    /*
+     * Host canonicalization for almost all routes.
+     * Skip Next internals and common static asset extensions.
+     */
+    "/((?!_next/static|_next/image|favicon.ico|.*\\..*).*)",
   ],
 };

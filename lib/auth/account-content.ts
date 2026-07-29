@@ -14,7 +14,7 @@ export const SIGNUP_META = {
 
 export const ACCOUNT_META = {
   title: "My Account",
-  description: "Your 1320 Soul Profile — codes, Full Report, and Personal Integration sessions.",
+  description: "Your 1320 Soul Code account — Soul Blueprint, Full Report, and Personal Integration sessions.",
 };
 
 export const LOGIN_COPY = {
@@ -64,7 +64,7 @@ export const SIGNUP_COPY = {
 
 export const ACCOUNT_COPY = {
   eyebrow: "MY ACCOUNT",
-  title: "Your Soul Profile",
+  title: "Your Soul Blueprint Account",
   signedInAs: "Signed in as",
   profileTitle: "Your profile",
   passwordSetLead: "Set a password so you can sign in again after checkout or on another device.",

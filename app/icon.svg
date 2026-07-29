@@ -1,0 +1,92 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(80 80) rotate(90) scale(82)">
+      <stop offset="0" stop-color="#0a1220"/>
+      <stop offset="0.55" stop-color="#050a14"/>
+      <stop offset="1" stop-color="#01010a"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(80 80) rotate(90) scale(52)">
+      <stop offset="0" stop-color="#FFF4C8" stop-opacity="0.7"/>
+      <stop offset="0.25" stop-color="#FFD976" stop-opacity="0.42"/>
+      <stop offset="0.7" stop-color="#F1B445" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#F1B445" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="29" y1="21" x2="131" y2="139" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE7A4"/>
+      <stop offset="0.42" stop-color="#F4C35E"/>
+      <stop offset="0.76" stop-color="#D79633"/>
+      <stop offset="1" stop-color="#FFD98B"/>
+    </linearGradient>
+    <linearGradient id="goldSoft" x1="80" y1="30" x2="80" y2="130" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF1C5"/>
+      <stop offset="0.5" stop-color="#F4C45E"/>
+      <stop offset="1" stop-color="#FFE0A0"/>
+    </linearGradient>
+    <filter id="glow" x="-24" y="-24" width="208" height="208" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="4.6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft" x="-24" y="-24" width="208" height="208" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="160" height="160" rx="80" fill="url(#bg)"/>
+  <rect width="160" height="160" rx="80" fill="url(#halo)"/>
+
+  <g opacity="0.95">
+    <circle cx="43" cy="36" r="1.2" fill="#56B7FF"/>
+    <circle cx="30" cy="49" r="1.8" fill="#7D63FF"/>
+    <circle cx="132" cy="36" r="1.7" fill="#D6B15E"/>
+    <circle cx="138" cy="118" r="1.8" fill="#54ADFF"/>
+    <circle cx="35" cy="122" r="1.7" fill="#D7A34A"/>
+    <circle cx="46" cy="130" r="1.5" fill="#D7A34A"/>
+    <circle cx="121" cy="130" r="1.5" fill="#D7A34A"/>
+  </g>
+
+  <g stroke="url(#gold)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="80" cy="80" r="53.5" stroke-width="4"/>
+    <circle cx="80" cy="80" r="47.5" stroke-width="1.6" opacity="0.8"/>
+    <circle cx="80" cy="80" r="19" stroke-width="2.2" opacity="0.95"/>
+    <ellipse cx="80" cy="80" rx="54" ry="26.5" stroke-width="2.4" opacity="0.95"/>
+    <ellipse cx="80" cy="80" rx="37.5" ry="54" stroke-width="2.4" opacity="0.95"/>
+    <path d="M48 48L112 112" stroke-width="2.2" opacity="0.92"/>
+    <path d="M112 48L48 112" stroke-width="2.2" opacity="0.92"/>
+    <path d="M56 43C70 56 70 104 56 117" stroke-width="2.2" opacity="0.9"/>
+    <path d="M104 43C90 56 90 104 104 117" stroke-width="2.2" opacity="0.9"/>
+    <path d="M43 56C56 70 104 70 117 56" stroke-width="2.2" opacity="0.9"/>
+    <path d="M43 104C56 90 104 90 117 104" stroke-width="2.2" opacity="0.9"/>
+  </g>
+
+  <circle cx="80" cy="80" r="38.5" stroke="url(#gold)" stroke-width="1.7" stroke-dasharray="3 6" opacity="0.45"/>
+
+  <g filter="url(#soft)" stroke="url(#goldSoft)" stroke-linecap="square">
+    <path d="M80 21V139" stroke-width="2.1"/>
+    <path d="M21 80H139" stroke-width="2.1"/>
+    <path d="M80 16V28" stroke-width="2"/>
+    <path d="M80 132V144" stroke-width="2"/>
+    <path d="M16 80H28" stroke-width="2"/>
+    <path d="M132 80H144" stroke-width="2"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <circle cx="80" cy="80" r="4.4" fill="#FFF3C7"/>
+    <circle cx="80" cy="80" r="9.5" fill="url(#halo)"/>
+    <path d="M72 80H88" stroke="#FFF5D2" stroke-width="1.8" stroke-linecap="square"/>
+    <path d="M80 72V88" stroke="#FFF5D2" stroke-width="1.8" stroke-linecap="square"/>
+  </g>
+
+  <g fill="#FFF2C7" font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
+    <text x="80" y="49" font-size="28">1</text>
+    <text x="80" y="76" font-size="25">3</text>
+    <text x="80" y="101" font-size="25">2</text>
+    <text x="80" y="127" font-size="28">0</text>
+  </g>
+</svg>

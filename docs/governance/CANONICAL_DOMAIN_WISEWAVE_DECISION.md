@@ -1,7 +1,15 @@
 # Canonical Domain & Brand Hierarchy — Wisewave Decision
 
-**Status:** ✅ Accepted (Wisewave, 2026-07-29) · Nova implementation in progress / shipped  
+**Status:** ✅ Accepted (Wisewave, 2026-07-29) · Nova shipped · **Production verified (Holly, 2026-07-29)**  
 **Scope:** Dual-domain canonical cleanup only — no P0–P4 reopen · no homepage rebuild · no major rename
+
+## Production verification
+
+Confirmed live:
+
+1. `NEXT_PUBLIC_SITE_URL=https://www.1320soulcode.com`
+2. Stripe webhook uses the primary host
+3. Secondary/apex path-to-path 301 and primary sitemap behaviour verified
 
 ## Confirmed hierarchy
 

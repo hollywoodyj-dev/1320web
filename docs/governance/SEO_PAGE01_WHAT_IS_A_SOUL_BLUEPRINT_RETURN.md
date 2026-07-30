@@ -1,6 +1,6 @@
 # Page 01 · What Is a Soul Blueprint? — Nova Return
 
-**Status:** Correction patch shipped · Pending Lumen production re-QA  
+**Status:** PASS · Ready for Wisewave acceptance
 **Canonical URL:** `https://www.1320soulcode.com/what-is-a-soul-blueprint`  
 **Spec:** Content & SEO Spec v1.0  
 **Date:** 2026-07-31
@@ -30,6 +30,25 @@ Screenshots: `qa-artifacts/seo-page01-production-f511ee8/page01-1280.png` and `p
 | 308 vs 301 | Middleware + `next.config` now emit **HTTP 301**. Removed `permanentRedirect` (308) from `/guides/[slug]`. |
 | Dual gold CTA | On `/what-is-a-soul-blueprint` and `/guides*`, header CTA is demoted to quiet text link; article hero keeps the single dominant gold CTA. |
 | OG artwork | Deploy Lumen-generated `public/seo/what-is-a-soul-blueprint-1320.webp` (1200×630, S1→S3→S2→S0). |
+
+## Lumen production re-QA (21be3dd)
+
+**Verdict: PASS**
+
+- Duplicate guide URL returns HTTP 301 with the correct canonical destination.
+- The 1280px first viewport contains one dominant gold CTA; the header action is quiet and the hero action remains gold.
+- Production serves the Lumen replacement artwork at 1200×630.
+- Production and repository artwork SHA-256 hashes match exactly: `45f1bfc4bda3a14aba93d3f710528cc731685d761b6bdea0c601041ba5e43b03`.
+- The artwork visibly preserves the required S1→S3→S2→S0 sequence.
+- Automated production QA passes 25/25; no desktop overflow or console errors were observed.
+
+Acceptance screenshot: `qa-artifacts/seo-page01-production-21be3dd/page01-1280-first-viewport.png`
+
+## Post-PASS polish (Holly)
+
+1. Removed visible on-page byline / published dates (author remains in Article JSON-LD only)
+2. Centered breadcrumb, hero copy, CTAs, and hero figure in the 760–780px column
+3. Centering screenshots: `qa-artifacts/seo-page01-centering-check/`
 
 ```bash
 npx tsx scripts/lumen-qa-seo-page01.ts

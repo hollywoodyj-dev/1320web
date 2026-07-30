@@ -118,19 +118,6 @@ export function WhatIsSoulBlueprintPage() {
             priority
           />
         </figure>
-
-        <p className="wisb-byline">
-          Written by {article.author}
-          {article.authorTitle ? (
-            <>
-              <br />
-              <span>{article.authorTitle}</span>
-            </>
-          ) : null}
-        </p>
-        <p className="wisb-dates">
-          Published: {article.publishedAt} · Last updated: {article.updatedAt}
-        </p>
       </header>
 
       <article className="guides-article glass-card wisb-article">
@@ -337,19 +324,6 @@ export function WhatIsSoulBlueprintPage() {
           </div>
           {article.endBoundary ? <p className="wisb-boundary">{article.endBoundary}</p> : null}
         </section>
-
-        <footer className="guides-article-meta">
-          <p>
-            Written by {article.author}
-            {article.authorTitle ? ` · ${article.authorTitle}` : null}
-          </p>
-          <p>
-            Content &amp; Governance: {article.reviewer} · Version {article.version}
-          </p>
-          <p>
-            Published: {article.publishedAt} · Last updated: {article.updatedAt}
-          </p>
-        </footer>
       </article>
     </InnerPageLayout>
   );

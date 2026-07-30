@@ -1,8 +1,33 @@
 /* Page 01 · What Is a Soul Blueprint? — Content & SEO Spec v1.0 */
 
+.wisb-page {
+  max-width: 780px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.wisb-page .guides-breadcrumb {
+  text-align: center;
+  margin: 0 auto 0.85rem;
+}
+
+.wisb-page .wisb-hero {
+  max-width: 760px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.wisb-page .wisb-direct-answer,
+.wisb-page .wisb-hero-support {
+  max-width: 42rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
 .wisb-page .wisb-article {
   max-width: 760px;
   margin-inline: auto;
+  width: 100%;
 }
 
 .wisb-page .guides-article-section {
@@ -10,16 +35,42 @@
 }
 
 .wisb-page .wisb-direct-answer {
-  margin: 0 0 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .wisb-page .wisb-direct-answer .blueprint-lead {
-  margin: 0 0 0.85rem;
+  margin: 0 auto 0.85rem;
+  max-width: 42rem;
+}
+
+.wisb-page .guides-article-section h2,
+.wisb-page .guides-related h2,
+.wisb-page .guides-end-cta h2,
+.wisb-page .faq-section-title,
+.wisb-page .section-card-title {
+  text-align: center;
+}
+
+.wisb-page .guides-mid-cta,
+.wisb-page .wisb-final-actions {
+  justify-content: center;
+}
+
+.wisb-page .wisb-final-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.25rem;
+  align-items: center;
+  margin: 1rem auto;
+}
+
+.wisb-page .guides-end-cta p,
+.wisb-page .wisb-boundary {
+  text-align: center;
 }
 
 .wisb-page .wisb-hero-support {
-  margin: 0 0 1.35rem;
-  max-width: 42rem;
+  margin-bottom: 1.35rem;
 }
 
 .wisb-page .wisb-hero-support p {
@@ -33,12 +84,14 @@
   flex-wrap: wrap;
   gap: 0.85rem 1.25rem;
   align-items: center;
-  margin-bottom: 1.5rem;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
 }
 
 .wisb-page .wisb-hero-figure {
-  margin: 0 0 1.25rem;
+  margin: 0 auto 0.25rem;
   max-width: 760px;
+  width: 100%;
 }
 
 .wisb-page .wisb-hero-image {
@@ -46,14 +99,7 @@
   height: auto;
   border-radius: 0;
   display: block;
-}
-
-.wisb-page .wisb-byline,
-.wisb-page .wisb-dates {
-  margin: 0 0 0.35rem;
-  font-size: 0.9rem;
-  opacity: 0.82;
-  line-height: 1.45;
+  margin-inline: auto;
 }
 
 .wisb-page .wisb-highlight {
@@ -147,11 +193,21 @@
   flex-wrap: wrap;
   gap: 0.85rem 1.25rem;
   align-items: center;
+  justify-content: flex-start;
   margin: 1rem 0;
+}
+
+.wisb-page .guides-mid-cta {
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 720px) {
   .wisb-page .guides-article-section {
     margin-bottom: clamp(3.5rem, 12vw, 5rem);
+  }
+
+  .wisb-page .wisb-hero-actions {
+    flex-direction: column;
   }
 }

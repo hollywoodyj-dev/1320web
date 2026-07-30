@@ -1,6 +1,6 @@
 # SEO Phase 0 — Technical & Measurement Foundation Return
 
-**Status:** Implemented · awaiting Lumen validation  
+**Status:** Correction patch shipped · awaiting Lumen production retest  
 **Architecture:** `docs/specs/seo/1320_SEO_KEYWORD_ARCHITECTURE_v1.md`  
 **Canonical host:** `https://www.1320soulcode.com`
 
@@ -37,7 +37,23 @@ Attribution props (no birth date / PII): `landing_page`, `content_slug`, `primar
 ## Publishing gate
 
 `SEO_ARTICLES` is empty until **Page 01** approved copy is registered with `published: true`.  
-Unpublished slugs 404 and are **not** in the sitemap. Hub lists the P1–P10 roadmap as Coming Next.
+Unpublished slugs must return **HTTP 404** (not 500) and are **not** in the sitemap. Hub lists the P1–P10 roadmap as Coming Next.
+
+### Production 500 correction (31 July 2026)
+
+Empty `generateStaticParams()` caused production `/guides/[slug]` to return **500** for unknown/unpublished slugs while dev returned 404.
+
+Fix:
+- `export const dynamic = "force-dynamic"` on the guide article route
+- segment `not-found.tsx` for Guides
+- Lumen automation now asserts unpublished guide URLs return 404
+
+## Lumen production QA return
+
+**Prior verdict:** FAIL / HOLD (unpublished routes returned 500)  
+**Correction commit:** pending retest after deploy  
+
+Full evidence: `qa-artifacts/LUMEN_QA_SEO_PHASE0.md`.
 
 ## Lumen smoke
 

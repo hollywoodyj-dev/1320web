@@ -112,6 +112,30 @@ async function main() {
           !/thesoulprofile\.com\/guides/.test(sitemapText),
         [],
       );
+
+      const unpublishedSlugs = [
+        "what-is-a-soul-blueprint",
+        "life-path-number-vs-soul-blueprint",
+        "this-slug-does-not-exist-xyz",
+      ];
+      for (const slug of unpublishedSlugs) {
+        const unpublishedRes = await page.goto(`${BASE}/guides/${slug}`, {
+          waitUntil: "domcontentloaded",
+          timeout: 60_000,
+        });
+        const unpublishedStatus = unpublishedRes?.status() ?? 0;
+        record(`Unpublished guide /guides/${slug} returns 404`, unpublishedStatus === 404, [
+          `status=${unpublishedStatus}`,
+        ]);
+      }
+
+      const genericRes = await page.goto(`${BASE}/this-page-does-not-exist-xyz`, {
+        waitUntil: "domcontentloaded",
+        timeout: 60_000,
+      });
+      record("Generic unknown route returns 404", (genericRes?.status() ?? 0) === 404, [
+        `status=${genericRes?.status() ?? 0}`,
+      ]);
     } finally {
       await browser.close();
     }

@@ -1,22 +1,26 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SeoArticleTemplate } from "@/components/seo/seo-article-template";
-import { getPublishedSeoArticles, getSeoArticleBySlug, seoArticlePath } from "@/lib/seo/articles";
+import { getSeoArticleBySlug, seoArticlePath } from "@/lib/seo/articles";
 import "@/styles/guides-density-v1.css";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
-export function generateStaticParams() {
-  return getPublishedSeoArticles().map((article) => ({ slug: article.slug }));
-}
+/**
+ * Do not export `generateStaticParams` while the published registry can be empty.
+ * An empty static-params list caused production HTTP 500 for unknown/unpublished
+ * `/guides/[slug]` routes (dev returned 404). Force on-demand render + notFound().
+ */
+export const dynamic = "force-dynamic";
+export const dynamicParams = true;
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const article = getSeoArticleBySlug(slug);
   if (!article) {
-    return { title: "Guide Not Found" };
+    return { title: "Guide Not Found", robots: { index: false, follow: false } };
   }
   return {
     title: article.title,

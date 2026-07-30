@@ -77,6 +77,11 @@ export default function FreeSoulBlueprintPage() {
             <p key={paragraph}>{paragraph}</p>
           ))}
           <p className="fsb-bridge">{FREE_SOUL_BLUEPRINT_WHY.bridge}</p>
+          <p>
+            <Link href={FREE_SOUL_BLUEPRINT_WHY.definitionLink.href} className="blueprint-secondary-link">
+              {FREE_SOUL_BLUEPRINT_WHY.definitionLink.label}
+            </Link>
+          </p>
           <a href="#discover" className="blueprint-secondary-link">
             {FREE_SOUL_BLUEPRINT_WHY.returnLink}
           </a>

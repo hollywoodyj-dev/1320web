@@ -1,13 +1,13 @@
 /** SEO article registry — only `published: true` articles are routed and sitemapped. */
 
+import { WHAT_IS_A_SOUL_BLUEPRINT_ARTICLE } from "@/lib/seo/content/what-is-a-soul-blueprint";
 import type { SeoArticle, SeoPlannedArticle } from "@/lib/seo/types";
 import { FREE_BLUEPRINT_HREF } from "@/lib/seo/types";
 
 /**
- * Published SEO articles. Page 01 content lands here after Wisewave approval.
- * Phase 0 ships the registry empty so no discovery page publishes without approved copy.
+ * Published SEO articles. Page 01 is the first canonical definition page.
  */
-export const SEO_ARTICLES: SeoArticle[] = [];
+export const SEO_ARTICLES: SeoArticle[] = [WHAT_IS_A_SOUL_BLUEPRINT_ARTICLE];
 
 /** Roadmap for hub display (Architecture v1.0 formal order). */
 export const SEO_PLANNED_ARTICLES: SeoPlannedArticle[] = [
@@ -16,7 +16,7 @@ export const SEO_PLANNED_ARTICLES: SeoPlannedArticle[] = [
     title: "What Is a Soul Blueprint?",
     cluster: "soul-blueprint-foundation",
     phase: "P1",
-    status: "planned",
+    status: "published",
   },
   {
     slug: "life-path-number-vs-soul-blueprint",
@@ -91,7 +91,10 @@ export function getSeoArticleBySlug(slug: string): SeoArticle | null {
   return getPublishedSeoArticles().find((article) => article.slug === slug) ?? null;
 }
 
+/** Canonical path for a published article (supports root overrides such as Page 01). */
 export function seoArticlePath(slug: string): string {
+  const article = SEO_ARTICLES.find((item) => item.slug === slug);
+  if (article?.path) return article.path;
   return `/guides/${slug}`;
 }
 

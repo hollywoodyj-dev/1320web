@@ -1,0 +1,157 @@
+/* Page 01 · What Is a Soul Blueprint? — Content & SEO Spec v1.0 */
+
+.wisb-page .wisb-article {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.wisb-page .guides-article-section {
+  margin: 0 0 clamp(4rem, 8vw, 7rem);
+}
+
+.wisb-page .wisb-direct-answer {
+  margin: 0 0 1.25rem;
+}
+
+.wisb-page .wisb-direct-answer .blueprint-lead {
+  margin: 0 0 0.85rem;
+}
+
+.wisb-page .wisb-hero-support {
+  margin: 0 0 1.35rem;
+  max-width: 42rem;
+}
+
+.wisb-page .wisb-hero-support p {
+  margin: 0 0 0.65rem;
+  line-height: 1.55;
+  opacity: 0.9;
+}
+
+.wisb-page .wisb-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.25rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.wisb-page .wisb-hero-figure {
+  margin: 0 0 1.25rem;
+  max-width: 760px;
+}
+
+.wisb-page .wisb-hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  display: block;
+}
+
+.wisb-page .wisb-byline,
+.wisb-page .wisb-dates {
+  margin: 0 0 0.35rem;
+  font-size: 0.9rem;
+  opacity: 0.82;
+  line-height: 1.45;
+}
+
+.wisb-page .wisb-highlight {
+  margin: 1.15rem 0 0;
+  padding: 0.95rem 1.05rem;
+  border-left: 2px solid rgba(232, 205, 150, 0.55);
+  background: rgba(10, 18, 36, 0.35);
+}
+
+.wisb-page .wisb-highlight p {
+  margin: 0 0 0.35rem;
+}
+
+.wisb-page .wisb-highlight p:last-child {
+  margin-bottom: 0;
+}
+
+.wisb-page .wisb-quote {
+  margin: 1.25rem 0 0;
+  padding: 0;
+  border: 0;
+  font-style: italic;
+  color: rgba(244, 216, 138, 0.98);
+}
+
+.wisb-page .wisb-sequence {
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  color: rgba(244, 216, 138, 0.98);
+}
+
+.wisb-page .wisb-foundation-list,
+.wisb-page .wisb-layer-list,
+.wisb-page .wisb-use-steps,
+.wisb-page .wisb-summary-list,
+.wisb-page .wisb-process {
+  margin: 0.85rem 0 1rem;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.wisb-page .wisb-foundation-list h3,
+.wisb-page .guides-article-section h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  color: rgba(244, 216, 138, 0.95);
+}
+
+.wisb-page .wisb-layer-list p,
+.wisb-page .wisb-use-steps p,
+.wisb-page .wisb-foundation-list p {
+  margin: 0.25rem 0 0;
+}
+
+.wisb-page .wisb-process {
+  list-style: none;
+  padding-left: 0;
+  gap: 0.35rem;
+}
+
+.wisb-page .wisb-process li {
+  position: relative;
+  padding-left: 1.1rem;
+}
+
+.wisb-page .wisb-process li::before {
+  content: "↓";
+  position: absolute;
+  left: 0;
+  opacity: 0.7;
+  color: rgba(232, 205, 150, 0.9);
+}
+
+.wisb-page .wisb-process li:first-child::before {
+  content: "";
+}
+
+.wisb-page .wisb-boundary {
+  margin-top: 1rem;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.wisb-page .wisb-final-cta {
+  margin-top: clamp(2rem, 5vw, 3rem);
+}
+
+.wisb-page .wisb-final-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.25rem;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+@media (max-width: 720px) {
+  .wisb-page .guides-article-section {
+    margin-bottom: clamp(3.5rem, 12vw, 5rem);
+  }
+}

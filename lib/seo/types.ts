@@ -1,4 +1,4 @@
-/** SEO content types — Keyword Architecture v1.0 · Phase 0 */
+/** SEO content types — Keyword Architecture v1.0 · Phase 0+ */
 
 export type SeoCluster =
   | "soul-blueprint-foundation"
@@ -23,25 +23,63 @@ export type SeoArticleCta = {
   label: string;
   href: string;
   /** Analytics intent for CTA clicks. */
-  intent: "free_blueprint" | "full_report" | "session" | "related" | "other";
+  intent:
+    | "free_blueprint"
+    | "full_report"
+    | "sample_report"
+    | "session"
+    | "related"
+    | "other";
+};
+
+export type SeoBreadcrumbItem = {
+  label: string;
+  href?: string;
+};
+
+export type SeoSchemaBreadcrumbItem = {
+  name: string;
+  path: string;
 };
 
 export type SeoArticle = {
   slug: string;
+  /**
+   * Canonical path. Defaults to `/guides/${slug}` when omitted.
+   * Page 01 uses root `/what-is-a-soul-blueprint` (no `/guides` duplicate).
+   */
+  path?: string;
   title: string;
   description: string;
   /** H1 — usually matches search question. */
   headline: string;
-  /** One-sentence clear answer under the H1. */
+  eyebrow?: string;
+  /** One-sentence clear answer under the H1 (may contain \n\n for paragraphs). */
   directAnswer: string;
+  heroSupporting?: string;
   cluster: SeoCluster;
+  primaryKeyword?: string;
   primaryKeywords: string[];
+  ogImage?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  breadcrumbVisible?: SeoBreadcrumbItem[];
+  breadcrumbSchema?: SeoSchemaBreadcrumbItem[];
+  heroCta?: SeoArticleCta;
+  heroSecondaryCta?: SeoArticleCta;
   sections: SeoArticleSection[];
   faq: SeoArticleFaq[];
   related: { title: string; href: string }[];
+  /** Place mid CTA after this section id when set. */
+  midCtaAfterSectionId?: string;
   midCta?: SeoArticleCta;
+  endHeading?: string;
+  endSupporting?: string[];
   endCta: SeoArticleCta;
+  endSecondaryCta?: SeoArticleCta;
+  endBoundary?: string;
   author: string;
+  authorTitle?: string;
   reviewer: string;
   publishedAt: string;
   updatedAt: string;

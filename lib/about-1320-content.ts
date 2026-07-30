@@ -15,6 +15,7 @@ export const ABOUT_HERO = {
   primaryCta: "Generate My Code",
   primaryHref: "/your-code",
   secondaryLinks: [
+    { href: "/what-is-a-soul-blueprint", label: "What is a Soul Blueprint?" },
     { href: "/blueprint", label: "Explore the Blueprint" },
     { href: SAMPLE_REPORT_HREF, label: "View Sample Report" },
   ],

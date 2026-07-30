@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { SeoArticleTemplate } from "@/components/seo/seo-article-template";
 import { getSeoArticleBySlug, seoArticlePath } from "@/lib/seo/articles";
 import "@/styles/guides-density-v1.css";
@@ -39,5 +39,9 @@ export default async function GuideArticlePage({ params }: PageProps) {
   const { slug } = await params;
   const article = getSeoArticleBySlug(slug);
   if (!article) notFound();
+  const canonical = seoArticlePath(article.slug);
+  if (canonical !== `/guides/${slug}`) {
+    permanentRedirect(canonical);
+  }
   return <SeoArticleTemplate article={article} />;
 }

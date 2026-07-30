@@ -16,6 +16,7 @@ export type SeoAttributionFields = {
   landing_page?: string;
   content_slug?: string;
   primary_cluster?: SeoCluster | string;
+  primary_keyword?: string;
 };
 
 const SEO_STORAGE_KEYS = ["landing_page", "content_slug", "primary_cluster"] as const;
@@ -96,5 +97,7 @@ export function seoAttributionAnalyticsProps(
   if (seo.landing_page) props.landing_page = seo.landing_page.slice(0, 200);
   if (seo.content_slug) props.content_slug = seo.content_slug.slice(0, 120);
   if (seo.primary_cluster) props.primary_cluster = String(seo.primary_cluster).slice(0, 80);
+  if (seo.primary_keyword) props.primary_keyword = seo.primary_keyword.slice(0, 120);
+  if (extra?.primary_keyword) props.primary_keyword = extra.primary_keyword.slice(0, 120);
   return props;
 }

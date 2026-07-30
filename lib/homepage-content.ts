@@ -28,6 +28,10 @@ export const HOMEPAGE_WHAT_IS = {
     "It uses your birth date as a symbolic mirror for self-recognition, relationship reflection, and integration.",
     "It does not predict your future. It helps you meet yourself more clearly.",
   ],
+  definitionLink: {
+    href: "/what-is-a-soul-blueprint",
+    label: "What is a Soul Blueprint?",
+  },
 };
 
 export const HOMEPAGE_CALCULATOR = {

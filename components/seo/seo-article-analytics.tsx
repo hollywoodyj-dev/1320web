@@ -9,10 +9,17 @@ type SeoArticleAnalyticsProps = {
   slug: string;
   cluster: SeoCluster;
   path: string;
+  primaryKeyword?: string;
 };
 
-export function SeoArticleAnalytics({ slug, cluster, path }: SeoArticleAnalyticsProps) {
+export function SeoArticleAnalytics({
+  slug,
+  cluster,
+  path,
+  primaryKeyword,
+}: SeoArticleAnalyticsProps) {
   const scrolledHalf = useRef(false);
+  const scrolledNinety = useRef(false);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -25,37 +32,35 @@ export function SeoArticleAnalytics({ slug, cluster, path }: SeoArticleAnalytics
       language: document.documentElement.lang || navigator.language || "en",
     });
 
-    trackEvent(
-      "seo_article_view",
-      seoAttributionAnalyticsProps({
-        landing_page: path,
-        content_slug: slug,
-        primary_cluster: cluster,
-      }),
-    );
+    const baseProps = seoAttributionAnalyticsProps({
+      landing_page: path,
+      content_slug: slug,
+      primary_cluster: cluster,
+      ...(primaryKeyword ? { primary_keyword: primaryKeyword } : {}),
+    });
+
+    trackEvent("seo_article_view", baseProps);
 
     const onScroll = () => {
-      if (scrolledHalf.current) return;
       const doc = document.documentElement;
       const scrollable = doc.scrollHeight - window.innerHeight;
       if (scrollable <= 0) return;
-      if (window.scrollY / scrollable >= 0.5) {
+      const ratio = window.scrollY / scrollable;
+
+      if (!scrolledHalf.current && ratio >= 0.5) {
         scrolledHalf.current = true;
-        trackEvent(
-          "seo_article_scroll_50",
-          seoAttributionAnalyticsProps({
-            landing_page: path,
-            content_slug: slug,
-            primary_cluster: cluster,
-          }),
-        );
+        trackEvent("seo_article_scroll_50", baseProps);
+      }
+      if (!scrolledNinety.current && ratio >= 0.9) {
+        scrolledNinety.current = true;
+        trackEvent("seo_article_scroll_90", baseProps);
       }
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
-  }, [slug, cluster, path]);
+  }, [slug, cluster, path, primaryKeyword]);
 
   return null;
 }

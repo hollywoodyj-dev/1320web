@@ -28,6 +28,21 @@ const nextConfig: NextConfig = {
     "http://localhost:3000",
     "http://172.16.0.21:3000",
   ],
+  async redirects() {
+    return [
+      // Page 01 canonical is root; never index a duplicate under /guides.
+      {
+        source: "/guides/what-is-a-soul-blueprint",
+        destination: "/what-is-a-soul-blueprint",
+        permanent: true,
+      },
+      {
+        source: "/guides/what-is-a-soul-blueprint/",
+        destination: "/what-is-a-soul-blueprint",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

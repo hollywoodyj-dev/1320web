@@ -42,6 +42,11 @@ export default function BlueprintPage() {
         <Link href={BLUEPRINT_HERO.secondaryHref} className="blueprint-secondary-link">
           {BLUEPRINT_HERO.secondaryCta}
         </Link>
+        {BLUEPRINT_HERO.tertiaryHref && BLUEPRINT_HERO.tertiaryCta ? (
+          <Link href={BLUEPRINT_HERO.tertiaryHref} className="blueprint-secondary-link">
+            {BLUEPRINT_HERO.tertiaryCta}
+          </Link>
+        ) : null}
       </InnerPageHero>
 
       <section className="blueprint-section">

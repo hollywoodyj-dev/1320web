@@ -4,7 +4,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
-import { getPublishedSeoArticles, SEO_PLANNED_ARTICLES } from "../lib/seo/articles";
+import { getPublishedSeoArticles, SEO_PLANNED_ARTICLES, seoArticlePath } from "../lib/seo/articles";
 import { getSitemapRoutes } from "../lib/seo/public-routes";
 import { ANALYTICS_EVENTS } from "../lib/analytics-events";
 
@@ -54,12 +54,13 @@ async function main() {
   record(
     "No unpublished article paths in sitemap",
     getPublishedSeoArticles().every((article) =>
-      routes.some((route) => route.path === `/guides/${article.slug}`),
+      routes.some((route) => route.path === seoArticlePath(article.slug)),
     ) &&
       !routes.some(
         (route) =>
-          route.path.startsWith("/guides/") &&
-          !getPublishedSeoArticles().some((article) => route.path === `/guides/${article.slug}`),
+          (route.path.startsWith("/guides/") || route.path === "/what-is-a-soul-blueprint") &&
+          route.path !== "/guides" &&
+          !getPublishedSeoArticles().some((article) => route.path === seoArticlePath(article.slug)),
       ),
     [`published=${getPublishedSeoArticles().length} planned=${SEO_PLANNED_ARTICLES.length}`],
   );

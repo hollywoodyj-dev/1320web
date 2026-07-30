@@ -110,6 +110,12 @@ export default function HomePage() {
                     <p key={paragraph}>{paragraph}</p>
                   ))}
                 </div>
+                <Link
+                  href={HOMEPAGE_WHAT_IS.definitionLink.href}
+                  className="hero-secondary-link homepage-prose-link"
+                >
+                  {HOMEPAGE_WHAT_IS.definitionLink.label}
+                </Link>
               </div>
             </div>
           </section>

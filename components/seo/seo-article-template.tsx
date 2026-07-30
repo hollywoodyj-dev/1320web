@@ -8,7 +8,6 @@ import { seoArticlePath } from "@/lib/seo/articles";
 import {
   buildArticleJsonLd,
   buildBreadcrumbJsonLd,
-  buildFaqJsonLd,
 } from "@/lib/seo/json-ld";
 import type { SeoArticle } from "@/lib/seo/types";
 import { SEO_HUB_PATH } from "@/lib/seo/types";
@@ -21,12 +20,16 @@ export function SeoArticleTemplate({ article }: SeoArticleTemplateProps) {
   const path = seoArticlePath(article.slug);
   const articleLd = buildArticleJsonLd(article);
   const breadcrumbLd = buildBreadcrumbJsonLd(article);
-  const faqLd = buildFaqJsonLd(article);
   const midIndex = Math.max(1, Math.floor(article.sections.length / 2) - 1);
 
   return (
     <InnerPageLayout className="conversion-page guides-page guides-article-page">
-      <SeoArticleAnalytics slug={article.slug} cluster={article.cluster} path={path} />
+      <SeoArticleAnalytics
+        slug={article.slug}
+        cluster={article.cluster}
+        path={path}
+        primaryKeyword={article.primaryKeyword}
+      />
 
       <script
         type="application/ld+json"
@@ -36,22 +39,28 @@ export function SeoArticleTemplate({ article }: SeoArticleTemplateProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
-      {faqLd ? (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
-        />
-      ) : null}
 
       <nav className="guides-breadcrumb" aria-label="Breadcrumb">
-        <Link href="/">Home</Link>
-        <span aria-hidden="true"> / </span>
-        <Link href={SEO_HUB_PATH}>Guides</Link>
-        <span aria-hidden="true"> / </span>
-        <span>{article.title}</span>
+        {(article.breadcrumbVisible ?? [
+          { label: "Home", href: "/" },
+          { label: "Guides", href: SEO_HUB_PATH },
+          { label: article.headline },
+        ]).map((item, index, list) => {
+          const isLast = index === list.length - 1;
+          return (
+            <span key={`${item.label}-${index}`}>
+              {index > 0 ? <span aria-hidden="true"> / </span> : null}
+              {item.href && !isLast ? <Link href={item.href}>{item.label}</Link> : <span>{item.label}</span>}
+            </span>
+          );
+        })}
       </nav>
 
-      <InnerPageHero eyebrow="1320 Guides" title={article.headline} lead={article.directAnswer} />
+      <InnerPageHero
+        eyebrow={article.eyebrow ?? "1320 Guides"}
+        title={article.headline}
+        lead={article.directAnswer}
+      />
 
       <article className="guides-article glass-card">
         {article.sections.map((section, index) => (

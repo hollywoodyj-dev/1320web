@@ -55,6 +55,10 @@ export const FREE_SOUL_BLUEPRINT_WHY = {
   ],
   bridge:
     "Your Soul Blueprint does not tell you who to become. It offers a mirror for noticing what may already be true beneath adaptation.",
+  definitionLink: {
+    href: "/what-is-a-soul-blueprint",
+    label: "What is a Soul Blueprint?",
+  },
   returnLink: "Return to birth date",
 };
 

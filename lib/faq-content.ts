@@ -30,7 +30,12 @@ export const FAQ_CATEGORY_CHIPS = [
 export type FaqSection = {
   id: string;
   title: string;
-  items: { q: string; a: string }[];
+  items: {
+    q: string;
+    a: string;
+    href?: string;
+    linkLabel?: string;
+  }[];
 };
 
 export const FAQ_SECTIONS: FaqSection[] = [
@@ -40,7 +45,9 @@ export const FAQ_SECTIONS: FaqSection[] = [
     items: [
       {
         q: "What is 1320?",
-        a: "1320 is a reflective intelligence platform built around the Soul Blueprint. Your birth date becomes a symbolic mirror for self-recognition, reflection, and integration — not a prediction of your future.",
+        a: "1320 is a reflective intelligence platform built around the Soul Blueprint. Your birth date becomes a symbolic mirror for self-recognition, reflection, and integration — not a prediction of your future. For the canonical definition, read What Is a Soul Blueprint?",
+        href: "/what-is-a-soul-blueprint",
+        linkLabel: "What Is a Soul Blueprint?",
       },
       {
         q: "Is 1320 fortune-telling?",

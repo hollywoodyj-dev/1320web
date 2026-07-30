@@ -1,6 +1,5 @@
 import { CANONICAL_SITE_URL } from "@/lib/platform-config";
 import type { SeoArticle } from "@/lib/seo/types";
-import { SEO_HUB_PATH } from "@/lib/seo/types";
 import { seoArticlePath } from "@/lib/seo/articles";
 
 function absoluteUrl(path: string): string {
@@ -10,17 +9,22 @@ function absoluteUrl(path: string): string {
 }
 
 export function buildArticleJsonLd(article: SeoArticle) {
-  const url = absoluteUrl(seoArticlePath(article.slug));
+  const path = seoArticlePath(article.slug);
+  const url = absoluteUrl(path);
+  const image = article.ogImage ? absoluteUrl(article.ogImage) : undefined;
+
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: article.headline,
     description: article.description,
+    ...(image ? { image: [image] } : {}),
     datePublished: article.publishedAt,
     dateModified: article.updatedAt,
     author: {
-      "@type": "Organization",
+      "@type": "Person",
       name: article.author,
+      ...(article.authorTitle ? { jobTitle: article.authorTitle } : {}),
     },
     editor: {
       "@type": "Organization",
@@ -42,32 +46,27 @@ export function buildArticleJsonLd(article: SeoArticle) {
 }
 
 export function buildBreadcrumbJsonLd(article: SeoArticle) {
+  const items =
+    article.breadcrumbSchema ??
+    ([
+      { name: "Home", path: "/" },
+      { name: "Guides", path: "/guides" },
+      { name: article.headline, path: seoArticlePath(article.slug) },
+    ] as const);
+
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: absoluteUrl("/"),
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Guides",
-        item: absoluteUrl(SEO_HUB_PATH),
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: article.title,
-        item: absoluteUrl(seoArticlePath(article.slug)),
-      },
-    ],
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: absoluteUrl(item.path),
+    })),
   };
 }
 
+/** Optional FAQPage JSON-LD — not required for Page 01 rich-result strategy. */
 export function buildFaqJsonLd(article: SeoArticle) {
   if (!article.faq.length) return null;
   return {

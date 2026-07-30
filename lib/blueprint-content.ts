@@ -14,8 +14,10 @@ export const BLUEPRINT_HERO = {
   body: "Your Soul Blueprint begins with four foundation mirrors: origin, expression, relationship, and return.",
   primaryCta: "Generate My Code",
   primaryHref: "/your-code",
-  secondaryCta: "View Sample Report",
-  secondaryHref: SAMPLE_REPORT_HREF,
+  secondaryCta: "What is a Soul Blueprint?",
+  secondaryHref: "/what-is-a-soul-blueprint",
+  tertiaryCta: "View Sample Report",
+  tertiaryHref: SAMPLE_REPORT_HREF,
 };
 
 export const BLUEPRINT_OVERVIEW = {

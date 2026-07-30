@@ -1,6 +1,6 @@
 # SEO Phase 0 — Technical & Measurement Foundation Return
 
-**Status:** Correction patch shipped · awaiting Lumen production retest  
+**Status:** ✅ Accepted and Closed (Lumen production retest PASS · `0c1441b`)  
 **Architecture:** `docs/specs/seo/1320_SEO_KEYWORD_ARCHITECTURE_v1.md`  
 **Canonical host:** `https://www.1320soulcode.com`
 
@@ -51,7 +51,16 @@ Fix:
 ## Lumen production QA return
 
 **Prior verdict:** FAIL / HOLD (unpublished routes returned 500)  
-**Correction commit:** pending retest after deploy  
+**Correction commit:** `0c1441b`  
+**Production retest verdict:** ✅ **PASS** — Phase 0 cleared  
+
+Verified on `https://www.1320soulcode.com`:
+- `/guides/what-is-a-soul-blueprint` returns HTTP 404
+- another planned guide slug returns HTTP 404
+- an arbitrary unknown guide slug returns HTTP 404
+- `/guides` returns HTTP 200 with the 1320 Guides framing and P1–P10 roadmap
+- Free Soul Blueprint CTA navigates correctly; destination returns 200
+- Automated Phase 0 suite passed every check
 
 Full evidence: `qa-artifacts/LUMEN_QA_SEO_PHASE0.md`.
 
@@ -65,4 +74,4 @@ Optional: `QA_BASE_URL=https://www.1320soulcode.com`
 
 ## Next
 
-After Lumen PASS → implement **Page 01 · What Is a Soul Blueprint?** from Content & SEO Spec v1.0.
+Phase 0 is cleared. Implement **Page 01 · What Is a Soul Blueprint?** after the Content & SEO Spec v1.0 is provided.

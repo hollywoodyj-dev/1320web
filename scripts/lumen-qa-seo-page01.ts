@@ -176,15 +176,58 @@ async function main() {
     ));
     record("No checkout / Session pressure in hero", noCheckoutInHero, []);
 
-    const guidesDup = await page.goto(`${BASE}/guides/what-is-a-soul-blueprint`, {
+    const guidesRes = await page.goto(`${BASE}/guides/what-is-a-soul-blueprint`, {
       waitUntil: "networkidle0",
       timeout: 30000,
     });
     const finalUrl = page.url();
+    const redirectChain = guidesRes?.request().redirectChain?.() ?? [];
+    const firstRedirectStatus =
+      redirectChain[0]?.response()?.status() ??
+      (await page.evaluate(() => null));
+    // Prefer status from the first hop when available; fall back to fetch HEAD check.
+    let hopStatus = firstRedirectStatus;
+    if (!hopStatus) {
+      const head = await fetch(`${BASE}/guides/what-is-a-soul-blueprint`, {
+        method: "GET",
+        redirect: "manual",
+      });
+      hopStatus = head.status;
+    }
     record(
-      "Guides duplicate redirects to canonical",
-      finalUrl.includes(WHAT_IS_A_SOUL_BLUEPRINT_PATH) && !finalUrl.includes("/guides/what-is-a-soul-blueprint"),
-      [`status=${guidesDup?.status()}`, `url=${finalUrl}`],
+      "Guides duplicate redirects with HTTP 301",
+      hopStatus === 301 &&
+        finalUrl.includes(WHAT_IS_A_SOUL_BLUEPRINT_PATH) &&
+        !finalUrl.includes("/guides/what-is-a-soul-blueprint"),
+      [`hopStatus=${hopStatus}`, `finalUrl=${finalUrl}`],
+    );
+
+    const goldInFirstViewport = await page.evaluate(() => {
+      const viewportBottom = window.innerHeight;
+      const golds = Array.from(document.querySelectorAll("a.gold-button"));
+      return golds.filter((el) => {
+        const rect = el.getBoundingClientRect();
+        return rect.top < viewportBottom && rect.bottom > 0 && rect.width > 0;
+      }).length;
+    });
+    // Load page again for viewport check at desktop width
+    await page.setViewport({ width: 1280, height: 800 });
+    await page.goto(`${BASE}${WHAT_IS_A_SOUL_BLUEPRINT_PATH}`, {
+      waitUntil: "networkidle0",
+      timeout: 60000,
+    });
+    const goldDesktop = await page.evaluate(() => {
+      const viewportBottom = window.innerHeight;
+      const golds = Array.from(document.querySelectorAll("a.gold-button"));
+      return golds.filter((el) => {
+        const rect = el.getBoundingClientRect();
+        return rect.top < viewportBottom && rect.bottom > 0 && rect.width > 0;
+      }).length;
+    });
+    record(
+      "Desktop first viewport has at most one dominant gold CTA",
+      goldDesktop <= 1,
+      [`goldInFirstViewport=${goldDesktop}`, `priorHopCheck=${goldInFirstViewport}`],
     );
 
     await browser.close();

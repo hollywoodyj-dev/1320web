@@ -2174,6 +2174,14 @@ button {
   font-size: 0.78rem;
 }
 
+.page-shell-inner .inner-topbar .topbar-cta--quiet {
+  padding: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 .brand-lockup-link {
   display: flex;
   align-items: center;

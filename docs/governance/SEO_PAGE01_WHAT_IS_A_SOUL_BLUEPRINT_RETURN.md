@@ -1,18 +1,35 @@
 # Page 01 · What Is a Soul Blueprint? — Nova Return
 
-**Status:** Implemented · Lumen QA PASS (local) · Pending Wisewave production acceptance  
+**Status:** Correction patch shipped · Pending Lumen production re-QA  
 **Canonical URL:** `https://www.1320soulcode.com/what-is-a-soul-blueprint`  
 **Spec:** Content & SEO Spec v1.0  
 **Date:** 2026-07-31
 
 ## Summary
 
-Nova shipped the first canonical SEO definition page for Soul Blueprint at the approved **root** path (not under `/guides`). Duplicate `/guides/what-is-a-soul-blueprint` permanently redirects to the canonical URL. Article + BreadcrumbList JSON-LD are present; FAQPage rich-result schema is intentionally omitted.
+Nova shipped the first canonical SEO definition page for Soul Blueprint at the approved **root** path (not under `/guides`). Article + BreadcrumbList JSON-LD are present; FAQPage rich-result schema is intentionally omitted.
 
-## Lumen QA
+## Lumen production QA (f511ee8)
 
-Local run against build on `:3011`: **PASS** (24/24).  
-Artifact: `qa-artifacts/LUMEN_QA_SEO_PAGE01.md`
+Automation: **PASS** (24/24).  
+Manual verdict: **FAIL / HOLD**.
+
+Blockers recorded:
+
+1. `/guides/what-is-a-soul-blueprint` returned HTTP **308**; acceptance requires HTTP **301**.
+2. At 1280px, site-header gold CTA + hero gold CTA shared the first viewport.
+3. Production still served the temporary programmatic OG diagram.
+
+Artifact: `qa-artifacts/LUMEN_QA_SEO_PAGE01.md`  
+Screenshots: `qa-artifacts/seo-page01-production-f511ee8/page01-1280.png` and `page01-390.png`
+
+## Correction patch (post-HOLD)
+
+| Blocker | Fix |
+|---------|-----|
+| 308 vs 301 | Middleware + `next.config` now emit **HTTP 301**. Removed `permanentRedirect` (308) from `/guides/[slug]`. |
+| Dual gold CTA | On `/what-is-a-soul-blueprint` and `/guides*`, header CTA is demoted to quiet text link; article hero keeps the single dominant gold CTA. |
+| OG artwork | Deploy Lumen-generated `public/seo/what-is-a-soul-blueprint-1320.webp` (1200×630, S1→S3→S2→S0). |
 
 ```bash
 npx tsx scripts/lumen-qa-seo-page01.ts
@@ -27,8 +44,8 @@ npx tsx scripts/lumen-qa-seo-page01.ts
 | Copy | `lib/seo/content/what-is-a-soul-blueprint.ts` + `…-body.ts` |
 | Registry | `SEO_ARTICLES` published; P1 roadmap status `published` |
 | Sitemap | Includes `/what-is-a-soul-blueprint` via `seoArticlePath()` |
-| Redirect | `next.config.ts` + guides slug `permanentRedirect` |
-| OG image | `public/seo/what-is-a-soul-blueprint-1320.webp` (1200×630, S1→S3→S2→S0) |
+| Redirect | Middleware + `next.config` **301** to canonical root |
+| OG image | Lumen replacement WebP at `public/seo/what-is-a-soul-blueprint-1320.webp` |
 | Analytics | `seo_article_scroll_90`, `seo_to_sample_report`, `seo_to_full_report` + `cta_position` / `primary_keyword` |
 | Incoming links | Home, About, Blueprint, Free Soul Blueprint, FAQ |
 | Outgoing | Free Blueprint, Sample, Full Report, Blueprint, About, Disclaimer, Privacy |
@@ -44,6 +61,7 @@ npx tsx scripts/lumen-qa-seo-page01.ts
 ## Conversion
 
 Hero / mid / final primary CTA → `/free-soul-blueprint`  
+Header CTA on this page is quiet (non-gold) so the first desktop viewport has one dominant gold CTA.  
 No hero checkout, Session, urgency, or birth-date form on this page.  
 Final secondary → Sample Report.
 

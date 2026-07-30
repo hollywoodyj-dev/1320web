@@ -35,6 +35,16 @@ export function middleware(request: NextRequest) {
 
   const { pathname, searchParams } = request.nextUrl;
 
+  // Page 01: duplicate guide URL must emit HTTP 301 (not Next default 308).
+  if (
+    pathname === "/guides/what-is-a-soul-blueprint" ||
+    pathname === "/guides/what-is-a-soul-blueprint/"
+  ) {
+    const target = request.nextUrl.clone();
+    target.pathname = "/what-is-a-soul-blueprint";
+    return NextResponse.redirect(target, 301);
+  }
+
   if (
     pathname === "/integration/facilitator" ||
     pathname.startsWith("/facilitator/") ||

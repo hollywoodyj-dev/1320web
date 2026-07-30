@@ -31,15 +31,16 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       // Page 01 canonical is root; never index a duplicate under /guides.
+      // statusCode 301 required (permanent: true alone emits 308 in Next.js).
       {
         source: "/guides/what-is-a-soul-blueprint",
         destination: "/what-is-a-soul-blueprint",
-        permanent: true,
+        statusCode: 301,
       },
       {
         source: "/guides/what-is-a-soul-blueprint/",
         destination: "/what-is-a-soul-blueprint",
-        permanent: true,
+        statusCode: 301,
       },
     ];
   },

@@ -14,6 +14,8 @@ type TopbarShellProps = {
   linkClassName?: (item: TopbarNavItem) => string | undefined;
   ctaHref?: string;
   ctaLabel?: string;
+  /** Defaults to dominant gold CTA. Pass quiet styles for SEO educational first-viewports. */
+  ctaClassName?: string;
   className?: string;
 };
 
@@ -24,6 +26,7 @@ export function TopbarShell({
   linkClassName,
   ctaHref,
   ctaLabel,
+  ctaClassName,
   className,
 }: TopbarShellProps) {
   const toggleId = useId().replace(/:/g, "");
@@ -63,7 +66,7 @@ export function TopbarShell({
       </div>
 
       {ctaHref && ctaLabel ? (
-        <Link href={ctaHref} className="gold-button topbar-cta">
+        <Link href={ctaHref} className={ctaClassName ?? "gold-button topbar-cta"}>
           {ctaLabel}
         </Link>
       ) : null}

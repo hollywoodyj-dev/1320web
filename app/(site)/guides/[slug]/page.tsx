@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound, permanentRedirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import { SeoArticleTemplate } from "@/components/seo/seo-article-template";
 import { getSeoArticleBySlug, seoArticlePath } from "@/lib/seo/articles";
 import "@/styles/guides-density-v1.css";
@@ -22,15 +22,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!article) {
     return { title: "Guide Not Found", robots: { index: false, follow: false } };
   }
+  // Root-canonical articles (Page 01) are redirected in middleware / next.config — never served here.
+  const canonical = seoArticlePath(article.slug);
+  if (canonical !== `/guides/${slug}`) {
+    return { title: "Guide Not Found", robots: { index: false, follow: false } };
+  }
   return {
     title: article.title,
     description: article.description,
-    alternates: { canonical: seoArticlePath(article.slug) },
+    alternates: { canonical },
     openGraph: {
       title: article.title,
       description: article.description,
       type: "article",
-      url: seoArticlePath(article.slug),
+      url: canonical,
     },
   };
 }
@@ -40,8 +45,7 @@ export default async function GuideArticlePage({ params }: PageProps) {
   const article = getSeoArticleBySlug(slug);
   if (!article) notFound();
   const canonical = seoArticlePath(article.slug);
-  if (canonical !== `/guides/${slug}`) {
-    permanentRedirect(canonical);
-  }
+  // Avoid permanentRedirect (308). Root-path articles are handled by middleware 301.
+  if (canonical !== `/guides/${slug}`) notFound();
   return <SeoArticleTemplate article={article} />;
 }

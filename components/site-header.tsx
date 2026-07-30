@@ -14,6 +14,9 @@ type SiteHeaderProps = {
 export function SiteHeader({ headerAccount, variant = "default" }: SiteHeaderProps) {
   const pathname = usePathname();
   const quiet = variant === "internal" || variant === "transactional";
+  /** SEO educational pages: keep one dominant gold CTA in the article hero viewport. */
+  const quietHeaderCta =
+    pathname === "/what-is-a-soul-blueprint" || pathname.startsWith("/guides");
 
   const nav =
     variant === "internal"
@@ -83,6 +86,11 @@ export function SiteHeader({ headerAccount, variant = "default" }: SiteHeaderPro
           : headerAccount?.entitledReportId
             ? "MY FULL REPORT"
             : GENERATE_CODE_CTA.label
+      }
+      ctaClassName={
+        quietHeaderCta && !headerAccount?.entitledReportId
+          ? "blueprint-secondary-link topbar-cta topbar-cta--quiet"
+          : undefined
       }
     />
   );

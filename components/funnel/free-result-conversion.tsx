@@ -85,7 +85,11 @@ export function FreeResultConversionBlock({
           <Link
             href={checkoutWithAttr}
             className="gold-button"
-            onClick={() => trackEvent("full_report_cta_clicked", attributionToAnalyticsProps())}
+            onClick={() => {
+              const props = attributionToAnalyticsProps();
+              trackEvent("full_report_cta_clicked", props);
+              trackEvent("free_to_full_report", props);
+            }}
           >
             {FREE_RESULT_FULL_OFFER.primaryCta}
           </Link>

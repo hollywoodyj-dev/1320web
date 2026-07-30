@@ -44,6 +44,7 @@ export function ReportDashboard({
     if (analyticsEvent) trackEvent(analyticsEvent);
     if (viewModel.mode === "free") {
       trackEvent("free_blueprint_result_viewed", attributionToAnalyticsProps());
+      trackEvent("free_blueprint_completed", attributionToAnalyticsProps());
     }
   }, [analyticsEvent, viewModel.mode]);
 

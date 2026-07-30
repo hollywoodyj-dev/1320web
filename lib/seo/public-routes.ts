@@ -3,6 +3,9 @@
  * Keep private / transactional / tokenized surfaces out of this list.
  */
 
+import { getPublishedSeoArticles, seoArticlePath } from "@/lib/seo/articles";
+import { SEO_HUB_PATH } from "@/lib/seo/types";
+
 export type PublicSeoRoute = {
   path: string;
   /** Relative priority hint for crawlers (0–1). */
@@ -17,6 +20,7 @@ export const PUBLIC_SEO_ROUTES: PublicSeoRoute[] = [
   { path: "/your-code", priority: 0.9, changeFrequency: "weekly" },
   { path: "/full-report", priority: 0.9, changeFrequency: "weekly" },
   { path: "/booking", priority: 0.85, changeFrequency: "weekly" },
+  { path: SEO_HUB_PATH, priority: 0.85, changeFrequency: "weekly" },
   { path: "/about-1320", priority: 0.8, changeFrequency: "monthly" },
   { path: "/blueprint", priority: 0.8, changeFrequency: "monthly" },
   { path: "/full-report-v2", priority: 0.75, changeFrequency: "monthly" },
@@ -51,3 +55,13 @@ export const ROBOTS_DISALLOW_PATHS = [
   "/signup",
   "/forgot-password",
 ] as const;
+
+/** Core public routes plus published SEO articles. */
+export function getSitemapRoutes(): PublicSeoRoute[] {
+  const articleRoutes = getPublishedSeoArticles().map((article) => ({
+    path: seoArticlePath(article.slug),
+    priority: 0.8,
+    changeFrequency: "monthly" as const,
+  }));
+  return [...PUBLIC_SEO_ROUTES, ...articleRoutes];
+}

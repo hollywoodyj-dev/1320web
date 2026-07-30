@@ -30,6 +30,7 @@ export function submitBirthDate(
   }
   if (source === "free-soul-blueprint") {
     trackEvent("free_blueprint_birthdate_submitted", attrProps);
+    trackEvent("free_blueprint_started", attrProps);
   }
   trackEvent("calculator_submit", { source, ...attrProps });
 

@@ -106,6 +106,7 @@ export function GeneratingChamber({
         "free_blueprint_generation_completed",
         attributionToAnalyticsProps(loadFunnelAttribution()),
       );
+      trackEvent("free_blueprint_completed", attributionToAnalyticsProps(loadFunnelAttribution()));
       devLog("generating form redirect", { reason, resultHref });
       redirectFormRef.current?.requestSubmit();
     };

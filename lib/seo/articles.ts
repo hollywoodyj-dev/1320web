@@ -1,0 +1,104 @@
+/** SEO article registry — only `published: true` articles are routed and sitemapped. */
+
+import type { SeoArticle, SeoPlannedArticle } from "@/lib/seo/types";
+import { FREE_BLUEPRINT_HREF } from "@/lib/seo/types";
+
+/**
+ * Published SEO articles. Page 01 content lands here after Wisewave approval.
+ * Phase 0 ships the registry empty so no discovery page publishes without approved copy.
+ */
+export const SEO_ARTICLES: SeoArticle[] = [];
+
+/** Roadmap for hub display (Architecture v1.0 formal order). */
+export const SEO_PLANNED_ARTICLES: SeoPlannedArticle[] = [
+  {
+    slug: "what-is-a-soul-blueprint",
+    title: "What Is a Soul Blueprint?",
+    cluster: "soul-blueprint-foundation",
+    phase: "P1",
+    status: "planned",
+  },
+  {
+    slug: "life-path-number-vs-soul-blueprint",
+    title: "Life Path Number vs Soul Blueprint",
+    cluster: "life-path-numerology",
+    phase: "P2",
+    status: "planned",
+  },
+  {
+    slug: "what-is-my-life-path-number",
+    title: "What Is My Life Path Number?",
+    cluster: "life-path-numerology",
+    phase: "P3",
+    status: "planned",
+  },
+  {
+    slug: "numerology-by-date-of-birth-vs-soul-blueprint",
+    title: "Numerology by Date of Birth vs Soul Blueprint",
+    cluster: "life-path-numerology",
+    phase: "P4",
+    status: "planned",
+  },
+  {
+    slug: "birthday-number-vs-life-path-number",
+    title: "Birthday Number vs Life Path Number vs Soul Blueprint",
+    cluster: "birthday-meaning",
+    phase: "P5",
+    status: "planned",
+  },
+  {
+    slug: "what-does-your-birthday-mean",
+    title: "What Does Your Birthday Mean?",
+    cluster: "birthday-meaning",
+    phase: "P6",
+    status: "planned",
+  },
+  {
+    slug: "numerology-reading-vs-soul-blueprint-report",
+    title: "Numerology Reading vs Soul Blueprint Report",
+    cluster: "life-path-numerology",
+    phase: "P7",
+    status: "planned",
+  },
+  {
+    slug: "how-to-find-your-life-purpose",
+    title: "How to Find Your Life Purpose Without Forcing an Answer",
+    cluster: "life-direction",
+    phase: "P8",
+    status: "planned",
+  },
+  {
+    slug: "why-do-i-repeat-the-same-relationship-patterns",
+    title: "Why Do I Repeat the Same Relationship Patterns?",
+    cluster: "relationships-shadow-integration",
+    phase: "P9",
+    status: "planned",
+  },
+  {
+    slug: "shadow-work-prompts-for-repeating-patterns",
+    title: "Shadow Work Prompts for Recognising Repeating Patterns",
+    cluster: "relationships-shadow-integration",
+    phase: "P10",
+    status: "planned",
+  },
+];
+
+export function getPublishedSeoArticles(): SeoArticle[] {
+  return SEO_ARTICLES.filter((article) => article.published);
+}
+
+export function getSeoArticleBySlug(slug: string): SeoArticle | null {
+  return getPublishedSeoArticles().find((article) => article.slug === slug) ?? null;
+}
+
+export function seoArticlePath(slug: string): string {
+  return `/guides/${slug}`;
+}
+
+export function defaultFreeBlueprintCta(label = "Discover Your Free Soul Blueprint") {
+  return {
+    label,
+    href: FREE_BLUEPRINT_HREF,
+    intent: "free_blueprint" as const,
+  };
+}

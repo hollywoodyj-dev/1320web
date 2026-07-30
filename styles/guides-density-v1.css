@@ -1,0 +1,82 @@
+/* SEO Guides hub + article template — Phase 0 */
+
+.guides-page .guides-breadcrumb {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  opacity: 0.82;
+}
+
+.guides-page .guides-breadcrumb a {
+  color: rgba(232, 205, 150, 0.95);
+  text-decoration: none;
+}
+
+.guides-page .guides-article {
+  padding: clamp(1.25rem, 3vw, 1.85rem);
+  text-align: left;
+}
+
+.guides-page .guides-article-section {
+  margin: 0 0 1.35rem;
+}
+
+.guides-page .guides-article-section h2 {
+  margin: 0 0 0.55rem;
+  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+  color: rgba(244, 216, 138, 0.98);
+}
+
+.guides-page .guides-article-section p,
+.guides-page .guides-hub-empty,
+.guides-page .guides-hub-note,
+.guides-page .guides-article-meta {
+  margin: 0 0 0.7rem;
+  line-height: 1.55;
+  opacity: 0.92;
+}
+
+.guides-page .guides-mid-cta,
+.guides-page .guides-end-cta {
+  margin: 1.25rem 0 0.5rem;
+}
+
+.guides-page .guides-related ul,
+.guides-page .guides-hub-list,
+.guides-page .guides-roadmap-list {
+  margin: 0.4rem 0 0;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.guides-page .guides-hub-panel {
+  padding: clamp(1.15rem, 2.8vw, 1.6rem);
+  text-align: left;
+}
+
+.guides-page .guides-hub-panel h2 {
+  margin: 0 0 0.65rem;
+  color: rgba(244, 216, 138, 0.98);
+}
+
+.guides-page .guides-hub-list p {
+  margin: 0.2rem 0 0;
+  font-size: 0.92rem;
+  opacity: 0.85;
+}
+
+.guides-page .guides-phase {
+  display: inline-block;
+  min-width: 2.2rem;
+  margin-right: 0.45rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: rgba(232, 205, 150, 0.9);
+}
+
+.guides-page .guides-article-meta {
+  margin-top: 1.5rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(232, 205, 150, 0.22);
+  font-size: 0.85rem;
+}

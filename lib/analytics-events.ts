@@ -35,6 +35,15 @@ export const ANALYTICS_EVENTS = [
   "full_report_checkout_started",
   "full_report_checkout_completed",
   "full_report_checkout_abandoned",
+  // SEO Keyword Architecture v1.0 · Phase 0 measurement
+  "seo_article_view",
+  "seo_article_scroll_50",
+  "seo_article_cta_click",
+  "seo_to_free_blueprint",
+  "free_blueprint_started",
+  "free_blueprint_completed",
+  "free_to_full_report",
+  "seo_to_session",
 ] as const;
 
 export type AnalyticsEvent = (typeof ANALYTICS_EVENTS)[number];

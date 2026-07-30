@@ -16,6 +16,10 @@ export type FunnelAttribution = {
   language?: string;
   capturedAt?: string;
   landingPath?: string;
+  /** SEO Architecture v1.0 — analytics only; never PII. */
+  landing_page?: string;
+  content_slug?: string;
+  primary_cluster?: string;
 };
 
 const ATTR_KEYS = [
@@ -27,6 +31,8 @@ const ATTR_KEYS = [
   "ref",
   "language",
 ] as const;
+
+const SEO_ATTR_KEYS = ["landing_page", "content_slug", "primary_cluster"] as const;
 
 function trimParam(value: string | null | undefined): string | undefined {
   const trimmed = value?.trim();
@@ -58,6 +64,10 @@ export function mergeAttribution(
 ): FunnelAttribution {
   const base = { ...(existing ?? {}) };
   for (const key of ATTR_KEYS) {
+    const next = incoming[key];
+    if (next && !base[key]) base[key] = next;
+  }
+  for (const key of SEO_ATTR_KEYS) {
     const next = incoming[key];
     if (next && !base[key]) base[key] = next;
   }
@@ -123,6 +133,10 @@ export function attributionToAnalyticsProps(attribution?: FunnelAttribution | nu
   if (attr.utm_term) props.term = attr.utm_term;
   if (attr.ref) props.referrer = attr.ref;
   if (attr.language) props.language = attr.language;
+  if (attr.landingPath) props.landing_page = attr.landingPath;
+  if (attr.landing_page) props.landing_page = attr.landing_page;
+  if (attr.content_slug) props.content_slug = attr.content_slug;
+  if (attr.primary_cluster) props.primary_cluster = attr.primary_cluster;
   return props;
 }
 

@@ -51,6 +51,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     title: "RESOURCES",
     links: [
       { href: "/faq", label: "FAQ" },
+      { href: "/guides", label: "Guides" },
       { href: SAMPLE_REPORT_HREF, label: "Sample Report" },
       { href: "/full-report", label: "Full Report" },
       { href: "/booking", label: "Personal Integration Session" },
@@ -83,7 +84,7 @@ export const HOMEPAGE_FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "RESOURCES",
     links: [
-      { href: "/faq", label: "Guides" },
+      { href: "/guides", label: "Guides" },
       { href: SAMPLE_REPORT_HREF, label: "Sample Report" },
       { href: "/full-report", label: "Full Report" },
       { href: "/booking", label: "Personal Integration Session" },

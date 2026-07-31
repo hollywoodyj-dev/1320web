@@ -128,6 +128,12 @@ export default function HomePage() {
                 >
                   {HOMEPAGE_WHAT_IS.calculatorLink.label}
                 </Link>
+                <Link
+                  href={HOMEPAGE_WHAT_IS.birthDateNumerologyLink.href}
+                  className="hero-secondary-link homepage-prose-link"
+                >
+                  {HOMEPAGE_WHAT_IS.birthDateNumerologyLink.label}
+                </Link>
               </div>
             </div>
           </section>

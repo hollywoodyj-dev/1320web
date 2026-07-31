@@ -60,6 +60,14 @@ export function middleware(request: NextRequest) {
     target.pathname = "/what-is-my-life-path-number";
     return NextResponse.redirect(target, 301);
   }
+  if (
+    pathname === "/guides/numerology-by-date-of-birth-vs-soul-blueprint" ||
+    pathname === "/guides/numerology-by-date-of-birth-vs-soul-blueprint/"
+  ) {
+    const target = request.nextUrl.clone();
+    target.pathname = "/numerology-by-date-of-birth-vs-soul-blueprint";
+    return NextResponse.redirect(target, 301);
+  }
 
   if (
     pathname === "/integration/facilitator" ||

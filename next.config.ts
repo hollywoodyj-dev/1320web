@@ -62,6 +62,16 @@ const nextConfig: NextConfig = {
         destination: "/what-is-my-life-path-number",
         statusCode: 301,
       },
+      {
+        source: "/guides/numerology-by-date-of-birth-vs-soul-blueprint",
+        destination: "/numerology-by-date-of-birth-vs-soul-blueprint",
+        statusCode: 301,
+      },
+      {
+        source: "/guides/numerology-by-date-of-birth-vs-soul-blueprint/",
+        destination: "/numerology-by-date-of-birth-vs-soul-blueprint",
+        statusCode: 301,
+      },
     ];
   },
   async headers() {

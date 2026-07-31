@@ -43,6 +43,7 @@ export const ANALYTICS_EVENTS = [
   "seo_to_free_blueprint",
   "seo_to_soul_blueprint_definition",
   "seo_to_life_path_calculation",
+  "seo_to_life_path_calculator",
   "seo_to_life_path_comparison",
   "seo_to_sample_report",
   "seo_to_full_report",

@@ -3,6 +3,7 @@
 export type SeoCluster =
   | "soul-blueprint-foundation"
   | "life-path-numerology"
+  | "birth-date-numerology"
   | "birthday-meaning"
   | "life-direction"
   | "relationships-shadow-integration";

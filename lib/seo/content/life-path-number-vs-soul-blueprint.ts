@@ -136,6 +136,7 @@ export const LIFE_PATH_VS_SOUL_BLUEPRINT_ARTICLE: SeoArticle = {
     },
   ],
   related: [
+    { title: "Numerology by Date of Birth vs Soul Blueprint", href: "/numerology-by-date-of-birth-vs-soul-blueprint" },
     { title: "What Is My Life Path Number?", href: "/what-is-my-life-path-number" },
     { title: "What a Soul Blueprint means", href: "/what-is-a-soul-blueprint" },
     { title: "Discover your Free Soul Blueprint", href: FREE_BLUEPRINT_HREF },

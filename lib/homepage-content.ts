@@ -40,6 +40,10 @@ export const HOMEPAGE_WHAT_IS = {
     href: "/what-is-my-life-path-number",
     label: "What Is My Life Path Number?",
   },
+  birthDateNumerologyLink: {
+    href: "/numerology-by-date-of-birth-vs-soul-blueprint",
+    label: "Numerology by Date of Birth vs Soul Blueprint",
+  },
 };
 
 export const HOMEPAGE_CALCULATOR = {

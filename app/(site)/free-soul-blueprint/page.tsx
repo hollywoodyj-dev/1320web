@@ -89,6 +89,9 @@ export default function FreeSoulBlueprintPage() {
             <Link href={FREE_SOUL_BLUEPRINT_WHY.calculatorLink.href} className="blueprint-secondary-link">
               {FREE_SOUL_BLUEPRINT_WHY.calculatorLink.label}
             </Link>
+            <Link href={FREE_SOUL_BLUEPRINT_WHY.birthDateNumerologyLink.href} className="blueprint-secondary-link">
+              {FREE_SOUL_BLUEPRINT_WHY.birthDateNumerologyLink.label}
+            </Link>
           </p>
           <a href="#discover" className="blueprint-secondary-link">
             {FREE_SOUL_BLUEPRINT_WHY.returnLink}

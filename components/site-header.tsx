@@ -19,6 +19,7 @@ export function SiteHeader({ headerAccount, variant = "default" }: SiteHeaderPro
     pathname === "/what-is-a-soul-blueprint" ||
     pathname === "/life-path-number-vs-soul-blueprint" ||
     pathname === "/what-is-my-life-path-number" ||
+    pathname === "/numerology-by-date-of-birth-vs-soul-blueprint" ||
     pathname.startsWith("/guides");
 
   const nav =

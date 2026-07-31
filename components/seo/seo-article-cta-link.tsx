@@ -72,6 +72,7 @@ export function SeoArticleCtaLink({
     }
     if (cta.intent === "life_path_calculation") {
       trackEvent("seo_to_life_path_calculation", props);
+      trackEvent("seo_to_life_path_calculator", props);
     }
     if (cta.intent === "life_path_comparison") {
       trackEvent("seo_to_life_path_comparison", props);

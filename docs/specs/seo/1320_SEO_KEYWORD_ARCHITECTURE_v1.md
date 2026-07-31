@@ -67,7 +67,7 @@ Prefer a small number of substantial topic centres over thin variant pages.
 |----------|------|
 | **P0** | Technical SEO + measurement foundation |
 | **P1** | What Is a Soul Blueprint? → `/what-is-a-soul-blueprint` · ✅ Accepted and Closed (Wisewave 2026-07-31) |
-| **P2** | Life Path Number vs Soul Blueprint → `/life-path-number-vs-soul-blueprint` · Lumen PASS · Ready for Wisewave acceptance |
+| **P2** | Life Path Number vs Soul Blueprint → `/life-path-number-vs-soul-blueprint` · ✅ Accepted and Closed (Wisewave 2026-07-31) |
 | **P3** | What Is My Life Path Number? |
 | **P4** | Numerology by Date of Birth vs Soul Blueprint |
 | **P5** | Birthday Number vs Life Path Number vs Soul Blueprint |

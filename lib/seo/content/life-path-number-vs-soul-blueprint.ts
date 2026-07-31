@@ -58,7 +58,7 @@ export const LIFE_PATH_VS_SOUL_BLUEPRINT_ARTICLE: SeoArticle = {
     href: "/what-is-a-soul-blueprint",
     intent: "soul_blueprint_definition",
   },
-  midCtaAfterSectionId: "go-beyond",
+  midCtaAfterSectionId: "which-to-explore",
   midCta: {
     label: "Discover My Free Soul Blueprint",
     href: FREE_BLUEPRINT_HREF,

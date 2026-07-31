@@ -327,6 +327,18 @@ export function LifePathVsSoulBlueprintPage() {
           {PAGE02_WHICH.closing.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
+          {article.midCta ? (
+            <p className="guides-mid-cta">
+              <SeoArticleCtaLink
+                cta={article.midCta}
+                slug={article.slug}
+                cluster={article.cluster}
+                placement="mid_page"
+                primaryKeyword={article.primaryKeyword}
+                className="gold-button"
+              />
+            </p>
+          ) : null}
         </section>
 
         <section id={PAGE02_SHARED.id} className="guides-article-section">
@@ -364,18 +376,16 @@ export function LifePathVsSoulBlueprintPage() {
           {(article.endSupporting ?? []).map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
-          {article.midCta ? (
-            <p className="guides-mid-cta">
-              <SeoArticleCtaLink
-                cta={article.midCta}
-                slug={article.slug}
-                cluster={article.cluster}
-                placement="mid_page"
-                primaryKeyword={article.primaryKeyword}
-                className="gold-button"
-              />
-            </p>
-          ) : null}
+          <p className="guides-mid-cta">
+            <SeoArticleCtaLink
+              cta={article.endCta}
+              slug={article.slug}
+              cluster={article.cluster}
+              placement="final"
+              primaryKeyword={article.primaryKeyword}
+              className="gold-button"
+            />
+          </p>
           {article.endSecondaryCta ? (
             <p>
               <SeoArticleCtaLink

@@ -1,6 +1,6 @@
 # Page 02 · Life Path Number vs Soul Blueprint — Nova Return
 
-**Status:** Implemented · Pending Lumen production QA  
+**Status:** Correction patch shipped · Pending Lumen production re-QA  
 **Canonical URL:** `https://www.1320soulcode.com/life-path-number-vs-soul-blueprint`  
 **Spec:** Content & SEO Spec v1.0  
 **Date:** 2026-07-31
@@ -9,28 +9,22 @@
 
 Nova shipped the first major SEO discovery bridge: honest comparison between Life Path Number and 1320 Soul Blueprint. Different, not superior. Primary conversion: Discover My Free Soul Blueprint.
 
-## Delivered
+## Correction patch (post-HOLD)
 
-| Area | Detail |
-|------|--------|
-| Route | `app/(site)/life-path-number-vs-soul-blueprint/page.tsx` |
-| Page UI | `components/seo/pages/life-path-vs-soul-blueprint-page.tsx` |
-| Copy | `lib/seo/content/life-path-number-vs-soul-blueprint.ts` + body |
-| Redirect | Middleware + next.config **301** from `/guides/...` |
-| OG | `public/seo/life-path-number-vs-soul-blueprint-1320.webp` |
-| Author JSON-LD | Organization · 1320 Soul Code |
-| Screenshots | `qa-artifacts/seo-page02-check/` |
+| Blocker | Fix |
+|---------|-----|
+| Missing mid-article gold CTA | Added restrained mid CTA after “Which Should You Explore?”, outside the final conversion block |
+| Final CTA | Remains in `Go Beyond One Number` with `placement: final` |
+| OG artwork | Deploy Lumen replacement WebP (1200×630); watchpoint: small-cap `VS` retained by imagegen |
 
-## Governance locks
+CTA rhythm now: hero → mid (after useful comparison) → final.
 
-- No interactive Life Path calculator (Page 03 reserved)
-- No superiority claims vs numerology
-- Foundation order S1 → S3 → S2 → S0
-- One dominant gold CTA in first viewport (header quiet)
-- Hero links: Free Blueprint + What Is a Soul Blueprint?
+## Lumen production QA · 54b4823
 
-## Screenshots / local checks
+**Verdict:** FAIL / HOLD (34/35)  
+Evidence: `qa-artifacts/LUMEN_QA_SEO_PAGE02.md`- `qa-artifacts/seo-page02-check/page02-1280-full.png`
+- `qa-artifacts/seo-page02-check/page02-390-first-viewport.png`
+- `qa-artifacts/seo-page02-check/page02-390-full.png`
+- `scripts/lumen-qa-seo-page02.ts`
 
-```bash
-npx tsx scripts/screenshot-seo-page02.ts
-```
+Replacement OG artwork was generated for review at `public/seo/life-path-number-vs-soul-blueprint-1320.webp` (WebP, exact 1200×630, SHA-256 `832CDA2AA92A23881F02DD8D07E19413AEF6FC1C1BF0635687380213A086C61F`). It is local only and not deployed. Review watchpoint: the centre comparison word uses small-cap `VS` styling despite correction attempts; all technical labels and foundation order are correct.

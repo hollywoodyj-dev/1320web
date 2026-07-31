@@ -93,11 +93,11 @@ After Phase 0 + Lumen validation:
 
 **Page 03 · What Is My Life Path Number?** is Accepted and Closed as the calculation-led Life Path search entry. Life Path utility remains separate from the 1320 Blueprint Engine.
 
-**Page 04 · Numerology by Date of Birth vs Soul Blueprint** — Lumen production QA **PASS** (39/39) on `c02b345`. Ready for Wisewave acceptance.
+**Page 04 · Numerology by Date of Birth vs Soul Blueprint** is Accepted and Closed as the Birth-Date Numerology category bridge.
 
-**Boundary:** Page 02 owns Life Path comparison; Page 03 owns Life Path calculation; Page 04 owns birth-date numerology category vs Soul Blueprint. No calculator duplication.
+**Boundary:** Page 03 owns Life Path calculation; Page 04 owns birth-date numerology category comparison; Page 05 owns Birthday Number vs Life Path vs Soul Blueprint; Page 06 owns Birthday Meaning. No calculator duplication on comparison pages.
 
-Next authorized content implementation may proceed under this locked architecture (P5 onward after Page 04 acceptance).
+Next authorized content implementation may proceed under this locked architecture (P5 onward after approval).
 
 Page 01 content must be written and approved before Life Path discovery pages publish.
 

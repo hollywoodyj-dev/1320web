@@ -35,13 +35,21 @@ export function middleware(request: NextRequest) {
 
   const { pathname, searchParams } = request.nextUrl;
 
-  // Page 01: duplicate guide URL must emit HTTP 301 (not Next default 308).
+  // Root-canonical SEO pages: duplicate guide URLs must emit HTTP 301 (not 308).
   if (
     pathname === "/guides/what-is-a-soul-blueprint" ||
     pathname === "/guides/what-is-a-soul-blueprint/"
   ) {
     const target = request.nextUrl.clone();
     target.pathname = "/what-is-a-soul-blueprint";
+    return NextResponse.redirect(target, 301);
+  }
+  if (
+    pathname === "/guides/life-path-number-vs-soul-blueprint" ||
+    pathname === "/guides/life-path-number-vs-soul-blueprint/"
+  ) {
+    const target = request.nextUrl.clone();
+    target.pathname = "/life-path-number-vs-soul-blueprint";
     return NextResponse.redirect(target, 301);
   }
 

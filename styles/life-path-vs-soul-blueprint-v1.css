@@ -1,0 +1,252 @@
+/* Page 02 · Life Path Number vs Soul Blueprint — Spec v1.0 */
+
+.lpvsb-page {
+  max-width: 780px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.lpvsb-page .guides-breadcrumb {
+  text-align: center;
+  margin: 0 auto 0.85rem;
+}
+
+.lpvsb-page .lpvsb-hero {
+  max-width: 760px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.lpvsb-page .lpvsb-direct-answer,
+.lpvsb-page .lpvsb-hero-support {
+  max-width: 42rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.lpvsb-page .lpvsb-direct-answer .blueprint-lead,
+.lpvsb-page .lpvsb-hero-support p {
+  margin: 0 auto 0.85rem;
+  line-height: 1.55;
+}
+
+.lpvsb-page .lpvsb-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.25rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.lpvsb-page .lpvsb-hero-figure {
+  margin: 0 auto 0.25rem;
+  max-width: 760px;
+  width: 100%;
+}
+
+.lpvsb-page .lpvsb-hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-inline: auto;
+}
+
+.lpvsb-page .lpvsb-article {
+  max-width: 760px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.lpvsb-page .guides-article-section {
+  margin: 0 0 clamp(4rem, 8vw, 7rem);
+}
+
+.lpvsb-page .guides-article-section h2 {
+  text-align: center;
+}
+
+.lpvsb-page .lpvsb-boundary {
+  margin: 0.85rem auto 1rem;
+  max-width: 42rem;
+  text-align: center;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.lpvsb-page .lpvsb-highlight {
+  margin: 1.15rem 0 0;
+  padding: 0.95rem 1.05rem;
+  border-left: 2px solid rgba(232, 205, 150, 0.55);
+  background: rgba(10, 18, 36, 0.35);
+}
+
+.lpvsb-page .lpvsb-highlight p {
+  margin: 0 0 0.35rem;
+}
+
+.lpvsb-page .lpvsb-highlight p:last-child {
+  margin-bottom: 0;
+}
+
+.lpvsb-page .lpvsb-sequence {
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: rgba(244, 216, 138, 0.98);
+}
+
+.lpvsb-page .lpvsb-table-wrap {
+  margin: 1.25rem 0 1.5rem;
+  overflow-x: auto;
+  max-width: 1080px;
+}
+
+.lpvsb-page .lpvsb-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.lpvsb-page .lpvsb-comparison-table th,
+.lpvsb-page .lpvsb-comparison-table td {
+  border: 1px solid rgba(232, 205, 150, 0.22);
+  padding: 0.7rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.lpvsb-page .lpvsb-comparison-table thead th {
+  color: rgba(244, 216, 138, 0.98);
+  background: rgba(10, 18, 36, 0.45);
+}
+
+.lpvsb-page .lpvsb-mobile-cards {
+  display: none;
+  list-style: none;
+  margin: 1rem 0 1.5rem;
+  padding: 0;
+  gap: 0.85rem;
+}
+
+.lpvsb-page .lpvsb-mobile-card {
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(232, 205, 150, 0.22);
+  background: rgba(10, 18, 36, 0.35);
+}
+
+.lpvsb-page .lpvsb-mobile-card-question {
+  margin: 0 0 0.55rem;
+  color: rgba(244, 216, 138, 0.98);
+  font-weight: 600;
+}
+
+.lpvsb-page .lpvsb-example {
+  margin: 1rem 0;
+  padding: 0.95rem 1.05rem;
+  border: 1px solid rgba(232, 205, 150, 0.2);
+  background: rgba(10, 18, 36, 0.28);
+}
+
+.lpvsb-page .lpvsb-example h3,
+.lpvsb-page .guides-article-section h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.05rem;
+  color: rgba(244, 216, 138, 0.95);
+}
+
+.lpvsb-page .lpvsb-foundation-list,
+.lpvsb-page .lpvsb-use-steps {
+  margin: 0.85rem 0 1rem;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.lpvsb-page .lpvsb-flow-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin: 1rem 0 1.35rem;
+}
+
+@media (min-width: 720px) {
+  .lpvsb-page .lpvsb-flow-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.lpvsb-page .lpvsb-process {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding-left: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.lpvsb-page .lpvsb-process li {
+  position: relative;
+  padding-left: 1.1rem;
+}
+
+.lpvsb-page .lpvsb-process li::before {
+  content: "↓";
+  position: absolute;
+  left: 0;
+  opacity: 0.7;
+  color: rgba(232, 205, 150, 0.9);
+}
+
+.lpvsb-page .lpvsb-process li:first-child::before {
+  content: "";
+}
+
+.lpvsb-page .guides-mid-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+.lpvsb-page .lpvsb-conversion p {
+  text-align: center;
+}
+
+@media (max-width: 719px) {
+  .lpvsb-page .lpvsb-table-wrap {
+    display: none;
+  }
+
+  .lpvsb-page .lpvsb-mobile-cards {
+    display: grid;
+  }
+
+  .lpvsb-page .lpvsb-hero {
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .lpvsb-page .lpvsb-hero .inner-page-title {
+    font-size: clamp(1.55rem, 7vw, 1.85rem);
+    margin-bottom: 0.65rem;
+  }
+
+  .lpvsb-page .lpvsb-direct-answer .blueprint-lead,
+  .lpvsb-page .lpvsb-hero-support p,
+  .lpvsb-page .lpvsb-boundary {
+    margin-bottom: 0.55rem;
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+
+  .lpvsb-page .lpvsb-hero-actions {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .lpvsb-page .lpvsb-hero-figure {
+    margin-top: 0.35rem;
+  }
+
+  .lpvsb-page .guides-article-section {
+    margin-bottom: clamp(3.5rem, 12vw, 5rem);
+  }
+}

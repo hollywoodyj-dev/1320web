@@ -1,13 +1,17 @@
 /** SEO article registry — only `published: true` articles are routed and sitemapped. */
 
 import { WHAT_IS_A_SOUL_BLUEPRINT_ARTICLE } from "@/lib/seo/content/what-is-a-soul-blueprint";
+import { LIFE_PATH_VS_SOUL_BLUEPRINT_ARTICLE } from "@/lib/seo/content/life-path-number-vs-soul-blueprint";
 import type { SeoArticle, SeoPlannedArticle } from "@/lib/seo/types";
 import { FREE_BLUEPRINT_HREF } from "@/lib/seo/types";
 
 /**
- * Published SEO articles. Page 01 is the first canonical definition page.
+ * Published SEO articles. Root-canonical pages set `path` explicitly.
  */
-export const SEO_ARTICLES: SeoArticle[] = [WHAT_IS_A_SOUL_BLUEPRINT_ARTICLE];
+export const SEO_ARTICLES: SeoArticle[] = [
+  WHAT_IS_A_SOUL_BLUEPRINT_ARTICLE,
+  LIFE_PATH_VS_SOUL_BLUEPRINT_ARTICLE,
+];
 
 /** Roadmap for hub display (Architecture v1.0 formal order). */
 export const SEO_PLANNED_ARTICLES: SeoPlannedArticle[] = [
@@ -23,7 +27,7 @@ export const SEO_PLANNED_ARTICLES: SeoPlannedArticle[] = [
     title: "Life Path Number vs Soul Blueprint",
     cluster: "life-path-numerology",
     phase: "P2",
-    status: "planned",
+    status: "published",
   },
   {
     slug: "what-is-my-life-path-number",

@@ -22,9 +22,11 @@ export function buildArticleJsonLd(article: SeoArticle) {
     datePublished: article.publishedAt,
     dateModified: article.updatedAt,
     author: {
-      "@type": "Person",
+      "@type": article.authorType ?? "Person",
       name: article.author,
-      ...(article.authorTitle ? { jobTitle: article.authorTitle } : {}),
+      ...(article.authorTitle && article.authorType !== "Organization"
+        ? { jobTitle: article.authorTitle }
+        : {}),
     },
     editor: {
       "@type": "Organization",

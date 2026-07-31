@@ -28,6 +28,8 @@ export type SeoArticleCta = {
     | "full_report"
     | "sample_report"
     | "session"
+    | "soul_blueprint_definition"
+    | "life_path_calculation"
     | "related"
     | "other";
 };
@@ -57,6 +59,8 @@ export type SeoArticle = {
   /** One-sentence clear answer under the H1 (may contain \n\n for paragraphs). */
   directAnswer: string;
   heroSupporting?: string;
+  /** Short boundary under the hero answer. */
+  boundaryLine?: string;
   cluster: SeoCluster;
   primaryKeyword?: string;
   primaryKeywords: string[];
@@ -80,6 +84,8 @@ export type SeoArticle = {
   endBoundary?: string;
   author: string;
   authorTitle?: string;
+  /** Defaults to Person when omitted. Page 02 uses Organization. */
+  authorType?: "Person" | "Organization";
   reviewer: string;
   publishedAt: string;
   updatedAt: string;

@@ -51,6 +51,12 @@ export function SeoArticleCtaLink({
     if (cta.intent === "free_blueprint") trackEvent("seo_to_free_blueprint", props);
     if (cta.intent === "full_report") trackEvent("seo_to_full_report", props);
     if (cta.intent === "sample_report") trackEvent("seo_to_sample_report", props);
+    if (cta.intent === "soul_blueprint_definition") {
+      trackEvent("seo_to_soul_blueprint_definition", props);
+    }
+    if (cta.intent === "life_path_calculation") {
+      trackEvent("seo_to_life_path_calculation", props);
+    }
     if (cta.intent === "session") trackEvent("seo_to_session", props);
   };
 

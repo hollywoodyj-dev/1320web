@@ -116,6 +116,12 @@ export default function HomePage() {
                 >
                   {HOMEPAGE_WHAT_IS.definitionLink.label}
                 </Link>
+                <Link
+                  href={HOMEPAGE_WHAT_IS.comparisonLink.href}
+                  className="hero-secondary-link homepage-prose-link"
+                >
+                  {HOMEPAGE_WHAT_IS.comparisonLink.label}
+                </Link>
               </div>
             </div>
           </section>

@@ -32,6 +32,10 @@ export const HOMEPAGE_WHAT_IS = {
     href: "/what-is-a-soul-blueprint",
     label: "What is a Soul Blueprint?",
   },
+  comparisonLink: {
+    href: "/life-path-number-vs-soul-blueprint",
+    label: "Life Path Number vs Soul Blueprint",
+  },
 };
 
 export const HOMEPAGE_CALCULATOR = {

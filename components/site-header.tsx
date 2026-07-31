@@ -16,7 +16,9 @@ export function SiteHeader({ headerAccount, variant = "default" }: SiteHeaderPro
   const quiet = variant === "internal" || variant === "transactional";
   /** SEO educational pages: keep one dominant gold CTA in the article hero viewport. */
   const quietHeaderCta =
-    pathname === "/what-is-a-soul-blueprint" || pathname.startsWith("/guides");
+    pathname === "/what-is-a-soul-blueprint" ||
+    pathname === "/life-path-number-vs-soul-blueprint" ||
+    pathname.startsWith("/guides");
 
   const nav =
     variant === "internal"

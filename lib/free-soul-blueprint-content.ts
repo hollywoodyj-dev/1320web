@@ -59,6 +59,10 @@ export const FREE_SOUL_BLUEPRINT_WHY = {
     href: "/what-is-a-soul-blueprint",
     label: "What is a Soul Blueprint?",
   },
+  comparisonLink: {
+    href: "/life-path-number-vs-soul-blueprint",
+    label: "Life Path Number vs Soul Blueprint",
+  },
   returnLink: "Return to birth date",
 };
 

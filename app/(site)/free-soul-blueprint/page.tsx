@@ -82,6 +82,11 @@ export default function FreeSoulBlueprintPage() {
               {FREE_SOUL_BLUEPRINT_WHY.definitionLink.label}
             </Link>
           </p>
+          <p>
+            <Link href={FREE_SOUL_BLUEPRINT_WHY.comparisonLink.href} className="blueprint-secondary-link">
+              {FREE_SOUL_BLUEPRINT_WHY.comparisonLink.label}
+            </Link>
+          </p>
           <a href="#discover" className="blueprint-secondary-link">
             {FREE_SOUL_BLUEPRINT_WHY.returnLink}
           </a>

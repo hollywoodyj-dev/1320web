@@ -201,6 +201,13 @@ export function LifePathVsSoulBlueprintPage() {
               {paragraph}
             </p>
           ))}
+          {PAGE02_CALCULATION.calculatorLink ? (
+            <p>
+              <Link href={PAGE02_CALCULATION.calculatorLink.href}>
+                {PAGE02_CALCULATION.calculatorLink.label}
+              </Link>
+            </p>
+          ) : null}
         </section>
 
         <section id={PAGE02_CAN_SHOW.id} className="guides-article-section">

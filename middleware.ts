@@ -52,6 +52,14 @@ export function middleware(request: NextRequest) {
     target.pathname = "/life-path-number-vs-soul-blueprint";
     return NextResponse.redirect(target, 301);
   }
+  if (
+    pathname === "/guides/what-is-my-life-path-number" ||
+    pathname === "/guides/what-is-my-life-path-number/"
+  ) {
+    const target = request.nextUrl.clone();
+    target.pathname = "/what-is-my-life-path-number";
+    return NextResponse.redirect(target, 301);
+  }
 
   if (
     pathname === "/integration/facilitator" ||

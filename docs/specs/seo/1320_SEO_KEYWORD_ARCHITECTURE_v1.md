@@ -87,7 +87,11 @@ After Phase 0 + Lumen validation:
 
 **Page 01 · What Is a Soul Blueprint?** is Accepted and Closed as the canonical Soul Blueprint definition page.
 
-Next authorized content implementation may proceed under this locked architecture (P2 onward after approval).
+**Page 02 · Life Path Number vs Soul Blueprint** is Accepted and Closed as the primary Life Path → Soul Blueprint discovery bridge.
+
+**Boundary:** Page 02 owns comparison/category education; Page 03 owns Life Path calculation and personal-number discovery.
+
+Next authorized content implementation may proceed under this locked architecture (P3 onward after approval).
 
 Page 01 content must be written and approved before Life Path discovery pages publish.
 

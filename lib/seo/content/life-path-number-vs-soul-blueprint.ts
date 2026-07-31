@@ -136,6 +136,7 @@ export const LIFE_PATH_VS_SOUL_BLUEPRINT_ARTICLE: SeoArticle = {
     },
   ],
   related: [
+    { title: "What Is My Life Path Number?", href: "/what-is-my-life-path-number" },
     { title: "What a Soul Blueprint means", href: "/what-is-a-soul-blueprint" },
     { title: "Discover your Free Soul Blueprint", href: FREE_BLUEPRINT_HREF },
     { title: "View a Sample Soul Blueprint Report", href: SAMPLE_REPORT_HREF },

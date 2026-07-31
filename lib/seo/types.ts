@@ -30,6 +30,7 @@ export type SeoArticleCta = {
     | "session"
     | "soul_blueprint_definition"
     | "life_path_calculation"
+    | "life_path_comparison"
     | "related"
     | "other";
 };

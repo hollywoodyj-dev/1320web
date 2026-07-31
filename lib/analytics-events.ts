@@ -43,12 +43,18 @@ export const ANALYTICS_EVENTS = [
   "seo_to_free_blueprint",
   "seo_to_soul_blueprint_definition",
   "seo_to_life_path_calculation",
+  "seo_to_life_path_comparison",
   "seo_to_sample_report",
   "seo_to_full_report",
   "free_blueprint_started",
   "free_blueprint_completed",
   "free_to_full_report",
   "seo_to_session",
+  // SEO Page 03 · Life Path calculator
+  "life_path_calculator_started",
+  "life_path_calculator_completed",
+  "life_path_calculation_error",
+  "life_path_result_meaning_viewed",
 ] as const;
 
 export type AnalyticsEvent = (typeof ANALYTICS_EVENTS)[number];

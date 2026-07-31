@@ -1,0 +1,388 @@
+/* Page 03 · What Is My Life Path Number? — Spec v1.0 */
+
+.wimlpn-page {
+  max-width: 780px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.wimlpn-page .guides-breadcrumb {
+  text-align: center;
+  margin: 0 auto 0.85rem;
+}
+
+.wimlpn-hero {
+  max-width: 760px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  padding-bottom: 0.25rem;
+}
+
+@media (max-width: 640px) {
+  .wimlpn-page .guides-breadcrumb {
+    margin-bottom: 0.5rem;
+    font-size: 0.78rem;
+  }
+
+  .wimlpn-hero .inner-page-title {
+    font-size: clamp(1.55rem, 7vw, 1.9rem);
+    margin-bottom: 0.55rem;
+  }
+
+  .wimlpn-direct-answer .blueprint-lead {
+    margin-bottom: 0.4rem;
+    font-size: 0.86rem;
+    line-height: 1.38;
+  }
+
+  .wimlpn-boundary {
+    margin: 0.4rem auto 0.7rem;
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+
+  .wimlpn-calculator {
+    margin-top: 0;
+    padding: 0.85rem 0.75rem 1rem;
+  }
+
+  .wimlpn-calculator h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .wimlpn-calculator-support {
+    margin-bottom: 0.65rem;
+    font-size: 0.82rem;
+    line-height: 1.35;
+  }
+
+  .wimlpn-field-grid.birthdate-field-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .wimlpn-field-grid .birthdate-field-year {
+    grid-column: 1 / -1;
+  }
+
+  .wimlpn-field-grid select,
+  .wimlpn-field-grid input {
+    padding: 11px 12px;
+  }
+
+  .wimlpn-calc-submit {
+    min-height: 48px;
+  }
+
+  .wimlpn-quiet-link,
+  .wimlpn-method-note {
+    display: none;
+  }
+}
+
+.wimlpn-direct-answer {
+  max-width: 42rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.wimlpn-direct-answer .blueprint-lead {
+  margin: 0 auto 0.65rem;
+  line-height: 1.5;
+  font-size: 0.98rem;
+}
+
+.wimlpn-boundary {
+  margin: 0.65rem auto 1.25rem;
+  max-width: 42rem;
+  text-align: center;
+  font-style: italic;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+.wimlpn-hero-figure {
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+  max-width: 760px;
+  width: 100%;
+  padding-inline: 1rem;
+}
+
+.wimlpn-hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-inline: auto;
+}
+
+.wimlpn-calculator {
+  max-width: 680px;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+  padding: 1.35rem 1.25rem 1.5rem;
+  border: 1px solid rgba(232, 205, 150, 0.22);
+  border-radius: 16px;
+  background: rgba(8, 14, 28, 0.55);
+  text-align: center;
+}
+
+.wimlpn-calculator h2 {
+  margin: 0 0 0.65rem;
+}
+
+.wimlpn-calculator-support {
+  margin: 0 auto 1.25rem;
+  max-width: 28rem;
+  line-height: 1.5;
+  opacity: 0.92;
+}
+
+.wimlpn-calculator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  align-items: stretch;
+}
+
+.wimlpn-field-grid {
+  text-align: left;
+}
+
+.wimlpn-field-grid select,
+.wimlpn-field-grid input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid rgba(216, 177, 92, 0.14);
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: rgba(8, 14, 28, 0.95);
+  color: #f8f4ea;
+  text-align: center;
+  letter-spacing: 0.04em;
+  font: inherit;
+}
+
+.wimlpn-field-grid select:focus,
+.wimlpn-field-grid input:focus {
+  outline: 2px solid rgba(232, 205, 150, 0.55);
+  outline-offset: 2px;
+}
+
+.wimlpn-error {
+  margin: 0;
+  color: #f0b4b4;
+  font-size: 0.95rem;
+}
+
+.wimlpn-calc-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.75rem;
+}
+
+.wimlpn-calc-submit {
+  width: 100%;
+  min-height: 56px;
+}
+
+.wimlpn-calc-actions--has-result .wimlpn-calc-submit {
+  opacity: 0.72;
+}
+
+.wimlpn-privacy {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  opacity: 0.78;
+}
+
+.wimlpn-quiet-link {
+  margin: 0.25rem 0 0;
+  font-size: 0.92rem;
+}
+
+.wimlpn-quiet-link a {
+  color: rgba(232, 205, 150, 0.85);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.wimlpn-method-note {
+  margin: 1.25rem 0 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  text-align: left;
+  opacity: 0.9;
+}
+
+.wimlpn-result {
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(232, 205, 150, 0.2);
+  text-align: left;
+  animation: wimlpn-reveal 280ms ease-out;
+}
+
+@keyframes wimlpn-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wimlpn-result h2 {
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.wimlpn-result-number {
+  margin: 0 0 0.35rem;
+  text-align: center;
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  color: #f4d88a;
+  font-weight: 600;
+}
+
+.wimlpn-result-title {
+  margin: 0 0 0.75rem;
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+
+.wimlpn-result-root {
+  text-align: center;
+  margin: 0 0 1rem;
+  opacity: 0.88;
+}
+
+.wimlpn-result-body {
+  margin: 0 0 0.85rem;
+  line-height: 1.55;
+}
+
+.wimlpn-master-note {
+  margin: 1rem 0;
+  padding: 0.85rem 1rem;
+  border-left: 2px solid rgba(232, 205, 150, 0.45);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.wimlpn-trace {
+  margin: 1.15rem 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(232, 205, 150, 0.18);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.wimlpn-trace summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #f4d88a;
+}
+
+.wimlpn-trace ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.wimlpn-result-cta {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.65rem;
+  text-align: center;
+}
+
+.wimlpn-result-cta .gold-button {
+  width: 100%;
+  min-height: 56px;
+}
+
+.wimlpn-handoff-note {
+  margin: 0;
+  font-size: 0.88rem;
+  opacity: 0.8;
+  line-height: 1.45;
+}
+
+.wimlpn-article {
+  max-width: 760px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.wimlpn-page .guides-article-section {
+  margin: 0 0 clamp(3.5rem, 7vw, 6rem);
+}
+
+.wimlpn-page .guides-article-section h2 {
+  text-align: center;
+}
+
+.wimlpn-example {
+  margin: 1rem 0 1.25rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(232, 205, 150, 0.18);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.wimlpn-example ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.wimlpn-meaning {
+  margin: 1.75rem 0 0;
+  padding: 1rem 0 0;
+  border-top: 1px solid rgba(232, 205, 150, 0.12);
+  scroll-margin-top: 5rem;
+}
+
+.wimlpn-meaning h3 {
+  margin: 0 0 0.65rem;
+  color: #f4d88a;
+}
+
+.wimlpn-meaning--active {
+  outline: 1px solid rgba(232, 205, 150, 0.35);
+  outline-offset: 8px;
+  border-radius: 8px;
+}
+
+.wimlpn-bridge-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.25rem;
+  align-items: center;
+  justify-content: center;
+  margin: 1.25rem 0;
+}
+
+.wimlpn-foundations {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem auto 1.25rem;
+  max-width: 22rem;
+  text-align: center;
+}
+
+.wimlpn-foundations li {
+  margin: 0.35rem 0;
+  color: #f4d88a;
+}
+
+@media (max-width: 640px) {
+  .wimlpn-calculator {
+    border-radius: 12px;
+  }
+}

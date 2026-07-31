@@ -17,6 +17,7 @@ export const ABOUT_HERO = {
   secondaryLinks: [
     { href: "/what-is-a-soul-blueprint", label: "What is a Soul Blueprint?" },
     { href: "/life-path-number-vs-soul-blueprint", label: "Life Path Number vs Soul Blueprint" },
+    { href: "/what-is-my-life-path-number", label: "What Is My Life Path Number?" },
     { href: "/blueprint", label: "Explore the Blueprint" },
     { href: SAMPLE_REPORT_HREF, label: "View Sample Report" },
   ],

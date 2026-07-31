@@ -109,9 +109,13 @@ export const PAGE02_CALCULATION = {
     "Life Path Number: 4",
   ],
   boundary: [
-    "A dedicated Life Path calculation guide will explain the process and number meanings in greater detail.",
+    "A dedicated Life Path calculation guide explains the process and number meanings in greater detail.",
     "This comparison page focuses on what the resulting number represents—and how it differs from a Soul Blueprint.",
   ],
+  calculatorLink: {
+    href: "/what-is-my-life-path-number",
+    label: "Calculate your Life Path Number",
+  },
 };
 
 export const PAGE02_CAN_SHOW = {

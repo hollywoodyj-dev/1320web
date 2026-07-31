@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useId, useRef, useState, type PointerEvent } from "react";
+import { FormEvent, useEffect, useId, useRef, useState, type PointerEvent } from "react";
 import { devLog } from "@/lib/dev-log";
+import { consumeLifePathHandoff } from "@/lib/life-path/handoff";
 import { parseBirthDateInput } from "@/lib/parse-birth-date-input";
 import { submitBirthDate } from "@/lib/submitBirthDate";
 import { BIRTH_FORM } from "@/lib/your-code-content";
@@ -31,6 +32,15 @@ export function BirthDateForm({
   const [day, setDay] = useState("");
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
+
+  useEffect(() => {
+    if (variant !== "free-soul-blueprint") return;
+    const handoff = consumeLifePathHandoff();
+    if (!handoff) return;
+    setYear(String(handoff.year));
+    setMonth(String(handoff.month));
+    setDay(String(handoff.day));
+  }, [variant]);
 
   function readBirthValues(form: HTMLFormElement) {
     const yearInput = form.querySelector<HTMLInputElement>('input[name="year"]');

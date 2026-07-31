@@ -6,7 +6,15 @@ import { appendAttributionToHref } from "@/lib/funnel/attribution";
 import { seoAttributionAnalyticsProps } from "@/lib/seo/attribution";
 import type { SeoArticleCta } from "@/lib/seo/types";
 
-export type SeoCtaPlacement = "hero" | "mid" | "mid_page" | "end" | "final" | "related";
+export type SeoCtaPlacement =
+  | "hero"
+  | "mid"
+  | "mid_page"
+  | "end"
+  | "final"
+  | "related"
+  | "result"
+  | "bridge";
 
 type SeoArticleCtaLinkProps = {
   cta: SeoArticleCta;
@@ -15,12 +23,18 @@ type SeoArticleCtaLinkProps = {
   className?: string;
   placement: SeoCtaPlacement;
   primaryKeyword?: string;
+  /** Optional side effect before navigation (e.g. short-lived birth-date handoff). */
+  onNavigate?: () => void;
 };
 
-function normalizeCtaPosition(placement: SeoCtaPlacement): "hero" | "mid_page" | "final" | "related" {
+function normalizeCtaPosition(
+  placement: SeoCtaPlacement,
+): "hero" | "mid_page" | "final" | "related" | "result" | "bridge" {
   if (placement === "hero") return "hero";
   if (placement === "mid" || placement === "mid_page") return "mid_page";
   if (placement === "end" || placement === "final") return "final";
+  if (placement === "result") return "result";
+  if (placement === "bridge") return "bridge";
   return "related";
 }
 
@@ -31,11 +45,13 @@ export function SeoArticleCtaLink({
   className,
   placement,
   primaryKeyword,
+  onNavigate,
 }: SeoArticleCtaLinkProps) {
   const href = cta.href.startsWith("#") ? cta.href : appendAttributionToHref(cta.href);
   const ctaPosition = normalizeCtaPosition(placement);
 
   const onClick = () => {
+    onNavigate?.();
     const props = {
       ...seoAttributionAnalyticsProps({
         content_slug: slug,
@@ -56,6 +72,9 @@ export function SeoArticleCtaLink({
     }
     if (cta.intent === "life_path_calculation") {
       trackEvent("seo_to_life_path_calculation", props);
+    }
+    if (cta.intent === "life_path_comparison") {
+      trackEvent("seo_to_life_path_comparison", props);
     }
     if (cta.intent === "session") trackEvent("seo_to_session", props);
   };

@@ -52,6 +52,16 @@ const nextConfig: NextConfig = {
         destination: "/life-path-number-vs-soul-blueprint",
         statusCode: 301,
       },
+      {
+        source: "/guides/what-is-my-life-path-number",
+        destination: "/what-is-my-life-path-number",
+        statusCode: 301,
+      },
+      {
+        source: "/guides/what-is-my-life-path-number/",
+        destination: "/what-is-my-life-path-number",
+        statusCode: 301,
+      },
     ];
   },
   async headers() {

@@ -36,6 +36,10 @@ export const HOMEPAGE_WHAT_IS = {
     href: "/life-path-number-vs-soul-blueprint",
     label: "Life Path Number vs Soul Blueprint",
   },
+  calculatorLink: {
+    href: "/what-is-my-life-path-number",
+    label: "What Is My Life Path Number?",
+  },
 };
 
 export const HOMEPAGE_CALCULATOR = {

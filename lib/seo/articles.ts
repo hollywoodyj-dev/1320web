@@ -2,6 +2,7 @@
 
 import { WHAT_IS_A_SOUL_BLUEPRINT_ARTICLE } from "@/lib/seo/content/what-is-a-soul-blueprint";
 import { LIFE_PATH_VS_SOUL_BLUEPRINT_ARTICLE } from "@/lib/seo/content/life-path-number-vs-soul-blueprint";
+import { WHAT_IS_MY_LIFE_PATH_NUMBER_ARTICLE } from "@/lib/seo/content/what-is-my-life-path-number";
 import type { SeoArticle, SeoPlannedArticle } from "@/lib/seo/types";
 import { FREE_BLUEPRINT_HREF } from "@/lib/seo/types";
 
@@ -11,6 +12,7 @@ import { FREE_BLUEPRINT_HREF } from "@/lib/seo/types";
 export const SEO_ARTICLES: SeoArticle[] = [
   WHAT_IS_A_SOUL_BLUEPRINT_ARTICLE,
   LIFE_PATH_VS_SOUL_BLUEPRINT_ARTICLE,
+  WHAT_IS_MY_LIFE_PATH_NUMBER_ARTICLE,
 ];
 
 /** Roadmap for hub display (Architecture v1.0 formal order). */
@@ -34,7 +36,7 @@ export const SEO_PLANNED_ARTICLES: SeoPlannedArticle[] = [
     title: "What Is My Life Path Number?",
     cluster: "life-path-numerology",
     phase: "P3",
-    status: "planned",
+    status: "published",
   },
   {
     slug: "numerology-by-date-of-birth-vs-soul-blueprint",

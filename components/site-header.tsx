@@ -18,6 +18,7 @@ export function SiteHeader({ headerAccount, variant = "default" }: SiteHeaderPro
   const quietHeaderCta =
     pathname === "/what-is-a-soul-blueprint" ||
     pathname === "/life-path-number-vs-soul-blueprint" ||
+    pathname === "/what-is-my-life-path-number" ||
     pathname.startsWith("/guides");
 
   const nav =

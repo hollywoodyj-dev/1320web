@@ -63,6 +63,10 @@ export const FREE_SOUL_BLUEPRINT_WHY = {
     href: "/life-path-number-vs-soul-blueprint",
     label: "Life Path Number vs Soul Blueprint",
   },
+  calculatorLink: {
+    href: "/what-is-my-life-path-number",
+    label: "What Is My Life Path Number?",
+  },
   returnLink: "Return to birth date",
 };
 

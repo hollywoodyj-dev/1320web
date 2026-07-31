@@ -1,0 +1,924 @@
+[
+  {
+    "name": "Canonical route returns HTTP 200",
+    "pass": true,
+    "detail": 200
+  },
+  {
+    "name": "Canonical response is indexable",
+    "pass": true,
+    "detail": "(no X-Robots-Tag)"
+  },
+  {
+    "name": "Duplicate guide route returns exact HTTP 301",
+    "pass": true,
+    "detail": {
+      "status": 301,
+      "location": "/what-is-my-life-path-number"
+    }
+  },
+  {
+    "name": "Duplicate guide redirect targets canonical route",
+    "pass": true,
+    "detail": "/what-is-my-life-path-number"
+  },
+  {
+    "name": "Canonical route appears in sitemap",
+    "pass": true,
+    "detail": 200
+  },
+  {
+    "name": "Browser navigation returns HTTP 200",
+    "pass": true,
+    "detail": 200
+  },
+  {
+    "name": "Title and meta description are present and aligned",
+    "pass": true,
+    "detail": {
+      "title": "What Is My Life Path Number? Free Calculator & Meaning | 1320",
+      "description": "Enter your birth date to calculate your Life Path Number. See the step-by-step numerology formula, number meaning and Master Number explanation."
+    }
+  },
+  {
+    "name": "Self-canonical is correct and meta has no noindex",
+    "pass": true,
+    "detail": {
+      "canonical": "https://www.1320soulcode.com/what-is-my-life-path-number",
+      "robots": ""
+    }
+  },
+  {
+    "name": "H1 appears once with exact text",
+    "pass": true,
+    "detail": "1 × What Is My Life Path Number?"
+  },
+  {
+    "name": "Direct answer is server-rendered HTML before calculator",
+    "pass": true,
+    "detail": "Your Life Path Number is a numerology number calculated from your full birth date.A common method reduces the month, day and year separately, then combines them into a number from 1 to 9—or, in traditions that preserve them, a Master Number such as 11, 22 or 33.Modern numerology calculators commonly use the full date of birth and reduce the month, day and year separately before combining them. Several widely used systems preserve 11, 22 and 33 as Master Numbers, although conventions can vary between practitioners."
+  },
+  {
+    "name": "Static meanings for 1–9, 11, 22, 33 are crawlable HTML",
+    "pass": true,
+    "detail": [
+      "Life Path 1 · The Initiator",
+      "Life Path 2 · The Harmoniser",
+      "Life Path 3 · The Communicator",
+      "Life Path 4 · The Builder",
+      "Life Path 5 · The Explorer",
+      "Life Path 6 · The Nurturer",
+      "Life Path 7 · The Seeker",
+      "Life Path 8 · The Steward",
+      "Life Path 9 · The Humanitarian",
+      "Life Path 11 · The Inspired Messenger",
+      "Life Path 22 · The Master Builder",
+      "Life Path 33 · The Compassionate Teacher"
+    ]
+  },
+  {
+    "name": "Calculator requires only month/day/year",
+    "pass": true,
+    "detail": [
+      "month",
+      "day",
+      "year"
+    ]
+  },
+  {
+    "name": "Declared reduction method preserves 11/22/33 and acknowledges variance",
+    "pass": true,
+    "detail": {
+      "method": true,
+      "variance": true
+    }
+  },
+  {
+    "name": "Life Path is clearly framed as numerology",
+    "pass": true,
+    "detail": true
+  },
+  {
+    "name": "Master Numbers are not ranked as superior",
+    "pass": true,
+    "detail": false
+  },
+  {
+    "name": "Meanings use qualified language",
+    "pass": true,
+    "detail": true
+  },
+  {
+    "name": "Prediction, diagnosis, and fixed-identity boundaries are explicit",
+    "pass": true,
+    "detail": {
+      "unsafePhraseScan": true,
+      "explicit": true
+    }
+  },
+  {
+    "name": "Life Path differs from Birthday Number and Soul Blueprint",
+    "pass": true,
+    "detail": true
+  },
+  {
+    "name": "Life Path result is never called a 1320 code",
+    "pass": true,
+    "detail": false
+  },
+  {
+    "name": "Foundation order appears only in Soul Blueprint bridge",
+    "pass": true,
+    "detail": {
+      "sequenceCount": 1,
+      "bridge": "What Comes After One Life Path Number?Your Life Path Number gives you one numerological theme.A 1320 Soul Blueprint begins from the same basic input—a full birth date—but follows a different symbolic system.The Free Soul Blueprint opens four Foundation Mirrors:S1 · Soul OriginS3 · Soul VibrationS2 · Soul MirrorS0 · Void GateYour Life Path result is not part of the 1320 calculation.The two systems should remain visibly separate.One number may offer a broad theme.Four Foundation Mirrors may help you explore how origin, expression, relationships and return move together.Discover My Free Soul BlueprintLife Path Number vs Soul BlueprintFree to explore. No prediction. No fixed identity.what a Soul Blueprint means"
+    }
+  },
+  {
+    "name": "Required contextual links are present",
+    "pass": true,
+    "detail": [
+      {
+        "text": "Home",
+        "path": "/"
+      },
+      {
+        "text": "Guides",
+        "path": "/guides"
+      },
+      {
+        "text": "Discover My Free Soul Blueprint",
+        "path": "/free-soul-blueprint"
+      },
+      {
+        "text": "Discover My Free Soul Blueprint",
+        "path": "/free-soul-blueprint"
+      },
+      {
+        "text": "Life Path Number vs Soul Blueprint",
+        "path": "/life-path-number-vs-soul-blueprint"
+      },
+      {
+        "text": "what a Soul Blueprint means",
+        "path": "/what-is-a-soul-blueprint"
+      },
+      {
+        "text": "Life Path Number vs Soul Blueprint",
+        "path": "/life-path-number-vs-soul-blueprint"
+      },
+      {
+        "text": "What a Soul Blueprint means",
+        "path": "/what-is-a-soul-blueprint"
+      },
+      {
+        "text": "Discover your Free Soul Blueprint",
+        "path": "/free-soul-blueprint"
+      },
+      {
+        "text": "View a Sample Soul Blueprint Report",
+        "path": "/full-report-v2"
+      }
+    ]
+  },
+  {
+    "name": "Article JSON-LD has Organization author",
+    "pass": true,
+    "detail": {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "What Is My Life Path Number?",
+      "description": "Enter your birth date to calculate your Life Path Number. See the step-by-step numerology formula, number meaning and Master Number explanation.",
+      "image": [
+        "https://www.1320soulcode.com/seo/what-is-my-life-path-number-1320.webp"
+      ],
+      "datePublished": "2026-07-18",
+      "dateModified": "2026-07-18",
+      "author": {
+        "@type": "Organization",
+        "name": "1320 Soul Code"
+      },
+      "editor": {
+        "@type": "Organization",
+        "name": "Wisewave"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "1320 Soul Code",
+        "url": "https://www.1320soulcode.com"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.1320soulcode.com/what-is-my-life-path-number"
+      },
+      "url": "https://www.1320soulcode.com/what-is-my-life-path-number",
+      "inLanguage": "en",
+      "version": "v1.0"
+    }
+  },
+  {
+    "name": "BreadcrumbList JSON-LD validates canonical trail",
+    "pass": true,
+    "detail": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.1320soulcode.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Guides",
+        "item": "https://www.1320soulcode.com/guides"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "What Is My Life Path Number?",
+        "item": "https://www.1320soulcode.com/what-is-my-life-path-number"
+      }
+    ]
+  },
+  {
+    "name": "Initial state has one dominant gold Calculate CTA",
+    "pass": true,
+    "detail": [
+      "Calculate My Life Path Number"
+    ]
+  },
+  {
+    "name": "Initial desktop has no horizontal overflow",
+    "pass": true,
+    "detail": false
+  },
+  {
+    "name": "Calculator: 15 June 1990 → 4",
+    "pass": true,
+    "detail": {
+      "result": "Your Life Path Number Is 4",
+      "root": "",
+      "trace": "How we calculated thisMonth: 6Day: 15 → 6Year: 1990 → 1 + 9 + 9 + 0 = 19 → 1Combined: 6 + 6 + 1 = 13 → 4",
+      "error": "",
+      "url": "https://www.1320soulcode.com/what-is-my-life-path-number"
+    }
+  },
+  {
+    "name": "Calculator: 22 May 1980 → 9",
+    "pass": true,
+    "detail": {
+      "result": "Your Life Path Number Is 9",
+      "root": "",
+      "trace": "How we calculated thisMonth: 5Day: 22Year: 1980 → 1 + 9 + 8 + 0 = 18 → 9Combined: 5 + 22 + 9 = 36 → 9",
+      "error": "",
+      "url": "https://www.1320soulcode.com/what-is-my-life-path-number"
+    }
+  },
+  {
+    "name": "Calculator: 2 Feb 1987 → 11 (root 2)",
+    "pass": true,
+    "detail": {
+      "result": "Your Life Path Number Is 11",
+      "root": "Underlying root: 2",
+      "trace": "How we calculated thisMonth: 2Day: 2Year: 1987 → 1 + 9 + 8 + 7 = 25 → 7Combined: 2 + 2 + 7 = 11",
+      "error": "",
+      "url": "https://www.1320soulcode.com/what-is-my-life-path-number"
+    }
+  },
+  {
+    "name": "Calculator: 11 May 1950 → 22 (root 4)",
+    "pass": true,
+    "detail": {
+      "result": "Your Life Path Number Is 22",
+      "root": "Underlying root: 4",
+      "trace": "How we calculated thisMonth: 5Day: 11Year: 1950 → 1 + 9 + 5 + 0 = 15 → 6Combined: 5 + 11 + 6 = 22",
+      "error": "",
+      "url": "https://www.1320soulcode.com/what-is-my-life-path-number"
+    }
+  },
+  {
+    "name": "Calculator: 22 Feb 1980 → 33 (root 6)",
+    "pass": true,
+    "detail": {
+      "result": "Your Life Path Number Is 33",
+      "root": "Underlying root: 6",
+      "trace": "How we calculated thisMonth: 2Day: 22Year: 1980 → 1 + 9 + 8 + 0 = 18 → 9Combined: 2 + 22 + 9 = 33",
+      "error": "",
+      "url": "https://www.1320soulcode.com/what-is-my-life-path-number"
+    }
+  },
+  {
+    "name": "Calculator: 29 Nov 1975 → 8",
+    "pass": true,
+    "detail": {
+      "result": "Your Life Path Number Is 8",
+      "root": "",
+      "trace": "How we calculated thisMonth: 11Day: 29 → 11Year: 1975 → 1 + 9 + 7 + 5 = 22Combined: 11 + 11 + 22 = 44 → 8",
+      "error": "",
+      "url": "https://www.1320soulcode.com/what-is-my-life-path-number"
+    }
+  },
+  {
+    "name": "Calculator: 29 Feb 2000 → 6",
+    "pass": true,
+    "detail": {
+      "result": "Your Life Path Number Is 6",
+      "root": "",
+      "trace": "How we calculated thisMonth: 2Day: 29 → 11Year: 2000 → 2 + 0 + 0 + 0 = 2Combined: 2 + 11 + 2 = 15 → 6",
+      "error": "",
+      "url": "https://www.1320soulcode.com/what-is-my-life-path-number"
+    }
+  },
+  {
+    "name": "44 is reduced rather than treated as a Master Number",
+    "pass": true,
+    "detail": {
+      "result": "Your Life Path Number Is 8",
+      "root": "",
+      "trace": "How we calculated thisMonth: 11Day: 29 → 11Year: 1975 → 1 + 9 + 7 + 5 = 22Combined: 11 + 11 + 22 = 44 → 8",
+      "error": "",
+      "url": "https://www.1320soulcode.com/what-is-my-life-path-number"
+    }
+  },
+  {
+    "name": "Invalid input rejected: 29 Feb 2001",
+    "pass": true,
+    "detail": {
+      "result": "",
+      "root": "",
+      "trace": "",
+      "error": "That date does not exist. Please check the birth date and try again.",
+      "url": "https://www.1320soulcode.com/what-is-my-life-path-number"
+    }
+  },
+  {
+    "name": "Invalid input rejected: 31 Apr 1990",
+    "pass": true,
+    "detail": {
+      "result": "",
+      "root": "",
+      "trace": "",
+      "error": "That date does not exist. Please check the birth date and try again.",
+      "url": "https://www.1320soulcode.com/what-is-my-life-path-number"
+    }
+  },
+  {
+    "name": "Invalid input rejected: future date",
+    "pass": true,
+    "detail": {
+      "result": "",
+      "root": "",
+      "trace": "",
+      "error": "Please check the birth date and try again.",
+      "url": "https://www.1320soulcode.com/what-is-my-life-path-number"
+    }
+  },
+  {
+    "name": "Invalid input rejected: incomplete date",
+    "pass": true,
+    "detail": {
+      "result": "",
+      "root": "",
+      "trace": "",
+      "error": "Please choose a month.",
+      "url": "https://www.1320soulcode.com/what-is-my-life-path-number"
+    }
+  },
+  {
+    "name": "Result renders inline without reload or birth-date URL",
+    "pass": true,
+    "detail": "https://www.1320soulcode.com/what-is-my-life-path-number"
+  },
+  {
+    "name": "Calculation trace and underlying root match result",
+    "pass": true,
+    "detail": "Your Numerology Life Path NumberYour Life Path Number Is 11Master Number 11 · The Inspired MessengerUnderlying root: 2Life Path 11 is commonly treated as a Master Number associated with intuition, inspiration, sensitivity and the communication of subtle insight. Its constructive expression may involve creativity, vision and helping language emerge for what others can feel but cannot yet name. Its growth edge may involve overwhelm, nervous intensity or pressure to become exceptional.This does not mean you must match every association. It offers a symbolic theme you can compare with your lived experience.Common strengths: Intuition · Inspiration · Sensitivity · VisionPossible growth edge: Grounding inspiration without turning sensitivity into a burdenReflection: How can inspiration become grounded without turning sensitivity into a burden?Some numerology traditions interpret 11 as a Master Number while also recognising its underlying root of 2. The Master Number should not be described as more valuable, evolved or spiritually superior to other Life Path Numbers.How we calculated thisMonth: 2Day: 2Year: 1987 → 1 + 9 + 8 + 7 = 25 → 7Combined: 2 + 2 + 7 = 11Discover My Free Soul BlueprintContinue into a separate 1320 experience. Your Life Path result is not part of the Soul Blueprint calculation.Read the full meaning for Life Path 11"
+  },
+  {
+    "name": "Post-result Calculate recedes and Free Blueprint becomes primary",
+    "pass": true,
+    "detail": {
+      "resultText": "Your Numerology Life Path NumberYour Life Path Number Is 11Master Number 11 · The Inspired MessengerUnderlying root: 2Life Path 11 is commonly treated as a Master Number associated with intuition, inspiration, sensitivity and the communication of subtle insight. Its constructive expression may involve creativity, vision and helping language emerge for what others can feel but cannot yet name. Its growth edge may involve overwhelm, nervous intensity or pressure to become exceptional.This does not mean you must match every association. It offers a symbolic theme you can compare with your lived experience.Common strengths: Intuition · Inspiration · Sensitivity · VisionPossible growth edge: Grounding inspiration without turning sensitivity into a burdenReflection: How can inspiration become grounded without turning sensitivity into a burden?Some numerology traditions interpret 11 as a Master Number while also recognising its underlying root of 2. The Master Number should not be described as more valuable, evolved or spiritually superior to other Life Path Numbers.How we calculated thisMonth: 2Day: 2Year: 1987 → 1 + 9 + 8 + 7 = 25 → 7Combined: 2 + 2 + 7 = 11Discover My Free Soul BlueprintContinue into a separate 1320 experience. Your Life Path result is not part of the Soul Blueprint calculation.Read the full meaning for Life Path 11",
+      "calcClasses": "gold-button gold-button--secondary wimlpn-calc-submit",
+      "continuationText": "Discover My Free Soul Blueprint",
+      "continuationPath": "/free-soul-blueprint",
+      "resultCheckoutLinks": [],
+      "dataLayer": [
+        {
+          "event": "seo_article_view",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-numerology",
+          "primary_keyword": "what is my life path number"
+        },
+        {
+          "event": "life_path_calculator_completed",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "result_number": 4,
+          "result_type": "single_digit"
+        },
+        {
+          "event": "life_path_result_meaning_viewed",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "result_number": 4,
+          "result_type": "single_digit"
+        },
+        {
+          "event": "life_path_calculator_completed",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "result_number": 9,
+          "result_type": "single_digit"
+        },
+        {
+          "event": "life_path_result_meaning_viewed",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "result_number": 9,
+          "result_type": "single_digit"
+        },
+        {
+          "event": "life_path_calculator_completed",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "result_number": 11,
+          "result_type": "master_number"
+        },
+        {
+          "event": "life_path_result_meaning_viewed",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "result_number": 11,
+          "result_type": "master_number"
+        },
+        {
+          "event": "life_path_calculator_completed",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "result_number": 22,
+          "result_type": "master_number"
+        },
+        {
+          "event": "life_path_result_meaning_viewed",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "result_number": 22,
+          "result_type": "master_number"
+        },
+        {
+          "event": "life_path_calculator_completed",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "result_number": 33,
+          "result_type": "master_number"
+        },
+        {
+          "event": "life_path_result_meaning_viewed",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "result_number": 33,
+          "result_type": "master_number"
+        },
+        {
+          "event": "life_path_calculator_completed",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "result_number": 8,
+          "result_type": "single_digit"
+        },
+        {
+          "event": "life_path_result_meaning_viewed",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "result_number": 8,
+          "result_type": "single_digit"
+        },
+        {
+          "event": "life_path_calculator_completed",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "result_number": 6,
+          "result_type": "single_digit"
+        },
+        {
+          "event": "life_path_result_meaning_viewed",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "result_number": 6,
+          "result_type": "single_digit"
+        },
+        {
+          "event": "life_path_calculator_completed",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "result_number": 8,
+          "result_type": "single_digit"
+        },
+        {
+          "event": "life_path_result_meaning_viewed",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "result_number": 8,
+          "result_type": "single_digit"
+        },
+        {
+          "event": "life_path_calculation_error",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "error_type": "invalid_date"
+        },
+        {
+          "event": "life_path_calculation_error",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "error_type": "invalid_date"
+        },
+        {
+          "event": "life_path_calculation_error",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "error_type": "future_date"
+        },
+        {
+          "event": "life_path_calculation_error",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "error_type": "missing_month"
+        },
+        {
+          "event": "life_path_calculator_completed",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "result_number": 11,
+          "result_type": "master_number"
+        },
+        {
+          "event": "life_path_result_meaning_viewed",
+          "language": "en",
+          "landing_page": "/what-is-my-life-path-number",
+          "content_slug": "what-is-my-life-path-number",
+          "primary_cluster": "life-path-calculator",
+          "primary_keyword": "what is my life path number",
+          "result_number": 11,
+          "result_type": "master_number"
+        }
+      ],
+      "local": {},
+      "session": {
+        "1320_funnel_attribution_v1": "{\"language\":\"en\",\"landing_page\":\"/what-is-my-life-path-number\",\"content_slug\":\"what-is-my-life-path-number\",\"primary_cluster\":\"life-path-numerology\",\"capturedAt\":\"2026-07-31T07:43:18.942Z\",\"landingPath\":\"/what-is-my-life-path-number\"}",
+        "1320_seo_attribution_v1": "{\"landing_page\":\"/what-is-my-life-path-number\",\"content_slug\":\"what-is-my-life-path-number\",\"primary_cluster\":\"life-path-numerology\"}"
+      },
+      "url": "https://www.1320soulcode.com/what-is-my-life-path-number"
+    }
+  },
+  {
+    "name": "Result card has no Full Report checkout or session pressure",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "Birth date is absent from analytics payloads",
+    "pass": true,
+    "detail": [
+      {
+        "event": "seo_article_view",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-numerology",
+        "primary_keyword": "what is my life path number"
+      },
+      {
+        "event": "life_path_calculator_completed",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "result_number": 4,
+        "result_type": "single_digit"
+      },
+      {
+        "event": "life_path_result_meaning_viewed",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "result_number": 4,
+        "result_type": "single_digit"
+      },
+      {
+        "event": "life_path_calculator_completed",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "result_number": 9,
+        "result_type": "single_digit"
+      },
+      {
+        "event": "life_path_result_meaning_viewed",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "result_number": 9,
+        "result_type": "single_digit"
+      },
+      {
+        "event": "life_path_calculator_completed",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "result_number": 11,
+        "result_type": "master_number"
+      },
+      {
+        "event": "life_path_result_meaning_viewed",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "result_number": 11,
+        "result_type": "master_number"
+      },
+      {
+        "event": "life_path_calculator_completed",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "result_number": 22,
+        "result_type": "master_number"
+      },
+      {
+        "event": "life_path_result_meaning_viewed",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "result_number": 22,
+        "result_type": "master_number"
+      },
+      {
+        "event": "life_path_calculator_completed",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "result_number": 33,
+        "result_type": "master_number"
+      },
+      {
+        "event": "life_path_result_meaning_viewed",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "result_number": 33,
+        "result_type": "master_number"
+      },
+      {
+        "event": "life_path_calculator_completed",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "result_number": 8,
+        "result_type": "single_digit"
+      },
+      {
+        "event": "life_path_result_meaning_viewed",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "result_number": 8,
+        "result_type": "single_digit"
+      },
+      {
+        "event": "life_path_calculator_completed",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "result_number": 6,
+        "result_type": "single_digit"
+      },
+      {
+        "event": "life_path_result_meaning_viewed",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "result_number": 6,
+        "result_type": "single_digit"
+      },
+      {
+        "event": "life_path_calculator_completed",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "result_number": 8,
+        "result_type": "single_digit"
+      },
+      {
+        "event": "life_path_result_meaning_viewed",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "result_number": 8,
+        "result_type": "single_digit"
+      },
+      {
+        "event": "life_path_calculation_error",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "error_type": "invalid_date"
+      },
+      {
+        "event": "life_path_calculation_error",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "error_type": "invalid_date"
+      },
+      {
+        "event": "life_path_calculation_error",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "error_type": "future_date"
+      },
+      {
+        "event": "life_path_calculation_error",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "error_type": "missing_month"
+      },
+      {
+        "event": "life_path_calculator_completed",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "result_number": 11,
+        "result_type": "master_number"
+      },
+      {
+        "event": "life_path_result_meaning_viewed",
+        "language": "en",
+        "landing_page": "/what-is-my-life-path-number",
+        "content_slug": "what-is-my-life-path-number",
+        "primary_cluster": "life-path-calculator",
+        "primary_keyword": "what is my life path number",
+        "result_number": 11,
+        "result_type": "master_number"
+      }
+    ]
+  },
+  {
+    "name": "Birth date is absent from permanent localStorage",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "No birth date is stored before optional continuation",
+    "pass": true,
+    "detail": {
+      "1320_funnel_attribution_v1": "{\"language\":\"en\",\"landing_page\":\"/what-is-my-life-path-number\",\"content_slug\":\"what-is-my-life-path-number\",\"primary_cluster\":\"life-path-numerology\",\"capturedAt\":\"2026-07-31T07:43:18.942Z\",\"landingPath\":\"/what-is-my-life-path-number\"}",
+      "1320_seo_attribution_v1": "{\"landing_page\":\"/what-is-my-life-path-number\",\"content_slug\":\"what-is-my-life-path-number\",\"primary_cluster\":\"life-path-numerology\"}"
+    }
+  },
+  {
+    "name": "Calculator does not call the 1320 Blueprint Resolver or any calculation API",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "No fake multi-second decoding/loading state",
+    "pass": true,
+    "detail": "Your Numerology Life Path NumberYour Life Path Number Is 11Master Number 11 · The Inspired MessengerUnderlying root: 2Life Path 11 is commonly treated as a Master Number associated with intuition, inspiration, sensitivity and the communication of subtle insight. Its constructive expression may involve creativity, vision and helping language emerge for what others can feel but cannot yet name. Its growth edge may involve overwhelm, nervous intensity or pressure to become exceptional.This does not mean you must match every association. It offers a symbolic theme you can compare with your lived experience.Common strengths: Intuition · Inspiration · Sensitivity · VisionPossible growth edge: Grounding inspiration without turning sensitivity into a burdenReflection: How can inspiration become grounded without turning sensitivity into a burden?Some numerology traditions interpret 11 as a Master Number while also recognising its underlying root of 2. The Master Number should not be described as more valuable, evolved or spiritually superior to other Life Path Numbers.How we calculated thisMonth: 2Day: 2Year: 1987 → 1 + 9 + 8 + 7 = 25 → 7Combined: 2 + 2 + 7 = 11Discover My Free Soul BlueprintContinue into a separate 1320 experience. Your Life Path result is not part of the Soul Blueprint calculation.Read the full meaning for Life Path 11"
+  },
+  {
+    "name": "Optional continuation has no birth date in URL and uses session-only handoff",
+    "pass": true,
+    "detail": {
+      "url": "https://www.1320soulcode.com/free-soul-blueprint?language=en",
+      "session": {
+        "1320_funnel_attribution_v1": "{\"language\":\"en\",\"landing_page\":\"/what-is-my-life-path-number\",\"content_slug\":\"what-is-my-life-path-number\",\"primary_cluster\":\"life-path-numerology\",\"capturedAt\":\"2026-07-31T07:43:18.942Z\",\"landingPath\":\"/what-is-my-life-path-number\"}",
+        "1320_life_path_handoff_v1": "{\"year\":1987,\"month\":2,\"day\":2,\"savedAt\":1785483813433}",
+        "1320_seo_attribution_v1": "{\"landing_page\":\"/what-is-my-life-path-number\",\"content_slug\":\"what-is-my-life-path-number\",\"primary_cluster\":\"life-path-numerology\"}"
+      },
+      "local": {}
+    }
+  },
+  {
+    "name": "No horizontal overflow at 390px",
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390
+    }
+  },
+  {
+    "name": "No production console/page errors",
+    "pass": true,
+    "detail": []
+  }
+]

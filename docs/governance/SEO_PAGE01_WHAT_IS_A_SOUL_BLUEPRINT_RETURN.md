@@ -1,13 +1,41 @@
 # Page 01 · What Is a Soul Blueprint? — Nova Return
 
-**Status:** PASS · Ready for Wisewave acceptance
+**Status:** ✅ Accepted and Closed by Wisewave  
 **Canonical URL:** `https://www.1320soulcode.com/what-is-a-soul-blueprint`  
 **Spec:** Content & SEO Spec v1.0  
-**Date:** 2026-07-31
+**Date:** 2026-07-31  
+**Wisewave acceptance:** 2026-07-31
 
 ## Summary
 
 Nova shipped the first canonical SEO definition page for Soul Blueprint at the approved **root** path (not under `/guides`). Article + BreadcrumbList JSON-LD are present; FAQPage rich-result schema is intentionally omitted.
+
+**Wisewave final decision: Accepted and Closed.**  
+This page is the canonical internal definition of Soul Blueprint within 1320.
+
+## Wisewave acceptance (2026-07-31)
+
+Accepted production state:
+
+- Opening section directly defines Soul Blueprint
+- Mirror, not a fixed identity
+- Foundation sequence locked: **S1 → S3 → S2 → S0**
+- Full Soul Blueprint framed as complete S0–S9
+- Clear distinction from numerology, astrology, Human Design, personality testing, prediction, diagnosis
+- User authority preserved
+- Primary conversion: Discover My Free Soul Blueprint
+- No hero checkout, Session pressure, urgency, or calculator positioning
+- Desktop/mobile hierarchy accepted; one dominant gold CTA in first desktop viewport
+- Canonical root URL, metadata, Article JSON-LD, BreadcrumbList, sitemap, duplicate-path **301** accepted
+- Live 1200×630 artwork preserves S1 → S3 → S2 → S0
+- Lumen production QA and 25/25 automated checks acknowledged
+
+Non-blocking maintenance notes (do not reopen Page 01):
+
+1. Replace archived centering screenshots that still show earlier artwork so repo evidence matches production — addressed below.
+2. Future SEO article template: align visible provenance with Article JSON-LD authorship (restrained visible line **or** organization-level author standard).
+
+Next authorized content implementation may proceed under the locked SEO architecture.
 
 ## Lumen production QA (f511ee8)
 
@@ -48,7 +76,7 @@ Acceptance screenshot: `qa-artifacts/seo-page01-production-21be3dd/page01-1280-f
 
 1. Removed visible on-page byline / published dates (author remains in Article JSON-LD only)
 2. Centered breadcrumb, hero copy, CTAs, and hero figure in the 760–780px column
-3. Centering screenshots: `qa-artifacts/seo-page01-centering-check/`
+3. Centering screenshots refreshed from **live production** so hero artwork matches current Lumen asset: `qa-artifacts/seo-page01-centering-check/`
 
 ```bash
 npx tsx scripts/lumen-qa-seo-page01.ts

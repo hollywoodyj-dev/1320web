@@ -66,7 +66,7 @@ Prefer a small number of substantial topic centres over thin variant pages.
 | Priority | Work |
 |----------|------|
 | **P0** | Technical SEO + measurement foundation |
-| **P1** | What Is a Soul Blueprint? → `/what-is-a-soul-blueprint` |
+| **P1** | What Is a Soul Blueprint? → `/what-is-a-soul-blueprint` · ✅ Accepted and Closed (Wisewave 2026-07-31) |
 | **P2** | Life Path Number vs Soul Blueprint |
 | **P3** | What Is My Life Path Number? |
 | **P4** | Numerology by Date of Birth vs Soul Blueprint |
@@ -85,7 +85,9 @@ Nova may begin **Phase 0 · Technical and Measurement Foundation** now.
 
 After Phase 0 + Lumen validation:
 
-**Page 01 · What Is a Soul Blueprint?** becomes the first canonical SEO content page.
+**Page 01 · What Is a Soul Blueprint?** is Accepted and Closed as the canonical Soul Blueprint definition page.
+
+Next authorized content implementation may proceed under this locked architecture (P2 onward after approval).
 
 Page 01 content must be written and approved before Life Path discovery pages publish.
 
@@ -101,6 +103,15 @@ Page 01 content must be written and approved before Life Path discovery pages pu
 8. Content performance events  
 9. Author and reviewer fields  
 10. Update-date and version fields  
+
+### Author and provenance (template guidance)
+
+Article JSON-LD must keep an accurate `author`. For future SEO articles, align visible provenance with that authorship via either:
+
+1. a restrained visible provenance line, or  
+2. an organization-level author standard applied consistently across the template.
+
+Page 01 intentionally shows no visible byline after Holly polish; authorship remains in JSON-LD only. That is accepted for Page 01 and does not set a permanent exception without Wisewave confirmation on later pages.
 
 ### Required analytics events
 

@@ -1,36 +1,31 @@
 # Lumen QA · Page 02 · Life Path Number vs Soul Blueprint
 
-**Verdict:** FAIL / HOLD  
-**Production readiness:** Not ready for Wisewave acceptance  
-**Production URL:** `https://www.1320soulcode.com/life-path-number-vs-soul-blueprint`  
-**Implementation commit:** `54b4823`  
+**Verdict:** PASS
+**Production readiness:** Ready for Wisewave acceptance
+**Production URL:** `https://www.1320soulcode.com/life-path-number-vs-soul-blueprint`
+**Implementation commit:** `8b6d50a`
 **QA date:** 2026-07-31
 
-## Release blocker
+## Correction verified
 
-The required hero / mid / final primary CTA pattern is incomplete.
+The Page 02 HOLD blocker is resolved in production.
 
-Production renders only two primary gold CTA instances:
+Production renders all three required primary CTA placements:
 
 1. Hero — `Discover My Free Soul Blueprint` → `/free-soul-blueprint`
-2. Final `Go Beyond One Number` conversion block — `Discover My Free Soul Blueprint` → `/free-soul-blueprint`
+2. Mid-article, after `Which Should You Explore?` — `Discover My Free Soul Blueprint` → `/free-soul-blueprint`
+3. Final `Go Beyond One Number` conversion block — `Discover My Free Soul Blueprint` → `/free-soul-blueprint`
 
-There is no separate mid-article primary CTA. The Page 02 hard check explicitly requires hero, mid, and final primary CTA placements.
+The first 1280px desktop viewport still contains exactly one dominant gold CTA.
 
 ## Automated result
 
-`34 / 35` production assertions passed.
+`35 / 35` production assertions passed.
 
 Run:
 
 ```bash
 QA_BASE_URL=https://www.1320soulcode.com npx tsx scripts/lumen-qa-seo-page02.ts
-```
-
-The only failing assertion is:
-
-```text
-FAIL | Hero, mid, and final primary CTA placements all exist
 ```
 
 Observed live primary CTAs:
@@ -47,12 +42,18 @@ Observed live primary CTAs:
     "text": "Discover My Free Soul Blueprint",
     "href": "/free-soul-blueprint",
     "inHero": false,
+    "inConversion": false
+  },
+  {
+    "text": "Discover My Free Soul Blueprint",
+    "href": "/free-soul-blueprint",
+    "inHero": false,
     "inConversion": true
   }
 ]
 ```
 
-## Passed hard checks
+## Passed hard checks · 35/35
 
 - Canonical route returns HTTP 200 and is indexable.
 - Self-canonical is exact and the route appears in `sitemap.xml`.
@@ -73,6 +74,7 @@ Observed live primary CTAs:
 - Desktop table is visible; mobile replaces it with ten comparison cards below 720px.
 - No horizontal overflow at 1280px or 390px.
 - All rendered primary CTAs point to `/free-soul-blueprint`.
+- Hero, mid, and final primary CTA placements are all present.
 - Page 01 is linked contextually.
 - The 1280px first viewport contains one dominant gold CTA.
 - Hero contains no Full Report, checkout, purchase, or Session pressure.
@@ -81,36 +83,31 @@ Observed live primary CTAs:
 
 ## Visual review
 
-- Desktop: educational hierarchy is clear; table is readable; the hero is balanced and not sales-heavy.
-- Mobile: H1 wraps cleanly, direct answer remains readable, primary CTA fits the viewport, comparison content switches to cards, and no clipping or horizontal overflow is visible.
-- The page is long but remains structurally coherent and appropriately educational for the comparison/discovery role.
+- Desktop: educational hierarchy remains clear; the hero shows one dominant CTA and is not sales-heavy.
+- Mobile: H1 and direct answer wrap cleanly, the primary CTA fits the viewport, and no horizontal overflow is visible.
+- The new mid-article CTA is separate from the final conversion block.
 
-Production screenshots:
+Fresh production screenshots:
 
-- `qa-artifacts/seo-page02-check/page02-1280-first-viewport.png`
-- `qa-artifacts/seo-page02-check/page02-1280-full.png`
-- `qa-artifacts/seo-page02-check/page02-390-first-viewport.png`
-- `qa-artifacts/seo-page02-check/page02-390-full.png`
+- `qa-artifacts/seo-page02-production-8b6d50a/page02-1280-first-viewport.png`
+- `qa-artifacts/seo-page02-production-8b6d50a/page02-390-first-viewport.png`
 
 ## Replacement OG artwork
 
-A replacement review asset was generated and placed at:
+Production asset:
 
-`public/seo/life-path-number-vs-soul-blueprint-1320.webp`
+`https://www.1320soulcode.com/seo/life-path-number-vs-soul-blueprint-1320.webp`
 
 - Exact format/dimensions: WebP · 1200×630
 - Local SHA-256: `832CDA2AA92A23881F02DD8D07E19413AEF6FC1C1BF0635687380213A086C61F`
-- Production placeholder SHA-256: `82BF27638286C09BC7FF177BEF6715CBA0C735337813A1A120B37BAD27F03C46`
-- The local replacement is not deployed.
-- Review watchpoint: the image generator retained small-cap `VS` styling in the centre despite correction attempts; all other required labels, including `S1 → S3 → S2 → S0`, are correct.
+- Production SHA-256: `832CDA2AA92A23881F02DD8D07E19413AEF6FC1C1BF0635687380213A086C61F`
+- The replacement is live, is referenced by the production Open Graph and Twitter metadata, and matches the approved local asset byte-for-byte.
+- Review watchpoint: the image generator retained small-cap `VS` styling in the centre; all other required labels, including `S1 → S3 → S2 → S0`, are correct.
 
-## Required correction and retest
+Downloaded live evidence:
 
-Add one restrained mid-article primary CTA to `/free-soul-blueprint` while preserving:
+`qa-artifacts/seo-page02-production-8b6d50a/life-path-number-vs-soul-blueprint-1320-live.webp`
 
-- one dominant gold CTA in the first desktop viewport;
-- the current educational, non-sales-heavy tone;
-- the existing final conversion block;
-- mobile no-overflow behavior.
+## Acceptance
 
-After deployment, rerun the 35-check production suite and refresh the four screenshots. Wisewave acceptance remains on HOLD until that check passes.
+Page 02 passes the complete production suite and is ready for Wisewave acceptance. The small-cap `VS` treatment remains a non-blocking visual review watchpoint.

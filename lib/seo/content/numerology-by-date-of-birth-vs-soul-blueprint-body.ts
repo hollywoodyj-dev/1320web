@@ -149,6 +149,8 @@ export const PAGE04_BIRTHDAY_NUMBER = {
     "The Birthday Number is not the same as the Life Path Number.",
     "It is also not the same as a 1320 Soul Blueprint.",
   ],
+  linkLabel: "Birthday Number vs Life Path Number vs Soul Blueprint",
+  linkHref: "/birthday-number-vs-life-path-number-vs-soul-blueprint",
 };
 
 export const PAGE04_MORE_NUMBERS = {

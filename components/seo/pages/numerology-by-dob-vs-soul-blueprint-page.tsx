@@ -245,6 +245,11 @@ export function NumerologyByDobVsSoulBlueprintPage() {
               {paragraph}
             </p>
           ))}
+          {PAGE04_BIRTHDAY_NUMBER.linkHref ? (
+            <p>
+              <Link href={PAGE04_BIRTHDAY_NUMBER.linkHref}>{PAGE04_BIRTHDAY_NUMBER.linkLabel}</Link>
+            </p>
+          ) : null}
         </section>
 
         <section id={PAGE04_MORE_NUMBERS.id} className="guides-article-section">

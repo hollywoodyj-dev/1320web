@@ -4,6 +4,7 @@ import { WHAT_IS_A_SOUL_BLUEPRINT_ARTICLE } from "@/lib/seo/content/what-is-a-so
 import { LIFE_PATH_VS_SOUL_BLUEPRINT_ARTICLE } from "@/lib/seo/content/life-path-number-vs-soul-blueprint";
 import { WHAT_IS_MY_LIFE_PATH_NUMBER_ARTICLE } from "@/lib/seo/content/what-is-my-life-path-number";
 import { NUMEROLOGY_BY_DOB_VS_SOUL_BLUEPRINT_ARTICLE } from "@/lib/seo/content/numerology-by-date-of-birth-vs-soul-blueprint";
+import { BIRTHDAY_NUMBER_VS_LIFE_PATH_VS_SOUL_BLUEPRINT_ARTICLE } from "@/lib/seo/content/birthday-number-vs-life-path-vs-soul-blueprint";
 import type { SeoArticle, SeoPlannedArticle } from "@/lib/seo/types";
 import { FREE_BLUEPRINT_HREF } from "@/lib/seo/types";
 
@@ -15,6 +16,7 @@ export const SEO_ARTICLES: SeoArticle[] = [
   LIFE_PATH_VS_SOUL_BLUEPRINT_ARTICLE,
   WHAT_IS_MY_LIFE_PATH_NUMBER_ARTICLE,
   NUMEROLOGY_BY_DOB_VS_SOUL_BLUEPRINT_ARTICLE,
+  BIRTHDAY_NUMBER_VS_LIFE_PATH_VS_SOUL_BLUEPRINT_ARTICLE,
 ];
 
 /** Roadmap for hub display (Architecture v1.0 formal order). */
@@ -50,9 +52,9 @@ export const SEO_PLANNED_ARTICLES: SeoPlannedArticle[] = [
   {
     slug: "birthday-number-vs-life-path-number",
     title: "Birthday Number vs Life Path Number vs Soul Blueprint",
-    cluster: "birthday-meaning",
+    cluster: "birthday-number",
     phase: "P5",
-    status: "planned",
+    status: "published",
   },
   {
     slug: "what-does-your-birthday-mean",

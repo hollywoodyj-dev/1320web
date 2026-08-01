@@ -121,6 +121,10 @@ export const WHAT_IS_A_SOUL_BLUEPRINT_ARTICLE: SeoArticle = {
     { title: "What Is My Life Path Number?", href: "/what-is-my-life-path-number" },
     { title: "Life Path Number vs Soul Blueprint", href: "/life-path-number-vs-soul-blueprint" },
     { title: "Numerology by Date of Birth vs Soul Blueprint", href: "/numerology-by-date-of-birth-vs-soul-blueprint" },
+    {
+      title: "Birthday Number vs Life Path Number vs Soul Blueprint",
+      href: "/birthday-number-vs-life-path-number-vs-soul-blueprint",
+    },
     { title: "How the 1320 Blueprint works", href: "/blueprint" },
     { title: "Discover your Free Soul Blueprint", href: FREE_BLUEPRINT_HREF },
     { title: "Explore the Full Soul Blueprint Report", href: "/full-report" },

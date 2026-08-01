@@ -72,6 +72,16 @@ const nextConfig: NextConfig = {
         destination: "/numerology-by-date-of-birth-vs-soul-blueprint",
         statusCode: 301,
       },
+      {
+        source: "/guides/birthday-number-vs-life-path-number-vs-soul-blueprint",
+        destination: "/birthday-number-vs-life-path-number-vs-soul-blueprint",
+        statusCode: 301,
+      },
+      {
+        source: "/guides/birthday-number-vs-life-path-number-vs-soul-blueprint/",
+        destination: "/birthday-number-vs-life-path-number-vs-soul-blueprint",
+        statusCode: 301,
+      },
     ];
   },
   async headers() {

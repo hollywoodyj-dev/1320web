@@ -134,6 +134,12 @@ export default function HomePage() {
                 >
                   {HOMEPAGE_WHAT_IS.birthDateNumerologyLink.label}
                 </Link>
+                <Link
+                  href={HOMEPAGE_WHAT_IS.birthdayNumberLink.href}
+                  className="hero-secondary-link homepage-prose-link"
+                >
+                  {HOMEPAGE_WHAT_IS.birthdayNumberLink.label}
+                </Link>
               </div>
             </div>
           </section>

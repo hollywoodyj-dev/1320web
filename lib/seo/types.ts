@@ -4,6 +4,7 @@ export type SeoCluster =
   | "soul-blueprint-foundation"
   | "life-path-numerology"
   | "birth-date-numerology"
+  | "birthday-number"
   | "birthday-meaning"
   | "life-direction"
   | "relationships-shadow-integration";
@@ -32,6 +33,8 @@ export type SeoArticleCta = {
     | "soul_blueprint_definition"
     | "life_path_calculation"
     | "life_path_comparison"
+    | "birth_date_numerology"
+    | "birthday_meaning"
     | "related"
     | "other";
 };

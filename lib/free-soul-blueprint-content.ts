@@ -71,6 +71,10 @@ export const FREE_SOUL_BLUEPRINT_WHY = {
     href: "/numerology-by-date-of-birth-vs-soul-blueprint",
     label: "Numerology by Date of Birth vs Soul Blueprint",
   },
+  birthdayNumberLink: {
+    href: "/birthday-number-vs-life-path-number-vs-soul-blueprint",
+    label: "Birthday Number vs Life Path Number vs Soul Blueprint",
+  },
   returnLink: "Return to birth date",
 };
 

@@ -1,0 +1,483 @@
+[
+  {
+    "name": "Canonical route returns HTTP 200",
+    "pass": true,
+    "detail": 200
+  },
+  {
+    "name": "Canonical response is indexable",
+    "pass": true,
+    "detail": "(none)"
+  },
+  {
+    "name": "Core article answer is present in initial HTML",
+    "pass": true,
+    "detail": "required answer phrases"
+  },
+  {
+    "name": "Initial HTML contains no birth-date result URL",
+    "pass": true,
+    "detail": "query scan"
+  },
+  {
+    "name": "Duplicate guide route returns exact HTTP 301",
+    "pass": true,
+    "detail": {
+      "status": 301,
+      "location": "/birthday-number-vs-life-path-number-vs-soul-blueprint"
+    }
+  },
+  {
+    "name": "Duplicate guide route targets canonical path",
+    "pass": true,
+    "detail": "/birthday-number-vs-life-path-number-vs-soul-blueprint"
+  },
+  {
+    "name": "Canonical route appears in sitemap",
+    "pass": true,
+    "detail": 200
+  },
+  {
+    "name": "Live OG asset is a 1200×630 WebP",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "format": "webp",
+      "width": 1200,
+      "height": 630,
+      "bytes": 28618,
+      "sha256": "db02fcb9ea88d4afb6bf759d32411951ae062870a5c488ba0a04992c13fa410b"
+    }
+  },
+  {
+    "name": "Browser navigation returns HTTP 200",
+    "pass": true,
+    "detail": 200
+  },
+  {
+    "name": "Title and meta description are present and H1-aligned",
+    "pass": true,
+    "detail": {
+      "title": "Birthday Number vs Life Path Number vs Soul Blueprint | 1320",
+      "description": "Learn how a Birthday Number uses your birth day, how a Life Path Number uses your full birth date, and what a 1320 Soul Blueprint explores differently."
+    }
+  },
+  {
+    "name": "Self-canonical is correct and robots permit indexing",
+    "pass": true,
+    "detail": {
+      "canonical": "https://www.1320soulcode.com/birthday-number-vs-life-path-number-vs-soul-blueprint",
+      "robots": ""
+    }
+  },
+  {
+    "name": "H1 appears once with exact text",
+    "pass": true,
+    "detail": "1 × Birthday Number vs Life Path Number vs Soul Blueprint"
+  },
+  {
+    "name": "Direct answer appears early in rendered text",
+    "pass": true,
+    "detail": 85
+  },
+  {
+    "name": "Article JSON-LD has 1320 Soul Code Organization author and publisher",
+    "pass": true,
+    "detail": {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Birthday Number vs Life Path Number vs Soul Blueprint",
+      "description": "Learn how a Birthday Number uses your birth day, how a Life Path Number uses your full birth date, and what a 1320 Soul Blueprint explores differently.",
+      "image": [
+        "https://www.1320soulcode.com/seo/birthday-number-vs-life-path-number-vs-soul-blueprint-1320.webp"
+      ],
+      "datePublished": "2026-08-01",
+      "dateModified": "2026-08-01",
+      "author": {
+        "@type": "Organization",
+        "name": "1320 Soul Code"
+      },
+      "editor": {
+        "@type": "Organization",
+        "name": "Wisewave"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "1320 Soul Code",
+        "url": "https://www.1320soulcode.com"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.1320soulcode.com/birthday-number-vs-life-path-number-vs-soul-blueprint"
+      },
+      "url": "https://www.1320soulcode.com/birthday-number-vs-life-path-number-vs-soul-blueprint",
+      "inLanguage": "en",
+      "version": "v1.0"
+    }
+  },
+  {
+    "name": "BreadcrumbList JSON-LD validates canonical trail",
+    "pass": true,
+    "detail": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.1320soulcode.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Guides",
+        "item": "https://www.1320soulcode.com/guides"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Birthday Number vs Life Path Number vs Soul Blueprint",
+        "item": "https://www.1320soulcode.com/birthday-number-vs-life-path-number-vs-soul-blueprint"
+      }
+    ]
+  },
+  {
+    "name": "OG and Twitter metadata reference the required live asset",
+    "pass": true,
+    "detail": {
+      "og": "https://www.1320soulcode.com/seo/birthday-number-vs-life-path-number-vs-soul-blueprint-1320.webp",
+      "twitter": "https://www.1320soulcode.com/seo/birthday-number-vs-life-path-number-vs-soul-blueprint-1320.webp"
+    }
+  },
+  {
+    "name": "Birthday Number uses mainly the birth day and preserves original/reduced forms",
+    "pass": true,
+    "detail": "day method and examples present"
+  },
+  {
+    "name": "Compound conventions and Birth Number terminology are tradition-dependent",
+    "pass": true,
+    "detail": "variance language present"
+  },
+  {
+    "name": "Master Numbers are not framed as spiritually superior",
+    "pass": true,
+    "detail": "visible boundary plus FAQ answer present in DOM"
+  },
+  {
+    "name": "Birthday Number is not science, prediction, or a complete personality",
+    "pass": true,
+    "detail": "explicit boundaries present"
+  },
+  {
+    "name": "No 31-entry birthday directory or personality test",
+    "pass": true,
+    "detail": {
+      "meaningRows": 11
+    }
+  },
+  {
+    "name": "Life Path uses month + day + year with correct worked example",
+    "pass": true,
+    "detail": "method and example present"
+  },
+  {
+    "name": "Life Path remains a separate calculator tool, not a duplicate calculator",
+    "pass": true,
+    "detail": {
+      "controls": 0
+    }
+  },
+  {
+    "name": "Life Path is not called Birthday Number or an S-code",
+    "pass": true,
+    "detail": "concept boundaries present"
+  },
+  {
+    "name": "Life Path meaning directory is not duplicated",
+    "pass": true,
+    "detail": "no 1–9 directory"
+  },
+  {
+    "name": "1320 is proprietary and not conventional numerology",
+    "pass": true,
+    "detail": "framework language present"
+  },
+  {
+    "name": "Foundation order is S1 → S3 → S2 → S0 everywhere",
+    "pass": true,
+    "detail": [
+      "S1 → S3 → S2 → S0",
+      "S1 → S3 → S2 → S0",
+      "S1 → S3 → S2 → S0",
+      "S1 → S3 → S2 → S0"
+    ]
+  },
+  {
+    "name": "Full map is framed as S0–S9 and numerology numbers are not 1320 outputs",
+    "pass": true,
+    "detail": "map and output boundary present"
+  },
+  {
+    "name": "User authority and non-superiority are explicit",
+    "pass": true,
+    "detail": "authority language present"
+  },
+  {
+    "name": "Three lenses are unranked and matching numbers do not imply destiny",
+    "pass": true,
+    "detail": "different-not-ranked boundary present"
+  },
+  {
+    "name": "Comparison distinguishes input, method, output, and purpose",
+    "pass": true,
+    "detail": {
+      "tableRows": 11
+    }
+  },
+  {
+    "name": "Page 03/04/05 intent boundaries are preserved",
+    "pass": true,
+    "detail": [
+      {
+        "text": "Calculate My Life Path Number",
+        "path": "/what-is-my-life-path-number",
+        "inHero": true,
+        "inArticle": false,
+        "top": 812,
+        "classes": "blueprint-secondary-link"
+      },
+      {
+        "text": "How to Find My Birthday Number",
+        "path": "/birthday-number-vs-life-path-number-vs-soul-blueprint",
+        "inHero": true,
+        "inArticle": false,
+        "top": 877,
+        "classes": ""
+      },
+      {
+        "text": "Calculate My Life Path Number",
+        "path": "/what-is-my-life-path-number",
+        "inHero": false,
+        "inArticle": true,
+        "top": 5430,
+        "classes": "blueprint-secondary-link"
+      },
+      {
+        "text": "Calculate My Life Path Number",
+        "path": "/what-is-my-life-path-number",
+        "inHero": false,
+        "inArticle": true,
+        "top": 10263,
+        "classes": "blueprint-secondary-link"
+      },
+      {
+        "text": "Calculate your Life Path Number",
+        "path": "/what-is-my-life-path-number",
+        "inHero": false,
+        "inArticle": true,
+        "top": 11626,
+        "classes": ""
+      },
+      {
+        "text": "Numerology by date of birth",
+        "path": "/numerology-by-date-of-birth-vs-soul-blueprint",
+        "inHero": false,
+        "inArticle": true,
+        "top": 11664,
+        "classes": "blueprint-secondary-link"
+      }
+    ]
+  },
+  {
+    "name": "Hero/mid/final primary CTAs all target Free Soul Blueprint",
+    "pass": true,
+    "detail": [
+      {
+        "text": "Discover My Free Soul Blueprint",
+        "path": "/free-soul-blueprint",
+        "inHero": true,
+        "inArticle": false,
+        "top": 797,
+        "classes": "gold-button"
+      },
+      {
+        "text": "Discover My Free Soul Blueprint",
+        "path": "/free-soul-blueprint",
+        "inHero": false,
+        "inArticle": true,
+        "top": 10195,
+        "classes": "gold-button"
+      },
+      {
+        "text": "Discover My Free Soul Blueprint",
+        "path": "/free-soul-blueprint",
+        "inHero": false,
+        "inArticle": true,
+        "top": 10659,
+        "classes": "gold-button"
+      }
+    ]
+  },
+  {
+    "name": "Life Path utility is visually secondary and correctly linked",
+    "pass": true,
+    "detail": [
+      {
+        "text": "Calculate My Life Path Number",
+        "path": "/what-is-my-life-path-number",
+        "inHero": true,
+        "inArticle": false,
+        "top": 812,
+        "classes": "blueprint-secondary-link"
+      },
+      {
+        "text": "Calculate My Life Path Number",
+        "path": "/what-is-my-life-path-number",
+        "inHero": false,
+        "inArticle": true,
+        "top": 5430,
+        "classes": "blueprint-secondary-link"
+      },
+      {
+        "text": "Calculate My Life Path Number",
+        "path": "/what-is-my-life-path-number",
+        "inHero": false,
+        "inArticle": true,
+        "top": 10263,
+        "classes": "blueprint-secondary-link"
+      }
+    ]
+  },
+  {
+    "name": "Pages 01 and 04 are linked contextually",
+    "pass": true,
+    "detail": [
+      {
+        "text": "what a Soul Blueprint means",
+        "path": "/what-is-a-soul-blueprint",
+        "inHero": false,
+        "inArticle": true,
+        "top": 7947,
+        "classes": ""
+      },
+      {
+        "text": "Read: What Is a Soul Blueprint?",
+        "path": "/what-is-a-soul-blueprint",
+        "inHero": false,
+        "inArticle": true,
+        "top": 10726,
+        "classes": "blueprint-secondary-link"
+      },
+      {
+        "text": "Numerology by date of birth",
+        "path": "/numerology-by-date-of-birth-vs-soul-blueprint",
+        "inHero": false,
+        "inArticle": true,
+        "top": 11664,
+        "classes": "blueprint-secondary-link"
+      },
+      {
+        "text": "What a Soul Blueprint means",
+        "path": "/what-is-a-soul-blueprint",
+        "inHero": false,
+        "inArticle": true,
+        "top": 11696,
+        "classes": ""
+      }
+    ]
+  },
+  {
+    "name": "First 1280px viewport has exactly one dominant gold CTA",
+    "pass": true,
+    "detail": [
+      "Discover My Free Soul Blueprint"
+    ]
+  },
+  {
+    "name": "Desktop comparison table is visible and cards hidden",
+    "pass": true,
+    "detail": {
+      "table": true,
+      "cards": false
+    }
+  },
+  {
+    "name": "No horizontal overflow at 1280px",
+    "pass": true,
+    "detail": {
+      "scrollWidth": 1280,
+      "clientWidth": 1280
+    }
+  },
+  {
+    "name": "Hero answer precedes artwork and no Birthday Number form exists",
+    "pass": true,
+    "detail": {
+      "answerBeforeArt": true,
+      "controls": 0
+    }
+  },
+  {
+    "name": "Hero has no checkout, report, session, or email-gate pressure",
+    "pass": true,
+    "detail": false
+  },
+  {
+    "name": "Artwork alt carries the required three-lens comparison",
+    "pass": true,
+    "detail": "Comparison of Birthday Number 14/5, Life Path Number 3 and the 1320 Soul Blueprint Foundation Mirrors S1, S3, S2 and S0"
+  },
+  {
+    "name": "No Blueprint Resolver, Birthday result route, or calculation API call",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "Mobile cards replace comparison table at 390px",
+    "pass": true,
+    "detail": {
+      "tableVisible": false,
+      "cardsVisible": true,
+      "cardCount": 11,
+      "overflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390
+    }
+  },
+  {
+    "name": "No horizontal overflow at 390px",
+    "pass": true,
+    "detail": {
+      "tableVisible": false,
+      "cardsVisible": true,
+      "cardCount": 11,
+      "overflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390
+    }
+  },
+  {
+    "name": "Linked route /free-soul-blueprint is live",
+    "pass": true,
+    "detail": 200
+  },
+  {
+    "name": "Linked route /what-is-my-life-path-number is live",
+    "pass": true,
+    "detail": 200
+  },
+  {
+    "name": "Linked route /what-is-a-soul-blueprint is live",
+    "pass": true,
+    "detail": 200
+  },
+  {
+    "name": "Linked route /numerology-by-date-of-birth-vs-soul-blueprint is live",
+    "pass": true,
+    "detail": 200
+  },
+  {
+    "name": "No production console/page errors",
+    "pass": true,
+    "detail": []
+  }
+]

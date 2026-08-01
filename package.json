@@ -68,6 +68,8 @@
     "build:s5-from-xlsx": "npx tsx scripts/build-s5-json-from-xlsx.ts",
     "import:s6-master": "npx tsx scripts/import-s6-master.ts",
     "smoke:s6-master": "npx tsx scripts/smoke-s6-master.ts",
+    "smoke:blueprint-experience-api": "npx tsx scripts/smoke-blueprint-experience-api.ts",
+    "export:experience-profile-fixtures": "npx tsx scripts/export-experience-profile-fixtures.ts",
     "smoke:phase2a": "npx tsx scripts/smoke-phase2a.ts",
     "db:migrate": "npx tsx scripts/db-migrate.ts",
     "sync:backgrounds": "npx tsx scripts/sync-full-report-backgrounds.ts",

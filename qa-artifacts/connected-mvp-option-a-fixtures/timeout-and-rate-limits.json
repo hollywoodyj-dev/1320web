@@ -1,0 +1,28 @@
+{
+  "client_timeout_ms": 10000,
+  "rate_limits": {
+    "resolve": {
+      "endpoint": "POST /v1/blueprints/resolve",
+      "limit": 30,
+      "window_ms": 60000,
+      "description": "30 requests per client per rolling 60 seconds"
+    },
+    "profile": {
+      "endpoint": "GET /v1/blueprints/{blueprint_id}/experience-profile",
+      "limit": 120,
+      "window_ms": 60000,
+      "description": "120 requests per client per rolling 60 seconds"
+    },
+    "health": {
+      "endpoint": "GET /v1/health",
+      "limit": 30,
+      "window_ms": 60000,
+      "description": "30 requests per anonymous/client id per rolling 60 seconds"
+    }
+  },
+  "headers": [
+    "X-RateLimit-Limit",
+    "X-RateLimit-Remaining",
+    "X-RateLimit-Reset"
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.1320soulcode.com/schemas/blueprint-experience/experience-profile.schema.json",
+  "title": "1320 Blueprint Experience Profile Response v1",
+  "description": "Canonical Nova Experience API v1 success response. Locked under Wisewave Option A for Connected Lifestyle Mode. Coze must validate against this schema — do not invent required fields.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "request_id",
+    "api_version",
+    "profile_version",
+    "blueprint_id",
+    "signature",
+    "foundation_order",
+    "foundation",
+    "experience_profile",
+    "governance"
+  ],
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "api_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "profile_version": {
+      "type": "string",
+      "const": "1320-experience-profile-v1"
+    },
+    "blueprint_id": {
+      "type": "string",
+      "minLength": 6,
+      "maxLength": 128
+    },
+    "signature": {
+      "type": "string",
+      "description": "Backend-only confirmation token (public foundation signature). Must not be sent to LLM, Mini App UI, or share cards.",
+      "pattern": "^S1-[^/]+/S3-[^/]+/S2-[^/]+/S0-[^/]+$"
+    },
+    "foundation_order": {
+      "type": "array",
+      "const": ["S1", "S3", "S2", "S0"]
+    },
+    "foundation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["s1", "s3", "s2", "s0"],
+      "properties": {
+        "s1": { "$ref": "#/$defs/FoundationSegment" },
+        "s3": { "$ref": "#/$defs/FoundationSegment" },
+        "s2": { "$ref": "#/$defs/FoundationSegment" },
+        "s0": { "$ref": "#/$defs/FoundationSegment" }
+      }
+    },
+    "experience_profile": {
+      "$ref": "#/$defs/ExperienceProfile"
+    },
+    "governance": {
+      "$ref": "#/$defs/Governance"
+    }
+  },
+  "unevaluatedProperties": false,
+  "$defs": {
+    "FoundationSegment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "display_name"],
+      "properties": {
+        "code": { "type": "string", "minLength": 1 },
+        "display_name": { "type": "string", "minLength": 1 }
+      }
+    },
+    "ReadingTraits": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "core_themes",
+        "preferred_depth",
+        "preferred_styles",
+        "learning_orientation"
+      ],
+      "properties": {
+        "core_themes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "preferred_depth": {
+          "type": "string",
+          "enum": ["light", "accessible", "medium", "deep", "professional"]
+        },
+        "preferred_styles": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "learning_orientation": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "ExperienceProfile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "essence_traits",
+        "style_traits",
+        "palette_traits",
+        "texture_traits",
+        "visual_traits",
+        "travel_traits",
+        "reading_traits",
+        "brand_affinity_traits"
+      ],
+      "properties": {
+        "essence_traits": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "style_traits": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "palette_traits": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "texture_traits": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "visual_traits": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "travel_traits": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "reading_traits": {
+          "$ref": "#/$defs/ReadingTraits"
+        },
+        "brand_affinity_traits": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "Governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "symbolic_only",
+        "non_predictive",
+        "non_diagnostic",
+        "user_agency_required"
+      ],
+      "properties": {
+        "symbolic_only": { "const": true },
+        "non_predictive": { "const": true },
+        "non_diagnostic": { "const": true },
+        "user_agency_required": { "const": true }
+      }
+    }
+  }
+}

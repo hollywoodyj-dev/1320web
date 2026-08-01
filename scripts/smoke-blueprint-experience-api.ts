@@ -90,6 +90,17 @@ expectError(
 expectError(
   () =>
     validateResolveRequest({
+      birth_date: "2030-01-01",
+      locale: "en",
+      purpose: "combined",
+      consent: { blueprint_generation: true, personalized_expression: true },
+    }),
+  "INVALID_BIRTH_DATE",
+);
+
+expectError(
+  () =>
+    validateResolveRequest({
       birth_date: "1980-05-22",
       locale: "fr",
       purpose: "combined",

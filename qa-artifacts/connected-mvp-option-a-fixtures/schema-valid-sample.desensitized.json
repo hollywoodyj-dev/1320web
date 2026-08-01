@@ -1,0 +1,102 @@
+{
+  "request_id": "req_69c522dbb607d496882f",
+  "api_version": "1.0",
+  "profile_version": "1320-experience-profile-v1",
+  "blueprint_id": "bp_fixture_bp_UzEtM",
+  "signature": "S1-**/S3-**/S2-**/S0-**",
+  "foundation_order": [
+    "S1",
+    "S3",
+    "S2",
+    "S0"
+  ],
+  "foundation": {
+    "s1": {
+      "code": "S1-**",
+      "display_name": "转化者"
+    },
+    "s3": {
+      "code": "S3-**",
+      "display_name": "S3-03"
+    },
+    "s2": {
+      "code": "S2-**",
+      "display_name": "灵魂震荡镜像"
+    },
+    "s0": {
+      "code": "S0-**",
+      "display_name": "自我价值幻象"
+    }
+  },
+  "experience_profile": {
+    "essence_traits": [
+      "内省",
+      "象征性",
+      "安静地表达",
+      "转化性",
+      "有深度",
+      "镜像觉察"
+    ],
+    "style_traits": [
+      "有结构",
+      "层次感",
+      "柔和对比",
+      "流动对比"
+    ],
+    "palette_traits": [
+      "深蓝",
+      "矿物蓝",
+      "柔金"
+    ],
+    "texture_traits": [
+      "软羊毛",
+      "丝质",
+      "哑光皮革"
+    ],
+    "visual_traits": [
+      "门槛",
+      "影中之光",
+      "更新",
+      "开阔地平线",
+      "回归自我"
+    ],
+    "travel_traits": [
+      "慢速探索",
+      "文化深度",
+      "安静更新"
+    ],
+    "reading_traits": {
+      "core_themes": [
+        "自我认识",
+        "意义",
+        "内在权威",
+        "转化",
+        "自我价值"
+      ],
+      "preferred_depth": "deep",
+      "preferred_styles": [
+        "反思性非虚构",
+        "心理学",
+        "哲学",
+        "文学小说"
+      ],
+      "learning_orientation": [
+        "模式识别",
+        "内在探问",
+        "生活整合"
+      ]
+    },
+    "brand_affinity_traits": [
+      "工艺",
+      "经典感",
+      "安静存在",
+      "安静奢华"
+    ]
+  },
+  "governance": {
+    "symbolic_only": true,
+    "non_predictive": true,
+    "non_diagnostic": true,
+    "user_agency_required": true
+  }
+}

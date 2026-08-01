@@ -19,5 +19,12 @@ export function parseValidBirthDate(value: string): { year: number; month: numbe
     throw new BlueprintExperienceApiError("INVALID_BIRTH_DATE");
   }
 
+  // Birth dates must not be in the future (UTC calendar day).
+  const today = new Date();
+  const todayUtc = Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate());
+  if (date.getTime() > todayUtc) {
+    throw new BlueprintExperienceApiError("INVALID_BIRTH_DATE");
+  }
+
   return { year, month, day };
 }

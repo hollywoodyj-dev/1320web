@@ -36,4 +36,14 @@ Never returned: formulas, S3 raw/mapping tables, Full Report prose, birth dates,
 
 ```bash
 npx tsx scripts/smoke-blueprint-experience-api.ts
+npx tsx scripts/export-experience-profile-fixtures.ts
 ```
+
+## Option A (Connected Lifestyle)
+
+Wisewave locked Experience API v1 as Connected source of truth.
+
+- Schema: `experience-profile.schema.json`
+- Delivery pack: `docs/governance/CONNECTED_MVP_OPTION_A_NOVA_DELIVERY.md`
+- Fixtures: `qa-artifacts/connected-mvp-option-a-fixtures/`
+- Contracts: `lib/blueprint-experience-api/contracts.ts`

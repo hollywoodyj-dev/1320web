@@ -1,0 +1,169 @@
+{
+  "generated_at": "2026-08-01T08:36:53.480Z",
+  "option": "A",
+  "canonical_api": {
+    "resolve": "POST /v1/blueprints/resolve",
+    "recovery": "GET /v1/blueprints/{blueprint_id}/experience-profile",
+    "health": "GET /v1/health",
+    "rewrite_prefix": "/api/v1"
+  },
+  "versions": {
+    "api_version": "1.0",
+    "profile_version": "1320-experience-profile-v1"
+  },
+  "schema_path": "docs/specs/blueprint-experience-api/experience-profile.schema.json",
+  "base_urls": {
+    "development": "http://localhost:3000",
+    "staging_approved": "https://www.1320soulcode.com",
+    "production": "https://www.1320soulcode.com",
+    "dedicated_api_future": "https://api.1320soulcode.com",
+    "dedicated_staging_future": "https://staging-api.1320soulcode.com"
+  },
+  "timeout_ms": {
+    "recommended_client": 10000
+  },
+  "rate_limits": {
+    "resolve": {
+      "endpoint": "POST /v1/blueprints/resolve",
+      "limit": 30,
+      "window_ms": 60000,
+      "description": "30 requests per client per rolling 60 seconds"
+    },
+    "profile": {
+      "endpoint": "GET /v1/blueprints/{blueprint_id}/experience-profile",
+      "limit": 120,
+      "window_ms": 60000,
+      "description": "120 requests per client per rolling 60 seconds"
+    },
+    "health": {
+      "endpoint": "GET /v1/health",
+      "limit": 30,
+      "window_ms": 60000,
+      "description": "30 requests per anonymous/client id per rolling 60 seconds"
+    }
+  },
+  "staging_client_id": "coze-lifestyle-staging-v1",
+  "fixtures": [
+    {
+      "fixture_id": "birth-1990-01-15",
+      "scenario": "resolve_by_birth_date",
+      "timestamp": "2026-08-01T08:36:53.457Z",
+      "endpoint": "POST /v1/blueprints/resolve",
+      "http_status": 200,
+      "duration_ms": 8,
+      "api_version": "1.0",
+      "profile_version": "1320-experience-profile-v1",
+      "masked_signature": "S1-**/S3-**/S2-**/S0-**",
+      "validation": "passed",
+      "error_code": null,
+      "notes": [
+        "Desensitized fixture: signature and foundation codes masked.",
+        "experience_profile traits retained for Translation Plan mapping.",
+        "Birth date absent from response body."
+      ]
+    },
+    {
+      "fixture_id": "birth-1980-05-22",
+      "scenario": "resolve_by_birth_date",
+      "timestamp": "2026-08-01T08:36:53.470Z",
+      "endpoint": "POST /v1/blueprints/resolve",
+      "http_status": 200,
+      "duration_ms": 2,
+      "api_version": "1.0",
+      "profile_version": "1320-experience-profile-v1",
+      "masked_signature": "S1-**/S3-**/S2-**/S0-**",
+      "validation": "passed",
+      "error_code": null,
+      "notes": [
+        "Desensitized fixture: signature and foundation codes masked.",
+        "experience_profile traits retained for Translation Plan mapping.",
+        "Birth date absent from response body."
+      ]
+    },
+    {
+      "fixture_id": "birth-2000-02-29",
+      "scenario": "resolve_by_birth_date",
+      "timestamp": "2026-08-01T08:36:53.474Z",
+      "endpoint": "POST /v1/blueprints/resolve",
+      "http_status": 200,
+      "duration_ms": 1,
+      "api_version": "1.0",
+      "profile_version": "1320-experience-profile-v1",
+      "masked_signature": "S1-**/S3-**/S2-**/S0-**",
+      "validation": "passed",
+      "error_code": null,
+      "notes": [
+        "Desensitized fixture: signature and foundation codes masked.",
+        "experience_profile traits retained for Translation Plan mapping.",
+        "Birth date absent from response body."
+      ]
+    },
+    {
+      "fixture_id": "recovery-1980-05-22",
+      "scenario": "recovery_by_blueprint_id",
+      "timestamp": "2026-08-01T08:36:53.476Z",
+      "endpoint": "GET /v1/blueprints/{blueprint_id}/experience-profile",
+      "http_status": 200,
+      "duration_ms": 1,
+      "api_version": "1.0",
+      "profile_version": "1320-experience-profile-v1",
+      "masked_signature": "S1-**/S3-**/S2-**/S0-**",
+      "validation": "passed",
+      "error_code": null,
+      "notes": [
+        "Returning-user recovery path.",
+        "Local blueprint_id is reference only; Nova confirmation required for connected."
+      ]
+    },
+    {
+      "fixture_id": "invalid-birth-date",
+      "scenario": "invalid_birth_date",
+      "timestamp": "2026-08-01T08:36:53.478Z",
+      "endpoint": "POST /v1/blueprints/resolve",
+      "http_status": 400,
+      "duration_ms": 0,
+      "api_version": null,
+      "profile_version": null,
+      "masked_signature": null,
+      "validation": "n/a",
+      "error_code": "INVALID_BIRTH_DATE",
+      "notes": [
+        "Error-path fixture. No Connected eligibility."
+      ]
+    },
+    {
+      "fixture_id": "future-birth-date",
+      "scenario": "future_birth_date",
+      "timestamp": "2026-08-01T08:36:53.479Z",
+      "endpoint": "POST /v1/blueprints/resolve",
+      "http_status": 400,
+      "duration_ms": 0,
+      "api_version": null,
+      "profile_version": null,
+      "masked_signature": null,
+      "validation": "n/a",
+      "error_code": "INVALID_BIRTH_DATE",
+      "notes": [
+        "Error-path fixture. No Connected eligibility."
+      ]
+    },
+    {
+      "fixture_id": "health-ok",
+      "scenario": "health_probe",
+      "timestamp": "2026-08-01T08:36:53.480Z",
+      "endpoint": "GET /v1/health",
+      "http_status": 200,
+      "duration_ms": 0,
+      "api_version": "1.0",
+      "profile_version": null,
+      "masked_signature": null,
+      "validation": "n/a",
+      "error_code": null,
+      "notes": [
+        "Health route returns status/api_version/service availability flags.",
+        "No auth required. No infrastructure disclosure.",
+        "Live HTTP probe: GET /api/v1/health on staging base URL after credential deploy."
+      ]
+    }
+  ]
+}

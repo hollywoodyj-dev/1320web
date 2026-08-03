@@ -68,9 +68,9 @@ Prefer a small number of substantial topic centres over thin variant pages.
 | **P0** | Technical SEO + measurement foundation |
 | **P1** | What Is a Soul Blueprint? → `/what-is-a-soul-blueprint` · ✅ Accepted and Closed (Wisewave 2026-07-31) |
 | **P2** | Life Path Number vs Soul Blueprint → `/life-path-number-vs-soul-blueprint` · ✅ Accepted and Closed (Wisewave 2026-07-31) |
-| **P3** | What Is My Life Path Number? |
-| **P4** | Numerology by Date of Birth vs Soul Blueprint |
-| **P5** | Birthday Number vs Life Path Number vs Soul Blueprint |
+| **P3** | What Is My Life Path Number? → `/what-is-my-life-path-number` · ✅ Accepted and Closed (Wisewave) |
+| **P4** | Numerology by Date of Birth vs Soul Blueprint → `/numerology-by-date-of-birth-vs-soul-blueprint` · ✅ Accepted and Closed (Wisewave 2026-07-31) |
+| **P5** | Birthday Number vs Life Path Number vs Soul Blueprint → `/birthday-number-vs-life-path-number-vs-soul-blueprint` · ✅ Accepted and Closed (Wisewave 2026-08-03) |
 | **P6** | What Does Your Birthday Mean? |
 | **P7** | Numerology Reading vs Soul Blueprint Report |
 | **P8** | How to Find Your Life Purpose Without Forcing an Answer |
@@ -95,9 +95,11 @@ After Phase 0 + Lumen validation:
 
 **Page 04 · Numerology by Date of Birth vs Soul Blueprint** is Accepted and Closed as the Birth-Date Numerology category bridge.
 
-**Boundary:** Page 03 owns Life Path calculation; Page 04 owns birth-date numerology category comparison; Page 05 owns Birthday Number vs Life Path vs Soul Blueprint; Page 06 owns Birthday Meaning. No calculator duplication on comparison pages.
+**Page 05 · Birthday Number vs Life Path Number vs Soul Blueprint** is Accepted and Closed as the Birthday Number definition and three-way comparison page.
 
-Next authorized content implementation may proceed under this locked architecture (P5 onward after approval).
+**Boundary:** Page 03 owns Life Path calculation; Page 04 owns birth-date numerology umbrella-category comparison; Page 05 owns Birthday Number definition and Birthday Number vs Life Path vs Soul Blueprint comparison; Page 06 owns broader Birthday Meaning and what a birthday can / cannot determine. No calculator duplication on comparison pages.
+
+Next authorized content implementation may proceed under this locked architecture (P6 onward after separate authorization).
 
 Page 01 content must be written and approved before Life Path discovery pages publish.
 

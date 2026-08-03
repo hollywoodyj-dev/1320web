@@ -129,7 +129,7 @@ export const PAGE05_HOW_CALCULATE = {
   ],
   strip: ["5 → 5", "14 → 14/5", "22 → 22", "29 → 29/11", "31 → 31/4"],
   boundary:
-    "Numerology traditions do not all display or interpret compound numbers in exactly the same way. The page should explain the method it uses rather than presenting one convention as universal.",
+    "Numerology traditions do not all display or interpret compound numbers in exactly the same way. On this page, the original birth day remains visible alongside its reduced form, with 11 and 22 preserved where applicable.",
 };
 
 export const PAGE05_MEANINGS = {

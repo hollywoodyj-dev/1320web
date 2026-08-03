@@ -1,10 +1,11 @@
 # Page 05 · Birthday Number vs Life Path Number vs Soul Blueprint — QA Return
 
-**Status:** ✅ PASS · Ready for Wisewave acceptance  
+**Status:** ✅ PASS · HOLD cleared · Ready for Wisewave Accepted and Closed  
 **Canonical URL:** `https://www.1320soulcode.com/birthday-number-vs-life-path-number-vs-soul-blueprint`  
 **Spec:** Content & SEO Spec v1.0  
 **Date:** 2026-08-01  
-**Implementation commit:** `a3c4d6c`
+**Implementation commit:** `a3c4d6c`  
+**Copy correction:** `1e9fc8c` (2026-08-03)
 
 ## Lumen production QA
 
@@ -28,17 +29,30 @@ Evidence:
 - `qa-artifacts/seo-page05-production-a3c4d6c/`
 - `scripts/lumen-qa-seo-page05.ts`
 
-## OG artwork (series-matched correction)
+## Wisewave HOLD — one-line copy correction (cleared)
 
-Lumen provided series-matched corrected artwork (1200×630 WebP). Nova promotes it to the canonical production path for Wisewave acceptance:
+Under **How Do You Calculate a Birthday Number?**, the internal editorial instruction was replaced with visitor-facing method copy:
+
+> Numerology traditions do not all display or interpret compound numbers in exactly the same way. On this page, the original birth day remains visible alongside its reduced form, with 11 and 22 preserved where applicable.
+
+**Targeted production smoke (2026-08-03, commit `1e9fc8c`):**
+
+- Internal instruction no longer visible
+- Replacement copy present
+- HTTP 200
+- No layout overflow (1280 / 390) and no console regression observed
+
+Full 49-point QA rerun not required (sentence-only patch).
+
+## OG artwork (series-matched correction)
 
 | Asset | Path | SHA-256 |
 |---|---|---|
-| Canonical (deploy) | `public/seo/birthday-number-vs-life-path-number-vs-soul-blueprint-1320.webp` | `627110EE34BDEC047335E9C4E294E1F6EADB2CDA26364042DE6B858230FA99AB` |
+| Canonical (live) | `public/seo/birthday-number-vs-life-path-number-vs-soul-blueprint-1320.webp` | `627110EE34BDEC047335E9C4E294E1F6EADB2CDA26364042DE6B858230FA99AB` |
 | Source label | `…-1320-series-v3.webp` | same hash |
 
-Framing: Birthday `14/5` · Life Path `3` · Foundation `S1 → S3 → S2 → S0` · three parallel lenses (not ranked).
+Framing: Birthday `14/5` · Life Path `3` · Foundation `S1 → S3 → S2 → S0` · three parallel lenses (not ranked). Visually confirmed live by Wisewave.
 
 ## Acceptance recommendation
 
-Accept Page 05 and close the production QA gate after confirming the series-v3 OG is live. Page 06 may proceed under the locked SEO architecture when its content/spec is authorized.
+Mark **Page 05 · Birthday Number vs Life Path Number vs Soul Blueprint — Accepted and Closed.**

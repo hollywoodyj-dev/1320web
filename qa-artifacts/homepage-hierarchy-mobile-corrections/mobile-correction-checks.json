@@ -1,0 +1,26 @@
+{
+  "stepIconSizes": [
+    {
+      "w": 72,
+      "h": 72
+    },
+    {
+      "w": 72,
+      "h": 72
+    },
+    {
+      "w": 72,
+      "h": 72
+    },
+    {
+      "w": 72,
+      "h": 72
+    }
+  ],
+  "gridGap": "40px 12px",
+  "gridMarginTop": "44px",
+  "previewGapFromGrid": 56,
+  "subscribeVisible": false,
+  "hasMantra": true,
+  "overflow": false
+}

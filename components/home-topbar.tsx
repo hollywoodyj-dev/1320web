@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { CONVERSION_NAV } from "@/lib/site-nav";
+import { GENERATE_CODE_CTA, HOMEPAGE_PRIMARY_NAV } from "@/lib/site-nav";
 import { TopbarShell } from "@/components/topbar-shell";
 
 export function HomeTopbar() {
@@ -29,10 +29,13 @@ export function HomeTopbar() {
           </div>
         </div>
       }
-      nav={CONVERSION_NAV}
+      nav={HOMEPAGE_PRIMARY_NAV}
       linkClassName={(item) =>
         item.href === "/" && item.label === "HOME" ? "active" : undefined
       }
+      ctaHref={GENERATE_CODE_CTA.href}
+      ctaLabel={GENERATE_CODE_CTA.label}
+      ctaClassName="gold-button topbar-cta"
     />
   );
 }

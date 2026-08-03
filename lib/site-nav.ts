@@ -22,9 +22,18 @@ export const CONVERSION_NAV: NavLink[] = [
   { href: "/faq", label: "FAQ", matchPrefix: true },
 ];
 
+/** Homepage desktop nav — simplified; primary CTA sits on the right. */
+export const HOMEPAGE_PRIMARY_NAV: NavLink[] = [
+  { href: "/", label: "HOME" },
+  { href: "/about-1320", label: "ABOUT", matchPrefix: true },
+  { href: "/your-code", label: "YOUR CODE", matchPrefix: true },
+  { href: "/blueprint", label: "BLUEPRINT", matchPrefix: true },
+  { href: "/faq", label: "FAQ", matchPrefix: true },
+];
+
 export const PRIMARY_NAV: NavLink[] = CONVERSION_NAV;
 
-export const HOMEPAGE_NAV = CONVERSION_NAV;
+export const HOMEPAGE_NAV = HOMEPAGE_PRIMARY_NAV;
 
 export const GENERATE_CODE_CTA = {
   href: "/your-code",
@@ -69,15 +78,14 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
   },
 ];
 
-/** Homepage footer columns — same destinations, frozen EXPLORE/RESOURCES/COMPANY labels (2/15 layout). */
+/** Homepage footer columns — compact; Origin Story retained in brand legal row. */
 export const HOMEPAGE_FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "EXPLORE",
     links: [
       { href: "/about-1320", label: "About 1320" },
-      { href: "/about-1320#origin-story", label: "Origin Story" },
-      { href: "/blueprint", label: "How It Works" },
       { href: "/blueprint", label: "Soul Blueprint" },
+      { href: "/your-code", label: "Your Code" },
       { href: "/faq", label: "FAQ" },
     ],
   },
@@ -87,18 +95,7 @@ export const HOMEPAGE_FOOTER_COLUMNS: FooterColumn[] = [
       { href: "/guides", label: "Guides" },
       { href: SAMPLE_REPORT_HREF, label: "Sample Report" },
       { href: "/full-report", label: "Full Report" },
-      { href: "/booking", label: "Personal Integration Session" },
-    ],
-  },
-  {
-    title: "COMPANY",
-    links: [
-      { href: "/about-1320", label: "About Us" },
-      { href: "/about-1320", label: "Our Mission" },
-      { href: "/booking", label: "Contact" },
-      { href: "/privacy", label: "Privacy Policy" },
-      { href: "/terms", label: "Terms of Service" },
-      { href: "/disclaimer", label: "Disclaimer" },
+      { href: "/booking", label: "Personal Integration" },
     ],
   },
 ];

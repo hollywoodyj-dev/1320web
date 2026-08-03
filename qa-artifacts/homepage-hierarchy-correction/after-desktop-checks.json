@@ -1,0 +1,38 @@
+{
+  "sections": [
+    {
+      "className": "hero-panel home-section home-section--hero",
+      "h2": null
+    },
+    {
+      "className": "home-section entry-panel entry-panel--refined",
+      "h2": "Start with your birth date"
+    },
+    {
+      "className": "home-section home-section--prose homepage-what-is",
+      "h2": "What is 1320?"
+    },
+    {
+      "className": "home-section home-section--foundations",
+      "h2": "Your Four Foundation Mirrors"
+    },
+    {
+      "className": "home-section homepage-path-report",
+      "h2": "From Recognition to Integration"
+    },
+    {
+      "className": "home-section home-section--closing",
+      "h2": "Begin with your Soul Blueprint."
+    }
+  ],
+  "elevated": 3,
+  "heroDetailMarginTop": "28px",
+  "heroMinHeight": "650px",
+  "hasOriginSection": false,
+  "hasStandaloneBoundarySection": false,
+  "hasGuidesLink": true,
+  "hasDefinitionLink": true,
+  "seoClusterStillInWhatIs": false,
+  "hasNavCta": true,
+  "overflow": false
+}

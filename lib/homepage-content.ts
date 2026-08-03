@@ -1,4 +1,4 @@
-/** Homepage copy — Refinement Spec v1.0 (Wisewave). */
+/** Homepage copy — hierarchy correction pass (Wisewave). Preserve brand language. */
 
 import { SAMPLE_REPORT_HREF } from "@/lib/site-nav";
 
@@ -32,21 +32,9 @@ export const HOMEPAGE_WHAT_IS = {
     href: "/what-is-a-soul-blueprint",
     label: "What is a Soul Blueprint?",
   },
-  comparisonLink: {
-    href: "/life-path-number-vs-soul-blueprint",
-    label: "Life Path Number vs Soul Blueprint",
-  },
-  calculatorLink: {
-    href: "/what-is-my-life-path-number",
-    label: "What Is My Life Path Number?",
-  },
-  birthDateNumerologyLink: {
-    href: "/numerology-by-date-of-birth-vs-soul-blueprint",
-    label: "Numerology by Date of Birth vs Soul Blueprint",
-  },
-  birthdayNumberLink: {
-    href: "/birthday-number-vs-life-path-number-vs-soul-blueprint",
-    label: "Birthday Number vs Life Path Number vs Soul Blueprint",
+  guidesLink: {
+    href: "/guides",
+    label: "Guides",
   },
 };
 
@@ -94,15 +82,13 @@ export const HOMEPAGE_PILLARS = [
   },
 ] as const;
 
-export const HOMEPAGE_NOT_THIS = {
-  eyebrow: "BOUNDARY",
-  title: "A mirror — not a label.",
-  body: [
-    "1320 is symbolic reflection, not prediction, diagnosis, therapy, or professional advice.",
-    "Your blueprint is not a box. It is a mirror for awareness, choice, and integration.",
-  ],
-  cta: "Read Full Disclaimer",
+/** Short inline boundary — not a full homepage section/card. */
+export const HOMEPAGE_BOUNDARY_INLINE =
+  "1320 is a mirror — not a label, prediction, diagnosis, or fixed identity.";
+
+export const HOMEPAGE_BOUNDARY_LINK = {
   href: "/disclaimer",
+  label: "Read Full Disclaimer",
 };
 
 export const HOMEPAGE_HOW = {
@@ -185,14 +171,9 @@ export const HOMEPAGE_FULL_REPORT_PREVIEW = {
   sampleHref: SAMPLE_REPORT_HREF,
 };
 
-export const HOMEPAGE_REFLECTION = {
-  eyebrow: "BOUNDARY",
-  title: "Reflection over prediction.",
-  body: [
-    "1320 is not here to tell you what will happen.",
-    "It is here to help you see what is already moving within you — so your next choice can come from clarity, not fear.",
-  ],
-};
+/** Short inline reflection — lives inside final CTA, not a standalone card. */
+export const HOMEPAGE_REFLECTION_INLINE =
+  "Reflection over prediction — so your next choice can come from clarity, not fear.";
 
 export const HOMEPAGE_FINAL_CTA = {
   headline: "Begin with your Soul Blueprint.",
@@ -205,6 +186,7 @@ export const HOMEPAGE_FINAL_CTA = {
 export const HOMEPAGE_FOOTER_BRAND =
   "1320 is a reflective intelligence platform built around the Soul Blueprint — a symbolic mirror for self-recognition, reflection, and integration.";
 
+/** Retained for About / Origin Story links — not rendered as a homepage section. */
 export const HOMEPAGE_ORIGIN = {
   eyebrow: "ORIGIN",
   title: "Born from a Number. Built into a System.",

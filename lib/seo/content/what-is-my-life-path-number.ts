@@ -135,7 +135,7 @@ export const WHAT_IS_MY_LIFE_PATH_NUMBER_ARTICLE: SeoArticle = {
       title: "Birthday Number vs Life Path Number vs Soul Blueprint",
       href: "/birthday-number-vs-life-path-number-vs-soul-blueprint",
     },
-    { title: "Calculate your Life Path Number", href: "/what-is-my-life-path-number" },
+    { title: "What Does Your Birthday Mean?", href: "/what-does-your-birthday-mean" },
     {
       title: "Numerology by date of birth",
       href: "/numerology-by-date-of-birth-vs-soul-blueprint",

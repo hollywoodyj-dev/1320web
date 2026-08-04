@@ -151,6 +151,7 @@ export const NUMEROLOGY_BY_DOB_VS_SOUL_BLUEPRINT_ARTICLE: SeoArticle = {
       title: "Birthday Number vs Life Path Number vs Soul Blueprint",
       href: "/birthday-number-vs-life-path-number-vs-soul-blueprint",
     },
+    { title: "What Does Your Birthday Mean?", href: "/what-does-your-birthday-mean" },
     { title: "What a Soul Blueprint means", href: "/what-is-a-soul-blueprint" },
     { title: "Life Path Number vs Soul Blueprint", href: "/life-path-number-vs-soul-blueprint" },
     { title: "Calculate your Life Path Number", href: "/what-is-my-life-path-number" },

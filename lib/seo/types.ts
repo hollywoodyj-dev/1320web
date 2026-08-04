@@ -35,6 +35,7 @@ export type SeoArticleCta = {
     | "life_path_comparison"
     | "birth_date_numerology"
     | "birthday_meaning"
+    | "birthday_number_comparison"
     | "related"
     | "other";
 };

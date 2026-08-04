@@ -82,6 +82,16 @@ const nextConfig: NextConfig = {
         destination: "/birthday-number-vs-life-path-number-vs-soul-blueprint",
         statusCode: 301,
       },
+      {
+        source: "/guides/what-does-your-birthday-mean",
+        destination: "/what-does-your-birthday-mean",
+        statusCode: 301,
+      },
+      {
+        source: "/guides/what-does-your-birthday-mean/",
+        destination: "/what-does-your-birthday-mean",
+        statusCode: 301,
+      },
     ];
   },
   async headers() {

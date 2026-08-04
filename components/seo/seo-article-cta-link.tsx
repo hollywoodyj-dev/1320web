@@ -83,6 +83,9 @@ export function SeoArticleCtaLink({
     if (cta.intent === "birthday_meaning") {
       trackEvent("seo_to_birthday_meaning", props);
     }
+    if (cta.intent === "birthday_number_comparison") {
+      trackEvent("seo_to_birthday_number_comparison", props);
+    }
     if (cta.intent === "session") trackEvent("seo_to_session", props);
   };
 

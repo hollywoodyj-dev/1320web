@@ -23,6 +23,7 @@ export const ABOUT_HERO = {
       href: "/birthday-number-vs-life-path-number-vs-soul-blueprint",
       label: "Birthday Number vs Life Path Number vs Soul Blueprint",
     },
+    { href: "/what-does-your-birthday-mean", label: "What Does Your Birthday Mean?" },
     { href: "/blueprint", label: "Explore the Blueprint" },
     { href: SAMPLE_REPORT_HREF, label: "View Sample Report" },
   ],

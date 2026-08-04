@@ -148,6 +148,7 @@ export const BIRTHDAY_NUMBER_VS_LIFE_PATH_VS_SOUL_BLUEPRINT_ARTICLE: SeoArticle 
     },
   ],
   related: [
+    { title: "What Does Your Birthday Mean?", href: "/what-does-your-birthday-mean" },
     { title: "Calculate your Life Path Number", href: "/what-is-my-life-path-number" },
     {
       title: "Numerology by date of birth",

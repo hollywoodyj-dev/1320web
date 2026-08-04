@@ -125,6 +125,7 @@ export const WHAT_IS_A_SOUL_BLUEPRINT_ARTICLE: SeoArticle = {
       title: "Birthday Number vs Life Path Number vs Soul Blueprint",
       href: "/birthday-number-vs-life-path-number-vs-soul-blueprint",
     },
+    { title: "What Does Your Birthday Mean?", href: "/what-does-your-birthday-mean" },
     { title: "How the 1320 Blueprint works", href: "/blueprint" },
     { title: "Discover your Free Soul Blueprint", href: FREE_BLUEPRINT_HREF },
     { title: "Explore the Full Soul Blueprint Report", href: "/full-report" },

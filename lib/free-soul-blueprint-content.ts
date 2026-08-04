@@ -75,6 +75,10 @@ export const FREE_SOUL_BLUEPRINT_WHY = {
     href: "/birthday-number-vs-life-path-number-vs-soul-blueprint",
     label: "Birthday Number vs Life Path Number vs Soul Blueprint",
   },
+  birthdayMeaningLink: {
+    href: "/what-does-your-birthday-mean",
+    label: "What Does Your Birthday Mean?",
+  },
   returnLink: "Return to birth date",
 };
 

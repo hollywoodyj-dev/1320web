@@ -5,6 +5,7 @@ import { LIFE_PATH_VS_SOUL_BLUEPRINT_ARTICLE } from "@/lib/seo/content/life-path
 import { WHAT_IS_MY_LIFE_PATH_NUMBER_ARTICLE } from "@/lib/seo/content/what-is-my-life-path-number";
 import { NUMEROLOGY_BY_DOB_VS_SOUL_BLUEPRINT_ARTICLE } from "@/lib/seo/content/numerology-by-date-of-birth-vs-soul-blueprint";
 import { BIRTHDAY_NUMBER_VS_LIFE_PATH_VS_SOUL_BLUEPRINT_ARTICLE } from "@/lib/seo/content/birthday-number-vs-life-path-vs-soul-blueprint";
+import { WHAT_DOES_YOUR_BIRTHDAY_MEAN_ARTICLE } from "@/lib/seo/content/what-does-your-birthday-mean";
 import type { SeoArticle, SeoPlannedArticle } from "@/lib/seo/types";
 import { FREE_BLUEPRINT_HREF } from "@/lib/seo/types";
 
@@ -17,6 +18,7 @@ export const SEO_ARTICLES: SeoArticle[] = [
   WHAT_IS_MY_LIFE_PATH_NUMBER_ARTICLE,
   NUMEROLOGY_BY_DOB_VS_SOUL_BLUEPRINT_ARTICLE,
   BIRTHDAY_NUMBER_VS_LIFE_PATH_VS_SOUL_BLUEPRINT_ARTICLE,
+  WHAT_DOES_YOUR_BIRTHDAY_MEAN_ARTICLE,
 ];
 
 /** Roadmap for hub display (Architecture v1.0 formal order). */
@@ -61,7 +63,7 @@ export const SEO_PLANNED_ARTICLES: SeoPlannedArticle[] = [
     title: "What Does Your Birthday Mean?",
     cluster: "birthday-meaning",
     phase: "P6",
-    status: "planned",
+    status: "published",
   },
   {
     slug: "numerology-reading-vs-soul-blueprint-report",

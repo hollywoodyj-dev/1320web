@@ -47,6 +47,7 @@ export const ANALYTICS_EVENTS = [
   "seo_to_life_path_comparison",
   "seo_to_birth_date_numerology",
   "seo_to_birthday_meaning",
+  "seo_to_birthday_number_comparison",
   "seo_to_sample_report",
   "seo_to_full_report",
   "free_blueprint_started",

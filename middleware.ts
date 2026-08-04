@@ -76,6 +76,14 @@ export function middleware(request: NextRequest) {
     target.pathname = "/birthday-number-vs-life-path-number-vs-soul-blueprint";
     return NextResponse.redirect(target, 301);
   }
+  if (
+    pathname === "/guides/what-does-your-birthday-mean" ||
+    pathname === "/guides/what-does-your-birthday-mean/"
+  ) {
+    const target = request.nextUrl.clone();
+    target.pathname = "/what-does-your-birthday-mean";
+    return NextResponse.redirect(target, 301);
+  }
 
   if (
     pathname === "/integration/facilitator" ||

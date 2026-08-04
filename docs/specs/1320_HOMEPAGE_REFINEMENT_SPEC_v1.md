@@ -7,7 +7,9 @@
 **Owner:** Tree / 信伊咲  
 **Implementation:** Nova  
 **QA:** Lumen  
-**Status:** Implemented — pending Lumen QA
+**Status:** Hierarchy Correction — **Accepted and Closed** (Wisewave 2026-08-04)  
+**Hierarchy commits:** `d5821cc` (desktop hierarchy) · `cf66751` (mobile corrections)  
+**Closure record:** `docs/governance/HOMEPAGE_HIERARCHY_CORRECTION_ACCEPTED_AND_CLOSED.md`
 
 ---
 

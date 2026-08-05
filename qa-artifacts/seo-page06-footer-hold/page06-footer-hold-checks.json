@@ -1,0 +1,89 @@
+[
+  {
+    "name": "Mobile: newsletter block not visible",
+    "pass": true,
+    "detail": {
+      "stayConnectedVisible": false,
+      "subscribeVisible": false,
+      "hasEmailInput": false,
+      "hasConsentCheckbox": false,
+      "hasSubscribeCta": false,
+      "hasFormInDom": true,
+      "brand": true,
+      "legal": true,
+      "copyright": true,
+      "mantra": true,
+      "overflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390
+    }
+  },
+  {
+    "name": "Mobile: Stay Connected heading not visible",
+    "pass": true,
+    "detail": false
+  },
+  {
+    "name": "Mobile: newsletter email input not visible",
+    "pass": true,
+    "detail": false
+  },
+  {
+    "name": "Mobile: consent checkbox not visible",
+    "pass": true,
+    "detail": false
+  },
+  {
+    "name": "Mobile: Subscribe CTA not visible",
+    "pass": true,
+    "detail": false
+  },
+  {
+    "name": "Mobile: brand retained",
+    "pass": true,
+    "detail": true
+  },
+  {
+    "name": "Mobile: legal/nav retained",
+    "pass": true,
+    "detail": true
+  },
+  {
+    "name": "Mobile: copyright retained",
+    "pass": true,
+    "detail": true
+  },
+  {
+    "name": "Mobile: footer mantra retained",
+    "pass": true,
+    "detail": true
+  },
+  {
+    "name": "Mobile: no horizontal overflow",
+    "pass": true,
+    "detail": {
+      "scrollWidth": 390,
+      "clientWidth": 390
+    }
+  },
+  {
+    "name": "Desktop: no horizontal overflow",
+    "pass": true,
+    "detail": {
+      "subscribeVisible": true,
+      "hasEmailInput": true,
+      "stayConnected": true,
+      "overflow": false
+    }
+  },
+  {
+    "name": "Desktop: footer newsletter presentation unchanged when present",
+    "pass": true,
+    "detail": {
+      "subscribeVisible": true,
+      "hasEmailInput": true,
+      "stayConnected": true,
+      "overflow": false
+    }
+  }
+]

@@ -604,6 +604,16 @@ h3 {
     display: none;
   }
 
+  /*
+   * Shared article / guide / inner-marketing mobile footer rule:
+   * hide the full newsletter block below the mobile breakpoint.
+   * Does not touch auth/transactional/member compact footers (no inner-footer-subscribe).
+   * Desktop footer (including newsletter) remains unchanged above this breakpoint.
+   */
+  .page-shell .site-footer .inner-footer-subscribe {
+    display: none;
+  }
+
   .page-shell .site-footer--compact .footer-brand {
     padding-bottom: 8px;
   }

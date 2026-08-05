@@ -71,5 +71,6 @@ Fresh production evidence:
 
 ## Acceptance
 
-Page 06 passes production QA and is ready for Wisewave acceptance. No blocking follow-up remains.  
-**Not Accepted and Closed until Wisewave close.**
+Page 06 passes production QA.  
+**Wisewave Accepted and Closed (2026-08-05)** after mobile footer HOLD clearance.  
+Closure: `docs/governance/SEO_PAGE06_WHAT_DOES_YOUR_BIRTHDAY_MEAN_ACCEPTED_AND_CLOSED.md`

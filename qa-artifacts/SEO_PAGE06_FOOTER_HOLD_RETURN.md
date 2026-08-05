@@ -1,6 +1,6 @@
 # Page 06 HOLD clearance — mobile footer newsletter
 
-**Status:** HOLD correction live — production smoke PASS — awaiting Wisewave Accepted and Closed  
+**Status:** ✅ HOLD cleared — Page 06 Accepted and Closed by Wisewave (2026-08-05)  
 **Canonical:** https://www.1320soulcode.com/what-does-your-birthday-mean  
 **Production commit:** `6c7b076`  
 **Date:** 2026-08-05

@@ -53,7 +53,7 @@ Accepted production state:
 | **Page 05** | Birthday Number definition and Birthday Number vs Life Path vs Soul Blueprint comparison |
 | **Page 06** | Broader Birthday Meaning and what a birthday can / cannot determine |
 
-Page 06 may proceed under separate authorization.
+**Page 06 Accepted and Closed by Wisewave (2026-08-05).** See `docs/governance/SEO_PAGE06_WHAT_DOES_YOUR_BIRTHDAY_MEAN_ACCEPTED_AND_CLOSED.md`.
 
 ## Evidence
 

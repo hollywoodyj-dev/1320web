@@ -1,8 +1,8 @@
 # Connected Lifestyle Mode — Nova Option A Delivery Pack
 
 **Decision:** Wisewave Option A approved — locked Nova Experience API v1  
-**Status:** Schema + fixture evidence shipped; staging credential issued out-of-band  
-**Date:** 2026-08-01  
+**Status:** Controlled KOZE Backend access ENABLED for Connected Lifestyle runtime  
+**Date:** 2026-08-01 · Access confirm 2026-08-11  
 **Owner:** Nova  
 
 ---
@@ -181,8 +181,12 @@ If API key env is missing: services report `degraded` (auth-gated routes will 40
 | Timeout + rate-limit specified | ✅ |
 | Future birth dates rejected | ✅ |
 | Staging credential pack template | ✅ |
-| Staging key issued to Coze Backend | ⏳ Holly ops (out-of-band) |
-| Live health `available` after env set | ⏳ After Vercel env |
+| Staging key issued to Coze Backend | ✅ Issued out-of-band (Holly confirmed 2026-08-03) |
+| Live health `available` after env set | ✅ Confirmed on production host |
+| Authorized client `coze-lifestyle-staging-v1` | ✅ In default + documented allow-list |
+| Network / IP allow-list required | ❌ No — Bearer + `X-Client-Id` only (S2S) |
+| Canonical contract unchanged | ✅ Experience Profile v1 locked |
+| Coze / KOZE Credential handshake | ⏳ Awaiting KOZE Backend `go-real-final-001` resolve/recovery success |
 
 ---
 

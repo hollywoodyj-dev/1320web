@@ -1,4 +1,8 @@
 import { createHash, randomBytes, timingSafeEqual } from "node:crypto";
+import {
+  BLUEPRINT_EXPERIENCE_PRODUCTION_CLIENT_ID,
+  BLUEPRINT_EXPERIENCE_STAGING_CLIENT_ID,
+} from "@/lib/blueprint-experience-api/contracts";
 import { BlueprintExperienceApiError } from "@/lib/blueprint-experience-api/errors";
 
 export function createRequestId(): string {
@@ -9,9 +13,15 @@ export function isBlueprintExperienceApiConfigured(): boolean {
   return Boolean(process.env.BLUEPRINT_EXPERIENCE_API_KEY?.trim());
 }
 
+/** Locked server clients for Connected Lifestyle (KOZE / Coze Backend). */
+export const DEFAULT_BLUEPRINT_EXPERIENCE_ALLOWED_CLIENTS = [
+  BLUEPRINT_EXPERIENCE_PRODUCTION_CLIENT_ID,
+  BLUEPRINT_EXPERIENCE_STAGING_CLIENT_ID,
+] as const;
+
 function allowedClients(): Set<string> {
   const raw = process.env.BLUEPRINT_EXPERIENCE_ALLOWED_CLIENTS?.trim();
-  if (!raw) return new Set(["coze-lifestyle-v1"]);
+  if (!raw) return new Set(DEFAULT_BLUEPRINT_EXPERIENCE_ALLOWED_CLIENTS);
   return new Set(
     raw
       .split(",")

@@ -17,7 +17,7 @@ Next.js also exposes the same handlers under `/api/v1/...`. Rewrites map `/v1/..
 ```bash
 BLUEPRINT_EXPERIENCE_API_KEY=...
 BLUEPRINT_EXPERIENCE_ID_SECRET=...   # optional; defaults to API key
-BLUEPRINT_EXPERIENCE_ALLOWED_CLIENTS=coze-lifestyle-v1
+BLUEPRINT_EXPERIENCE_ALLOWED_CLIENTS=coze-lifestyle-v1,coze-lifestyle-staging-v1
 ```
 
 ## Specs in repo

@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { AdminAccountsPanel } from "@/components/admin/admin-accounts-panel";
 import { AdminConversionPanel } from "@/components/admin/admin-conversion-panel";
+import { AdminStatsStrip } from "@/components/admin/admin-stats-strip";
+import { isAdminAccountsEnabled } from "@/lib/admin/admin-accounts";
 import { isAdminEmail } from "@/lib/admin/require-admin";
 import { getCurrentUser } from "@/lib/auth/session";
 import { isDatabaseConfigured } from "@/lib/platform-config";
 
 export const metadata: Metadata = {
-  title: "Admin — Conversion tracking",
+  title: "Admin — Tracking & accounts",
   robots: { index: false, follow: false },
 };
 
@@ -16,7 +19,7 @@ export const dynamic = "force-dynamic";
 export default async function AdminPage() {
   if (!isDatabaseConfigured()) {
     return (
-      <main className="mx-auto max-w-5xl px-6 py-12">
+      <main className="mx-auto max-w-6xl px-6 py-12">
         <h1 className="text-2xl font-semibold">Admin</h1>
         <p className="mt-4 text-[var(--muted,#555)]">
           Database is not configured. Set <code>POSTGRES_URL</code> and run{" "}
@@ -33,7 +36,7 @@ export default async function AdminPage() {
 
   if (!isAdminEmail(user.email)) {
     return (
-      <main className="mx-auto max-w-5xl px-6 py-12">
+      <main className="mx-auto max-w-6xl px-6 py-12">
         <h1 className="text-2xl font-semibold">Admin</h1>
         <p className="mt-4">
           Signed in as <strong>{user.email}</strong>, but this account is not on the admin
@@ -51,7 +54,7 @@ export default async function AdminPage() {
 
   if (!process.env.ADMIN_EMAIL?.trim()) {
     return (
-      <main className="mx-auto max-w-5xl px-6 py-12">
+      <main className="mx-auto max-w-6xl px-6 py-12">
         <h1 className="text-2xl font-semibold">Admin</h1>
         <p className="mt-4">
           <code>ADMIN_EMAIL</code> is not configured.
@@ -60,15 +63,22 @@ export default async function AdminPage() {
     );
   }
 
+  const accountsEnabled = isAdminAccountsEnabled();
+
   return (
-    <main className="mx-auto max-w-5xl px-6 py-12">
+    <main className="mx-auto max-w-6xl px-6 py-12">
       <header className="mb-8">
         <h1 className="text-2xl font-semibold">Admin</h1>
         <p className="mt-2 text-sm text-[var(--muted,#555)]">
-          Signed in as {user.email}. Marketing / LP tracking (ME Spec v1).
+          Signed in as {user.email}. Marketing / LP tracking + accounts (ME Spec v1).
         </p>
       </header>
-      <AdminConversionPanel />
+
+      <div className="flex flex-col gap-12">
+        {accountsEnabled ? <AdminStatsStrip /> : null}
+        <AdminConversionPanel />
+        {accountsEnabled ? <AdminAccountsPanel /> : null}
+      </div>
     </main>
   );
 }

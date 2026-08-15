@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@/components/analytics/google-analytics";
+import { SoulcodeSiteAnalytics } from "@/components/analytics/soulcode-site-analytics";
 import { getSiteUrl } from "@/lib/platform-config";
 import "./globals.css";
 import "@/styles/site-density-v1.css";
@@ -79,6 +80,7 @@ export default function RootLayout({
     >
       <body className="min-h-full">
         <GoogleAnalytics />
+        <SoulcodeSiteAnalytics />
         {children}
       </body>
     </html>

@@ -26,6 +26,7 @@ const schemaFiles = [
   "schema-v2-user-profile.sql",
   "schema-v2-password-auth.sql",
   "schema-v2-optional-birth-date.sql",
+  "marketing-conversion-events-v1.sql",
 ];
 
 async function main() {

@@ -63,7 +63,9 @@ Copy `.env.example` to `.env.local` and adjust:
 | Variable | Required | Description |
 |----------|----------|-------------|
 | `NEXT_PUBLIC_SITE_URL` | Recommended | Canonical site URL for metadata (`https://1320soulcode.com`) |
-| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Optional | Google Analytics 4 measurement ID |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Optional | Google Analytics 4 measurement ID (separate 1320 property) |
+| `NEXT_PUBLIC_ENABLE_MARKETING_BEACON` | Optional | First-party marketing beacon (default on; set `0` to disable) |
+| `ADMIN_EMAIL` | Optional | Comma-separated admin emails for `/admin` tracking dashboard |
 | `NEXT_PUBLIC_ANALYTICS_DEBUG` | Optional | Log analytics events in production when `true` |
 | `LEADS_WEBHOOK_URL` | Optional | POST target for waitlist/email/booking payloads |
 

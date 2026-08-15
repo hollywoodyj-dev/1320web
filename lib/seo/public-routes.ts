@@ -34,11 +34,13 @@ export const PUBLIC_SEO_ROUTES: PublicSeoRoute[] = [
 /** Paths crawlers should not index (prefix match in robots.txt). */
 export const ROBOTS_DISALLOW_PATHS = [
   "/account",
+  "/admin",
   "/api/",
   "/auth/",
   "/checkout",
   "/facilitator",
   "/integration/",
+  "/lp/",
   "/my-report",
   "/living-blueprint/",
   "/report/",

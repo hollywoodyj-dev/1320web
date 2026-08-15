@@ -32,8 +32,13 @@ type ConversionTrackingData = {
   }[];
 };
 
+/** Explicit dark text — site body inherits light text on dark bg. */
 const styles = {
-  section: { display: "grid", gap: "1.25rem" } as CSSProperties,
+  section: {
+    display: "grid",
+    gap: "1.25rem",
+    color: "#e8e4dc",
+  } as CSSProperties,
   header: {
     display: "flex",
     alignItems: "center",
@@ -41,51 +46,76 @@ const styles = {
     gap: "1rem",
     flexWrap: "wrap",
   } as CSSProperties,
-  title: { margin: 0, fontSize: "1.25rem", fontWeight: 600 } as CSSProperties,
+  title: { margin: 0, fontSize: "1.25rem", fontWeight: 600, color: "#f5f1ea" } as CSSProperties,
   refresh: {
-    border: "1px solid rgba(0, 0, 0, 0.15)",
-    background: "#fff",
+    border: "1px solid rgba(255, 255, 255, 0.22)",
+    background: "#2a2a2a",
+    color: "#f5f1ea",
     padding: "0.4rem 0.85rem",
     borderRadius: 6,
     cursor: "pointer",
     fontSize: "0.875rem",
   } as CSSProperties,
-  muted: { margin: 0, color: "#555", fontSize: "0.9rem" } as CSSProperties,
-  error: { margin: 0, color: "#a11", fontSize: "0.95rem" } as CSSProperties,
+  muted: { margin: 0, color: "#b0a99c", fontSize: "0.9rem" } as CSSProperties,
+  error: { margin: 0, color: "#ff8a8a", fontSize: "0.95rem" } as CSSProperties,
   cards: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))",
     gap: "0.75rem",
   } as CSSProperties,
   card: {
-    border: "1px solid rgba(0, 0, 0, 0.1)",
+    border: "1px solid rgba(255, 255, 255, 0.12)",
     borderRadius: 8,
     padding: "0.85rem",
-    background: "#fafafa",
+    background: "#1c1c1c",
+    color: "#f5f1ea",
   } as CSSProperties,
-  cardLabel: { fontSize: "0.75rem", color: "#666", wordBreak: "break-all" } as CSSProperties,
-  cardValue: { fontSize: "1.5rem", fontWeight: 600, marginTop: "0.25rem" } as CSSProperties,
-  cardSub: { fontSize: "0.75rem", color: "#777", marginTop: "0.15rem" } as CSSProperties,
+  cardLabel: {
+    fontSize: "0.75rem",
+    color: "#b0a99c",
+    wordBreak: "break-all",
+  } as CSSProperties,
+  cardValue: {
+    fontSize: "1.5rem",
+    fontWeight: 600,
+    marginTop: "0.25rem",
+    color: "#f5f1ea",
+  } as CSSProperties,
+  cardSub: {
+    fontSize: "0.75rem",
+    color: "#9a9388",
+    marginTop: "0.15rem",
+  } as CSSProperties,
   tableWrap: {
     overflowX: "auto",
-    border: "1px solid rgba(0, 0, 0, 0.1)",
+    border: "1px solid rgba(255, 255, 255, 0.12)",
     borderRadius: 8,
+    background: "#1c1c1c",
+    color: "#f5f1ea",
   } as CSSProperties,
-  table: { width: "100%", borderCollapse: "collapse", fontSize: "0.85rem" } as CSSProperties,
+  table: {
+    width: "100%",
+    borderCollapse: "collapse",
+    fontSize: "0.85rem",
+    color: "#f5f1ea",
+  } as CSSProperties,
   th: {
     textAlign: "left",
     padding: "0.55rem 0.7rem",
-    borderBottom: "1px solid rgba(0, 0, 0, 0.06)",
-    background: "#f3f3f3",
+    borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+    background: "#2a2a2a",
+    color: "#f5f1ea",
     fontWeight: 600,
   } as CSSProperties,
   td: {
     textAlign: "left",
     padding: "0.55rem 0.7rem",
-    borderBottom: "1px solid rgba(0, 0, 0, 0.06)",
+    borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
     verticalAlign: "top",
+    color: "#e8e4dc",
   } as CSSProperties,
-  h3: { margin: "0.5rem 0 0", fontSize: "1.05rem" } as CSSProperties,
+  h3: { margin: "0.5rem 0 0", fontSize: "1.05rem", color: "#f5f1ea" } as CSSProperties,
+  code: { color: "#e8dcc8", fontSize: "0.8rem" } as CSSProperties,
 };
 
 export function AdminConversionPanel() {

@@ -21,7 +21,10 @@ import "@/styles/terms-density-v1.css";
 export const metadata: Metadata = {
   title: TERMS_META.title,
   description: TERMS_META.description,
+  alternates: { canonical: "/terms" },
 };
+
+export const dynamic = "force-static";
 
 function TermsBlockCard({ block, closing }: { block: TermsBlock; closing?: string }) {
   return (

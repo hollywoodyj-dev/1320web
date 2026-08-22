@@ -21,7 +21,10 @@ import {
 export const metadata: Metadata = {
   title: BLUEPRINT_META.title,
   description: BLUEPRINT_META.description,
+  alternates: { canonical: "/blueprint" },
 };
+
+export const dynamic = "force-static";
 
 export default function BlueprintPage() {
   const heroTitle = BLUEPRINT_HERO.title.includes("\n")

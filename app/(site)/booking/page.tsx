@@ -32,6 +32,7 @@ import {
 export const metadata: Metadata = {
   title: BOOKING_META.title,
   description: BOOKING_META.description,
+  alternates: { canonical: "/booking" },
 };
 
 type SearchParams = Record<string, string | string[] | undefined>;

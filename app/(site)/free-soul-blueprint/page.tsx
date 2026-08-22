@@ -26,6 +26,8 @@ export const metadata: Metadata = {
   },
 };
 
+export const dynamic = "force-static";
+
 function FsbSection({
   id,
   title,

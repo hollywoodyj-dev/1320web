@@ -26,7 +26,10 @@ import { FOOTER_LEGAL_LINKS, HOMEPAGE_FOOTER_COLUMNS } from "@/lib/site-nav";
 export const metadata: Metadata = {
   title: { absolute: HOMEPAGE_META.title },
   description: HOMEPAGE_META.description,
+  alternates: { canonical: "/" },
 };
+
+export const dynamic = "force-static";
 
 export default function HomePage() {
   return (
@@ -78,6 +81,9 @@ export default function HomePage() {
                 <div className="hero-actions">
                   <Link href={HOMEPAGE_HERO.primaryHref} className="gold-button">
                     {HOMEPAGE_HERO.primaryCta}
+                  </Link>
+                  <Link href="/free-soul-blueprint" className="hero-secondary-link">
+                    Discover Your Free Soul Blueprint
                   </Link>
                   <Link href={HOMEPAGE_HERO.secondaryHref} className="hero-secondary-link">
                     {HOMEPAGE_HERO.secondaryCta}

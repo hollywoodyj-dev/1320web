@@ -10,6 +10,7 @@ import "@/styles/reflect-entry-v1.css";
 export const metadata: Metadata = {
   title: REFLECT_META.title,
   description: REFLECT_META.description,
+  alternates: { canonical: "/reflect" },
 };
 
 type SearchParams = Record<string, string | string[] | undefined>;

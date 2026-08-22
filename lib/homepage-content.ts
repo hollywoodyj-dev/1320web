@@ -171,7 +171,7 @@ export const HOMEPAGE_FULL_REPORT_PREVIEW = {
     { code: "S9", title: "Return to Source", detail: "How you return to wholeness." },
   ],
   checkoutCta: "Unlock Full Report",
-  checkoutHref: "/checkout",
+  checkoutHref: "/full-report",
   sampleCta: "View Sample Report",
   sampleHref: SAMPLE_REPORT_HREF,
 };

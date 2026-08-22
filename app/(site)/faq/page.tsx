@@ -16,7 +16,10 @@ import "@/styles/faq-density-v1.css";
 export const metadata: Metadata = {
   title: FAQ_META.title,
   description: FAQ_META.description,
+  alternates: { canonical: "/faq" },
 };
+
+export const dynamic = "force-static";
 
 export default function FaqPage() {
   return (

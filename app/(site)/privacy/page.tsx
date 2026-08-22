@@ -20,7 +20,10 @@ import "@/styles/privacy-density-v1.css";
 export const metadata: Metadata = {
   title: PRIVACY_META.title,
   description: PRIVACY_META.description,
+  alternates: { canonical: "/privacy" },
 };
+
+export const dynamic = "force-static";
 
 function PrivacyBlockCard({
   id,

@@ -23,7 +23,10 @@ import {
 export const metadata: Metadata = {
   title: ABOUT_META.title,
   description: ABOUT_META.description,
+  alternates: { canonical: "/about-1320" },
 };
+
+export const dynamic = "force-static";
 
 export default function About1320Page() {
   return (

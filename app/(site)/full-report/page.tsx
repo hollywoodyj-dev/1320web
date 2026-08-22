@@ -22,6 +22,7 @@ import { resolveBirthDateFromRequest } from "@/lib/resolve-birth-date";
 export const metadata: Metadata = {
   title: FULL_REPORT_META.title,
   description: FULL_REPORT_META.description,
+  alternates: { canonical: "/full-report" },
 };
 
 export const dynamic = "force-dynamic";

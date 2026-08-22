@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   alternates: { canonical: SEO_HUB_PATH },
 };
 
+export const dynamic = "force-static";
+
 export default function GuidesHubPage() {
   const published = getPublishedSeoArticles();
 

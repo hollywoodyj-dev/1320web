@@ -18,6 +18,7 @@ import {
 export const metadata: Metadata = {
   title: YOUR_CODE_META.title,
   description: YOUR_CODE_META.description,
+  alternates: { canonical: "/your-code" },
 };
 
 export default function YourCodePage() {

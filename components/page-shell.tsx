@@ -5,12 +5,12 @@ import { usePathname } from "next/navigation";
 import { SkipLink } from "@/components/skip-link";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { isMobileReportClient } from "@/lib/report/is-mobile-report-client";
 
 type PageShellProps = {
   children: ReactNode;
   /** Server-decided lead persistence flag, forwarded to the footer subscribe slot. */
   leadsEnabled?: boolean;
-  headerAccount?: { label: string; entitledReportId: string | null } | null;
   /** Phone/tablet entitled report — use flip shell + mobile renderer. */
   preferMobileReportShell?: boolean;
 };
@@ -92,12 +92,17 @@ function isCompactFooterRoute(pathname: string | null): boolean {
 }
 
 /** Cosmic layout for inner routes — homepage keeps its own shell in `app/page.tsx`. */
-export function PageShell({ children, leadsEnabled, headerAccount, preferMobileReportShell = false }: PageShellProps) {
+export function PageShell({ children, leadsEnabled, preferMobileReportShell }: PageShellProps) {
   const pathname = usePathname();
+  const clientPreferMobile =
+    typeof navigator !== "undefined" && isMobileReportClient(navigator.userAgent);
+  const mobileReportShell =
+    preferMobileReportShell ??
+    (isEntitledReportRoute(pathname) && clientPreferMobile);
   const immersive = isImmersiveReportRoute(pathname);
   const mobileReport =
     isMobileReportRoute(pathname) ||
-    (isEntitledReportRoute(pathname) && preferMobileReportShell);
+    (isEntitledReportRoute(pathname) && mobileReportShell);
   const unifiedWebReport = isUnifiedReportWebRoute(pathname) && !mobileReport;
   const printReport = isPrintReportRoute(pathname);
   const authRoute = isAuthRoute(pathname);
@@ -169,7 +174,6 @@ export function PageShell({ children, leadsEnabled, headerAccount, preferMobileR
       <div className="page-glow page-glow-right" aria-hidden="true" />
       <div className="page-frame">
         <SiteHeader
-          headerAccount={headerAccount}
           variant={
             facilitatorConsole ? "internal" : quietChrome ? "transactional" : "default"
           }

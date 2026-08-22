@@ -2,17 +2,41 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { TopbarShell } from "@/components/topbar-shell";
 import { GENERATE_CODE_CTA, isNavActive, PRIMARY_NAV } from "@/lib/site-nav";
 
+type HeaderAccount = { label: string; entitledReportId: string | null };
+
 type SiteHeaderProps = {
-  headerAccount?: { label: string; entitledReportId: string | null } | null;
+  headerAccount?: HeaderAccount | null;
   variant?: "default" | "internal" | "transactional";
 };
 
-export function SiteHeader({ headerAccount, variant = "default" }: SiteHeaderProps) {
+export function SiteHeader({ headerAccount: headerAccountProp, variant = "default" }: SiteHeaderProps) {
   const pathname = usePathname();
+  const [headerAccount, setHeaderAccount] = useState<HeaderAccount | null>(headerAccountProp ?? null);
+
+  useEffect(() => {
+    if (headerAccountProp !== undefined) {
+      setHeaderAccount(headerAccountProp);
+      return;
+    }
+    let cancelled = false;
+    fetch("/api/auth/me")
+      .then((response) => response.json())
+      .then((data: { authenticated?: boolean; user?: { firstName?: string | null }; entitledReportId?: string | null }) => {
+        if (cancelled || !data.authenticated) return;
+        const label = data.user?.firstName?.trim() || "My Account";
+        setHeaderAccount({ label, entitledReportId: data.entitledReportId ?? null });
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [headerAccountProp]);
+
   const quiet = variant === "internal" || variant === "transactional";
   /** SEO educational pages: keep one dominant gold CTA in the article hero viewport. */
   const quietHeaderCta =

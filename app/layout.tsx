@@ -43,9 +43,6 @@ export const metadata: Metadata = {
   },
   description:
     "Discover your Free Soul Blueprint with 1320 Soul Code — a symbolic mirror for self-awareness, reflection, and conscious integration.",
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     locale: "en_US",

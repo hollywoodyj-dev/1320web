@@ -17,7 +17,10 @@ import "@/styles/disclaimer-density-v1.css";
 export const metadata: Metadata = {
   title: DISCLAIMER_META.title,
   description: DISCLAIMER_META.description,
+  alternates: { canonical: "/disclaimer" },
 };
+
+export const dynamic = "force-static";
 
 function DisclaimerBlockCard({
   id,

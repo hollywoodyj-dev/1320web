@@ -36,6 +36,11 @@ export const HOMEPAGE_WHAT_IS = {
     href: "/guides",
     label: "Guides",
   },
+  exploreLinks: [
+    { href: "/free-soul-blueprint", label: "Generate your Free Soul Blueprint" },
+    { href: "/what-is-my-life-path-number", label: "Calculate your Life Path Number" },
+    { href: "/full-report", label: "Explore the Full Soul Blueprint Report" },
+  ] as const,
 };
 
 export const HOMEPAGE_CALCULATOR = {

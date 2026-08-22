@@ -119,9 +119,20 @@ export default function BlueprintPage() {
             ))}
           </ul>
           <p className="blueprint-copy">{EXAMPLE_BLUEPRINT.note}</p>
-          <Link href={EXAMPLE_BLUEPRINT.href} className="blueprint-secondary-link about-prose-link">
-            {EXAMPLE_BLUEPRINT.cta}
-          </Link>
+          <div className="blueprint-explore-links">
+            <Link href={EXAMPLE_BLUEPRINT.href} className="blueprint-secondary-link about-prose-link">
+              {EXAMPLE_BLUEPRINT.cta}
+            </Link>
+            <Link href={EXAMPLE_BLUEPRINT.fullReportHref} className="blueprint-secondary-link about-prose-link">
+              {EXAMPLE_BLUEPRINT.fullReportLabel}
+            </Link>
+            <Link href={EXAMPLE_BLUEPRINT.freeBlueprintHref} className="blueprint-secondary-link about-prose-link">
+              {EXAMPLE_BLUEPRINT.freeBlueprintLabel}
+            </Link>
+            <Link href={EXAMPLE_BLUEPRINT.lifePathHref} className="blueprint-secondary-link about-prose-link">
+              {EXAMPLE_BLUEPRINT.lifePathLabel}
+            </Link>
+          </div>
         </div>
       </section>
 

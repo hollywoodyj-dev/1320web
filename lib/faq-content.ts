@@ -82,6 +82,14 @@ export const FAQ_SECTIONS: FaqSection[] = [
       {
         q: "How is my code calculated?",
         a: "Year maps to S1, the full date to S3, month to S2, and day to S0 — in foundation order S1 → S3 → S2 → S0. Enter your birth date to generate your personal foundation blueprint.",
+        href: "/free-soul-blueprint",
+        linkLabel: "Generate your Free Soul Blueprint",
+      },
+      {
+        q: "How does this relate to Life Path Number?",
+        a: "Life Path Number is a familiar numerology lens. 1320 offers a separate calculator and guide if you want to explore that pattern before or alongside your Soul Blueprint.",
+        href: "/what-is-my-life-path-number",
+        linkLabel: "Calculate your Life Path Number",
       },
       {
         q: "What is S1 · Soul Origin?",
@@ -116,6 +124,8 @@ export const FAQ_SECTIONS: FaqSection[] = [
       {
         q: "Can I buy the Full Report now?",
         a: "Yes. The Full Report is available through secure checkout. After purchase, sign in with your account to return anytime.",
+        href: "/full-report",
+        linkLabel: "Explore the Full Soul Blueprint Report",
       },
       {
         q: "What does the Full Report include?",

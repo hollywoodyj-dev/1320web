@@ -8,6 +8,7 @@ import "@/styles/report-system/index.css";
 export const metadata: Metadata = {
   title: SAMPLE_REPORT_META.title,
   description: SAMPLE_REPORT_META.description,
+  alternates: { canonical: "/full-report-v2" },
   robots: { index: true, follow: true },
 };
 

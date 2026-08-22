@@ -52,6 +52,24 @@ export default function GuidesHubPage() {
       </section>
 
       <section className="guides-hub-panel glass-card">
+        <h2>Start Here</h2>
+        <p className="guides-hub-note">
+          New to 1320? These paths connect reflection, numerology, and the full report experience.
+        </p>
+        <ul className="guides-hub-list">
+          <li>
+            <Link href="/free-soul-blueprint">Generate your Free Soul Blueprint</Link>
+          </li>
+          <li>
+            <Link href="/what-is-my-life-path-number">Calculate your Life Path Number</Link>
+          </li>
+          <li>
+            <Link href="/full-report">Explore the Full Soul Blueprint Report</Link>
+          </li>
+        </ul>
+      </section>
+
+      <section className="guides-hub-panel glass-card">
         <h2>Coming Next</h2>
         <p className="guides-hub-note">
           Foundational release order from the locked SEO architecture. Pages publish after approved

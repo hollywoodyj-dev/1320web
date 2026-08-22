@@ -57,3 +57,9 @@ export const REFLECT_INVALID = {
   body: "This reflection link is invalid. Start a new session from the Reflect page.",
   cta: "Start reflect",
 };
+
+export const REFLECT_EXPLORE_LINKS = [
+  { href: "/free-soul-blueprint", label: "Generate your Free Soul Blueprint" },
+  { href: "/what-is-my-life-path-number", label: "Calculate your Life Path Number" },
+  { href: "/full-report", label: "Explore the Full Soul Blueprint Report" },
+] as const;

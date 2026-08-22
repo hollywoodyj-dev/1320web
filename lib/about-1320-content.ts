@@ -15,9 +15,11 @@ export const ABOUT_HERO = {
   primaryCta: "Generate My Code",
   primaryHref: "/your-code",
   secondaryLinks: [
+    { href: "/free-soul-blueprint", label: "Discover Your Free Soul Blueprint" },
+    { href: "/full-report", label: "Explore the Full Soul Blueprint Report" },
     { href: "/what-is-a-soul-blueprint", label: "What is a Soul Blueprint?" },
     { href: "/life-path-number-vs-soul-blueprint", label: "Life Path Number vs Soul Blueprint" },
-    { href: "/what-is-my-life-path-number", label: "What Is My Life Path Number?" },
+    { href: "/what-is-my-life-path-number", label: "Calculate your Life Path Number" },
     { href: "/numerology-by-date-of-birth-vs-soul-blueprint", label: "Numerology by Date of Birth vs Soul Blueprint" },
     {
       href: "/birthday-number-vs-life-path-number-vs-soul-blueprint",

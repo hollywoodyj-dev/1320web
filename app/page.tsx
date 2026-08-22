@@ -123,6 +123,13 @@ export default function HomePage() {
                   {HOMEPAGE_WHAT_IS.guidesLink.label}
                 </Link>
               </div>
+              <div className="homepage-explore-links">
+                {HOMEPAGE_WHAT_IS.exploreLinks.map((link) => (
+                  <Link key={link.href} href={link.href} className="homepage-prose-link">
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
               <p className="homepage-inline-note">
                 {HOMEPAGE_BOUNDARY_INLINE}{" "}
                 <Link href={HOMEPAGE_BOUNDARY_LINK.href}>{HOMEPAGE_BOUNDARY_LINK.label}</Link>

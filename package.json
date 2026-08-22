@@ -6,7 +6,7 @@
     "dev": "next dev",
     "dev:webpack": "next dev --webpack",
     "dev:fresh": "node scripts/clean-next-cache.mjs && next dev --webpack",
-    "build": "next build",
+    "build": "npx tsx scripts/generate-sitemap.ts && next build",
     "start": "next start",
     "lint": "eslint",
     "smoke:content": "npx tsx scripts/smoke-content.ts",

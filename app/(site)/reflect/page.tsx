@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ReflectEntryForm } from "@/components/reflect-entry-form";
 import { getAccountContext } from "@/lib/auth/account-context";
 import { safeNextPath } from "@/lib/auth/next-path";
-import { REFLECT_FORM, REFLECT_HERO, REFLECT_META } from "@/lib/wisewave/reflect-content";
+import { REFLECT_FORM, REFLECT_HERO, REFLECT_META, REFLECT_EXPLORE_LINKS } from "@/lib/wisewave/reflect-content";
 import { isDatabaseConfigured } from "@/lib/platform-config";
 import "@/styles/reflect-entry-v1.css";
 
@@ -79,6 +79,14 @@ export default async function ReflectPage({ searchParams }: { searchParams: Prom
         </Link>
         .
       </p>
+
+      <nav className="reflect-explore-links" aria-label="Explore 1320">
+        {REFLECT_EXPLORE_LINKS.map((link) => (
+          <Link key={link.href} href={link.href} className="blueprint-secondary-link">
+            {link.label}
+          </Link>
+        ))}
+      </nav>
     </div>
   );
 }

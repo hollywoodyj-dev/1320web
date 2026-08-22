@@ -122,6 +122,12 @@ export const EXAMPLE_BLUEPRINT = {
   note: "These four codes form your foundation. The Full Report expands this foundation into S4–S9.",
   cta: "View Sample Report",
   href: SAMPLE_REPORT_HREF,
+  fullReportHref: "/full-report",
+  fullReportLabel: "Explore the Full Soul Blueprint Report",
+  freeBlueprintHref: "/free-soul-blueprint",
+  freeBlueprintLabel: "Generate your Free Soul Blueprint",
+  lifePathHref: "/what-is-my-life-path-number",
+  lifePathLabel: "Calculate your Life Path Number",
 };
 
 export const VS_IDENTITY = {

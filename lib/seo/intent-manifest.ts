@@ -8,11 +8,95 @@
  *   C = wrong canonical (must fix)
  *   D = should not be in sitemap / index
  *
- * Step 1c PENDING (玄微): birth-entry intent overlap for `/`, `/your-code`, `/free-soul-blueprint`.
- * Until decided, all three remain class A + sitemap (current prod state).
+ * T14 / Step 1c LOCKED: `/`, `/your-code`, `/free-soul-blueprint` stay self-canonical,
+ * index/follow, sitemap=true. Same conversion mechanism ≠ duplicate intent.
+ *
+ * Governance fields (T13) are metadata only — not auto-asserted against live HTML.
+ * New Search Assets must set `admission_basis` to one of SEARCH_ASSET_ADMISSION_BASES.
  */
 
 export type SeoIntentClass = "A" | "B" | "C" | "D";
+
+/** Why this URL exists independently. */
+export type PageRole =
+  | "brand_home"
+  | "branded_product_entry"
+  | "acquisition_landing"
+  | "product_sales"
+  | "product_sample"
+  | "session_booking"
+  | "guides_hub"
+  | "brand_about"
+  | "product_architecture"
+  | "support_faq"
+  | "interactive_reflect"
+  | "legal"
+  | "search_definition"
+  | "search_comparison"
+  | "search_tool"
+  | "search_bridge"
+  | "search_reference";
+
+/**
+ * D-7 locked. Do not invent new values without a separate enum expansion.
+ *   unaware        — "Who are you?"
+ *   known_user     — "I know 1320. Let me begin."
+ *   external_cold  — "I arrived through acquisition."
+ */
+export type AudienceState = "unaware" | "known_user" | "external_cold";
+
+export type QueryFamily =
+  | "branded_1320"
+  | "branded_code_generation"
+  | "free_soul_blueprint"
+  | "full_report"
+  | "personal_integration"
+  | "guides"
+  | "about_1320"
+  | "soul_blueprint_architecture"
+  | "sample_report"
+  | "faq"
+  | "reflect"
+  | "legal"
+  | "soul_blueprint_definition"
+  | "life_path_vs_soul_blueprint"
+  | "life_path_calculator"
+  | "numerology_by_dob"
+  | "birthday_vs_life_path"
+  | "birthday_meaning";
+
+export type PrimaryConversion =
+  | "free_blueprint_start"
+  | "full_report_checkout"
+  | "session_booking"
+  | "none";
+
+/**
+ * P7+ production gate for new Search Assets. One of the first four is required
+ * to ship a new search URL. `What is X?` / `X vs 1320` alone is not enough.
+ */
+export const SEARCH_ASSET_ADMISSION_BASES = [
+  "original_evidence",
+  "original_framework",
+  "tool_method",
+  "commercial_intent",
+] as const;
+
+export type SearchAssetAdmissionBasis = (typeof SEARCH_ASSET_ADMISSION_BASES)[number];
+
+export type AdmissionBasis = SearchAssetAdmissionBasis | "not_search_asset" | "grandfathered_pre_p7";
+
+/**
+ * T16 search-asset taxonomy — separate from `page_role`.
+ * page_role = why the URL exists; asset_class = D-6 keep/observe family.
+ */
+export type AssetClass =
+  | "not_applicable"
+  | "tool_search_reference"
+  | "bridge_category_clarification"
+  | "comparison_bridge"
+  | "search_reference_governance"
+  | "bridge_explanation";
 
 export type SeoIntentEntry = {
   path: string;
@@ -29,8 +113,18 @@ export type SeoIntentEntry = {
   class: SeoIntentClass;
   priority: number;
   changeFrequency: "weekly" | "monthly" | "yearly";
+  page_role: PageRole;
+  audience_state: AudienceState;
+  query_family: QueryFamily;
+  primary_conversion: PrimaryConversion;
+  admission_basis: AdmissionBasis;
+  asset_class: AssetClass;
   notes?: string;
 };
+
+export function isAdmissibleNewSearchAsset(basis: AdmissionBasis): boolean {
+  return (SEARCH_ASSET_ADMISSION_BASES as readonly string[]).includes(basis);
+}
 
 /**
  * Core product + legal + SEO articles. Article titles/h1 match published content registry.
@@ -46,7 +140,13 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     class: "A",
     priority: 1,
     changeFrequency: "weekly",
-    notes: "Step 1c: brand/home vs birth-entry overlap — pending 玄微",
+    page_role: "brand_home",
+    audience_state: "unaware",
+    query_family: "branded_1320",
+    primary_conversion: "free_blueprint_start",
+    admission_basis: "not_search_asset",
+    asset_class: "not_applicable",
+    notes: "T14: Brand / Platform Home. Self-canonical, index, sitemap. No consolidation.",
   },
   {
     path: "/free-soul-blueprint",
@@ -58,7 +158,13 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     class: "A",
     priority: 0.95,
     changeFrequency: "weekly",
-    notes: "Step 1c: primary free funnel LP candidate — pending 玄微",
+    page_role: "acquisition_landing",
+    audience_state: "external_cold",
+    query_family: "free_soul_blueprint",
+    primary_conversion: "free_blueprint_start",
+    admission_basis: "commercial_intent",
+    asset_class: "not_applicable",
+    notes: "T14: Acquisition / Funnel Landing Page for search, ads, Pinterest, outreach.",
   },
   {
     path: "/your-code",
@@ -70,7 +176,13 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     class: "A",
     priority: 0.9,
     changeFrequency: "weekly",
-    notes: "定案: Public Product Entry Page. Step 1c overlap with home/FSB — pending 玄微",
+    page_role: "branded_product_entry",
+    audience_state: "known_user",
+    query_family: "branded_code_generation",
+    primary_conversion: "free_blueprint_start",
+    admission_basis: "not_search_asset",
+    asset_class: "not_applicable",
+    notes: "T14: Branded Product Entry. Known 1320 users start generation here.",
   },
   {
     path: "/full-report",
@@ -82,6 +194,12 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     class: "A",
     priority: 0.9,
     changeFrequency: "weekly",
+    page_role: "product_sales",
+    audience_state: "known_user",
+    query_family: "full_report",
+    primary_conversion: "full_report_checkout",
+    admission_basis: "commercial_intent",
+    asset_class: "not_applicable",
   },
   {
     path: "/booking",
@@ -93,6 +211,12 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     class: "A",
     priority: 0.85,
     changeFrequency: "weekly",
+    page_role: "session_booking",
+    audience_state: "known_user",
+    query_family: "personal_integration",
+    primary_conversion: "session_booking",
+    admission_basis: "commercial_intent",
+    asset_class: "not_applicable",
   },
   {
     path: "/guides",
@@ -104,6 +228,12 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     class: "A",
     priority: 0.85,
     changeFrequency: "weekly",
+    page_role: "guides_hub",
+    audience_state: "unaware",
+    query_family: "guides",
+    primary_conversion: "free_blueprint_start",
+    admission_basis: "not_search_asset",
+    asset_class: "not_applicable",
   },
   {
     path: "/about-1320",
@@ -115,6 +245,12 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     class: "A",
     priority: 0.8,
     changeFrequency: "monthly",
+    page_role: "brand_about",
+    audience_state: "unaware",
+    query_family: "about_1320",
+    primary_conversion: "free_blueprint_start",
+    admission_basis: "not_search_asset",
+    asset_class: "not_applicable",
   },
   {
     path: "/blueprint",
@@ -126,7 +262,13 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     class: "A",
     priority: 0.8,
     changeFrequency: "monthly",
-    notes: "定案: Public Soul Blueprint Architecture Page — distinct from Page 01",
+    page_role: "product_architecture",
+    audience_state: "unaware",
+    query_family: "soul_blueprint_architecture",
+    primary_conversion: "free_blueprint_start",
+    admission_basis: "original_framework",
+    asset_class: "not_applicable",
+    notes: "Public Soul Blueprint Architecture Page — distinct from Page 01.",
   },
   {
     path: "/full-report-v2",
@@ -138,6 +280,12 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     class: "A",
     priority: 0.75,
     changeFrequency: "monthly",
+    page_role: "product_sample",
+    audience_state: "external_cold",
+    query_family: "sample_report",
+    primary_conversion: "full_report_checkout",
+    admission_basis: "commercial_intent",
+    asset_class: "not_applicable",
   },
   {
     path: "/faq",
@@ -149,6 +297,12 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     class: "A",
     priority: 0.7,
     changeFrequency: "monthly",
+    page_role: "support_faq",
+    audience_state: "unaware",
+    query_family: "faq",
+    primary_conversion: "free_blueprint_start",
+    admission_basis: "not_search_asset",
+    asset_class: "not_applicable",
   },
   {
     path: "/reflect",
@@ -160,6 +314,13 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     class: "A",
     priority: 0.65,
     changeFrequency: "monthly",
+    page_role: "interactive_reflect",
+    audience_state: "known_user",
+    query_family: "reflect",
+    primary_conversion: "none",
+    admission_basis: "not_search_asset",
+    asset_class: "not_applicable",
+    notes: "T10 pending: confirm robots.txt vs sitemap class A.",
   },
   {
     path: "/privacy",
@@ -171,6 +332,12 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     class: "A",
     priority: 0.4,
     changeFrequency: "yearly",
+    page_role: "legal",
+    audience_state: "unaware",
+    query_family: "legal",
+    primary_conversion: "none",
+    admission_basis: "not_search_asset",
+    asset_class: "not_applicable",
   },
   {
     path: "/terms",
@@ -182,6 +349,12 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     class: "A",
     priority: 0.4,
     changeFrequency: "yearly",
+    page_role: "legal",
+    audience_state: "unaware",
+    query_family: "legal",
+    primary_conversion: "none",
+    admission_basis: "not_search_asset",
+    asset_class: "not_applicable",
   },
   {
     path: "/disclaimer",
@@ -193,6 +366,12 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     class: "A",
     priority: 0.4,
     changeFrequency: "yearly",
+    page_role: "legal",
+    audience_state: "unaware",
+    query_family: "legal",
+    primary_conversion: "none",
+    admission_basis: "not_search_asset",
+    asset_class: "not_applicable",
   },
   {
     path: "/what-is-a-soul-blueprint",
@@ -204,6 +383,13 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     class: "A",
     priority: 0.8,
     changeFrequency: "monthly",
+    page_role: "search_definition",
+    audience_state: "external_cold",
+    query_family: "soul_blueprint_definition",
+    primary_conversion: "free_blueprint_start",
+    admission_basis: "original_framework",
+    asset_class: "not_applicable",
+    notes: "Page 01. T15 may add a narrow Akashic semantic section only.",
   },
   {
     path: "/life-path-number-vs-soul-blueprint",
@@ -215,6 +401,13 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     class: "A",
     priority: 0.8,
     changeFrequency: "monthly",
+    page_role: "search_comparison",
+    audience_state: "external_cold",
+    query_family: "life_path_vs_soul_blueprint",
+    primary_conversion: "free_blueprint_start",
+    admission_basis: "original_framework",
+    asset_class: "bridge_explanation",
+    notes: "T16 P2 · Bridge / Explanation Asset. Keep index/canonical/sitemap.",
   },
   {
     path: "/what-is-my-life-path-number",
@@ -226,6 +419,13 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     class: "A",
     priority: 0.8,
     changeFrequency: "monthly",
+    page_role: "search_tool",
+    audience_state: "external_cold",
+    query_family: "life_path_calculator",
+    primary_conversion: "free_blueprint_start",
+    admission_basis: "tool_method",
+    asset_class: "tool_search_reference",
+    notes: "T16 P3 · Tool / Search Reference. Keep and observe — not Bridge.",
   },
   {
     path: "/numerology-by-date-of-birth-vs-soul-blueprint",
@@ -237,6 +437,13 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     class: "A",
     priority: 0.8,
     changeFrequency: "monthly",
+    page_role: "search_bridge",
+    audience_state: "external_cold",
+    query_family: "numerology_by_dob",
+    primary_conversion: "free_blueprint_start",
+    admission_basis: "grandfathered_pre_p7",
+    asset_class: "bridge_category_clarification",
+    notes: "T16 P4 · Bridge / Category Clarification. Stable maintenance. No new generic pages in this family.",
   },
   {
     path: "/birthday-number-vs-life-path-number-vs-soul-blueprint",
@@ -248,6 +455,13 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     class: "A",
     priority: 0.8,
     changeFrequency: "monthly",
+    page_role: "search_comparison",
+    audience_state: "external_cold",
+    query_family: "birthday_vs_life_path",
+    primary_conversion: "free_blueprint_start",
+    admission_basis: "grandfathered_pre_p7",
+    asset_class: "comparison_bridge",
+    notes: "T16 P5 · Comparison / Bridge Asset. Stable maintenance.",
   },
   {
     path: "/what-does-your-birthday-mean",
@@ -259,6 +473,13 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     class: "A",
     priority: 0.8,
     changeFrequency: "monthly",
+    page_role: "search_reference",
+    audience_state: "external_cold",
+    query_family: "birthday_meaning",
+    primary_conversion: "free_blueprint_start",
+    admission_basis: "grandfathered_pre_p7",
+    asset_class: "search_reference_governance",
+    notes: "T16 P6 · Search Reference / Governance Asset. Stable maintenance.",
   },
 ];
 

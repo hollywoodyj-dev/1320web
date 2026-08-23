@@ -7,6 +7,7 @@ import {
   appendAttributionToHref,
   attributionToAnalyticsProps,
 } from "@/lib/funnel/attribution";
+import { trackFunnelEvent } from "@/lib/funnel/track-funnel-event";
 import {
   FREE_RESULT_FULL_OFFER,
   FREE_RESULT_MISSING_MAP,
@@ -89,6 +90,7 @@ export function FreeResultConversionBlock({
               const props = attributionToAnalyticsProps();
               trackEvent("full_report_cta_clicked", props);
               trackEvent("free_to_full_report", props);
+              trackFunnelEvent("full_report_cta_click", { entry: "free_result" });
             }}
           >
             {FREE_RESULT_FULL_OFFER.primaryCta}

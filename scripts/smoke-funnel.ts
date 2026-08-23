@@ -10,6 +10,7 @@ import { ANALYTICS_EVENTS } from "../lib/analytics-events";
 import { buildReportViewModel } from "../lib/report/build-report-view-model";
 import { get1320Content } from "../lib/get1320Content";
 import { isValidBirthDate } from "../lib/validateBirthDate";
+import { buildPinterestLandingUrl } from "../lib/funnel/pinterest-utm";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const webRoot = path.resolve(__dirname, "..");
@@ -113,6 +114,22 @@ assert(attributionLib.includes("captureLandingAttribution"), "T8 capture helper 
 assert(pageViewSource.includes("captureLandingAttribution"), "T8 page-view persist not wired");
 assert(checkoutRoute.includes("attributionToCheckoutMetadata"), "T8 checkout metadata sanitize missing");
 assert(checkoutRoute.includes("payment_intent_data"), "T8 PaymentIntent metadata missing");
+
+const freeResultConversion = fs.readFileSync(
+  path.join(webRoot, "components/funnel/free-result-conversion.tsx"),
+  "utf8",
+);
+assert(freeResultConversion.includes("full_report_cta_click"), "T22 full_report_cta_click not wired");
+
+const pinUrl = buildPinterestLandingUrl({
+  batch: "2026-09",
+  theme: "soul-blueprint",
+  dest: "fsb",
+});
+assert(pinUrl.includes("utm_source=pinterest"), "T22 pin URL missing utm_source");
+assert(pinUrl.includes("utm_medium=organic"), "T22 pin URL missing utm_medium");
+assert(pinUrl.includes("utm_campaign=pin_2026-09_soul-blueprint_fsb"), "T22 pin campaign grain wrong");
+assert(pinUrl.includes("/free-soul-blueprint"), "T22 pin dest path wrong");
 
 const code = calculate1320Code(1980, 5, 22);
 assert(code.s1 === 18 && code.s3Raw === 110 && code.s2 === 27 && code.s0 === 7, "Canonical code mismatch");

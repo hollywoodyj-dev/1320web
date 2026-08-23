@@ -41,6 +41,7 @@ export function SoulcodePageView() {
       ...(lp ? { lp } : {}),
       ...(adGroup ? { ad_group: adGroup } : {}),
       ...(utmSource ? { source: utmSource } : {}),
+      ...(stored?.utm_medium ? { medium: stored.utm_medium } : {}),
       ...(stored?.utm_campaign ? { campaign: stored.utm_campaign } : {}),
       ...(stored?.landingPath ? { landingPath: stored.landingPath } : {}),
     });

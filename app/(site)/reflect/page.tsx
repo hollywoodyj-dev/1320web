@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: REFLECT_META.title,
   description: REFLECT_META.description,
   alternates: { canonical: "/reflect" },
+  robots: { index: false, follow: true },
 };
 
 type SearchParams = Record<string, string | string[] | undefined>;

@@ -307,11 +307,11 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
   {
     path: "/reflect",
     canonical: "/reflect",
-    index: true,
-    sitemap: true,
+    index: false,
+    sitemap: false,
     title: "Wisewave Reflection | 1320 Soul Blueprint",
     h1: "Reflect With Your Soul Blueprint",
-    class: "A",
+    class: "D",
     priority: 0.65,
     changeFrequency: "monthly",
     page_role: "interactive_reflect",
@@ -321,7 +321,7 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     admission_basis: "not_search_asset",
     asset_class: "not_applicable",
     notes:
-      "T10: class A stays. robots Disallow is /reflect/ (session URLs), not /reflect. Entry page is allowed and sitemapped.",
+      "T29: interaction doorway, not a discovery asset. D class — noindex, follow; sitemap false (20 → 19). Self-canonical kept. robots.txt unchanged in step 1: Disallow /reflect/ still covers session URLs only.",
   },
   {
     path: "/privacy",

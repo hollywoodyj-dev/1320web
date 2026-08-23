@@ -10,12 +10,21 @@ import { ANALYTICS_EVENTS } from "../lib/analytics-events";
 import { buildReportViewModel } from "../lib/report/build-report-view-model";
 import { get1320Content } from "../lib/get1320Content";
 import { isValidBirthDate } from "../lib/validateBirthDate";
+import { CONVERSION_EVENT_CATALOG } from "../lib/soulcode-conversion-tracking";
 import { buildPinterestLandingUrl } from "../lib/funnel/pinterest-utm";
+import {
+  mergeAttribution,
+  type FunnelAttribution,
+} from "../lib/funnel/attribution";
 import {
   PAGE_VIEW_BURST_MS,
   resetPageViewDedupe,
   shouldRecordPageView,
 } from "../lib/funnel/page-view-dedupe";
+import {
+  getManifestEntry,
+  getSitemapRoutesFromManifest,
+} from "../lib/seo/intent-manifest";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const webRoot = path.resolve(__dirname, "..");
@@ -127,6 +136,63 @@ assert(shouldRecordPageView("/checkout", 1_000 + 10), "T12 different path should
 assert(shouldRecordPageView("/full-report", 1_000 + PAGE_VIEW_BURST_MS), "T12 after burst window should record");
 assert(checkoutRoute.includes("attributionToCheckoutMetadata"), "T8 checkout metadata sanitize missing");
 assert(checkoutRoute.includes("payment_intent_data"), "T8 PaymentIntent metadata missing");
+
+const firstTouch: FunnelAttribution = {
+  utm_source: "pinterest",
+  utm_medium: "organic",
+  utm_campaign: "haze_t8",
+  landingPath: "/free-soul-blueprint",
+};
+const afterDirectReturn = mergeAttribution(firstTouch, {});
+assert(afterDirectReturn.utm_source === "pinterest", "T8 no-UTM return must keep first-touch source");
+assert(afterDirectReturn.utm_medium === "organic", "T8 no-UTM return must keep first-touch medium");
+assert(afterDirectReturn.utm_campaign === "haze_t8", "T8 no-UTM return must keep first-touch campaign");
+assert(afterDirectReturn.landingPath === "/free-soul-blueprint", "T8 no-UTM return must keep landingPath");
+const afterLaterUtm = mergeAttribution(firstTouch, {
+  utm_source: "google",
+  utm_medium: "cpc",
+  utm_campaign: "later",
+  landingPath: "/",
+});
+assert(afterLaterUtm.utm_source === "pinterest", "T8 later UTM must not overwrite first-touch source");
+assert(afterLaterUtm.utm_campaign === "haze_t8", "T8 later UTM must not overwrite first-touch campaign");
+assert(afterLaterUtm.landingPath === "/free-soul-blueprint", "T8 later landing must not overwrite first landingPath");
+assert(attributionLib.includes("if (hasCampaign)"), "T8 capture must skip save on no-UTM return");
+
+const persistNames = CONVERSION_EVENT_CATALOG.map((entry) => entry.name);
+assert(persistNames.includes("generate_code_started"), "T9 persist catalog missing generate_code_started");
+assert(persistNames.includes("generate_code_completed"), "T9 persist catalog missing generate_code_completed");
+assert(persistNames.includes("full_report_cta_click"), "T9 persist catalog missing full_report_cta_click");
+assert(persistNames.includes("checkout_started"), "T9 persist catalog missing checkout_started");
+assert(persistNames.includes("payment_button_clicked"), "T9 persist catalog missing payment_button_clicked");
+assert(persistNames.includes("signup_completed"), "T9 persist catalog missing signup_completed");
+assert(
+  !persistNames.includes("free_result_view") &&
+    !persistNames.includes("result_view") &&
+    !persistNames.includes("free_blueprint_result_viewed"),
+  "T9 persist catalog grew a Free Result view name — report the gap, do not add",
+);
+
+const reflectEntry = getManifestEntry("/reflect");
+assert(reflectEntry?.class === "D", "T29 /reflect must be class D");
+assert(reflectEntry?.index === false, "T29 /reflect must be noindex");
+assert(reflectEntry?.sitemap === false, "T29 /reflect must leave sitemap");
+assert(reflectEntry?.canonical === "/reflect", "T29 /reflect keeps self-canonical");
+const sitemapRoutes = getSitemapRoutesFromManifest();
+assert(sitemapRoutes.length === 19, `T29 sitemap must be 19 routes, got ${sitemapRoutes.length}`);
+assert(
+  sitemapRoutes.every((route) => route.path !== "/reflect"),
+  "T29 sitemap must not include /reflect",
+);
+const sitemapXml = fs.readFileSync(path.join(webRoot, "public/sitemap.xml"), "utf8");
+const sitemapLocs = sitemapXml.match(/<loc>/g) ?? [];
+assert(sitemapLocs.length === 19, `T29 public/sitemap.xml must have 19 <loc>, got ${sitemapLocs.length}`);
+assert(!sitemapXml.includes("/reflect</loc>"), "T29 public/sitemap.xml still lists /reflect");
+const reflectPage = fs.readFileSync(path.join(webRoot, "app/(site)/reflect/page.tsx"), "utf8");
+assert(reflectPage.includes("index: false"), "T29 /reflect page metadata must set robots noindex");
+assert(reflectPage.includes('canonical: "/reflect"'), "T29 /reflect must keep self-canonical");
+const robotsDisallow = fs.readFileSync(path.join(webRoot, "lib/seo/public-routes.ts"), "utf8");
+assert(robotsDisallow.includes('"/reflect/"'), "T29 step 1 must not remove robots Disallow /reflect/");
 
 const freeResultConversion = fs.readFileSync(
   path.join(webRoot, "components/funnel/free-result-conversion.tsx"),

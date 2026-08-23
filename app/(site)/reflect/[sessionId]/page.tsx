@@ -9,6 +9,7 @@ import { REFLECT_HERO, REFLECT_INVALID, REFLECT_META } from "@/lib/wisewave/refl
 export const metadata: Metadata = {
   title: REFLECT_META.title,
   description: REFLECT_META.description,
+  robots: { index: false, follow: true },
 };
 
 type SearchParams = Record<string, string | string[] | undefined>;

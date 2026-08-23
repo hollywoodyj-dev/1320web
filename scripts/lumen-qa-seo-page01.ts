@@ -93,6 +93,14 @@ async function main() {
     body.includes("mirror—not a fixed identity") && body.includes("prediction"),
     [],
   );
+  record(
+    "T15 traditions section present (Akashic disambiguation only)",
+    body.includes("Does “Soul Blueprint” Mean the Same Thing in Every Tradition?") &&
+      body.includes("Akashic Records") &&
+      body.includes("1320 Soul Blueprint is 1320") &&
+      body.includes("does not claim to read"),
+    [],
+  );
 
   fs.mkdirSync(path.dirname(REPORT), { recursive: true });
 

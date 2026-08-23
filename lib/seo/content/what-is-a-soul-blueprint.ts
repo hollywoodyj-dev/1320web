@@ -81,7 +81,7 @@ export const WHAT_IS_A_SOUL_BLUEPRINT_ARTICLE: SeoArticle = {
   authorTitle: "Founder and Origin Steward of 1320",
   reviewer: "Wisewave",
   publishedAt: "2026-07-31",
-  updatedAt: "2026-07-31",
+  updatedAt: "2026-08-23",
   version: "v1.0",
   published: true,
   sections: [],

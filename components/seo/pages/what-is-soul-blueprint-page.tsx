@@ -16,6 +16,7 @@ import {
   PAGE01_MAP_NOT_LABEL,
   PAGE01_MEANING,
   PAGE01_NOT,
+  PAGE01_TRADITIONS,
 } from "@/lib/seo/content/what-is-a-soul-blueprint-body";
 import { WHAT_IS_A_SOUL_BLUEPRINT_ARTICLE } from "@/lib/seo/content/what-is-a-soul-blueprint";
 import { buildArticleJsonLd, buildBreadcrumbJsonLd } from "@/lib/seo/json-ld";
@@ -206,6 +207,17 @@ export function WhatIsSoulBlueprintPage() {
             <p key={paragraph.slice(0, 56)}>{paragraph}</p>
           ))}
           <p className="wisb-boundary">{PAGE01_COMPARISON.closing}</p>
+        </section>
+
+        <section id={PAGE01_TRADITIONS.id} className="guides-article-section">
+          <h2>{PAGE01_TRADITIONS.title}</h2>
+          <p>
+            <strong>{PAGE01_TRADITIONS.lead}</strong>
+          </p>
+          {PAGE01_TRADITIONS.paragraphs.map((paragraph) => (
+            <p key={paragraph.slice(0, 56)}>{paragraph}</p>
+          ))}
+          <p className="wisb-boundary">{PAGE01_TRADITIONS.closing}</p>
         </section>
 
         <section id={PAGE01_FIXED.id} className="guides-article-section">

@@ -154,6 +154,23 @@ export const PAGE01_COMPARISON = {
     "Different systems may ask different questions. 1320 asks how a symbolic Blueprint can become a living relationship rather than a fixed description.",
 };
 
+export const PAGE01_TRADITIONS = {
+  id: "traditions",
+  title: "Does “Soul Blueprint” Mean the Same Thing in Every Tradition?",
+  lead: "No.",
+  paragraphs: [
+    "Soul Blueprint is already used in more than one tradition. It is a contested market phrase, not a category 1320 owns.",
+    "Some Akashic and spiritual traditions use it for a soul’s plan before birth, past lives, or soul contracts.",
+    "Some numerology practitioners use it for a complete number chart.",
+    "1320 does not adopt either of those meanings as a factual claim.",
+    "1320 Soul Blueprint is 1320’s own name for its S0–S9 symbolic reflection framework — an explicit, independent, governed definition of the idea.",
+    "1320 does not claim to read the Akashic Records.",
+    "Past lives, pre-birth contracts, and destiny are not treated as proven facts.",
+  ],
+  closing:
+    "On this site, 1320 Soul Blueprint means the S0–S9 symbolic mirror — not a record reading, not a fate script, and not a conventional numerology chart.",
+};
+
 export const PAGE01_FIXED = {
   id: "fixed-or-changeable",
   title: "Is Your Soul Blueprint Fixed or Changeable?",

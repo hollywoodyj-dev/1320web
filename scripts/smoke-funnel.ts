@@ -134,6 +134,22 @@ const freeResultConversion = fs.readFileSync(
 );
 assert(freeResultConversion.includes("full_report_cta_click"), "T22 full_report_cta_click not wired");
 
+const page01Body = fs.readFileSync(
+  path.join(webRoot, "lib/seo/content/what-is-a-soul-blueprint-body.ts"),
+  "utf8",
+);
+const page01View = fs.readFileSync(
+  path.join(webRoot, "components/seo/pages/what-is-soul-blueprint-page.tsx"),
+  "utf8",
+);
+assert(page01Body.includes("PAGE01_TRADITIONS"), "T15 traditions copy missing");
+assert(page01Body.includes("Akashic Records"), "T15 must name Akashic Records");
+assert(page01Body.includes("does not claim to read"), "T15 must refuse Akashic-record claims");
+const traditionsJsx = page01View.indexOf("id={PAGE01_TRADITIONS.id}");
+const fixedJsx = page01View.indexOf("id={PAGE01_FIXED.id}");
+assert(traditionsJsx >= 0, "T15 traditions section not rendered");
+assert(traditionsJsx < fixedJsx, "T15 traditions section should sit before fixed/changeable");
+
 const pinUrl = buildPinterestLandingUrl({
   batch: "2026-09",
   theme: "soul-blueprint",

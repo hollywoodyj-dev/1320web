@@ -390,7 +390,8 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     primary_conversion: "free_blueprint_start",
     admission_basis: "original_framework",
     asset_class: "not_applicable",
-    notes: "Page 01. T15 may add a narrow Akashic semantic section only.",
+    notes:
+      "Page 01. T15 added a narrow traditions section (Akashic / numerology chart vs 1320 Soul Blueprint). Title, H1, canonical unchanged.",
   },
   {
     path: "/life-path-number-vs-soul-blueprint",

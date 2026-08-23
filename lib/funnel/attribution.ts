@@ -46,6 +46,18 @@ function trimParam(value: string | null | undefined): string | undefined {
   return trimmed.slice(0, 120);
 }
 
+/** Paths that must not become first-touch landingPath (admin, auth, post-pay). */
+const NON_LANDING_PATH = /^\/(admin|api|account|login|signup|checkout\/success)(\/|$)/;
+
+const CAMPAIGN_KEYS = [
+  "utm_source",
+  "utm_medium",
+  "utm_campaign",
+  "utm_content",
+  "utm_term",
+  "ref",
+] as const;
+
 export function readAttributionFromSearchParams(
   params: URLSearchParams | Record<string, string | string[] | undefined>,
 ): FunnelAttribution {
@@ -80,6 +92,25 @@ export function mergeAttribution(
   if (incoming.capturedAt && !base.capturedAt) base.capturedAt = incoming.capturedAt;
   if (incoming.landingPath && !base.landingPath) base.landingPath = incoming.landingPath;
   return base;
+}
+
+/**
+ * First-touch capture on any public landing page (T8).
+ * Fills empty utm_* / ref / landingPath only — later pages do not overwrite.
+ */
+export function captureLandingAttribution(pathname: string): FunnelAttribution | null {
+  if (typeof window === "undefined") return null;
+  if (NON_LANDING_PATH.test(pathname)) return loadFunnelAttribution();
+
+  const incoming = readAttributionFromSearchParams(new URLSearchParams(window.location.search));
+  const hasCampaign = CAMPAIGN_KEYS.some((key) => Boolean(incoming[key]));
+  if (hasCampaign) {
+    saveFunnelAttribution({
+      ...incoming,
+      landingPath: pathname || "/",
+    });
+  }
+  return loadFunnelAttribution();
 }
 
 export function saveFunnelAttribution(attribution: FunnelAttribution): void {

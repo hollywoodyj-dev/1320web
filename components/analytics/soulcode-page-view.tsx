@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
+import { captureLandingAttribution } from "@/lib/funnel/attribution";
 import { trackEvent } from "@/lib/soulcode-analytics";
 
 function pageSlug(pathname: string): string {
@@ -25,10 +26,11 @@ export function SoulcodePageView() {
   useEffect(() => {
     if (!pathname) return;
 
+    const stored = captureLandingAttribution(pathname);
     const from = searchParams?.get("from")?.trim();
     const lpQuery = searchParams?.get("lp")?.trim();
     const adGroup = searchParams?.get("ad_group")?.trim();
-    const utmSource = searchParams?.get("utm_source")?.trim();
+    const utmSource = stored?.utm_source || searchParams?.get("utm_source")?.trim();
     const pathLp = lpSlugFromPath(pathname);
     const lp = lpQuery || pathLp;
 
@@ -39,10 +41,15 @@ export function SoulcodePageView() {
       ...(lp ? { lp } : {}),
       ...(adGroup ? { ad_group: adGroup } : {}),
       ...(utmSource ? { source: utmSource } : {}),
+      ...(stored?.utm_campaign ? { campaign: stored.utm_campaign } : {}),
+      ...(stored?.landingPath ? { landingPath: stored.landingPath } : {}),
     });
 
     if (pathname === "/") {
-      trackEvent("homepage_view", { path: pathname });
+      trackEvent("homepage_view", {
+        path: pathname,
+        ...(utmSource ? { source: utmSource } : {}),
+      });
     }
 
     if (pathname.startsWith("/lp/")) {

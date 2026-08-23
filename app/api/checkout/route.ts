@@ -5,6 +5,7 @@ import { createSoulReport } from "@/lib/db/reports";
 import { upsertUserByEmail } from "@/lib/db/users";
 import { get1320Content } from "@/lib/get1320Content";
 import { getSiteUrl, isDatabaseConfigured, isStripeConfigured } from "@/lib/platform-config";
+import { attributionToCheckoutMetadata } from "@/lib/funnel/attribution";
 import { getFullReportAmountCents, getFullReportLineItems, getStripe } from "@/lib/stripe/client";
 import { isValidBirthDate } from "@/lib/validateBirthDate";
 
@@ -69,6 +70,7 @@ export async function POST(request: Request) {
     const stripe = getStripe();
     const siteUrl = getSiteUrl();
     const amountCents = getFullReportAmountCents();
+    const attribution = attributionToCheckoutMetadata(body.attribution);
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
@@ -84,8 +86,11 @@ export async function POST(request: Request) {
         birthDate: birthDateLabel,
         product: "full_report",
         pricing_version: "full-report-v1",
-        ...(body.attribution ?? {}),
+        ...attribution,
       },
+      payment_intent_data: Object.keys(attribution).length
+        ? { metadata: attribution }
+        : undefined,
     });
 
     if (!session.url) {

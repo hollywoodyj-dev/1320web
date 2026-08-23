@@ -100,6 +100,17 @@ assert(wiredFiles[7].includes("checkout_started"), "checkout_started not wired")
 assert(wiredFiles[7].includes("payment_button_clicked"), "payment_button_clicked not wired");
 assert(wiredFiles[8].includes("trackSoulcodeEvent"), "funnel beacon helper missing");
 
+const attributionLib = fs.readFileSync(path.join(webRoot, "lib/funnel/attribution.ts"), "utf8");
+const pageViewSource = fs.readFileSync(
+  path.join(webRoot, "components/analytics/soulcode-page-view.tsx"),
+  "utf8",
+);
+const checkoutRoute = fs.readFileSync(path.join(webRoot, "app/api/checkout/route.ts"), "utf8");
+assert(attributionLib.includes("captureLandingAttribution"), "T8 capture helper missing");
+assert(pageViewSource.includes("captureLandingAttribution"), "T8 page-view persist not wired");
+assert(checkoutRoute.includes("attributionToCheckoutMetadata"), "T8 checkout metadata sanitize missing");
+assert(checkoutRoute.includes("payment_intent_data"), "T8 PaymentIntent metadata missing");
+
 const code = calculate1320Code(1980, 5, 22);
 assert(code.s1 === 18 && code.s3Raw === 110 && code.s2 === 27 && code.s0 === 7, "Canonical code mismatch");
 assert(isValidBirthDate(1980, 5, 22), "Canonical birth date should validate");

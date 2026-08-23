@@ -74,6 +74,7 @@ export async function POST(request: Request) {
       mode: "payment",
       customer_email: email,
       line_items: getFullReportLineItems(),
+      allow_promotion_codes: true,
       success_url: `${siteUrl}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${siteUrl}/checkout?cancelled=1`,
       metadata: {

@@ -11,6 +11,11 @@ import { buildReportViewModel } from "../lib/report/build-report-view-model";
 import { get1320Content } from "../lib/get1320Content";
 import { isValidBirthDate } from "../lib/validateBirthDate";
 import { buildPinterestLandingUrl } from "../lib/funnel/pinterest-utm";
+import {
+  PAGE_VIEW_BURST_MS,
+  resetPageViewDedupe,
+  shouldRecordPageView,
+} from "../lib/funnel/page-view-dedupe";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const webRoot = path.resolve(__dirname, "..");
@@ -112,6 +117,14 @@ const pageViewSource = fs.readFileSync(
 const checkoutRoute = fs.readFileSync(path.join(webRoot, "app/api/checkout/route.ts"), "utf8");
 assert(attributionLib.includes("captureLandingAttribution"), "T8 capture helper missing");
 assert(pageViewSource.includes("captureLandingAttribution"), "T8 page-view persist not wired");
+assert(pageViewSource.includes("shouldRecordPageView"), "T12 page_view burst guard not wired");
+assert(pageViewSource.includes("window.location.search"), "T12 page_view should read live search, not useSearchParams identity");
+
+resetPageViewDedupe();
+assert(shouldRecordPageView("/full-report", 1_000), "T12 first page_view should record");
+assert(!shouldRecordPageView("/full-report", 1_000 + PAGE_VIEW_BURST_MS - 1), "T12 same-path burst should drop");
+assert(shouldRecordPageView("/checkout", 1_000 + 10), "T12 different path should record");
+assert(shouldRecordPageView("/full-report", 1_000 + PAGE_VIEW_BURST_MS), "T12 after burst window should record");
 assert(checkoutRoute.includes("attributionToCheckoutMetadata"), "T8 checkout metadata sanitize missing");
 assert(checkoutRoute.includes("payment_intent_data"), "T8 PaymentIntent metadata missing");
 

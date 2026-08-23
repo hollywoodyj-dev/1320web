@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { captureLandingAttribution } from "@/lib/funnel/attribution";
+import { shouldRecordPageView } from "@/lib/funnel/page-view-dedupe";
 import { trackEvent } from "@/lib/soulcode-analytics";
 
 function pageSlug(pathname: string): string {
@@ -21,16 +22,17 @@ function lpSlugFromPath(pathname: string): string | undefined {
 /** Fires once per route change: page_view (+ homepage_view / paid_landing_view). */
 export function SoulcodePageView() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
     if (!pathname) return;
+    if (!shouldRecordPageView(pathname)) return;
 
     const stored = captureLandingAttribution(pathname);
-    const from = searchParams?.get("from")?.trim();
-    const lpQuery = searchParams?.get("lp")?.trim();
-    const adGroup = searchParams?.get("ad_group")?.trim();
-    const utmSource = stored?.utm_source || searchParams?.get("utm_source")?.trim();
+    const search = new URLSearchParams(window.location.search);
+    const from = search.get("from")?.trim();
+    const lpQuery = search.get("lp")?.trim();
+    const adGroup = search.get("ad_group")?.trim();
+    const utmSource = stored?.utm_source || search.get("utm_source")?.trim();
     const pathLp = lpSlugFromPath(pathname);
     const lp = lpQuery || pathLp;
 
@@ -61,7 +63,7 @@ export function SoulcodePageView() {
         ...(from ? { from } : {}),
       });
     }
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   return null;
 }

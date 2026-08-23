@@ -320,7 +320,8 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     primary_conversion: "none",
     admission_basis: "not_search_asset",
     asset_class: "not_applicable",
-    notes: "T10 pending: confirm robots.txt vs sitemap class A.",
+    notes:
+      "T10: class A stays. robots Disallow is /reflect/ (session URLs), not /reflect. Entry page is allowed and sitemapped.",
   },
   {
     path: "/privacy",

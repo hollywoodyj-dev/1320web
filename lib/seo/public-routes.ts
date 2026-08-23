@@ -38,6 +38,7 @@ export const ROBOTS_DISALLOW_PATHS = [
   "/sample-report",
   "/sample-report-v2",
   "/booking/success",
+  /** Session URLs only. `/reflect` (no trailing slash) stays crawlable + sitemapped. */
   "/reflect/",
   "/login",
   "/signup",

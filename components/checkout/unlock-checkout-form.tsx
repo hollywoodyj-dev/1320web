@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { trackEvent } from "@/lib/analytics";
 import { FORM_CONSENT } from "@/lib/form-consent";
 import {
@@ -9,6 +9,7 @@ import {
   attributionToCheckoutMetadata,
   loadFunnelAttribution,
 } from "@/lib/funnel/attribution";
+import { trackFunnelEvent } from "@/lib/funnel/track-funnel-event";
 
 type UnlockCheckoutFormProps = {
   defaultYear?: number;
@@ -31,6 +32,10 @@ export function UnlockCheckoutForm({
 }: UnlockCheckoutFormProps) {
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    trackFunnelEvent("checkout_started", { entry: source });
+  }, [source]);
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -57,6 +62,7 @@ export function UnlockCheckoutForm({
       source,
       ...attributionToAnalyticsProps(loadFunnelAttribution()),
     });
+    trackFunnelEvent("payment_button_clicked", { entry: source });
 
     try {
       const response = await fetch("/api/checkout", {

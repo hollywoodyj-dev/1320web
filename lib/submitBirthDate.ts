@@ -5,6 +5,7 @@ import {
   attributionToAnalyticsProps,
   loadFunnelAttribution,
 } from "@/lib/funnel/attribution";
+import { trackFunnelEvent } from "@/lib/funnel/track-funnel-event";
 import { devLog } from "@/lib/dev-log";
 import { birthPartsToNumbers, parseBirthDateInput } from "@/lib/parse-birth-date-input";
 import { buildGeneratingHref, saveSession1320, toSessionPayload } from "@/lib/session1320";
@@ -61,6 +62,7 @@ export function submitBirthDate(
     if (source === "free-soul-blueprint") {
       trackEvent("free_blueprint_generation_started", attrProps);
     }
+    trackFunnelEvent("generate_code_started", { entry: source });
     const href = appendAttributionToHref(buildGeneratingHref(year, month, day));
     return { ok: true, href };
   } catch {

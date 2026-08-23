@@ -19,6 +19,7 @@ import { ResultExtras } from "@/components/report/result-extras";
 import { FreeResultConversionBlock } from "@/components/funnel/free-result-conversion";
 import { trackEvent } from "@/lib/analytics";
 import { attributionToAnalyticsProps } from "@/lib/funnel/attribution";
+import { trackFunnelEvent } from "@/lib/funnel/track-funnel-event";
 
 type ReportDashboardProps = {
   viewModel: ReportViewModel;
@@ -45,6 +46,9 @@ export function ReportDashboard({
     if (viewModel.mode === "free") {
       trackEvent("free_blueprint_result_viewed", attributionToAnalyticsProps());
       trackEvent("free_blueprint_completed", attributionToAnalyticsProps());
+    }
+    if (analyticsEvent === "result_view") {
+      trackFunnelEvent("generate_code_completed");
     }
   }, [analyticsEvent, viewModel.mode]);
 

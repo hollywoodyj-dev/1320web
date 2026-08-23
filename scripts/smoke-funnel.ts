@@ -85,13 +85,20 @@ const wiredFiles = [
   "components/waitlist-form.tsx",
   "components/booking-request-form.tsx",
   "components/lead-capture-form.tsx",
+  "components/checkout/unlock-checkout-form.tsx",
+  "lib/funnel/track-funnel-event.ts",
 ].map((file) => fs.readFileSync(path.join(webRoot, file), "utf8"));
 
 assert(wiredFiles[0].includes("homepage_generate_click"), "homepage_generate_click not wired");
 assert(wiredFiles[0].includes("calculator_submit"), "calculator_submit not wired");
+assert(wiredFiles[0].includes("generate_code_started"), "generate_code_started not wired");
 assert(wiredFiles[1].includes("generating_view"), "generating_view not wired");
 assert(wiredFiles[2].includes("result_view"), "result_view not wired");
+assert(wiredFiles[2].includes("generate_code_completed"), "generate_code_completed not wired");
 assert(wiredFiles[3].includes("blueprint_view"), "blueprint_view not wired");
+assert(wiredFiles[7].includes("checkout_started"), "checkout_started not wired");
+assert(wiredFiles[7].includes("payment_button_clicked"), "payment_button_clicked not wired");
+assert(wiredFiles[8].includes("trackSoulcodeEvent"), "funnel beacon helper missing");
 
 const code = calculate1320Code(1980, 5, 22);
 assert(code.s1 === 18 && code.s3Raw === 110 && code.s2 === 27 && code.s0 === 7, "Canonical code mismatch");

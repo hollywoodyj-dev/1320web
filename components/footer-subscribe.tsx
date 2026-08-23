@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { submitLead, trackEvent } from "@/lib/analytics";
 import { FORM_CONSENT, FORM_MESSAGES } from "@/lib/form-consent";
+import { trackFunnelEvent } from "@/lib/funnel/track-funnel-event";
 
 type FooterSubscribeProps = {
   variant?: "homepage" | "inner";
@@ -23,8 +24,13 @@ export function FooterSubscribe({ variant = "inner" }: FooterSubscribeProps) {
 
     const source = "footer_subscribe";
     trackEvent("email_capture_submit", { source });
-    await submitLead({ type: "newsletter", source, email: email.trim() });
+    const stored = await submitLead({ type: "newsletter", source, email: email.trim() });
+    if (!stored) {
+      setStatus("We could not save your email. Please try again.");
+      return;
+    }
     trackEvent("email_capture_success", { source });
+    trackFunnelEvent("signup_completed", { entry: source });
     setStatus(FORM_MESSAGES.emailSuccess);
     setEmail("");
     setConsent(false);

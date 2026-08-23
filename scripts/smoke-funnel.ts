@@ -99,6 +99,9 @@ assert(wiredFiles[3].includes("blueprint_view"), "blueprint_view not wired");
 assert(wiredFiles[7].includes("checkout_started"), "checkout_started not wired");
 assert(wiredFiles[7].includes("payment_button_clicked"), "payment_button_clicked not wired");
 assert(wiredFiles[8].includes("trackSoulcodeEvent"), "funnel beacon helper missing");
+const footerSubscribe = fs.readFileSync(path.join(webRoot, "components/footer-subscribe.tsx"), "utf8");
+assert(footerSubscribe.includes("signup_completed"), "T25 footer signup_completed not wired");
+assert(footerSubscribe.includes("submitLead"), "T25 footer submitLead missing");
 
 const attributionLib = fs.readFileSync(path.join(webRoot, "lib/funnel/attribution.ts"), "utf8");
 const pageViewSource = fs.readFileSync(

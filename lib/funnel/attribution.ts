@@ -1,6 +1,12 @@
 /**
  * First-party campaign attribution for Free → Full funnel (Funnel Spec v1.0 · F1).
  * Never store birth dates, codes, or reflection text here.
+ *
+ * Attribution model (locked for Track B / purchase_completed):
+ *   FIRST-TOUCH — mergeAttribution only fills empty keys, so the first captured
+ *   utm_source / utm_campaign wins for the session lifetime (sessionStorage + 30d cookie).
+ *   Checkout copies those values into Stripe session.metadata; purchase_completed reads
+ *   them on webhook fulfill — not last-touch at payment time.
  */
 
 export const FUNNEL_ATTRIBUTION_STORAGE_KEY = "1320_funnel_attribution_v1";

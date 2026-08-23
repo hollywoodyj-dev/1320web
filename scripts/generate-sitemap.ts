@@ -1,11 +1,11 @@
 /**
- * Build-time sitemap generator — writes public/sitemap.xml from static route registry.
+ * Build-time sitemap — DERIVED from SEO Intent Manifest (sitemap: true only).
  * Run: npx tsx scripts/generate-sitemap.ts
  */
 import { writeFileSync } from "node:fs";
 import path from "node:path";
 import { CANONICAL_SITE_URL } from "../lib/platform-config";
-import { getSitemapRoutes } from "../lib/seo/public-routes";
+import { getSitemapRoutesFromManifest } from "../lib/seo/intent-manifest";
 
 function escapeXml(value: string): string {
   return value
@@ -19,7 +19,7 @@ function escapeXml(value: string): string {
 function main() {
   const siteUrl = CANONICAL_SITE_URL.replace(/\/$/, "");
   const lastModified = new Date().toISOString();
-  const routes = getSitemapRoutes();
+  const routes = getSitemapRoutesFromManifest();
 
   const body = routes
     .map((route) => {
@@ -45,7 +45,7 @@ function main() {
 
   const outPath = path.join(process.cwd(), "public", "sitemap.xml");
   writeFileSync(outPath, xml, "utf8");
-  console.log(`Wrote ${routes.length} URLs to ${outPath}`);
+  console.log(`Wrote ${routes.length} URLs to ${outPath} (from intent manifest)`);
 }
 
 main();

@@ -70,7 +70,16 @@ export async function recordConversionEvent(
     await withDb(async () => {
       const db = getSql();
 
-      if (DEDUPE_ONCE_PER_USER.has(input.eventName) && input.userId) {
+      // purchase_completed: once per Stripe checkout session (transaction), not merely once per user.
+      if (input.eventName === "purchase_completed" && input.sessionId) {
+        const existingTx = await db<{ id: string }[]>`
+          SELECT id FROM marketing_conversion_events
+          WHERE event_name = ${input.eventName}
+            AND session_id = ${input.sessionId}
+          LIMIT 1
+        `;
+        if (existingTx[0]) return;
+      } else if (DEDUPE_ONCE_PER_USER.has(input.eventName) && input.userId) {
         const existing = await db<{ id: string }[]>`
           SELECT id FROM marketing_conversion_events
           WHERE event_name = ${input.eventName}

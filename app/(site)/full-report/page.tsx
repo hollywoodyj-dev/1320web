@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FaqSection } from "@/components/conversion/faq-section";
+import { FullReportPersonalFoundation } from "@/components/funnel/full-report-personal-foundation";
+import { FullReportSalesTracker } from "@/components/funnel/full-report-sales-tracker";
 import {
   FREE_VS_FULL,
   FULL_INCLUDES,
@@ -10,14 +12,10 @@ import {
   FULL_REPORT_HERO,
   FULL_REPORT_META,
   LIVE_INTEGRATION,
-  PERSONAL_FOUNDATION_CONTEXT,
   REPORT_PROMISE,
   UNLOCK_SECTION,
 } from "@/lib/full-report-content";
 import { SAMPLE_REPORT_HREF } from "@/lib/site-nav";
-import { FullReportSalesTracker } from "@/components/funnel/full-report-sales-tracker";
-import { calculate1320Code } from "@/lib/calculate1320Code";
-import { resolveBirthDateFromRequest } from "@/lib/resolve-birth-date";
 
 export const metadata: Metadata = {
   title: FULL_REPORT_META.title,
@@ -25,29 +23,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "/full-report" },
 };
 
-export const dynamic = "force-dynamic";
+/** Sales page is static; personal foundation codes hydrate client-side when birth is known. */
+export const dynamic = "force-static";
 
-type SearchParams = Record<string, string | string[] | undefined>;
-
-export default async function FullReportPage({
-  searchParams,
-}: {
-  searchParams: Promise<SearchParams>;
-}) {
-  const params = await searchParams;
-  const birth = await resolveBirthDateFromRequest(params);
-  const foundationCodes = birth
-    ? (() => {
-        const code = calculate1320Code(birth.year, birth.month, birth.day);
-        return [
-          { label: "S1", value: code.s1 },
-          { label: "S3", value: code.s3Raw },
-          { label: "S2", value: code.s2 },
-          { label: "S0", value: code.s0 },
-        ];
-      })()
-    : null;
-
+export default function FullReportPage() {
   return (
     <div className="conversion-page full-report-marketing full-report-marketing--refined full-report-marketing--invite">
       <FullReportSalesTracker />
@@ -75,19 +54,7 @@ export default async function FullReportPage({
         </ul>
       </header>
 
-      {foundationCodes ? (
-        <section className="full-report-personal-foundation" aria-label={PERSONAL_FOUNDATION_CONTEXT.title}>
-          <h2 className="full-report-invite-title">{PERSONAL_FOUNDATION_CONTEXT.title}</h2>
-          <ul className="full-report-foundation-codes">
-            {foundationCodes.map((item) => (
-              <li key={item.label}>
-                {item.label}-{String(item.value)}
-              </li>
-            ))}
-          </ul>
-          <p>{PERSONAL_FOUNDATION_CONTEXT.supporting}</p>
-        </section>
-      ) : null}
+      <FullReportPersonalFoundation />
 
       <section className="full-report-invite-section">
         <h2 className="full-report-invite-title">{REPORT_PROMISE.title}</h2>

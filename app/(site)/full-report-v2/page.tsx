@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { UnifiedReportWebShell } from "@/components/report-system/UnifiedReportWebShell";
+import { SampleReportViewTracker } from "@/components/funnel/sample-report-view-tracker";
 import { buildCanonicalReportFromPreview } from "@/lib/report-system/buildCanonicalReportFromPreview";
 import { SAMPLE_REPORT_META } from "@/lib/sample-report-content";
 import "@/styles/report-system/index.css";
@@ -20,5 +21,10 @@ export default function FullReportV2Page() {
     birth_date_display: "May 22, 1980",
   });
 
-  return <UnifiedReportWebShell reportType="sample" data={report} />;
+  return (
+    <>
+      <SampleReportViewTracker />
+      <UnifiedReportWebShell reportType="sample" data={report} />
+    </>
+  );
 }

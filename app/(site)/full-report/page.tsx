@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FaqSection } from "@/components/conversion/faq-section";
+import { FullReportCheckoutCta } from "@/components/funnel/full-report-checkout-cta";
 import { FullReportPersonalFoundation } from "@/components/funnel/full-report-personal-foundation";
 import { FullReportSalesTracker } from "@/components/funnel/full-report-sales-tracker";
 import {
@@ -40,9 +41,9 @@ export default function FullReportPage() {
           <span className="full-report-boundary-line">{FULL_REPORT_HERO.boundaryLine2}</span>
         </p>
         <div className="blueprint-hero-actions">
-          <Link href="/checkout" className="gold-button">
+          <FullReportCheckoutCta entry="hero" className="gold-button">
             {FULL_REPORT_HERO.primaryCta}
-          </Link>
+          </FullReportCheckoutCta>
           <Link href={SAMPLE_REPORT_HREF} className="blueprint-secondary-link">
             {FULL_REPORT_HERO.secondaryCta}
           </Link>
@@ -133,9 +134,9 @@ export default function FullReportPage() {
         <p className="full-report-prose">{UNLOCK_SECTION.body}</p>
         <p className="full-report-price">{UNLOCK_SECTION.priceDisplay}</p>
         <div className="full-report-cta-row">
-          <Link href="/checkout" className="gold-button inline-flex">
+          <FullReportCheckoutCta entry="unlock_section" className="gold-button inline-flex">
             {UNLOCK_SECTION.primaryCta}
-          </Link>
+          </FullReportCheckoutCta>
           <Link href="/login?next=/my-report" className="blueprint-secondary-link">
             {UNLOCK_SECTION.secondaryCta}
           </Link>
@@ -155,9 +156,9 @@ export default function FullReportPage() {
       <section className="full-report-final">
         <h2>{FULL_REPORT_FINAL_CTA.title}</h2>
         <p>{FULL_REPORT_FINAL_CTA.body}</p>
-        <Link href="/checkout" className="gold-button">
+        <FullReportCheckoutCta entry="final_cta" className="gold-button">
           {FULL_REPORT_FINAL_CTA.primaryCta}
-        </Link>
+        </FullReportCheckoutCta>
         <Link href="/free-soul-blueprint" className="blueprint-secondary-link block mt-3">
           {FULL_REPORT_FINAL_CTA.secondaryCta}
         </Link>

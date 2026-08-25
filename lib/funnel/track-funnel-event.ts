@@ -7,6 +7,8 @@
  * Fire points (T9):
  *   generate_code_started     — valid birth-date submit (`submitBirthDate`)
  *   generate_code_completed   — free result shown (`/result` ReportDashboard)
+ *   sample_report_view        — public sample `/full-report-v2`
+ *   full_report_cta_click     — `/full-report` checkout CTAs + free-result Unlock
  *   checkout_started          — paid checkout form mounted (`UnlockCheckoutForm`)
  *   payment_button_clicked    — Unlock / Stripe-redirect click (last owned click)
  */

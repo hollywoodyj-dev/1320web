@@ -175,6 +175,7 @@ const persistNames = CONVERSION_EVENT_CATALOG.map((entry) => entry.name);
 assert(persistNames.includes("generate_code_started"), "T9 persist catalog missing generate_code_started");
 assert(persistNames.includes("generate_code_completed"), "T9 persist catalog missing generate_code_completed");
 assert(persistNames.includes("full_report_cta_click"), "T9 persist catalog missing full_report_cta_click");
+assert(persistNames.includes("sample_report_view"), "T9 persist catalog missing sample_report_view");
 assert(persistNames.includes("checkout_started"), "T9 persist catalog missing checkout_started");
 assert(persistNames.includes("payment_button_clicked"), "T9 persist catalog missing payment_button_clicked");
 assert(persistNames.includes("signup_completed"), "T9 persist catalog missing signup_completed");
@@ -211,6 +212,28 @@ const freeResultConversion = fs.readFileSync(
   "utf8",
 );
 assert(freeResultConversion.includes("full_report_cta_click"), "T22 full_report_cta_click not wired");
+
+const fullReportPage = fs.readFileSync(path.join(webRoot, "app/(site)/full-report/page.tsx"), "utf8");
+assert(fullReportPage.includes("FullReportCheckoutCta"), "T9 /full-report checkout CTAs must use FullReportCheckoutCta");
+assert(fullReportPage.includes('entry="hero"'), "T9 /full-report hero CTA missing");
+assert(fullReportPage.includes('entry="unlock_section"'), "T9 /full-report unlock-section CTA missing");
+assert(fullReportPage.includes('entry="final_cta"'), "T9 /full-report final CTA missing");
+assert(!fullReportPage.includes('href="/checkout"'), "T9 /full-report still has unwired /checkout Link");
+const fullReportCta = fs.readFileSync(
+  path.join(webRoot, "components/funnel/full-report-checkout-cta.tsx"),
+  "utf8",
+);
+assert(fullReportCta.includes('trackFunnelEvent("full_report_cta_click"'), "T9 FullReportCheckoutCta must persist full_report_cta_click");
+assert(fullReportCta.includes("onClick"), "T9 full_report_cta_click must be click-only, not mount");
+const sampleReportPage = fs.readFileSync(path.join(webRoot, "app/(site)/full-report-v2/page.tsx"), "utf8");
+assert(sampleReportPage.includes("SampleReportViewTracker"), "T9 public sample must persist sample_report_view");
+const sampleTracker = fs.readFileSync(
+  path.join(webRoot, "components/funnel/sample-report-view-tracker.tsx"),
+  "utf8",
+);
+assert(sampleTracker.includes('trackFunnelEvent("sample_report_view"'), "T9 SampleReportViewTracker must persist sample_report_view");
+const lpTestPage = fs.readFileSync(path.join(webRoot, "app/(site)/lp/test/page.tsx"), "utf8");
+assert(!lpTestPage.includes("paid_landing_primary_cta_click"), "paid LP CTA events must stay unwired until a real LP exists");
 
 const page01Body = fs.readFileSync(
   path.join(webRoot, "lib/seo/content/what-is-a-soul-blueprint-body.ts"),

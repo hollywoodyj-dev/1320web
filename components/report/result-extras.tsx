@@ -43,7 +43,7 @@ export function ResultExtras({ codeString, refined = false }: ResultExtrasProps)
           ) : null}
           <LeadCaptureForm
             source="result_email_code"
-            buttonText={refined ? FREE_RESULT_KEEP.emailLabel : "Send My Code to Email"}
+            buttonText={refined ? FREE_RESULT_KEEP.emailLabel : RESULT_EXTRAS.emailTitle}
             className="report-extras-email-form"
           />
         </section>

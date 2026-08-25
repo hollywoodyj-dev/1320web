@@ -47,6 +47,8 @@ export type LeadPayload = {
   message?: string;
   code?: string;
   platformSessionId?: string;
+  /** Consent label stored on the lead payload. Never reuse a single boolean for return-link vs marketing. */
+  consentStatus?: "legacy_bundled" | "newsletter_updates" | "email_stored_no_send";
 };
 
 /** POST lead to optional API route — returns true when server accepts. */

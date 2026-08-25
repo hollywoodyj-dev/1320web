@@ -7,7 +7,7 @@ import { get1320Content } from "@/lib/get1320Content";
 import { getSiteUrl, isDatabaseConfigured, isStripeConfigured } from "@/lib/platform-config";
 import { attributionToCheckoutMetadata } from "@/lib/funnel/attribution";
 import { recordAccountSignupIfCreated } from "@/lib/funnel/record-account-signup";
-import { getFullReportAmountCents, getFullReportLineItems, getStripe } from "@/lib/stripe/client";
+import { getFullReportAmountCents, getFullReportLineItems, getStripe, stripeAllowPromotionCodes } from "@/lib/stripe/client";
 import { isValidBirthDate } from "@/lib/validateBirthDate";
 
 type CheckoutBody = {
@@ -90,7 +90,7 @@ export async function POST(request: Request) {
       mode: "payment",
       customer_email: email,
       line_items: getFullReportLineItems(),
-      allow_promotion_codes: true,
+      allow_promotion_codes: stripeAllowPromotionCodes(),
       success_url: `${siteUrl}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${siteUrl}/checkout?cancelled=1`,
       metadata: {

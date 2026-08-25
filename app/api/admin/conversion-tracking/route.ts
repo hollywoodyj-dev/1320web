@@ -12,6 +12,12 @@ import {
   T0_SIGNUP_COMPLETED_ACCOUNT,
 } from "@/lib/funnel/t0-baseline";
 import {
+  PINTEREST_BASELINE_AS_OF,
+  PINTEREST_BASELINE_COUNTS,
+  PINTEREST_BASELINE_PAGE_VIEW,
+  PINTEREST_BASELINE_SIGNUP,
+} from "@/lib/funnel/pinterest-start-baseline";
+import {
   CONVERSION_EVENT_CATALOG,
   getGa4MeasurementId,
   PRIMARY_KPI_EVENT,
@@ -215,6 +221,21 @@ export async function GET() {
           pageViewIncludeOperator: T0_PAGE_VIEW_INCLUDE_OPERATOR,
           pageViewExcludeOperator: T0_PAGE_VIEW_EXCLUDE_OPERATOR,
           pageViewOperator: T0_PAGE_VIEW_OPERATOR,
+        },
+        pinterestBaseline: {
+          asOf: PINTEREST_BASELINE_AS_OF,
+          signupCatalogTotal: PINTEREST_BASELINE_SIGNUP.catalogTotal,
+          signupAccount: PINTEREST_BASELINE_SIGNUP.account,
+          newsletterFooter: PINTEREST_BASELINE_SIGNUP.newsletterFooter,
+          newsletterEntry: PINTEREST_BASELINE_SIGNUP.newsletterEntry,
+          pageViewIncludeOperator: PINTEREST_BASELINE_PAGE_VIEW.includeOperator,
+          pageViewExcludeOperator: PINTEREST_BASELINE_PAGE_VIEW.excludeOperator,
+          pageViewOperator: PINTEREST_BASELINE_PAGE_VIEW.operator,
+          generateCodeCompleted: PINTEREST_BASELINE_COUNTS.generate_code_completed,
+          fullReportCtaClick: PINTEREST_BASELINE_COUNTS.full_report_cta_click,
+          sampleReportView: PINTEREST_BASELINE_COUNTS.sample_report_view,
+          checkoutStarted: PINTEREST_BASELINE_COUNTS.checkout_started,
+          purchaseCompleted: PINTEREST_BASELINE_COUNTS.purchase_completed,
         },
         recentEvents: recent.map((row) => ({
           id: row.id,

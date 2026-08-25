@@ -3,6 +3,12 @@ import { isStripeConfigured } from "@/lib/platform-config";
 
 let stripe: Stripe | null = null;
 
+export function stripeAllowPromotionCodes(): boolean {
+  const raw = process.env.STRIPE_ALLOW_PROMOTION_CODES?.trim().toLowerCase();
+  if (raw === "0" || raw === "false" || raw === "off") return false;
+  return true;
+}
+
 export function getStripe(): Stripe {
   if (!isStripeConfigured()) {
     throw new Error("Stripe is not configured.");

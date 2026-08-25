@@ -24,7 +24,12 @@ export function FooterSubscribe({ variant = "inner" }: FooterSubscribeProps) {
 
     const source = "footer_subscribe";
     trackEvent("email_capture_submit", { source });
-    const stored = await submitLead({ type: "newsletter", source, email: email.trim() });
+    const stored = await submitLead({
+      type: "newsletter",
+      source,
+      email: email.trim(),
+      consentStatus: "newsletter_updates",
+    });
     if (!stored) {
       setStatus("We could not save your email. Please try again.");
       return;
@@ -39,8 +44,8 @@ export function FooterSubscribe({ variant = "inner" }: FooterSubscribeProps) {
   const heading = variant === "homepage" ? "STAY CONNECTED" : "STAY CONNECTED";
   const lead =
     variant === "homepage"
-      ? "Receive insights, guidance, and updates from the 1320 field."
-      : "Receive updates from the 1320 Soul Origin Code System.";
+      ? "Receive 1320 newsletter updates. This does not send your Soul Code."
+      : "Receive 1320 newsletter updates. This does not send your Soul Code.";
 
   return (
     <div className={variant === "homepage" ? "footer-subscribe" : "inner-footer-subscribe"}>
@@ -63,7 +68,7 @@ export function FooterSubscribe({ variant = "inner" }: FooterSubscribeProps) {
             required
           />
           <span>
-            {FORM_CONSENT.emailCapture}{" "}
+            {FORM_CONSENT.newsletter}{" "}
             <Link href="/privacy" className="blueprint-secondary-link">
               Privacy Policy
             </Link>

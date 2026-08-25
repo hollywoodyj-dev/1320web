@@ -412,3 +412,17 @@ not: *"The system has power over me."*
 **Trust is the product.**
 
 Everything else is delivery.
+
+---
+
+## 21. Claim Fidelity (C-4)
+
+Derivative publishing follows: **Canonical Source → Claim Ledger → Visual Derivatives**.
+
+Four questions, any Yes = do not publish. See `docs/governance/C4_CLAIM_FIDELITY_CHECK.md`.
+
+1. Did we invent a claim the canonical source does not make?
+2. Did we strengthen the claim (resonance or tradition presented as evidence or authority)?
+3. Did we drop a boundary, disclaimer, or limit of interpretation?
+4. Did reflection become identity?
+

@@ -71,12 +71,12 @@ export const REPORT_FINAL_CTA = {
 
 export const RESULT_EXTRAS = {
   keepTitle: "Keep Your Code",
-  keepBody: "Save or send your four-part code so you can return to it later.",
+  keepBody: "Copy your four-part code for your own records. The email field stores your address only — it does not send the code or a return link.",
   shareTitle: "Share Your Code",
   shareCopyLabel: "Copy My Code",
   shareHint: "Copy your four-part code as a personal reference.",
-  emailTitle: "Send My Code to Email",
-  emailHint: "Receive a copy of your result link.",
+  emailTitle: "Save my email",
+  emailHint: "Stores your email. Does not send your 1320 code or a return link.",
   faqTitle: "FAQ",
   faq: [
     {

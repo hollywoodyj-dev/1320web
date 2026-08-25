@@ -7,8 +7,10 @@ export const FORM_CONSENT = {
     "I want to receive updates about the Full 1320 Soul Origin Report and can unsubscribe at any time.",
   booking:
     "I understand this is a reflection and self-awareness request — not prediction, diagnosis, therapy, legal, financial, or medical advice.",
-  emailCapture:
-    "I agree to receive my 1320 code and related guidance by email, and I can unsubscribe at any time.",
+  newsletter:
+    "I agree to receive 1320 newsletter updates by email. I can unsubscribe at any time. This does not send my 1320 code.",
+  resultEmailStore:
+    "I understand 1320 will store this email. This form does not send my 1320 code or a return link.",
 } as const;
 
 export const FORM_MESSAGES = {
@@ -21,5 +23,6 @@ export const FORM_MESSAGES = {
   bookingError: "Please complete all required fields and confirm your consent.",
   bookingCheckoutUnavailable:
     "Booking checkout is not available yet. Please try again later or contact us for help.",
-  emailSuccess: "Thanks. Your interest has been captured.",
+  emailSuccess: "Thanks. You're subscribed to 1320 updates.",
+  resultEmailStored: "We stored your email. This did not send your code or a return link.",
 } as const;

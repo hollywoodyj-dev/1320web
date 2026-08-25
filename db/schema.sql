@@ -86,7 +86,9 @@ CREATE TABLE IF NOT EXISTS leads (
   source TEXT NOT NULL,
   email TEXT NOT NULL,
   payload JSONB NOT NULL DEFAULT '{}'::jsonb,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  return_link_requested_at TIMESTAMPTZ,
+  marketing_opt_in_at TIMESTAMPTZ
 );
 
 CREATE INDEX IF NOT EXISTS leads_email_idx ON leads(email);

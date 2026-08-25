@@ -36,6 +36,21 @@ type ConversionTrackingData = {
     pageViewExcludeOperator: number;
     pageViewOperator: number;
   };
+  pinterestBaseline: {
+    asOf: string;
+    signupCatalogTotal: number;
+    signupAccount: number;
+    newsletterFooter: number;
+    newsletterEntry: string;
+    pageViewIncludeOperator: number;
+    pageViewExcludeOperator: number;
+    pageViewOperator: number;
+    generateCodeCompleted: number;
+    fullReportCtaClick: number;
+    sampleReportView: number;
+    checkoutStarted: number;
+    purchaseCompleted: number;
+  };
   recentEvents: {
     id: string;
     eventName: string;
@@ -210,6 +225,22 @@ export function AdminConversionPanel() {
             {data.t0Baseline.signupCompletedAccount}; newsletter (
             <code>{data.t0Baseline.newsletterEntry}</code>){" "}
             {data.t0Baseline.newsletterPendingName} pending rename.
+          </p>
+
+          <p style={styles.muted}>
+            Pinterest start ({data.pinterestBaseline.asOf}) all-time: page_view include{" "}
+            {data.pinterestBaseline.pageViewIncludeOperator} / exclude{" "}
+            {data.pinterestBaseline.pageViewExcludeOperator} (operator{" "}
+            {data.pinterestBaseline.pageViewOperator}). signup_completed catalog{" "}
+            {data.pinterestBaseline.signupCatalogTotal} = account{" "}
+            {data.pinterestBaseline.signupAccount} + newsletter (
+            <code>{data.pinterestBaseline.newsletterEntry}</code>){" "}
+            {data.pinterestBaseline.newsletterFooter}. generate_code_completed{" "}
+            {data.pinterestBaseline.generateCodeCompleted}; full_report_cta_click{" "}
+            {data.pinterestBaseline.fullReportCtaClick}; sample_report_view{" "}
+            {data.pinterestBaseline.sampleReportView}; checkout_started{" "}
+            {data.pinterestBaseline.checkoutStarted}; purchase_completed{" "}
+            {data.pinterestBaseline.purchaseCompleted}.
           </p>
 
           <div style={styles.header}>

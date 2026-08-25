@@ -61,9 +61,9 @@ export const FREE_RESULT_UPGRADE = {
 
 export const FREE_RESULT_KEEP = {
   title: "Keep Your Code",
-  body: "Save or send your four-part code so you can return to it later.",
+  body: "Copy your four-part code for your own records. Saving an email below stores the address only — it does not send the code or a return link.",
   copyLabel: "Copy My Code",
-  emailLabel: "Send My Code to Email",
+  emailLabel: "Save my email",
 };
 
 export const FREE_RESULT_FAQ = [

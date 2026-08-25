@@ -16,7 +16,7 @@ import {
   isBookingCheckoutConfigured,
 } from "@/lib/platform-config";
 import { getBookingAmountCents, resolveBookingLineItems } from "@/lib/stripe/booking-client";
-import { getStripe } from "@/lib/stripe/client";
+import { getStripe, stripeAllowPromotionCodes } from "@/lib/stripe/client";
 import { recordAccountSignupIfCreated } from "@/lib/funnel/record-account-signup";
 
 type BookingCheckoutBody = {
@@ -112,7 +112,7 @@ export async function POST(request: Request) {
       mode: "payment",
       customer_email: email,
       line_items: await resolveBookingLineItems(sessionVariant, stripe),
-      allow_promotion_codes: true,
+      allow_promotion_codes: stripeAllowPromotionCodes(),
       success_url: `${siteUrl}/booking/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${siteUrl}/booking?cancelled=1`,
       metadata: {

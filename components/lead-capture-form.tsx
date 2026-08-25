@@ -9,12 +9,16 @@ type LeadCaptureFormProps = {
   source: string;
   buttonText?: string;
   className?: string;
+  consentCopy?: string;
+  successMessage?: string;
 };
 
 export function LeadCaptureForm({
   source,
   buttonText = "Join Waitlist",
   className,
+  consentCopy = FORM_CONSENT.resultEmailStore,
+  successMessage = FORM_MESSAGES.resultEmailStored,
 }: LeadCaptureFormProps) {
   const [email, setEmail] = useState("");
   const [consent, setConsent] = useState(false);
@@ -28,9 +32,14 @@ export function LeadCaptureForm({
     }
 
     trackEvent("email_capture_submit", { source });
-    await submitLead({ type: "email_capture", source, email });
+    await submitLead({
+      type: "email_capture",
+      source,
+      email,
+      consentStatus: "email_stored_no_send",
+    });
     trackEvent("email_capture_success", { source });
-    setStatus(FORM_MESSAGES.emailSuccess);
+    setStatus(successMessage);
     setEmail("");
     setConsent(false);
   }
@@ -56,7 +65,7 @@ export function LeadCaptureForm({
           className="mt-0.5"
         />
         <span>
-          {FORM_CONSENT.emailCapture}{" "}
+          {consentCopy}{" "}
           <Link href="/privacy" className="blueprint-secondary-link">
             Privacy Policy
           </Link>

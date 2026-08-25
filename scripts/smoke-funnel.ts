@@ -147,6 +147,30 @@ assert(adminPanel.includes("t0Baseline"), "T32 admin must surface locked T0 base
 const t0Baseline = fs.readFileSync(path.join(webRoot, "lib/funnel/t0-baseline.ts"), "utf8");
 assert(t0Baseline.includes("T0_SIGNUP_COMPLETED_ACCOUNT = 0"), "T0 account signup_completed must be 0");
 assert(t0Baseline.includes("T0_PAGE_VIEW_INCLUDE_OPERATOR = 94"), "T0 page_view include lock");
+const pinterestBaseline = fs.readFileSync(path.join(webRoot, "lib/funnel/pinterest-start-baseline.ts"), "utf8");
+assert(pinterestBaseline.includes("PINTEREST_BASELINE_SIGNUP"), "P1 Pinterest baseline missing signup split");
+assert(pinterestBaseline.includes("account: 3"), "P1 Pinterest baseline account signup must be 3");
+assert(pinterestBaseline.includes("newsletterFooter: 1"), "P1 Pinterest baseline newsletter must be 1");
+assert(adminPanel.includes("pinterestBaseline"), "admin must surface Pinterest-start baseline");
+const t26 = fs.readFileSync(path.join(webRoot, "docs/governance/T26_REWRITE_PROPOSALS_2026-08-25.md"), "utf8");
+assert(t26.includes("Three questions"), "T26 proposals must include the three-question self-check");
+assert(t26.includes("Naive reader"), "T26 question 3 must be answered");
+const c4 = fs.readFileSync(path.join(webRoot, "docs/governance/C4_CLAIM_FIDELITY_CHECK.md"), "utf8");
+assert(c4.includes("Did reflection become identity"), "C-4 fourth question missing");
+assert(c4.includes("Canonical Source → Claim Ledger → Visual Derivatives"), "C-4 pipeline missing");
+const t29Qa = fs.readFileSync(path.join(webRoot, "qa-artifacts/LUMEN_QA_T29_SITEMAP_20_TO_19.md"), "utf8");
+assert(t29Qa.includes("20 → 19"), "T29 QA artifact must name the 20 → 19 sitemap change");
+assert(t29Qa.includes("not a regression"), "T29 QA artifact must mark 20 → 19 as expected");
+const formConsent = fs.readFileSync(path.join(webRoot, "lib/form-consent.ts"), "utf8");
+assert(!formConsent.includes("receive my 1320 code"), "Phase A newsletter must not promise the 1320 code");
+assert(formConsent.includes("resultEmailStore"), "Phase A result email store consent missing");
+const resultKeep = fs.readFileSync(path.join(webRoot, "lib/result-content.ts"), "utf8");
+assert(!resultKeep.includes("Send My Code to Email"), "Phase A result CTA must not promise emailing the code");
+assert(resultKeep.includes("does not send the code"), "Phase A result keep copy must describe store-only email");
+const freeIncludes = fs.readFileSync(path.join(webRoot, "lib/free-soul-blueprint-content.ts"), "utf8");
+assert(!freeIncludes.includes("save or return to your result"), "Phase A must not promise a return mechanism that does not exist");
+const checkoutRoutePromo = fs.readFileSync(path.join(webRoot, "app/api/checkout/route.ts"), "utf8");
+assert(checkoutRoutePromo.includes("stripeAllowPromotionCodes"), "C-3 promo codes must be switchable");
 assert(t0Baseline.includes("T0_PAGE_VIEW_EXCLUDE_OPERATOR = 70"), "T0 page_view exclude lock");
 
 const firstTouch: FunnelAttribution = {

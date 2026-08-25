@@ -90,7 +90,7 @@ export const FREE_SOUL_BLUEPRINT_INCLUDES = {
     "One Integrated Soul Blueprint mirror",
     "Personal reflection questions",
     "A clear introduction to the complete S0–S9 journey",
-    "The option to save or return to your result",
+    "The option to copy your code for your own records",
   ],
 };
 

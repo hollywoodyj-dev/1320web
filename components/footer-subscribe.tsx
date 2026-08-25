@@ -41,11 +41,8 @@ export function FooterSubscribe({ variant = "inner" }: FooterSubscribeProps) {
     setConsent(false);
   }
 
-  const heading = variant === "homepage" ? "STAY CONNECTED" : "STAY CONNECTED";
-  const lead =
-    variant === "homepage"
-      ? "Receive 1320 newsletter updates. This does not send your Soul Code."
-      : "Receive 1320 newsletter updates. This does not send your Soul Code.";
+  const heading = "STAY CONNECTED";
+  const lead = "Receive 1320 newsletter updates.";
 
   return (
     <div className={variant === "homepage" ? "footer-subscribe" : "inner-footer-subscribe"}>

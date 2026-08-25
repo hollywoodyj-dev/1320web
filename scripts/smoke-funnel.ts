@@ -163,10 +163,14 @@ assert(t29Qa.includes("20 → 19"), "T29 QA artifact must name the 20 → 19 sit
 assert(t29Qa.includes("not a regression"), "T29 QA artifact must mark 20 → 19 as expected");
 const formConsent = fs.readFileSync(path.join(webRoot, "lib/form-consent.ts"), "utf8");
 assert(!formConsent.includes("receive my 1320 code"), "Phase A newsletter must not promise the 1320 code");
+assert(!formConsent.includes("does not send"), "Phase A customer copy must not explain an internal non-feature");
 assert(formConsent.includes("resultEmailStore"), "Phase A result email store consent missing");
 const resultKeep = fs.readFileSync(path.join(webRoot, "lib/result-content.ts"), "utf8");
 assert(!resultKeep.includes("Send My Code to Email"), "Phase A result CTA must not promise emailing the code");
-assert(resultKeep.includes("does not send the code"), "Phase A result keep copy must describe store-only email");
+assert(!resultKeep.includes("does not send"), "Phase A result copy must not explain an internal non-feature");
+assert(resultKeep.includes("keep it on file"), "Phase A result keep copy must describe storing email");
+const footerSubscribeCopy = fs.readFileSync(path.join(webRoot, "components/footer-subscribe.tsx"), "utf8");
+assert(!footerSubscribeCopy.includes("does not send"), "Phase A footer must not tell customers what it will not send");
 const freeIncludes = fs.readFileSync(path.join(webRoot, "lib/free-soul-blueprint-content.ts"), "utf8");
 assert(!freeIncludes.includes("save or return to your result"), "Phase A must not promise a return mechanism that does not exist");
 const checkoutRoutePromo = fs.readFileSync(path.join(webRoot, "app/api/checkout/route.ts"), "utf8");

@@ -8,9 +8,9 @@ export const FORM_CONSENT = {
   booking:
     "I understand this is a reflection and self-awareness request — not prediction, diagnosis, therapy, legal, financial, or medical advice.",
   newsletter:
-    "I agree to receive 1320 newsletter updates by email. I can unsubscribe at any time. This does not send my 1320 code.",
+    "I agree to receive 1320 newsletter updates by email. I can unsubscribe at any time.",
   resultEmailStore:
-    "I understand 1320 will store this email. This form does not send my 1320 code or a return link.",
+    "I agree 1320 may keep this email on file.",
 } as const;
 
 export const FORM_MESSAGES = {
@@ -24,5 +24,5 @@ export const FORM_MESSAGES = {
   bookingCheckoutUnavailable:
     "Booking checkout is not available yet. Please try again later or contact us for help.",
   emailSuccess: "Thanks. You're subscribed to 1320 updates.",
-  resultEmailStored: "We stored your email. This did not send your code or a return link.",
+  resultEmailStored: "Thanks. We've saved your email.",
 } as const;

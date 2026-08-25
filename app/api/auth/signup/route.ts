@@ -3,8 +3,9 @@ import { safeNextPath } from "@/lib/auth/next-path";
 import { hashPassword, validatePassword } from "@/lib/auth/password";
 import { setUserSession } from "@/lib/auth/session";
 import { ensureSoulReportForUserBirthDate } from "@/lib/db/ensure-soul-report";
-import { upsertUserAccount } from "@/lib/db/users";
+import { upsertUserAccount, getUserByEmail } from "@/lib/db/users";
 import { isDatabaseConfigured } from "@/lib/platform-config";
+import { recordAccountSignupIfCreated } from "@/lib/funnel/record-account-signup";
 
 type SignupBody = {
   email?: string;
@@ -64,12 +65,19 @@ export async function POST(request: Request) {
 
   try {
     const passwordHash = await hashPassword(password);
+    const existing = await getUserByEmail(email);
     const user = await upsertUserAccount({
       email,
       firstName,
       lastName,
       birthDate,
       passwordHash,
+    });
+    await recordAccountSignupIfCreated({
+      created: !existing,
+      userId: user.id,
+      path: "/signup",
+      entry: "signup_page",
     });
     if (birthDate) {
       await ensureSoulReportForUserBirthDate({ userId: user.id, birthDate });

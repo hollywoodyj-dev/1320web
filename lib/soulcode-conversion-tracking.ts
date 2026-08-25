@@ -116,7 +116,8 @@ export const CONVERSION_EVENT_CATALOG: ConversionEventCatalogEntry[] = [
     name: "signup_completed",
     label: "Signup completed",
     tier: "recommended",
-    description: "Account created (email signup).",
+    description:
+      "New users row inserted (checkout implicit account, /signup, booking, or reflect). Footer newsletter currently also fires this name — treat counts as mixed until that collision is split.",
   },
 ];
 

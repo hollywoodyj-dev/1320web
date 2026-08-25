@@ -24,6 +24,8 @@ type ConversionTrackingData = {
     eventName: string;
     userId: string | null;
     source: string | null;
+    medium: string | null;
+    campaign: string | null;
     lp: string | null;
     adGroup: string | null;
     platform: string | null;
@@ -232,6 +234,8 @@ export function AdminConversionPanel() {
                   <th style={styles.th}>When</th>
                   <th style={styles.th}>Event</th>
                   <th style={styles.th}>Source</th>
+                  <th style={styles.th}>Medium</th>
+                  <th style={styles.th}>Campaign</th>
                   <th style={styles.th}>LP / ad group</th>
                   <th style={styles.th}>Path</th>
                 </tr>
@@ -239,7 +243,7 @@ export function AdminConversionPanel() {
               <tbody>
                 {data.recentEvents.length === 0 ? (
                   <tr>
-                    <td style={styles.td} colSpan={5}>
+                    <td style={styles.td} colSpan={7}>
                       No events in window yet.
                     </td>
                   </tr>
@@ -251,6 +255,8 @@ export function AdminConversionPanel() {
                         <code>{ev.eventName}</code>
                       </td>
                       <td style={styles.td}>{ev.source ?? "—"}</td>
+                      <td style={styles.td}>{ev.medium ?? "—"}</td>
+                      <td style={styles.td}>{ev.campaign ?? "—"}</td>
                       <td style={styles.td}>
                         {[ev.lp, ev.adGroup].filter(Boolean).join(" · ") || "—"}
                       </td>

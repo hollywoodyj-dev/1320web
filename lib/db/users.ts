@@ -14,6 +14,15 @@ function normalizeUserRow(row: UserRow): UserRow {
   return { ...row, birth_date: birth };
 }
 
+export async function upsertUserByEmailDetectCreate(
+  email: string,
+  firstName?: string,
+): Promise<{ user: UserRow; created: boolean }> {
+  const existing = await getUserByEmail(email);
+  const user = await upsertUserByEmail(email, firstName);
+  return { user, created: !existing };
+}
+
 export async function upsertUserByEmail(email: string, firstName?: string): Promise<UserRow> {
   const db = getSql();
   const normalized = email.trim().toLowerCase();

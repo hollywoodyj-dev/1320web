@@ -24,8 +24,21 @@ type RecentRow = {
   ad_group: string | null;
   platform: string | null;
   path: string | null;
+  metadata: Record<string, unknown> | null;
   created_at: Date;
 };
+
+function readMetaString(
+  metadata: Record<string, unknown> | null,
+  keys: string[],
+): string | null {
+  if (!metadata) return null;
+  for (const key of keys) {
+    const value = metadata[key];
+    if (typeof value === "string" && value.trim()) return value.trim();
+  }
+  return null;
+}
 
 function toCount(value: string | number): number {
   return typeof value === "number" ? value : Number(value) || 0;
@@ -51,7 +64,7 @@ export async function GET() {
         `,
         db<RecentRow[]>`
           SELECT
-            id, event_name, user_id, session_id, source, lp, ad_group, platform, path, created_at
+            id, event_name, user_id, session_id, source, lp, ad_group, platform, path, metadata, created_at
           FROM marketing_conversion_events
           WHERE created_at >= ${since}
           ORDER BY created_at DESC
@@ -115,6 +128,8 @@ export async function GET() {
           userId: row.user_id,
           sessionId: row.session_id,
           source: row.source,
+          medium: readMetaString(row.metadata, ["utm_medium", "medium"]),
+          campaign: readMetaString(row.metadata, ["utm_campaign", "campaign"]),
           lp: row.lp,
           adGroup: row.ad_group,
           platform: row.platform,

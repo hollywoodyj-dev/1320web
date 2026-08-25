@@ -2,9 +2,10 @@ import { ensureSoulReportForUserBirthDate } from "@/lib/db/ensure-soul-report";
 import { ensureExpressionProfile } from "@/lib/db/expression-profiles";
 import { createPlatformSession, mergePlatformSessionMeta } from "@/lib/db/platform-sessions";
 import { getSoulReportById } from "@/lib/db/reports";
-import { upsertUserByEmail } from "@/lib/db/users";
+import { upsertUserByEmailDetectCreate } from "@/lib/db/users";
 import { getSiteUrl } from "@/lib/platform-config";
 import { parseBirthDateString } from "@/lib/personal-integration/parse-birth-date";
+import { recordAccountSignupIfCreated } from "@/lib/funnel/record-account-signup";
 
 export type CreateWisewaveSessionInput = {
   email: string;
@@ -26,7 +27,13 @@ export async function createWisewaveSession(
   const birth = parseBirthDateString(input.birthDate);
   if (!birth) throw new Error("Invalid birth date.");
 
-  const user = await upsertUserByEmail(input.email, input.firstName?.trim());
+  const { user, created } = await upsertUserByEmailDetectCreate(input.email, input.firstName?.trim());
+  await recordAccountSignupIfCreated({
+    created,
+    userId: user.id,
+    path: "/reflect",
+    entry: "reflect_upsert",
+  });
   const report = await ensureSoulReportForUserBirthDate({
     userId: user.id,
     birthDate: birth.isoDate,

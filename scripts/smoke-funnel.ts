@@ -136,6 +136,12 @@ assert(shouldRecordPageView("/checkout", 1_000 + 10), "T12 different path should
 assert(shouldRecordPageView("/full-report", 1_000 + PAGE_VIEW_BURST_MS), "T12 after burst window should record");
 assert(checkoutRoute.includes("attributionToCheckoutMetadata"), "T8 checkout metadata sanitize missing");
 assert(checkoutRoute.includes("payment_intent_data"), "T8 PaymentIntent metadata missing");
+assert(checkoutRoute.includes("recordAccountSignupIfCreated"), "T9 checkout must record signup_completed on new user");
+const signupRoute = fs.readFileSync(path.join(webRoot, "app/api/auth/signup/route.ts"), "utf8");
+assert(signupRoute.includes("recordAccountSignupIfCreated"), "T9 /signup must record signup_completed on new user");
+const adminPanel = fs.readFileSync(path.join(webRoot, "components/admin/admin-conversion-panel.tsx"), "utf8");
+assert(adminPanel.includes("Medium"), "admin events table must show medium");
+assert(adminPanel.includes("Campaign"), "admin events table must show campaign");
 
 const firstTouch: FunnelAttribution = {
   utm_source: "pinterest",

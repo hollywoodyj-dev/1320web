@@ -7,10 +7,11 @@ import { ensureSoulReportForUserBirthDate } from "@/lib/db/ensure-soul-report";
 import { insertLead } from "@/lib/db/leads";
 import { createPlatformSession, mergePlatformSessionMeta } from "@/lib/db/platform-sessions";
 import { createReflection } from "@/lib/db/reflections";
-import { upsertUserByEmail } from "@/lib/db/users";
+import { upsertUserByEmailDetectCreate } from "@/lib/db/users";
 import { sendPrepLinkEmail } from "@/lib/email/send-prep-link";
 import { getSiteUrl } from "@/lib/platform-config";
 import { parseBirthDateString } from "@/lib/personal-integration/parse-birth-date";
+import { recordAccountSignupIfCreated } from "@/lib/funnel/record-account-signup";
 import {
   getSessionVariantLabel,
   sessionPricingSnapshot,
@@ -57,7 +58,13 @@ export async function createPersonalIntegrationRequest(
     throw new Error("Invalid birth date.");
   }
 
-  const user = await upsertUserByEmail(input.email, input.firstName);
+  const { user, created } = await upsertUserByEmailDetectCreate(input.email, input.firstName);
+  await recordAccountSignupIfCreated({
+    created,
+    userId: user.id,
+    path: "/booking",
+    entry: "booking_request_upsert",
+  });
   const report = await ensureSoulReportForUserBirthDate({
     userId: user.id,
     birthDate: birth.isoDate,

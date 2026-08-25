@@ -2,10 +2,11 @@ import { NextResponse } from "next/server";
 import { calculate1320Code } from "@/lib/calculate1320Code";
 import { createPendingPurchase } from "@/lib/db/purchases";
 import { createSoulReport } from "@/lib/db/reports";
-import { upsertUserByEmail } from "@/lib/db/users";
+import { upsertUserByEmailDetectCreate } from "@/lib/db/users";
 import { get1320Content } from "@/lib/get1320Content";
 import { getSiteUrl, isDatabaseConfigured, isStripeConfigured } from "@/lib/platform-config";
 import { attributionToCheckoutMetadata } from "@/lib/funnel/attribution";
+import { recordAccountSignupIfCreated } from "@/lib/funnel/record-account-signup";
 import { getFullReportAmountCents, getFullReportLineItems, getStripe } from "@/lib/stripe/client";
 import { isValidBirthDate } from "@/lib/validateBirthDate";
 
@@ -57,7 +58,7 @@ export async function POST(request: Request) {
       { birthDate: birthDateLabel, reportTier: "full" },
     );
 
-    const user = await upsertUserByEmail(email, body.firstName?.trim());
+    const { user, created } = await upsertUserByEmailDetectCreate(email, body.firstName?.trim());
     const report = await createSoulReport({
       userId: user.id,
       birthYear: year,
@@ -71,6 +72,19 @@ export async function POST(request: Request) {
     const siteUrl = getSiteUrl();
     const amountCents = getFullReportAmountCents();
     const attribution = attributionToCheckoutMetadata(body.attribution);
+    await recordAccountSignupIfCreated({
+      created,
+      userId: user.id,
+      path: "/checkout",
+      entry: "checkout_upsert",
+      source: attribution.utm_source ?? null,
+      metadata: {
+        utm_source: attribution.utm_source,
+        utm_medium: attribution.utm_medium,
+        utm_campaign: attribution.utm_campaign,
+        landingPath: attribution.landingPath,
+      },
+    });
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",

@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { getAccountContext } from "@/lib/auth/account-context";
 import { ensureSoulReportForUserBirthDate } from "@/lib/db/ensure-soul-report";
 import { createPendingPurchase } from "@/lib/db/purchases";
-import { upsertUserByEmail } from "@/lib/db/users";
+import { upsertUserByEmailDetectCreate } from "@/lib/db/users";
 import { parseBirthDateString } from "@/lib/personal-integration/parse-birth-date";
 import {
   isBookableSessionVariant,
@@ -17,6 +17,7 @@ import {
 } from "@/lib/platform-config";
 import { getBookingAmountCents, resolveBookingLineItems } from "@/lib/stripe/booking-client";
 import { getStripe } from "@/lib/stripe/client";
+import { recordAccountSignupIfCreated } from "@/lib/funnel/record-account-signup";
 
 type BookingCheckoutBody = {
   firstName?: string;
@@ -89,7 +90,13 @@ export async function POST(request: Request) {
   }
 
   try {
-    const user = await upsertUserByEmail(email, firstName);
+    const { user, created } = await upsertUserByEmailDetectCreate(email, firstName);
+    await recordAccountSignupIfCreated({
+      created,
+      userId: user.id,
+      path: "/booking",
+      entry: "booking_checkout_upsert",
+    });
     const report = await ensureSoulReportForUserBirthDate({
       userId: user.id,
       birthDate: birth.isoDate,

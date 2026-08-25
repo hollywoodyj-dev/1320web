@@ -117,7 +117,7 @@ export const CONVERSION_EVENT_CATALOG: ConversionEventCatalogEntry[] = [
     label: "Signup completed",
     tier: "recommended",
     description:
-      "New users row inserted (checkout implicit account, /signup, booking, or reflect). Footer newsletter currently also fires this name — treat counts as mixed until that collision is split.",
+      "New users row inserted. Until the newsletter event is renamed, also used for footer subscribe — split on metadata.entry: checkout_upsert / signup_page / booking_* / reflect_upsert vs footer_subscribe.",
   },
 ];
 

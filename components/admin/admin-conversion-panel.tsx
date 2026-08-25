@@ -8,6 +8,7 @@ type CatalogEntry = {
   tier: string;
   description: string;
   count30d: number;
+  count30dExcludeOperator?: number;
 };
 
 type ConversionTrackingData = {
@@ -19,6 +20,22 @@ type ConversionTrackingData = {
   catalog: CatalogEntry[];
   paidLpBreakdown: { lp: string; count: number }[];
   pageViewBreakdown: { path: string; count: number }[];
+  pageViewBreakdownExcludeOperator: { path: string; count: number }[];
+  pageViewScope: {
+    includeOperator: number;
+    excludeOperator: number;
+    operator: number;
+    operatorSharePct: number;
+  };
+  t0Baseline: {
+    asOf: string;
+    signupCompletedAccount: number;
+    newsletterPendingName: number;
+    newsletterEntry: string;
+    pageViewIncludeOperator: number;
+    pageViewExcludeOperator: number;
+    pageViewOperator: number;
+  };
   recentEvents: {
     id: string;
     eventName: string;
@@ -26,6 +43,7 @@ type ConversionTrackingData = {
     source: string | null;
     medium: string | null;
     campaign: string | null;
+    entry: string | null;
     lp: string | null;
     adGroup: string | null;
     platform: string | null;
@@ -124,6 +142,7 @@ export function AdminConversionPanel() {
   const [data, setData] = useState<ConversionTrackingData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [excludeOperator, setExcludeOperator] = useState(false);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -153,6 +172,10 @@ export function AdminConversionPanel() {
     void load();
   }, [load]);
 
+  const pathRows = excludeOperator
+    ? data?.pageViewBreakdownExcludeOperator ?? []
+    : data?.pageViewBreakdown ?? [];
+
   return (
     <section style={styles.section}>
       <div style={styles.header}>
@@ -176,8 +199,33 @@ export function AdminConversionPanel() {
             ) : (
               <strong>not configured</strong>
             )}{" "}
-            — admin reads first-party DB only.
+            — admin reads first-party DB only. Events are never deleted.
           </p>
+
+          <p style={styles.muted}>
+            T0 ({data.t0Baseline.asOf}) page_view include operator{" "}
+            {data.t0Baseline.pageViewIncludeOperator} / exclude{" "}
+            {data.t0Baseline.pageViewExcludeOperator} (operator{" "}
+            {data.t0Baseline.pageViewOperator}). signup_completed account{" "}
+            {data.t0Baseline.signupCompletedAccount}; newsletter (
+            <code>{data.t0Baseline.newsletterEntry}</code>){" "}
+            {data.t0Baseline.newsletterPendingName} pending rename.
+          </p>
+
+          <div style={styles.header}>
+            <p style={{ ...styles.muted, margin: 0 }}>
+              30d page_view: include {data.pageViewScope.includeOperator} / exclude{" "}
+              {data.pageViewScope.excludeOperator} (operator {data.pageViewScope.operator},{" "}
+              {data.pageViewScope.operatorSharePct}%)
+            </p>
+            <button
+              type="button"
+              style={styles.refresh}
+              onClick={() => setExcludeOperator((value) => !value)}
+            >
+              {excludeOperator ? "Showing without operator" : "Showing with operator"}
+            </button>
+          </div>
 
           <div style={styles.cards}>
             <div style={styles.card}>
@@ -185,7 +233,7 @@ export function AdminConversionPanel() {
               <div style={styles.cardValue}>{data.primaryKpi.count30d}</div>
               <div style={styles.cardSub}>{data.primaryKpi.event}</div>
             </div>
-            {data.pageViewBreakdown.slice(0, 6).map((row) => (
+            {pathRows.slice(0, 6).map((row) => (
               <div key={row.path} style={styles.card}>
                 <div style={styles.cardLabel}>{row.path}</div>
                 <div style={styles.cardValue}>{row.count}</div>
@@ -218,7 +266,11 @@ export function AdminConversionPanel() {
                       <code>{entry.name}</code>
                     </td>
                     <td style={styles.td}>{entry.tier}</td>
-                    <td style={styles.td}>{entry.count30d}</td>
+                    <td style={styles.td}>
+                      {entry.name === "page_view" && excludeOperator
+                        ? (entry.count30dExcludeOperator ?? entry.count30d)
+                        : entry.count30d}
+                    </td>
                     <td style={styles.td}>{entry.description}</td>
                   </tr>
                 ))}
@@ -233,6 +285,7 @@ export function AdminConversionPanel() {
                 <tr>
                   <th style={styles.th}>When</th>
                   <th style={styles.th}>Event</th>
+                  <th style={styles.th}>Entry</th>
                   <th style={styles.th}>Source</th>
                   <th style={styles.th}>Medium</th>
                   <th style={styles.th}>Campaign</th>
@@ -243,7 +296,7 @@ export function AdminConversionPanel() {
               <tbody>
                 {data.recentEvents.length === 0 ? (
                   <tr>
-                    <td style={styles.td} colSpan={7}>
+                    <td style={styles.td} colSpan={8}>
                       No events in window yet.
                     </td>
                   </tr>
@@ -254,6 +307,7 @@ export function AdminConversionPanel() {
                       <td style={styles.td}>
                         <code>{ev.eventName}</code>
                       </td>
+                      <td style={styles.td}>{ev.entry ?? "—"}</td>
                       <td style={styles.td}>{ev.source ?? "—"}</td>
                       <td style={styles.td}>{ev.medium ?? "—"}</td>
                       <td style={styles.td}>{ev.campaign ?? "—"}</td>

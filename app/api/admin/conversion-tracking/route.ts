@@ -1,6 +1,16 @@
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/admin/require-admin";
 import { getSql, withDb } from "@/lib/db/client";
+import { OPERATOR_PATH_PREFIX } from "@/lib/funnel/operator-traffic";
+import {
+  T0_AS_OF,
+  T0_NEWSLETTER_ENTRY,
+  T0_NEWSLETTER_PENDING_NAME,
+  T0_PAGE_VIEW_EXCLUDE_OPERATOR,
+  T0_PAGE_VIEW_INCLUDE_OPERATOR,
+  T0_PAGE_VIEW_OPERATOR,
+  T0_SIGNUP_COMPLETED_ACCOUNT,
+} from "@/lib/funnel/t0-baseline";
 import {
   CONVERSION_EVENT_CATALOG,
   getGa4MeasurementId,
@@ -55,7 +65,9 @@ export async function GET() {
       const db = getSql();
       const since = new Date(Date.now() - WINDOW_DAYS * 24 * 60 * 60 * 1000);
 
-      const [counts, recent, paidLpBreakdown, pageViewBreakdown] = await Promise.all([
+      const operatorPath = `${OPERATOR_PATH_PREFIX}%`;
+      const [counts, recent, paidLpBreakdown, pageViewAll, pageViewNonOperator, pageViewExcludeRows] =
+        await Promise.all([
         db<CountRow[]>`
           SELECT event_name, COUNT(*)::int AS count
           FROM marketing_conversion_events
@@ -91,18 +103,87 @@ export async function GET() {
           ORDER BY count DESC
           LIMIT 12
         `,
+        db<PathRow[]>`
+          SELECT path, COUNT(*)::int AS count
+          FROM marketing_conversion_events
+          WHERE created_at >= ${since}
+            AND event_name = 'page_view'
+            AND path IS NOT NULL
+            AND path <> ''
+            AND NOT (
+              (
+                session_id IS NOT NULL
+                AND session_id IN (
+                  SELECT DISTINCT session_id
+                  FROM marketing_conversion_events
+                  WHERE session_id IS NOT NULL
+                    AND path LIKE ${operatorPath}
+                )
+              )
+              OR (
+                user_id IS NOT NULL
+                AND user_id IN (
+                  SELECT DISTINCT user_id
+                  FROM marketing_conversion_events
+                  WHERE user_id IS NOT NULL
+                    AND path LIKE ${operatorPath}
+                )
+              )
+            )
+          GROUP BY path
+          ORDER BY count DESC
+          LIMIT 12
+        `,
+        db<CountRow[]>`
+          SELECT 'page_view' AS event_name, COUNT(*)::int AS count
+          FROM marketing_conversion_events
+          WHERE created_at >= ${since}
+            AND event_name = 'page_view'
+            AND NOT (
+              (
+                session_id IS NOT NULL
+                AND session_id IN (
+                  SELECT DISTINCT session_id
+                  FROM marketing_conversion_events
+                  WHERE session_id IS NOT NULL
+                    AND path LIKE ${operatorPath}
+                )
+              )
+              OR (
+                user_id IS NOT NULL
+                AND user_id IN (
+                  SELECT DISTINCT user_id
+                  FROM marketing_conversion_events
+                  WHERE user_id IS NOT NULL
+                    AND path LIKE ${operatorPath}
+                )
+              )
+            )
+        `,
       ]);
 
       const countMap = new Map(
         counts.map((row) => [row.event_name, toCount(row.count)]),
       );
+      const pageViewInclude = countMap.get("page_view") ?? 0;
+      const pageViewExclude = toCount(pageViewExcludeRows[0]?.count);
+      const pageViewOperator = Math.max(0, pageViewInclude - pageViewExclude);
+      const operatorSharePct =
+        pageViewInclude > 0 ? Math.round((pageViewOperator / pageViewInclude) * 1000) / 10 : 0;
 
       const catalog = CONVERSION_EVENT_CATALOG.map((entry) => ({
         ...entry,
         count30d: countMap.get(entry.name) ?? 0,
+        count30dExcludeOperator:
+          entry.name === "page_view" ? pageViewExclude : countMap.get(entry.name) ?? 0,
       }));
 
       const ga4MeasurementId = getGa4MeasurementId();
+      const mapPaths = (rows: PathRow[]) =>
+        rows.map((row) => ({
+          path: row.path,
+          count: toCount(row.count),
+        }));
 
       return {
         windowDays: WINDOW_DAYS,
@@ -118,10 +199,23 @@ export async function GET() {
           lp: row.lp,
           count: toCount(row.count),
         })),
-        pageViewBreakdown: pageViewBreakdown.map((row) => ({
-          path: row.path,
-          count: toCount(row.count),
-        })),
+        pageViewBreakdown: mapPaths(pageViewAll),
+        pageViewBreakdownExcludeOperator: mapPaths(pageViewNonOperator),
+        pageViewScope: {
+          includeOperator: pageViewInclude,
+          excludeOperator: pageViewExclude,
+          operator: pageViewOperator,
+          operatorSharePct,
+        },
+        t0Baseline: {
+          asOf: T0_AS_OF,
+          signupCompletedAccount: T0_SIGNUP_COMPLETED_ACCOUNT,
+          newsletterPendingName: T0_NEWSLETTER_PENDING_NAME,
+          newsletterEntry: T0_NEWSLETTER_ENTRY,
+          pageViewIncludeOperator: T0_PAGE_VIEW_INCLUDE_OPERATOR,
+          pageViewExcludeOperator: T0_PAGE_VIEW_EXCLUDE_OPERATOR,
+          pageViewOperator: T0_PAGE_VIEW_OPERATOR,
+        },
         recentEvents: recent.map((row) => ({
           id: row.id,
           eventName: row.event_name,
@@ -130,6 +224,7 @@ export async function GET() {
           source: row.source,
           medium: readMetaString(row.metadata, ["utm_medium", "medium"]),
           campaign: readMetaString(row.metadata, ["utm_campaign", "campaign"]),
+          entry: readMetaString(row.metadata, ["entry"]),
           lp: row.lp,
           adGroup: row.ad_group,
           platform: row.platform,

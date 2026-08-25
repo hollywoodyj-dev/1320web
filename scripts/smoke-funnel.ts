@@ -142,6 +142,12 @@ assert(signupRoute.includes("recordAccountSignupIfCreated"), "T9 /signup must re
 const adminPanel = fs.readFileSync(path.join(webRoot, "components/admin/admin-conversion-panel.tsx"), "utf8");
 assert(adminPanel.includes("Medium"), "admin events table must show medium");
 assert(adminPanel.includes("Campaign"), "admin events table must show campaign");
+assert(adminPanel.includes("Showing with operator"), "T32 admin must toggle operator page_view scope");
+assert(adminPanel.includes("t0Baseline"), "T32 admin must surface locked T0 baseline");
+const t0Baseline = fs.readFileSync(path.join(webRoot, "lib/funnel/t0-baseline.ts"), "utf8");
+assert(t0Baseline.includes("T0_SIGNUP_COMPLETED_ACCOUNT = 0"), "T0 account signup_completed must be 0");
+assert(t0Baseline.includes("T0_PAGE_VIEW_INCLUDE_OPERATOR = 94"), "T0 page_view include lock");
+assert(t0Baseline.includes("T0_PAGE_VIEW_EXCLUDE_OPERATOR = 70"), "T0 page_view exclude lock");
 
 const firstTouch: FunnelAttribution = {
   utm_source: "pinterest",

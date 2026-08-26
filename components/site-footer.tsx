@@ -7,11 +7,18 @@ import { FOOTER_LEGAL_LINKS, HOMEPAGE_FOOTER_COLUMNS } from "@/lib/site-nav";
 type SiteFooterProps = {
   leadsEnabled?: boolean;
   variant?: "full" | "compact" | "internal";
+  /** Homepage density: quieter type, homepage subscribe styles. */
+  compact?: boolean;
   internalLabel?: string;
 };
 
 /** Shared footer — full marketing grid, or compact auth/legal/internal gateway. */
-export function SiteFooter({ leadsEnabled, variant = "full", internalLabel }: SiteFooterProps) {
+export function SiteFooter({
+  leadsEnabled,
+  variant = "full",
+  compact = false,
+  internalLabel,
+}: SiteFooterProps) {
   if (variant === "compact" || variant === "internal") {
     const legalLinks =
       variant === "internal"
@@ -39,7 +46,7 @@ export function SiteFooter({ leadsEnabled, variant = "full", internalLabel }: Si
 
   return (
     <>
-      <footer className="site-footer">
+      <footer className={compact ? "site-footer site-footer--compact" : "site-footer"}>
         <div className="footer-brand">
           <div className="brand-lockup">
             <div className="brand-image-shell brand-image-shell-small">
@@ -61,15 +68,6 @@ export function SiteFooter({ leadsEnabled, variant = "full", internalLabel }: Si
             </div>
           </div>
           <p className="footer-copy">{HOMEPAGE_FOOTER_BRAND}</p>
-          <nav className="footer-legal-nav" aria-label="Legal and support">
-            <Link href={FOOTER_ORIGIN.originHref}>{FOOTER_ORIGIN.originLabel}</Link>
-            {FOOTER_LEGAL_LINKS.map((link) => (
-              <Link key={link.href} href={link.href}>
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-          <p className="footer-meta">© 2026 1320 Soul Origin Code System. All Rights Reserved.</p>
         </div>
 
         {HOMEPAGE_FOOTER_COLUMNS.map((column) => (
@@ -85,7 +83,19 @@ export function SiteFooter({ leadsEnabled, variant = "full", internalLabel }: Si
           </div>
         ))}
 
-        <FooterSubscribeSlot variant="inner" enabled={leadsEnabled} />
+        <FooterSubscribeSlot variant={compact ? "homepage" : "inner"} enabled={leadsEnabled} />
+
+        <div className="footer-bar">
+          <nav className="footer-legal-nav" aria-label="Legal and support">
+            <Link href={FOOTER_ORIGIN.originHref}>{FOOTER_ORIGIN.originLabel}</Link>
+            {FOOTER_LEGAL_LINKS.map((link) => (
+              <Link key={link.href} href={link.href}>
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <p className="footer-meta">© 2026 1320 Soul Origin Code System. All Rights Reserved.</p>
+        </div>
       </footer>
 
       <p className="footer-mantra">{HOMEPAGE_FINAL_CTA.mantra}</p>

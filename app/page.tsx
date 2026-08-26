@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { FooterSubscribeSlot } from "@/components/footer-subscribe-slot";
 import { HomeBirthdateEntry } from "@/components/home-birthdate-entry";
 import { HomeTopbar } from "@/components/home-topbar";
+import { SiteFooter } from "@/components/site-footer";
 import { SkipLink } from "@/components/skip-link";
 import {
   HOMEPAGE_BLUEPRINT_INTRO,
@@ -11,17 +11,14 @@ import {
   HOMEPAGE_BOUNDARY_LINK,
   HOMEPAGE_CALCULATOR,
   HOMEPAGE_FINAL_CTA,
-  HOMEPAGE_FOOTER_BRAND,
   HOMEPAGE_FULL_REPORT_PREVIEW,
   HOMEPAGE_HERO,
-  FOOTER_ORIGIN,
   HOMEPAGE_HOW,
   HOMEPAGE_META,
   HOMEPAGE_PILLARS,
   HOMEPAGE_REFLECTION_INLINE,
   HOMEPAGE_WHAT_IS,
 } from "@/lib/homepage-content";
-import { FOOTER_LEGAL_LINKS, HOMEPAGE_FOOTER_COLUMNS } from "@/lib/site-nav";
 
 export const metadata: Metadata = {
   title: { absolute: HOMEPAGE_META.title },
@@ -250,56 +247,7 @@ export default function HomePage() {
           </section>
         </div>
 
-        <footer className="site-footer site-footer--compact">
-          <div className="footer-brand">
-            <div className="brand-lockup">
-              <div className="brand-image-shell brand-image-shell-small">
-                <Image
-                  src="/1320-logo.jpeg"
-                  alt="1320 logo"
-                  width={72}
-                  height={72}
-                  className="brand-image brand-image-small"
-                />
-                <span className="brand-image-cover" aria-hidden="true" />
-              </div>
-              <div>
-                <p className="brand-number">1320</p>
-                <p className="brand-name">
-                  <span>SOUL ORIGIN</span>
-                  <span>CODE SYSTEM</span>
-                </p>
-              </div>
-            </div>
-            <p className="footer-copy">{HOMEPAGE_FOOTER_BRAND}</p>
-            <nav className="footer-legal-nav" aria-label="Legal and support">
-              <Link href={FOOTER_ORIGIN.originHref}>{FOOTER_ORIGIN.originLabel}</Link>
-              {FOOTER_LEGAL_LINKS.map((link) => (
-                <Link key={link.href} href={link.href}>
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-            <p className="footer-meta">© 2026 1320 Soul Origin Code System. All Rights Reserved.</p>
-          </div>
-
-          {HOMEPAGE_FOOTER_COLUMNS.map((column) => (
-            <div key={column.title} className="footer-column">
-              <h3>{column.title}</h3>
-              <ul>
-                {column.links.map((link) => (
-                  <li key={`${column.title}-${link.href}-${link.label}`}>
-                    <Link href={link.href}>{link.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-
-          <FooterSubscribeSlot variant="homepage" />
-        </footer>
-
-        <p className="footer-mantra">{HOMEPAGE_FINAL_CTA.mantra}</p>
+        <SiteFooter compact />
       </div>
     </main>
   );

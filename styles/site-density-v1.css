@@ -329,7 +329,7 @@ h3 {
   margin-top: clamp(28px, 4vw, 40px);
   padding-top: 0;
   gap: 0;
-  grid-template-columns: minmax(0, 1.45fr) auto auto minmax(240px, 1.1fr);
+  grid-template-columns: minmax(220px, 1.1fr) max-content max-content minmax(380px, 1.45fr);
 }
 
 .page-shell .site-footer--compact .footer-copy {

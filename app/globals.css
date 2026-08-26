@@ -981,7 +981,8 @@ button {
 }
 
 .date-fields input,
-.footer-subscribe input {
+.footer-subscribe input[type="email"],
+.inner-footer-subscribe input[type="email"] {
   min-width: 0;
   border: 1px solid rgba(216, 177, 92, 0.14);
   border-radius: 12px;
@@ -1693,8 +1694,8 @@ button {
 
 .site-footer {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) auto auto minmax(240px, 1.15fr);
-  align-items: start;
+  grid-template-columns: minmax(220px, 1.1fr) max-content max-content minmax(380px, 1.45fr);
+  align-items: stretch;
   column-gap: 0;
   row-gap: 0;
   margin-top: 22px;
@@ -1703,14 +1704,22 @@ button {
 }
 
 .site-footer > * {
-  min-height: 0;
+  min-width: 0;
+  align-self: stretch;
+  position: relative;
   padding: 28px 28px 24px;
-  border-right: 1px solid rgba(216, 177, 92, 0.14);
 }
 
-.site-footer > *:last-child,
-.site-footer > :nth-last-child(2) {
-  border-right: 0;
+.site-footer > .footer-brand::after,
+.site-footer > .footer-column::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(216, 177, 92, 0.18);
+  pointer-events: none;
 }
 
 .site-footer .footer-bar {
@@ -1747,7 +1756,8 @@ button {
 }
 
 .footer-column {
-  min-width: 148px;
+  min-width: 0;
+  white-space: nowrap;
 }
 
 .footer-column h3,
@@ -1775,7 +1785,7 @@ button {
   font-size: 0.9rem;
 }
 
-.footer-subscribe input,
+.footer-subscribe input[type="email"],
 .inner-footer-subscribe input[type="email"] {
   width: 100%;
   margin-bottom: 0;
@@ -1906,9 +1916,17 @@ button {
   }
 
   .site-footer > * {
-    border-right: 0;
     border-bottom: 1px solid rgba(216, 177, 92, 0.14);
     padding: 22px 22px 20px;
+  }
+
+  .site-footer > .footer-brand::after,
+  .site-footer > .footer-column::after {
+    display: none;
+  }
+
+  .footer-column {
+    white-space: normal;
   }
 
   .site-footer > *:last-child,
@@ -2321,8 +2339,7 @@ button {
 }
 
 .inner-footer-subscribe {
-  padding: 28px 24px;
-  border-right: 1px solid rgba(216, 177, 92, 0.14);
+  min-width: 0;
 }
 
 .footer-legal-nav {
@@ -2361,15 +2378,31 @@ button {
 .footer-subscribe-consent {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
+  gap: 10px;
+  width: 100%;
   font-size: 0.75rem;
   line-height: 1.5;
   color: rgba(240, 236, 227, 0.78);
 }
 
 .footer-subscribe-consent input[type="checkbox"] {
-  flex-shrink: 0;
-  margin-top: 3px;
+  flex: 0 0 auto;
+  width: 15px;
+  height: 15px;
+  min-width: 15px;
+  margin: 3px 0 0;
+  padding: 0;
+  border: 1px solid rgba(216, 177, 92, 0.45);
+  border-radius: 3px;
+  background: rgba(8, 14, 28, 0.95);
+  accent-color: #efc36f;
+}
+
+.footer-subscribe-consent span {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .footer-subscribe-status {

@@ -1,6 +1,6 @@
 # T26 · Language Governance Remediation
 
-**Status:** ✅ **ACCEPTED** (玄微 / Wisewave, block-by-block review complete)
+**Status:** ✅ **CLOSED / ARCHIVED** (玄微 / Wisewave, 2026-09-15 — production verified)
 
 **Principle (locked):** Preserve the symbol. Remove the unsupported ontological claim.
 

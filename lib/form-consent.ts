@@ -5,6 +5,8 @@ export const FORM_CONSENT = {
     "I understand 1320 is a symbolic self-awareness tool — not prediction, diagnosis, or professional advice.",
   waitlist:
     "I want to receive updates about the Full 1320 Soul Origin Report and can unsubscribe at any time.",
+  checkoutMarketingOptional:
+    "Send me occasional 1320 reflections, updates and new resources by email.",
   booking:
     "I understand this is a reflection and self-awareness request — not prediction, diagnosis, therapy, legal, financial, or medical advice.",
   newsletter:

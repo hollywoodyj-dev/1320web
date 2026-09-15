@@ -49,10 +49,10 @@ export function UnlockCheckoutForm({
     const year = Number(data.get("year"));
     const month = Number(data.get("month"));
     const day = Number(data.get("day"));
-    const consent = data.get("consent") === "on";
+    const marketingOptIn = data.get("marketingOptIn") === "on";
 
-    if (!email || !consent) {
-      setStatus("Please provide your email and consent to continue.");
+    if (!email) {
+      setStatus("Please provide your email to continue.");
       setLoading(false);
       return;
     }
@@ -74,6 +74,7 @@ export function UnlockCheckoutForm({
           year,
           month,
           day,
+          marketingOptIn,
           attribution: attributionToCheckoutMetadata(loadFunnelAttribution()),
         }),
       });
@@ -188,15 +189,17 @@ export function UnlockCheckoutForm({
           </div>
         </>
       )}
-      <label className="conversion-consent">
-        <input name="consent" type="checkbox" required className="mt-0.5" />
-        <span>
-          {FORM_CONSENT.waitlist}{" "}
-          <Link href="/privacy" className="blueprint-secondary-link">
-            Privacy Policy
-          </Link>
-        </span>
+      <label className="conversion-consent checkout-marketing-opt-in">
+        <input name="marketingOptIn" type="checkbox" className="mt-0.5" />
+        <span>{FORM_CONSENT.checkoutMarketingOptional}</span>
       </label>
+      <p className="checkout-terms-inline text-xs text-[#B9C1D0]">
+        By completing your purchase, you agree to the{" "}
+        <Link href="/terms" className="blueprint-secondary-link">
+          Terms of Service
+        </Link>
+        .
+      </p>
       <button type="submit" className="gold-button" disabled={loading}>
         {loading ? "REDIRECTING TO CHECKOUT…" : "UNLOCK MY FULL BLUEPRINT"}
       </button>

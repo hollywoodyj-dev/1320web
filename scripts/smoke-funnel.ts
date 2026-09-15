@@ -196,6 +196,15 @@ const freeIncludes = fs.readFileSync(path.join(webRoot, "lib/free-soul-blueprint
 assert(!freeIncludes.includes("save or return to your result"), "Phase A must not promise a return mechanism that does not exist");
 const checkoutRoutePromo = fs.readFileSync(path.join(webRoot, "app/api/checkout/route.ts"), "utf8");
 assert(checkoutRoutePromo.includes("stripeAllowPromotionCodes"), "C-3 promo codes must be switchable");
+const checkoutForm = fs.readFileSync(
+  path.join(webRoot, "components/checkout/unlock-checkout-form.tsx"),
+  "utf8",
+);
+assert(checkoutForm.includes('name="marketingOptIn"'), "T33 checkout must expose optional marketingOptIn");
+assert(!checkoutForm.includes('name="consent"'), "T33 checkout must not use bundled consent checkbox");
+assert(!checkoutForm.includes("!consent"), "T33 checkout must not block purchase on marketing consent");
+assert(checkoutForm.includes("checkoutMarketingOptional"), "T33 checkout marketing copy missing");
+assert(checkoutRoutePromo.includes("recordMarketingOptIn"), "T33 checkout must store marketing opt-in separately");
 assert(t0Baseline.includes("T0_PAGE_VIEW_EXCLUDE_OPERATOR = 70"), "T0 page_view exclude lock");
 
 const firstTouch: FunnelAttribution = {

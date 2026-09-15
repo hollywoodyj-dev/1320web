@@ -6,6 +6,7 @@ import { upsertUserByEmailDetectCreate } from "@/lib/db/users";
 import { get1320Content } from "@/lib/get1320Content";
 import { getSiteUrl, isDatabaseConfigured, isStripeConfigured } from "@/lib/platform-config";
 import { attributionToCheckoutMetadata } from "@/lib/funnel/attribution";
+import { recordMarketingOptIn } from "@/lib/db/record-marketing-opt-in";
 import { recordAccountSignupIfCreated } from "@/lib/funnel/record-account-signup";
 import { getFullReportAmountCents, getFullReportLineItems, getStripe, stripeAllowPromotionCodes } from "@/lib/stripe/client";
 import { isValidBirthDate } from "@/lib/validateBirthDate";
@@ -17,6 +18,7 @@ type CheckoutBody = {
   month?: number;
   day?: number;
   attribution?: Record<string, string>;
+  marketingOptIn?: boolean;
 };
 
 function isValidEmail(value: unknown): value is string {
@@ -117,6 +119,15 @@ export async function POST(request: Request) {
       stripeCheckoutSessionId: session.id,
       amountCents,
     });
+
+    if (body.marketingOptIn === true) {
+      await recordMarketingOptIn({
+        email,
+        source: "checkout_marketing_opt_in",
+        userId: user.id,
+        stripeCheckoutSessionId: session.id,
+      });
+    }
 
     return NextResponse.json({ ok: true, url: session.url, sessionId: session.id });
   } catch (error) {

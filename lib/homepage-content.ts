@@ -12,7 +12,7 @@ export const HOMEPAGE_HERO = {
   eyebrow: "1320 Soulcode",
   titleLines: ["Meet Your", "Soul Blueprint"] as const,
   subheadline:
-    "A reflective intelligence platform for remembering who you are beneath adaptation.",
+    "A reflective intelligence platform using the Soul Blueprint as a symbolic mirror for exploring what may feel more foundational beneath adaptation.",
   mirrorLines: ["Not your fate.", "Not your label.", "Your mirror."] as const,
   primaryCta: "Generate My Code",
   primaryHref: "#entry-panel",
@@ -61,7 +61,7 @@ export const HOMEPAGE_PILLARS = [
     code: "S1",
     title: "SOUL ORIGIN",
     headline: "S1 · Soul Origin",
-    text: "Who you are beneath adaptation.",
+    text: "What may feel more foundational beneath adaptation.",
     tone: "gold",
   },
   {
@@ -104,7 +104,7 @@ export const HOMEPAGE_HOW = {
     {
       number: "01",
       title: "RECOGNIZE",
-      text: "Meet your original pattern.",
+      text: "Explore the original pattern as a symbolic starting point.",
       tone: "gold",
       image: "/how-1320-works/step-01.webp",
       sizeClass: "",
@@ -164,7 +164,11 @@ export const HOMEPAGE_FULL_REPORT_PREVIEW = {
   ],
   advancedLayers: [
     { code: "S4", title: "Core Shadow Pattern", detail: "What still asks to be seen." },
-    { code: "S5", title: "Soul Mission", detail: "What your life is here to express." },
+    {
+      code: "S5",
+      title: "Soul Mission",
+      detail: "Explore themes of meaning, contribution, and expression — as symbolic reflection, not destiny.",
+    },
     { code: "S6", title: "Value & Receiving", detail: "How you relate to worth, support, and receiving." },
     { code: "S7", title: "Soul Sovereignty", detail: "How you return to inner authority." },
     { code: "S8", title: "Soul Contribution", detail: "How your presence contributes." },

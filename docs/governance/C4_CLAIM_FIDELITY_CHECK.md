@@ -22,6 +22,20 @@ If any answer is **Yes → Do not publish.**
 
 Question 4 is the one the first three will miss. It is the drift most likely to happen silently on Pinterest.
 
+## Naming vs asserting (T26 language standard)
+
+**Naming a symbol is allowed.** **Asserting the symbol as an independently established reality is not.**
+
+The goal is not to make 1320 sound uncertain about its own framework. The goal is a precise distinction between a symbol the system intentionally uses and a fact the system claims to have established.
+
+| Allowed | Not allowed |
+|---|---|
+| 1320 calls this Soul Mission. | This is your true Soul Mission. |
+| 1320 uses the term original pattern. | S1 reveals your original self. |
+| Awakening Gate is symbolic language within the framework. | Your Void Gate shows that an awakening is occurring. |
+
+Reuse across S0–S9 copy and all derivatives checked through this gate.
+
 ## Locked downstream titles (do not use the discarded ones)
 
 - T17 page title (when T26 is closed and the page is built): **Is Numerology Scientifically Proven? Evidence, Symbolism, and the Limits of Interpretation**

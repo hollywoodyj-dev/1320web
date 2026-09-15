@@ -93,7 +93,7 @@ export const FAQ_SECTIONS: FaqSection[] = [
       },
       {
         q: "What is S1 · Soul Origin?",
-        a: "Your Soul Origin points to the original pattern beneath adaptation — gifts, shadows, and direction that remain when roles fall away.",
+        a: "In 1320, S1 · Soul Origin is used as a symbolic mirror for exploring what the system calls the original pattern beneath adaptation — gifts, shadows, and direction that may feel more present when roles fall away.",
       },
       {
         q: "What is S3 · Soul Vibration?",
@@ -105,7 +105,7 @@ export const FAQ_SECTIONS: FaqSection[] = [
       },
       {
         q: "What is S0 · Void Gate?",
-        a: "Your Void Gate shows how you meet uncertainty and return to self. It is an awakening gate for reflection — not fate, collapse, or diagnosis.",
+        a: 'In 1320, S0 · Void Gate is a symbolic mirror for exploring how you meet uncertainty and return to self. The term "awakening gate" names a reflective theme — not fate, collapse, diagnosis, or proof that an awakening has occurred.',
       },
       {
         q: "Does S2 predict who I will attract?",

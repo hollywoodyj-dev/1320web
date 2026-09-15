@@ -73,7 +73,7 @@ export const PAGE01_FOUNDATIONS = {
   ] satisfies Page01Foundation[],
   summaryTitle: "Together, these four mirrors form the first foundation of your Soul Blueprint:",
   summary: [
-    "Who you are beneath adaptation.",
+    "S1 is used in 1320 as a symbolic mirror for exploring what may feel more foundational, or less shaped by later adaptation.",
     "How that pattern seeks expression.",
     "What life and relationships may reflect.",
     "How you return when certainty falls away.",
@@ -96,7 +96,7 @@ export const PAGE01_FULL_MAP = {
     {
       code: "S5",
       title: "Soul Mission",
-      body: "The deeper direction of meaning, contribution, and purposeful expression.",
+      body: "In 1320, S5 · Soul Mission is a symbolic layer for exploring themes of meaning, contribution, and purposeful expression — not a verified vocation, fixed purpose, or destiny.",
     },
     {
       code: "S6",

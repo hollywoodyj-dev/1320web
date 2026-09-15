@@ -153,10 +153,31 @@ assert(pinterestBaseline.includes("account: 3"), "P1 Pinterest baseline account 
 assert(pinterestBaseline.includes("newsletterFooter: 1"), "P1 Pinterest baseline newsletter must be 1");
 assert(adminPanel.includes("pinterestBaseline"), "admin must surface Pinterest-start baseline");
 const t26 = fs.readFileSync(path.join(webRoot, "docs/governance/T26_REWRITE_PROPOSALS_2026-08-25.md"), "utf8");
-assert(t26.includes("Three questions"), "T26 proposals must include the three-question self-check");
-assert(t26.includes("Naive reader"), "T26 question 3 must be answered");
+assert(t26.includes("ACCEPTED"), "T26 must be marked accepted");
+assert(t26.includes("Naming vs asserting"), "T26 naming vs asserting rule missing");
+const homepageContent = fs.readFileSync(path.join(webRoot, "lib/homepage-content.ts"), "utf8");
+assert(
+  homepageContent.includes(
+    "A reflective intelligence platform using the Soul Blueprint as a symbolic mirror for exploring what may feel more foundational beneath adaptation.",
+  ),
+  "T26 A1 hero subheadline missing",
+);
+assert(!homepageContent.includes("remembering who you are beneath adaptation"), "T26 A1 old hero copy must be gone");
+assert(
+  homepageContent.includes("Explore the original pattern as a symbolic starting point."),
+  "T26 A3 RECOGNIZE step missing",
+);
+const faqContent = fs.readFileSync(path.join(webRoot, "lib/faq-content.ts"), "utf8");
+assert(faqContent.includes("what the system calls the original pattern"), "T26 B1 FAQ S1 missing");
+assert(faqContent.includes('The term "awakening gate" names a reflective theme'), "T26 B3 FAQ S0 missing");
+const t26Page01Body = fs.readFileSync(
+  path.join(webRoot, "lib/seo/content/what-is-a-soul-blueprint-body.ts"),
+  "utf8",
+);
+assert(t26Page01Body.includes("not a verified vocation, fixed purpose, or destiny"), "T26 B4 Page 01 S5 missing");
 const c4 = fs.readFileSync(path.join(webRoot, "docs/governance/C4_CLAIM_FIDELITY_CHECK.md"), "utf8");
 assert(c4.includes("Did reflection become identity"), "C-4 fourth question missing");
+assert(c4.includes("Naming vs asserting"), "C-4 naming vs asserting rule missing");
 assert(c4.includes("Canonical Source → Claim Ledger → Visual Derivatives"), "C-4 pipeline missing");
 const t29Qa = fs.readFileSync(path.join(webRoot, "qa-artifacts/LUMEN_QA_T29_SITEMAP_20_TO_19.md"), "utf8");
 assert(t29Qa.includes("20 → 19"), "T29 QA artifact must name the 20 → 19 sitemap change");

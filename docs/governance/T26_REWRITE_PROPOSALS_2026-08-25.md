@@ -20,7 +20,93 @@ A sentence closes only if all three questions pass. Question 3 is the easy miss.
 
 ---
 
-## 1. FAQ · S1 · Soul Origin
+## Part A — Homepage (P0-1 priority)
+
+These four are the assertion lines Haze flagged on the live homepage. They block T17 and T18 until accepted.
+
+---
+
+### A1. Homepage · hero subheadline
+
+**Surface:** `/` · `lib/homepage-content.ts` · `HOMEPAGE_HERO.subheadline`
+
+**Current:**
+> A reflective intelligence platform for remembering who you are beneath adaptation.
+
+**Proposed:**
+> A reflective intelligence platform built around the Soul Blueprint — a symbolic mirror for exploring what may feel less shaped by later adaptation.
+
+### Three questions
+
+1. **Layer?** Tradition + Resonance. Soul Blueprint and beneath adaptation are kept as symbols; “exploring / may feel” is invitation.
+2. **Did grammar raise the layer?** Current “remembering who you are” presumes a prior known self and states identity (Authority / Evidence). Proposed attributes the move to 1320’s mirror and hedges with “may feel.” Not a verdict on who the reader is.
+3. **Naive reader?** Unlikely to read “1320 has recovered my true self.” More likely: “this is a reflective tool using birth-date symbol.” Pass.
+
+---
+
+### A2. Homepage · S1 foundation pillar
+
+**Surface:** `/` · `lib/homepage-content.ts` · `HOMEPAGE_PILLARS[0].text` (S1 · Soul Origin card)
+
+**Current:**
+> Who you are beneath adaptation.
+
+**Proposed:**
+> What may feel more original beneath adaptation.
+
+### Three questions
+
+1. **Layer?** Tradition + Resonance. `beneath adaptation` and original (via “more original”) stay as 1320 vocabulary; “may feel” keeps it reflective.
+2. **Did grammar raise the layer?** Current copula “who you are” is an identity statement. Proposed removes the identity copula and uses “what may feel” — Resonance, not Authority.
+3. **Naive reader?** Current line reads as a fact about the person. Proposed reads as an invitation to notice. Pass — *if* the S1 headline “Soul Origin” is not reused elsewhere without the same hedge (C-4 Q4).
+
+---
+
+### A3. Homepage · path step 01 · RECOGNIZE
+
+**Surface:** `/` · `lib/homepage-content.ts` · `HOMEPAGE_HOW.steps[0].text`
+
+**Current:**
+> Meet your original pattern.
+
+**Proposed:**
+> Explore the original pattern as a symbolic starting point.
+
+### Three questions
+
+1. **Layer?** Tradition + Resonance. `original pattern` is preserved; “explore / symbolic starting point” frames it as a 1320 move, not a reunion with a verified object.
+2. **Did grammar raise the layer?** Current “Meet your” presumes the pattern is already there waiting (Evidence / Authority). Proposed “Explore … as a symbolic starting point” does not.
+3. **Naive reader?** “Meet your original pattern” sounds like discovery of a real pre-existing self. Proposed sounds like a reflective entry point. Pass.
+
+---
+
+### A4. Homepage · Full Report preview · S5 · Soul Mission
+
+**Surface:** `/` · `lib/homepage-content.ts` · `HOMEPAGE_FULL_REPORT_PREVIEW.advancedLayers` S5 `detail`
+
+Title **Soul Mission** is the symbol and stays.
+
+**Current:**
+> What your life is here to express.
+
+**Proposed:**
+> Explore direction of meaning, contribution, and expression — as symbol, not destiny.
+
+### Three questions
+
+1. **Layer?** Tradition + Resonance. Soul Mission title unchanged; body invites exploration and names the limit (“not destiny”).
+2. **Did grammar raise the layer?** Current “what your life is here to express” is teleology stated as fact (Authority / Evidence). Proposed “explore direction … as symbol, not destiny” is Resonance plus an explicit boundary.
+3. **Naive reader?** Current line reads like a purpose 1320 has identified for them. Proposed line reads like a layer to reflect on, with destiny explicitly ruled out. Pass.
+
+---
+
+## Part B — FAQ & Page 01 (companion surfaces)
+
+Same symbol family on inner marketing pages. Ship in the same pass once Part A is accepted, or return block-by-block.
+
+---
+
+### B1. FAQ · S1 · Soul Origin
 
 **Surface:** `/faq` · `lib/faq-content.ts` · “What is S1 · Soul Origin?”
 
@@ -38,7 +124,7 @@ A sentence closes only if all three questions pass. Question 3 is the easy miss.
 
 ---
 
-## 2. Page 01 · foundation summary (P1)
+### B2. Page 01 · foundation summary (P1)
 
 **Surface:** `/what-is-a-soul-blueprint` · `PAGE01` summary line 1 · `lib/seo/content/what-is-a-soul-blueprint-body.ts`
 
@@ -51,12 +137,12 @@ A sentence closes only if all three questions pass. Question 3 is the easy miss.
 ### Three questions
 
 1. **Layer?** Tradition + Resonance. Same symbol (`beneath adaptation`); framed as 1320’s use of S1, not as a description of the person.
-2. **Did grammar raise the layer?** Current copula “who you are” is an identity statement (Authority / Evidence). Proposed “may feel more foundational” is Resonance. The example direction from the work order is followed, not copied as a slogan elsewhere.
+2. **Did grammar raise the layer?** Current copula “who you are” is an identity statement (Authority / Evidence). Proposed “may feel more foundational” is Resonance.
 3. **Naive reader?** Current line is the easy miss: a stranger reads it as fact about who they are. Proposed line attributes the move to 1320 and hedges with “may feel.” Pass.
 
 ---
 
-## 3. FAQ · S0 · Void Gate
+### B3. FAQ · S0 · Void Gate
 
 **Surface:** `/faq` · `lib/faq-content.ts` · “What is S0 · Void Gate?”
 
@@ -74,7 +160,7 @@ A sentence closes only if all three questions pass. Question 3 is the easy miss.
 
 ---
 
-## 4. Page 01 · S5 · Soul Mission
+### B4. Page 01 · S5 · Soul Mission
 
 **Surface:** `/what-is-a-soul-blueprint` · `PAGE01_FULL_MAP` S5 body · `lib/seo/content/what-is-a-soul-blueprint-body.ts`
 
@@ -96,10 +182,12 @@ Title **Soul Mission** is the symbol and stays.
 
 ## What this proposal does not do
 
-- Does not rewrite every “beneath adaptation” on homepage, Full Report, sample, or result cards. Those are the same symbol family; they wait for 玄微’s language pass on these four, then a follow-up sweep.
+- Does not rewrite every other “beneath adaptation” line on Full Report, sample, or result cards. Those wait for T26 close, then a follow-up sweep under the same principle.
 - Does not publish T18 / T30 numbers.
-- Does not start T17. T17 stays blocked until these four are accepted or returned.
+- Does not start T17. T17 stays blocked until T26 closes.
 
 ## Close rule
 
-玄微 accepts or returns each block. T26 closes when all four are accepted. Then T17, then T18.
+玄微 accepts or returns each block (A1–A4 and B1–B4). **T26 closes when all eight are accepted.** Then T17, then T18.
+
+Part A (homepage) is the P0-1 gate Haze named; Part B ships in the same publish pass once language is locked.

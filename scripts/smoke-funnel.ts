@@ -158,8 +158,9 @@ assert(t0Baseline.includes("T0_SIGNUP_COMPLETED_ACCOUNT = 0"), "T0 account signu
 assert(t0Baseline.includes("T0_PAGE_VIEW_INCLUDE_OPERATOR = 94"), "T0 page_view include lock");
 const pinterestBaseline = fs.readFileSync(path.join(webRoot, "lib/funnel/pinterest-start-baseline.ts"), "utf8");
 assert(pinterestBaseline.includes("PINTEREST_BASELINE_SIGNUP"), "P1 Pinterest baseline missing signup split");
-assert(pinterestBaseline.includes("account: 3"), "P1 Pinterest baseline account signup must be 3");
-assert(pinterestBaseline.includes("newsletterFooter: 1"), "P1 Pinterest baseline newsletter must be 1");
+assert(pinterestBaseline.includes("signup_completed: 3"), "P1 Pinterest baseline account signup must be 3");
+assert(pinterestBaseline.includes("newsletter_subscribed: 1"), "P1 Pinterest baseline newsletter must be 1");
+assert(conversionRoute.includes("signupScope"), "admin must expose signup account/newsletter split");
 assert(adminPanel.includes("pinterestBaseline"), "admin must surface Pinterest-start baseline");
 const t26 = fs.readFileSync(path.join(webRoot, "docs/governance/T26_REWRITE_PROPOSALS_2026-08-25.md"), "utf8");
 assert(t26.includes("CLOSED"), "T26 must be marked closed");

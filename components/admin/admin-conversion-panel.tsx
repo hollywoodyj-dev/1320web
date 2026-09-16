@@ -18,6 +18,14 @@ type ConversionTrackingData = {
   ga4MeasurementId: string | null;
   primaryKpi: { event: string; count30d: number; count30dExcludeQa?: number };
   purchaseScope?: { includeQa: number; excludeQa: number; qaTagged: number };
+  signupScope?: {
+    storedCatalogTotal: number;
+    accountIncludeQa: number;
+    accountExcludeQa: number;
+    newsletterSubscribedIncludeQa: number;
+    newsletterSubscribedExcludeQa: number;
+    newsletterEntry: string;
+  };
   catalog: CatalogEntry[];
   paidLpBreakdown: { lp: string; count: number }[];
   pageViewBreakdown: { path: string; count: number }[];
@@ -39,9 +47,9 @@ type ConversionTrackingData = {
   };
   pinterestBaseline: {
     asOf: string;
-    signupCatalogTotal: number;
-    signupAccount: number;
-    newsletterFooter: number;
+    signupCompletedAccount: number;
+    newsletterSubscribed: number;
+    signupStoredCatalogTotal: number;
     newsletterEntry: string;
     pageViewIncludeOperator: number;
     pageViewExcludeOperator: number;
@@ -192,6 +200,30 @@ export function AdminConversionPanel() {
     ? data?.pageViewBreakdownExcludeOperator ?? []
     : data?.pageViewBreakdown ?? [];
 
+  const catalogRows =
+    data?.catalog.flatMap((entry) => {
+      if (entry.name !== "signup_completed" || !data.signupScope) {
+        return [entry];
+      }
+      const accountCount = excludeOperator
+        ? data.signupScope.accountExcludeQa
+        : data.signupScope.accountIncludeQa;
+      const newsletterCount = excludeOperator
+        ? data.signupScope.newsletterSubscribedExcludeQa
+        : data.signupScope.newsletterSubscribedIncludeQa;
+      return [
+        { ...entry, count30d: accountCount, count30dExcludeOperator: accountCount },
+        {
+          name: "newsletter_subscribed",
+          label: "Newsletter subscribed",
+          tier: "recommended",
+          description: `Footer subscribe (stored as signup_completed + entry=${data.signupScope.newsletterEntry} until rename).`,
+          count30d: newsletterCount,
+          count30dExcludeOperator: newsletterCount,
+        },
+      ];
+    }) ?? [];
+
   return (
     <section style={styles.section}>
       <div style={styles.header}>
@@ -232,11 +264,11 @@ export function AdminConversionPanel() {
             Pinterest start ({data.pinterestBaseline.asOf}) all-time: page_view include{" "}
             {data.pinterestBaseline.pageViewIncludeOperator} / exclude{" "}
             {data.pinterestBaseline.pageViewExcludeOperator} (operator{" "}
-            {data.pinterestBaseline.pageViewOperator}). signup_completed catalog{" "}
-            {data.pinterestBaseline.signupCatalogTotal} = account{" "}
-            {data.pinterestBaseline.signupAccount} + newsletter (
-            <code>{data.pinterestBaseline.newsletterEntry}</code>){" "}
-            {data.pinterestBaseline.newsletterFooter}. generate_code_completed{" "}
+            {data.pinterestBaseline.pageViewOperator}). signup_completed (account){" "}
+            {data.pinterestBaseline.signupCompletedAccount}; newsletter_subscribed{" "}
+            {data.pinterestBaseline.newsletterSubscribed} (
+            <code>{data.pinterestBaseline.newsletterEntry}</code>; stored catalog total{" "}
+            {data.pinterestBaseline.signupStoredCatalogTotal}). generate_code_completed{" "}
             {data.pinterestBaseline.generateCodeCompleted}; full_report_cta_click{" "}
             {data.pinterestBaseline.fullReportCtaClick}; sample_report_view{" "}
             {data.pinterestBaseline.sampleReportView}; checkout_started{" "}
@@ -251,7 +283,14 @@ export function AdminConversionPanel() {
               {data.pageViewScope.operatorSharePct}%). purchase_completed: include{" "}
               {data.purchaseScope?.includeQa ?? "—"} / exclude QA{" "}
               {data.purchaseScope?.excludeQa ?? "—"} (campaign haze_* or utm_source=operator:{" "}
-              {data.purchaseScope?.qaTagged ?? "—"}).
+              {data.purchaseScope?.qaTagged ?? "—"}). signup_completed (account){" "}
+              {excludeOperator
+                ? (data.signupScope?.accountExcludeQa ?? "—")
+                : (data.signupScope?.accountIncludeQa ?? "—")}
+              ; newsletter_subscribed{" "}
+              {excludeOperator
+                ? (data.signupScope?.newsletterSubscribedExcludeQa ?? "—")
+                : (data.signupScope?.newsletterSubscribedIncludeQa ?? "—")}.
             </p>
             <button
               type="button"
@@ -261,6 +300,12 @@ export function AdminConversionPanel() {
               {excludeOperator ? "Showing clean counts" : "Showing raw counts"}
             </button>
           </div>
+          <p style={styles.muted}>
+            Clean toggle: <code>page_view</code> drops /admin operator sessions;{" "}
+            <code>purchase_completed</code> and other funnel events drop QA tags (
+            <code>haze_*</code> campaign or <code>utm_source=operator</code>). Rows stay in DB —
+            exclusion is read-time only.
+          </p>
 
           <div style={styles.cards}>
             <div style={styles.card}>
@@ -299,7 +344,7 @@ export function AdminConversionPanel() {
                 </tr>
               </thead>
               <tbody>
-                {data.catalog.map((entry) => (
+                {catalogRows.map((entry) => (
                   <tr key={entry.name}>
                     <td style={styles.td}>
                       <code>{entry.name}</code>

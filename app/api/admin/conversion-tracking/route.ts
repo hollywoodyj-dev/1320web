@@ -17,6 +17,7 @@ import {
   PINTEREST_BASELINE_PAGE_VIEW,
   PINTEREST_BASELINE_SIGNUP,
 } from "@/lib/funnel/pinterest-start-baseline";
+import { NEWSLETTER_SIGNUP_ENTRY } from "@/lib/funnel/signup-entry-split";
 import {
   CONVERSION_EVENT_CATALOG,
   getGa4MeasurementId,
@@ -72,8 +73,17 @@ export async function GET() {
       const since = new Date(Date.now() - WINDOW_DAYS * 24 * 60 * 60 * 1000);
 
       const operatorPath = `${OPERATOR_PATH_PREFIX}%`;
-      const [counts, countsExcludeQa, recent, paidLpBreakdown, pageViewAll, pageViewNonOperator, pageViewExcludeRows] =
-        await Promise.all([
+      const [
+        counts,
+        countsExcludeQa,
+        signupSplitRaw,
+        signupSplitExcludeQa,
+        recent,
+        paidLpBreakdown,
+        pageViewAll,
+        pageViewNonOperator,
+        pageViewExcludeRows,
+      ] = await Promise.all([
         db<CountRow[]>`
           SELECT event_name, COUNT(*)::int AS count
           FROM marketing_conversion_events
@@ -89,6 +99,34 @@ export async function GET() {
               OR LOWER(COALESCE(metadata->>'utm_source', source, '')) = 'operator'
             )
           GROUP BY event_name
+        `,
+        db<{ account: number; newsletter: number }[]>`
+          SELECT
+            COUNT(*) FILTER (
+              WHERE COALESCE(metadata->>'entry', '') <> ${NEWSLETTER_SIGNUP_ENTRY}
+            )::int AS account,
+            COUNT(*) FILTER (
+              WHERE metadata->>'entry' = ${NEWSLETTER_SIGNUP_ENTRY}
+            )::int AS newsletter
+          FROM marketing_conversion_events
+          WHERE created_at >= ${since}
+            AND event_name = 'signup_completed'
+        `,
+        db<{ account: number; newsletter: number }[]>`
+          SELECT
+            COUNT(*) FILTER (
+              WHERE COALESCE(metadata->>'entry', '') <> ${NEWSLETTER_SIGNUP_ENTRY}
+            )::int AS account,
+            COUNT(*) FILTER (
+              WHERE metadata->>'entry' = ${NEWSLETTER_SIGNUP_ENTRY}
+            )::int AS newsletter
+          FROM marketing_conversion_events
+          WHERE created_at >= ${since}
+            AND event_name = 'signup_completed'
+            AND NOT (
+              COALESCE(metadata->>'utm_campaign', metadata->>'campaign', '') LIKE 'haze_%'
+              OR LOWER(COALESCE(metadata->>'utm_source', source, '')) = 'operator'
+            )
         `,
         db<RecentRow[]>`
           SELECT
@@ -194,13 +232,18 @@ export async function GET() {
       const purchaseExcludeQa = countMapExcludeQa.get("purchase_completed") ?? 0;
       const purchaseQaTagged = Math.max(0, purchaseInclude - purchaseExcludeQa);
 
+      const signupRaw = signupSplitRaw[0] ?? { account: 0, newsletter: 0 };
+      const signupClean = signupSplitExcludeQa[0] ?? { account: 0, newsletter: 0 };
+
       const catalog = CONVERSION_EVENT_CATALOG.map((entry) => ({
         ...entry,
         count30d: countMap.get(entry.name) ?? 0,
         count30dExcludeOperator:
           entry.name === "page_view"
             ? pageViewExclude
-            : (countMapExcludeQa.get(entry.name) ?? 0),
+            : entry.name === "signup_completed"
+              ? signupClean.account
+              : (countMapExcludeQa.get(entry.name) ?? 0),
       }));
 
       const ga4MeasurementId = getGa4MeasurementId();
@@ -224,6 +267,14 @@ export async function GET() {
           includeQa: purchaseInclude,
           excludeQa: purchaseExcludeQa,
           qaTagged: purchaseQaTagged,
+        },
+        signupScope: {
+          storedCatalogTotal: countMap.get("signup_completed") ?? 0,
+          accountIncludeQa: signupRaw.account,
+          accountExcludeQa: signupClean.account,
+          newsletterSubscribedIncludeQa: signupRaw.newsletter,
+          newsletterSubscribedExcludeQa: signupClean.newsletter,
+          newsletterEntry: NEWSLETTER_SIGNUP_ENTRY,
         },
         catalog,
         paidLpBreakdown: paidLpBreakdown.map((row) => ({
@@ -249,9 +300,9 @@ export async function GET() {
         },
         pinterestBaseline: {
           asOf: PINTEREST_BASELINE_AS_OF,
-          signupCatalogTotal: PINTEREST_BASELINE_SIGNUP.catalogTotal,
-          signupAccount: PINTEREST_BASELINE_SIGNUP.account,
-          newsletterFooter: PINTEREST_BASELINE_SIGNUP.newsletterFooter,
+          signupCompletedAccount: PINTEREST_BASELINE_SIGNUP.account,
+          newsletterSubscribed: PINTEREST_BASELINE_SIGNUP.newsletterSubscribed,
+          signupStoredCatalogTotal: PINTEREST_BASELINE_SIGNUP.catalogStoredTotal,
           newsletterEntry: PINTEREST_BASELINE_SIGNUP.newsletterEntry,
           pageViewIncludeOperator: PINTEREST_BASELINE_PAGE_VIEW.includeOperator,
           pageViewExcludeOperator: PINTEREST_BASELINE_PAGE_VIEW.excludeOperator,

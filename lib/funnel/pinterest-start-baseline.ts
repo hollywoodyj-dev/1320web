@@ -1,11 +1,12 @@
 /**
  * Pinterest-start funnel baseline. Locked 2026-08-25 (SG) after T8/T9 production
- * observation and signup_completed split. All-time counts with created_at <
+ * observation and signup split. All-time counts with created_at <
  * 2026-08-25 21:30 +08. Operator page_views are tagged, never deleted (T32).
  *
- * signup_completed is two facts under one catalog name:
- *   account    = new users row (checkout_upsert / signup_page / booking_* / reflect_upsert)
- *   newsletter = footer_subscribe (pending rename; do not treat as account)
+ * signup_completed (baseline KPI) = account creation only
+ *   (checkout_upsert / signup_page / booking_* / reflect_upsert).
+ * newsletter_subscribed (baseline KPI) = footer_subscribe rows stored under
+ *   catalog name signup_completed until event rename — do not sum with account.
  */
 export const PINTEREST_BASELINE_AS_OF = "2026-08-25";
 export const PINTEREST_BASELINE_AS_OF_ISO = "2026-08-25T21:30:00+08:00";
@@ -27,13 +28,17 @@ export const PINTEREST_BASELINE_COUNTS = {
   payment_button_clicked: 7,
   purchase_completed: 6,
   subscription_completed: 0,
-  signup_completed: 4,
+  /** Account creation only — not mixed with newsletter. */
+  signup_completed: 3,
+  /** Stored as signup_completed + entry=footer_subscribe until catalog rename. */
+  newsletter_subscribed: 1,
 } as const;
 
 export const PINTEREST_BASELINE_SIGNUP = {
-  catalogTotal: 4,
-  account: 3,
-  newsletterFooter: 1,
+  account: PINTEREST_BASELINE_COUNTS.signup_completed,
+  newsletterSubscribed: PINTEREST_BASELINE_COUNTS.newsletter_subscribed,
+  /** Raw catalog rows under signup_completed (account + newsletter); audit only. */
+  catalogStoredTotal: 4,
   newsletterEntry: "footer_subscribe" as const,
 };
 

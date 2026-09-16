@@ -72,12 +72,22 @@ export async function GET() {
       const since = new Date(Date.now() - WINDOW_DAYS * 24 * 60 * 60 * 1000);
 
       const operatorPath = `${OPERATOR_PATH_PREFIX}%`;
-      const [counts, recent, paidLpBreakdown, pageViewAll, pageViewNonOperator, pageViewExcludeRows] =
+      const [counts, countsExcludeQa, recent, paidLpBreakdown, pageViewAll, pageViewNonOperator, pageViewExcludeRows] =
         await Promise.all([
         db<CountRow[]>`
           SELECT event_name, COUNT(*)::int AS count
           FROM marketing_conversion_events
           WHERE created_at >= ${since}
+          GROUP BY event_name
+        `,
+        db<CountRow[]>`
+          SELECT event_name, COUNT(*)::int AS count
+          FROM marketing_conversion_events
+          WHERE created_at >= ${since}
+            AND NOT (
+              COALESCE(metadata->>'utm_campaign', metadata->>'campaign', '') LIKE 'haze_%'
+              OR LOWER(COALESCE(metadata->>'utm_source', source, '')) = 'operator'
+            )
           GROUP BY event_name
         `,
         db<RecentRow[]>`
@@ -171,17 +181,26 @@ export async function GET() {
       const countMap = new Map(
         counts.map((row) => [row.event_name, toCount(row.count)]),
       );
+      const countMapExcludeQa = new Map(
+        countsExcludeQa.map((row) => [row.event_name, toCount(row.count)]),
+      );
       const pageViewInclude = countMap.get("page_view") ?? 0;
       const pageViewExclude = toCount(pageViewExcludeRows[0]?.count);
       const pageViewOperator = Math.max(0, pageViewInclude - pageViewExclude);
       const operatorSharePct =
         pageViewInclude > 0 ? Math.round((pageViewOperator / pageViewInclude) * 1000) / 10 : 0;
 
+      const purchaseInclude = countMap.get("purchase_completed") ?? 0;
+      const purchaseExcludeQa = countMapExcludeQa.get("purchase_completed") ?? 0;
+      const purchaseQaTagged = Math.max(0, purchaseInclude - purchaseExcludeQa);
+
       const catalog = CONVERSION_EVENT_CATALOG.map((entry) => ({
         ...entry,
         count30d: countMap.get(entry.name) ?? 0,
         count30dExcludeOperator:
-          entry.name === "page_view" ? pageViewExclude : countMap.get(entry.name) ?? 0,
+          entry.name === "page_view"
+            ? pageViewExclude
+            : (countMapExcludeQa.get(entry.name) ?? 0),
       }));
 
       const ga4MeasurementId = getGa4MeasurementId();
@@ -199,6 +218,12 @@ export async function GET() {
         primaryKpi: {
           event: PRIMARY_KPI_EVENT,
           count30d: countMap.get(PRIMARY_KPI_EVENT) ?? 0,
+          count30dExcludeQa: countMapExcludeQa.get(PRIMARY_KPI_EVENT) ?? 0,
+        },
+        purchaseScope: {
+          includeQa: purchaseInclude,
+          excludeQa: purchaseExcludeQa,
+          qaTagged: purchaseQaTagged,
         },
         catalog,
         paidLpBreakdown: paidLpBreakdown.map((row) => ({

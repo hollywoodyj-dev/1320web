@@ -1,11 +1,10 @@
 /**
  * T32 — operator traffic is tagged at read time, never deleted.
  *
- * An event is operator-sourced when:
- *   - its session_id has any event whose path is under /admin, or
- *   - its user_id has any event whose path is under /admin
- *     (covers an operator browsing landing pages without opening /admin in that tab).
+ * **page_view:** session/user has any event under `/admin` (see OPERATOR_PATH_PREFIX).
  *
- * NULL session_id / user_id are not treated as operator.
+ * **Funnel / purchase KPIs:** QA-tagged at read time via `lib/funnel/qa-traffic-exclusion.ts`
+ * (campaign `haze_*` or utm_source `operator`) — not `/admin` session, so incognito
+ * test checkouts with `haze_t33_flow_*` campaigns are excluded without visiting /admin.
  */
 export const OPERATOR_PATH_PREFIX = "/admin";

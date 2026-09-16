@@ -16,7 +16,8 @@ type ConversionTrackingData = {
   generatedAt: string;
   ga4Configured: boolean;
   ga4MeasurementId: string | null;
-  primaryKpi: { event: string; count30d: number };
+  primaryKpi: { event: string; count30d: number; count30dExcludeQa?: number };
+  purchaseScope?: { includeQa: number; excludeQa: number; qaTagged: number };
   catalog: CatalogEntry[];
   paidLpBreakdown: { lp: string; count: number }[];
   pageViewBreakdown: { path: string; count: number }[];
@@ -245,23 +246,30 @@ export function AdminConversionPanel() {
 
           <div style={styles.header}>
             <p style={{ ...styles.muted, margin: 0 }}>
-              30d page_view: include {data.pageViewScope.includeOperator} / exclude{" "}
+              30d page_view: include {data.pageViewScope.includeOperator} / exclude /admin{" "}
               {data.pageViewScope.excludeOperator} (operator {data.pageViewScope.operator},{" "}
-              {data.pageViewScope.operatorSharePct}%)
+              {data.pageViewScope.operatorSharePct}%). purchase_completed: include{" "}
+              {data.purchaseScope?.includeQa ?? "—"} / exclude QA{" "}
+              {data.purchaseScope?.excludeQa ?? "—"} (campaign haze_* or utm_source=operator:{" "}
+              {data.purchaseScope?.qaTagged ?? "—"}).
             </p>
             <button
               type="button"
               style={styles.refresh}
               onClick={() => setExcludeOperator((value) => !value)}
             >
-              {excludeOperator ? "Showing without operator" : "Showing with operator"}
+              {excludeOperator ? "Showing clean counts" : "Showing raw counts"}
             </button>
           </div>
 
           <div style={styles.cards}>
             <div style={styles.card}>
               <div style={styles.cardLabel}>Primary KPI</div>
-              <div style={styles.cardValue}>{data.primaryKpi.count30d}</div>
+              <div style={styles.cardValue}>
+                {excludeOperator
+                  ? (data.primaryKpi.count30dExcludeQa ?? data.primaryKpi.count30d)
+                  : data.primaryKpi.count30d}
+              </div>
               <div style={styles.cardSub}>{data.primaryKpi.event}</div>
             </div>
             {pathRows.slice(0, 6).map((row) => (
@@ -298,7 +306,7 @@ export function AdminConversionPanel() {
                     </td>
                     <td style={styles.td}>{entry.tier}</td>
                     <td style={styles.td}>
-                      {entry.name === "page_view" && excludeOperator
+                      {excludeOperator
                         ? (entry.count30dExcludeOperator ?? entry.count30d)
                         : entry.count30d}
                     </td>

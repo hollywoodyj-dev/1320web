@@ -142,7 +142,16 @@ assert(signupRoute.includes("recordAccountSignupIfCreated"), "T9 /signup must re
 const adminPanel = fs.readFileSync(path.join(webRoot, "components/admin/admin-conversion-panel.tsx"), "utf8");
 assert(adminPanel.includes("Medium"), "admin events table must show medium");
 assert(adminPanel.includes("Campaign"), "admin events table must show campaign");
-assert(adminPanel.includes("Showing with operator"), "T32 admin must toggle operator page_view scope");
+assert(adminPanel.includes("Showing clean counts"), "T32 admin must toggle clean vs raw counts");
+assert(adminPanel.includes("purchaseScope"), "T32 admin must show purchase QA scope");
+const qaTraffic = fs.readFileSync(path.join(webRoot, "lib/funnel/qa-traffic-exclusion.ts"), "utf8");
+assert(qaTraffic.includes("haze_"), "T32 QA exclusion must filter haze_ campaign prefix");
+const conversionRoute = fs.readFileSync(
+  path.join(webRoot, "app/api/admin/conversion-tracking/route.ts"),
+  "utf8",
+);
+assert(conversionRoute.includes("countsExcludeQa"), "T32 purchase QA exclusion query missing");
+assert(conversionRoute.includes("purchaseScope"), "T32 purchaseScope response missing");
 assert(adminPanel.includes("t0Baseline"), "T32 admin must surface locked T0 baseline");
 const t0Baseline = fs.readFileSync(path.join(webRoot, "lib/funnel/t0-baseline.ts"), "utf8");
 assert(t0Baseline.includes("T0_SIGNUP_COMPLETED_ACCOUNT = 0"), "T0 account signup_completed must be 0");
@@ -153,7 +162,7 @@ assert(pinterestBaseline.includes("account: 3"), "P1 Pinterest baseline account 
 assert(pinterestBaseline.includes("newsletterFooter: 1"), "P1 Pinterest baseline newsletter must be 1");
 assert(adminPanel.includes("pinterestBaseline"), "admin must surface Pinterest-start baseline");
 const t26 = fs.readFileSync(path.join(webRoot, "docs/governance/T26_REWRITE_PROPOSALS_2026-08-25.md"), "utf8");
-assert(t26.includes("ACCEPTED"), "T26 must be marked accepted");
+assert(t26.includes("CLOSED"), "T26 must be marked closed");
 assert(t26.includes("Naming vs asserting"), "T26 naming vs asserting rule missing");
 const homepageContent = fs.readFileSync(path.join(webRoot, "lib/homepage-content.ts"), "utf8");
 assert(

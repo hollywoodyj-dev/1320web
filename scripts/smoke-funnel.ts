@@ -162,6 +162,14 @@ assert(pinterestBaseline.includes("signup_completed: 3"), "P1 Pinterest baseline
 assert(pinterestBaseline.includes("newsletter_subscribed: 1"), "P1 Pinterest baseline newsletter must be 1");
 assert(conversionRoute.includes("signupScope"), "admin must expose signup account/newsletter split");
 assert(adminPanel.includes("pinterestBaseline"), "admin must surface Pinterest-start baseline");
+const adminPage = fs.readFileSync(path.join(webRoot, "app/(site)/admin/page.tsx"), "utf8");
+assert(adminPage.includes("AdminReportPreviewPanel"), "admin must expose full report birthday preview");
+const adminReportPreview = fs.readFileSync(
+  path.join(webRoot, "app/(site)/admin/preview/report/page.tsx"),
+  "utf8",
+);
+assert(adminReportPreview.includes('reportType="full"'), "admin preview must render unlocked full report");
+assert(adminReportPreview.includes("isAdminEmail"), "admin preview route must be admin-gated");
 const t26 = fs.readFileSync(path.join(webRoot, "docs/governance/T26_REWRITE_PROPOSALS_2026-08-25.md"), "utf8");
 assert(t26.includes("CLOSED"), "T26 must be marked closed");
 assert(t26.includes("Naming vs asserting"), "T26 naming vs asserting rule missing");

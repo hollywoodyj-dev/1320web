@@ -3,6 +3,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { AdminAccountsPanel } from "@/components/admin/admin-accounts-panel";
 import { AdminConversionPanel } from "@/components/admin/admin-conversion-panel";
+import { AdminReportPreviewPanel } from "@/components/admin/admin-report-preview-panel";
 import { AdminStatsStrip } from "@/components/admin/admin-stats-strip";
 import { isAdminAccountsEnabled } from "@/lib/admin/admin-accounts";
 import { isAdminEmail } from "@/lib/admin/require-admin";
@@ -76,6 +77,7 @@ export default async function AdminPage() {
 
       <div className="flex flex-col gap-12">
         {accountsEnabled ? <AdminStatsStrip /> : null}
+        <AdminReportPreviewPanel />
         <AdminConversionPanel />
         {accountsEnabled ? <AdminAccountsPanel /> : null}
       </div>

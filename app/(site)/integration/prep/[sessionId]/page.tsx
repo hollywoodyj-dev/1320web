@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { BookingEntryLink } from "@/components/funnel/booking-entry-link";
 import { PersonalIntegrationPrepForm } from "@/components/personal-integration-prep-form";
 import { SectionCard } from "@/components/section-card";
 import { getPersonalIntegrationPrepContext } from "@/lib/personal-integration/prep-context";
@@ -40,9 +41,9 @@ export default async function PersonalIntegrationPrepPage({
       <div className="conversion-page space-y-5">
         <SectionCard title={PREP_INVALID.title}>
           <p>{PREP_INVALID.body}</p>
-          <Link href="/booking" className="gold-button mt-4 inline-block">
+          <BookingEntryLink href="/booking" className="gold-button mt-4 inline-block">
             {PREP_INVALID.cta}
-          </Link>
+          </BookingEntryLink>
         </SectionCard>
       </div>
     );

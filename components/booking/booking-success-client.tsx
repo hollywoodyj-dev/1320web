@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { BookingEntryLink } from "@/components/funnel/booking-entry-link";
 import { BookingSchedulePanel } from "@/components/booking/booking-schedule-panel";
 import { BOOKING_SUCCESS_COPY } from "@/lib/booking/success-content";
 
@@ -135,9 +136,9 @@ export function BookingSuccessClient({ sessionId }: BookingSuccessClientProps) {
             </a>
             .
           </p>
-          <Link href="/booking" className="booking-success-tertiary">
+          <BookingEntryLink href="/booking" className="booking-success-tertiary">
             {BOOKING_SUCCESS_COPY.bookAnotherCta}
-          </Link>
+          </BookingEntryLink>
         </div>
       ) : null}
     </div>

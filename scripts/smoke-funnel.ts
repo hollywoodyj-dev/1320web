@@ -233,6 +233,14 @@ assert(
   signupRoute.includes("backfillConversionEventsUserByAnalyticsSession"),
   "D-11 signup must backfill pre-auth events by analytics session",
 );
+assert(
+  fs.readFileSync(path.join(webRoot, "lib/funnel/booking-funnel-props.ts"), "utf8").includes("primeBookingEntryReferrer"),
+  "D-8 must prime booking entry referrer before client nav",
+);
+assert(
+  fs.readFileSync(path.join(webRoot, "app/(site)/full-report/page.tsx"), "utf8").includes("BookingEntryLink"),
+  "Full Report booking CTA must prime entry referrer",
+);
 const checkoutForm = fs.readFileSync(
   path.join(webRoot, "components/checkout/unlock-checkout-form.tsx"),
   "utf8",

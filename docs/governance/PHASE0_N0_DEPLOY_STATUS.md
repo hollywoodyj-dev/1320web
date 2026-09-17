@@ -34,7 +34,7 @@ Pushed `master` → Vercel Production **Ready** (~1m build).
 | **N0.3** | Booking baseline | Frozen 2026-09-17 | **PASS** — RAW 2/2/2/1, CLEAN 0 (QA only pre-T0) |
 | **N0.4** | QA RAW/CLEAN | Deployed | **PASS** — read-time + write-time `purchase_context` |
 | **C-3** | Promo observed | Probe 2026-09-17 | **PASS** — `allow_promotion_codes: false` when switch=false; test012 contrast `true` |
-| **D-11** | Session continuity | test013 + test014 | **PARTIAL PASS** — session + stitch ✅ (Flow A); D-8 `/full-report → /booking` referrer **PENDING** (`D11_PRODUCTION_EYEWITNESS.md`) |
+| **D-11** | Session continuity | test013–015 | **PARTIAL PASS** — Flow A ✅; Flow B referrer fail (test015) → **fix deployed**, Holly re-test pending |
 
 ---
 
@@ -72,4 +72,4 @@ D-11 production eyewitness does **not** block T0.
 | ID | Status |
 |----|--------|
 | **N0.5** | Live calculator survey — conditional closure (Nova) |
-| **D-11 eyewitness** | Flow A PASS (test014); Flow B `/full-report → /booking` — Holly, next run |
+| **D-11 eyewitness** | Flow B re-test after `primeBookingEntryReferrer` deploy — Holly |

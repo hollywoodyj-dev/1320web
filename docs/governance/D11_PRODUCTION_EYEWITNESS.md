@@ -1,6 +1,6 @@
 # D-11 · Production eyewitness (post-T0, non-blocking)
 
-**Status:** **PARTIAL PASS** — session continuity + stitch observed (test013, test014); D-8 `/full-report → /booking` referrer path **PENDING**  
+**Status:** Flow A **PASS** (test014); Flow B **FAIL pre-fix** (test015) — fix deployed, **re-test pending**  
 **Blocks T0:** No
 
 ---
@@ -28,20 +28,40 @@
 | Stitch | Pre-signup rows get `user_id` backfill after signup |
 | Card click | `booking_option_selected` present if card was actually clicked |
 
-**Note:** `referrer_into_booking` = **entry path onto `/booking`**, not the booking URL itself. Direct URL open → `direct` (correct). Not `/signup`, not empty.
+**Note:** `referrer_into_booking` = **entry path onto `/booking`**, not the booking URL itself. Direct URL open → `direct` (correct).
 
 ---
 
-## Flow B · D-8 continuation (PENDING)
+## Flow B · D-8 continuation (`/full-report → /booking`)
 
-**Purpose:** Verify `referrer_into_booking` records `/full-report` when user enters booking from Full Report — the signal for **$49 continuation vs independent entry**.
+**Purpose:** `referrer_into_booking` = `/full-report` when user enters booking from Full Report ($49 continuation vs independent entry).
 
 1. Fresh incognito.
-2. Visit `/full-report` (or paid landing → full report path as in prod).
-3. Navigate to `/booking` from that context (same tab).
-4. Signup if needed; stop before checkout.
+2. Open:
 
-**Pass:** post-signup booking events show `referrer_into_booking` = `/full-report` (or full path with query), not `direct`.
+   ```
+   https://www.1320soulcode.com/full-report?utm_source=operator&utm_campaign=haze_d11_flowb_v1
+   ```
+
+3. Scroll to **「Prefer Live Integration?」** → click **「Explore Personal Integration」** (same tab).
+4. Optional: scroll to Session Options → click tier card → signup → return `/booking`.
+5. Stop before checkout.
+
+**Pass:** booking events show `referrer_into_booking` = `/full-report` (or path + query), not `direct`.
+
+---
+
+## D-8 fix · client navigation referrer (test015 root cause)
+
+**Problem:** Next.js `<Link>` client transitions leave `document.referrer` empty → `captureBookingEntryReferrer()` recorded `direct` even after `/full-report → /booking` (test015 eyewitness: `page_view /full-report` at 11:38:01, then `/booking` at 11:38:41, referrer still `direct`).
+
+**Fix:**
+
+- `primeBookingEntryReferrer()` — on click, write current path to `sessionStorage.1320_booking_entry_referrer` (first-touch only).
+- `BookingEntryLink` — wraps internal `/booking` links; calls prime before navigation.
+- Wired on: `/full-report`, `/reflect`, `/account`, booking success, integration prep/follow-up invalid states.
+
+**Re-test:** Holly repeats Flow B after deploy → expect `referrer_into_booking: "/full-report"` (or with UTM query if present on full-report URL).
 
 ---
 
@@ -51,25 +71,18 @@
 npx tsx --env-file=.env.local scripts/probe-n02-session-continuity.ts <email>
 ```
 
-Record in this file and `PHASE0_N0_DEPLOY_STATUS.md`.
-
 ---
 
 ## Eyewitness log
 
 | Date | Account | Flow | session_id | referrer | option_selected | stitch | Result |
 |------|---------|------|------------|----------|-----------------|--------|--------|
-| 2026-09-17 | test013@yy.com | A (direct) | ✅ `78489580-…` | `direct` ✅ | ❌ not in DB | ✅ | **PARTIAL** — likely did not reach card (3s to signup; page ~56KB) |
-| 2026-09-17 | test014@yy.com | A (direct) | ✅ `cb30a90b-…` | `direct` ✅ | ✅ funnel_step 2 | ✅ | **PASS** (Flow A) |
-| — | — | B (full-report → booking) | — | — | — | — | **PENDING** |
+| 2026-09-17 | test013@yy.com | A | ✅ | `direct` ✅ | ❌ | ✅ | PARTIAL — likely no card click |
+| 2026-09-17 | test014@yy.com | A | ✅ | `direct` ✅ | ✅ | ✅ | **PASS** |
+| 2026-09-17 | test015@yy.com | B | ✅ | ❌ `direct` (bug) | ✅ | ✅ | **FAIL** referrer — fix shipped, re-test pending |
 
-### test013 · notes
+### test015 · notes
 
-- Session continuity + stitch: **PASS** (D-11 critical path).
-- `referrer_into_booking` = `direct`: **correct** for direct URL entry.
-- `booking_option_selected` missing: **原因待定** — Holly may have used Create Account above the fold without scrolling to Session Options; do **not** investigate beacon until card click is confirmed absent (see test014).
-
-### test014 · notes
-
-- `booking_page_view` 11:33:12 → `booking_option_selected` 11:33:17 (+5s) → signup → return `booking_page_view` 11:33:41.
-- Same session `cb30a90b-2bb5-47c3-ac35-6a150c41bfbd` throughout; card click beacon **present**.
+- Holly path confirmed: `page_view /full-report` → `/booking` (+40s).
+- Session + stitch + option_selected: PASS.
+- Referrer FAIL: client-nav gap, not operator error.

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BookingEntryLink } from "@/components/funnel/booking-entry-link";
 import { ReflectEntryForm } from "@/components/reflect-entry-form";
 import { getAccountContext } from "@/lib/auth/account-context";
 import { safeNextPath } from "@/lib/auth/next-path";
@@ -76,9 +77,9 @@ export default async function ReflectPage({ searchParams }: { searchParams: Prom
 
       <p className="reflect-session-secondary">
         {REFLECT_FORM.sessionSecondary}{" "}
-        <Link href="/booking" className="blueprint-secondary-link">
+        <BookingEntryLink href="/booking" className="blueprint-secondary-link">
           {REFLECT_FORM.sessionCta}
-        </Link>
+        </BookingEntryLink>
         .
       </p>
 

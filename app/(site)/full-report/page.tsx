@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FaqSection } from "@/components/conversion/faq-section";
+import { BookingEntryLink } from "@/components/funnel/booking-entry-link";
 import { FullReportCheckoutCta } from "@/components/funnel/full-report-checkout-cta";
 import { FullReportPersonalFoundation } from "@/components/funnel/full-report-personal-foundation";
 import { FullReportSalesTracker } from "@/components/funnel/full-report-sales-tracker";
@@ -146,9 +147,9 @@ export default function FullReportPage() {
       <section className="full-report-live-path">
         <h2>{LIVE_INTEGRATION.title}</h2>
         <p>{LIVE_INTEGRATION.body}</p>
-        <Link href="/booking" className="blueprint-secondary-link full-report-live-cta">
+        <BookingEntryLink href="/booking" className="blueprint-secondary-link full-report-live-cta">
           {LIVE_INTEGRATION.primaryCta}
-        </Link>
+        </BookingEntryLink>
       </section>
 
       <FaqSection title="FAQ" items={FULL_REPORT_FAQ} />

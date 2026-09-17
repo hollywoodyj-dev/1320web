@@ -16,6 +16,24 @@ export function resolveCheckoutContextPage(): string {
 }
 
 /**
+ * Call on click before client-side navigation onto /booking (Next.js Link).
+ * document.referrer is empty on in-app transitions; first-touch path is stored here.
+ */
+export function primeBookingEntryReferrer(sourcePath?: string): void {
+  if (typeof window === "undefined") return;
+  try {
+    if (sessionStorage.getItem(BOOKING_ENTRY_REFERRER_KEY)) return;
+    const path =
+      sourcePath ??
+      `${window.location.pathname}${window.location.search}` ||
+      "/";
+    sessionStorage.setItem(BOOKING_ENTRY_REFERRER_KEY, path);
+  } catch {
+    /* ignore */
+  }
+}
+
+/**
  * First-touch page that led the user onto /booking this session (D-8 continuation signal).
  * Captured once per tab session on first booking_page_view.
  */

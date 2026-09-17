@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { BookingEntryLink } from "@/components/funnel/booking-entry-link";
 import { PersonalIntegrationFollowUpForm } from "@/components/personal-integration-follow-up-form";
 import { SectionCard } from "@/components/section-card";
 import { getPersonalIntegrationFollowUpContext } from "@/lib/personal-integration/follow-up-context";
@@ -39,9 +40,9 @@ export default async function PersonalIntegrationFollowUpPage({
       <div className="conversion-page space-y-5">
         <SectionCard title={FOLLOW_UP_INVALID.title}>
           <p>{FOLLOW_UP_INVALID.body}</p>
-          <Link href="/booking" className="gold-button mt-4 inline-block">
+          <BookingEntryLink href="/booking" className="gold-button mt-4 inline-block">
             {FOLLOW_UP_INVALID.cta}
-          </Link>
+          </BookingEntryLink>
         </SectionCard>
       </div>
     );

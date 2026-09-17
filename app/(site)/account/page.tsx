@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { BookingEntryLink } from "@/components/funnel/booking-entry-link";
 import { DownloadReportButton } from "@/components/account/download-report-button";
 import { SignOutButton } from "@/components/auth/sign-out-button";
 import { SetPasswordForm } from "@/components/auth/set-password-form";
@@ -201,16 +202,16 @@ export default async function AccountPage() {
                 </li>
               ))}
             </ul>
-            <Link href="/booking" className="blueprint-secondary-link mt-4 inline-block">
+            <BookingEntryLink href="/booking" className="blueprint-secondary-link mt-4 inline-block">
               {ACCOUNT_COPY.bookAnotherSession}
-            </Link>
+            </BookingEntryLink>
           </>
         ) : (
           <>
             <p>{ACCOUNT_COPY.bookingNone}</p>
-            <Link href="/booking" className="gold-button mt-4 inline-flex">
+            <BookingEntryLink href="/booking" className="gold-button mt-4 inline-flex">
               {ACCOUNT_COPY.bookSession}
-            </Link>
+            </BookingEntryLink>
           </>
         )}
       </SectionCard>

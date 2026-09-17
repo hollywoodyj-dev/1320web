@@ -2,8 +2,15 @@
 
 import Link from "next/link";
 import { FormEvent, useEffect, useState } from "react";
-import { trackEvent } from "@/lib/analytics";
 import { BOOKING_FINAL, READING_OPTIONS } from "@/lib/booking-content";
+import { bookingClientMetadata, resolveSourcePage } from "@/lib/funnel/booking-funnel-props";
+import {
+  loadFunnelAttribution,
+  mergeAttribution,
+  readAttributionFromSearchParams,
+} from "@/lib/funnel/attribution";
+import { trackFunnelEvent } from "@/lib/funnel/track-funnel-event";
+import type { ReportPurchaseStatus } from "@/lib/funnel/resolve-report-purchase-status";
 import { FORM_CONSENT, FORM_MESSAGES } from "@/lib/form-consent";
 import {
   DEFAULT_SESSION_VARIANT,
@@ -21,6 +28,7 @@ export type BookingAccountProfile = {
 type BookingRequestFormProps = {
   defaultReadingType?: string;
   account?: BookingAccountProfile | null;
+  reportPurchaseStatus?: ReportPurchaseStatus;
 };
 
 function resolveInitialType(value?: string): string {
@@ -28,7 +36,11 @@ function resolveInitialType(value?: string): string {
   return DEFAULT_SESSION_VARIANT;
 }
 
-export function BookingRequestForm({ defaultReadingType, account }: BookingRequestFormProps) {
+export function BookingRequestForm({
+  defaultReadingType,
+  account,
+  reportPurchaseStatus = "none",
+}: BookingRequestFormProps) {
   const [status, setStatus] = useState("");
   const [selectedReadingType, setSelectedReadingType] = useState(() =>
     resolveInitialType(defaultReadingType),
@@ -39,8 +51,28 @@ export function BookingRequestForm({ defaultReadingType, account }: BookingReque
     setSelectedReadingType(resolveInitialType(defaultReadingType));
   }, [defaultReadingType]);
 
-  function onFocus() {
-    trackEvent("booking_click", { source: "booking_form" });
+  useEffect(() => {
+    const type = resolveInitialType(defaultReadingType);
+    trackFunnelEvent("booking_option_selected", {
+      ...bookingClientMetadata({
+        readingType: type,
+        sourcePage: resolveSourcePage(),
+        reportPurchaseStatus,
+      }),
+      entry: defaultReadingType ? "url_type_param" : "default",
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- fire once on mount for initial selection
+  }, []);
+
+  function trackOptionSelected(readingType: string, entry: string) {
+    trackFunnelEvent("booking_option_selected", {
+      ...bookingClientMetadata({
+        readingType,
+        sourcePage: resolveSourcePage(),
+        reportPurchaseStatus,
+      }),
+      entry,
+    });
   }
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
@@ -61,11 +93,12 @@ export function BookingRequestForm({ defaultReadingType, account }: BookingReque
 
     if (!firstName || !lastName || !email || !birthDate || !readingType || !message || !consent) {
       setStatus(FORM_MESSAGES.bookingError);
-      trackEvent("booking_submit", { status: "error" });
       return;
     }
 
-    trackEvent("booking_submit", { status: "success", readingType, signedIn: Boolean(account) });
+    const stored = loadFunnelAttribution();
+    const fromUrl = readAttributionFromSearchParams(new URLSearchParams(window.location.search));
+    const merged = mergeAttribution(stored, fromUrl);
 
     const response = await fetch("/api/booking/checkout", {
       method: "POST",
@@ -79,6 +112,8 @@ export function BookingRequestForm({ defaultReadingType, account }: BookingReque
         readingType,
         timezone: timezone || undefined,
         message,
+        sourcePage: resolveSourcePage(),
+        attribution: merged,
       }),
     });
 
@@ -90,11 +125,9 @@ export function BookingRequestForm({ defaultReadingType, account }: BookingReque
 
     if (!response.ok || !data.ok || !data.url) {
       setStatus(data.error ?? FORM_MESSAGES.bookingError);
-      trackEvent("booking_submit", { status: "error" });
       return;
     }
 
-    trackEvent("booking_checkout_redirect", { readingType });
     window.location.href = data.url;
   }
 
@@ -106,7 +139,7 @@ export function BookingRequestForm({ defaultReadingType, account }: BookingReque
     account.email;
 
   return (
-    <form className="conversion-form" id="booking-form" onSubmit={onSubmit} onFocus={onFocus}>
+    <form className="conversion-form" id="booking-form" onSubmit={onSubmit}>
       {profileComplete ? (
         <div className="glass-card mb-4 p-4 text-sm space-y-1">
           <p className="font-medium">Booking as {account.firstName} {account.lastName}</p>
@@ -169,7 +202,11 @@ export function BookingRequestForm({ defaultReadingType, account }: BookingReque
           required
           className="conversion-input"
           value={selectedReadingType}
-          onChange={(event) => setSelectedReadingType(event.target.value)}
+          onChange={(event) => {
+            const next = event.target.value;
+            setSelectedReadingType(next);
+            trackOptionSelected(next, "form_select");
+          }}
         >
           {READING_OPTIONS.options.map((option) => (
             <option key={option.id} value={option.id}>

@@ -1,8 +1,10 @@
-# T17 · Pre-build semantic scan (concept-family)
+# T17 · Semantic scan (concept-family)
 
-**Date:** 2026-09-15  
-**Purpose:** Concept-level regression guard before T17 page build.  
+**Date:** 2026-09-15 (executed 2026-09-17)  
+**Purpose:** Concept-level regression guard before and after T17 page build.  
 **Not a re-open of T26** — T26 eight blocks are closed. This scan finds the same symbol family elsewhere.
+
+**Execution:** `npx tsx scripts/probe-t17-semantic-scan.ts` — 11 hits on 2026-09-17 (excludes T17 page files). Post-T26 marketing drift candidates unchanged; T17 page title hits are expected scoped uses.
 
 **Principle:** Preserve the symbol. Remove the unsupported ontological claim.
 
@@ -83,10 +85,13 @@ Examples to watch in derivative QA, not bulk-rewrite pre-T17:
 
 | Item | Status |
 |---|---|
-| T26 closed | ✅ |
-| Semantic scan complete | ✅ (this doc) |
+| T26 closed | ✅ (production verified) |
+| Semantic scan executed | ✅ 2026-09-17 (`probe-t17-semantic-scan.ts`) — repo only |
 | Locked T17 title | **Is Numerology Scientifically Proven? Evidence, Symbolism, and the Limits of Interpretation** |
-| Five-layer framework applies to 1320 itself | Required in T17 draft |
-| Blockers | None from this scan |
+| Five-layer framework in page copy | ✅ in repo |
+| Page live (production) | **PENDING DEPLOY** — repo has route + intent manifest; prod still 404 / sitemap 19 |
+| Blockers | Deploy → then Haze production check (200, self-canonical, sitemap 20, Genovese citation) |
 
-**Next:** T17 page build → post-T26 marketing sweep (table above) as separate pass.
+**Acceptance:** observed working in production, not implemented in repo.
+
+**Next after deploy:** Haze T17 prod verify → post-T26 marketing sweep (table above) as separate pass.

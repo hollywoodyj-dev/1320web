@@ -20,7 +20,11 @@ export type AnalyticsEventName =
   | "payment_button_clicked"
   | "purchase_completed"
   | "subscription_completed"
-  | "signup_completed";
+  | "signup_completed"
+  | "booking_page_view"
+  | "booking_option_selected"
+  | "booking_started"
+  | "booking_completed";
 
 export type AnalyticsPayload = Record<
   string,

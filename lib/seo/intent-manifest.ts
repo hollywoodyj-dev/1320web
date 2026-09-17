@@ -483,6 +483,25 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     asset_class: "search_reference_governance",
     notes: "T16 P6 · Search Reference / Governance Asset. Stable maintenance.",
   },
+  {
+    path: "/is-numerology-scientifically-proven",
+    canonical: "/is-numerology-scientifically-proven",
+    index: true,
+    sitemap: true,
+    title:
+      "Is Numerology Scientifically Proven? Evidence, Symbolism, and the Limits of Interpretation | 1320",
+    h1: "Is Numerology Scientifically Proven?",
+    class: "A",
+    priority: 0.75,
+    changeFrequency: "monthly",
+    page_role: "search_reference",
+    audience_state: "external_cold",
+    query_family: "life_path_calculator",
+    primary_conversion: "free_blueprint_start",
+    admission_basis: "original_framework",
+    asset_class: "search_reference_governance",
+    notes: "T17 · Asset 07 Epistemic Governance. Five-layer framework; applies to 1320 itself.",
+  },
 ];
 
 export function getSitemapRoutesFromManifest() {

@@ -10,9 +10,26 @@ import {
   isPersonalIntegrationSessionVariant,
   resolveSessionVariant,
 } from "@/lib/personal-integration/session-variants";
+import { recordBookingCompletedEvent } from "@/lib/funnel/record-booking-funnel-event";
+import type { ReportPurchaseStatus } from "@/lib/funnel/resolve-report-purchase-status";
 import { BOOKING_PRODUCT } from "@/lib/platform-config";
 import { getSiteUrl } from "@/lib/platform-config";
 import type Stripe from "stripe";
+
+function reportStatusFromMetadata(meta: Stripe.Metadata): ReportPurchaseStatus {
+  return meta.report_purchase_status === "full_report_active" ? "full_report_active" : "none";
+}
+
+async function emitBookingCompleted(
+  session: Stripe.Checkout.Session,
+  userId: string,
+): Promise<void> {
+  await recordBookingCompletedEvent({
+    session,
+    userId,
+    reportPurchaseStatus: reportStatusFromMetadata(session.metadata ?? {}),
+  });
+}
 
 export type BookingFulfillmentResult = {
   userId: string;
@@ -81,6 +98,7 @@ export async function fulfillBookingCheckoutSession(
 
   if (purchase.platform_session_id && purchase.report_id) {
     const readingType = meta.readingType ?? "focused_life_integration";
+    await emitBookingCompleted(session, purchase.user_id);
     return buildBookingResult(purchase.user_id, purchase.report_id, purchase.platform_session_id, readingType);
   }
 
@@ -95,6 +113,7 @@ export async function fulfillBookingCheckoutSession(
 
   if (purchase.platform_session_id && purchase.report_id) {
     const readingType = meta.readingType ?? "focused_life_integration";
+    await emitBookingCompleted(session, purchase.user_id);
     return buildBookingResult(purchase.user_id, purchase.report_id, purchase.platform_session_id, readingType);
   }
 
@@ -143,6 +162,7 @@ export async function fulfillBookingCheckoutSession(
   );
 
   await setPurchasePlatformSessionId(purchase.id, result.sessionId);
+  await emitBookingCompleted(session, result.userId);
 
   return {
     userId: result.userId,

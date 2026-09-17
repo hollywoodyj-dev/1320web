@@ -11,6 +11,10 @@
  *   full_report_cta_click     — `/full-report` checkout CTAs + free-result Unlock
  *   checkout_started          — paid checkout form mounted (`UnlockCheckoutForm`)
  *   payment_button_clicked    — Unlock / Stripe-redirect click (last owned click)
+ *   booking_page_view         — /booking mount (N0.2)
+ *   booking_option_selected   — session tier card or form select (N0.2)
+ *   booking_started           — server: Stripe session created (N0.2)
+ *   booking_completed         — server: verified payment + fulfillment (N0.2)
  */
 import {
   trackEvent as trackSoulcodeEvent,

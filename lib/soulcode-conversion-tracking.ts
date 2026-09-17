@@ -119,6 +119,30 @@ export const CONVERSION_EVENT_CATALOG: ConversionEventCatalogEntry[] = [
     description:
       "New users row inserted. Until the newsletter event is renamed, also used for footer subscribe — split on metadata.entry: checkout_upsert / signup_page / booking_* / reflect_upsert vs footer_subscribe.",
   },
+  {
+    name: "booking_page_view",
+    label: "Booking page view",
+    tier: "funnel",
+    description: "View of /booking Personal Integration sales page.",
+  },
+  {
+    name: "booking_option_selected",
+    label: "Booking option selected",
+    tier: "funnel",
+    description: "Session tier selected on /booking (card or form).",
+  },
+  {
+    name: "booking_started",
+    label: "Booking started",
+    tier: "recommended",
+    description: "Stripe checkout session created for Personal Integration.",
+  },
+  {
+    name: "booking_completed",
+    label: "Booking completed",
+    tier: "required",
+    description: "Verified booking payment + fulfillment (not success page visit alone).",
+  },
 ];
 
 export const PERSISTED_CONVERSION_EVENT_NAMES = new Set(

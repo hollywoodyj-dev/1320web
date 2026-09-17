@@ -6,6 +6,7 @@ import { WHAT_IS_MY_LIFE_PATH_NUMBER_ARTICLE } from "@/lib/seo/content/what-is-m
 import { NUMEROLOGY_BY_DOB_VS_SOUL_BLUEPRINT_ARTICLE } from "@/lib/seo/content/numerology-by-date-of-birth-vs-soul-blueprint";
 import { BIRTHDAY_NUMBER_VS_LIFE_PATH_VS_SOUL_BLUEPRINT_ARTICLE } from "@/lib/seo/content/birthday-number-vs-life-path-vs-soul-blueprint";
 import { WHAT_DOES_YOUR_BIRTHDAY_MEAN_ARTICLE } from "@/lib/seo/content/what-does-your-birthday-mean";
+import { IS_NUMEROLOGY_SCIENTIFICALLY_PROVEN_ARTICLE } from "@/lib/seo/content/is-numerology-scientifically-proven";
 import type { SeoArticle, SeoPlannedArticle } from "@/lib/seo/types";
 import { FREE_BLUEPRINT_HREF } from "@/lib/seo/types";
 
@@ -19,6 +20,7 @@ export const SEO_ARTICLES: SeoArticle[] = [
   NUMEROLOGY_BY_DOB_VS_SOUL_BLUEPRINT_ARTICLE,
   BIRTHDAY_NUMBER_VS_LIFE_PATH_VS_SOUL_BLUEPRINT_ARTICLE,
   WHAT_DOES_YOUR_BIRTHDAY_MEAN_ARTICLE,
+  IS_NUMEROLOGY_SCIENTIFICALLY_PROVEN_ARTICLE,
 ];
 
 /** Roadmap for hub display (Architecture v1.0 formal order). */
@@ -63,6 +65,13 @@ export const SEO_PLANNED_ARTICLES: SeoPlannedArticle[] = [
     title: "What Does Your Birthday Mean?",
     cluster: "birthday-meaning",
     phase: "P6",
+    status: "published",
+  },
+  {
+    slug: "is-numerology-scientifically-proven",
+    title: "Is Numerology Scientifically Proven?",
+    cluster: "life-path-numerology",
+    phase: "T17",
     status: "published",
   },
   {

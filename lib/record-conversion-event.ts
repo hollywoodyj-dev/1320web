@@ -13,6 +13,13 @@ const DEDUPE_ONCE_PER_USER = new Set([
   "checkout_started",
 ]);
 
+/** Once per Stripe checkout session (transaction), not per user. */
+const DEDUPE_ONCE_PER_SESSION = new Set([
+  "purchase_completed",
+  "booking_started",
+  "booking_completed",
+]);
+
 const SENSITIVE_METADATA_KEYS = new Set([
   "token",
   "auth_token",
@@ -70,8 +77,7 @@ export async function recordConversionEvent(
     await withDb(async () => {
       const db = getSql();
 
-      // purchase_completed: once per Stripe checkout session (transaction), not merely once per user.
-      if (input.eventName === "purchase_completed" && input.sessionId) {
+      if (DEDUPE_ONCE_PER_SESSION.has(input.eventName) && input.sessionId) {
         const existingTx = await db<{ id: string }[]>`
           SELECT id FROM marketing_conversion_events
           WHERE event_name = ${input.eventName}

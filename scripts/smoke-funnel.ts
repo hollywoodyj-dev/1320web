@@ -268,7 +268,7 @@ assert(reflectEntry?.index === false, "T29 /reflect must be noindex");
 assert(reflectEntry?.sitemap === false, "T29 /reflect must leave sitemap");
 assert(reflectEntry?.canonical === "/reflect", "T29 /reflect keeps self-canonical");
 const sitemapRoutes = getSitemapRoutesFromManifest();
-assert(sitemapRoutes.length === 19, `T29 sitemap must be 19 routes, got ${sitemapRoutes.length}`);
+assert(sitemapRoutes.length === 20, `T17 sitemap must be 20 routes (19 + Asset 07), got ${sitemapRoutes.length}`);
 assert(
   sitemapRoutes.every((route) => route.path !== "/reflect"),
   "T29 sitemap must not include /reflect",
@@ -308,6 +308,18 @@ const sampleTracker = fs.readFileSync(
   "utf8",
 );
 assert(sampleTracker.includes('trackFunnelEvent("sample_report_view"'), "T9 SampleReportViewTracker must persist sample_report_view");
+
+const bookingPage = fs.readFileSync(path.join(webRoot, "app/(site)/booking/page.tsx"), "utf8");
+assert(bookingPage.includes("BookingPageViewTracker"), "N0.2 /booking must persist booking_page_view");
+const bookingForm = fs.readFileSync(path.join(webRoot, "components/booking-request-form.tsx"), "utf8");
+assert(bookingForm.includes('trackFunnelEvent("booking_option_selected"'), "N0.2 booking_option_selected not wired");
+const bookingCheckout = fs.readFileSync(path.join(webRoot, "app/api/booking/checkout/route.ts"), "utf8");
+assert(bookingCheckout.includes("recordBookingStartedEvent"), "N0.2 booking_started must fire server-side at checkout");
+const fulfillBooking = fs.readFileSync(path.join(webRoot, "lib/stripe/fulfill-booking-checkout.ts"), "utf8");
+assert(fulfillBooking.includes("recordBookingCompletedEvent"), "N0.2 booking_completed must fire on verified fulfillment");
+const catalog = fs.readFileSync(path.join(webRoot, "lib/soulcode-conversion-tracking.ts"), "utf8");
+assert(catalog.includes('"booking_page_view"'), "N0.2 booking events missing from catalog");
+assert(catalog.includes('"booking_completed"'), "N0.2 booking_completed missing from catalog");
 const lpTestPage = fs.readFileSync(path.join(webRoot, "app/(site)/lp/test/page.tsx"), "utf8");
 assert(!lpTestPage.includes("paid_landing_primary_cta_click"), "paid LP CTA events must stay unwired until a real LP exists");
 

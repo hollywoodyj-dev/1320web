@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BookingLoginGate } from "@/components/auth/booking-login-gate";
 import { BookingRequestForm } from "@/components/booking-request-form";
+import { BookingPageViewTracker } from "@/components/funnel/booking-page-view-tracker";
+import { BookingSessionSelectLink } from "@/components/funnel/booking-session-select-link";
+import { resolveReportPurchaseStatus } from "@/lib/funnel/resolve-report-purchase-status";
 import { FaqSection } from "@/components/conversion/faq-section";
 import { SectionCard } from "@/components/section-card";
 import {
@@ -52,6 +55,9 @@ export default async function BookingPage({
   const params = await searchParams;
   const defaultReadingType = readType(params);
   const account = await getAccountContext();
+  const reportPurchaseStatus = account
+    ? await resolveReportPurchaseStatus(account.user.id)
+    : "none";
   const hasCode = Boolean(account?.codeString);
   const showGenerateCode = !hasCode;
   const bookingProfile = account
@@ -70,6 +76,7 @@ export default async function BookingPage({
 
   return (
     <div className="conversion-page booking-page booking-page--refined space-y-5">
+      <BookingPageViewTracker reportPurchaseStatus={reportPurchaseStatus} />
       <header className="blueprint-hero glass-card booking-hero">
         <p className="blueprint-eyebrow">{BOOKING_HERO.eyebrow}</p>
         <h1 className="blueprint-title booking-hero-title">
@@ -185,13 +192,14 @@ export default async function BookingPage({
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-              <Link
+              <BookingSessionSelectLink
                 href={`/booking?type=${option.id}#booking-form`}
                 className="gold-button conversion-reading-cta"
                 scroll
+                sessionType={option.id}
               >
                 {option.cta}
-              </Link>
+              </BookingSessionSelectLink>
             </article>
             );
           })}
@@ -225,6 +233,7 @@ export default async function BookingPage({
               key={defaultReadingType ?? DEFAULT_SESSION_VARIANT}
               defaultReadingType={defaultReadingType}
               account={bookingProfile}
+              reportPurchaseStatus={reportPurchaseStatus}
             />
           </>
         ) : (

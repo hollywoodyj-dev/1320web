@@ -17,7 +17,10 @@ import {
 } from "@/lib/platform-config";
 import { getBookingAmountCents, resolveBookingLineItems } from "@/lib/stripe/booking-client";
 import { getStripe, stripeAllowPromotionCodes } from "@/lib/stripe/client";
+import { attributionToCheckoutMetadata } from "@/lib/funnel/attribution";
 import { recordAccountSignupIfCreated } from "@/lib/funnel/record-account-signup";
+import { recordBookingStartedEvent } from "@/lib/funnel/record-booking-funnel-event";
+import { resolveReportPurchaseStatus } from "@/lib/funnel/resolve-report-purchase-status";
 
 type BookingCheckoutBody = {
   firstName?: string;
@@ -28,6 +31,8 @@ type BookingCheckoutBody = {
   readingType?: string;
   timezone?: string;
   message?: string;
+  sourcePage?: string;
+  attribution?: Record<string, string>;
 };
 
 function isValidEmail(value: unknown): value is string {
@@ -107,6 +112,9 @@ export async function POST(request: Request) {
     const pricing = sessionPricingSnapshot(sessionVariant);
     const amountCents = getBookingAmountCents(sessionVariant);
     const code = body.code?.trim() || account?.codeString || "";
+    const reportPurchaseStatus = await resolveReportPurchaseStatus(user.id);
+    const attributionMeta = attributionToCheckoutMetadata(body.attribution);
+    const sourcePage = body.sourcePage?.trim().slice(0, 200) || "/booking";
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
@@ -133,6 +141,9 @@ export async function POST(request: Request) {
         timezone: body.timezone?.trim() || "",
         message: truncateMetadata(message),
         code: truncateMetadata(code, 120),
+        source_page: sourcePage,
+        report_purchase_status: reportPurchaseStatus,
+        ...attributionMeta,
       },
     });
 
@@ -147,6 +158,12 @@ export async function POST(request: Request) {
       amountCents,
       currency: SESSION_CURRENCY_STRIPE,
       product: BOOKING_PRODUCT,
+    });
+
+    await recordBookingStartedEvent({
+      session,
+      userId: user.id,
+      reportPurchaseStatus,
     });
 
     return NextResponse.json({ ok: true, url: session.url, sessionId: session.id });

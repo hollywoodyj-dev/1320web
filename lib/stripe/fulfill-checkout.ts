@@ -3,24 +3,9 @@ import { completePurchaseBySessionId } from "@/lib/db/purchases";
 import { getUserById } from "@/lib/db/users";
 import { sendPurchaseAccessEmail } from "@/lib/email/send-purchase-access-email";
 import { getSiteUrl } from "@/lib/platform-config";
+import { attributionFromSessionMetadata } from "@/lib/funnel/stripe-session-attribution";
 import { recordConversionEvent } from "@/lib/record-conversion-event";
 import type Stripe from "stripe";
-
-function attributionFromSessionMetadata(
-  metadata: Stripe.Metadata | null,
-): { source?: string; campaign?: string; meta: Record<string, string> } {
-  if (!metadata) return { meta: {} };
-  const meta: Record<string, string> = {};
-  for (const key of ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "ref", "landingPath"] as const) {
-    const value = metadata[key]?.trim();
-    if (value) meta[key] = value.slice(0, 120);
-  }
-  return {
-    source: meta.utm_source,
-    campaign: meta.utm_campaign,
-    meta,
-  };
-}
 
 export async function fulfillCheckoutSession(session: Stripe.Checkout.Session): Promise<{
   userId: string;

@@ -213,7 +213,16 @@ assert(!footerSubscribeCopy.includes("does not send"), "Phase A footer must not 
 const freeIncludes = fs.readFileSync(path.join(webRoot, "lib/free-soul-blueprint-content.ts"), "utf8");
 assert(!freeIncludes.includes("save or return to your result"), "Phase A must not promise a return mechanism that does not exist");
 const checkoutRoutePromo = fs.readFileSync(path.join(webRoot, "app/api/checkout/route.ts"), "utf8");
-assert(checkoutRoutePromo.includes("stripeAllowPromotionCodes"), "C-3 promo codes must be switchable");
+assert(checkoutRoutePromo.includes("stripeAllowPromotionCodes"), "C-3 promo codes must be switchable on Full Report checkout");
+const bookingCheckoutRoute = fs.readFileSync(path.join(webRoot, "app/api/booking/checkout/route.ts"), "utf8");
+assert(
+  bookingCheckoutRoute.includes("allow_promotion_codes: stripeAllowPromotionCodes()"),
+  "C-3 promo codes must use same switch on booking checkout",
+);
+assert(
+  fs.readFileSync(path.join(webRoot, "lib/funnel/track-booking-funnel-event.ts"), "utf8").includes("funnel_step"),
+  "N0.2 booking events must carry funnel_step for ordered drop-off queries",
+);
 const checkoutForm = fs.readFileSync(
   path.join(webRoot, "components/checkout/unlock-checkout-form.tsx"),
   "utf8",
@@ -312,7 +321,11 @@ assert(sampleTracker.includes('trackFunnelEvent("sample_report_view"'), "T9 Samp
 const bookingPage = fs.readFileSync(path.join(webRoot, "app/(site)/booking/page.tsx"), "utf8");
 assert(bookingPage.includes("BookingPageViewTracker"), "N0.2 /booking must persist booking_page_view");
 const bookingForm = fs.readFileSync(path.join(webRoot, "components/booking-request-form.tsx"), "utf8");
-assert(bookingForm.includes('trackFunnelEvent("booking_option_selected"'), "N0.2 booking_option_selected not wired");
+assert(
+  bookingForm.includes("trackBookingOptionSelected") ||
+    fs.readFileSync(path.join(webRoot, "lib/funnel/track-booking-funnel-event.ts"), "utf8").includes("booking_option_selected"),
+  "N0.2 booking_option_selected not wired",
+);
 const bookingCheckout = fs.readFileSync(path.join(webRoot, "app/api/booking/checkout/route.ts"), "utf8");
 assert(bookingCheckout.includes("recordBookingStartedEvent"), "N0.2 booking_started must fire server-side at checkout");
 const fulfillBooking = fs.readFileSync(path.join(webRoot, "lib/stripe/fulfill-booking-checkout.ts"), "utf8");

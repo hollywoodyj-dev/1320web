@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { FormEvent, useEffect, useState } from "react";
 import { BOOKING_FINAL, READING_OPTIONS } from "@/lib/booking-content";
-import { bookingClientMetadata, resolveSourcePage } from "@/lib/funnel/booking-funnel-props";
+import { loadBookingEntryReferrer, resolveCheckoutContextPage } from "@/lib/funnel/booking-funnel-props";
+import { trackBookingOptionSelected } from "@/lib/funnel/track-booking-funnel-event";
 import {
   loadFunnelAttribution,
   mergeAttribution,
@@ -51,27 +52,11 @@ export function BookingRequestForm({
     setSelectedReadingType(resolveInitialType(defaultReadingType));
   }, [defaultReadingType]);
 
-  useEffect(() => {
-    const type = resolveInitialType(defaultReadingType);
-    trackFunnelEvent("booking_option_selected", {
-      ...bookingClientMetadata({
-        readingType: type,
-        sourcePage: resolveSourcePage(),
-        reportPurchaseStatus,
-      }),
-      entry: defaultReadingType ? "url_type_param" : "default",
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- fire once on mount for initial selection
-  }, []);
-
   function trackOptionSelected(readingType: string, entry: string) {
-    trackFunnelEvent("booking_option_selected", {
-      ...bookingClientMetadata({
-        readingType,
-        sourcePage: resolveSourcePage(),
-        reportPurchaseStatus,
-      }),
+    trackBookingOptionSelected({
+      readingType,
       entry,
+      reportPurchaseStatus,
     });
   }
 
@@ -112,7 +97,8 @@ export function BookingRequestForm({
         readingType,
         timezone: timezone || undefined,
         message,
-        sourcePage: resolveSourcePage(),
+        sourcePage: resolveCheckoutContextPage(),
+        referrerIntoBooking: loadBookingEntryReferrer(),
         attribution: merged,
       }),
     });

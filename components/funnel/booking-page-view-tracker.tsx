@@ -1,27 +1,17 @@
 "use client";
 
 import { useEffect } from "react";
-import { trackFunnelEvent } from "@/lib/funnel/track-funnel-event";
-import { resolveSourcePage } from "@/lib/funnel/booking-funnel-props";
+import { trackBookingPageView } from "@/lib/funnel/track-booking-funnel-event";
 import type { ReportPurchaseStatus } from "@/lib/funnel/resolve-report-purchase-status";
-
-const BURST_MS = 2000;
-let lastFireAt = 0;
 
 type BookingPageViewTrackerProps = {
   reportPurchaseStatus?: ReportPurchaseStatus;
 };
 
-/** Persist booking_page_view once when /booking mounts. */
+/** Persist booking_page_view once when /booking mounts (before any option_selected). */
 export function BookingPageViewTracker({ reportPurchaseStatus }: BookingPageViewTrackerProps) {
   useEffect(() => {
-    const now = Date.now();
-    if (now - lastFireAt < BURST_MS) return;
-    lastFireAt = now;
-    trackFunnelEvent("booking_page_view", {
-      source_page: resolveSourcePage(),
-      ...(reportPurchaseStatus ? { report_purchase_status: reportPurchaseStatus } : {}),
-    });
+    trackBookingPageView(reportPurchaseStatus);
   }, [reportPurchaseStatus]);
 
   return null;

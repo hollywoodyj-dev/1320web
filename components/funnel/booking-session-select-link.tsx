@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import type { ComponentProps } from "react";
-import { trackFunnelEvent } from "@/lib/funnel/track-funnel-event";
-import { bookingOptionEventProps, resolveSourcePage } from "@/lib/funnel/booking-funnel-props";
+import { trackBookingOptionSelected } from "@/lib/funnel/track-booking-funnel-event";
 
 type BookingSessionSelectLinkProps = ComponentProps<typeof Link> & {
   sessionType: string;
@@ -19,11 +18,7 @@ export function BookingSessionSelectLink({
     <Link
       {...props}
       onClick={(event) => {
-        trackFunnelEvent("booking_option_selected", {
-          ...bookingOptionEventProps(sessionType),
-          source_page: resolveSourcePage(),
-          entry: "session_card",
-        });
+        trackBookingOptionSelected({ readingType: sessionType, entry: "session_card" });
         onClick?.(event);
       }}
     />

@@ -32,6 +32,7 @@ type BookingCheckoutBody = {
   timezone?: string;
   message?: string;
   sourcePage?: string;
+  referrerIntoBooking?: string;
   attribution?: Record<string, string>;
 };
 
@@ -115,6 +116,7 @@ export async function POST(request: Request) {
     const reportPurchaseStatus = await resolveReportPurchaseStatus(user.id);
     const attributionMeta = attributionToCheckoutMetadata(body.attribution);
     const sourcePage = body.sourcePage?.trim().slice(0, 200) || "/booking";
+    const referrerIntoBooking = body.referrerIntoBooking?.trim().slice(0, 200) || undefined;
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
@@ -142,6 +144,7 @@ export async function POST(request: Request) {
         message: truncateMetadata(message),
         code: truncateMetadata(code, 120),
         source_page: sourcePage,
+        referrer_into_booking: referrerIntoBooking ?? "",
         report_purchase_status: reportPurchaseStatus,
         ...attributionMeta,
       },

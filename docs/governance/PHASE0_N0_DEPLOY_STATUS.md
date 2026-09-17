@@ -14,19 +14,18 @@ Pushed `master` → Vercel Production **Ready** (~1m build).
 | `/is-numerology-scientifically-proven` | **200** |
 | `sitemap.xml` `<loc>` count | **20** |
 
-**Acceptance still pending** — Haze production verify (same gate as N0.2).
-
-| ID | Repo | Production (post-deploy) | Acceptance |
-|----|------|--------------------------|------------|
-| **T17** | Page + sitemap entry | 200 · sitemap 20 | **Pending Haze** — canonical self-ref, Genovese accuracy |
-| **N0.2** | Booking funnel events | Code live | **Pending eyewitness** — prod booking test, four events in admin |
+| ID | Repo | Production | Acceptance |
+|----|------|------------|------------|
+| **T17** | Asset 07 epistemic page | 200 · canonical self-ref · sitemap 20 · title exact · TTFB 0.09–0.35s | **PASS** (Haze, 2026-09-17) — Genovese citation verified; modulo/birth-number note **not** added (proportionate to evidence) |
+| **N0.2** | Booking funnel events | Eyewitness PASS + post-fix deploy | **PASS** (core) — ordering/referrer/C-3 fixes shipped |
+| **N0.3** | Booking baseline | Frozen 2026-09-17 | **PASS** — RAW 2/2/2/1, CLEAN 0 (QA only pre-T0) |
 
 ---
 
 ## Post-deploy sequence (Haze)
 
-1. T17 production check
-2. Booking test flow — four events in admin (`booking_completed` = verified payment only)
+1. ~~T17 production check~~ **PASS**
+2. **→ Booking test flow** — four events in admin (`booking_completed` = verified payment only)
 3. N0.3 booking baseline freeze
 4. N0.4 RAW/CLEAN + legacy `haze_t6b` / `closure_2026-08-23` + `purchase_context=internal_qa`
 

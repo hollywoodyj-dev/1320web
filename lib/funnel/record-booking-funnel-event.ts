@@ -24,6 +24,7 @@ function bookingMetadataFromSession(
     amount: meta.price_amount ? Number(meta.price_amount) : catalog?.priceAmount,
     currency: (meta.currency ?? catalog?.currency ?? "USD").toUpperCase(),
     source_page: meta.source_page ?? undefined,
+    referrer_into_booking: meta.referrer_into_booking ?? undefined,
     first_touch_source: attr.source,
     first_touch_campaign: attr.campaign,
     report_purchase_status: reportPurchaseStatus,
@@ -46,7 +47,10 @@ export async function recordBookingStartedEvent(input: {
     source: attr.source ?? null,
     platform: "stripe",
     path: "/booking",
-    metadata: bookingMetadataFromSession(input.session, input.reportPurchaseStatus),
+    metadata: {
+      funnel_step: 3,
+      ...bookingMetadataFromSession(input.session, input.reportPurchaseStatus),
+    },
   });
 }
 
@@ -67,6 +71,7 @@ export async function recordBookingCompletedEvent(input: {
     platform: "stripe",
     path: "/booking/success",
     metadata: {
+      funnel_step: 4,
       ...base,
       amount: amountTotal != null ? amountTotal / 100 : base.amount,
       amount_cents: amountTotal ?? undefined,

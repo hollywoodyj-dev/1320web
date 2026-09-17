@@ -5,12 +5,21 @@
 
 ---
 
-## Pending deploy (same gate)
+## Deploy · `0b47209` (2026-09-17)
 
-| ID | Repo | Production | Next |
-|----|------|------------|------|
-| **N0.2** | Booking funnel events wired | Not live — zero booking catalog events | Deploy → prod booking test eyewitness |
-| **T17** | `/is-numerology-scientifically-proven` + sitemap entry | **404** · sitemap **19** | Deploy → Haze verify 200 / canonical / sitemap 20 / Genovese |
+Pushed `master` → Vercel Production **Ready** (~1m build).
+
+| Probe (Nova, post-deploy) | Result |
+|---|---|
+| `/is-numerology-scientifically-proven` | **200** |
+| `sitemap.xml` `<loc>` count | **20** |
+
+**Acceptance still pending** — Haze production verify (same gate as N0.2).
+
+| ID | Repo | Production (post-deploy) | Acceptance |
+|----|------|--------------------------|------------|
+| **T17** | Page + sitemap entry | 200 · sitemap 20 | **Pending Haze** — canonical self-ref, Genovese accuracy |
+| **N0.2** | Booking funnel events | Code live | **Pending eyewitness** — prod booking test, four events in admin |
 
 ---
 

@@ -34,7 +34,7 @@ Pushed `master` → Vercel Production **Ready** (~1m build).
 | **N0.3** | Booking baseline | Frozen 2026-09-17 | **PASS** — RAW 2/2/2/1, CLEAN 0 (QA only pre-T0) |
 | **N0.4** | QA RAW/CLEAN | Deployed | **PASS** — read-time + write-time `purchase_context` |
 | **C-3** | Promo observed | Probe 2026-09-17 | **PASS** — `allow_promotion_codes: false` when switch=false; test012 contrast `true` |
-| **D-11** | Session continuity | Stitch deployed | **PARTIAL** — test012 analytics session stable; production stitch **observed PENDING** (see `D11_PRODUCTION_EYEWITNESS.md`) |
+| **D-11** | Session continuity | test013 + test014 | **PARTIAL PASS** — session + stitch ✅ (Flow A); D-8 `/full-report → /booking` referrer **PENDING** (`D11_PRODUCTION_EYEWITNESS.md`) |
 
 ---
 
@@ -59,7 +59,7 @@ D-11 production eyewitness does **not** block T0.
 
 ## T0+ priority (content & distribution)
 
-1. **N0.5** — close calculator survey → T18 formal research artifact → publish
+1. **N0.5** — close calculator survey (conditional: ≥2 A/A′/B + ≥2 mismatch, ~8 rows) → T18 body → publish
 2. **T18** — post-launch editorial outreach
 3. **Measurement** — maintenance only unless blocking distribution
 
@@ -71,5 +71,5 @@ D-11 production eyewitness does **not** block T0.
 
 | ID | Status |
 |----|--------|
-| **N0.5** | Live calculator survey continues (D-9 #4/#6/#7) |
-| **D-11 eyewitness** | No-payment production run — first week of T0 |
+| **N0.5** | Live calculator survey — conditional closure (Nova) |
+| **D-11 eyewitness** | No-payment browser run — Holly, first week of T0 |

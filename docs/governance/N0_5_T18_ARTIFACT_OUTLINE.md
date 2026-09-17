@@ -37,7 +37,7 @@ How much does the output change when declared Life Path calculation conventions 
 
 ### Survey protocol
 
-- Target: 12–15 named public calculators + 2–3 written primary sources per convention (existence).
+- **Closure (conditional):** ≥ 2 evidenced instances each of measured A, A′, B; ≥ 2 named mismatches; ~8 closed rows minimum. Close when satisfied — do not pad. (Proportion / prevalence claims excluded from scope.)
 - Per calculator: three test dates → record outputs → classify triplet → compare to `proseDeclared`.
 - **Per row evidence required:** result-node HTML snippet and/or screenshot path (see `qa-artifacts/t18-calculator-survey/`).
 - **Stop rule:** If measured triplet matches none of the four signatures → halt and report; do not extend the model.
@@ -62,19 +62,19 @@ How much does the output change when declared Life Path calculation conventions 
 
 **Allowed wording:**
 
-- ✅ “Of the 14 calculators surveyed, X showed a mismatch between declared method and measured output.”
+- ✅ “Of the **n** calculators surveyed, X showed a mismatch between declared method and measured output.”
 - ✅ “Source [name] declares Convention A; measured triplet matches A′ (11, 4, 6).”
 
 **Forbidden wording:**
 
-- ❌ “X% of calculators misrepresent their method.” (n = 14 cannot support population proportion.)
+- ❌ “X% of calculators misrepresent their method.” (survey n cannot support population proportion.)
 - ❌ “Most calculators are wrong.”
 
 **Template (fill when table closes):**
 
 | n surveyed | mismatch count | Sources (with evidence refs) |
 |------------|----------------|------------------------------|
-| 14 | _pending_ | _pending_ |
+| _pending_ | _pending_ | _pending_ |
 
 *A′ touches the frozen question:* “when **declared** conventions differ” assumes declaration matches execution — survey shows that premise does not always hold.
 
@@ -96,7 +96,7 @@ How much does the output change when declared Life Path calculation conventions 
 
 ### Other limitations
 
-- Survey n = 12–15 establishes existence and documents behaviour in named sources; not global prevalence
+- Survey n (~8 closed rows minimum) establishes existence and documents behaviour in named sources; not global prevalence
 - T18 does not adjudicate metaphysical validity of numerology
 - Master Number frequency claims must stay convention-relative (see calibration 4)
 

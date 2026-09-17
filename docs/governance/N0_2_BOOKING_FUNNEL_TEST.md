@@ -73,16 +73,18 @@ Promo codes **off** in production (C-3). Do not re-enable without explicit Haze 
 
 Same-tab flow: card click → signup → return `/booking`.
 
-| Signal | Storage | Survives signup? |
-|--------|---------|------------------|
-| Analytics `session_id` | `localStorage.soulcode_analytics_session` | ✅ (test012: single UUID `26f84c21-…` on client events) |
-| `referrer_into_booking` | `sessionStorage.1320_booking_entry_referrer` | ✅ by design (no `sessionStorage.clear` in auth); eyewitness predates metadata capture |
-| Stitch | `POST /api/auth/signup` + `analyticsSessionId` | Backfills `user_id` onto pre-auth rows sharing analytics session |
+| Signal | Storage | Status |
+|--------|---------|--------|
+| Analytics `session_id` | `localStorage.soulcode_analytics_session` | test012 ✅ — production eyewitness **PENDING** |
+| `referrer_into_booking` | `sessionStorage.1320_booking_entry_referrer` | Mechanism ✅ — post-fix metadata capture; production eyewitness **PENDING** |
+| Stitch | `POST /api/auth/signup` + `analyticsSessionId` | **Deployed** — production **observed PENDING** |
 
 Client events use analytics UUID in `session_id`; server `booking_started` / `booking_completed` use Stripe `cs_*`. Drop-off queries use `funnel_step` + `user_id` stitch, not raw `session_id` alone.
 
+Production no-payment runbook: `docs/governance/D11_PRODUCTION_EYEWITNESS.md`
+
 ```bash
-npx tsx --env-file=.env.local scripts/probe-n02-session-continuity.ts
+npx tsx --env-file=.env.local scripts/probe-n02-session-continuity.ts [email]
 ```
 
 ---

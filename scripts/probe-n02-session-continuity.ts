@@ -2,11 +2,11 @@
  * D-11 session continuity — same test flow as N0.2 eyewitness (test012@yy.com).
  * Confirms analytics session_id survives signup and documents referrer_into_booking storage.
  *
- * Run: npx tsx --env-file=.env.local scripts/probe-n02-session-continuity.ts
+ * Run: npx tsx --env-file=.env.local scripts/probe-n02-session-continuity.ts [email]
  */
 import { getSql } from "../lib/db/client";
 
-const EMAIL = "test012@yy.com";
+const EMAIL = process.argv[2]?.trim() || "test012@yy.com";
 const BOOKING_EVENTS = [
   "booking_page_view",
   "booking_option_selected",
@@ -107,12 +107,20 @@ async function main() {
         .filter((v): v is string => typeof v === "string" && v.length > 0),
     ),
   ];
+  const referrerConsistent = referrers.length <= 1;
+  const clientRowsWithUser = clientRows.filter((r) => r.user_id === user.id);
+  const stitchOnClientRows = clientRows.length === 0 || clientRowsWithUser.length === clientRows.length;
+  const bookingClientEvents = clientRows.filter((r) =>
+    ["booking_page_view", "booking_option_selected"].includes(r.event_name),
+  );
 
   console.log("\n=== Continuity verdict ===");
   console.log(
     JSON.stringify({
+      email: EMAIL,
       analytics_session_id_same_across_client_events: analyticsSessionSurvivesSignup,
       client_session_ids: clientSessionIds,
+      booking_client_event_count: bookingClientEvents.length,
       pre_signup_client_events: preSignupClient.length,
       post_signup_client_events: postSignupClient.length,
       signup_completed_at: signupRow?.created_at.toISOString() ?? null,
@@ -121,14 +129,16 @@ async function main() {
       note_session_id_column:
         "Client events use analytics UUID; server booking_started/completed use Stripe cs_* — stitch via signup backfill (user_id) + funnel_step ordering",
       referrer_into_booking_values: referrers,
+      referrer_consistent: referrerConsistent,
       referrer_observed_in_db: referrers.length > 0,
-      referrer_note:
-        referrers.length === 0
-          ? "Eyewitness predates referrer_into_booking capture; post-fix flows persist sessionStorage value into event metadata"
-          : "Observed in DB",
+      stitch_user_id_on_all_client_rows: stitchOnClientRows,
       signup_stitch:
         "POST /api/auth/signup accepts analyticsSessionId → backfillConversionEventsUserByAnalyticsSession attaches user_id to pre-auth rows",
-      pass: analyticsSessionSurvivesSignup,
+      pass:
+        analyticsSessionSurvivesSignup &&
+        referrerConsistent &&
+        stitchOnClientRows &&
+        (referrers.length > 0 || EMAIL === "test012@yy.com"),
     }),
   );
 }

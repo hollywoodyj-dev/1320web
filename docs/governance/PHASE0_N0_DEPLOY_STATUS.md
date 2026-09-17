@@ -34,7 +34,15 @@ Pushed `master` → Vercel Production **Ready** (~1m build).
 | **N0.3** | Booking baseline | Frozen 2026-09-17 | **PASS** — RAW 2/2/2/1, CLEAN 0 (QA only pre-T0) |
 | **N0.4** | QA RAW/CLEAN | Deployed | **PASS** — read-time + write-time `purchase_context` |
 | **C-3** | Promo observed | Probe 2026-09-17 | **PASS** — `allow_promotion_codes: false` when switch=false; test012 contrast `true` |
-| **D-11** | Session continuity | test012 probe | **PASS** — analytics session_id stable; signup stitch wired |
+| **D-11** | Session continuity | Stitch deployed | **PARTIAL** — test012 analytics session stable; production stitch **observed PENDING** (see `D11_PRODUCTION_EYEWITNESS.md`) |
+
+---
+
+## T0 · Pinterest distribution
+
+**Status:** **OPEN** (Haze, 2026-09-17) — N0 preconditions met (T17 200, sitemap 20, C-3 observed, N0.4 PASS).
+
+D-11 production eyewitness does **not** block T0.
 
 ---
 
@@ -43,9 +51,19 @@ Pushed `master` → Vercel Production **Ready** (~1m build).
 1. ~~T17 production check~~ **PASS**
 2. ~~Booking test flow~~ **PASS**
 3. ~~N0.3 booking baseline freeze~~ **PASS**
-4. ~~N0.4 RAW/CLEAN + legacy + purchase_context~~ **PASS** (read-time; deploy for write-time tag)
+4. ~~N0.4 RAW/CLEAN + legacy + purchase_context~~ **PASS**
 5. ~~Deploy N0.4 write-path + D-11 signup stitch~~ **PASS**
-6. **→ Pinterest T0**
+6. ~~Pinterest T0~~ **OPEN**
+
+---
+
+## T0+ priority (content & distribution)
+
+1. **N0.5** — close calculator survey → T18 formal research artifact → publish
+2. **T18** — post-launch editorial outreach
+3. **Measurement** — maintenance only unless blocking distribution
+
+**Resource gate:** 70–80% of new work must directly produce discovery / content asset / distribution. Every new task must pass: *Would this make someone who didn't know 1320 more likely to see, understand, cite, or enter 1320?*
 
 ---
 
@@ -54,5 +72,4 @@ Pushed `master` → Vercel Production **Ready** (~1m build).
 | ID | Status |
 |----|--------|
 | **N0.5** | Live calculator survey continues (D-9 #4/#6/#7) |
-| **N0.3 prep** | `lib/funnel/booking-start-baseline.ts` placeholder |
-| **N0.4 prep** | Spec in work order — implement after deploy eyewitness |
+| **D-11 eyewitness** | No-payment production run — first week of T0 |

@@ -72,4 +72,4 @@ D-11 production eyewitness does **not** block T0.
 | ID | Status |
 |----|--------|
 | **N0.5** | Live calculator survey — conditional closure (Nova) |
-| **D-11 eyewitness** | No-payment browser run — Holly, first week of T0 |
+| **D-11 eyewitness** | Flow A PASS (test014); Flow B `/full-report → /booking` — Holly, next run |

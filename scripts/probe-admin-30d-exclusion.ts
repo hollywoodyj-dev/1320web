@@ -3,6 +3,7 @@
  * Run: npx tsx --env-file=.env.local scripts/probe-admin-30d-exclusion.ts
  */
 import { getSql } from "../lib/db/client";
+import { QA_EXCLUSION_SQL } from "../lib/funnel/qa-traffic-exclusion";
 
 const WINDOW_DAYS = 30;
 
@@ -21,10 +22,7 @@ async function main() {
       SELECT event_name, COUNT(*)::int AS count
       FROM marketing_conversion_events
       WHERE created_at >= ${since}
-        AND NOT (
-          COALESCE(metadata->>'utm_campaign', metadata->>'campaign', '') LIKE 'haze_%'
-          OR LOWER(COALESCE(metadata->>'utm_source', source, '')) = 'operator'
-        )
+        AND NOT (${db.unsafe(QA_EXCLUSION_SQL)})
       GROUP BY event_name
     `,
   ]);

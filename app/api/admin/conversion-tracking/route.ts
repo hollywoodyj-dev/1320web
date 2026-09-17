@@ -95,8 +95,10 @@ export async function GET() {
           FROM marketing_conversion_events
           WHERE created_at >= ${since}
             AND NOT (
-              COALESCE(metadata->>'utm_campaign', metadata->>'campaign', '') LIKE 'haze_%'
-              OR LOWER(COALESCE(metadata->>'utm_source', source, '')) = 'operator'
+              COALESCE(metadata->>'purchase_context', '') = 'internal_qa'
+              OR COALESCE(metadata->>'utm_campaign', metadata->>'campaign', '') LIKE 'haze_%'
+              OR COALESCE(metadata->>'utm_campaign', metadata->>'campaign', '') = 'closure_2026-08-23'
+              OR LOWER(COALESCE(metadata->>'utm_source', source, '')) IN ('operator', 'haze_t6b')
             )
           GROUP BY event_name
         `,
@@ -124,8 +126,10 @@ export async function GET() {
           WHERE created_at >= ${since}
             AND event_name = 'signup_completed'
             AND NOT (
-              COALESCE(metadata->>'utm_campaign', metadata->>'campaign', '') LIKE 'haze_%'
-              OR LOWER(COALESCE(metadata->>'utm_source', source, '')) = 'operator'
+              COALESCE(metadata->>'purchase_context', '') = 'internal_qa'
+              OR COALESCE(metadata->>'utm_campaign', metadata->>'campaign', '') LIKE 'haze_%'
+              OR COALESCE(metadata->>'utm_campaign', metadata->>'campaign', '') = 'closure_2026-08-23'
+              OR LOWER(COALESCE(metadata->>'utm_source', source, '')) IN ('operator', 'haze_t6b')
             )
         `,
         db<RecentRow[]>`

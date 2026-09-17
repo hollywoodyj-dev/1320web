@@ -5,6 +5,7 @@ import { setUserSession } from "@/lib/auth/session";
 import { ensureSoulReportForUserBirthDate } from "@/lib/db/ensure-soul-report";
 import { upsertUserAccount, getUserByEmail } from "@/lib/db/users";
 import { isDatabaseConfigured } from "@/lib/platform-config";
+import { backfillConversionEventsUserByAnalyticsSession } from "@/lib/db/backfill-analytics-session-user";
 import { recordAccountSignupIfCreated } from "@/lib/funnel/record-account-signup";
 
 type SignupBody = {
@@ -14,6 +15,7 @@ type SignupBody = {
   birthDate?: string;
   password?: string;
   next?: string;
+  analyticsSessionId?: string;
 };
 
 function isValidEmail(value: unknown): value is string {
@@ -83,6 +85,14 @@ export async function POST(request: Request) {
       await ensureSoulReportForUserBirthDate({ userId: user.id, birthDate });
     }
     await setUserSession(user.id);
+
+    const analyticsSessionId = body.analyticsSessionId?.trim();
+    if (analyticsSessionId) {
+      await backfillConversionEventsUserByAnalyticsSession({
+        analyticsSessionId,
+        userId: user.id,
+      });
+    }
 
     return NextResponse.json({
       ok: true,

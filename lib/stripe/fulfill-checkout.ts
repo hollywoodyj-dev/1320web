@@ -3,6 +3,7 @@ import { completePurchaseBySessionId } from "@/lib/db/purchases";
 import { getUserById } from "@/lib/db/users";
 import { sendPurchaseAccessEmail } from "@/lib/email/send-purchase-access-email";
 import { getSiteUrl } from "@/lib/platform-config";
+import { withPurchaseContextMetadata } from "@/lib/funnel/checkout-qa-metadata";
 import { attributionFromSessionMetadata } from "@/lib/funnel/stripe-session-attribution";
 import { recordConversionEvent } from "@/lib/record-conversion-event";
 import type Stripe from "stripe";
@@ -41,6 +42,15 @@ export async function fulfillCheckoutSession(session: Stripe.Checkout.Session): 
   const attr = attributionFromSessionMetadata(session.metadata);
   const amountTotal = session.amount_total ?? null;
   const currency = session.currency?.toUpperCase() ?? "USD";
+  const eventMeta = withPurchaseContextMetadata({
+    product: session.metadata?.product ?? "full_report",
+    ...(amountTotal != null ? { amount: String(amountTotal / 100) } : {}),
+    ...(amountTotal != null ? { amount_cents: String(amountTotal) } : {}),
+    currency,
+    ...(attr.campaign ? { campaign: attr.campaign } : {}),
+    stripe_checkout_session_id: sessionId,
+    ...attr.meta,
+  });
   await recordConversionEvent({
     eventName: "purchase_completed",
     userId: user.id,
@@ -49,13 +59,9 @@ export async function fulfillCheckoutSession(session: Stripe.Checkout.Session): 
     platform: "stripe",
     path: "/checkout",
     metadata: {
-      product: session.metadata?.product ?? "full_report",
+      ...eventMeta,
       amount: amountTotal != null ? amountTotal / 100 : undefined,
       amount_cents: amountTotal ?? undefined,
-      currency,
-      campaign: attr.campaign,
-      stripe_checkout_session_id: sessionId,
-      ...attr.meta,
     },
   });
 

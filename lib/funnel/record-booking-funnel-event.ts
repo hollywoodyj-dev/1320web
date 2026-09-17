@@ -3,6 +3,7 @@ import {
   isPersonalIntegrationSessionVariant,
   SESSION_CATALOG,
 } from "@/lib/personal-integration/session-variants";
+import { withPurchaseContextMetadata } from "@/lib/funnel/checkout-qa-metadata";
 import { attributionFromSessionMetadata } from "@/lib/funnel/stripe-session-attribution";
 import type { ReportPurchaseStatus } from "@/lib/funnel/resolve-report-purchase-status";
 import type Stripe from "stripe";
@@ -10,7 +11,7 @@ import type Stripe from "stripe";
 function bookingMetadataFromSession(
   session: Stripe.Checkout.Session,
   reportPurchaseStatus: ReportPurchaseStatus,
-): Record<string, string | number | boolean | undefined> {
+): Record<string, string> {
   const meta = session.metadata ?? {};
   const readingType = meta.readingType?.trim() ?? "";
   const catalog = isPersonalIntegrationSessionVariant(readingType)
@@ -18,7 +19,7 @@ function bookingMetadataFromSession(
     : null;
   const attr = attributionFromSessionMetadata(meta);
 
-  return {
+  const base: Record<string, string | number | boolean | undefined> = {
     session_type: meta.session_type ?? readingType,
     duration: meta.duration_minutes ?? catalog?.durationMinutes,
     amount: meta.price_amount ? Number(meta.price_amount) : catalog?.priceAmount,
@@ -32,6 +33,12 @@ function bookingMetadataFromSession(
     stripe_checkout_session_id: session.id,
     ...attr.meta,
   };
+  const stringMeta: Record<string, string> = {};
+  for (const [key, value] of Object.entries(base)) {
+    if (value === null || value === undefined) continue;
+    stringMeta[key] = String(value);
+  }
+  return withPurchaseContextMetadata(stringMeta);
 }
 
 export async function recordBookingStartedEvent(input: {

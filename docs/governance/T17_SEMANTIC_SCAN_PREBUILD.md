@@ -89,9 +89,10 @@ Examples to watch in derivative QA, not bulk-rewrite pre-T17:
 | Semantic scan executed | ✅ 2026-09-17 (`probe-t17-semantic-scan.ts`) — repo only |
 | Locked T17 title | **Is Numerology Scientifically Proven? Evidence, Symbolism, and the Limits of Interpretation** |
 | Five-layer framework in page copy | ✅ in repo |
-| Page live (production) | **PENDING DEPLOY** — repo has route + intent manifest; prod still 404 / sitemap 19 |
-| Blockers | Deploy → then Haze production check (200, self-canonical, sitemap 20, Genovese citation) |
+| Page live (production) | **PASS** (Haze, 2026-09-17) — 200 · canonical self-ref · sitemap 20 · title exact · five layers + self-audit · Genovese verified |
+| GSC | Holly submitting index request |
+| Blockers | None |
 
-**Acceptance:** observed working in production, not implemented in repo.
+**Genovese note (no page change):** study birth number uses modulo arithmetic (Convention B–class); p=0.77 — not added to page (proportionate to evidence).
 
-**Next after deploy:** Haze T17 prod verify → post-T26 marketing sweep (table above) as separate pass.
+**Next:** Post-T26 marketing sweep (table above) as separate pass.

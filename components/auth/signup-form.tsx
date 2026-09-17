@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { MIN_PASSWORD_LENGTH, PASSWORD_REQUIREMENTS, validatePassword } from "@/lib/auth/password";
 import { SIGNUP_COPY } from "@/lib/auth/account-content";
+import { getOrCreateAnalyticsSessionId } from "@/lib/soulcode-analytics";
 
 type SignupFormProps = {
   nextPath?: string;
@@ -43,7 +44,14 @@ export function SignupForm({ nextPath = "/account" }: SignupFormProps) {
       const response = await fetch("/api/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, firstName, lastName, password, next: nextPath }),
+        body: JSON.stringify({
+          email,
+          firstName,
+          lastName,
+          password,
+          next: nextPath,
+          analyticsSessionId: getOrCreateAnalyticsSessionId(),
+        }),
       });
       const json = (await response.json()) as {
         ok?: boolean;

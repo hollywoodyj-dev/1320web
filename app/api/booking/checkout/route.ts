@@ -18,6 +18,7 @@ import {
 import { getBookingAmountCents, resolveBookingLineItems } from "@/lib/stripe/booking-client";
 import { getStripe, stripeAllowPromotionCodes } from "@/lib/stripe/client";
 import { attributionToCheckoutMetadata } from "@/lib/funnel/attribution";
+import { withPurchaseContextMetadata } from "@/lib/funnel/checkout-qa-metadata";
 import { recordAccountSignupIfCreated } from "@/lib/funnel/record-account-signup";
 import { recordBookingStartedEvent } from "@/lib/funnel/record-booking-funnel-event";
 import { resolveReportPurchaseStatus } from "@/lib/funnel/resolve-report-purchase-status";
@@ -114,7 +115,9 @@ export async function POST(request: Request) {
     const amountCents = getBookingAmountCents(sessionVariant);
     const code = body.code?.trim() || account?.codeString || "";
     const reportPurchaseStatus = await resolveReportPurchaseStatus(user.id);
-    const attributionMeta = attributionToCheckoutMetadata(body.attribution);
+    const attributionMeta = withPurchaseContextMetadata(
+      attributionToCheckoutMetadata(body.attribution),
+    );
     const sourcePage = body.sourcePage?.trim().slice(0, 200) || "/booking";
     const referrerIntoBooking = body.referrerIntoBooking?.trim().slice(0, 200) || undefined;
 

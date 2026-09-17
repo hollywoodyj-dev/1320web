@@ -223,6 +223,16 @@ assert(
   fs.readFileSync(path.join(webRoot, "lib/funnel/track-booking-funnel-event.ts"), "utf8").includes("funnel_step"),
   "N0.2 booking events must carry funnel_step for ordered drop-off queries",
 );
+const qaExclusion = fs.readFileSync(path.join(webRoot, "lib/funnel/qa-traffic-exclusion.ts"), "utf8");
+assert(qaExclusion.includes("closure_2026-08-23"), "N0.4 must exclude legacy campaign closure_2026-08-23");
+assert(qaExclusion.includes("haze_t6b"), "N0.4 must exclude legacy source haze_t6b");
+assert(qaExclusion.includes("purchase_context"), "N0.4 must tag purchase_context=internal_qa");
+const signupForm = fs.readFileSync(path.join(webRoot, "components/auth/signup-form.tsx"), "utf8");
+assert(signupForm.includes("analyticsSessionId"), "D-11 signup must send analyticsSessionId for stitch");
+assert(
+  signupRoute.includes("backfillConversionEventsUserByAnalyticsSession"),
+  "D-11 signup must backfill pre-auth events by analytics session",
+);
 const checkoutForm = fs.readFileSync(
   path.join(webRoot, "components/checkout/unlock-checkout-form.tsx"),
   "utf8",

@@ -6,6 +6,7 @@ import { upsertUserByEmailDetectCreate } from "@/lib/db/users";
 import { get1320Content } from "@/lib/get1320Content";
 import { getSiteUrl, isDatabaseConfigured, isStripeConfigured } from "@/lib/platform-config";
 import { attributionToCheckoutMetadata } from "@/lib/funnel/attribution";
+import { withPurchaseContextMetadata } from "@/lib/funnel/checkout-qa-metadata";
 import { recordMarketingOptIn } from "@/lib/db/record-marketing-opt-in";
 import { recordAccountSignupIfCreated } from "@/lib/funnel/record-account-signup";
 import { getFullReportAmountCents, getFullReportLineItems, getStripe, stripeAllowPromotionCodes } from "@/lib/stripe/client";
@@ -73,7 +74,9 @@ export async function POST(request: Request) {
     const stripe = getStripe();
     const siteUrl = getSiteUrl();
     const amountCents = getFullReportAmountCents();
-    const attribution = attributionToCheckoutMetadata(body.attribution);
+    const attribution = withPurchaseContextMetadata(
+      attributionToCheckoutMetadata(body.attribution),
+    );
     await recordAccountSignupIfCreated({
       created,
       userId: user.id,

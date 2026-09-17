@@ -48,7 +48,18 @@ async function main() {
     );
   }
   console.log(
-    JSON.stringify({ total: rows.length, qaTagged: qa, excludeQa: clean, rule: "campaign haze_* OR utm_source=operator" }),
+    JSON.stringify({
+      total: rows.length,
+      qaTagged: qa,
+      clean,
+      rules: [
+        "purchase_context=internal_qa",
+        "campaign haze_*",
+        "campaign closure_2026-08-23",
+        "utm_source operator",
+        "utm_source haze_t6b",
+      ],
+    }),
   );
 }
 

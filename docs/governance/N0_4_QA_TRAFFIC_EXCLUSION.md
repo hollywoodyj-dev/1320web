@@ -1,6 +1,6 @@
 # N0.4 · RAW / CLEAN · QA traffic exclusion
 
-**Status:** PASS (repo + probes, 2026-09-17) — pending production deploy for write-time `purchase_context`  
+**Status:** PASS (deployed `87d2e10`, 2026-09-17)  
 **Rule:** RAW = all rows; CLEAN = exclude QA-tagged rows at read time (never delete).
 
 **Probe (30d):** RAW purchase_completed **8** · CLEAN **2** · QA excluded **6**

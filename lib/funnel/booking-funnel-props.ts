@@ -24,9 +24,7 @@ export function primeBookingEntryReferrer(sourcePath?: string): void {
   try {
     if (sessionStorage.getItem(BOOKING_ENTRY_REFERRER_KEY)) return;
     const path =
-      sourcePath ??
-      `${window.location.pathname}${window.location.search}` ||
-      "/";
+      sourcePath ?? (`${window.location.pathname}${window.location.search}` || "/");
     sessionStorage.setItem(BOOKING_ENTRY_REFERRER_KEY, path);
   } catch {
     /* ignore */

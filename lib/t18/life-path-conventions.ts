@@ -87,7 +87,8 @@ export function lifePathTriplet(
   day: number,
   fn: (y: number, m: number, d: number) => number,
 ): LifePathTriplet {
-  return T18_PROVENANCE_TEST_DATES.map(({ year: y, month: m, day: d }) => fn(y, m, d)) as LifePathTriplet;
+  const values = T18_PROVENANCE_TEST_DATES.map(({ year: y, month: m, day: d }) => fn(y, m, d));
+  return [values[0]!, values[1]!, values[2]!];
 }
 
 export function tripletKey(triplet: LifePathTriplet): string {

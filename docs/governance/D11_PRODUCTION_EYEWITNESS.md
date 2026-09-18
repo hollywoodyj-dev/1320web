@@ -1,6 +1,6 @@
 # D-11 · Production eyewitness (post-T0, non-blocking)
 
-**Status:** Flow A **PASS** (test014); Flow B **FAIL pre-fix** (test015) — fix deployed, **re-test pending**  
+**Status:** Flow A **PASS** (test014); Flow B fix **build-broken until redeploy** — test016 ran against old prod  
 **Blocks T0:** No
 
 ---
@@ -79,10 +79,17 @@ npx tsx --env-file=.env.local scripts/probe-n02-session-continuity.ts <email>
 |------|---------|------|------------|----------|-----------------|--------|--------|
 | 2026-09-17 | test013@yy.com | A | ✅ | `direct` ✅ | ❌ | ✅ | PARTIAL — likely no card click |
 | 2026-09-17 | test014@yy.com | A | ✅ | `direct` ✅ | ✅ | ✅ | **PASS** |
-| 2026-09-17 | test015@yy.com | B | ✅ | ❌ `direct` (bug) | ✅ | ✅ | **FAIL** referrer — fix shipped, re-test pending |
+| 2026-09-17 | test015@yy.com | B | ✅ | ❌ `direct` (bug) | ✅ | ✅ | **FAIL** referrer — client-nav gap |
+| 2026-09-18 | test016@yy.com | B | ✅ | ❌ `direct` | ✅ | ✅ | **INVALID** — prod deploy **Error** (fix never live); Holly path ✅ |
 
 ### test015 · notes
 
 - Holly path confirmed: `page_view /full-report` → `/booking` (+40s).
 - Session + stitch + option_selected: PASS.
 - Referrer FAIL: client-nav gap, not operator error.
+
+### test016 · notes
+
+- Same path confirmed: `/full-report` 03:50:32 → `/booking` 03:50:56 (+24s).
+- Referrer still `direct` because Vercel Production builds **failed** after `6513d0d` (`??`/`||` parse error in `primeBookingEntryReferrer`). **Not a retest of the fix.**
+- Re-run Flow B after successful deploy of build fix.

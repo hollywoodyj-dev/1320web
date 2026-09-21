@@ -1,6 +1,6 @@
 # D-11 · Production eyewitness (post-T0, non-blocking)
 
-**Status:** Flow A **PASS** (test014); Flow B fix **build-broken until redeploy** — test016 ran against old prod  
+**Status:** **PASS** — Flow A (test014) · Flow B (test07@yy.com, post `b07d103`)  
 **Blocks T0:** No
 
 ---
@@ -40,7 +40,7 @@
 2. Open:
 
    ```
-   https://www.1320soulcode.com/full-report?utm_source=operator&utm_campaign=haze_d11_flowb_v1
+   https://www.1320soulcode.com/full-report?utm_source=operator&utm_campaign=haze_d11_flowb_v3
    ```
 
 3. Scroll to **「Prefer Live Integration?」** → click **「Explore Personal Integration」** (same tab).
@@ -51,17 +51,13 @@
 
 ---
 
-## D-8 fix · client navigation referrer (test015 root cause)
+## D-8 fix · client navigation referrer
 
-**Problem:** Next.js `<Link>` client transitions leave `document.referrer` empty → `captureBookingEntryReferrer()` recorded `direct` even after `/full-report → /booking` (test015 eyewitness: `page_view /full-report` at 11:38:01, then `/booking` at 11:38:41, referrer still `direct`).
+**Problem:** Next.js `<Link>` client transitions leave `document.referrer` empty → `direct` on `/full-report → /booking` (test015).
 
-**Fix:**
+**Fix (`b07d103`):** `primeBookingEntryReferrer()` + `BookingEntryLink` on internal `/booking` CTAs.
 
-- `primeBookingEntryReferrer()` — on click, write current path to `sessionStorage.1320_booking_entry_referrer` (first-touch only).
-- `BookingEntryLink` — wraps internal `/booking` links; calls prime before navigation.
-- Wired on: `/full-report`, `/reflect`, `/account`, booking success, integration prep/follow-up invalid states.
-
-**Re-test:** Holly repeats Flow B after deploy → expect `referrer_into_booking: "/full-report"` (or with UTM query if present on full-report URL).
+**Observed PASS:** test07@yy.com — `referrer_into_booking: "/full-report?utm_source=operator&utm_campaign=haze_d11_flowb_v3"` pre/post signup.
 
 ---
 
@@ -69,6 +65,7 @@
 
 ```bash
 npx tsx --env-file=.env.local scripts/probe-n02-session-continuity.ts <email>
+npx tsx --env-file=.env.local scripts/probe-d11-email-dump.ts <email>
 ```
 
 ---
@@ -79,17 +76,18 @@ npx tsx --env-file=.env.local scripts/probe-n02-session-continuity.ts <email>
 |------|---------|------|------------|----------|-----------------|--------|--------|
 | 2026-09-17 | test013@yy.com | A | ✅ | `direct` ✅ | ❌ | ✅ | PARTIAL — likely no card click |
 | 2026-09-17 | test014@yy.com | A | ✅ | `direct` ✅ | ✅ | ✅ | **PASS** |
-| 2026-09-17 | test015@yy.com | B | ✅ | ❌ `direct` (bug) | ✅ | ✅ | **FAIL** referrer — client-nav gap |
-| 2026-09-18 | test016@yy.com | B | ✅ | ❌ `direct` | ✅ | ✅ | **INVALID** — prod deploy **Error** (fix never live); Holly path ✅ |
+| 2026-09-17 | test015@yy.com | B | ✅ | ❌ `direct` (pre-fix) | ✅ | ✅ | **FAIL** referrer |
+| 2026-09-18 | test016@yy.com | B | ✅ | ❌ `direct` | ✅ | ✅ | **INVALID** — deploy Error; fix not live |
+| 2026-09-21 | test07@yy.com | B | ✅ `2676fe9c-…` | ✅ `/full-report?…flowb_v3` | ✅ | ✅ | **PASS** |
 
-### test015 · notes
+### test07 · notes (Flow B post-fix)
 
-- Holly path confirmed: `page_view /full-report` → `/booking` (+40s).
-- Session + stitch + option_selected: PASS.
-- Referrer FAIL: client-nav gap, not operator error.
+- Holly confirmed account **test07@yy.com** (Flow B re-test after `b07d103`).
+- Timeline: `/full-report` → `/booking` → `option_selected` → signup → return `/booking`.
+- Referrer stable across signup; session_id stable.
 
-### test016 · notes
+---
 
-- Same path confirmed: `/full-report` 03:50:32 → `/booking` 03:50:56 (+24s).
-- Referrer still `direct` because Vercel Production builds **failed** after `6513d0d` (`??`/`||` parse error in `primeBookingEntryReferrer`). **Not a retest of the fix.**
-- Re-run Flow B after successful deploy of build fix.
+## Closed
+
+D-11 session continuity + D-8 entry referrer **observed in production**. No further eyewitness required unless regression.

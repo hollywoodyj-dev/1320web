@@ -31,7 +31,9 @@ function main() {
 
   const rows = JSON.parse(fs.readFileSync(jsonPath, "utf8")) as SurveyRow[];
   const closed = rows.filter((r) => r.rowClosed);
-  const unknowns = rows.filter((r) => r.outputMeasured === "UNKNOWN" && r.triplet);
+  /** Stop rule: evidenced measurement that matches no signature — not scrape failures. */
+  const unknowns = rows.filter((r) => r.rowClosed && r.outputMeasured === "UNKNOWN");
+  const scrapeFailed = rows.filter((r) => r.outputMeasured === "SCRAPE_FAILED");
 
   const byConvention: Record<string, string[]> = { A: [], A_prime: [], B: [] };
   const mismatches: string[] = [];
@@ -70,6 +72,7 @@ function main() {
         },
         mismatches,
         unknownTripletStop: unknowns.map((r) => ({ name: r.name, triplet: r.triplet })),
+        scrapeFailedNotStop: scrapeFailed.map((r) => ({ name: r.name, triplet: r.triplet })),
         criteria: {
           minPerConvention: MIN_PER_CONVENTION,
           minMismatch: MIN_MISMATCH,

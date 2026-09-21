@@ -95,12 +95,32 @@ export function tripletKey(triplet: LifePathTriplet): string {
   return triplet.join(",");
 }
 
+/** Same output on all three test dates — not a convention (input-independent / scrape artifact). */
+export function isDegenerateTriplet(triplet: LifePathTriplet): boolean {
+  return triplet[0] === triplet[1] && triplet[1] === triplet[2];
+}
+
 export function classifyTriplet(triplet: LifePathTriplet): LifePathConventionId | "UNKNOWN" {
   const key = tripletKey(triplet);
   for (const id of ["A", "A_prime", "B", "C"] as const) {
     if (tripletKey(T18_SIGNATURE_TABLE[id]) === key) return id;
   }
   return "UNKNOWN";
+}
+
+export type MeasuredTripletOutcome =
+  | LifePathConventionId
+  | "UNKNOWN"
+  | "SCRAPE_FAILED"
+  | "INCOMPLETE";
+
+/** Classify only when triplet is a valid live measurement (not scrape failure). */
+export function classifyMeasuredTriplet(
+  triplet: LifePathTriplet | null,
+): MeasuredTripletOutcome {
+  if (!triplet) return "INCOMPLETE";
+  if (isDegenerateTriplet(triplet)) return "SCRAPE_FAILED";
+  return classifyTriplet(triplet);
 }
 
 export function proseDeclaresConvention(prose: "A" | "B" | "other" | "undeclared"): string {

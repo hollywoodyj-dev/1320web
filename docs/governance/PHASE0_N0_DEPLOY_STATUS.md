@@ -40,9 +40,11 @@ Pushed `master` → Vercel Production **Ready** (~1m build).
 
 ## T0 · Pinterest distribution
 
-**Status:** **OPEN** (Haze, 2026-09-17) — N0 preconditions met (T17 200, sitemap 20, C-3 observed, N0.4 PASS).
+**Approved:** 2026-09-17 — N0 preconditions met (T17 200, sitemap 20, C-3 observed, N0.4 PASS).
 
-D-11 production eyewitness does **not** block T0.
+**Clock start:** **first pin publish date** (not 9/17) — see `T0_PINTEREST_DISTRIBUTION_BASELINE.md` · `lib/funnel/pinterest-t0-clock-baseline.ts`.
+
+D-11 **CLOSED** (2026-09-21).
 
 ---
 

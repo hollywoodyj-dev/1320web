@@ -40,8 +40,8 @@ How much does the output change when declared Life Path calculation conventions 
 - **Closure (conditional):** ≥ 2 evidenced instances each of measured A, A′, B; ≥ 2 named mismatches; ~8 closed rows minimum. Close when satisfied — do not pad. (Proportion / prevalence claims excluded from scope.)
 - Per calculator: three test dates → record outputs → classify triplet → compare to `proseDeclared`.
 - **Per row evidence required:** result-node HTML snippet and/or screenshot path (see `qa-artifacts/t18-calculator-survey/`).
-- **Stop rule:** If measured triplet matches none of the four signatures → halt and report; do not extend the model.
-- **Scrape integrity:** A triplet that matches a known signature is **not** auto-trusted — evidence must show the result came from the live calculator for that date, not a static worked example on the page.
+- **Stop rule:** If an **evidenced** measured triplet matches none of the four signatures → halt and report. Scrape failures (degenerate triplet, no result node) are not UNKNOWN — do not stop.
+- **Scrape integrity:** Rows do not **CLOSE** without per-date result-node evidence. Known-signature triplets from static page copy are rejected (e.g. AgentCalc `11,11,11` → `SCRAPE_FAILED`).
 
 ### Full-range computation (A vs B)
 

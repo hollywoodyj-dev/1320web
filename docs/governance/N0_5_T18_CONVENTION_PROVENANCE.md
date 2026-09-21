@@ -1,13 +1,11 @@
 # N0.5 · T18 Convention Provenance
 
-**Date:** 2026-09-16 (rev. 2026-09-17d — conditional closure)  
+**Date:** 2026-09-16 (rev. 2026-09-21 — scrape vs UNKNOWN, conditional closure)  
 **Owner:** Nova  
 **Status:** IN PROGRESS — live calculator survey (T18 data)  
 **Blocks:** **T18 body text only** (survey table must close before publish)
 
-**Parallel (Holly, not Nova):** D-11 production eyewitness — browser flow, first week of T0.
-
-**Does not block:** N0.2 · N0.3 · N0.4 · T17 semantic scan · T17 page build
+**Does not block:** N0.2 · N0.3 · N0.4 · T17 · D-11 (**CLOSED** 2026-09-21)
 
 ---
 
@@ -26,6 +24,8 @@ If measured triplet ≠ any row above → STOP and report. Do not extend model.
 ```
 
 **Why triplet-only:** 1985-04-11 alone cannot separate A′ from B (both → 11). 1985-06-11 alone cannot separate A′, B, or C (all → 4).
+
+**Why three dates differ:** Any real convention produces **different** outputs across these dates. Identical values on all three (e.g. `11,11,11`) mean output is not date-driven → **scrape failure**, not UNKNOWN.
 
 ---
 
@@ -54,7 +54,18 @@ Live survey, four-way signatures, and per-row evidence are **not** item 3. They 
 **Method:** Puppeteer live form submission + triplet classification  
 **Artifact:** `qa-artifacts/t18-calculator-survey-partial.json`
 
-Survey table columns: `proseDeclared` · `outputMeasured` · `proseOutputMismatch` · per-date evidence (HTML + screenshot). `rowClosed` only with full triplet + evidence.
+Survey table columns: `proseDeclared` · `outputMeasured` · `proseOutputMismatch` · per-date evidence (HTML + screenshot). `rowClosed` only with full triplet + **result-node evidence on every date**.
+
+### Measurement vs scrape (Haze, 2026-09-21)
+
+| Outcome | Meaning | Stop? |
+|---------|---------|-------|
+| **A / A′ / B / C** | Evidenced live triplet matches signature | No |
+| **SCRAPE_FAILED** | Degenerate triplet, missing result node, or static-copy regex hit (e.g. AgentCalc `11,11,11`) | **No** — retry or drop row; not in classification |
+| **INCOMPLETE** | Could not run all three dates | No |
+| **UNKNOWN** | Evidenced triplet matches **none** of four signatures | **Yes** — report to Haze |
+
+**AgentCalc:** scrape failure (static `11` regex), **not** UNKNOWN — does not trigger stop.
 
 ### Closure criteria (conditional — do not pad)
 

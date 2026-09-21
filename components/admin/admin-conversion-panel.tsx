@@ -28,6 +28,7 @@ type ConversionTrackingData = {
   };
   catalog: CatalogEntry[];
   paidLpBreakdown: { lp: string; count: number }[];
+  utmContentBreakdown?: { utmContent: string; count: number }[];
   pageViewBreakdown: { path: string; count: number }[];
   pageViewBreakdownExcludeOperator: { path: string; count: number }[];
   pageViewScope: {
@@ -67,6 +68,9 @@ type ConversionTrackingData = {
     source: string | null;
     medium: string | null;
     campaign: string | null;
+    content: string | null;
+    landingPath: string | null;
+    gclid: string | null;
     entry: string | null;
     lp: string | null;
     adGroup: string | null;
@@ -331,6 +335,13 @@ export function AdminConversionPanel() {
                 <div style={styles.cardSub}>paid LP events</div>
               </div>
             ))}
+            {(data.utmContentBreakdown ?? []).slice(0, 6).map((row) => (
+              <div key={row.utmContent} style={styles.card}>
+                <div style={styles.cardLabel}>{row.utmContent}</div>
+                <div style={styles.cardValue}>{row.count}</div>
+                <div style={styles.cardSub}>events w/ utm_content</div>
+              </div>
+            ))}
           </div>
 
           <div style={styles.tableWrap}>
@@ -373,6 +384,9 @@ export function AdminConversionPanel() {
                   <th style={styles.th}>Source</th>
                   <th style={styles.th}>Medium</th>
                   <th style={styles.th}>Campaign</th>
+                  <th style={styles.th}>Content</th>
+                  <th style={styles.th}>Landing path</th>
+                  <th style={styles.th}>gclid</th>
                   <th style={styles.th}>LP / ad group</th>
                   <th style={styles.th}>Path</th>
                 </tr>
@@ -380,7 +394,7 @@ export function AdminConversionPanel() {
               <tbody>
                 {data.recentEvents.length === 0 ? (
                   <tr>
-                    <td style={styles.td} colSpan={8}>
+                    <td style={styles.td} colSpan={11}>
                       No events in window yet.
                     </td>
                   </tr>
@@ -395,6 +409,9 @@ export function AdminConversionPanel() {
                       <td style={styles.td}>{ev.source ?? "—"}</td>
                       <td style={styles.td}>{ev.medium ?? "—"}</td>
                       <td style={styles.td}>{ev.campaign ?? "—"}</td>
+                      <td style={styles.td}>{ev.content ?? "—"}</td>
+                      <td style={styles.td}>{ev.landingPath ?? "—"}</td>
+                      <td style={styles.td}>{ev.gclid ? "yes" : "—"}</td>
                       <td style={styles.td}>
                         {[ev.lp, ev.adGroup].filter(Boolean).join(" · ") || "—"}
                       </td>

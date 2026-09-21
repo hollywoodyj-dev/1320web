@@ -15,6 +15,7 @@ export type AnalyticsEventName =
   | "generate_code_started"
   | "generate_code_completed"
   | "sample_report_view"
+  | "guide_cta_click"
   | "full_report_cta_click"
   | "checkout_started"
   | "payment_button_clicked"

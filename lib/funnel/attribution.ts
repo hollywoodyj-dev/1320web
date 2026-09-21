@@ -18,6 +18,8 @@ export type FunnelAttribution = {
   utm_campaign?: string;
   utm_content?: string;
   utm_term?: string;
+  /** Google Ads click id — first-touch, same persistence as utm_* (Phase 1A). */
+  gclid?: string;
   ref?: string;
   language?: string;
   capturedAt?: string;
@@ -34,6 +36,7 @@ const ATTR_KEYS = [
   "utm_campaign",
   "utm_content",
   "utm_term",
+  "gclid",
   "ref",
   "language",
 ] as const;
@@ -55,6 +58,7 @@ const CAMPAIGN_KEYS = [
   "utm_campaign",
   "utm_content",
   "utm_term",
+  "gclid",
   "ref",
 ] as const;
 
@@ -187,5 +191,6 @@ export function attributionToCheckoutMetadata(
     if (value) meta[key] = value.slice(0, 200);
   }
   if (attr.landingPath) meta.landingPath = attr.landingPath.slice(0, 200);
+  if (attr.gclid) meta.gclid = attr.gclid.slice(0, 200);
   return meta;
 }

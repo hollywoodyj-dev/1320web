@@ -18,6 +18,8 @@ import {
   PINTEREST_BASELINE_SIGNUP,
 } from "@/lib/funnel/pinterest-start-baseline";
 import { NEWSLETTER_SIGNUP_ENTRY } from "@/lib/funnel/signup-entry-split";
+import { readMetadataAttributionField } from "@/lib/funnel/campaign-attribution-metadata";
+import { QA_EXCLUSION_SQL } from "@/lib/funnel/qa-traffic-exclusion";
 import {
   CONVERSION_EVENT_CATALOG,
   getGa4MeasurementId,
@@ -31,6 +33,7 @@ const WINDOW_DAYS = 30;
 type CountRow = { event_name: string; count: string | number };
 type LpRow = { lp: string; count: string | number };
 type PathRow = { path: string; count: string | number };
+type ContentRow = { utm_content: string; count: string | number };
 type RecentRow = {
   id: string;
   event_name: string;
@@ -83,6 +86,7 @@ export async function GET() {
         pageViewAll,
         pageViewNonOperator,
         pageViewExcludeRows,
+        contentBreakdown,
       ] = await Promise.all([
         db<CountRow[]>`
           SELECT event_name, COUNT(*)::int AS count
@@ -94,12 +98,7 @@ export async function GET() {
           SELECT event_name, COUNT(*)::int AS count
           FROM marketing_conversion_events
           WHERE created_at >= ${since}
-            AND NOT (
-              COALESCE(metadata->>'purchase_context', '') = 'internal_qa'
-              OR COALESCE(metadata->>'utm_campaign', metadata->>'campaign', '') LIKE 'haze_%'
-              OR COALESCE(metadata->>'utm_campaign', metadata->>'campaign', '') = 'closure_2026-08-23'
-              OR LOWER(COALESCE(metadata->>'utm_source', source, '')) IN ('operator', 'haze_t6b')
-            )
+            AND NOT (${db.unsafe(QA_EXCLUSION_SQL)})
           GROUP BY event_name
         `,
         db<{ account: number; newsletter: number }[]>`
@@ -125,12 +124,7 @@ export async function GET() {
           FROM marketing_conversion_events
           WHERE created_at >= ${since}
             AND event_name = 'signup_completed'
-            AND NOT (
-              COALESCE(metadata->>'purchase_context', '') = 'internal_qa'
-              OR COALESCE(metadata->>'utm_campaign', metadata->>'campaign', '') LIKE 'haze_%'
-              OR COALESCE(metadata->>'utm_campaign', metadata->>'campaign', '') = 'closure_2026-08-23'
-              OR LOWER(COALESCE(metadata->>'utm_source', source, '')) IN ('operator', 'haze_t6b')
-            )
+            AND NOT (${db.unsafe(QA_EXCLUSION_SQL)})
         `,
         db<RecentRow[]>`
           SELECT
@@ -191,6 +185,25 @@ export async function GET() {
           GROUP BY path
           ORDER BY count DESC
           LIMIT 12
+        `,
+        db<ContentRow[]>`
+          SELECT
+            COALESCE(
+              NULLIF(TRIM(metadata->>'first_touch_content'), ''),
+              NULLIF(TRIM(metadata->>'utm_content'), ''),
+              NULLIF(TRIM(metadata->>'content'), '')
+            ) AS utm_content,
+            COUNT(*)::int AS count
+          FROM marketing_conversion_events
+          WHERE created_at >= ${since}
+            AND COALESCE(
+              NULLIF(TRIM(metadata->>'first_touch_content'), ''),
+              NULLIF(TRIM(metadata->>'utm_content'), ''),
+              NULLIF(TRIM(metadata->>'content'), '')
+            ) IS NOT NULL
+          GROUP BY 1
+          ORDER BY count DESC
+          LIMIT 24
         `,
         db<CountRow[]>`
           SELECT 'page_view' AS event_name, COUNT(*)::int AS count
@@ -287,6 +300,10 @@ export async function GET() {
         })),
         pageViewBreakdown: mapPaths(pageViewAll),
         pageViewBreakdownExcludeOperator: mapPaths(pageViewNonOperator),
+        utmContentBreakdown: contentBreakdown.map((row) => ({
+          utmContent: row.utm_content,
+          count: toCount(row.count),
+        })),
         pageViewScope: {
           includeOperator: pageViewInclude,
           excludeOperator: pageViewExclude,
@@ -322,9 +339,14 @@ export async function GET() {
           eventName: row.event_name,
           userId: row.user_id,
           sessionId: row.session_id,
-          source: row.source,
-          medium: readMetaString(row.metadata, ["utm_medium", "medium"]),
-          campaign: readMetaString(row.metadata, ["utm_campaign", "campaign"]),
+          source:
+            row.source ??
+            readMetadataAttributionField(row.metadata, "first_touch_source"),
+          medium: readMetadataAttributionField(row.metadata, "first_touch_medium"),
+          campaign: readMetadataAttributionField(row.metadata, "first_touch_campaign"),
+          content: readMetadataAttributionField(row.metadata, "first_touch_content"),
+          landingPath: readMetadataAttributionField(row.metadata, "landing_path"),
+          gclid: readMetadataAttributionField(row.metadata, "gclid"),
           entry: readMetaString(row.metadata, ["entry"]),
           lp: row.lp,
           adGroup: row.ad_group,

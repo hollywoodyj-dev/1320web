@@ -3,8 +3,9 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { captureLandingAttribution } from "@/lib/funnel/attribution";
+import { writeCampaignAttributionMetadata } from "@/lib/funnel/campaign-attribution-metadata";
 import { shouldRecordPageView } from "@/lib/funnel/page-view-dedupe";
-import { trackEvent } from "@/lib/soulcode-analytics";
+import { getOrCreateAnalyticsSessionId, trackEvent } from "@/lib/soulcode-analytics";
 
 function pageSlug(pathname: string): string {
   if (pathname === "/") return "homepage";
@@ -43,9 +44,7 @@ export function SoulcodePageView() {
       ...(lp ? { lp } : {}),
       ...(adGroup ? { ad_group: adGroup } : {}),
       ...(utmSource ? { source: utmSource } : {}),
-      ...(stored?.utm_medium ? { medium: stored.utm_medium } : {}),
-      ...(stored?.utm_campaign ? { campaign: stored.utm_campaign } : {}),
-      ...(stored?.landingPath ? { landingPath: stored.landingPath } : {}),
+      ...writeCampaignAttributionMetadata(stored, getOrCreateAnalyticsSessionId()),
     });
 
     if (pathname === "/") {

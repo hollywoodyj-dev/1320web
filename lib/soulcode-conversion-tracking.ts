@@ -83,6 +83,13 @@ export const CONVERSION_EVENT_CATALOG: ConversionEventCatalogEntry[] = [
     description: "Sample report opened.",
   },
   {
+    name: "guide_cta_click",
+    label: "Guide CTA click",
+    tier: "funnel",
+    description:
+      "Guide page CTA toward Free Blueprint (Phase 1A · Google path; maps to campaign_landing → free_start).",
+  },
+  {
     name: "full_report_cta_click",
     label: "Full report CTA",
     tier: "recommended",

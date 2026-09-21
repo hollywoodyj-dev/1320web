@@ -17,6 +17,10 @@ import {
   type FunnelAttribution,
 } from "../lib/funnel/attribution";
 import {
+  readMetadataAttributionField,
+  writeCampaignAttributionMetadata,
+} from "../lib/funnel/campaign-attribution-metadata";
+import {
   PAGE_VIEW_BURST_MS,
   resetPageViewDedupe,
   shouldRecordPageView,
@@ -274,7 +278,41 @@ assert(afterLaterUtm.utm_campaign === "haze_t8", "T8 later UTM must not overwrit
 assert(afterLaterUtm.landingPath === "/free-soul-blueprint", "T8 later landing must not overwrite first landingPath");
 assert(attributionLib.includes("if (hasCampaign)"), "T8 capture must skip save on no-UTM return");
 
+const phase1Attr: FunnelAttribution = {
+  utm_source: "operator",
+  utm_medium: "cpc",
+  utm_campaign: "probe_n10",
+  utm_content: "lp_ad_01",
+  gclid: "probe_n10_fake_click_id",
+  landingPath: "/what-is-my-life-path-number",
+};
+const phase1Meta = writeCampaignAttributionMetadata(phase1Attr, "sess_probe_n10");
+assert(phase1Meta.first_touch_content === "lp_ad_01", "Phase1A write must set first_touch_content");
+assert(phase1Meta.gclid === "probe_n10_fake_click_id", "Phase1A write must set gclid");
+assert(phase1Meta.landing_path === "/what-is-my-life-path-number", "Phase1A write must set landing_path");
+const legacyOnly = { utm_content: "ba01_p01", medium: "organic", landingPath: "/free-soul-blueprint" };
+assert(
+  readMetadataAttributionField(legacyOnly, "first_touch_content") === "ba01_p01",
+  "Phase1A read must fallback utm_content",
+);
+assert(
+  readMetadataAttributionField(legacyOnly, "first_touch_medium") === "organic",
+  "Phase1A read must fallback medium",
+);
+assert(
+  readMetadataAttributionField(legacyOnly, "landing_path") === "/free-soul-blueprint",
+  "Phase1A read must fallback landingPath",
+);
+assert(attributionLib.includes('"gclid"'), "Phase1A attribution must capture gclid");
+assert(
+  !fs.readFileSync(path.join(webRoot, "components/funnel/free-soul-blueprint-birth-form.tsx"), "utf8").includes(
+    'landingPath: "/free-soul-blueprint"',
+  ),
+  "Free Blueprint form must not overwrite first-touch landingPath",
+);
+
 const persistNames = CONVERSION_EVENT_CATALOG.map((entry) => entry.name);
+assert(persistNames.includes("guide_cta_click"), "Phase1A catalog missing guide_cta_click");
 assert(persistNames.includes("generate_code_started"), "T9 persist catalog missing generate_code_started");
 assert(persistNames.includes("generate_code_completed"), "T9 persist catalog missing generate_code_completed");
 assert(persistNames.includes("full_report_cta_click"), "T9 persist catalog missing full_report_cta_click");

@@ -20,11 +20,9 @@ export function FreeSoulBlueprintBirthForm({ idPrefix }: FreeSoulBlueprintBirthF
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const incoming = readAttributionFromSearchParams(params);
-    saveFunnelAttribution({
-      ...incoming,
-      landingPath: "/free-soul-blueprint",
-      capturedAt: new Date().toISOString(),
-    });
+    if (Object.keys(incoming).length > 0) {
+      saveFunnelAttribution(incoming);
+    }
     trackEvent("free_blueprint_landing_view", attributionToAnalyticsProps(incoming));
   }, []);
 

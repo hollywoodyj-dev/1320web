@@ -3,6 +3,7 @@ import {
   isPersonalIntegrationSessionVariant,
   SESSION_CATALOG,
 } from "@/lib/personal-integration/session-variants";
+import { writeCampaignAttributionFromFlatMetadata } from "@/lib/funnel/campaign-attribution-metadata";
 import { withPurchaseContextMetadata } from "@/lib/funnel/checkout-qa-metadata";
 import { attributionFromSessionMetadata } from "@/lib/funnel/stripe-session-attribution";
 import type { ReportPurchaseStatus } from "@/lib/funnel/resolve-report-purchase-status";
@@ -19,6 +20,10 @@ function bookingMetadataFromSession(
     : null;
   const attr = attributionFromSessionMetadata(meta);
 
+  const campaignFields = writeCampaignAttributionFromFlatMetadata(
+    { ...attr.meta, ...meta },
+    session.id,
+  );
   const base: Record<string, string | number | boolean | undefined> = {
     session_type: meta.session_type ?? readingType,
     duration: meta.duration_minutes ?? catalog?.durationMinutes,
@@ -26,12 +31,11 @@ function bookingMetadataFromSession(
     currency: (meta.currency ?? catalog?.currency ?? "USD").toUpperCase(),
     source_page: meta.source_page ?? undefined,
     referrer_into_booking: meta.referrer_into_booking ?? undefined,
-    first_touch_source: attr.source,
-    first_touch_campaign: attr.campaign,
     report_purchase_status: reportPurchaseStatus,
     product: meta.product,
     stripe_checkout_session_id: session.id,
     ...attr.meta,
+    ...campaignFields,
   };
   const stringMeta: Record<string, string> = {};
   for (const [key, value] of Object.entries(base)) {

@@ -6,6 +6,7 @@ const ATTRIBUTION_KEYS = [
   "utm_campaign",
   "utm_content",
   "utm_term",
+  "gclid",
   "ref",
   "landingPath",
   "source_page",

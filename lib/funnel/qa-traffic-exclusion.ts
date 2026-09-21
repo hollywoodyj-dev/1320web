@@ -16,6 +16,7 @@ export const LEGACY_QA_SOURCES = ["haze_t6b"] as const;
 
 function normalizedCampaign(meta: Record<string, unknown>): string {
   const campaign =
+    (typeof meta.first_touch_campaign === "string" && meta.first_touch_campaign) ||
     (typeof meta.utm_campaign === "string" && meta.utm_campaign) ||
     (typeof meta.campaign === "string" && meta.campaign) ||
     "";
@@ -23,7 +24,10 @@ function normalizedCampaign(meta: Record<string, unknown>): string {
 }
 
 function normalizedUtmSource(meta: Record<string, unknown>, source?: string | null): string {
-  const fromMeta = typeof meta.utm_source === "string" ? meta.utm_source : "";
+  const fromMeta =
+    (typeof meta.first_touch_source === "string" && meta.first_touch_source) ||
+    (typeof meta.utm_source === "string" && meta.utm_source) ||
+    "";
   return (fromMeta || source || "").trim().toLowerCase();
 }
 
@@ -68,7 +72,22 @@ export function resolvePurchaseContext(input: {
 /** SQL fragment for CLEAN reads — must match isQaTaggedConversionEvent(). */
 export const QA_EXCLUSION_SQL = `
   COALESCE(metadata->>'purchase_context', '') = 'internal_qa'
-  OR COALESCE(metadata->>'utm_campaign', metadata->>'campaign', '') LIKE 'haze_%'
-  OR COALESCE(metadata->>'utm_campaign', metadata->>'campaign', '') = 'closure_2026-08-23'
-  OR LOWER(COALESCE(metadata->>'utm_source', source, '')) IN ('operator', 'haze_t6b')
+  OR COALESCE(
+    metadata->>'first_touch_campaign',
+    metadata->>'utm_campaign',
+    metadata->>'campaign',
+    ''
+  ) LIKE 'haze_%'
+  OR COALESCE(
+    metadata->>'first_touch_campaign',
+    metadata->>'utm_campaign',
+    metadata->>'campaign',
+    ''
+  ) = 'closure_2026-08-23'
+  OR LOWER(COALESCE(
+    metadata->>'first_touch_source',
+    metadata->>'utm_source',
+    source,
+    ''
+  )) IN ('operator', 'haze_t6b')
 `.trim();

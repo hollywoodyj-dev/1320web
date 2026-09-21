@@ -27,6 +27,8 @@ import {
   mergeAttribution,
   readAttributionFromSearchParams,
 } from "@/lib/funnel/attribution";
+import { writeCampaignAttributionMetadata } from "@/lib/funnel/campaign-attribution-metadata";
+import { getOrCreateAnalyticsSessionId } from "@/lib/soulcode-analytics";
 
 export function trackFunnelEvent(
   name: AnalyticsEventName,
@@ -37,11 +39,13 @@ export function trackFunnelEvent(
   const stored = loadFunnelAttribution();
   const fromUrl = readAttributionFromSearchParams(new URLSearchParams(window.location.search));
   const merged = mergeAttribution(stored, fromUrl);
+  const sessionId = getOrCreateAnalyticsSessionId();
+  const campaignFields = writeCampaignAttributionMetadata(merged, sessionId);
   const attr = attributionToAnalyticsProps(merged);
 
   trackSoulcodeEvent(name, {
     ...attr,
-    ...(merged.landingPath ? { landingPath: merged.landingPath } : {}),
+    ...campaignFields,
     path: window.location.pathname,
     ...extra,
   });

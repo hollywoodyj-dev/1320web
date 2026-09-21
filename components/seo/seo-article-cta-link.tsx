@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { trackEvent } from "@/lib/analytics";
 import { appendAttributionToHref } from "@/lib/funnel/attribution";
+import { trackFunnelEvent } from "@/lib/funnel/track-funnel-event";
 import { seoAttributionAnalyticsProps } from "@/lib/seo/attribution";
 import type { SeoArticleCta } from "@/lib/seo/types";
 
@@ -64,7 +65,16 @@ export function SeoArticleCtaLink({
       cta_position: ctaPosition,
     };
     trackEvent("seo_article_cta_click", props);
-    if (cta.intent === "free_blueprint") trackEvent("seo_to_free_blueprint", props);
+    if (cta.intent === "free_blueprint") {
+      trackEvent("seo_to_free_blueprint", props);
+      if (slug === "what-is-my-life-path-number") {
+        trackFunnelEvent("guide_cta_click", {
+          cta_label: cta.label,
+          cta_placement: placement,
+          content_slug: slug,
+        });
+      }
+    }
     if (cta.intent === "full_report") trackEvent("seo_to_full_report", props);
     if (cta.intent === "sample_report") trackEvent("seo_to_sample_report", props);
     if (cta.intent === "soul_blueprint_definition") {

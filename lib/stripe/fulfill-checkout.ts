@@ -3,6 +3,7 @@ import { completePurchaseBySessionId } from "@/lib/db/purchases";
 import { getUserById } from "@/lib/db/users";
 import { sendPurchaseAccessEmail } from "@/lib/email/send-purchase-access-email";
 import { getSiteUrl } from "@/lib/platform-config";
+import { writeCampaignAttributionFromFlatMetadata } from "@/lib/funnel/campaign-attribution-metadata";
 import { withPurchaseContextMetadata } from "@/lib/funnel/checkout-qa-metadata";
 import { attributionFromSessionMetadata } from "@/lib/funnel/stripe-session-attribution";
 import { recordConversionEvent } from "@/lib/record-conversion-event";
@@ -42,14 +43,18 @@ export async function fulfillCheckoutSession(session: Stripe.Checkout.Session): 
   const attr = attributionFromSessionMetadata(session.metadata);
   const amountTotal = session.amount_total ?? null;
   const currency = session.currency?.toUpperCase() ?? "USD";
+  const campaignFields = writeCampaignAttributionFromFlatMetadata(
+    { ...attr.meta, ...(session.metadata ?? {}) },
+    sessionId,
+  );
   const eventMeta = withPurchaseContextMetadata({
     product: session.metadata?.product ?? "full_report",
     ...(amountTotal != null ? { amount: String(amountTotal / 100) } : {}),
     ...(amountTotal != null ? { amount_cents: String(amountTotal) } : {}),
     currency,
-    ...(attr.campaign ? { campaign: attr.campaign } : {}),
     stripe_checkout_session_id: sessionId,
     ...attr.meta,
+    ...campaignFields,
   });
   await recordConversionEvent({
     eventName: "purchase_completed",

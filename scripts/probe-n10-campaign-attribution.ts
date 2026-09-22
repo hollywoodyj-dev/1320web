@@ -3,12 +3,12 @@
  * /what-is-my-life-path-number?utm_source=operator&utm_medium=cpc&utm_campaign=probe_n10&utm_content=lp_ad_01&gclid=probe_n10_fake_click_id
  * → Guide CTA → Free Blueprint → submit birth date (generate_code_started).
  *
- * Run: npx tsx scripts/probe-n10-campaign-attribution.ts [session_id_prefix]
+ * Run: npx tsx --env-file=.env.local scripts/probe-n10-campaign-attribution.ts [session_id]
  */
 import { getSql, withDb } from "../lib/db/client";
 import { readMetadataAttributionField } from "../lib/funnel/campaign-attribution-metadata";
 
-const SESSION_PREFIX = process.argv[2]?.trim() ?? "";
+const SESSION_FILTER = process.argv[2]?.trim() ?? "";
 
 function fieldOk(
   meta: Record<string, unknown> | null,
@@ -21,8 +21,9 @@ function fieldOk(
   return true;
 }
 
-await withDb(async () => {
-  const db = getSql();
+async function main() {
+  await withDb(async () => {
+    const db = getSql();
   const since = new Date(Date.now() - 2 * 60 * 60 * 1000);
 
   let rows = await db<
@@ -45,8 +46,12 @@ await withDb(async () => {
     ORDER BY created_at ASC
   `;
 
-  if (SESSION_PREFIX) {
-    rows = rows.filter((r) => r.session_id?.startsWith(SESSION_PREFIX));
+  if (SESSION_FILTER) {
+    rows = rows.filter(
+      (r) =>
+        r.session_id === SESSION_FILTER ||
+        r.session_id?.startsWith(SESSION_FILTER),
+    );
   }
 
   if (!rows.length) {
@@ -112,4 +117,10 @@ await withDb(async () => {
   }
 
   process.exit(pass ? 0 : 1);
+  });
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
 });

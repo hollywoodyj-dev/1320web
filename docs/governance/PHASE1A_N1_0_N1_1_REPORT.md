@@ -1,7 +1,7 @@
 # Phase 1A · N1.0 + N1.1 回报（玄微工作单 · 2026-09-22）
 
 **Owner:** Nova  
-**Status:** N1.0 + N1.2 **实现中**（七字段写入 + gclid + 读取 fallback）；N1.3 `guide_cta_click` 已入 catalog  
+**Status:** N1.0 + N1.2 + N1.3 **生产目击 PASS**（`cf7e165` · 2026-09-22）；**Pinterest 首 pin 仍等 N1.5**  
 **Rule:** 玄微漏斗名与七字段定义不得改动；实现须对齐规格，不重命名已有 baseline 事件。
 
 ### 玄微 2026-09-22 修正（已纳入实现）
@@ -20,8 +20,8 @@
 
 | 轨道 | 能否按当前实现开窗 | 条件 |
 |------|-------------------|------|
-| **Pinterest** | ⏸ 建议等 **N1.0 七字段闭合** + **N1.5 命名表冻结** | T0 **时钟**仍为 first pin 发布日（`T0_PINTEREST_DISTRIBUTION_BASELINE.md`），与 infra 批准日无关 |
-| **Google Search** | ❌ **不可** | Conditional GO 六项；#2 utm_content 真实落库 **未闭合**；#3 含 `guide_cta_click` + `gclid` **未实现** |
+| **Pinterest** | ⏸ **N1.0 已闭合**；开窗仍要 **N1.5 命名表冻结** + 你定 **首 pin 日** | T0 **时钟** = first pin 发布日 |
+| **Google Search** | ⏸ Conditional GO — #2/#3 **字段与 guide_cta_click 已目击**；仍缺 T24、政策审查、预算上限、N1.4 等 |
 
 **最早可开窗（Pinterest）：** N1.0 补齐 + 一次带 `utm_content` 的生产目击 + N1.5 冻结后。  
 **Google Search：** 在 N1.0–N1.3 + Holly T24 + 政策审查 + 预算上限 全部就绪前 **不启动**。
@@ -107,15 +107,31 @@
 
 | 前置 | N1.0 / N1.1 结论 |
 |------|------------------|
-| #2 utm_content 真实保存 | **未闭合**（存储有，事件/Admin 口径未闭合） |
-| #3 schema 锁定 | **未闭合**（缺 `guide_cta_click`, `gclid`, 七字段统一） |
+| #2 utm_content 真实保存 | **PASS**（probe_n10 生产 DB） |
+| #3 schema 锁定 | **PASS**（七字段 + `guide_cta_click` + `gclid` 同 session 目击） |
 
 ---
 
-## 建议下一步（与工作单顺序一致）
+## 生产目击 · probe_n10（2026-09-22）
 
-1. 实现 N1.0 七字段统一 + Admin content 读数 → 生产目击  
-2. N1.3 `guide_cta_click` + Guide → Free 跨页目击  
-3. N1.2 `gclid`  
-4. N1.4 / N1.5 并行  
-5. N0.5 闭表（不阻塞 1–3 设计）
+| 项 | 值 |
+|----|-----|
+| **Production deploy** | `cf7e165` Ready（`ddc8762` Vercel TS 失败已修） |
+| **Browser** | Lumen · incognito · 2026-09-22 00:27:52 UTC |
+| **session_id** | `dd844d77-21e8-4777-8a94-3b9e2567c0cd` |
+| **DB probe** | `npx tsx --env-file=.env.local scripts/probe-n10-campaign-attribution.ts dd844d77-…` → **exit 0** |
+
+**Verified on persisted rows (10 events, one session):**
+
+- `page_view`, `guide_cta_click`, `generate_code_started`, `generate_code_completed`
+- All rows: `first_touch_content=lp_ad_01`, `first_touch_medium=cpc`, `gclid` present, `landing_path=/what-is-my-life-path-number` (including after Free Blueprint navigation)
+- Free Blueprint URL retained UTM + gclid (+ `language=en`)
+
+---
+
+## 建议下一步
+
+1. **N1.5** — utm_content 命名表冻结（Pinterest + Google 初稿）  
+2. **N1.4** — Booking 纳入 campaign 读数 + 显式 0  
+3. **N0.5** — 闭表（并行）  
+4. **Google Search** — T24 + 政策审查 + 预算上限（六项剩余项）

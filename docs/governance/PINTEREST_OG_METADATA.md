@@ -12,9 +12,17 @@
 | 3 | `p:domain_verify` | `app/layout.tsx` · `other["p:domain_verify"]` |
 | 4 | JSON-LD on Free Blueprint | **Out of scope** this round |
 
-## Art placeholder
+## OG artwork
 
-Three new WebPs are **interim copies** of `what-is-a-soul-blueprint-1320.webp` until Holly ships page-specific 1200×630 assets at the paths above (same filenames — drop-in replace).
+Final Holly assets (1024×576 PNG → cover crop **1200×630 WebP** via `scripts/convert-og-assets-to-webp.ts`):
+
+| File | Local bytes (2026-09-22) |
+|------|--------------------------|
+| `home-1320.webp` | 33 106 |
+| `free-soul-blueprint-1320.webp` | 29 492 |
+| `is-numerology-scientifically-proven-1320.webp` | 53 520 |
+
+Alt text in `lib/seo/site-open-graph.ts` matches on-image labels (four foundations / date→bars / five layers).
 
 ## Verify (production)
 

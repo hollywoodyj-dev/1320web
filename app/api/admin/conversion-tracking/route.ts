@@ -186,25 +186,6 @@ export async function GET() {
           ORDER BY count DESC
           LIMIT 12
         `,
-        db<ContentRow[]>`
-          SELECT
-            COALESCE(
-              NULLIF(TRIM(metadata->>'first_touch_content'), ''),
-              NULLIF(TRIM(metadata->>'utm_content'), ''),
-              NULLIF(TRIM(metadata->>'content'), '')
-            ) AS utm_content,
-            COUNT(*)::int AS count
-          FROM marketing_conversion_events
-          WHERE created_at >= ${since}
-            AND COALESCE(
-              NULLIF(TRIM(metadata->>'first_touch_content'), ''),
-              NULLIF(TRIM(metadata->>'utm_content'), ''),
-              NULLIF(TRIM(metadata->>'content'), '')
-            ) IS NOT NULL
-          GROUP BY 1
-          ORDER BY count DESC
-          LIMIT 24
-        `,
         db<CountRow[]>`
           SELECT 'page_view' AS event_name, COUNT(*)::int AS count
           FROM marketing_conversion_events
@@ -230,6 +211,25 @@ export async function GET() {
                 )
               )
             )
+        `,
+        db<ContentRow[]>`
+          SELECT
+            COALESCE(
+              NULLIF(TRIM(metadata->>'first_touch_content'), ''),
+              NULLIF(TRIM(metadata->>'utm_content'), ''),
+              NULLIF(TRIM(metadata->>'content'), '')
+            ) AS utm_content,
+            COUNT(*)::int AS count
+          FROM marketing_conversion_events
+          WHERE created_at >= ${since}
+            AND COALESCE(
+              NULLIF(TRIM(metadata->>'first_touch_content'), ''),
+              NULLIF(TRIM(metadata->>'utm_content'), ''),
+              NULLIF(TRIM(metadata->>'content'), '')
+            ) IS NOT NULL
+          GROUP BY 1
+          ORDER BY count DESC
+          LIMIT 24
         `,
       ]);
 

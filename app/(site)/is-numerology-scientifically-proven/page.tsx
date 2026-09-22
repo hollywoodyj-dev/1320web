@@ -3,6 +3,7 @@ import { IsNumerologyScientificallyProvenPage } from "@/components/seo/pages/is-
 import { IS_NUMEROLOGY_SCIENTIFICALLY_PROVEN_ARTICLE } from "@/lib/seo/content/is-numerology-scientifically-proven";
 import { seoArticlePath } from "@/lib/seo/articles";
 import { CANONICAL_SITE_URL } from "@/lib/platform-config";
+import { OG_IMAGE_ALTS } from "@/lib/seo/site-open-graph";
 
 const article = IS_NUMEROLOGY_SCIENTIFICALLY_PROVEN_ARTICLE;
 const path = seoArticlePath(article.slug);
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
             url: ogImage,
             width: 1200,
             height: 630,
-            alt: "1320 epistemic governance — evidence-aware symbolic reflection",
+            alt: OG_IMAGE_ALTS.isNumerologyScientificallyProven,
           },
         ]
       : undefined,

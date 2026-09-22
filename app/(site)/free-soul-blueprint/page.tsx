@@ -4,8 +4,10 @@ import Link from "next/link";
 import { FreeSoulBlueprintBirthForm } from "@/components/funnel/free-soul-blueprint-birth-form";
 import { CANONICAL_SITE_URL } from "@/lib/platform-config";
 import {
-  buildOgImageEntries,
+  buildPageOpenGraph,
   buildTwitterLargeImage,
+  OG_IMAGE_ALTS,
+  OG_IMAGE_PATHS,
 } from "@/lib/seo/site-open-graph";
 import {
   FREE_SOUL_BLUEPRINT_COMPARE,
@@ -24,19 +26,18 @@ const freeBlueprintUrl = `${CANONICAL_SITE_URL.replace(/\/$/, "")}/free-soul-blu
 export const metadata: Metadata = {
   title: FREE_SOUL_BLUEPRINT_META.title,
   description: FREE_SOUL_BLUEPRINT_META.description,
-  openGraph: {
+  openGraph: buildPageOpenGraph({
     title: FREE_SOUL_BLUEPRINT_META.title,
     description: FREE_SOUL_BLUEPRINT_META.description,
     type: "article",
     url: freeBlueprintUrl,
-    images: buildOgImageEntries(
-      "/seo/what-is-a-soul-blueprint-1320.webp",
-      "Free Soul Blueprint — four foundation mirrors from your birth date",
-    ),
-  },
+    imagePath: OG_IMAGE_PATHS.freeSoulBlueprint,
+    imageAlt: OG_IMAGE_ALTS.freeSoulBlueprint,
+  }),
   twitter: buildTwitterLargeImage(
     FREE_SOUL_BLUEPRINT_META.title,
     FREE_SOUL_BLUEPRINT_META.description,
+    OG_IMAGE_PATHS.freeSoulBlueprint,
   ),
   alternates: {
     canonical: "/free-soul-blueprint",

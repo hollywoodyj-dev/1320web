@@ -6,8 +6,10 @@ import { HomeTopbar } from "@/components/home-topbar";
 import { SiteFooter } from "@/components/site-footer";
 import { SkipLink } from "@/components/skip-link";
 import {
-  buildOgImageEntries,
+  buildPageOpenGraph,
   buildTwitterLargeImage,
+  OG_IMAGE_ALTS,
+  OG_IMAGE_PATHS,
 } from "@/lib/seo/site-open-graph";
 import { CANONICAL_SITE_URL } from "@/lib/platform-config";
 import {
@@ -31,14 +33,19 @@ export const metadata: Metadata = {
   title: { absolute: HOMEPAGE_META.title },
   description: HOMEPAGE_META.description,
   alternates: { canonical: "/" },
-  openGraph: {
+  openGraph: buildPageOpenGraph({
     title: HOMEPAGE_META.title,
     description: HOMEPAGE_META.description,
     type: "website",
     url: homeUrl,
-    images: buildOgImageEntries(),
-  },
-  twitter: buildTwitterLargeImage(HOMEPAGE_META.title, HOMEPAGE_META.description),
+    imagePath: OG_IMAGE_PATHS.home,
+    imageAlt: OG_IMAGE_ALTS.home,
+  }),
+  twitter: buildTwitterLargeImage(
+    HOMEPAGE_META.title,
+    HOMEPAGE_META.description,
+    OG_IMAGE_PATHS.home,
+  ),
 };
 
 export const dynamic = "force-static";

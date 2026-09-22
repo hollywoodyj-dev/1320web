@@ -49,6 +49,9 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: "1320 Soul Code",
   },
+  other: {
+    "p:domain_verify": "5d466dc5d5fed9d5b4f63c8a8f3b6c45",
+  },
   ...(googleVerification || bingVerification
     ? {
         verification: {

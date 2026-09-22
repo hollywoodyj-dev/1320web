@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { FreeSoulBlueprintBirthForm } from "@/components/funnel/free-soul-blueprint-birth-form";
+import { CANONICAL_SITE_URL } from "@/lib/platform-config";
+import {
+  buildOgImageEntries,
+  buildTwitterLargeImage,
+} from "@/lib/seo/site-open-graph";
 import {
   FREE_SOUL_BLUEPRINT_COMPARE,
   FREE_SOUL_BLUEPRINT_FINAL,
@@ -14,13 +19,25 @@ import {
   FREE_SOUL_BLUEPRINT_WHY,
 } from "@/lib/free-soul-blueprint-content";
 
+const freeBlueprintUrl = `${CANONICAL_SITE_URL.replace(/\/$/, "")}/free-soul-blueprint`;
+
 export const metadata: Metadata = {
   title: FREE_SOUL_BLUEPRINT_META.title,
   description: FREE_SOUL_BLUEPRINT_META.description,
   openGraph: {
     title: FREE_SOUL_BLUEPRINT_META.title,
     description: FREE_SOUL_BLUEPRINT_META.description,
+    type: "article",
+    url: freeBlueprintUrl,
+    images: buildOgImageEntries(
+      "/seo/what-is-a-soul-blueprint-1320.webp",
+      "Free Soul Blueprint — four foundation mirrors from your birth date",
+    ),
   },
+  twitter: buildTwitterLargeImage(
+    FREE_SOUL_BLUEPRINT_META.title,
+    FREE_SOUL_BLUEPRINT_META.description,
+  ),
   alternates: {
     canonical: "/free-soul-blueprint",
   },

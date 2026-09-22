@@ -7,6 +7,9 @@ import { CANONICAL_SITE_URL } from "@/lib/platform-config";
 const article = IS_NUMEROLOGY_SCIENTIFICALLY_PROVEN_ARTICLE;
 const path = seoArticlePath(article.slug);
 const absoluteUrl = `${CANONICAL_SITE_URL.replace(/\/$/, "")}${path}`;
+const ogImage = article.ogImage
+  ? `${CANONICAL_SITE_URL.replace(/\/$/, "")}${article.ogImage}`
+  : undefined;
 
 export const metadata: Metadata = {
   title: {
@@ -15,15 +18,26 @@ export const metadata: Metadata = {
   description: article.description,
   alternates: { canonical: path },
   openGraph: {
-    title: article.headline,
-    description: article.description,
+    title: article.ogTitle ?? article.headline,
+    description: article.ogDescription ?? article.description,
     type: "article",
     url: absoluteUrl,
+    images: ogImage
+      ? [
+          {
+            url: ogImage,
+            width: 1200,
+            height: 630,
+            alt: "1320 epistemic governance — evidence-aware symbolic reflection",
+          },
+        ]
+      : undefined,
   },
   twitter: {
-    card: "summary",
-    title: article.headline,
-    description: article.description,
+    card: "summary_large_image",
+    title: article.ogTitle ?? article.headline,
+    description: article.ogDescription ?? article.description,
+    images: ogImage ? [ogImage] : undefined,
   },
 };
 

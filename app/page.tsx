@@ -6,6 +6,11 @@ import { HomeTopbar } from "@/components/home-topbar";
 import { SiteFooter } from "@/components/site-footer";
 import { SkipLink } from "@/components/skip-link";
 import {
+  buildOgImageEntries,
+  buildTwitterLargeImage,
+} from "@/lib/seo/site-open-graph";
+import { CANONICAL_SITE_URL } from "@/lib/platform-config";
+import {
   HOMEPAGE_BLUEPRINT_INTRO,
   HOMEPAGE_BOUNDARY_INLINE,
   HOMEPAGE_BOUNDARY_LINK,
@@ -20,10 +25,20 @@ import {
   HOMEPAGE_WHAT_IS,
 } from "@/lib/homepage-content";
 
+const homeUrl = `${CANONICAL_SITE_URL.replace(/\/$/, "")}/`;
+
 export const metadata: Metadata = {
   title: { absolute: HOMEPAGE_META.title },
   description: HOMEPAGE_META.description,
   alternates: { canonical: "/" },
+  openGraph: {
+    title: HOMEPAGE_META.title,
+    description: HOMEPAGE_META.description,
+    type: "website",
+    url: homeUrl,
+    images: buildOgImageEntries(),
+  },
+  twitter: buildTwitterLargeImage(HOMEPAGE_META.title, HOMEPAGE_META.description),
 };
 
 export const dynamic = "force-static";

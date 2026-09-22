@@ -35,6 +35,10 @@ export const IS_NUMEROLOGY_SCIENTIFICALLY_PROVEN_ARTICLE: SeoArticle = {
     "Calculation and reflection can coexist. Prediction, diagnosis, and authority over a person cannot be delegated to a symbol system.",
   cluster: "life-path-numerology",
   primaryKeyword: "is numerology scientifically proven",
+  ogImage: "/seo/what-is-a-soul-blueprint-1320.webp",
+  ogTitle: "Is Numerology Scientifically Proven?",
+  ogDescription:
+    "Evidence, symbolism, and limits — a five-layer claim framework for numerology and 1320 Soul Code.",
   primaryKeywords: [
     "is numerology scientifically proven",
     "numerology scientific evidence",

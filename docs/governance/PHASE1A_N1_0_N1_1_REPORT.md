@@ -15,7 +15,7 @@
 | **N1.1** 映射表 | ✅ 锁定（下表） |
 | **N1.5** | ⏸ **不冻结** · 等玄微 BA01 p01–p03 语气/成品 |
 | **OG / domain verify** | ✅ |
-| **`generate_code_completed` 双发** | 🔧 小 PR + 生产目击（本节） |
+| **`generate_code_completed` 双发** | ✅ 小 PR `0b66ed8` + 生产目击（本节） |
 | **T0 28 天时钟** | ⏸ 双发目击 PASS + BA01 对齐后再开 |
 
 ---

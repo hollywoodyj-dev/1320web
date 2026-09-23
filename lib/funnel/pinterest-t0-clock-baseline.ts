@@ -6,7 +6,11 @@
  */
 export const PINTEREST_T0_APPROVED_DATE = "2026-09-17";
 
-/** ISO date (SG) of first live pin — set when Holly publishes batch 1. Until then null. */
+/**
+ * ISO date (SG) when BA01 p01 is live AND first_touch_content=ba01_p01 is observed.
+ * Until then null. See docs/governance/N1_5_UTM_CONTENT_NAMING_TABLE.md
+ */
 export const PINTEREST_T0_CLOCK_START: string | null = null;
 
-export const PINTEREST_T0_CLOCK_START_PENDING = "first_pin_publish_date" as const;
+export const PINTEREST_T0_CLOCK_START_PENDING =
+  "ba01_p01_live_and_first_touch_content_observed" as const;

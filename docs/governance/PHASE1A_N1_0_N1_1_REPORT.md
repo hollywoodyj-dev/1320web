@@ -1,7 +1,7 @@
 # Phase 1A · N1.0 + N1.1 + KPI dedupe（玄微 / Haze · 归档）
 
 **Owner:** Nova  
-**Last updated:** 2026-09-23  
+**Last updated:** 2026-09-23 · N1.5 FROZEN  
 **Rule:** 玄微漏斗名与七字段不得改动；实现名不重命名（baseline 冻结）。
 
 ---
@@ -13,10 +13,10 @@
 | **N1.0** 落库 + probe_n10 | ✅ 接受 |
 | **N1.0** Admin 逐步漏斗（同 `utm_content` × 事件链） | 📋 读数缺口 · **不阻塞首 pin** · 窗口期 SQL/导出 · 需时再开 N1.4 类增强 |
 | **N1.1** 映射表 | ✅ 锁定（下表） |
-| **N1.5** | ⏸ **不冻结** · 等玄微 BA01 p01–p03 语气/成品 |
+| **N1.5** | ✅ **FROZEN** · `docs/governance/N1_5_UTM_CONTENT_NAMING_TABLE.md` · BA01 `ba01_p01`–`p03` |
 | **OG / domain verify** | ✅ |
 | **`generate_code_completed` 双发** | ✅ 小 PR `0b66ed8` + 生产目击（本节） |
-| **T0 28 天时钟** | ⏸ 双发目击 PASS + BA01 对齐后再开 |
+| **T0 28 天时钟** | ⏸ 等 **p01 上线 + Admin 见 `first_touch_content=ba01_p01`** → 写入 `PINTEREST_T0_CLOCK_START` |
 
 ---
 
@@ -71,7 +71,12 @@
 | **Probe** | `npx tsx --env-file=.env.local scripts/probe-generate-code-completed-session.ts <session_id>` |
 | **Pass** | 同 session **≤ 1** 行 `generate_code_completed` |
 
-（目击 session / commit SHA 见下方 **归档行**，deploy 后填写。）
+| **Deploy** | `0b66ed8` |
+| **session_id** | `68692e2d-80f7-4e8e-bb6d-7fe9c362ca38` |
+| **方法** | 生产 `POST /api/marketing/conversion-event` ×2 同 session · `utm_source=pinterest` · `utm_campaign=haze_gcc_dedupe_v1` → 两次 **204** |
+| **DB** | `probe-generate-code-completed-session.ts` → **rows=1** · 2026-09-23T06:38:28Z |
+
+**CLEAN：** 该探针行 **计入 RAW**（非 operator）；**CLEAN 规则未改** — 仍仅 QA 标签排除，不在读数层做 session 折叠。
 
 ---
 
@@ -84,8 +89,22 @@
 
 ---
 
+## N1.5 · BA01（冻结摘要）
+
+| 键 | 值 |
+|----|-----|
+| source / medium / campaign | `pinterest` / `organic` / `beneath_adaptation` |
+| content | `ba01_p01` · `ba01_p02` · `ba01_p03` |
+| 发布序 | Day0 p01 → Day2–3 p02 → Day7 p03 |
+| T0 起算 | p01 上线 **且** 见 `first_touch_content=ba01_p01` |
+
+全表与 URL：`N1_5_UTM_CONTENT_NAMING_TABLE.md` · `lib/funnel/ba01-utm-naming.ts`
+
+---
+
 ## 建议顺序（当前）
 
-1. ~~KPI 双发修复 + 目击~~ → 与 BA01 对齐后 **开 T0**  
-2. **N1.5** 冻结（玄微 BA01 后）  
-3. **N1.4** / **N0.5** 并行  
+1. KPI 双发 ✅ · N1.5 冻结 ✅  
+2. **发 p01** → Admin 确认 `ba01_p01` → **设 `PINTEREST_T0_CLOCK_START`**  
+3. Day2–3 p02 · Day7 p03（不改编码）  
+4. **N1.4** / **N0.5** 并行  

@@ -7,14 +7,14 @@ import {
 /** Once per user (when userId present). */
 const DEDUPE_ONCE_PER_USER = new Set([
   "signup_completed",
-  "generate_code_completed",
   "purchase_completed",
   "subscription_completed",
   "checkout_started",
 ]);
 
-/** Once per Stripe checkout session (transaction), not per user. */
+/** Once per analytics session_id (beacon) or Stripe checkout session. */
 const DEDUPE_ONCE_PER_SESSION = new Set([
+  "generate_code_completed",
   "purchase_completed",
   "booking_started",
   "booking_completed",

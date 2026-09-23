@@ -313,6 +313,21 @@ assert(
 
 const persistNames = CONVERSION_EVENT_CATALOG.map((entry) => entry.name);
 assert(persistNames.includes("guide_cta_click"), "Phase1A catalog missing guide_cta_click");
+const recordConversion = fs.readFileSync(
+  path.join(webRoot, "lib/record-conversion-event.ts"),
+  "utf8",
+);
+assert(
+  recordConversion.includes('"generate_code_completed"') &&
+    recordConversion.includes("DEDUPE_ONCE_PER_SESSION"),
+  "generate_code_completed must dedupe once per session_id",
+);
+assert(
+  fs.readFileSync(path.join(webRoot, "lib/funnel/track-generate-code-completed-once.ts"), "utf8").includes(
+    "trackGenerateCodeCompletedOnce",
+  ),
+  "Client guard for generate_code_completed missing",
+);
 assert(persistNames.includes("generate_code_started"), "T9 persist catalog missing generate_code_started");
 assert(persistNames.includes("generate_code_completed"), "T9 persist catalog missing generate_code_completed");
 assert(persistNames.includes("full_report_cta_click"), "T9 persist catalog missing full_report_cta_click");

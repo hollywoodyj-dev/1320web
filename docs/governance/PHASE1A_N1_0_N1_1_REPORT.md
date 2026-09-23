@@ -16,7 +16,7 @@
 | **N1.5** | ✅ **FROZEN** · `docs/governance/N1_5_UTM_CONTENT_NAMING_TABLE.md` · BA01 `ba01_p01`–`p03` |
 | **OG / domain verify** | ✅ |
 | **`generate_code_completed` 双发** | ✅ 小 PR `0b66ed8` + 生产目击（本节） |
-| **T0 28 天时钟** | ⏸ 等 **p01 上线 + Admin 见 `first_touch_content=ba01_p01`** → 写入 `PINTEREST_T0_CLOCK_START` |
+| **T0 28 天时钟** | ✅ **`PINTEREST_T0_CLOCK_START = 2026-09-23`**（SG）· 见 `ba01_p01` `page_view` |
 
 ---
 
@@ -96,7 +96,7 @@
 | source / medium / campaign | `pinterest` / `organic` / `beneath_adaptation` |
 | content | `ba01_p01` · `ba01_p02` · `ba01_p03` |
 | 发布序 | Day0 p01 → Day2–3 p02 → Day7 p03 |
-| T0 起算 | p01 上线 **且** 见 `first_touch_content=ba01_p01` |
+| T0 起算 | ✅ **2026-09-23**（SG）· p01 上线且见 `first_touch_content=ba01_p01` |
 
 全表与 URL：`N1_5_UTM_CONTENT_NAMING_TABLE.md` · `lib/funnel/ba01-utm-naming.ts`
 
@@ -104,7 +104,6 @@
 
 ## 建议顺序（当前）
 
-1. KPI 双发 ✅ · N1.5 冻结 ✅  
-2. **发 p01** → Admin 确认 `ba01_p01` → **设 `PINTEREST_T0_CLOCK_START`**  
-3. Day2–3 p02 · Day7 p03（不改编码）  
-4. **N1.4** / **N0.5** 并行  
+1. KPI 双发 ✅ · N1.5 冻结 ✅ · **T0 clock = 2026-09-23** ✅  
+2. Day2–3 **p02** · Day7 **p03**（不改编码）  
+3. **N1.4** / **N0.5** 并行  

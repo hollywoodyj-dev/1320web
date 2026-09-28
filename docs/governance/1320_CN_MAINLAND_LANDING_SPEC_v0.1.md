@@ -1,11 +1,18 @@
 # 1320 CN Mainland Landing Spec v0.1
 
-**Status:** Founder LOCK · 2026-09-28  
+**Status:** Founder LOCK · 2026-09-28 · **Addendum A** (Holly proposal · 2026-09-28 · pending Founder accept/reject)  
 **Authority:** Founder (Wisewave)  
 **Governing principle:** 1320 China is **not** an English website translated into Chinese. It is a **Mainland-ready product architecture** with its own public-language layer, data architecture, compliance gates, and distribution model — while preserving the underlying 1320 system.
 
 **Supersedes as governing China doc:** any prior “locale /zh/ only” framing.  
 **Demotes to component:** global Simplified Chinese localization (`/zh/`) is **CN-0A** scaffolding — **not** Mainland Public Launch.
+
+**Important split:**
+
+| Track | Meaning |
+|-------|---------|
+| **Mainland (CN)** | WeChat Mini Program + compliant H5 · Mainland compliance · this Founder LOCK |
+| **Global Chinese (proposed)** | Hong Kong · Taiwan · Southeast Asia Chinese audiences · **same stack as EN today** (Stripe / current AI / Google Ads eligible) · see **§25 Addendum A** |
 
 ---
 
@@ -406,19 +413,80 @@ Not: get users to pay as quickly as possible.
 |------|--------|
 | **CN-0A** technical scaffolding under above constraints | **AUTHORIZED** |
 | Mainland Public Launch | Behind **Mainland Readiness Gate** |
-| Paid Chinese products | **HOLD** (CN-2) |
-| Generative AI to users | Separate architecture + compliance review |
-| Cross-border personal data | Separate **China Data Export Review** |
+| Paid Chinese products (Mainland) | **HOLD** (CN-2) |
+| Generative AI to users (Mainland) | Separate architecture + compliance review |
+| Cross-border personal data (Mainland) | Separate **China Data Export Review** |
 | Mainland growth campaigns | Behind CN-3 / readiness |
+| **Global Chinese (HK / TW / SEA)** — Addendum A | **PROPOSAL** — pending Founder; not Mainland launch |
+
+---
+
+## 25 · Addendum A — Global Chinese markets first (Holly proposal · pending Founder)
+
+**Status:** Recommendation from Holly / Nova coordination — **not** Founder LOCK until accepted.
+
+### Intent
+
+Before (or in parallel with) heavy Mainland infrastructure (ICP · Mini Program category · Mainland-isolated data · WeChat-first), prioritize Chinese-language demand in markets that can run on the **current global product stack**:
+
+| Market | Rationale |
+|--------|-----------|
+| **Hong Kong** | Traditional Chinese audience · global payment / ads stack workable |
+| **Taiwan** | Traditional Chinese audience · same |
+| **Southeast Asia Chinese** | Large Chinese-speaking diaspora · Google / Stripe / current hosting path |
+
+### What stays the same as EN (this proposal)
+
+- **Payment:** same as live EN (e.g. Stripe / current checkout) — no Mainland payment licence gate for this track  
+- **AI / generation:** same operational posture as current EN product (no assumption of Mainland generative-AI filing for this track)  
+- **Distribution:** **Google Ads allowed** on this track (subject to existing EN claim/C-4 governance + Chinese public-language gates for copy)  
+- **Hosting / data:** may remain on **global** stack (not Mainland-isolated by default)
+
+### What still applies from this Spec
+
+Even on the Global Chinese track:
+
+- Brand / category / red lines / boundary language (**§1–10**) still govern public Chinese copy  
+- Existing zh strings remain **candidates** until CN Semantic Review marks GREEN (**§11**)  
+- Product must not look like fortune-telling  
+- Free-first ethos preferred; paid Chinese report still needs content + language review if offered  
+
+### What this track is NOT
+
+| Not this | Reason |
+|----------|--------|
+| Mainland Public Launch (CN-1) | Different compliance & entry architecture (§12–15) |
+| WeChat Mini Program requirement | Optional later; not blocking for HK/TW/SEA web |
+| “Translate EN SEO Life Path keywords into Chinese and run” | Still forbidden as auto-strategy; Ads creative still needs language review |
+
+### Suggested sequencing (if Founder accepts)
+
+```
+1  CN-0A /zh/ scaffolding (already authorized)
+2  Global Chinese soft launch (HK / TW / SEA) — Free + optional EN/CN paid clarity
+   · Google Ads OK under claim governance
+   · Same payment / AI as EN
+3  Mainland Readiness Gate work continues in parallel (entity · ICP · Mini Program)
+4  CN-1 Mainland Free only after Gate PASS
+```
+
+### Founder decision needed
+
+- [ ] **Accept** Addendum A as parallel track  
+- [ ] **Reject** — Mainland-only sequencing  
+- [ ] **Modify** — e.g. TW/HK only first; or no Google Ads until X  
+
+Until marked Accepted, Nova will **not** treat Google Ads Chinese campaigns or Global Chinese paid as authorized beyond CN-0A scaffolding.
 
 ---
 
 ## Related docs
 
 - Prior locale request (Holly → Wisewave): treated as **input**; this file is the **governing Mainland architecture**.  
-- EN Phase 1A Pinterest/Google: **parallel**; do not mix CN URLs into BA01 / Google first-round ads unless Founder explicitly asks.  
+- EN Phase 1A Pinterest/Google: **parallel**; do not mix **Mainland** CN URLs into BA01 / Google first-round ads unless Founder explicitly asks.  
+- **Addendum A:** Global Chinese (HK/TW/SEA) Google Ads = **proposal only** until Founder accept.  
 - Existing `data/1320-v2-locale/zh/` : candidates only until CN Semantic Review marks **GREEN**.
 
 ---
 
-**Document control:** v0.1 · Founder LOCK · 2026-09-28 · Owner: Holly (coordination) · Nova (implementation) · Founder (authority)
+**Document control:** v0.1 · Founder LOCK · 2026-09-28 · **Addendum A** Holly proposal 2026-09-28 · Owner: Holly (coordination) · Nova (implementation) · Founder (authority)

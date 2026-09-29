@@ -40,12 +40,18 @@ export async function fulfillCheckoutSession(session: Stripe.Checkout.Session): 
 
   // Track B close: fire only after verified payment + entitlement (webhook path).
   // First-touch UTMs arrive via Stripe session metadata (captured at checkout from client attribution).
+  // Gate #3: prefer client analytics_session_id so Admin session_id matches guide page_view.
   const attr = attributionFromSessionMetadata(session.metadata);
+  const analyticsSessionId =
+    session.metadata?.analytics_session_id?.trim() ||
+    session.metadata?.session_id?.trim() ||
+    null;
+  const funnelSessionId = analyticsSessionId || sessionId;
   const amountTotal = session.amount_total ?? null;
   const currency = session.currency?.toUpperCase() ?? "USD";
   const campaignFields = writeCampaignAttributionFromFlatMetadata(
     { ...attr.meta, ...(session.metadata ?? {}) },
-    sessionId,
+    funnelSessionId,
   );
   const eventMeta = withPurchaseContextMetadata({
     product: session.metadata?.product ?? "full_report",
@@ -53,13 +59,14 @@ export async function fulfillCheckoutSession(session: Stripe.Checkout.Session): 
     ...(amountTotal != null ? { amount_cents: String(amountTotal) } : {}),
     currency,
     stripe_checkout_session_id: sessionId,
+    ...(analyticsSessionId ? { analytics_session_id: analyticsSessionId } : {}),
     ...attr.meta,
     ...campaignFields,
   });
   await recordConversionEvent({
     eventName: "purchase_completed",
     userId: user.id,
-    sessionId,
+    sessionId: funnelSessionId,
     source: attr.source ?? null,
     platform: "stripe",
     path: "/checkout",

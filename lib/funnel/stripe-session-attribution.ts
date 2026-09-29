@@ -10,6 +10,7 @@ const ATTRIBUTION_KEYS = [
   "ref",
   "landingPath",
   "source_page",
+  "analytics_session_id",
 ] as const;
 
 export function attributionFromSessionMetadata(

@@ -10,6 +10,7 @@ import {
   loadFunnelAttribution,
 } from "@/lib/funnel/attribution";
 import { trackFunnelEvent } from "@/lib/funnel/track-funnel-event";
+import { getOrCreateAnalyticsSessionId } from "@/lib/soulcode-analytics";
 
 type UnlockCheckoutFormProps = {
   defaultYear?: number;
@@ -75,7 +76,11 @@ export function UnlockCheckoutForm({
           month,
           day,
           marketingOptIn,
-          attribution: attributionToCheckoutMetadata(loadFunnelAttribution()),
+          attribution: {
+            ...attributionToCheckoutMetadata(loadFunnelAttribution()),
+            // Gate #3: keep analytics session_id through Stripe → purchase_completed
+            analytics_session_id: getOrCreateAnalyticsSessionId(),
+          },
         }),
       });
 

@@ -1,109 +1,111 @@
-# Phase 1A · N1.0 + N1.1 + KPI dedupe（玄微 / Haze · 归档）
+# Phase 1A · N1.0–N1.4 + Gate #5 organic baseline（Holly closeout）
 
 **Owner:** Nova  
-**Last updated:** 2026-09-23 · N1.5 FROZEN  
+**Last updated:** 2026-09-29 · Gate #3 purchase half **OPEN**  
+**Constraints:** D-4 frozen · approved spend **AUD $0** · **do not launch Google Ads** · T24 / Gate #1 closed · Gate #6 not a build task · no event renames · no new landing page.
+
 **Rule:** 玄微漏斗名与七字段不得改动；实现名不重命名（baseline 冻结）。
 
 ---
 
-## Haze 裁决摘要（2026-09-23）
+## Gate #3 status (Haze · 2026-09-29)
 
-| 项 | 状态 |
-|----|------|
-| **N1.0** 落库 + probe_n10 | ✅ 接受 |
-| **N1.0** Admin 逐步漏斗（同 `utm_content` × 事件链） | 📋 读数缺口 · **不阻塞首 pin** · 窗口期 SQL/导出 · 需时再开 N1.4 类增强 |
-| **N1.1** 映射表 | ✅ 锁定（下表） |
-| **N1.5** | ✅ **FROZEN** · `docs/governance/N1_5_UTM_CONTENT_NAMING_TABLE.md` · BA01 `ba01_p01`–`p03` |
-| **OG / domain verify** | ✅ |
-| **`generate_code_completed` 双发** | ✅ 小 PR `0b66ed8` + 生产目击（本节） |
-| **T0 28 天时钟** | ✅ **`PINTEREST_T0_CLOCK_START = 2026-09-23`**（SG）· 见 `ba01_p01` `page_view` |
+| Half | Status |
+|------|--------|
+| Landing / first-touch (guide → free start) | **Proven** · session `dd844d77-21e8-4777-8a94-3b9e2567c0cd` · probe only · **`lp_ad_01` is not a live campaign name** |
+| Purchase / Stripe hop | **OPEN** · 0 `purchase_completed` / `booking_completed` rows with `gclid` |
+| Close condition | One browser · URL below · real checkout pay · Admin `purchase_completed` shows `gclid=probe_gate3_01` |
 
----
+**Witness URL (do not use `lp_ad_01`):**  
+`https://www.1320soulcode.com/what-is-my-life-path-number?utm_source=google&utm_medium=cpc&utm_campaign=life_path_au&utm_content=gate3_probe&gclid=probe_gate3_01`
 
-## N1.0 · `first_touch_content` / Admin
+**Probe after pay:** `npx tsx --env-file=.env.local scripts/probe-gate3-purchase.ts`  
+**Pass:** purchase row has `probe_gate3_01`. **Fail:** purchase exists but `gclid` / `first_touch_content` empty.  
+`booking_completed` may stay **0**.
 
-- **落库：** `writeCampaignAttributionMetadata` · 七字段 + legacy fallback · `gclid` 合并 N1.2。
-- **生产目击：** probe_n10 · session `dd844d77-21e8-4777-8a94-3b9e2567c0cd` · `first_touch_content=lp_ad_01` 全链 · probe exit 0。
-- **Admin：** Recent **Content** 列 + **`utmContentBreakdown`**（30d 按 content 聚合**行计数**）。**无** 同 content 逐步漏斗 UI。
+Prior QA purchases without this `gclid` **do not** close Gate #3.
 
 ---
 
-## N1.1 · 事件映射（锁定）
+## Implemented / not implemented
 
-| 玄微 funnel | 实现事件名 | 接线 | 生产目击 |
-|-------------|-----------|------|----------|
-| `campaign_landing` | `page_view` + attribution | ✅ | ✅ |
-| `guide_cta_click` | `guide_cta_click` | ✅ | ✅ probe_n10 |
-| `free_start` | `generate_code_started` | ✅ | ✅ |
-| `free_complete` | `generate_code_completed` | ✅ | ✅ |
-| `sample_view` | `sample_report_view` | ✅ | ✅ |
-| `checkout_start` | `checkout_started` | ✅ | ✅ |
-| `purchase_completed` | `purchase_completed` | ✅ | ✅ |
-| `booking_page_view` | `booking_page_view` | ✅ | ✅ |
-| `booking_completed` | `booking_completed` | ✅ | ✅ |
-
-报表用**左列**；查库/Admin 用**右列**。
+| ID | Status | Notes |
+|----|--------|-------|
+| **N1.0** | **implemented** | Seven fields written at landing; first-touch held; Stripe metadata path; Admin Content / medium / landing / gclid columns. |
+| **N1.1** | **implemented** | Mapping table only (below). No renames. |
+| **N1.3** | **implemented** | `guide_cta_click` on `/what-is-my-life-path-number` Free Blueprint CTA only. |
+| **N1.2 / Gate #3** | **landing proven · purchase OPEN** | Writer exists ≠ gate closed. Need `probe_gate3_01` on a real `purchase_completed` row. |
+| **N1.4** | **implemented** | `booking_page_view` + `booking_completed` in Admin catalog readout; zero stays zero. |
 
 ---
 
-## Primary KPI · `generate_code_completed` 双发修复
+## N1.1 · Mapping table
 
-### 原因
-
-`ReportDashboard` 在 `result_view` 时 `useEffect` 可重复触发；DB 原先仅 **logged-in userId** 去重，匿名 **无 session 去重** → 同 `session_id` 可多行。
-
-### 修复（小 PR）
-
-1. **Server:** `generate_code_completed` → `DEDUPE_ONCE_PER_SESSION`（`session_id`）；移出 `DEDUPE_ONCE_PER_USER`。
-2. **Client:** `trackGenerateCodeCompletedOnce()` · sessionStorage keyed by analytics `session_id`.
-
-### CLEAN 口径（不变）
-
-- **RAW** = 全部行。  
-- **CLEAN** = 排除 QA 标签（`purchase_context=internal_qa` · campaign `haze_*` / legacy · source `operator` / `haze_t6b` · `first_touch_*` fallback）。  
-- **不**做 session 去重以外的额外规则；session 去重发生在 **写入前**（重复 POST 不入库）。
-
-### 生产目击
-
-| 项 | 值 |
-|----|-----|
-| **方法** | 生产 API 双 POST 同 `session_id`（`utm_source=pinterest` · 非 operator）+ DB probe |
-| **Probe** | `npx tsx --env-file=.env.local scripts/probe-generate-code-completed-session.ts <session_id>` |
-| **Pass** | 同 session **≤ 1** 行 `generate_code_completed` |
-
-| **Deploy** | `0b66ed8` |
-| **session_id** | `68692e2d-80f7-4e8e-bb6d-7fe9c362ca38` |
-| **方法** | 生产 `POST /api/marketing/conversion-event` ×2 同 session · `utm_source=pinterest` · `utm_campaign=haze_gcc_dedupe_v1` → 两次 **204** |
-| **DB** | `probe-generate-code-completed-session.ts` → **rows=1** · 2026-09-23T06:38:28Z |
-
-**CLEAN：** 该探针行 **计入 RAW**（非 operator）；**CLEAN 规则未改** — 仍仅 QA 标签排除，不在读数层做 session 折叠。
+| Founder name | Implemented event | Wired | Production seen |
+|--------------|-------------------|-------|-----------------|
+| `campaign_landing` | `page_view` (+ attribution) | yes | yes (all-time 344) |
+| `guide_cta_click` | `guide_cta_click` | yes | yes (all-time 1) |
+| `free_start` | `generate_code_started` | yes | yes (all-time 22) |
+| `free_complete` | `generate_code_completed` | yes | yes (all-time 28) |
+| `sample_view` | `sample_report_view` | yes | yes (all-time 3) |
+| `checkout_start` | `checkout_started` | yes | yes (all-time 14) |
+| `purchase_completed` | `purchase_completed` | yes | yes (all-time 8) |
+| `booking_page_view` | `booking_page_view` | yes | yes (all-time 12) |
+| `booking_completed` | `booking_completed` | yes | yes (all-time 1) |
 
 ---
 
-## 基线口径（读数勿混）
+## Witnessed session ids
 
-| 指标 | 口径 |
-|------|------|
-| **`purchase_completed` 6** | `PINTEREST_BASELINE_COUNTS` · all-time · `created_at < 2026-08-25T21:30+08` |
-| **N0.4 30d RAW/CLEAN** | 滚动 30d Admin · QA 排除 SQL · 行计数 |
+| Purpose | `session_id` | Evidence |
+|---------|--------------|----------|
+| **N1.0 + N1.2 + N1.3** (probe_n10) | `dd844d77-21e8-4777-8a94-3b9e2567c0cd` | Guide landing with `utm_content=lp_ad_01` · `first_touch_medium=cpc` · `gclid=probe_n10_fake_click_id` · `landing_path=/what-is-my-life-path-number` held through `guide_cta_click` → `generate_code_started` → `generate_code_completed`. Seven fields present on events. |
+| **KPI dedupe** (prior) | `68692e2d-80f7-4e8e-bb6d-7fe9c362ca38` | `generate_code_completed` ≤1 row / session after fix. |
 
----
-
-## N1.5 · BA01（冻结摘要）
-
-| 键 | 值 |
-|----|-----|
-| source / medium / campaign | `pinterest` / `organic` / `beneath_adaptation` |
-| content | `ba01_p01` · `ba01_p02` · `ba01_p03` |
-| 发布序 | Day0 p01 → Day2–3 p02 → Day7 p03 |
-| T0 起算 | ✅ **2026-09-23**（SG）· p01 上线且见 `first_touch_content=ba01_p01` |
-
-全表与 URL：`N1_5_UTM_CONTENT_NAMING_TABLE.md` · `lib/funnel/ba01-utm-naming.ts`
+**N1.2 / Gate #3 purchase with gclid:** **0 rows** · Gate **OPEN** · prior purchases without this probe do not count.
 
 ---
 
-## 建议顺序（当前）
+## N1.4 · Campaign readout (30d · 2026-09-29 probe)
 
-1. KPI 双发 ✅ · N1.5 冻结 ✅ · **T0 clock = 2026-09-23** ✅  
-2. Day2–3 **p02** · Day7 **p03**（不改编码）  
-3. **N1.4** / **N0.5** 并行  
+| Founder | Implemented | 30d count |
+|---------|-------------|----------:|
+| campaign_landing | page_view | 153 |
+| guide_cta_click | guide_cta_click | 1 |
+| free_start | generate_code_started | 13 |
+| free_complete | generate_code_completed | 18 |
+| sample_view | sample_report_view | **0** |
+| checkout_start | checkout_started | 4 |
+| purchase_completed | purchase_completed | 2 |
+| booking_page_view | booking_page_view | 12 |
+| booking_completed | booking_completed | 1 |
+
+---
+
+## Gate #5 · Organic baseline (this path only · before paid click)
+
+**Path:** `/what-is-my-life-path-number` → `guide_cta_click` → Free Blueprint start → completion → checkout → purchase → booking  
+
+**Scope:** `landing_path` (or legacy `landingPath` / `landing_page`) = `/what-is-my-life-path-number` · exclude operator / haze / `probe_n10` · **all-time** · as of **2026-09-29**.
+
+| Founder name | Implemented event | Organic count |
+|--------------|-------------------|--------------:|
+| campaign_landing | page_view | **0** |
+| guide_cta_click | guide_cta_click | **0** |
+| free_start | generate_code_started | **0** |
+| free_complete | generate_code_completed | **0** |
+| sample_view | sample_report_view | **0** |
+| checkout_start | checkout_started | **0** |
+| purchase_completed | purchase_completed | **0** |
+| booking_page_view | booking_page_view | **0** |
+| booking_completed | booking_completed | **0** |
+
+**Note:** Raw `page_view` with `path=/what-is-my-life-path-number` = **2**, both `source=operator` (probe only). Real zeros stay zeros. No paid Google click exists (D-4 = AUD $0).
+
+**Probe script:** `scripts/probe-phase1a-gates-n10-n14.ts`
+
+---
+
+## Prior archive (Haze · 2026-09-23)
+
+N1.5 BA01 FROZEN · T0 clock = 2026-09-23 · KPI session dedupe · OG verify — unchanged. See git history of this file for full Haze acceptance block.

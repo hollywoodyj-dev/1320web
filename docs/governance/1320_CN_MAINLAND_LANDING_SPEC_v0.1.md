@@ -9,7 +9,7 @@
 
 **Relationship to Existing Specs:** Supersedes `1320_CN_LOCALE_SPEC` as the governing China-market document. Locale specification remains a subordinate implementation spec.
 
-**Addendum A (Holly proposal · 2026-09-28 · pending Founder):** Global Chinese track (Hong Kong · Taiwan · SEA) — see **§36**. Not part of Mainland LOCK until Accepted.
+**Addendum A (Founder · 2026-09-29):** **MODIFY — ACCEPT IN PRINCIPLE** as **Global Chinese Track (GZH)**. See **§36**. Mainland LOCK unchanged.
 
 ---
 
@@ -629,9 +629,11 @@ The objective is to translate that depth into a public product that preserves: r
 
 locale scaffolding · `/zh/` · switcher · Chinese UI chrome · deterministic Free journey · result shell · content resolution · completeness checks · semantic-state controls · canonical / hreflang  
 
+**Nova / Holly are authorized to prepare GZH-0** (Global Chinese Architecture Proposal) — see §36 A11 / A13. Organic pilot preparation authorized; **no GZH paid campaign launch yet**.
+
 **Nova is not yet authorized to release:**
 
-Mainland public marketing · Chinese paid Full Report · generative-AI result generation · cross-border China-user data flow · Mainland paid campaigns · unreviewed S0–S9 Chinese copy  
+Mainland public marketing · Chinese paid Full Report · generative-AI result generation · cross-border China-user data flow · Mainland paid campaigns · unreviewed S0–S9 / GZH Chinese copy · GZH Google Ads before GREEN landing + Ads readiness  
 
 These remain behind explicit approval gates.
 
@@ -671,63 +673,255 @@ It is: **a governed Mainland product expression of the same underlying 1320 syst
 
 ---
 
-## 36｜Addendum A — Global Chinese markets first (Holly proposal · pending Founder)
+## 36｜Addendum A — Global Chinese Track (GZH)
 
-**Status:** Recommendation from Holly / Nova — **not** Founder LOCK until Accepted / Rejected / Modified.
+**Founder decision (2026-09-29):** **MODIFY — ACCEPT IN PRINCIPLE**
 
-### Intent
+Mainland Spec (**§01–35**) **REMAINS LOCKED** — no change.
 
-Before (or in parallel with) heavy Mainland infrastructure (ICP · Mini Program category · Mainland-isolated data · WeChat-first), prioritize Chinese-language demand in markets that can run on the **current global product stack**:
+Strategic direction approved: build **Global Chinese** before or alongside Mainland infrastructure.
 
-| Market | Rationale |
-|--------|-----------|
-| **Hong Kong** | Chinese audience · global payment / ads stack workable |
-| **Taiwan** | Chinese audience · same |
-| **Southeast Asia Chinese** | Large Chinese-speaking diaspora · Google / Stripe / current hosting path |
+**Required modification (LOCKED):** Do **not** treat Global Chinese as one locale or as an extension of Mainland CN.
 
-### What stays the same as EN (this proposal)
-
-- **Payment:** same as live EN (e.g. Stripe / current checkout) — no Mainland payment licence gate for this track  
-- **AI / generation:** same operational posture as current EN product (no assumption of Mainland generative-AI filing for this track)  
-- **Distribution:** **Google Ads allowed** on this track (subject to existing EN claim/C-4 governance + Chinese public-language gates for copy)  
-- **Hosting / data:** may remain on **global** stack (not Mainland-isolated by default)
-
-### What still applies from this Spec
-
-Even on the Global Chinese track:
-
-- Brand / category / red lines / boundary language (§02–14) still govern public Chinese copy  
-- Existing zh strings remain **candidates** until CN Semantic Review marks GREEN (§15)  
-- Product must not look like fortune-telling  
-- Free-first ethos preferred; paid Chinese report still needs content + language review if offered  
-
-### What this track is NOT
-
-| Not this | Reason |
-|----------|--------|
-| Mainland Public Launch (CN-1) | Different compliance & entry architecture (§09–17) |
-| WeChat Mini Program requirement | Optional later; not blocking for HK/TW/SEA web |
-| Auto-translated EN Life Path SEO into Chinese Ads | Still forbidden as strategy; Ads creative still needs language review |
-
-### Suggested sequencing (if Founder accepts)
+### Three connected expressions (not one site translated three ways)
 
 ```
-1  CN-0A /zh/ scaffolding (already authorized · §34)
-2  Global Chinese soft launch (HK / TW / SEA) — Free + optional EN/CN paid clarity
-   · Google Ads OK under claim governance
-   · Same payment / AI as EN
-3  Mainland Readiness Gate work continues in parallel (entity · ICP · Mini Program)
-4  CN-1 Mainland Free only after Gate PASS
+1320 Global
+↓
+EN
+
+and separately:
+
+Global Chinese (GZH)
+→ Simplified / Traditional
+→ market overlays
+→ global payment / technology where eligible
+→ Global Chinese semantic governance
+→ controlled acquisition
+
+and separately:
+
+CN Mainland
+→ Mainland public semantics
+→ Mainland infrastructure
+→ Mainland data architecture
+→ Mainland distribution
+→ Mainland Readiness Gate
 ```
 
-### Founder decision needed
+### A1｜Rename and Separate the Track — LOCK
 
-- [ ] **Accept** Addendum A as parallel track  
-- [ ] **Reject** — Mainland-only sequencing  
-- [ ] **Modify** — e.g. TW/HK only first; or no Google Ads until X  
+Formal name: **Global Chinese Track** (internal: **GZH Track**).
 
-Until marked Accepted, Nova will **not** treat Google Ads Chinese campaigns or Global Chinese paid as authorized beyond CN-0A scaffolding.
+Do **not** call it “CN” in product architecture, analytics, governance, or campaign naming.
+
+| Audience | Name |
+|----------|------|
+| Mainland China | **CN Mainland** |
+| Hong Kong / Taiwan / Singapore / Malaysia / other overseas Chinese | **Global Chinese (GZH)** |
+
+This distinction **must** exist in: locale configuration · analytics · campaign naming · legal/privacy configuration · checkout attribution · content governance · release gates.
+
+Even if technical components are shared, Mainland and Global Chinese must **never** become one undifferentiated `/zh/` market internally.
+
+### A2｜Global Chinese Is Not One Locale — LOCK
+
+Do **not** assume: Chinese = one translated language pack.
+
+At minimum distinguish:
+
+| Script | Primary audiences (initial) |
+|--------|------------------------------|
+| **Traditional Chinese** | Taiwan · Hong Kong |
+| **Simplified Chinese** | Singapore · Malaysia · other overseas Simplified users |
+
+Underlying 1320 meaning may share one governed semantic source.  
+**Simplified ↔ Traditional conversion is not sufficient localization.**
+
+HK / TW / SG / MY may differ in: vocabulary · tone · privacy expectations · commercial language · payment expectations · platform use · regulatory context.
+
+**Architecture shape:**
+
+```
+Global Chinese Semantic Core
+→ Script Layer (Simplified / Traditional)
+→ Market Overlay
+```
+
+**not:** one Chinese translation used everywhere.
+
+URL structure is **not** locked in this Addendum. Nova must propose the cleanest locale/market model in **GZH-0** before route implementation is frozen.
+
+**Requirement:** Mainland and Global Chinese must be distinguishable in code, analytics, and governance even if they share content primitives.
+
+### A3｜Brand Architecture for Global Chinese — LOCK
+
+GZH may use the same public-facing architecture:
+
+- **1320｜生命映照**  
+- Supporting: 一生，学习看见、理解并爱自己。  
+- Emotional: 1320，一生爱你。  
+- Core: 看见，而不是断定。映照，而不是定义。  
+
+Mainland-specific regulatory overlay does **not** automatically copy word-for-word into every overseas market.
+
+**Underlying governance remains global (C-4 / T17):** no prediction · no deterministic destiny · no fixed identity · no diagnosis · no false scientific authority · no stronger claim in Chinese than governed source.
+
+Mainland public-language restrictions = **additional Mainland overlay**.
+
+Do **not** become more deterministic or mystical because a Chinese user is outside Mainland China.
+
+### A4｜Global Chinese Content Gate — LOCK
+
+Existing zh-CN strings remain **candidate content** — not automatically approved for GZH either.
+
+**GZH Semantic Gate** (lighter but mandatory) reviews for: claim strengthening · identity drift · prediction drift · destiny certainty · diagnosis/treatment language · wealth or relationship prediction · misleading scientific framing · unnatural translated Chinese · Simplified/Traditional semantic inconsistency.
+
+Mainland content then passes an additional **CN Mainland Public Semantics Gate**.
+
+```
+Global Source Governance
+↓
+Global Chinese Semantic Review (GZH Gate)
+↓
+Mainland Overlay, where applicable
+```
+
+Do not treat Mainland governance as the source of all Chinese language.
+
+### A5｜Global Chinese Paid — CONDITIONALLY ACCEPTED
+
+GZH may commercialize before Mainland China.
+
+**Not** automatically authorized just because EN Paid exists.
+
+Before paid traffic or a paid Chinese funnel: complete **GZH Commercial Readiness Gate** — minimum:
+
+- landing-page language GREEN  
+- product description accurate  
+- price and currency clear  
+- checkout destination clear  
+- refund terms available  
+- privacy / terms appropriate to target market  
+- support route available  
+- Chinese product availability accurately represented  
+
+If Full Report remains English: **完整报告目前提供英文版本。**  
+Chinese ad/landing must not imply the paid report is Chinese if it is not.
+
+Reuse of existing global payment stack is acceptable where technically available and legally appropriate.  
+**Does not authorize Mainland payment flows.**
+
+### A6｜Global AI / Technology Stack — LOCK
+
+Reuse of current EN technology stack for GZH is accepted where the same functionality is already governed and operational internationally.
+
+Technology may be the same; **Chinese output governance is not automatically inherited.**
+
+Any Chinese user-facing AI or dynamically assembled content must still pass appropriate semantic controls.
+
+This Addendum does **not** authorize a new open-ended AI interpretation layer. If EN does not use such a layer, GZH must not introduce one independently.
+
+### A7｜Google Ads — CONDITIONAL AUTHORIZATION
+
+Testing Google Ads for GZH is supported. **Not** Mainland China advertising.
+
+Initial geo may include (subject to campaign-level review): Hong Kong · Taiwan · Singapore · Malaysia.
+
+**Mainland China must not be intentionally targeted** under this track.
+
+GZH Google Ads may proceed only when:
+
+- landing page = GREEN  
+- ad copy = C-4 compliant  
+- no prediction / destiny / diagnosis claims  
+- product and price accurately represented  
+- geo targeting explicitly Global Chinese, not Mainland  
+- sensitive-interest targeting restrictions respected where applicable  
+- destination Privacy / Terms ready for that market  
+
+Do **not** use psychological vulnerability as ad-targeting.  
+Do **not** build custom audiences around inferred: anxiety · trauma · loneliness · relationship problems · mental-health conditions.
+
+Creative should sell **reflection / self-understanding**, not a solution to presumed psychological vulnerability.
+
+### A8｜Privacy Must Use Market Overlays — LOCK
+
+GZH can remain on the international stack, but **EN privacy ≠ automatically sufficient everywhere**.
+
+Product model: **Global Privacy Core + Market Overlay**  
+(not a separate full platform per market, but enough configuration so Chinese-speaking jurisdictions are not treated as legally identical).
+
+**Legal/compliance review item** — Nova must not infer overlays independently.
+
+Examples noted by Founder for counsel: Hong Kong direct-marketing consent/opt-out · Singapore PDPA · Malaysia PDPA.
+
+### A9｜Do Not Mix Mainland Acquisition Into Global Chinese — LOCK
+
+GZH campaigns must **not**:
+
+- intentionally target Mainland China  
+- imply Mainland regulatory readiness  
+- promote Mainland payment availability  
+- link users into an unfinished Mainland funnel  
+- use Mainland Mini Program claims before approval  
+- treat Mainland Chinese users as an accidental extension of the global campaign  
+
+Mainland remains behind **Mainland Readiness Gate**.
+
+### A10｜EN Phase 1A Remains Independent — LOCK
+
+EN Phase 1A (Pinterest BA01 · Google Conditional · EN landing) continues independently.
+
+Do **not** mix GZH or Mainland URLs into first-round EN campaigns.
+
+Evidence must be readable separately: EN acquisition · GZH acquisition · later Mainland China.
+
+### A11｜Recommended Global Chinese Rollout — LOCK as plan
+
+| Stage | Scope |
+|-------|--------|
+| **GZH-0 Foundation** | Chinese semantic core · Simplified/Traditional architecture · market-aware configuration · landing-page governance · analytics segmentation · privacy/terms overlay capacity. **No paid traffic yet.** |
+| **GZH-1 Organic Pilot** | Limited GZH organic access. Measure comprehension · completion · resonance · misunderstanding · save · return |
+| **GZH-2 Controlled Acquisition** | After landing pages GREEN: small Google Ads tests · selected Chinese social/content · market-by-market measurement |
+| **GZH-3 Commercial Validation** | After checkout/content/support ready: controlled paid Full Report testing · conversion · refund · support load · repeat engagement |
+
+This track can move **independently** of Mainland infrastructure.
+
+### A12｜Market Priority — LOCK
+
+Do **not** launch “all overseas Chinese” at once.
+
+**Initial validation group:** Taiwan / Hong Kong / Singapore / Malaysia  
+
+Rollout still **market-by-market**, not one blended audience.
+
+Purpose: discover whether **1320｜生命映照** makes sense to Chinese-speaking users outside Mainland and retains meaning when moving from English into Chinese — **not** maximum reach.
+
+### A13｜Success Criteria — LOCK
+
+Do not judge GZH only by paid conversion.
+
+Track: landing comprehension · Free start · completion · result save · return · voluntary sharing · Full Report interest · paid conversion when enabled · refund · support questions · misunderstanding as 算命/命理/测命/心理诊断 · semantic complaints  
+
+**Critical qualitative metric:** What does the user think 1320 is after completing the experience?  
+
+If users consistently describe it as 算命 / 命理 / 测命 / 心理诊断 → **positioning failure** even if conversion is high.
+
+### Authorization (this Addendum)
+
+| Authorized now | Not yet |
+|----------------|---------|
+| Continue **CN-0A** (§34) | GZH paid campaign launch |
+| Prepare **GZH-0 Global Chinese Architecture Proposal** | GZH Google Ads before GREEN landing + Ads readiness |
+| Organic pilot **preparation** | Mainland acquisition mixed into GZH |
+
+**GZH-0 proposal must cover:** locale/routing model · Simplified vs Traditional strategy · market-overlay model · content-source hierarchy · analytics segmentation · payment/report-state handling · Google Ads readiness gate  
+
+Once GZH-0 is returned, Founder can lock implementation **without reopening** the Mainland architecture.
+
+**Companion doc:** `docs/governance/1320_GZH_0_ARCHITECTURE_PROPOSAL.md` (in progress)
 
 ---
 
-**Document control:** v0.1 · Founder Direction / Implementation Baseline · 2026-09-28 · §36 Addendum A Holly proposal 2026-09-28 · Repo path: `docs/governance/1320_CN_MAINLAND_LANDING_SPEC_v0.1.md`
+**Document control:** v0.1 · Founder Direction / Implementation Baseline · 2026-09-28 · §36 Addendum A Founder MODIFY–ACCEPT 2026-09-29 · Repo: `docs/governance/1320_CN_MAINLAND_LANDING_SPEC_v0.1.md`

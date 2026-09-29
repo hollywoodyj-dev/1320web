@@ -9,7 +9,9 @@
 
 **Relationship to Existing Specs:** Supersedes `1320_CN_LOCALE_SPEC` as the governing China-market document. Locale specification remains a subordinate implementation spec.
 
-**Addendum A (Founder · 2026-09-29):** **MODIFY — ACCEPT IN PRINCIPLE** as **Global Chinese Track (GZH)**. See **§36**. Mainland LOCK unchanged.
+**Baseline:** Founder accepted Mainland Spec at commit `6a347c5` (2026-09-28).  
+
+**§36 Addendum A (Founder · 2026-09-29):** **MODIFY — ACCEPTED IN PRINCIPLE** → **Global Chinese Track (GZH)**. Mainland LOCK unchanged. Nova continues **CN-0A only** under §34 unless a later Founder-approved gate expands scope.
 
 ---
 
@@ -675,9 +677,11 @@ It is: **a governed Mainland product expression of the same underlying 1320 syst
 
 ## 36｜Addendum A — Global Chinese Track (GZH)
 
-**Founder decision (2026-09-29):** **MODIFY — ACCEPT IN PRINCIPLE**
+**Founder decision (2026-09-29):** **MODIFY — ACCEPTED IN PRINCIPLE**
 
-Mainland Spec (**§01–35**) **REMAINS LOCKED** — no change.
+**Prior status removed:** Pending Founder Decision.
+
+Mainland Spec (**§01–35**) **REMAINS LOCKED** — no change. Locale work remains **subordinate**. Nova continues **CN-0A only** under §34 unless a later Founder-approved gate explicitly expands scope.
 
 Strategic direction approved: build **Global Chinese** before or alongside Mainland infrastructure.
 

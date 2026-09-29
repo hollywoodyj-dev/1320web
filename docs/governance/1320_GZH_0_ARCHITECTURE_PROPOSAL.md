@@ -1,23 +1,19 @@
 # 1320_GZH_0_ARCHITECTURE_PROPOSAL
 
 **Document Type:** Global Chinese Track (GZH) — Foundation Architecture Proposal  
-**Status:** DRAFT for Founder lock · Authorized by Addendum A (2026-09-29)  
+**Status:** Filed · Authorized by Addendum A **MODIFY — ACCEPTED IN PRINCIPLE** (2026-09-29) · awaiting Founder lock on open decisions (§10)  
 **Owners:** Nova (proposal) · Holly (coordination) · Founder (lock)  
 **Parent:** [`1320_CN_MAINLAND_LANDING_SPEC_v0.1.md`](./1320_CN_MAINLAND_LANDING_SPEC_v0.1.md) §36  
 
 **Purpose:** Lock implementation model for GZH-0 **without reopening** Mainland LOCK.
 
-**Not authorized by this draft alone:** GZH paid campaigns · Google Ads traffic · public GREEN content release  
-
----
-
-## 0 · Governing split (from Founder)
+**Track architecture (LOCKED at product level):**
 
 ```
-EN  |  Global Chinese (GZH)  |  CN Mainland
+EN Global  →  Global Chinese (GZH)  →  CN Mainland
 ```
 
-Three connected expressions of 1320 — **not** one website translated three ways.
+Three tracks share the 1320 core; they do **not** share one undifferentiated “中国版” locale.
 
 | Track | Internal name | Must appear in |
 |-------|---------------|----------------|

@@ -20,6 +20,11 @@ export { GZH_PRIVACY_OVERLAY } from "@/lib/gzh/privacy-overlay";
 export {
   GZH_TW_BRAND,
   GZH_TW_COMPREHENSION,
+  GZH_TW_ABOUT,
+  GZH_TW_EXAMPLE,
   GZH_TW_FREE,
+  GZH_TW_HOW,
   GZH_TW_LANDING,
+  GZH_TW_NAV,
+  GZH_TW_WHAT_YOU_GET,
 } from "@/lib/gzh/tw-content";

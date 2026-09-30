@@ -144,6 +144,85 @@
   align-items: center;
 }
 
+.gzh-section {
+  margin: 2rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(26, 26, 24, 0.08);
+}
+
+.gzh-section-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 0.85rem;
+  letter-spacing: 0.03em;
+}
+
+.gzh-steps {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.gzh-steps li {
+  margin: 0 0 1rem;
+}
+
+.gzh-steps p {
+  margin: 0.35rem 0 0;
+  color: var(--gzh-muted);
+  line-height: 1.65;
+}
+
+.gzh-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  line-height: 1.7;
+  color: var(--gzh-muted);
+}
+
+.gzh-list--not {
+  color: var(--gzh-ink);
+}
+
+.gzh-not-label {
+  margin: 1rem 0 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.gzh-example {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 1.25rem 1.1rem;
+  border-radius: 0.35rem;
+  border: 1px solid rgba(26, 26, 24, 0.08);
+}
+
+.gzh-example-disclaimer,
+.gzh-example-label {
+  font-size: 0.85rem;
+  color: var(--gzh-muted);
+  margin: 0 0 0.75rem;
+}
+
+.gzh-example-line {
+  margin: 0 0 0.65rem;
+  line-height: 1.7;
+}
+
+.gzh-example-takeaway {
+  margin: 1rem 0 0;
+  font-weight: 600;
+  color: var(--gzh-accent);
+  line-height: 1.6;
+}
+
+.gzh-hero-form {
+  margin: 1.75rem 0 1rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(26, 26, 24, 0.1);
+  border-radius: 0.35rem;
+  background: rgba(255, 255, 255, 0.5);
+}
+
 .gzh-comprehension {
   margin-top: 2rem;
   padding: 1.25rem;

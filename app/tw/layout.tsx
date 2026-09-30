@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { GzhContextCapture } from "@/components/gzh/gzh-context-capture";
+import { GzhHtmlLang } from "@/components/gzh/gzh-html-lang";
 import { GzhShell } from "@/components/gzh/gzh-shell";
 import {
   GZH_MARKET_DEFAULTS,
@@ -41,6 +42,7 @@ export const metadata: Metadata = {
 export default function TwLayout({ children }: { children: React.ReactNode }) {
   return (
     <div lang={twDefaults.htmlLang}>
+      <GzhHtmlLang lang={twDefaults.htmlLang} />
       <GzhContextCapture context={TW_CONTEXT} />
       <GzhShell market="tw">{children}</GzhShell>
     </div>

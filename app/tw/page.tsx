@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { GZH_TW_BRAND, GZH_TW_LANDING } from "@/lib/gzh/tw-content";
+import { GzhComprehensionCheck } from "@/components/gzh/gzh-comprehension-check";
+import { GzhTwExplainSections } from "@/components/gzh/gzh-tw-explain-sections";
+import { GZH_TW_BRAND, GZH_TW_FREE, GZH_TW_LANDING } from "@/lib/gzh/tw-content";
 import { gzhHref } from "@/lib/gzh/locale";
 import { GZH_MARKET_SEMANTIC_STATUS } from "@/lib/gzh/semantic-status";
 
@@ -29,21 +31,27 @@ export default function TwLandingPage() {
         <Link className="gzh-btn" href={gzhHref("tw", "free-soul-blueprint")}>
           {GZH_TW_LANDING.ctaPrimary}
         </Link>
-        <Link className="gzh-btn gzh-btn--ghost" href="/about-1320">
+        <Link className="gzh-btn gzh-btn--ghost" href={gzhHref("tw", "about")}>
           {GZH_TW_LANDING.ctaSecondary}
         </Link>
       </div>
 
       <p className="gzh-trust">{GZH_TW_LANDING.trustLine}</p>
       <p className="gzh-report-note">{GZH_TW_LANDING.reportLanguageNote}</p>
-      <p className="gzh-note" data-semantic-status={status}>
-        {GZH_TW_LANDING.semanticNote} · gate={status}
-      </p>
+
+      <GzhTwExplainSections />
 
       <p className="gzh-principles">
         {GZH_TW_BRAND.principleSee}
         <br />
         {GZH_TW_BRAND.principleMirror}
+      </p>
+
+      <p className="gzh-note">{GZH_TW_FREE.comprehensionHint}</p>
+      <GzhComprehensionCheck market="tw" />
+
+      <p className="gzh-note" data-semantic-status={status}>
+        {GZH_TW_LANDING.semanticNote} · gate={status}
       </p>
     </article>
   );

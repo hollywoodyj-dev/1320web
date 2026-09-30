@@ -26,7 +26,7 @@ export function GzhComprehensionCheck({ market = "tw" }: { market?: string }) {
   if (submitted) {
     return (
       <p className="gzh-comprehension-thanks" role="status">
-        谢谢。你的回答只用于理解产品定位，不会改变你的映照结果。
+        謝謝。你的回答只用於理解產品定位，不會改變你的映照結果。
       </p>
     );
   }

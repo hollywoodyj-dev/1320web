@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { GzhMarket } from "@/lib/gzh/locale";
 import { GZH_PRIVACY_OVERLAY } from "@/lib/gzh/privacy-overlay";
-import { GZH_TW_BRAND } from "@/lib/gzh/tw-content";
+import { GZH_TW_BRAND, GZH_TW_NAV } from "@/lib/gzh/tw-content";
 import { gzhHref } from "@/lib/gzh/locale";
 
 export function GzhShell({
@@ -21,8 +21,9 @@ export function GzhShell({
           <span className="gzh-brand-sub">{GZH_TW_BRAND.subtitle}</span>
         </Link>
         <nav className="gzh-nav" aria-label="GZH">
-          <Link href={gzhHref(market, "free-soul-blueprint")}>免费映照</Link>
-          <Link href="/">English</Link>
+          <Link href={gzhHref(market, "free-soul-blueprint")}>{GZH_TW_NAV.free}</Link>
+          <Link href={gzhHref(market, "about")}>{GZH_TW_NAV.about}</Link>
+          <Link href="/">{GZH_TW_NAV.english}</Link>
         </nav>
       </header>
       <main className="gzh-main">{children}</main>
@@ -33,7 +34,6 @@ export function GzhShell({
           {GZH_TW_BRAND.principleMirror}
         </p>
         <p className="gzh-emotional">{GZH_TW_BRAND.emotional}</p>
-        {/* Privacy overlay slot — counsel-owned; placeholder until approved */}
         <div
           className="gzh-privacy-slot"
           data-privacy-status={privacy.status}

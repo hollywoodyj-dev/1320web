@@ -208,8 +208,8 @@ EN Phase 1A and GZH must remain **separately readable**.
 
 | Stage | Status |
 |-------|--------|
-| **GZH-0 Foundation** | **FROZEN** — Nova may implement |
-| **GZH-1 Organic Pilot** | **Taiwan `/tw/`** · after GREEN + `/zh/` canonical rule · comprehension check required |
+| **GZH-0 Foundation** | **IMPLEMENTED** · `/tw/` · Option B · `/zh/`→`/tw` 301 · analytics dims · privacy slot · comprehension check component · semantic YELLOW (noindex until GREEN) |
+| **GZH-1 Organic Pilot** | **Taiwan `/tw/`** · after GREEN + comprehension instrument live · paid **not** authorized |
 | **GZH-2 Organic (HK)** | After TW semantic calibration · market-specific review · **not** paid acquisition by default |
 | **GZH-2 Controlled Acquisition** | After Ads readiness gate (naming in Addendum A; do not confuse with HK organic) |
 | **GZH-3 Commercial Validation** | After Commercial Readiness Gate |
@@ -244,4 +244,4 @@ North-star: *完成后，用户认为 1320 是什么？*
 
 ---
 
-**Next step:** Nova implements GZH-0 for Taiwan (`/tw/` · Option B resolver · separate internal dims · `/zh/` non-competing canonical) → Holly schedules GZH-1 organic when landing GREEN + comprehension check ready.
+**Next step:** Holly schedules GZH Semantic Gate review for TW chrome → GREEN → indexable GZH-1 organic. Result/report Chinese shell + market-aware `/result` remain follow-on.

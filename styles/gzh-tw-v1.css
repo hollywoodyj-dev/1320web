@@ -1,0 +1,174 @@
+/* GZH Taiwan shell — foundation chrome; visual system can deepen after GREEN */
+
+.gzh-shell {
+  --gzh-ink: #1a1a18;
+  --gzh-muted: #5c5a54;
+  --gzh-paper: #f7f4ef;
+  --gzh-accent: #2f4a3c;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 0%, rgba(47, 74, 60, 0.08), transparent),
+    linear-gradient(180deg, #faf7f2 0%, var(--gzh-paper) 45%, #efe8df 100%);
+  color: var(--gzh-ink);
+  font-family: "Noto Serif TC", "Source Han Serif TC", "Songti TC", "PingFang TC", serif;
+}
+
+.gzh-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(26, 26, 24, 0.08);
+}
+
+.gzh-brand {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.gzh-brand-name {
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.gzh-brand-sub {
+  font-size: 0.85rem;
+  color: var(--gzh-muted);
+}
+
+.gzh-nav {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.gzh-nav a {
+  color: var(--gzh-accent);
+  text-decoration: none;
+}
+
+.gzh-main {
+  flex: 1;
+  width: min(40rem, 100%);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+.gzh-hero-brand {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin: 0 0 0.75rem;
+  line-height: 1.25;
+}
+
+.gzh-hero-lead {
+  font-size: 1.15rem;
+  color: var(--gzh-muted);
+  margin: 0 0 1rem;
+}
+
+.gzh-boundary {
+  font-size: 0.95rem;
+  margin: 0 0 1.75rem;
+  color: var(--gzh-accent);
+}
+
+.gzh-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.gzh-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.25rem;
+  border-radius: 0.25rem;
+  background: var(--gzh-accent);
+  color: #f8f6f1;
+  text-decoration: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.gzh-btn--ghost {
+  background: transparent;
+  color: var(--gzh-accent);
+  border: 1px solid rgba(47, 74, 60, 0.35);
+}
+
+.gzh-trust,
+.gzh-note,
+.gzh-report-note,
+.gzh-privacy-note,
+.gzh-emotional {
+  color: var(--gzh-muted);
+  font-size: 0.88rem;
+}
+
+.gzh-principles {
+  margin: 2.5rem 0 0;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid rgba(26, 26, 24, 0.08);
+  line-height: 1.7;
+}
+
+.gzh-footer {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(26, 26, 24, 0.08);
+  text-align: center;
+}
+
+.gzh-principle {
+  margin: 0 0 0.5rem;
+  line-height: 1.6;
+}
+
+.gzh-privacy-slot {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.gzh-comprehension {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(26, 26, 24, 0.1);
+  border-radius: 0.35rem;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.gzh-comprehension-options {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 1rem;
+}
+
+.gzh-comprehension-options li {
+  margin: 0.4rem 0;
+}
+
+.gzh-comprehension-thanks {
+  margin-top: 1.5rem;
+  color: var(--gzh-accent);
+}
+
+@media (max-width: 640px) {
+  .gzh-header {
+    flex-direction: column;
+  }
+}

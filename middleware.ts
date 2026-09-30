@@ -35,6 +35,18 @@ export function middleware(request: NextRequest) {
 
   const { pathname, searchParams } = request.nextUrl;
 
+  // GZH-0 · /zh is temporary alias — must not compete with /tw as indexed ZH destination.
+  if (pathname === "/zh" || pathname === "/zh/") {
+    const target = request.nextUrl.clone();
+    target.pathname = "/tw";
+    return NextResponse.redirect(target, 301);
+  }
+  if (pathname.startsWith("/zh/")) {
+    const target = request.nextUrl.clone();
+    target.pathname = pathname.replace(/^\/zh/, "/tw");
+    return NextResponse.redirect(target, 301);
+  }
+
   // Root-canonical SEO pages: duplicate guide URLs must emit HTTP 301 (not 308).
   if (
     pathname === "/guides/what-is-a-soul-blueprint" ||

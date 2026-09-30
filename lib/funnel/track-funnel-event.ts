@@ -29,6 +29,20 @@ import {
 } from "@/lib/funnel/attribution";
 import { writeCampaignAttributionMetadata } from "@/lib/funnel/campaign-attribution-metadata";
 import { getOrCreateAnalyticsSessionId } from "@/lib/soulcode-analytics";
+import { resolveGzhFromPathname, gzhAnalyticsDims } from "@/lib/gzh/locale";
+
+function gzhDimsForCurrentPath(): Record<string, string> {
+  if (typeof window === "undefined") return {};
+  const fromPath = resolveGzhFromPathname(window.location.pathname);
+  if (fromPath) return gzhAnalyticsDims(fromPath);
+  try {
+    const raw = sessionStorage.getItem("1320_gzh_analytics_dims");
+    if (!raw) return {};
+    return JSON.parse(raw) as Record<string, string>;
+  } catch {
+    return {};
+  }
+}
 
 export function trackFunnelEvent(
   name: AnalyticsEventName,
@@ -42,10 +56,12 @@ export function trackFunnelEvent(
   const sessionId = getOrCreateAnalyticsSessionId();
   const campaignFields = writeCampaignAttributionMetadata(merged, sessionId);
   const attr = attributionToAnalyticsProps(merged);
+  const gzhDims = gzhDimsForCurrentPath();
 
   trackSoulcodeEvent(name, {
     ...attr,
     ...campaignFields,
+    ...gzhDims,
     path: window.location.pathname,
     ...extra,
   });

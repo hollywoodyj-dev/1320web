@@ -11,7 +11,8 @@
 
 **Baseline:** Founder accepted Mainland Spec at commit `6a347c5` (2026-09-28).  
 
-**§36 Addendum A (Founder · 2026-09-29):** **MODIFY — ACCEPTED IN PRINCIPLE** → **Global Chinese Track (GZH)**. Mainland LOCK unchanged. Nova continues **CN-0A only** under §34 unless a later Founder-approved gate expands scope.
+**§36 Addendum A (Founder · 2026-09-29):** **MODIFY — ACCEPTED IN PRINCIPLE** → **Global Chinese Track (GZH)**. Mainland LOCK unchanged. Nova continues **CN-0A only** under §34 unless a later Founder-approved gate expands scope.  
+**GZH-0 / GZH-1 (Founder · 2026-09-30):** **FROZEN** — first organic market **Taiwan `/tw/`** · Option B · HK next · see [`1320_GZH_0_ARCHITECTURE_PROPOSAL.md`](./1320_GZH_0_ARCHITECTURE_PROPOSAL.md).
 
 ---
 
@@ -924,8 +925,8 @@ If users consistently describe it as 算命 / 命理 / 测命 / 心理诊断 →
 
 Once GZH-0 is returned, Founder can lock implementation **without reopening** the Mainland architecture.
 
-**Companion doc:** `docs/governance/1320_GZH_0_ARCHITECTURE_PROPOSAL.md` (in progress)
+**Companion doc:** [`1320_GZH_0_ARCHITECTURE_PROPOSAL.md`](./1320_GZH_0_ARCHITECTURE_PROPOSAL.md) — filed; awaiting Founder lock on open routing/script decisions.
 
 ---
 
-**Document control:** v0.1 · Founder Direction / Implementation Baseline · 2026-09-28 · §36 Addendum A Founder MODIFY–ACCEPT 2026-09-29 · Repo: `docs/governance/1320_CN_MAINLAND_LANDING_SPEC_v0.1.md`
+**Document control:** v0.1 · Founder Direction / Implementation Baseline · Mainland accepted `6a347c5` · §36 **MODIFY — ACCEPTED IN PRINCIPLE** 2026-09-29 · Repo: `docs/governance/1320_CN_MAINLAND_LANDING_SPEC_v0.1.md`

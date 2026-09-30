@@ -154,7 +154,7 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     index: true,
     sitemap: true,
     title: "Free Soul Blueprint Report | 1320 Soulcode",
-    h1: "You Are More Than the Patterns You Learned to Survive.",
+    h1: "A symbolic look at patterns that may feel more foundational than later adaptation.",
     class: "A",
     priority: 0.95,
     changeFrequency: "weekly",

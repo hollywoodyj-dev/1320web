@@ -11,7 +11,7 @@ export const FREE_SOUL_BLUEPRINT_META = {
 
 export const FREE_SOUL_BLUEPRINT_HERO = {
   eyebrow: "A Free Personal Soul Blueprint",
-  title: "You Are More Than the Patterns You Learned to Survive.",
+  title: "A symbolic look at patterns that may feel more foundational than later adaptation.",
   body: "Enter your birth date to receive a reflective four-part Soul Blueprint—a personal mirror for your origin, natural expression, relationships, and inner return.",
   boundary: "Not prediction. Not personality typing. Not a fixed identity.",
   cta: "Discover My Free Soul Blueprint",

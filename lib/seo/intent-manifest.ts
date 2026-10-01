@@ -154,7 +154,7 @@ export const SEO_INTENT_MANIFEST: SeoIntentEntry[] = [
     index: true,
     sitemap: true,
     title: "Free Soul Blueprint Report | 1320 Soulcode",
-    h1: "A symbolic look at patterns that may feel more foundational than later adaptation.",
+    h1: "See four parts of you from your birth date.",
     class: "A",
     priority: 0.95,
     changeFrequency: "weekly",

@@ -70,7 +70,6 @@ export default function FreeSoulBlueprintPage() {
         <p className="blueprint-eyebrow">{FREE_SOUL_BLUEPRINT_HERO.eyebrow}</p>
         <h1 className="blueprint-title fsb-hero-title">{FREE_SOUL_BLUEPRINT_HERO.title}</h1>
         <p className="blueprint-lead fsb-hero-lead">{FREE_SOUL_BLUEPRINT_HERO.body}</p>
-        <p className="conversion-boundary fsb-boundary">{FREE_SOUL_BLUEPRINT_HERO.boundary}</p>
         <div className="fsb-hero-form">
           <FreeSoulBlueprintBirthForm idPrefix="fsb-hero" />
           <p className="fsb-trust">{FREE_SOUL_BLUEPRINT_HERO.trustLine}</p>

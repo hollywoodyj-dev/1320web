@@ -150,6 +150,30 @@ export const CONVERSION_EVENT_CATALOG: ConversionEventCatalogEntry[] = [
     tier: "required",
     description: "Verified booking payment + fulfillment (not success page visit alone).",
   },
+  {
+    name: "life_path_calculator_started",
+    label: "Life Path calculator started",
+    tier: "funnel",
+    description: "User focuses a field on the Life Path calculator (guide engagement).",
+  },
+  {
+    name: "life_path_calculator_completed",
+    label: "Life Path calculator completed",
+    tier: "recommended",
+    description: "Valid birth date submitted; Life Path number shown.",
+  },
+  {
+    name: "life_path_calculation_error",
+    label: "Life Path calculation error",
+    tier: "funnel",
+    description: "Calculator validation or compute failure.",
+  },
+  {
+    name: "life_path_result_meaning_viewed",
+    label: "Life Path meaning viewed",
+    tier: "funnel",
+    description: "Result meaning section shown after a successful calculation.",
+  },
 ];
 
 export const PERSISTED_CONVERSION_EVENT_NAMES = new Set(

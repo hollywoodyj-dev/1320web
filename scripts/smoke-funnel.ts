@@ -336,6 +336,17 @@ assert(persistNames.includes("checkout_started"), "T9 persist catalog missing ch
 assert(persistNames.includes("payment_button_clicked"), "T9 persist catalog missing payment_button_clicked");
 assert(persistNames.includes("signup_completed"), "T9 persist catalog missing signup_completed");
 assert(
+  persistNames.includes("life_path_calculator_started") &&
+    persistNames.includes("life_path_calculator_completed"),
+  "Life Path calculator persist catalog missing started/completed",
+);
+assert(
+  fs
+    .readFileSync(path.join(webRoot, "components/seo/life-path-calculator.tsx"), "utf8")
+    .includes('trackFunnelEvent("life_path_calculator_started"'),
+  "Life Path calculator must persist life_path_calculator_started via trackFunnelEvent",
+);
+assert(
   !persistNames.includes("free_result_view") &&
     !persistNames.includes("result_view") &&
     !persistNames.includes("free_blueprint_result_viewed"),

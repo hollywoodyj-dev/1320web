@@ -15,6 +15,7 @@
  *   booking_option_selected   — session tier card or form select (N0.2)
  *   booking_started           — server: Stripe session created (N0.2)
  *   booking_completed         — server: verified payment + fulfillment (N0.2)
+ *   life_path_calculator_*    — SEO Life Path calculator (started/completed/error/meaning)
  */
 import {
   trackEvent as trackSoulcodeEvent,

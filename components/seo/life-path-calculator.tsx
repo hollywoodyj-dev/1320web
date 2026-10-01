@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { FormEvent, useEffect, useId, useRef, useState } from "react";
 import { SeoArticleCtaLink } from "@/components/seo/seo-article-cta-link";
-import { trackEvent } from "@/lib/analytics";
+import { trackFunnelEvent } from "@/lib/funnel/track-funnel-event";
 import {
   calculateLifePath,
   MONTH_OPTIONS,
@@ -61,7 +61,7 @@ export function LifePathCalculator({ primaryKeyword }: LifePathCalculatorProps) 
     if (!result) return;
     const meaning = getLifePathMeaning(result.lifePath);
     if (meaning) {
-      trackEvent("life_path_result_meaning_viewed", {
+      trackFunnelEvent("life_path_result_meaning_viewed", {
         ...baseProps(),
         result_number: result.lifePath,
         result_type: result.underlyingNumber != null ? "master_number" : "single_digit",
@@ -78,7 +78,7 @@ export function LifePathCalculator({ primaryKeyword }: LifePathCalculatorProps) 
   function onFieldFocus() {
     if (startedRef.current) return;
     startedRef.current = true;
-    trackEvent("life_path_calculator_started", baseProps());
+    trackFunnelEvent("life_path_calculator_started", baseProps());
   }
 
   function onSubmit(event: FormEvent<HTMLFormElement>) {
@@ -89,7 +89,7 @@ export function LifePathCalculator({ primaryKeyword }: LifePathCalculatorProps) 
     if (!validated.ok) {
       setResult(null);
       setError(validated.message);
-      trackEvent("life_path_calculation_error", {
+      trackFunnelEvent("life_path_calculation_error", {
         ...baseProps(),
         error_type: validated.error,
       });
@@ -100,7 +100,7 @@ export function LifePathCalculator({ primaryKeyword }: LifePathCalculatorProps) 
       const calculated = calculateLifePath(validated.value);
       setResult({ ...calculated, input: validated.value });
       setTraceOpen(true);
-      trackEvent("life_path_calculator_completed", {
+      trackFunnelEvent("life_path_calculator_completed", {
         ...baseProps(),
         result_number: calculated.lifePath,
         result_type: calculated.underlyingNumber != null ? "master_number" : "single_digit",
@@ -108,7 +108,7 @@ export function LifePathCalculator({ primaryKeyword }: LifePathCalculatorProps) 
     } catch {
       setResult(null);
       setError("Please check the birth date and try again.");
-      trackEvent("life_path_calculation_error", {
+      trackFunnelEvent("life_path_calculation_error", {
         ...baseProps(),
         error_type: "invalid_date",
       });
@@ -237,10 +237,44 @@ export function LifePathCalculator({ primaryKeyword }: LifePathCalculatorProps) 
             <p className="wimlpn-result-root">Underlying root: {result.underlyingNumber}</p>
           ) : null}
 
+          <div className="wimlpn-result-bridge" aria-labelledby={`${formId}-bridge-heading`}>
+            <p className="wimlpn-result-bridge-kicker">Next</p>
+            <h3 id={`${formId}-bridge-heading`}>Want more than this one number?</h3>
+            <p className="wimlpn-result-bridge-lead">
+              Your Life Path is one theme. Your Free Soul Blueprint shows four parts of you:
+            </p>
+            <ul className="wimlpn-result-bridge-parts">
+              <li>who you naturally are</li>
+              <li>how you show up</li>
+              <li>your relationships</li>
+              <li>the pattern you keep coming back to</li>
+            </ul>
+            <div className="wimlpn-result-cta">
+              <SeoArticleCtaLink
+                cta={{
+                  label: "See My Free Soul Blueprint",
+                  href: FREE_BLUEPRINT_HREF,
+                  intent: "free_blueprint",
+                }}
+                slug={SLUG}
+                cluster={CLUSTER}
+                placement="result"
+                primaryKeyword={primaryKeyword}
+                className="gold-button"
+                onNavigate={continueWithBirthDate}
+              />
+            </div>
+          </div>
+
           <p className="wimlpn-result-body">{meaning.body}</p>
           <p className="wimlpn-result-body">
             This does not mean you must match every association. It offers a symbolic theme you can compare with your
             lived experience.
+          </p>
+          <p className="wimlpn-quiet-link">
+            <Link href={`#${lifePathSectionId(result.lifePath)}`}>
+              Read the full meaning for Life Path {result.lifePath}
+            </Link>
           </p>
 
           <p>
@@ -279,29 +313,6 @@ export function LifePathCalculator({ primaryKeyword }: LifePathCalculatorProps) 
               </li>
             </ul>
           </details>
-
-          <div className="wimlpn-result-cta">
-            <SeoArticleCtaLink
-              cta={{
-                label: "Discover My Free Soul Blueprint",
-                href: FREE_BLUEPRINT_HREF,
-                intent: "free_blueprint",
-              }}
-              slug={SLUG}
-              cluster={CLUSTER}
-              placement="result"
-              primaryKeyword={primaryKeyword}
-              className="gold-button"
-              onNavigate={continueWithBirthDate}
-            />
-            <p className="wimlpn-handoff-note">
-              Continue into a separate 1320 experience. Your Life Path result is not part of the Soul Blueprint
-              calculation.
-            </p>
-            <p className="wimlpn-quiet-link">
-              <Link href={`#${lifePathSectionId(result.lifePath)}`}>Read the full meaning for Life Path {result.lifePath}</Link>
-            </p>
-          </div>
         </article>
       ) : null}
     </section>

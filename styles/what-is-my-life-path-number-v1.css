@@ -200,6 +200,7 @@
 .wimlpn-quiet-link {
   margin: 0.25rem 0 0;
   font-size: 0.92rem;
+  text-align: center;
 }
 
 .wimlpn-quiet-link a {
@@ -293,8 +294,67 @@
   padding-left: 1.15rem;
 }
 
+.wimlpn-result-bridge {
+  margin: 1.35rem 0 1.6rem;
+  padding: 1.45rem 1.25rem 1.4rem;
+  border: 1.5px solid rgba(244, 216, 138, 0.78);
+  border-radius: 16px;
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(244, 216, 138, 0.28), transparent 58%),
+    linear-gradient(180deg, rgba(244, 216, 138, 0.14), rgba(8, 14, 28, 0.72));
+  box-shadow:
+    0 0 0 4px rgba(244, 216, 138, 0.08),
+    0 16px 36px rgba(0, 0, 0, 0.32);
+  text-align: center;
+}
+
+.wimlpn-result-bridge-kicker {
+  margin: 0 0 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #f4d88a;
+}
+
+.wimlpn-result-bridge h3 {
+  margin: 0 0 0.55rem;
+  font-size: clamp(1.4rem, 3.2vw, 1.75rem);
+  font-weight: 600;
+  color: #fff6dc;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+}
+
+.wimlpn-result-bridge-lead {
+  margin: 0 auto 0.85rem;
+  max-width: 28rem;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.wimlpn-result-bridge-parts {
+  list-style: none;
+  margin: 0 auto 1.15rem;
+  padding: 0;
+  max-width: 22rem;
+  display: grid;
+  gap: 0.4rem;
+  text-align: left;
+}
+
+.wimlpn-result-bridge-parts li {
+  margin: 0;
+  padding: 0.48rem 0.75rem;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.28);
+  border-left: 3px solid #f4d88a;
+  font-size: 0.98rem;
+  line-height: 1.35;
+}
+
 .wimlpn-result-cta {
-  margin-top: 1.5rem;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   align-items: stretch;

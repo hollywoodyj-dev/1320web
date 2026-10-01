@@ -25,7 +25,11 @@ export type AnalyticsEventName =
   | "booking_page_view"
   | "booking_option_selected"
   | "booking_started"
-  | "booking_completed";
+  | "booking_completed"
+  | "life_path_calculator_started"
+  | "life_path_calculator_completed"
+  | "life_path_calculation_error"
+  | "life_path_result_meaning_viewed";
 
 export type AnalyticsPayload = Record<
   string,

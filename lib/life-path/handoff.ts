@@ -1,4 +1,7 @@
-/** Short-lived Life Path → Free Soul Blueprint birth-date handoff (session only). */
+/**
+ * Session-only birth-date prefill for Free Blueprint.
+ * The Life Path result click opens /result directly and does not use this.
+ */
 
 export const LIFE_PATH_HANDOFF_KEY = "1320_life_path_handoff_v1";
 const MAX_AGE_MS = 30 * 60 * 1000;

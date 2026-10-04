@@ -346,6 +346,19 @@ assert(
     .includes('trackFunnelEvent("life_path_calculator_started"'),
   "Life Path calculator must persist life_path_calculator_started via trackFunnelEvent",
 );
+const lifePathCalculator = fs.readFileSync(
+  path.join(webRoot, "components/seo/life-path-calculator.tsx"),
+  "utf8",
+);
+assert(
+  lifePathCalculator.includes('destination: "result"') &&
+    lifePathCalculator.includes("submitBirthDate"),
+  "Life Path result handoff must open the free report with the date already entered",
+);
+assert(
+  !lifePathCalculator.includes("saveLifePathHandoff"),
+  "Life Path result handoff must not send the visitor to a second calculator",
+);
 assert(
   !persistNames.includes("free_result_view") &&
     !persistNames.includes("result_view") &&

@@ -336,13 +336,16 @@ async function main() {
     url: location.href,
     session: { ...sessionStorage },
     local: { ...localStorage },
+    secondCalculator: Boolean(document.querySelector(".fsb-birth-form, form.entry-form")),
   }));
-  const handoffSessionText = Object.values(handoff.session).join(" ");
+  const handoffUrl = new URL(handoff.url);
   const handoffLocalText = Object.values(handoff.local).join(" ");
-  check("Optional continuation has no birth date in URL and uses session-only handoff",
-    new URL(handoff.url).pathname === "/free-soul-blueprint" &&
-      !/1987|(?:birth|year|month|day)=/i.test(handoff.url) &&
-      /"year":1987/.test(handoffSessionText) &&
+  check("Result click opens the free report and does not show a second calculator",
+    handoffUrl.pathname === "/result" &&
+      handoffUrl.searchParams.get("year") === "1987" &&
+      handoffUrl.searchParams.get("month") === "2" &&
+      handoffUrl.searchParams.get("day") === "2" &&
+      !handoff.secondCalculator &&
       !/"year":1987/.test(handoffLocalText), handoff);
 
   const mobile = await browser.newPage();

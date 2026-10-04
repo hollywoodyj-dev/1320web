@@ -5,7 +5,7 @@
  * Those names never matched the ME Spec catalog, so admin stayed at 0.
  *
  * Fire points (T9):
- *   generate_code_started     — valid birth-date submit (`submitBirthDate`)
+ *   generate_code_started     — valid birth-date submit (`submitBirthDate`), including the Life Path result handoff
  *   generate_code_completed   — free result shown (`/result` ReportDashboard)
  *   sample_report_view        — public sample `/full-report-v2`
  *   full_report_cta_click     — `/full-report` checkout CTAs + free-result Unlock

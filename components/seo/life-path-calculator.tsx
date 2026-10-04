@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { FormEvent, useEffect, useId, useRef, useState } from "react";
-import { SeoArticleCtaLink } from "@/components/seo/seo-article-cta-link";
+import { trackEvent } from "@/lib/analytics";
 import { trackFunnelEvent } from "@/lib/funnel/track-funnel-event";
 import {
   calculateLifePath,
@@ -10,14 +10,15 @@ import {
   validateLifePathFields,
   type LifePathResult,
 } from "@/lib/life-path/calculate-life-path";
-import { saveLifePathHandoff } from "@/lib/life-path/handoff";
 import { getLifePathMeaning, lifePathSectionId } from "@/lib/life-path/meanings";
 import { seoAttributionAnalyticsProps } from "@/lib/seo/attribution";
 import { FREE_BLUEPRINT_HREF } from "@/lib/seo/types";
+import { submitBirthDate } from "@/lib/submitBirthDate";
 
 const SLUG = "what-is-my-life-path-number";
 const CLUSTER = "life-path-numerology";
 const ANALYTICS_CLUSTER = "life-path-calculator";
+const FREE_REPORT_CTA = "Open My Free Soul Blueprint";
 
 type LifePathCalculatorProps = {
   primaryKeyword?: string;
@@ -49,6 +50,8 @@ export function LifePathCalculator({ primaryKeyword }: LifePathCalculatorProps) 
     null,
   );
   const [traceOpen, setTraceOpen] = useState(true);
+  const [handoffError, setHandoffError] = useState("");
+  const openingRef = useRef(false);
 
   const baseProps = () =>
     seoAttributionAnalyticsProps({
@@ -115,9 +118,42 @@ export function LifePathCalculator({ primaryKeyword }: LifePathCalculatorProps) 
     }
   }
 
-  function continueWithBirthDate() {
-    if (!result) return;
-    saveLifePathHandoff(result.input.year, result.input.month, result.input.day);
+  function openFreeReport() {
+    if (!result || openingRef.current) return;
+    openingRef.current = true;
+    setHandoffError("");
+
+    const ctaProps = {
+      ...seoAttributionAnalyticsProps({
+        content_slug: SLUG,
+        primary_cluster: CLUSTER,
+        ...(primaryKeyword ? { primary_keyword: primaryKeyword } : {}),
+      }),
+      cta_label: FREE_REPORT_CTA,
+      cta_intent: "free_blueprint",
+      cta_placement: "result",
+      cta_position: "result",
+    };
+    trackEvent("seo_article_cta_click", ctaProps);
+    trackEvent("seo_to_free_blueprint", ctaProps);
+    trackFunnelEvent("guide_cta_click", {
+      cta_label: FREE_REPORT_CTA,
+      cta_placement: "result",
+      content_slug: SLUG,
+    });
+
+    const submitted = submitBirthDate(
+      String(result.input.year),
+      String(result.input.month),
+      String(result.input.day),
+      { source: "free-soul-blueprint", destination: "result" },
+    );
+    if (!submitted.ok) {
+      openingRef.current = false;
+      setHandoffError(submitted.message);
+      return;
+    }
+    window.location.assign(submitted.href);
   }
 
   const meaning = result ? getLifePathMeaning(result.lifePath) : null;
@@ -250,19 +286,14 @@ export function LifePathCalculator({ primaryKeyword }: LifePathCalculatorProps) 
               <li>the pattern you keep coming back to</li>
             </ul>
             <div className="wimlpn-result-cta">
-              <SeoArticleCtaLink
-                cta={{
-                  label: "See My Free Soul Blueprint",
-                  href: FREE_BLUEPRINT_HREF,
-                  intent: "free_blueprint",
-                }}
-                slug={SLUG}
-                cluster={CLUSTER}
-                placement="result"
-                primaryKeyword={primaryKeyword}
-                className="gold-button"
-                onNavigate={continueWithBirthDate}
-              />
+              {handoffError ? (
+                <p className="wimlpn-error" role="alert">
+                  {handoffError}
+                </p>
+              ) : null}
+              <button type="button" className="gold-button" onClick={openFreeReport}>
+                {FREE_REPORT_CTA}
+              </button>
             </div>
           </div>
 

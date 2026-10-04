@@ -8,7 +8,7 @@ import {
 import { trackFunnelEvent } from "@/lib/funnel/track-funnel-event";
 import { devLog } from "@/lib/dev-log";
 import { birthPartsToNumbers, parseBirthDateInput } from "@/lib/parse-birth-date-input";
-import { buildGeneratingHref, saveSession1320, toSessionPayload } from "@/lib/session1320";
+import { buildGeneratingHref, buildResultHref, saveSession1320, toSessionPayload } from "@/lib/session1320";
 import { getBirthDateValidationMessage } from "@/lib/validateBirthDate";
 
 export type SubmitBirthDateResult =
@@ -21,7 +21,11 @@ export function submitBirthDate(
   yearRaw: string,
   monthRaw: string,
   dayRaw: string,
-  options?: { source?: SubmitBirthDateSource },
+  options?: {
+    source?: SubmitBirthDateSource;
+    /** Life Path result handoff uses "result" so the click opens the free report. */
+    destination?: "generating" | "result";
+  },
 ): SubmitBirthDateResult {
   const source = options?.source ?? "your-code";
   const attrProps = attributionToAnalyticsProps(loadFunnelAttribution());
@@ -63,7 +67,11 @@ export function submitBirthDate(
       trackEvent("free_blueprint_generation_started", attrProps);
     }
     trackFunnelEvent("generate_code_started", { entry: source });
-    const href = appendAttributionToHref(buildGeneratingHref(year, month, day));
+    const reportPath =
+      options?.destination === "result"
+        ? buildResultHref(year, month, day)
+        : buildGeneratingHref(year, month, day);
+    const href = appendAttributionToHref(reportPath);
     return { ok: true, href };
   } catch {
     trackEvent("calculator_error", { reason: "system", source });

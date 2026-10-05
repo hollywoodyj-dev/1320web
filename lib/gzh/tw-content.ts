@@ -1,6 +1,6 @@
 /**
  * Taiwan GZH copy — Traditional Chinese (Hant).
- * Still GZH Semantic Gate YELLOW until full review; comprehension-first expansion after Lumen witness.
+ * Taiwan GZH copy — Traditional Chinese (Hant). Semantic gate GREEN (2026-10-05).
  */
 
 export const GZH_TW_BRAND = {

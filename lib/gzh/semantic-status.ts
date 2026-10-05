@@ -6,13 +6,13 @@ import type { GzhMarket, GzhSemanticStatus } from "@/lib/gzh/locale";
 
 /** Per-market public semantics status (GZH Gate). */
 export const GZH_MARKET_SEMANTIC_STATUS: Record<GzhMarket, GzhSemanticStatus> = {
-  tw: "YELLOW",
+  tw: "GREEN",
   hk: "RED",
   sg: "RED",
   my: "RED",
 };
 
-/** TW landing chrome uses Founder-locked brand lines only — still YELLOW for full product GREEN. */
+/** Public indexation follows the market gate. Taiwan is GREEN as of Holly's 2026-10-05 review. */
 export function gzhMarketIsPublicIndexable(market: GzhMarket): boolean {
   return GZH_MARKET_SEMANTIC_STATUS[market] === "GREEN";
 }

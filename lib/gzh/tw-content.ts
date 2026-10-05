@@ -31,7 +31,7 @@ export const GZH_TW_HOW = {
     },
     {
       title: "看見四個面向",
-      text: "免費體驗會看四個部分：你本來的樣子、你怎麼表現、你的關係，以及你一直會回到的模式。",
+      text: "免費體驗會看四個部分：你原本的模樣、你怎麼表現、你的關係，以及你反覆回到的模式。",
     },
     {
       title: "留給你自己觀察",
@@ -45,14 +45,14 @@ export const GZH_TW_WHAT_YOU_GET = {
   items: [
     "一段可以做完的免費體驗",
     "依國曆生日組成的象徵組合",
-    "幫你看看：什麼感覺更像本來的自己，什麼比較像後來學會的配合",
+    "陪你看見：什麼感覺更像原本的自己，什麼比較像後來學會的配合",
   ],
 } as const;
 
 /** Illustrative sample — clearly fictional; not a live reading. */
 export const GZH_TW_EXAMPLE = {
   title: "一個例子",
-  parts: "你本來的樣子、你怎麼表現、你的關係、你一直會回到的模式。",
+  parts: "你原本的模樣、你怎麼表現、你的關係、你反覆回到的模式。",
   sampleLines: [
     "你可能很會把事情處理得妥當，讓身邊的人安心。",
     "那種妥當，有時比較像後來學會的配合。",
@@ -70,11 +70,11 @@ export const GZH_TW_ABOUT = {
   whatItIs: [
     "一面結構化的鏡子：幫你看見可能反覆出現的生命模式",
     "一次可完成的反思體驗：從生日出發，進入觀察，而不是進入結論",
-    "全球同一套核心治理：看見，而不是斷定；映照，而不是定義",
+    "全球一致的核心原則：看見，而不是斷定；映照，而不是定義",
   ],
   whatItIsNotTitle: "它不是什麼",
   whatItIsNot: [
-    "不是算命、命理或測命運",
+    "不是算命或命理",
     "不是心理診斷或諮商替代",
     "不是保證改變人生結果的方法",
   ],
@@ -92,7 +92,6 @@ export const GZH_TW_FREE = {
   yearLabel: "年",
   monthLabel: "月",
   dayLabel: "日",
-  comprehensionHint: "請先閱讀上方說明與例子後再回答。若你剛完成結果頁，也可以依整體感受作答。",
 } as const;
 
 /** Lightweight GZH-1 comprehension research prompt (neutral options) — Traditional. */

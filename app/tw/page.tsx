@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { GzhComprehensionCheck } from "@/components/gzh/gzh-comprehension-check";
 import { GzhTwExplainSections } from "@/components/gzh/gzh-tw-explain-sections";
-import { GZH_TW_BRAND, GZH_TW_FREE, GZH_TW_LANDING } from "@/lib/gzh/tw-content";
+import { GZH_TW_BRAND, GZH_TW_LANDING } from "@/lib/gzh/tw-content";
 import { gzhHref } from "@/lib/gzh/locale";
 
 export const metadata: Metadata = {
@@ -43,9 +42,6 @@ export default function TwLandingPage() {
         <br />
         {GZH_TW_BRAND.principleMirror}
       </p>
-
-      <p className="gzh-note">{GZH_TW_FREE.comprehensionHint}</p>
-      <GzhComprehensionCheck market="tw" />
     </article>
   );
 }

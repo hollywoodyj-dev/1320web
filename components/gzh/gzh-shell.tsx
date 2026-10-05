@@ -33,7 +33,6 @@ export function GzhShell({
           <br />
           {GZH_TW_BRAND.principleMirror}
         </p>
-        <p className="gzh-emotional">{GZH_TW_BRAND.emotional}</p>
         <div
           className="gzh-privacy-slot"
           data-privacy-status={privacy.status}

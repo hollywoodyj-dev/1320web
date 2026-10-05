@@ -18,8 +18,8 @@ export const GZH_TW_LANDING = {
   boundary: "這是一面鏡子，不是一張判決書。",
   ctaPrimary: "開始免費生命映照",
   ctaSecondary: "了解 1320",
-  trustLine: "只需國曆出生年月日。不需要出生時辰與地點。",
-  reportLanguageNote: "完整報告目前提供英文版本。",
+  trustLine: "只需國曆出生年月日。不需要出生時間與地點。",
+  reportLanguageNote: "說明與輸入是中文。你打開的報告目前是英文。",
 } as const;
 
 export const GZH_TW_HOW = {
@@ -88,7 +88,7 @@ export const GZH_TW_FREE = {
   title: "免費生命映照",
   body: "輸入你的國曆出生年月日，開始一次安靜的自我觀察。",
   boundary: "看見，而不是斷定。映照，而不是定義。",
-  cta: "生成我的生命映照",
+  cta: "開始我的生命映照",
   yearLabel: "年",
   monthLabel: "月",
   dayLabel: "日",

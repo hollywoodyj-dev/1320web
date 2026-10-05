@@ -13,27 +13,25 @@ export const GZH_TW_BRAND = {
 
 export const GZH_TW_LANDING = {
   metaTitle: "1320｜生命映照",
-  metaDescription:
-    "1320｜生命映照——以結構化的方式看見自己的生命模式。不是算命，不是命理，不是心理診斷。",
+  metaDescription: "1320｜生命映照——以結構化的方式看見自己的生命模式。",
   heroLead: "一生，學習看見、理解並愛自己。",
-  boundary: "不是預測。不是命定。不是替你下結論。",
+  boundary: "這是一面鏡子，不是一張判決書。",
   ctaPrimary: "開始免費生命映照",
   ctaSecondary: "了解 1320",
-  trustLine: "只需公曆出生年月日。不需要出生時辰與地點。",
+  trustLine: "只需國曆出生年月日。不需要出生時辰與地點。",
   reportLanguageNote: "完整報告目前提供英文版本。",
-  semanticNote: "本頁文案處於 Global Chinese 語義審校中（尚未 GREEN）。",
 } as const;
 
 export const GZH_TW_HOW = {
   title: "怎麼運作",
   steps: [
     {
-      title: "輸入公曆生日",
-      text: "只用年、月、日。系統依固定規則組成一組象徵結構——不是即興生成，也不是靈媒解讀。",
+      title: "輸入國曆生日",
+      text: "只用年、月、日。系統依固定規則組成一組象徵組合。",
     },
     {
       title: "看見四個面向",
-      text: "免費體驗會映照：起源感、表達方式、關係中的鏡子，以及你如何回到自己。",
+      text: "免費體驗會看四個部分：你本來的樣子、你怎麼表現、你的關係，以及你一直會回到的模式。",
     },
     {
       title: "留給你自己觀察",
@@ -45,29 +43,22 @@ export const GZH_TW_HOW = {
 export const GZH_TW_WHAT_YOU_GET = {
   title: "你會得到什麼",
   items: [
-    "一段可完成的免費自我映照體驗",
-    "以出生日期組成的象徵結構（非算命結論）",
-    "幫助你觀察「什麼感覺更基礎、什麼比較像後來的適應」",
-  ],
-  notItems: [
-    "不會告訴你命運好壞",
-    "不會診斷心理狀態",
-    "不會承諾改運、招財或感情結果",
+    "一段可以做完的免費體驗",
+    "依國曆生日組成的象徵組合",
+    "幫你看看：什麼感覺更像本來的自己，什麼比較像後來學會的配合",
   ],
 } as const;
 
 /** Illustrative sample — clearly fictional; not a live reading. */
 export const GZH_TW_EXAMPLE = {
-  title: "一個映照例子（示意）",
-  disclaimer: "以下為示意，不是任何人的真實結果，也不構成預測。",
-  label: "示意結構",
-  codeHint: "例如：起源 · 表達 · 鏡子 · 回歸",
+  title: "一個例子",
+  parts: "你本來的樣子、你怎麼表現、你的關係、你一直會回到的模式。",
   sampleLines: [
-    "你可能很擅長把事情處理得妥當，讓周圍的人安心。",
-    "但有時，那種「妥當」比較像後來學會的配合，而不是最先出現的狀態。",
-    "映照要問的是：在適應之前，什麼對你而言更安靜、更基礎？",
+    "你可能很會把事情處理得妥當，讓身邊的人安心。",
+    "那種妥當，有時比較像後來學會的配合。",
+    "在配合之前，什麼對你更安靜、更像本來的自己？",
   ],
-  takeaway: "重點不是「你是誰的標籤」，而是「你可以從哪個角度重新看見自己的模式」。",
+  takeaway: "你可以從這裡重新看見自己的模式。",
 } as const;
 
 export const GZH_TW_ABOUT = {
@@ -93,9 +84,9 @@ export const GZH_TW_ABOUT = {
 
 export const GZH_TW_FREE = {
   metaTitle: "免費生命映照｜1320",
-  metaDescription: "輸入公曆生日，獲得一次結構化的自我映照體驗。",
+  metaDescription: "輸入國曆生日，開始一次結構化的自我觀察。",
   title: "免費生命映照",
-  body: "輸入你的公曆出生年月日，開始一次安靜的自我觀察——看見模式，而不是被定義。",
+  body: "輸入你的國曆出生年月日，開始一次安靜的自我觀察。",
   boundary: "看見，而不是斷定。映照，而不是定義。",
   cta: "生成我的生命映照",
   yearLabel: "年",

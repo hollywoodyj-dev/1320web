@@ -4,7 +4,6 @@ import { GzhComprehensionCheck } from "@/components/gzh/gzh-comprehension-check"
 import { GzhTwExplainSections } from "@/components/gzh/gzh-tw-explain-sections";
 import { GZH_TW_BRAND, GZH_TW_FREE, GZH_TW_LANDING } from "@/lib/gzh/tw-content";
 import { gzhHref } from "@/lib/gzh/locale";
-import { GZH_MARKET_SEMANTIC_STATUS } from "@/lib/gzh/semantic-status";
 
 export const metadata: Metadata = {
   title: GZH_TW_LANDING.metaTitle,
@@ -19,8 +18,6 @@ export const metadata: Metadata = {
 };
 
 export default function TwLandingPage() {
-  const status = GZH_MARKET_SEMANTIC_STATUS.tw;
-
   return (
     <article className="gzh-landing">
       <h1 className="gzh-hero-brand">{GZH_TW_BRAND.name}</h1>
@@ -49,10 +46,6 @@ export default function TwLandingPage() {
 
       <p className="gzh-note">{GZH_TW_FREE.comprehensionHint}</p>
       <GzhComprehensionCheck market="tw" />
-
-      <p className="gzh-note" data-semantic-status={status}>
-        {GZH_TW_LANDING.semanticNote} · gate={status}
-      </p>
     </article>
   );
 }

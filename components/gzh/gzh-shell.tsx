@@ -39,10 +39,11 @@ export function GzhShell({
           data-privacy-status={privacy.status}
           data-market={privacy.market}
         >
-          <Link href={privacy.privacyHref}>Privacy</Link>
-          {" · "}
-          <Link href={privacy.termsHref}>Terms</Link>
-          <span className="gzh-privacy-note">{privacy.supportNote}</span>
+          <p className="gzh-privacy-links">
+            <Link href={privacy.privacyHref}>隱私權</Link>
+            <Link href={privacy.termsHref}>使用條款</Link>
+          </p>
+          {privacy.supportNote ? <span className="gzh-privacy-note">{privacy.supportNote}</span> : null}
         </div>
       </footer>
     </div>

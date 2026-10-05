@@ -31,22 +31,13 @@ export function GzhTwExplainSections() {
             <li key={item}>{item}</li>
           ))}
         </ul>
-        <p className="gzh-not-label">明確不是：</p>
-        <ul className="gzh-list gzh-list--not">
-          {GZH_TW_WHAT_YOU_GET.notItems.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
       </section>
 
       <section className="gzh-section gzh-example" aria-labelledby="gzh-example-title">
         <h2 id="gzh-example-title" className="gzh-section-title">
           {GZH_TW_EXAMPLE.title}
         </h2>
-        <p className="gzh-example-disclaimer">{GZH_TW_EXAMPLE.disclaimer}</p>
-        <p className="gzh-example-label">
-          {GZH_TW_EXAMPLE.label}：{GZH_TW_EXAMPLE.codeHint}
-        </p>
+        <p className="gzh-example-parts">{GZH_TW_EXAMPLE.parts}</p>
         {GZH_TW_EXAMPLE.sampleLines.map((line) => (
           <p key={line} className="gzh-example-line">
             {line}

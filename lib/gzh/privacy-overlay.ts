@@ -19,7 +19,7 @@ export const GZH_PRIVACY_OVERLAY: Record<GzhMarket, GzhPrivacyOverlaySlot> = {
     status: "placeholder",
     privacyHref: "/privacy",
     termsHref: "/terms",
-    supportNote: "台灣市場隱私與條款疊層待法務確認（GZH-1 organic · 非 CRM 行銷主路徑）。",
+    supportNote: "",
   },
   hk: {
     market: "hk",

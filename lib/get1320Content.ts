@@ -130,7 +130,8 @@ export function get1320Content(
   return get1320ContentV1(normalized, options);
 }
 
-function get1320ContentV1(
+/** Taiwan free report uses this path. The v2 commercial layer is English-only. */
+export function get1320ContentV1(
   normalized: Get1320ContentInput,
   options?: Get1320ContentOptions,
 ): Get1320ContentResult {

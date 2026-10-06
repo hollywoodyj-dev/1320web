@@ -3,7 +3,7 @@ import Link from "next/link";
 import { GzhTwFreeReportComplete } from "@/components/gzh/gzh-tw-free-report-complete";
 import { calculate1320Code } from "@/lib/calculate1320Code";
 import { containsCjk, pickLocalized } from "@/lib/getLocalized";
-import { get1320Content } from "@/lib/get1320Content";
+import { get1320ContentV1 } from "@/lib/get1320Content";
 import { traditionalLines } from "@/lib/gzh/to-traditional";
 import { GZH_TW_RESULT } from "@/lib/gzh/tw-content";
 import { gzhHref } from "@/lib/gzh/locale";
@@ -56,7 +56,7 @@ export default async function TwResultPage({
   const { year, month, day } = birth;
   const code = calculate1320Code(year, month, day);
   const birthDateLabel = `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
-  const content = get1320Content(
+  const content = get1320ContentV1(
     {
       s1: code.s1,
       s3: code.s3Raw,

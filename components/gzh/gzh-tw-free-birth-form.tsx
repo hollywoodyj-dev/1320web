@@ -47,6 +47,9 @@ export function GzhTwFreeBirthForm({ idPrefix }: GzhTwFreeBirthFormProps) {
       idPrefix={idPrefix}
       submitLabel={GZH_TW_FREE.cta}
       onFieldFocus={onFieldFocus}
+      destination="result"
+      resultPath="/tw/result"
+      action="/tw/result"
     />
   );
 }

@@ -225,6 +225,53 @@
   line-height: 1.6;
 }
 
+.gzh-report-codes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0 0 1.5rem;
+}
+
+.gzh-report-code-num {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.gzh-report-code-label {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--gzh-muted);
+}
+
+.gzh-report-part {
+  margin: 0 0 1rem;
+  padding: 1.1rem 1rem 0.45rem;
+  border: 1px solid rgba(26, 26, 24, 0.08);
+  border-radius: 0.35rem;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.gzh-report-part h2 {
+  margin: 0 0 0.65rem;
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.gzh-report-part-num {
+  margin: -0.35rem 0 0.65rem;
+  font-size: 0.85rem;
+  color: var(--gzh-muted);
+}
+
+.gzh-report-line {
+  margin: 0 0 0.65rem;
+  line-height: 1.75;
+}
+
 .gzh-hero-form {
   margin: 1.75rem 0 1rem;
   padding: 1.25rem;
@@ -259,5 +306,9 @@
 @media (max-width: 640px) {
   .gzh-header {
     flex-direction: column;
+  }
+
+  .gzh-report-codes {
+    grid-template-columns: 1fr 1fr;
   }
 }

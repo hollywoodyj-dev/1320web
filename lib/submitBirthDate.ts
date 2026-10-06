@@ -25,6 +25,8 @@ export function submitBirthDate(
     source?: SubmitBirthDateSource;
     /** Life Path result handoff uses "result" so the click opens the free report. */
     destination?: "generating" | "result";
+    /** Taiwan free report uses `/tw/result`. English stays `/result`. */
+    resultPath?: string;
   },
 ): SubmitBirthDateResult {
   const source = options?.source ?? "your-code";
@@ -69,7 +71,7 @@ export function submitBirthDate(
     trackFunnelEvent("generate_code_started", { entry: source });
     const reportPath =
       options?.destination === "result"
-        ? buildResultHref(year, month, day)
+        ? buildResultHref(year, month, day, options?.resultPath)
         : buildGeneratingHref(year, month, day);
     const href = appendAttributionToHref(reportPath);
     return { ok: true, href };

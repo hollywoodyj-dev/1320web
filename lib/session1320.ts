@@ -50,8 +50,16 @@ export function loadSession1320(): Session1320Birth | null {
   }
 }
 
-export function buildResultHref(year: number, month: number, day: number): string {
-  return `/result?year=${year}&month=${month}&day=${day}`;
+const RESULT_PATHS = new Set(["/result", "/tw/result"]);
+
+export function buildResultHref(
+  year: number,
+  month: number,
+  day: number,
+  basePath = "/result",
+): string {
+  const base = RESULT_PATHS.has(basePath) ? basePath : "/result";
+  return `${base}?year=${year}&month=${month}&day=${day}`;
 }
 
 export function buildGeneratingHref(year: number, month: number, day: number): string {

@@ -6,7 +6,7 @@
  *
  * Fire points (T9):
  *   generate_code_started     — valid birth-date submit (`submitBirthDate`), including the Life Path result handoff
- *   generate_code_completed   — free result shown (`/result` ReportDashboard)
+ *   generate_code_completed   — free result shown (`/result` ReportDashboard, `/tw/result`)
  *   sample_report_view        — public sample `/full-report-v2`
  *   full_report_cta_click     — `/full-report` checkout CTAs + free-result Unlock
  *   checkout_started          — paid checkout form mounted (`UnlockCheckoutForm`)

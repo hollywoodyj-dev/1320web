@@ -19,7 +19,7 @@ export const GZH_TW_LANDING = {
   ctaPrimary: "開始免費生命映照",
   ctaSecondary: "了解 1320",
   trustLine: "只需國曆出生年月日。不需要出生時間與地點。",
-  reportLanguageNote: "說明與輸入是中文。你打開的報告目前是英文。",
+  reportLanguageNote: "免費生命映照是中文。完整報告目前是英文。",
 } as const;
 
 export const GZH_TW_HOW = {
@@ -105,6 +105,29 @@ export const GZH_TW_COMPREHENSION = {
     { id: "fate", label: "命運或靈魂預測" },
     { id: "unsure", label: "還不確定" },
   ],
+} as const;
+
+export const GZH_TW_RESULT = {
+  metaTitle: "你的生命映照",
+  metaDescription:
+    "依國曆生日看見四個部分：你原本的模樣、你怎麼表現、你的關係、你反覆回到的模式。",
+  title: "你的生命映照",
+  boundary: "這是一面鏡子，不是一張判決書。",
+  birthPrefix: "國曆",
+  parts: [
+    { id: "s1", label: "你原本的模樣" },
+    { id: "s3", label: "你怎麼表現" },
+    { id: "s2", label: "你的關係" },
+    { id: "s0", label: "你反覆回到的模式" },
+  ],
+  mirrorLine: "文字是鏡子，不是判決。",
+  mirrorBody: "你可以同意、不同意，或只是多看見一點自己的模式。",
+  fullReportNote: "這是免費的四個部分。完整報告目前是英文。",
+  missingDateTitle: "還沒有讀到生日",
+  missingDateBody: "這個連結沒有可用的國曆生日。回到免費生命映照，再輸入一次。",
+  missingDateCta: "回到免費生命映照",
+  missingPart: "這一段的中文說明還在準備中。",
+  reflectionTitle: "留給你自己觀察",
 } as const;
 
 export const GZH_TW_NAV = {

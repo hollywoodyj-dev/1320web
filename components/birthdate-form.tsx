@@ -14,6 +14,12 @@ type BirthDateFormProps = {
   /** Override primary submit label (Funnel Spec CTA). */
   submitLabel?: string;
   onFieldFocus?: () => void;
+  /** Skip the generating screen and open the report directly. */
+  destination?: "generating" | "result";
+  /** Report path when destination is "result". English stays `/result`. */
+  resultPath?: string;
+  /** No-JS form target. Taiwan free report posts to `/tw/result`. */
+  action?: string;
 };
 
 export function BirthDateForm({
@@ -21,6 +27,9 @@ export function BirthDateForm({
   idPrefix,
   submitLabel,
   onFieldFocus,
+  destination,
+  resultPath,
+  action = "/generating",
 }: BirthDateFormProps) {
   const formId = useId();
   const prefix = idPrefix ?? formId.replace(/:/g, "");
@@ -81,6 +90,8 @@ export function BirthDateForm({
           : variant === "free-soul-blueprint"
             ? "free-soul-blueprint"
             : "your-code",
+      destination,
+      resultPath,
     });
 
     if (!result.ok) {
@@ -118,7 +129,7 @@ export function BirthDateForm({
   const formProps = {
     ref: formRef,
     id: `${prefix}-form`,
-    action: "/generating",
+    action,
     method: "get" as const,
     noValidate: true,
     onSubmit,

@@ -201,4 +201,31 @@
   .report-dashboard--refined .report-full-upsell--refined .report-full-upsell-body {
     font-size: 16.5px;
   }
+
+  .report-dashboard--refined .report-pillar-grid {
+    gap: 12px;
+  }
+
+  .report-dashboard--refined .report-pillar-card {
+    min-height: 0;
+    padding: 12px 14px 10px;
+  }
+
+  .report-dashboard--refined .report-pillar-card .pillar-code {
+    font-size: 1.65rem;
+  }
+
+  .report-dashboard--refined .report-pillar-card .pillar-card-body {
+    margin-top: 0;
+    padding-top: 2.75rem;
+  }
+
+  .report-dashboard--refined .report-pillar-card h3 {
+    font-size: 1rem;
+  }
+
+  .report-dashboard--refined .report-pillar-essence {
+    font-size: 0.92rem;
+    line-height: 1.4;
+  }
 }

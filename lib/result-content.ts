@@ -37,7 +37,7 @@ export const FREE_RESULT_FOUNDATION = [
 export const FREE_RESULT_HERO = {
   eyebrow: "Your Code Has Opened",
   title: "Your 1320 Soul Origin Code",
-  mirrorLine: "This is a four-part mirror for awareness, not prediction or fixed identity.",
+  mirrorLine: "This is a four-part mirror for awareness.",
   primaryCta: "Unlock My Full Report",
   secondaryCta: "Save My Code",
   secondaryHref: "#keep-code",

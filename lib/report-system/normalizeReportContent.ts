@@ -54,10 +54,25 @@ function moduleFieldFallbacks(slot: FullReportV2ModuleSlot): Record<string, stri
   };
 }
 
+function previewCommercialBlocks(slot: FullReportV2ModuleSlot): Record<string, string> | null {
+  const raw = slot.preview_commercial_blocks;
+  if (!raw || typeof raw !== "object") return null;
+  const blocks: Record<string, string> = {};
+  for (const [key, value] of Object.entries(raw)) {
+    if (typeof value === "string" && value.trim()) blocks[key] = value.trim();
+  }
+  return Object.keys(blocks).length > 0 ? blocks : null;
+}
+
 function resolveCommercialBlocksForCode(
   code: string,
   slot: FullReportV2ModuleSlot,
 ): { blocks: Record<string, string>; contentLayer: "commercial" | "symbolic" } {
+  const preview = previewCommercialBlocks(slot);
+  if (preview) {
+    return { blocks: preview, contentLayer: "commercial" };
+  }
+
   const overlay = lookupCommercialOverlay(code);
   const overlayBlocks = overlay?.commercial_report_blocks ?? {};
   const mergedOverlay = { ...overlayBlocks };

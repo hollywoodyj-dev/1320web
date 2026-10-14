@@ -2,7 +2,7 @@ import OpenCC from "opencc-js";
 
 /**
  * Simplified readings already in the content database, shown as Taiwan Traditional.
- * OpenCC turns 疗愈 into 療愈; Taiwan writes 療癒. Phrase fixes below run after that conversion.
+ * OpenCC turns 疗愈 into 療愈 and the adverb 只 into 隻. Taiwan writes 療癒 and 只.
  * 本來 → 原本 matches the reviewed public wording.
  */
 const toTw = OpenCC.ConverterFactory(
@@ -36,9 +36,12 @@ const TW_FREE_REPORT_GLOSSARY: readonly (readonly [string, string])[] = [
   ["激活他人", "喚醒他人"],
   ["必須防禦", "必須防備"],
   ["量域者", "跨域者"],
+  ["高維的靈感", "更高層次的靈感"],
   ["療愈", "療癒"],
   ["激活", "喚醒"],
   ["評判", "批判"],
+  ["不是隻", "不是只"],
+  ["而不是隻", "而不是只"],
 ];
 
 export function toTraditional(text: string): string {

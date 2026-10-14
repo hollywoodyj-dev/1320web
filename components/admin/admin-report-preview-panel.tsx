@@ -76,7 +76,7 @@ export function AdminReportPreviewPanel() {
     return summarizeAdminReportPreview(parts);
   }, [year, month, day]);
 
-  function openPreview(mobile: boolean) {
+  function openPreview(mobile: boolean, language?: "zh") {
     const parts = parseAdminBirthDateInput(readNumber(year), readNumber(month), readNumber(day));
     if (!parts) {
       setError(
@@ -86,7 +86,11 @@ export function AdminReportPreviewPanel() {
       return;
     }
     setError(null);
-    window.open(buildAdminReportPreviewHref(parts, { mobile }), "_blank", "noopener,noreferrer");
+    window.open(
+      buildAdminReportPreviewHref(parts, { mobile, language }),
+      "_blank",
+      "noopener,noreferrer",
+    );
   }
 
   function onSubmit(event: FormEvent<HTMLFormElement>) {
@@ -164,6 +168,9 @@ export function AdminReportPreviewPanel() {
           </button>
           <button type="button" style={styles.button} onClick={() => openPreview(true)}>
             Open mobile layout
+          </button>
+          <button type="button" style={styles.button} onClick={() => openPreview(false, "zh")}>
+            Open Traditional Chinese full report
           </button>
         </div>
       </form>

@@ -7,6 +7,9 @@ import { isAdminEmail } from "@/lib/admin/require-admin";
 import { buildCanonicalReport } from "@/lib/canonical-report";
 import { formatBirthDateLabel, parseAdminBirthDateInput } from "@/lib/admin/report-preview";
 import { getCurrentUser } from "@/lib/auth/session";
+import { calculate1320Code } from "@/lib/calculate1320Code";
+import { get1320ContentV1 } from "@/lib/get1320Content";
+import { applyTraditionalChineseToCanonicalReport } from "@/lib/gzh/tw-full-report-preview";
 import { resolveBirthDateFromRequest } from "@/lib/resolve-birth-date";
 import "@/styles/report-system/index.css";
 
@@ -22,6 +25,11 @@ type SearchParams = Record<string, string | string[] | undefined>;
 function readFlag(value: string | string[] | undefined): boolean {
   const raw = Array.isArray(value) ? value[0] : value;
   return raw === "1" || raw === "true";
+}
+
+function readLanguage(value: string | string[] | undefined): "zh" | "en" {
+  const raw = Array.isArray(value) ? value[0] : value;
+  return raw === "zh" ? "zh" : "en";
 }
 
 export default async function AdminReportPreviewPage({
@@ -40,6 +48,7 @@ export default async function AdminReportPreviewPage({
   const params = await searchParams;
   const birth = await resolveBirthDateFromRequest(params);
   const forceMobile = readFlag(params.mobile);
+  const language = readLanguage(params.lang);
 
   if (!birth) {
     return (
@@ -69,19 +78,43 @@ export default async function AdminReportPreviewPage({
   }
 
   const birthDateLabel = formatBirthDateLabel(parsed);
-  const birthDateDisplay = new Date(parsed.year, parsed.month - 1, parsed.day).toLocaleDateString(
-    "en-US",
-    { month: "long", day: "numeric", year: "numeric" },
-  );
+  const birthDateDisplay =
+    language === "zh"
+      ? `${parsed.year}年${parsed.month}月${parsed.day}日`
+      : new Date(parsed.year, parsed.month - 1, parsed.day).toLocaleDateString("en-US", {
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+        });
 
-  const canonicalReport = buildCanonicalReport({
-    name: "Admin Preview",
+  const englishReport = buildCanonicalReport({
+    name: language === "zh" ? "管理員預覽" : "Admin Preview",
     birth_date: birthDateLabel,
     birth_date_display: birthDateDisplay,
     report_type: "Full Soul Origin Report",
+    language,
   });
 
-  const banner = `Admin preview — ${birthDateLabel} · ${canonicalReport.payload.calculation.combination_signature}. Internal review only.`;
+  let canonicalReport = englishReport;
+  if (language === "zh") {
+    const code = calculate1320Code(parsed.year, parsed.month, parsed.day);
+    const content = get1320ContentV1(
+      {
+        s1: code.s1,
+        s3: code.s3Raw,
+        s2: code.s2,
+        s0: code.s0,
+        locale: "zh",
+      },
+      { birthDate: birthDateLabel, reportTier: "full" },
+    );
+    canonicalReport = applyTraditionalChineseToCanonicalReport(englishReport, content);
+  }
+
+  const banner =
+    language === "zh"
+      ? `管理員預覽 — ${birthDateLabel}。僅供內部審閱，不是付費交付。S0–S6 是目前的中文內容。S7–S9 仍是英文。台灣付費報告仍是英文完整報告。`
+      : `Admin preview — ${birthDateLabel} · ${canonicalReport.payload.calculation.combination_signature}. Internal review only.`;
   const closeHref = "/admin";
 
   if (forceMobile) {

@@ -18,11 +18,12 @@ export function parseAdminBirthDateInput(
 
 export function buildAdminReportPreviewHref(
   parts: BirthDateParts,
-  options?: { mobile?: boolean },
+  options?: { mobile?: boolean; language?: "zh" },
 ): string {
   const query = buildReportPreviewSearchParams(formatBirthDateLabel(parts));
   const mobile = options?.mobile ? "&mobile=1" : "";
-  return `/admin/preview/report?${query}${mobile}`;
+  const language = options?.language === "zh" ? "&lang=zh" : "";
+  return `/admin/preview/report?${query}${mobile}${language}`;
 }
 
 export function summarizeAdminReportPreview(parts: BirthDateParts): {

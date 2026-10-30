@@ -1,0 +1,27 @@
+function sfx(kind){
+  if(!S.sfx)return;
+  try{
+    ac=ac||new (window.AudioContext||window.webkitAudioContext)();
+    const n=ac.currentTime;
+    const tn=(f,t0,d,g)=>{const o=ac.createOscillator(),gn=ac.createGain();o.type='sine';o.frequency.value=f;
+      gn.gain.setValueAtTime(0.0001,n+t0);gn.gain.exponentialRampToValueAtTime(g,n+t0+0.03);gn.gain.exponentialRampToValueAtTime(0.0001,n+t0+d);
+      o.connect(gn);gn.connect(ac.destination);o.start(n+t0);o.stop(n+t0+d+0.05);};
+    if(kind==='lamp'){tn(660,0,1.7,.05);tn(990,.16,1.9,.035);tn(1320,.34,2,.02);}
+    if(kind==='gesture'){tn(520,0,1.2,.04);tn(780,.1,1.5,.025);}
+    if(kind==='rise'){tn(440,0,2.4,.03);tn(880,.4,2.6,.025);tn(1320,.9,2.6,.015);}
+    if(kind==='step'){
+      const len=Math.floor(ac.sampleRate*0.07),buf=ac.createBuffer(1,len,ac.sampleRate),d=buf.getChannelData(0);
+      for(let i=0;i<len;i++)d[i]=(Math.random()*2-1)*(1-i/len);
+      const src=ac.createBufferSource(),f=ac.createBiquadFilter(),g=ac.createGain();
+      f.type='lowpass';f.frequency.value=420;g.gain.value=0.12;src.buffer=buf;src.connect(f);f.connect(g);g.connect(ac.destination);src.start(n);
+    }
+  }catch(e){}
+}
+function tone(on){
+  stopTone();if(!on)return;
+  try{
+    const c=new (window.AudioContext||window.webkitAudioContext)(),o=c.createOscillator(),g=c.createGain();
+    o.type='sine';o.frequency.value=180+(S.sc.s3.v??40)*1.6;g.gain.value=0.035;
+    o.connect(g);g.connect(c.destination);o.start();audio={c,o,g};
+  }catch(e){}
+}

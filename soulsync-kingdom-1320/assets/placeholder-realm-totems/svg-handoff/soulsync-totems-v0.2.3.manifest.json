@@ -1,0 +1,31 @@
+{
+  "version": "v0.2.3",
+  "status": "REALM_PLACEHOLDER_ONLY",
+  "role": "realm_navigation_and_unresolved_state",
+  "officialPerCodeTotems": false,
+  "allowedInPersonalizedBlueprint": false,
+  "replacementContract": "Use the official 1320 code-to-totemId asset registry returned by Nova.",
+  "viewBox": "0 0 120 120",
+  "assets": {
+    "s1": {
+      "name": "Origin",
+      "file": "soulsync-totem-s1-origin-v0.2.3.svg",
+      "meaning": "sprout / origin / growth"
+    },
+    "s3": {
+      "name": "Vibration",
+      "file": "soulsync-totem-s3-vibration-v0.2.3.svg",
+      "meaning": "arcs / vibration / expansion"
+    },
+    "s2": {
+      "name": "Mirror",
+      "file": "soulsync-totem-s2-mirror-v0.2.3.svg",
+      "meaning": "intersecting rings / relationship / mirror"
+    },
+    "s0": {
+      "name": "Void",
+      "file": "soulsync-totem-s0-void-v0.2.3.svg",
+      "meaning": "empty ring / void / open space"
+    }
+  }
+}

@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>SoulSync Kingdom · 1320 SoulCode 原型 v0.2.3 · Visual Dev</title>
+<style>
+:root{
+  --ink:#070d24; --deep:#0f1b45; --dusk:#1b2a63; --gold:#f0c97a; --gold-d:#c99a45;
+  --danger:#ffb4a8; --moon:#e8ecfb; --mist:#a9b4dc; --line:rgba(159,171,214,.3); --glow:rgba(240,201,122,.22);
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;
+  --sans:"PingFang SC","Noto Sans SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--ink);color:var(--moon);font-family:var(--sans);font-size:16px;line-height:1.75}
+body{min-height:100dvh;background:radial-gradient(120% 70% at 50% 0%,var(--dusk) 0%,var(--deep) 38%,var(--ink) 80%) fixed}
+#sky{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+#shell{position:relative;z-index:1;max-width:480px;margin:0 auto;min-height:100dvh;display:flex;flex-direction:column;padding:env(safe-area-inset-top) calc(18px + env(safe-area-inset-right)) env(safe-area-inset-bottom) calc(18px + env(safe-area-inset-left))}
+#bar{display:flex;justify-content:space-between;align-items:center;padding:10px 0 4px;gap:8px}
+#bar .brand{font-family:var(--serif);letter-spacing:.08em;color:var(--gold);font-size:16px}
+.hdr-r{display:flex;gap:8px}
+#app{flex:1;outline:none;padding-bottom:44px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:.05em;margin:0 0 .5em;line-height:1.35}
+h1{font-size:34px} h2{font-size:25px} h3{font-size:18px;color:var(--gold)}
+p{margin:0 0 1em}
+.small{font-size:16px;color:var(--mist);line-height:1.7}
+.cap{font-size:14px;color:var(--mist);line-height:1.6}
+.lead{font-family:var(--serif);font-size:19px;line-height:1.9}
+.scr{padding-top:16px;animation:fadein .5s ease both}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.btn{display:inline-block;background:var(--gold);color:#241a05;border:0;padding:12px 26px;border-radius:999px;font-weight:600;letter-spacing:.05em;min-height:48px}
+.btn:active{transform:scale(.98)}
+.btn[disabled]{opacity:.4;cursor:not-allowed}
+.btn.ghost{background:transparent;color:var(--moon);border:1px solid var(--line)}
+.btn.link{background:none;border:0;color:var(--mist);text-decoration:underline;text-underline-offset:4px;padding:10px 6px;min-height:44px;font-weight:400}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:18px}
+.stack>*+*{margin-top:10px}
+.opt{display:block;width:100%;text-align:left;background:rgba(15,27,69,.6);border:1px solid var(--line);border-left:3px solid var(--gold-d);border-radius:4px 14px 14px 4px;padding:12px 16px;min-height:52px}
+.opt:hover{background:rgba(27,42,99,.8)}
+.opt.sel{border-color:var(--gold);background:rgba(240,201,122,.12)}
+.opt.quiet{border-left-color:rgba(201,154,69,.55);color:#c9d2f2}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tag{display:inline-block;border:1px solid var(--gold-d);color:var(--gold);border-radius:999px;padding:2px 12px;font-size:14px;line-height:1.6}
+.tag.sample{border-style:dashed}
+.note{border-left:2px solid var(--gold-d);padding:2px 0 2px 14px;color:var(--mist);font-size:16px;margin:16px 0}
+.card{border:1px solid var(--line);background:rgba(7,13,36,.55);border-radius:6px;padding:16px;margin-top:12px}
+.card.fixed{border-color:var(--gold-d)}
+input[type=text],textarea,select{width:100%;background:rgba(7,13,36,.7);color:var(--moon);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font:inherit;font-size:16px;min-height:48px}
+textarea{min-height:92px;resize:vertical}
+.extra{margin:22px 0 4px;padding-top:14px;border-top:1px dashed var(--line)}
+label.f{display:block;margin:14px 0 6px;font-size:16px;color:var(--mist)}
+.chk{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);min-height:48px}
+.chk input{width:24px;height:24px;margin-top:3px;accent-color:var(--gold);flex:none}
+.err{color:var(--danger);font-size:16px;min-height:1.6em;margin-top:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.tinybtn{background:none;border:1px solid var(--line);border-radius:999px;color:var(--mist);padding:6px 14px;font-size:14px;min-height:44px;min-width:44px}
+
+/* walker */
+.walker{display:block;width:100%;height:100%;overflow:visible}
+.walker .lp{fill:rgba(7,13,36,.9);stroke:var(--gold-d);stroke-width:1.4;transition:fill .8s,filter .8s}
+.walker .lp.on{fill:var(--gold);filter:drop-shadow(0 0 5px rgba(240,201,122,.95))}
+.wk{position:absolute;width:58px;height:87px;transition:left 1.5s ease-in-out,top 1.5s ease-in-out;pointer-events:none;z-index:2}
+.wk-sm{float:right;width:52px;height:78px;margin:0 0 6px 10px}
+.wk-hero{width:84px;height:126px;margin:0 auto 8px}
+.wk-hero.big{width:112px;height:168px}
+.lampcap{font-size:16px;color:var(--mist);text-align:center;margin:0 0 6px}
+
+/* prologue + dream */
+.pl{animation:fadein 1.4s both}
+.fd{position:absolute;width:7px;height:7px;border-radius:50%;background:#ffe9b0;box-shadow:0 0 12px 4px rgba(240,201,122,.7);animation:fadein 2s both,faint 4s 2s ease-in-out infinite alternate}
+.pro{position:relative}
+.stage{position:relative;height:290px;margin:6px 0}
+.fl{position:absolute;width:68px;height:68px;border-radius:50%;border:1px solid var(--gold);background:radial-gradient(circle,rgba(240,201,122,.35),rgba(240,201,122,.05) 70%);color:var(--gold);font-family:var(--serif);font-size:28px;display:grid;place-items:center;animation:drift 7s ease-in-out infinite alternate;transition:opacity .6s,transform .6s}
+.fl.gone{opacity:0;transform:scale(.3);pointer-events:none}
+@keyframes drift{from{transform:translate(0,0)}to{transform:translate(14px,-18px)}}
+.slots{display:flex;justify-content:center;gap:12px;margin:10px 0}
+.slot{width:54px;height:66px;border-bottom:2px solid var(--line);display:grid;place-items:center;font-family:var(--serif);font-size:38px;color:transparent;transition:all .6s}
+.slot.on{color:var(--gold);border-color:var(--gold);text-shadow:0 0 18px var(--gold)}
+
+/* door */
+.door{position:relative;width:190px;height:230px;margin:6px auto 18px;border-radius:95px 95px 0 0;overflow:hidden;background:radial-gradient(circle at 50% 60%,var(--gold),#6b4a14 55%,transparent 80%);box-shadow:0 0 50px var(--glow)}
+.door i{position:absolute;top:0;bottom:0;width:50%;background:linear-gradient(180deg,#16255a,#0a1334);transition:transform 1.3s cubic-bezier(.6,0,.2,1)}
+.door i:first-child{left:0;border-right:1px solid var(--gold-d)} .door i:last-child{right:0;border-left:1px solid var(--gold-d)}
+.door.open i:first-child{transform:translateX(-96%)} .door.open i:last-child{transform:translateX(96%)}
+.sock{position:absolute;left:0;right:0;top:56%;display:flex;justify-content:center;gap:6px;z-index:2;transition:opacity .6s}
+.door.open .sock{opacity:0}
+.sock u{width:36px;height:36px;border-radius:50%;border:1.5px solid var(--gold-d);background:rgba(7,13,36,.85);display:grid;place-items:center;text-decoration:none;font-family:var(--serif);font-size:20px;color:var(--gold)}
+.sock u.on{background:rgba(240,201,122,.25);border-color:var(--gold);box-shadow:0 0 14px var(--glow)}
+.sock.shake{animation:shake .4s}
+@keyframes shake{25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+.pad{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:300px;margin:12px auto 0}
+.pad button{height:54px;border-radius:12px;background:rgba(15,27,69,.7);border:1px solid var(--line);font-size:21px;font-family:var(--serif)}
+.pad button.sm{font-size:16px;font-family:var(--sans);color:var(--mist)}
+
+/* map */
+.map{position:relative;height:400px;margin:10px -4px 4px}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.map polyline{fill:none;stroke:var(--gold-d);stroke-width:1.2;stroke-dasharray:3 6;vector-effect:non-scaling-stroke;opacity:.8}
+.node{position:absolute;transform:translate(-50%,-50%);background:none;border:0;padding:0;width:92px;text-align:center}
+.node b{display:grid;place-items:center;margin:0 auto;width:58px;height:58px;border-radius:50%;border:1.5px solid var(--gold);font-family:var(--serif);font-size:26px;font-weight:400;color:var(--gold);background:rgba(7,13,36,.7);box-shadow:0 0 22px var(--glow)}
+.node span{display:block;font-size:14px;margin-top:4px;color:var(--moon);text-shadow:0 1px 6px #000;line-height:1.4}
+.node em{display:block;font-style:normal;font-size:14px;color:var(--gold);line-height:1.3}
+.node.done b{background:var(--gold);color:#241a05;box-shadow:0 0 34px rgba(240,201,122,.6)}
+.node.pulse b{animation:pulse 1s ease-in-out 2}
+@keyframes pulse{50%{box-shadow:0 0 50px 12px rgba(240,201,122,.8)}}
+.legend{display:flex;justify-content:space-between;align-items:center;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:10px 2px;min-height:56px}
+.legend em{font-style:normal;color:var(--mist);font-size:14px;flex:none;margin-left:10px}
+.legend strong{color:var(--gold);font-family:var(--serif);margin-right:8px}
+.lampfx{position:absolute;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:radial-gradient(circle,#fff3cf,#f0c97a 55%,rgba(240,201,122,0) 72%);box-shadow:0 0 22px 8px rgba(240,201,122,.6);transition:left 1.2s ease-in-out,top 1.2s ease-in-out,opacity .4s;pointer-events:none;z-index:3}
+.dust{position:absolute;width:4px;height:4px;margin:-2px 0 0 -2px;border-radius:50%;background:#ffe9b0;box-shadow:0 0 8px 2px rgba(240,201,122,.8);animation:dustfade 1.8s ease-out forwards;pointer-events:none;z-index:1}
+@keyframes dustfade{to{opacity:0;transform:translateY(-14px) scale(.3)}}
+.far{position:absolute;width:14px;height:24px;transform:translate(-50%,-50%);opacity:.35;pointer-events:none;animation:faint 6s ease-in-out infinite alternate}
+.far svg{width:100%;height:100%;fill:rgba(255,236,190,.85);filter:blur(.4px) drop-shadow(0 0 4px rgba(240,201,122,.8))}
+@keyframes faint{to{opacity:.12}}
+
+/* scenes */
+.rh{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.rh .code{font-family:var(--serif);color:var(--gold);font-size:15px;letter-spacing:.1em}
+.sym{padding:8px 10px;min-height:110px;overflow-wrap:anywhere;display:grid;place-items:center;text-align:center;font-family:var(--serif);font-size:22px;background:rgba(15,27,69,.6);border:1px solid var(--line);border-radius:50% 50% 12px 12px/38% 38% 12px 12px}
+.sym:hover{border-color:var(--gold)}
+.bigsym{font-family:var(--serif);font-size:44px;color:var(--gold);text-align:center;margin:8px 0;text-shadow:0 0 28px var(--glow)}
+canvas.wave{width:100%;height:170px;display:block;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+input[type=range]{width:100%;accent-color:var(--gold);height:44px}
+.breath{width:150px;height:150px;border-radius:50%;margin:26px auto;background:radial-gradient(circle,rgba(240,201,122,.5),rgba(240,201,122,.06) 70%);border:1px solid var(--gold);display:grid;place-items:center;font-family:var(--serif);color:var(--gold);font-size:20px}
+.breath.run{animation:br 8s ease-in-out infinite}
+@keyframes br{0%,100%{transform:scale(.6)}50%{transform:scale(1.15)}}
+.bp-card{display:grid;grid-template-columns:48px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.bp-card .d{font-family:var(--serif);font-size:30px;color:var(--gold);line-height:1.1;text-align:center}
+.bp-card .d small{display:block;font-size:14px;color:var(--mist);font-family:var(--sans)}
+details summary{cursor:pointer;color:var(--mist);padding:10px 0;min-height:44px}
+.bottle{width:110px;margin:6px auto;display:block;filter:drop-shadow(0 0 22px var(--glow));animation:bob 4s ease-in-out infinite alternate}
+@keyframes bob{to{transform:translateY(-8px)}}
+.pv{margin:10px 0 0;padding:12px 14px;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:4px 12px 12px 4px;font-family:var(--serif);line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere}
+.pv.empty{color:var(--mist);border-left-color:var(--line);font-family:var(--sans)}
+.nopub{margin:14px 0;padding:12px 14px;border:1px dashed var(--line);border-radius:10px}
+.nopub ul{margin:6px 0 0;padding-left:20px}
+
+/* meteor stage */
+.mstage{position:relative;width:320px;max-width:100%;height:380px;margin:0 auto}
+.mstage canvas{position:absolute;inset:0;width:100%;height:100%}
+.mw{position:absolute;left:20px;top:210px;width:100px;height:150px}
+.mbot{position:absolute;left:35px;top:282px;width:26px;height:38px;transition:transform 1.6s ease-in,opacity 1.6s ease-in,filter .8s;filter:drop-shadow(0 0 4px rgba(240,201,122,.5))}
+.mbot.glow{filter:drop-shadow(0 0 14px rgba(255,233,176,1))}
+.mbot.rise{transform:translate(120px,-250px) scale(.4);opacity:0}
+.mdot{position:absolute;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:radial-gradient(circle,#fff3cf,#f0c97a 55%,rgba(240,201,122,0) 72%);box-shadow:0 0 18px 6px rgba(240,201,122,.6);left:86px;top:314px;opacity:0;transition:left 1s ease-in-out,top 1s ease-in-out,opacity .3s;pointer-events:none}
+.mcap{min-height:3.4em;text-align:center;font-family:var(--serif);font-size:18px}
+.final{font-family:var(--serif);font-size:20px;line-height:1.9;text-align:center}
+
+/* wall */
+.wall{position:relative;height:420px;margin:8px -6px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:radial-gradient(70% 60% at 50% 40%,rgba(27,42,99,.55),transparent)}
+.st{position:absolute;transform:translate(-50%,-50%);width:44px;height:44px;border:0;background:none;display:grid;place-items:center;color:var(--moon)}
+.st::before{content:"";width:9px;height:9px;border-radius:50%;background:#dfe6ff;box-shadow:0 0 12px 3px rgba(223,230,255,.6);transition:all .3s}
+.st.mine::before{width:16px;height:16px;background:var(--gold);box-shadow:0 0 24px 8px rgba(240,201,122,.7)}
+.st.cur::before{width:15px;height:15px;box-shadow:0 0 22px 7px rgba(255,255,255,.7)}
+.st.mine.cur::before{width:20px;height:20px}
+.st.echoed::before{background:#ffe9b0;box-shadow:0 0 16px 5px rgba(255,233,176,.75)}
+.st.ring::after{content:"";position:absolute;width:12px;height:12px;border-radius:50%;border:1px solid var(--gold);animation:ring 1.7s ease-out forwards;pointer-events:none}
+@keyframes ring{to{transform:scale(5);opacity:0}}
+.sheet{border:1px solid var(--line);border-top:2px solid var(--gold-d);background:rgba(7,13,36,.7);padding:16px;border-radius:0 0 12px 12px;min-height:130px}
+.sheet blockquote{margin:8px 0;font-family:var(--serif);font-size:17px;line-height:1.9;overflow-wrap:anywhere}
+.gest{display:grid;grid-template-columns:1fr;gap:8px}
+.opt.g{padding:10px 14px;min-height:60px;line-height:1.5}
+
+/* modal */
+#modal{position:fixed;inset:0;z-index:20;background:rgba(3,6,18,.78);display:none;align-items:flex-end;justify-content:center}
+#modal.on{display:flex}
+#mbox{width:100%;max-width:480px;max-height:86dvh;overflow:auto;background:var(--deep);border-top:2px solid var(--gold-d);border-radius:18px 18px 0 0;padding:22px 20px calc(24px + env(safe-area-inset-bottom))}
+#mbox ul{padding-left:20px;margin:0 0 1em} #mbox li{margin-bottom:6px}
+
+/* 图腾占位（原创通用符号，非官方图腾）：圆形徽章，光晕是圆形渐隐，不会出现方块边缘 */
+.tm{display:inline-grid;place-items:center;width:52px;height:52px;border-radius:50%;border:1.5px dashed var(--line);background:rgba(7,13,36,.45);flex:none;overflow:hidden;transition:background .8s,border-color .8s,box-shadow .8s}
+.tm.on{border:1.5px solid var(--gold-d);background:radial-gradient(circle,rgba(240,201,122,.30) 0%,rgba(240,201,122,.10) 55%,rgba(7,13,36,.55) 100%);box-shadow:0 0 18px rgba(240,201,122,.35)}
+.tm.reveal{animation:reveal 1.8s ease-out}
+@keyframes reveal{0%{transform:scale(.55);opacity:.15;box-shadow:0 0 0 rgba(240,201,122,0)}60%{transform:scale(1.12);opacity:1;box-shadow:0 0 34px rgba(240,201,122,.8)}100%{transform:scale(1)}}
+.tt{width:100%;height:100%;display:block}
+.tt .th{fill:none;stroke:var(--mist);stroke-width:2.6;stroke-dasharray:3 5;stroke-linecap:round;stroke-linejoin:round;opacity:.7}
+.tt .ax{fill:none;stroke:var(--mist);stroke-width:1.4;stroke-dasharray:2 4;opacity:.5}
+.tt.on .th{stroke:var(--gold);stroke-width:8;stroke-dasharray:none;opacity:1}
+.tt.on .th.tf{fill:var(--gold);stroke-width:3}
+.tt.on .th.fine{stroke-width:3.5}
+.tt.on .ax{stroke:var(--gold-d);opacity:.8}
+.tt.on .gl{filter:drop-shadow(0 0 5px rgba(240,201,122,.9))}
+.totems{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:8px 0 4px;text-align:center}
+.totems div{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:14px;color:var(--mist);line-height:1.4}
+.totems div.on{color:var(--gold)}
+.totems .tm{width:60px;height:60px}
+.trow{display:flex;align-items:center;gap:12px;margin:0 0 8px;font-size:14px;color:var(--mist)}
+.trow .tm{width:56px;height:56px}
+.bp-card .d .tm{width:32px;height:32px;margin-top:6px}
+@media (min-width:700px){
+  #shell{max-width:600px}
+  .map{height:470px}
+  .wall{height:480px}
+  h1{font-size:40px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<div id="shell">
+  <header id="bar"><span class="brand" id="brand"></span><span class="hdr-r"><button class="tinybtn" id="sfxBtn" aria-pressed="false"></button><button class="tinybtn" id="aboutBtn"></button></span></header>
+  <main id="app" tabindex="-1"></main>
+</div>
+<div id="modal" role="dialog" aria-modal="true" aria-labelledby="mtitle"><div id="mbox"></div></div>
+
+<script>
+(()=>{
+'use strict';
+/* =====================================================================
+   SoulSync Kingdom × 1320 SoulCode — Phase A v0.2.3 — GDD Alignment (Visual Dev)
+   - 单文件；无外部资源、无网络请求；状态只在内存，刷新即清空。
+   - 不使用 localStorage / sessionStorage / cookie / fetch / 第三方分析。
+   - 示例数据集中在 DEMO；蓝图计算唯一替换点：Adapter1320.compute()。
+   - 公开内容只能经 buildPublicStarPayload() 白名单生成；多人接口占位：StarWallAdapter。
+   ===================================================================== */
+const LANG='zh';
+const ZH={
+'brand':'SoulSync Kingdom','bar.about':'说明','close':'关闭','back.map':'回到地图','sfx.off':'声音：关','sfx.on':'声音：开',
+/* 01 序幕 */
+'intro.disc':'故事灵感来自创作者的一场梦。这里是一段象征性的自我探索旅程。',
+'intro.sub':'没有对错，没有等级，也没有倒计时。首轮约 8–12 分钟，随时可以停下。',
+'intro.l1':'有一夜，你在梦里收到了一串数字。','intro.l2':'它没有解释自己，只留下一个邀请。',
+'intro.enter':'进入梦境','intro.skip':'跳过序幕','walker.alt':'梦境旅人，手持生命灯',
+/* 02 接住四颗光 */
+'dream.title':'接住四颗光','dream.help':'按你的节奏点它们，先点哪一颗都可以，它们最后会排成同一串数字。',
+'dream.done':'它们在你面前排成：1320。','dream.done2':'远处，一道门亮了起来。','dream.next':'走向那扇门','dream.light':'光 {d}',
+/* 03 门前 */
+'gate.title':'门前','gate.help':'门还关着。回答只是此刻的站位，不会改变你的蓝图，也可以选择先不回答。',
+'gate.skip':'先不回答','gate.prog':'第 {n} 问，共 3 问',
+'gate.q0':'走到门前，你此刻的身体更像哪一种？','gate.q0.a':['有一点紧','很平静','有点困','说不清'],
+'gate.q1':'你是怎么走到这里的？','gate.q1.a':['出于好奇','想歇一会儿','想更理解自己','只是路过'],
+'gate.q2':'门后不保证任何结果。你愿意把门推开一条缝吗？','gate.q2.a':['愿意','想再站一会儿','想慢慢来','我还没想好'],
+/* 04 密码之门 */
+'pw.title':'门上的凹槽','pw.help':'把梦里的四颗光放进门上的凹槽：输入 1320。这是故事里的仪式，不是安全密码。',
+'pw.err':'凹槽没有回应。再试一次。','pw.hint':'提示：它们是你刚才接住的四颗光，按排好的顺序。','pw.clear':'清除','pw.del':'删除','pw.sr':'已放入 {n} / 4 颗光','pw.open':'门开了。',
+/* 05 蓝图钥匙 */
+'birth.title':'蓝图钥匙｜Blueprint Key','birth.help':'出生日期用于生成你的固定蓝图。它只属于你的私人旅程，不会成为公开身份，也不会进入星墙。',
+'birth.help2':'这个原型只在本次页面里记住它：不上传，也不写入浏览器存储。',
+'birth.y':'年','birth.m':'月','birth.d':'日','birth.go':'生成我的固定蓝图','birth.sample':'先用示例日期体验',
+'birth.err':'请选完整的年月日，且日期不能晚于今天。',
+/* 06 地图 */
+'map.title':'四境地图','map.order':'1、3、2、0 对应 S1、S3、S2、S0，是 1320 基础蓝图的结构顺序。你可以按照自己的直觉，自由选择探索顺序。',
+'map.prog':'已走过 {n} / 4 境','map.guide':'让地图带路','map.guideNote':'微光带你去了 {s}。','map.text':'查看文字地图','map.textHide':'收起文字地图',
+'map.gather':'让四束光汇入生命灯','map.done':'四境都走过了。1、3、2、0 四束光，在等着汇入你的灯。','map.visited':'已走过','map.todo':'未走过',
+'map.bp':'查看简版蓝图','map.bottle':'星愿瓶','map.wall':'星墙',
+'lamp.cap':'生命灯：已点亮 {n} / 4 束','lamp.lit':'{s} 的光落进了你的灯，对应的图腾（示例占位）显影了。','totem.row':'图腾显影','totem.note':'示例占位：原创通用符号，不是 1320 官方图腾，也不会改变你的固定蓝图。','totem.sleep':'沉睡轮廓','totem.shown':'已显影','totem.ph':'示例占位','lamp.full':'四束光都亮了。','lamp.dark':'你的生命灯还是暗的。',
+'lamp.note':'灯的亮度只表示走过几境，不代表灵魂等级、疗愈程度或频率高低。',
+'scene.s1.name':'原型之林','scene.s1.tag':'浮起的意象，哪一个让你停下？',
+'scene.s3.name':'振动之海','scene.s3.tag':'站在海边，看看此刻的节奏。',
+'scene.s2.name':'镜像之岸','scene.s2.tag':'水中的倒影，映出一段关系。',
+'scene.s0.name':'空性之门','scene.s0.tag':'把灯放在门外，什么都不必成为。',
+'scene.leave':'暂时离开这一境','replay.title':'这一境已完成','replay.btn':'重新走这一境','replay.note':'重新走完成后，会用新结果替换旧结果；中途离开，会保留原来的结果。','scene.s1.en':'Origin','scene.s3.en':'Vibration','scene.s2.en':'Mirror','scene.s0.en':'Void',
+/* 通用 */
+'mirror.head':'映照','note.label':'留言（只留给自己，可不写）','note.ph':'想留下一句话吗？不写也完整。请不要写姓名、联系方式或可识别信息。','finish':'完成这一境，回到地图',
+/* S1 */
+'s1.pick':'林中悬浮着六个意象。选一个让你停下脚步的。','s1.change':'换一个意象','s1.sampleTag':'示例意象，非官方 S1 原型卡','s1.q':'这个意象和你的关系是……',
+'s1.a.part':'这像我此刻的一部分','s1.a.some':'只有某些时候像','s1.a.no':'我不认同这个描述','s1.a.rename':'我想给它另一个名字','s1.a.unsure':'暂时说不清',
+'s1.my':'我的说法','s1.renPh':'你给它起的名字','s1.renNote':'这是「我的说法」，不会替换官方名称。','s1.renOk':'用这个名字','s1.renErr':'请写一个名字，或选其他回应。',
+'s1.m.part':'你认出了这个意象里有此刻自己的一部分。','s1.m.some':'你觉得它只在某些时候像你。','s1.m.no':'你没有接受这个描述。清楚地不同意，也是一种回应。',
+'s1.m.rename':'你没有急着接受这个意象，而是为它换了一个更接近自己的名字。','s1.m.unsure':'你选择暂时说不清。可以以后再回来。','s1.mirror':'意象是一种象征的镜头，不是对你的判断。',
+'sym.lamp':'灯','sym.lamp.l':'灯不追赶黑暗，只照亮脚下一小圈。','sym.seed':'种子','sym.seed.l':'种子不急着成为树，先在土里待着。',
+'sym.river':'河','sym.river.l':'河在转弯处，也仍然在流。','sym.mountain':'山','sym.mountain.l':'山不说话，也一直在那里。',
+'sym.door':'门','sym.door.l':'门有开的样子，也有关的样子，两种都是门。','sym.fire':'火','sym.fire.l':'火需要空气，也需要边界。',
+/* S3 */
+'s3.help':'拖动滑杆，改变水面的速度与光纹。','s3.label':'此刻节奏','s3.fine':'这是象征性的演示，不测量你的振动或任何真实频率。',
+'s3.slower':'调慢一点','s3.faster':'调亮一点','s3.stay':'在这里停一会儿','s3.observe':'只观察，不改变','s3.snd.on':'打开声音','s3.snd.skip':'跳过声音','s3.snd.note':'声音默认关闭，是否打开都不影响完成。',
+'s3.w0':'缓慢的潮','s3.w1':'柔和的呼吸','s3.w2':'明亮的跳动','s3.w3':'急切的闪烁','wave.alt':'画面：水面的光纹，随滑杆变快或变慢。当前节奏：{w}。',
+'s3.m.stay':'你把此刻的节奏停在「{w}」。这是一次当下选择，不是你的 S3 振动等级。','s3.m.observe':'你只是看着这片海，没有改变它。此刻停在「{w}」附近，这是一次当下选择，不是你的 S3 振动等级。',
+/* S2 */
+'s2.pick':'水中浮现一个倒影。选一个你此刻想看的关系主题，不用写对方的名字。','s2.act':'站在水边，你想怎样面对它？',
+'rel.family':'家人','rel.friend':'朋友','rel.close':'亲密的人','rel.peer':'同事或同伴','rel.past':'过去的自己','rel.none':'暂时不选',
+'s2.a.say':'我想表达一句话','s2.a.need':'我想先听见自己的需要','s2.a.dist':'我想设下一段距离','s2.a.look':'我只想看看倒影','s2.a.none':'现在不进入这段关系',
+'s2.sayPh':'一句话（可不写）。请不要写姓名、联系方式或可识别信息。','s2.sayOk':'放下这句话','s2.my':'我的话',
+'s2.m.say':'你选择把一句话说出来。这句话是否接近你的经验，由你决定。','s2.m.need':'你选择先听见自己的需要。','s2.m.dist':'你选择设下一段距离。','s2.m.look':'你选择只看看倒影。','s2.m.none':'你选择现在不进入这段关系。这也是一种清楚的回应。',
+'s2.mirror':'水面映出的是你这一侧看到的关系，不是对方的真相。',
+/* S0 */
+'s0.intro':'你把灯放在门外，独自走进留白。呼吸三次约 24 秒，可以随时跳过。','s0.start':'开始呼吸','s0.skip':'跳过呼吸','s0.in':'吸气','s0.out':'呼气','s0.after':'留白里没有任务。你想怎么对待这一刻？',
+'s0.a.blank':'留一片空白','s0.a.word':'把一个词暂时放下','s0.a.carry':'带着它离开','s0.a.wait':'不急着回答','s0.a.back':'返回地图',
+'s0.wordPh':'一个词（可不填）','s0.wordOk':'放下这个词','s0.my':'放下的词',
+'s0.m.blank':'你留下了一片空白。','s0.m.word':'你把这个词暂时放下了。','s0.m.carry':'你选择带着它离开。','s0.m.wait':'你选择不急着回答。','s0.mirror':'留白不需要被填满，也不需要被解释。',
+'s0.b.done':'呼吸：完成三次','s0.b.skip':'呼吸：选择跳过',
+/* 简版蓝图 */
+'bp.title':'简版 Soul Blueprint','bp.fixed':'A. 固定蓝图','bp.fixedHelp':'来源：出生日期与算法。不会被你的选择改写。','bp.sampleTag':'示例数据，非 1320 原始算法',
+'bp.key':'私人蓝图钥匙：{k}','bp.keySample':'（示例日期）','bp.code':'官方编号：待接入','bp.ver':'算法版本：{a}；内容版本：{c}；来源：{p}','bp.verNone':'未接入','bp.provDemo':'示例数据','bp.provOff':'官方','bp.totemNote':'图腾为示例占位（原创通用符号），不是官方图腾。','bp.live':'B. 今日探索记录','bp.liveHelp':'只描述今天你做了什么，不用来解释或证明固定蓝图。',
+'bp.sep':'蓝图是象征性探索底座；今天的选择是你此刻留下的痕迹。两者互不改写，如何理解仍由你决定。',
+'bp.none':'这一境还没走过。','bp.gate':'门前的回答（私人）','bp.noAns':'先不回答',
+'bp.card':'保存私人卡（图片）','bp.cardNote':'图片只在你的设备上生成，不含出生日期。若浏览器阻止下载，可以截图保存。','bp.cardDone':'已生成图片。','bp.cardFail':'生成失败，请截图保存。',
+'bp.rep.title':'Full Report','bp.rep.btn':'了解 Full Report','bp.rep.text':'免费体验到这里已经完整，星愿也不受购买限制。',
+'bp.rep.1':'Full Report 的真实权益、价格与可继续探索的地图，会在接入现有产品配置后如实显示。这里不展示任何价格。','bp.rep.2':'尚未制作的区域会标为「规划中」，不会当作已可玩的权益。','bp.rep.3':'已购买的用户未来应能恢复权益，不需要重复购买。',
+'bp.rep.status':'当前原型没有接入支付和真实报告，也不会跳转到结算页。','bp.next':'去星愿瓶',
+'bp.s3.l':'此刻节奏「{w}」：{a}','bp.sym.l':'意象「{n}」：{a}','bp.rel.l':'关系主题「{n}」：{a}','bp.blank.l':'留白：{a}','bp.mine':'我的说法「{x}」','bp.my2':'我的话「{x}」','bp.word':'放下的词「{x}」','bp.say':'留言：{x}',
+/* 星愿瓶 */
+'btl.title':'星愿瓶','btl.help':'经历、领悟和留给读者的话，至少填写一项；其他项目可以不填。出生日期、固定蓝图、门前的回答和场景里的私人文字，都不会被自动带进来。',
+'btl.exp':'我愿意分享的一小段经历（可不写）','btl.ins':'我正在形成的领悟（可不写）','btl.wish':'我想留给读到它的人的一句话（可不写）',
+'btl.expPh':'一小段就够，不必写细节。','btl.insPh':'你从中慢慢看见的。','btl.wishPh':'愿……',
+'btl.extra':'附加项（可选）','btl.extraNote':'下面两项只是附加说明，不能单独封存。','btl.snip':'附带一个蓝图象征卡（可不附带）','btl.snipNone':'不附带','btl.snipNote':'只会公开这一境的名称，不含卡名、释义或出生日期。',
+'btl.cw':'需要内容提示（读者会先看到提示，再决定是否阅读）','btl.cwDefault':'较沉重的经历','btl.cwPh':'提示文字，例如：家庭关系相关经历',
+'btl.care':'你不必先「走出来」才能分享，也不必详细描述伤害。公开区不是危机求助或治疗渠道。',
+'btl.contact':'有疑似联系方式或网址，请先删去：{f}。','btl.empty':'瓶子还是空的。经历、领悟、留给读者的话，至少写一项才能封存；也可以直接去星墙看看。',
+'btl.preview':'预览将公开的内容','btl.skipWall':'不放了，直接去星墙','btl.f.exp':'经历','btl.f.ins':'领悟','btl.f.wish':'留给读者的话','btl.f.cw':'内容提示',
+/* 公开预览 */
+'pv.title':'星愿公开预览','pv.help':'这里列出的，就是将要公开的全部内容。没有别的。','pv.alias':'你的公开星际代号','pv.regen':'重新生成代号','pv.aliasNote':'代号随机生成，不含生日、姓名、性别或地点。',
+'pv.exp':'经历','pv.ins':'领悟','pv.wish':'留给读者的话','pv.empty':'（未填写，不会公开）','pv.snip':'蓝图片段','pv.snipNone':'（不附带）','pv.snipVal':'{n}（只含领域名称）','pv.cw':'内容提示','pv.cwNone':'（无）',
+'pv.no.t':'不会公开：','pv.no.1':'出生日期','pv.no.2':'固定蓝图的完整内容','pv.no.3':'未勾选的回答、门前的回答和场景里的私人文字',
+'pv.back':'返回修改','pv.private':'只留给自己','pv.consent':'我确认愿意公开以上内容','pv.light':'点亮生命流星','pv.local':'当前是单机原型：「发布」只会在这个页面里预览，不会被任何人看到，也不会连接服务器。',
+/* 流星 */
+'met.title':'生命流星','met.skip':'跳过动画','met.c1':'旅人双手托起星愿瓶。','met.c2':'生命灯的一束光进入瓶中，灯依然明亮。','met.c3':'瓶子升空，化作流星。','met.c4':'它落入星墙，成为一颗你可以找回的星。',
+'met.final':'你没有交出自己的光。你只是让它，也照到别处。','met.note':'仅本设备预览，没有被任何人看到。','met.alt':'画面：一颗流星从旅人手边升起，落在星墙上。','met.go':'去星墙，找到我的星',
+/* 星墙 */
+'wall.title':'星墙','wall.help':'每一颗星是一段自愿分享的话。点开读一读，没有比较，也没有排名。',
+'wall.sampleNote':'墙上的其他星是编写的示例星愿，远处的人形微光只是氛围，都不是真实用户。真实星墙需要多人服务、字段白名单、待审核状态、人工审核、举报与撤回。',
+'wall.mine':'我的星愿，仅本设备','wall.sample':'示例，不是真实用户','wall.tapStar':'点一颗星，读读它想说的。',
+'wall.cwShow':'内容提示：{c}。想读再点开。','wall.cwBtn':'我想读','wall.care':'如果读到的内容让你不舒服，可以随时离开。如果你此刻很难受，请联系身边可信任的人，或当地的心理支援热线。',
+'wall.private':'我的私人封存（只有你看得到，不在星墙上）','wall.privateKept':'已私人封存。它不会出现在星墙上。','wall.mod':'举报与审核：尚未接入。',
+'gest.ask':'你想怎样回应这颗星？不用评论，也不用建议。','gest.light':'点亮灯','gest.light.s':'我看见了','gest.shield':'护住光','gest.shield.s':'谢谢你分享','gest.star':'放下一颗星','gest.star.s':'这句话也陪到了我',
+'gest.done':'你的灯靠近了这颗星，它多了一道回响。再点一次同一个动作，可以收回。','gest.note':'回应只是一道回响，不代表建议、诊断、疗愈或建立关系。','gest.mine':'这是你自己的星。别人的回响，要等多人服务接入后才会出现在这里。',
+'again':'重新开始旅程','again.confirm':'确定重新开始吗？这次的所有记录都会清空。','again.yes':'重新开始',
+/* 说明 */
+'about.title':'关于这个原型','about.status':'版本与状态','about.status.t':'{v}：沉浸式单机原型，可离线运行。真实算法、账号、支付、多人星墙与审核都没有接入，不能公开上线。',
+'about.sample':'示例数据','about.sample.t':'蓝图卡、示例意象、示例星愿都是本原型的建议内容，不是 1320 原始释义。蓝图结果会持续标注「示例数据，非 1320 原始算法」。',
+'about.code':'1320 与四境','about.code.t':'1、3、2、0 对应 S1、S3、S2、S0，是 1320 基础蓝图的结构顺序。你可以按照自己的直觉，自由选择探索顺序。',
+'about.notyet':'尚未接入','about.notyet.l':['1320 官方算法与正式卡牌内容（目前是 Adapter1320 的示例实现）','账号与跨设备私人记录','Full Report 支付、价格与权益恢复','多人星墙、服务端认证、人工审核、举报、撤回、限流','英文文本（键已预留）'],
+'about.rules':'设计原则','about.rules.l':['Reflection, Not Prediction：只做映照，不做预测','用户主权：选择、分享都由你决定，没有强制分享','无战斗、无正确答案、无灵魂等级、无签到惩罚','选择只进入今日探索记录，永远不会重算固定蓝图','故事是象征性的游戏叙事，不宣称梦境、频率或数字有可验证的超自然作用'],
+'about.far':'远处的人形微光','about.far.t':'地图与星墙上远处的微光只是氛围，不代表真实玩家在线。','about.sfx':'声音','about.sfx.t':'声音默认关闭，右上角可以打开。只有很轻的灯亮声、脚步声和回应声，没有持续的背景音乐。',
+'about.name':'名称备注','about.name.t':'世界标题暂用 SoulSync Kingdom；历史名称 SOUL SYNCITY 仅作备注，尚未最终重命名。','about.mem':'数据','about.mem.t':'所有内容只存在于这次页面会话里，刷新即清空。没有网络请求。'
+};
+const EN={};
+const MISSING=new Set();
+const t=(k,v)=>{let s=(LANG==='en'&&EN[k]!==undefined)?EN[k]:ZH[k];
+  if(s===undefined){MISSING.add(k);document.documentElement.dataset.missingKeys=[...MISSING].join(',');s=k;}
+  if(v&&typeof s==='string')for(const a in v)s=s.split('{'+a+'}').join(v[a]);return s;};
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const $=(s,r=document)=>r.querySelector(s);
+
+/* ---------- 示例数据（集中配置；全部是示例，非 1320 原始内容） ---------- */
+const DEMO={
+  sampleBirth:{y:1990,m:6,d:15},
+  cards:{
+    s1:[['灯火','把注意放在脚下这一小圈。'],['旅人','愿意在途中停下来看看。'],['匠人','喜欢把一件事慢慢做好。'],['守望','习惯站在远处照看。']],
+    s3:[['潮汐','来来回回，是节奏本身。'],['回声','说出去的话会以另一种声音回来。'],['微风','轻，但没有停过。'],['晨光','不急，一点点亮起来。']],
+    s2:[['水岸','与他人隔着一段刚好的距离。'],['并肩','一起走，也各自看路。'],['回望','偶尔转头，看看来时的路。'],['邀请','先把门留着。']],
+    s0:[['留白','不填满，也是一种完整。'],['静室','一个只属于自己的安静角落。'],['空杯','先空着，才有位置。'],['天窗','头顶有一块不被遮住的天。']]
+  },
+  wall:[
+   {x:18,y:18,alias:'示例旅人 01',wish:'愿我在慢一点的日子里，也觉得自己够好。'},
+   {x:62,y:12,alias:'示例旅人 02',insight:'我发现我不是不想休息，只是不知道不做事的自己是谁。',wish:'愿我学会放下一件事。'},
+   {x:84,y:34,alias:'示例旅人 03',experience:'小时候家里常有争吵。',insight:'长大后我才慢慢明白，那不是我的错。',wish:'愿所有曾经害怕回家的孩子，都有一盏灯。',cw:'家庭关系相关经历'},
+   {x:30,y:40,alias:'示例旅人 04',wish:'想对很久没联系的朋友说一句：我想你了。'},
+   {x:12,y:66,alias:'示例旅人 05',insight:'静下来的时候，我发现心跳比我以为的要吵。',wish:'愿我愿意听见。'},
+   {x:70,y:70,alias:'示例旅人 06',wish:'愿今晚的星星，替我给远方的人带一句平安。'},
+   {x:46,y:84,alias:'示例旅人 07',insight:'和父母的关系像一面水，我只看到了自己这边的倒影。',wish:'愿我下次开口时温柔一点。'},
+   {x:88,y:90,alias:'示例旅人 08',wish:'愿我不用成为更好的自己，也值得被好好对待。'}
+  ]
+};
+const ORDER=['s1','s3','s2','s0'];
+const DIGIT={s1:'1',s3:'3',s2:'2',s0:'0'};
+const POS={s1:{x:20,y:80},s3:{x:36,y:50},s2:{x:68,y:62},s0:{x:78,y:22}};
+const SYMS=['lamp','seed','river','mountain','door','fire'];
+const RELS=['family','friend','close','peer','past','none'];
+const S1_ACTS=['part','some','no','rename','unsure'];
+const S2_ACTS=['say','need','dist','look','none'];
+const S0_ACTS=['blank','word','carry','wait','back'];
+const GEST=['light','shield','star'];
+const SCENE_VERSION='demo-0.2';
+const VERSION_LABEL='Phase A v0.2.3 — GDD Alignment (Visual Dev)';
+
+/* ---------- 适配接口 ---------- */
+const Adapter1320={
+  status:'DEMO',
+  // 唯一的蓝图替换点。接入官方算法后：返回 provenance:'official'、algorithmVersion、contentVersion；
+  // 服务出错时必须明确显示错误，不得静默回退成示例结果。
+  compute(b){
+    const foundation={};
+    ORDER.forEach((id,i)=>{
+      const pool=DEMO.cards[id],n=(b.y*13+b.m*7+b.d*3+i*5)%pool.length;
+      foundation[id]={code:null,name:pool[n][0],shortMeaning:pool[n][1]};
+    });
+    return {provenance:'demo',algorithmVersion:null,contentVersion:'demo-0.2',foundation};
+  }
+};
+const StarWallAdapter={
+  status:'LOCAL_ONLY',
+  // 真实阶段：服务端认证 → 字段白名单 → 状态 pending → 人工审核通过才进入公共星墙；客户端不得自行设为 approved。
+  submitLocal(payload){return {id:'mine',mine:true,state:'local_preview',...payload};}
+};
+const hasContact=s=>/(\+?\d[\d\s\-]{7,}\d)|([\w.+-]+@[\w-]+\.[\w.]+)|(https?:\/\/|www\.)/i.test(s||'');
+const clip=(s,n)=>String(s||'').trim().slice(0,n);
+/* 公开白名单：只返回允许公开的字段；禁止序列化整个游戏状态。 */
+function buildPublicStarPayload(st){
+  const b=st.bottle;
+  const snip=ORDER.includes(b.snip)?{module:b.snip,publicName:t('scene.'+b.snip+'.name')}:null;
+  return {
+    alias:st.alias,
+    experience:clip(b.exp,200),
+    insight:clip(b.ins,200),
+    wish:clip(b.wish,120),
+    blueprintSnippet:snip,
+    contentWarning:b.cw?(clip(b.cwText,30)||t('btl.cwDefault')):null
+  };
+}
+
+/* ---------- 状态（仅内存） ---------- */
+let S;
+const letters='ABCDEFGHJKLMNPQRSTUVWXYZ';
+const newAlias=()=>'星际旅人 '+letters[Math.floor(Math.random()*letters.length)]+(1+Math.floor(Math.random()*9));
+const emptyBottle=()=>({exp:'',ins:'',wish:'',snip:'none',cw:false,cwText:'',err:''});
+function fresh(){
+  return {screen:'intro',seenPro:false,dream:[],gq:0,gate:[],pw:'',pwErr:0,pwOk:false,
+    bd:{y:'',m:'',d:''},birth:null,birthSample:false,bp:null,visited:{},cur:null,
+    sc:{s1:{},s3:{},s2:{},s0:{}},lastDone:null,lastLit:null,walkAt:null,textMap:false,gathered:false,guided:null,replayBackup:{},
+    bottle:emptyBottle(),alias:newAlias(),consent:false,
+    published:null,privateStars:[],keptNote:false,wall:[],wallSel:-1,wallCw:{},gest:{},echoFx:null,sfx:false,timers:[]};
+}
+S=fresh();
+const app=$('#app');
+const visitedN=()=>ORDER.filter(i=>S.visited[i]).length;
+const reduced=()=>!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+
+function clearTimers(){S.timers.forEach(clearTimeout);S.timers=[];}
+let raf=0,audio=null;
+function stopTone(){if(audio){try{audio.o.stop();audio.c.close();}catch(e){}audio=null;}}
+function stopWave(){cancelAnimationFrame(raf);raf=0;stopTone();S.sc.s3.snd=false;}
+function go(scr){stopWave();clearTimers();S.screen=scr;render();window.scrollTo(0,0);app.focus({preventScroll:true});}
+
+/* ---------- 弹层（锁定焦点，关闭后返回原元素） ---------- */
+let modalOpener=null;
+function openModal(html){
+  const m=$('#modal');modalOpener=document.activeElement;
+  $('#mbox').innerHTML=html+`<div class="row"><button class="btn ghost" data-close="1">${t('close')}</button></div>`;
+  $('#shell').inert=true;m.classList.add('on');$('#mbox [data-close]').focus();
+}
+function closeModal(){$('#modal').classList.remove('on');$('#shell').inert=false;if(modalOpener&&document.contains(modalOpener))modalOpener.focus();modalOpener=null;}
+$('#modal').addEventListener('click',e=>{
+  if(e.target.id==='modal'||e.target.closest('[data-close]')){closeModal();return;}
+  const b=e.target.closest('[data-act]');if(b&&A[b.dataset.act])A[b.dataset.act](b.dataset);
+});
+document.addEventListener('keydown',e=>{
+  const m=$('#modal');if(!m.classList.contains('on'))return;
+  if(e.key==='Escape'){closeModal();return;}
+  if(e.key==='Tab'){
+    const f=[...m.querySelectorAll('button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])')].filter(x=>!x.disabled);
+    if(!f.length)return;const a=f[0],z=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus();}
+    else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus();}
+    else if(!m.contains(document.activeElement)){e.preventDefault();a.focus();}
+  }
+});
+function aboutHtml(){
+  const li=a=>`<ul>${a.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
+  return `<h2 id="mtitle">${t('about.title')}</h2><p class="cap">${VERSION_LABEL}</p>
+  <h3>${t('about.status')}</h3><p>${t('about.status.t',{v:VERSION_LABEL})}</p>
+  <h3>${t('about.sample')}</h3><p>${t('about.sample.t')}</p>
+  <h3>${t('about.code')}</h3><p>${t('about.code.t')}</p>
+  <h3>${t('about.notyet')}</h3>${li(t('about.notyet.l'))}
+  <h3>${t('about.rules')}</h3>${li(t('about.rules.l'))}
+  <p class="small">${t('lamp.note')}</p>
+  <h3>${t('about.far')}</h3><p>${t('about.far.t')}</p>
+  <h3>${t('about.sfx')}</h3><p>${t('about.sfx.t')}</p>
+  <h3>${t('about.name')}</h3><p>${t('about.name.t')}</p>
+  <h3>${t('about.mem')}</h3><p>${t('about.mem.t')}</p>`;
+}
+
+/* ---------- 原创化身「梦境旅人」与小部件 ---------- */
+// 中性、无具体五官；深蓝钟形外套（非三角斗篷）；手持生命灯，灯分四块对应 S1/S3/S2/S0。
+function walker(lit,pose){
+  lit=lit||{};pose=pose||'stand';
+  const rel=pose==='release',hold=pose==='bottle';
+  const cx=rel?89:66,cy=rel?131:104,r=rel?11:12;
+  const q={
+    s1:`M${cx} ${cy}L${cx-r} ${cy}A${r} ${r} 0 0 1 ${cx} ${cy-r}Z`,
+    s3:`M${cx} ${cy}L${cx} ${cy-r}A${r} ${r} 0 0 1 ${cx+r} ${cy}Z`,
+    s2:`M${cx} ${cy}L${cx+r} ${cy}A${r} ${r} 0 0 1 ${cx} ${cy+r}Z`,
+    s0:`M${cx} ${cy}L${cx} ${cy+r}A${r} ${r} 0 0 1 ${cx-r} ${cy}Z`};
+  const n=ORDER.filter(i=>lit[i]).length;
+  const tilt=pose==='wake'?'rotate(9 47 40)':pose==='observe'?'rotate(-7 47 40)':'';
+  const lean=pose==='walk'?'rotate(2.5 50 140)':'';
+  const bottle=hold?`<path d="M20 96h12v-6l-2-3h-8l-2 3z" fill="rgba(240,201,122,.25)" stroke="#f0c97a" stroke-width="1.3"/><rect x="21" y="83" width="10" height="4" rx="1.5" fill="#c99a45"/><circle cx="26" cy="98" r="2.4" fill="#f0c97a"/>`:'';
+  const arm=rel
+    ?`<path d="M60 50C67 66 67 84 65 102" fill="none" stroke="#16255a" stroke-width="7" stroke-linecap="round"/><circle cx="65" cy="103" r="3.2" fill="#e8ecfb"/>`
+    :`<path d="M60 50C71 62 72 78 67 90" fill="none" stroke="#16255a" stroke-width="7" stroke-linecap="round"/><circle cx="67" cy="91" r="3.2" fill="#e8ecfb"/><path d="M67 94V${cy-r}" stroke="#c99a45" stroke-width="1.2"/>`;
+  return `<svg class="walker" viewBox="0 0 100 150" role="img" aria-label="${t('walker.alt')}">
+   <defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d2f70"/><stop offset="1" stop-color="#0a1334"/></linearGradient>
+   <radialGradient id="hg"><stop offset="0" stop-color="#f4f1e6"/><stop offset="1" stop-color="#b9c3e6"/></radialGradient>
+   <radialGradient id="lg"><stop offset="0" stop-color="#f0c97a" stop-opacity=".9"/><stop offset="1" stop-color="#f0c97a" stop-opacity="0"/></radialGradient></defs>
+   <circle cx="${cx}" cy="${cy}" r="${24+n*6}" fill="url(#lg)" opacity="${(0.2+n*0.2).toFixed(2)}"/>
+   <g transform="${lean}">
+   <path d="M33 44C27 72 22 108 16 140C29 135 39 144 50 139C62 144 74 135 84 140C76 108 70 72 62 44Q47 36 33 44Z" fill="url(#cg)" stroke="#c99a45" stroke-width="1.2"/>
+   <path d="M33 44Q47 52 62 44" fill="none" stroke="#f0c97a" stroke-width="2" stroke-linecap="round"/>
+   <path d="M50 52V138" stroke="rgba(240,201,122,.35)" stroke-width="1"/>
+   <g transform="${tilt}"><ellipse cx="47" cy="27" rx="11" ry="13.5" fill="url(#hg)"/></g>
+   ${arm}
+   <path d="M35 50C27 62 25 78 28 90" fill="none" stroke="#16255a" stroke-width="7" stroke-linecap="round"/><circle cx="28" cy="91" r="3.2" fill="#e8ecfb"/>
+   </g>
+   ${ORDER.map(i=>`<path class="lp ${lit[i]?'on':''}" d="${q[i]}"/>`).join('')}
+   <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#c99a45" stroke-width="1.4"/>
+   ${bottle}</svg>`;
+}
+const getFoundation=id=>(S.bp&&S.bp.foundation&&S.bp.foundation[id])||{code:null,name:'内容待配置',shortMeaning:'',totemId:null};
+/* 原创通用图腾占位：每境一个符号，120×120 画布；睡眠=虚线轮廓，显影=金色实线。不是官方图腾。 */
+const TOTEM_SHAPE={
+  // S1 起源：嫩芽，两片叶子与一粒种子
+  s1:'<g class="gl"><path class="th" d="M60 86V58"/><path class="th tf" d="M60 68C44 68 33 58 33 43C48 43 60 51 60 68Z"/><path class="th tf" d="M60 58C75 58 87 47 87 31C72 31 60 40 60 58Z"/><circle class="th fine" cx="60" cy="101" r="3"/></g>',
+  // S3 振动：三重弧线向外扩散
+  s3:'<g class="gl"><path class="th" d="M26 78a34 34 0 0 1 68 0"/><path class="th" d="M39 78a21 21 0 0 1 42 0"/><circle class="th fine" cx="60" cy="78" r="3"/></g><path class="ax" d="M22 90H98"/>',
+  // S2 镜像：两个相交的环，中间一条镜面轴
+  s2:'<g class="gl"><circle class="th" cx="46" cy="60" r="22"/><circle class="th" cx="74" cy="60" r="22"/></g><path class="ax" d="M60 22V98"/>',
+  // S0 空性：一个空心的环，中心留白
+  s0:'<g class="gl"><circle class="th" cx="60" cy="60" r="25"/></g><circle class="ax" cx="60" cy="60" r="40"/>'};
+const totem=(id,on,extra)=>`<span class="tm ${on?'on':''} ${extra||''}"><svg class="tt ${on?'on':''}" viewBox="0 0 120 120" aria-hidden="true">${TOTEM_SHAPE[id]}</svg></span>`;
+const totemRow=(lit,fresh)=>`<div class="totems" role="list" aria-label="${t('totem.row')}">${ORDER.map(i=>`<div role="listitem" class="${lit[i]?'on':''}">${totem(i,lit[i],fresh===i?'reveal':'')}<span>${i.toUpperCase()} ${lit[i]?t('totem.shown'):t('totem.sleep')}</span></div>`).join('')}</div>`;
+const lampCap=lit=>{const n=ORDER.filter(i=>lit[i]).length;return `<p class="lampcap">${n===4?t('lamp.full'):n===0?t('lamp.dark'):t('lamp.cap',{n})}</p>`;};
+const far=(x,y)=>`<span class="far" aria-hidden="true" style="left:${x}%;top:${y}%"><svg viewBox="0 0 20 34"><circle cx="10" cy="6" r="3.6"/><path d="M10 11c-4 0-6 8-7 22h14c-1-14-3-22-7-22z"/></svg></span>`;
+const BOTTLE_SVG=`<svg class="bottle" viewBox="0 0 100 140" aria-hidden="true"><path d="M40 8h20v14c0 6 20 14 20 40v54c0 10-8 18-18 18H38c-10 0-18-8-18-18V62c0-26 20-34 20-40z" fill="rgba(240,201,122,.12)" stroke="#f0c97a" stroke-width="2"/><rect x="38" y="4" width="24" height="10" rx="3" fill="#c99a45"/><circle cx="50" cy="88" r="9" fill="#f0c97a"/><circle cx="36" cy="104" r="3" fill="#fff6d8"/><circle cx="64" cy="78" r="2.5" fill="#fff6d8"/></svg>`;
+const BOTTLE_MINI=`<svg viewBox="0 0 100 140" aria-hidden="true" width="100%" height="100%"><path d="M40 8h20v14c0 6 20 14 20 40v54c0 10-8 18-18 18H38c-10 0-18-8-18-18V62c0-26 20-34 20-40z" fill="rgba(240,201,122,.2)" stroke="#f0c97a" stroke-width="5"/><rect x="38" y="4" width="24" height="10" rx="3" fill="#c99a45"/><circle cx="50" cy="88" r="12" fill="#f0c97a"/></svg>`;
+
+/* ---------- 声音（默认关闭；原创合成音） ---------- */
+let ac=null;
+function sfx(kind){
+  if(!S.sfx)return;
+  try{
+    ac=ac||new (window.AudioContext||window.webkitAudioContext)();
+    const n=ac.currentTime;
+    const tn=(f,t0,d,g)=>{const o=ac.createOscillator(),gn=ac.createGain();o.type='sine';o.frequency.value=f;
+      gn.gain.setValueAtTime(0.0001,n+t0);gn.gain.exponentialRampToValueAtTime(g,n+t0+0.03);gn.gain.exponentialRampToValueAtTime(0.0001,n+t0+d);
+      o.connect(gn);gn.connect(ac.destination);o.start(n+t0);o.stop(n+t0+d+0.05);};
+    if(kind==='lamp'){tn(660,0,1.7,.05);tn(990,.16,1.9,.035);tn(1320,.34,2,.02);}
+    if(kind==='gesture'){tn(520,0,1.2,.04);tn(780,.1,1.5,.025);}
+    if(kind==='rise'){tn(440,0,2.4,.03);tn(880,.4,2.6,.025);tn(1320,.9,2.6,.015);}
+    if(kind==='step'){
+      const len=Math.floor(ac.sampleRate*0.07),buf=ac.createBuffer(1,len,ac.sampleRate),d=buf.getChannelData(0);
+      for(let i=0;i<len;i++)d[i]=(Math.random()*2-1)*(1-i/len);
+      const src=ac.createBufferSource(),f=ac.createBiquadFilter(),g=ac.createGain();
+      f.type='lowpass';f.frequency.value=420;g.gain.value=0.12;src.buffer=buf;src.connect(f);f.connect(g);g.connect(ac.destination);src.start(n);
+    }
+  }catch(e){}
+}
+function tone(on){
+  stopTone();if(!on)return;
+  try{
+    const c=new (window.AudioContext||window.webkitAudioContext)(),o=c.createOscillator(),g=c.createGain();
+    o.type='sine';o.frequency.value=180+(S.sc.s3.v??40)*1.6;g.gain.value=0.035;
+    o.connect(g);g.connect(c.destination);o.start();audio={c,o,g};
+  }catch(e){}
+}
+
+/* ---------- 屏幕 ---------- */
+const V={};
+const doorHtml=(open,pw)=>`<div class="door ${open?'open':''}" id="door"><i></i><i></i>${pw!==undefined?`<div class="sock" id="sock" aria-hidden="true">${[0,1,2,3].map(k=>`<u class="${pw[k]?'on':''}">${pw[k]||''}</u>`).join('')}</div>`:''}</div>`;
+
+/* Screen 01 梦境序幕 */
+V.intro=()=>{
+  const dl=a=>`style="animation-delay:${S.seenPro?0:a}s"`;
+  return `<section class="scr pro" style="padding-top:5vh">
+  <div class="wk-hero big">${walker({},'wake')}</div>
+  ${[[14,24],[78,12],[88,52],[8,60]].map(([l,tp],k)=>`<i class="fd" aria-hidden="true" style="left:${l}%;top:${tp}%;animation-delay:${S.seenPro?0:1+k*.7}s,${S.seenPro?0:3+k*.7}s"></i>`).join('')}
+  <h1>${t('brand')}</h1>
+  <p class="small">${t('intro.disc')}</p>
+  <p class="lead pl" ${dl(.5)}>${t('intro.l1')}</p>
+  <p class="lead pl" ${dl(2.4)}>${t('intro.l2')}</p>
+  <p class="cap">${t('intro.sub')}</p>
+  <div class="row"><button class="btn ${S.seenPro?'ghost':''}" data-act="enter">${t('intro.enter')}</button><button class="btn ${S.seenPro?'':'link'}" data-act="skipPro">${t('intro.skip')}</button></div>
+</section>`;};
+
+/* Screen 02 接住四颗光 */
+const FL=[{l:10,t:12},{l:66,t:28},{l:26,t:62},{l:72,t:72}];
+V.dream=()=>{
+  const all=S.dream.length===4;
+  return `<section class="scr"><h2>${t('dream.title')}</h2>
+  <p class="small">${all?'':t('dream.help')}</p>
+  <div class="slots" id="slots">${ORDER.map((id,k)=>`<div class="slot ${S.dream.includes(k)?'on':''}" data-slot="${k}">${DIGIT[id]}</div>`).join('')}</div>
+  ${all?`<p class="lead" style="text-align:center">${t('dream.done')}</p><p class="small" style="text-align:center">${t('dream.done2')}</p>
+  <div class="row" style="justify-content:center"><button class="btn" data-act="dreamNext">${t('dream.next')}</button></div>`
+  :`<div class="stage">${ORDER.map((id,k)=>`<button class="fl" style="left:${FL[k].l}%;top:${FL[k].t}%;animation-delay:${-k*1.7}s" data-act="dreamTake" data-i="${k}" aria-label="${t('dream.light',{d:DIGIT[id]})}">${DIGIT[id]}</button>`).join('')}</div>`}
+  </section>`;
+};
+
+/* Screen 03 门前觉察 */
+V.gate=()=>{
+  const q=S.gq,opts=t('gate.q'+q+'.a');
+  return `<section class="scr">${doorHtml(false)}
+  <h2>${t('gate.title')}</h2><p class="small">${t('gate.help')}</p>
+  <p class="cap">${t('gate.prog',{n:q+1})}</p>
+  <p class="lead">${t('gate.q'+q)}</p>
+  <div class="stack">${opts.map((o,k)=>`<button class="opt" data-act="gateAns" data-v="${k}">${esc(o)}</button>`).join('')}
+  <button class="opt quiet" data-act="gateAns" data-v="-1">${t('gate.skip')}</button></div></section>`;
+};
+
+/* Screen 04 密码之门 */
+V.pw=()=>`<section class="scr">${doorHtml(S.pwOk,S.pw)}
+  <h2>${t('pw.title')}</h2><p class="small">${t('pw.help')}</p>
+  <div class="sr" id="pwsr" aria-live="polite">${t('pw.sr',{n:S.pw.length})}</div>
+  <div class="err" id="pwerr" role="alert"></div>
+  <div class="pad">${[1,2,3,4,5,6,7,8,9].map(n=>`<button data-act="pwKey" data-v="${n}">${n}</button>`).join('')}
+  <button class="sm" data-act="pwClear">${t('pw.clear')}</button><button data-act="pwKey" data-v="0">0</button><button class="sm" data-act="pwDel">${t('pw.del')}</button></div>
+</section>`;
+
+/* Screen 05 蓝图钥匙 */
+const dim=(y,m)=>new Date(y,m,0).getDate();
+function dayOpts(){
+  const y=+S.bd.y||2000,m=+S.bd.m||1,n=dim(y,m);
+  let h=`<option value="">${t('birth.d')}</option>`;
+  for(let d=1;d<=n;d++)h+=`<option value="${d}" ${+S.bd.d===d?'selected':''}>${d}</option>`;
+  return h;
+}
+V.birth=()=>{
+  const ny=new Date().getFullYear();let ys=`<option value="">${t('birth.y')}</option>`;
+  for(let y=ny;y>=1920;y--)ys+=`<option value="${y}" ${+S.bd.y===y?'selected':''}>${y}</option>`;
+  let ms=`<option value="">${t('birth.m')}</option>`;
+  for(let m=1;m<=12;m++)ms+=`<option value="${m}" ${+S.bd.m===m?'selected':''}>${m}</option>`;
+  return `<section class="scr"><h2>${t('birth.title')}</h2><p class="lead" style="font-size:18px">${t('birth.help')}</p><p class="small">${t('birth.help2')}</p>
+  <div class="grid2" style="grid-template-columns:1.3fr 1fr 1fr">
+   <div><label class="f" for="by">${t('birth.y')}</label><select id="by" data-bind="by">${ys}</select></div>
+   <div><label class="f" for="bm">${t('birth.m')}</label><select id="bm" data-bind="bm">${ms}</select></div>
+   <div><label class="f" for="bd">${t('birth.d')}</label><select id="bd" data-bind="bd">${dayOpts()}</select></div></div>
+  <div class="err" id="berr" role="alert"></div>
+  <div class="row"><button class="btn" data-act="birthGo">${t('birth.go')}</button></div>
+  <div class="row" style="margin-top:4px"><button class="btn link" data-act="birthSample">${t('birth.sample')}</button></div>
+</section>`;
+};
+
+/* Screen 06 四境地图 */
+// 旅人站在节点圆圈的一侧，完全落在节点名称区域之外（节点宽 92px，旅人宽 58px），避免遮挡名称与「已走过」。
+const WK_SIDE={s1:'r',s3:'l',s2:'r',s0:'l'};
+const wkPos=id=>{const p=POS[id],r=WK_SIDE[id]==='r';return `left:calc(${p.x}% ${r?'+ 50px':'- 108px'});top:calc(${p.y}% - 62px)`;};
+V.map=()=>{
+  const n=visitedN();
+  const pts=ORDER.map(i=>POS[i].x+','+POS[i].y).join(' ');
+  const to=S.lastDone||'s1',from=S.walkAt||to;
+  const lit=S.lastLit;
+  const status=i=>S.visited[i]?t('map.visited'):t('map.todo');
+  return `<section class="scr"><h2>${t('map.title')}</h2><p class="small">${t('map.order')}</p>
+  ${lit?`<p class="note" role="status">${t('lamp.lit',{s:lit.toUpperCase()+' '+t('scene.'+lit+'.name')})}</p>`:''}
+  <div class="map" id="map" data-guided="${S.guided||''}"><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polyline points="${pts}"/></svg>
+  ${ORDER.map(i=>`<button class="node ${S.visited[i]?'done':''}" id="node-${i}" style="left:${POS[i].x}%;top:${POS[i].y}%" data-act="scene" data-id="${i}" aria-label="${DIGIT[i]} ${i.toUpperCase()} ${t('scene.'+i+'.name')}，${status(i)}"><b>${DIGIT[i]}</b><span>${t('scene.'+i+'.name')}</span>${S.visited[i]?`<em>${t('map.visited')}</em>`:''}</button>`).join('')}
+  ${far(92,80)}${far(5,60)}
+  <div class="wk" id="wk" style="${wkPos(from)}">${walker(S.visited,'walk')}</div></div>
+  ${lampCap(S.visited)}<p class="cap" style="text-align:center">${t('lamp.note')}</p>
+  ${totemRow(S.visited,lit)}<p class="cap" style="text-align:center">${t('totem.note')}</p>
+  <p class="small">${t('map.prog',{n})}</p>
+  ${n===4&&!S.gathered?`<p class="lead">${t('map.done')}</p>`:''}
+  <div class="row" style="margin-top:8px">
+   ${n===4&&!S.gathered?`<button class="btn" data-act="gather" id="gatherBtn">${t('map.gather')}</button>`:''}
+   ${n<4?`<button class="btn ghost" data-act="guide">${t('map.guide')}</button>`:''}
+   <button class="btn ghost" data-act="textMap" aria-expanded="${S.textMap}" aria-controls="tmap">${S.textMap?t('map.textHide'):t('map.text')}</button>
+  </div>
+  ${S.guided&&n<4?`<p class="note" role="status">${t('map.guideNote',{s:t('scene.'+S.guided+'.name')})}</p>`:''}
+  <div id="tmap" ${S.textMap?'':'hidden'} style="margin-top:12px"><ul style="list-style:none;padding:0;margin:0">${ORDER.map(i=>`<li><button class="legend" data-act="scene" data-id="${i}"><span><strong>${i.toUpperCase()}</strong>${t('scene.'+i+'.name')}：${t('scene.'+i+'.tag')}</span><em>${status(i)}</em></button></li>`).join('')}</ul></div>
+  ${S.gathered?`<div class="row"><button class="btn" data-act="showBp">${t('map.bp')}</button><button class="btn ghost" data-act="toBottle">${t('map.bottle')}</button><button class="btn ghost" data-act="toWall0">${t('map.wall')}</button></div>`:''}
+</section>`;
+};
+
+/* ---- 场景外壳 ---- */
+const poseFor=id=>id==='s0'?'release':(id==='s3'||id==='s2')?'observe':'stand';
+const sceneHead=id=>`<div class="rh"><h2>${t('scene.'+id+'.name')}</h2><span class="code">${id.toUpperCase()} · ${DIGIT[id]}</span></div>
+  <p class="small">${t('scene.'+id+'.tag')}</p>
+  <p class="trow">${totem(id,S.visited[id])}<span>${S.visited[id]?t('totem.shown'):t('totem.sleep')}（${t('totem.ph')}）</span></p>`;
+const backRow=`<div class="row" style="margin-top:24px"><button class="btn link" data-act="toMap">${t('scene.leave')}</button></div>`;
+function mirrorHtml(id,lines){
+  const s=S.sc[id];
+  return `<div class="card fixed"><h3>${t('mirror.head')}</h3>${lines.map(l=>`<p style="margin:0 0 8px">${l}</p>`).join('')}</div>
+    <label class="f" for="note">${t('note.label')}</label>
+    <textarea id="note" data-bind="note" placeholder="${t('note.ph')}" maxlength="140">${esc(s.note||'')}</textarea>
+    <div class="row"><button class="btn" data-act="finish">${t('finish')}</button></div>`;
+}
+function syncWaveA11y(v){
+  const w=waveWord(v),c=$('#wave'),sl=$('#sl');
+  if(c)c.setAttribute('aria-label',t('wave.alt',{w}));
+  if(sl)sl.setAttribute('aria-valuetext',w);
+}
+function waveWord(v){v=+v;return t('s3.w'+(v<25?0:v<50?1:v<75?2:3));}
+
+V.scene=()=>{
+  const id=S.cur,s=S.sc[id];let body='';
+  if(S.visited[id]&&!s.replaying){
+    return `<section class="scr"><div class="wk-sm">${walker(S.visited,poseFor(id))}</div>${sceneHead(id)}
+    <div class="card fixed"><h3>${t('replay.title')}</h3><p style="margin:0">${esc(liveText(id))}</p></div>
+    <p class="cap">${t('replay.note')}</p>
+    <div class="row"><button class="btn" data-act="redo">${t('replay.btn')}</button></div>${backRow}</section>`;
+  }
+  if(id==='s1'){
+    if(s.step==='mirror'){
+      body=mirrorHtml(id,[`${esc(t('sym.'+s.sym))}：${t('sym.'+s.sym+'.l')}`,t('s1.m.'+s.act)+(s.act==='rename'?` ${t('bp.mine',{x:esc(s.ren)})}`:''),t('s1.mirror')]);
+    }else if(s.step==='act'){
+      body=`<div class="bigsym">${t('sym.'+s.sym)}</div><p class="lead" style="text-align:center">${t('sym.'+s.sym+'.l')}</p><p class="cap" style="text-align:center"><span class="tag sample">${t('s1.sampleTag')}</span></p>
+      <p class="lead" style="margin-top:16px">${t('s1.q')}</p>
+      <div class="stack">${S1_ACTS.map(a=>`<button class="opt ${a==='unsure'?'quiet':''} ${s.reveal&&a==='rename'?'sel':''}" data-act="s1act" data-v="${a}">${t('s1.a.'+a)}</button>`).join('')}</div>
+      ${s.reveal?`<label class="f" for="ren">${t('s1.my')}</label><input type="text" id="ren" data-bind="ren" maxlength="16" placeholder="${t('s1.renPh')}" value="${esc(s.ren||'')}"><p class="cap">${t('s1.renNote')}</p><div class="err" id="renerr" role="alert"></div><div class="row" style="margin-top:6px"><button class="btn" data-act="s1renOk">${t('s1.renOk')}</button></div>`:''}
+      <div class="row" style="margin-top:8px"><button class="btn link" data-act="s1Back">${t('s1.change')}</button></div>`;
+    }else{
+      body=`<p class="lead">${t('s1.pick')}</p><div class="grid2">${SYMS.map(k=>`<button class="sym" data-act="pickSym" data-v="${k}">${t('sym.'+k)}</button>`).join('')}</div>`;
+    }
+  }
+  if(id==='s3'){
+    const v=s.v??40;
+    if(s.step==='mirror'){
+      body=mirrorHtml(id,[t('s3.m.'+s.act,{w:waveWord(v)})]);
+    }else{
+      body=`<p class="lead">${t('s3.help')}</p>
+      <canvas class="wave" id="wave" role="img" aria-label="${t('wave.alt',{w:waveWord(v)})}"></canvas>
+      <label class="f" for="sl">${t('s3.label')}：<span id="wlab">${waveWord(v)}</span></label>
+      <input type="range" id="sl" min="0" max="100" value="${v}" aria-valuetext="${waveWord(v)}" data-bind="slider">
+      <p class="cap">${t('s3.fine')}</p>
+      <div class="grid2"><button class="btn ghost" data-act="slow">${t('s3.slower')}</button><button class="btn ghost" data-act="fast">${t('s3.faster')}</button></div>
+      <div class="stack" style="margin-top:12px"><button class="opt" data-act="s3act" data-v="stay">${t('s3.stay')}</button><button class="opt" data-act="s3act" data-v="observe">${t('s3.observe')}</button>
+      <button class="opt quiet" id="sndBtn" data-act="snd">${t('s3.snd.on')}</button></div>
+      <p class="cap">${t('s3.snd.note')}</p>`;
+    }
+  }
+  if(id==='s2'){
+    if(s.step==='mirror'){
+      body=mirrorHtml(id,[`${t('rel.'+s.rel)}`,t('s2.m.'+s.act)+(s.act==='say'&&s.say?` ${t('bp.my2',{x:esc(s.say)})}`:''),t('s2.mirror')]);
+    }else if(s.step==='act'){
+      body=`<p class="bigsym" style="font-size:28px">${t('rel.'+s.rel)}</p><p class="lead">${t('s2.act')}</p>
+      <div class="stack">${S2_ACTS.map(a=>`<button class="opt ${a==='none'?'quiet':''} ${s.reveal&&a==='say'?'sel':''}" data-act="s2act" data-v="${a}">${t('s2.a.'+a)}</button>`).join('')}</div>
+      ${s.reveal?`<label class="f" for="say">${t('s2.my')}</label><textarea id="say" data-bind="say" maxlength="140" placeholder="${t('s2.sayPh')}">${esc(s.say||'')}</textarea><div class="row" style="margin-top:6px"><button class="btn" data-act="s2sayOk">${t('s2.sayOk')}</button></div>`:''}`;
+    }else{
+      body=`<p class="lead">${t('s2.pick')}</p><div class="stack">${RELS.map(r=>`<button class="opt ${r==='none'?'quiet':''}" data-act="pickRel" data-v="${r}">${t('rel.'+r)}</button>`).join('')}</div>`;
+    }
+  }
+  if(id==='s0'){
+    if(s.step==='mirror'){
+      body=mirrorHtml(id,[t(s.skipped?'s0.b.skip':'s0.b.done'),t('s0.m.'+s.act)+(s.act==='word'&&s.word?` ${t('bp.word',{x:esc(s.word)})}`:''),t('s0.mirror')]);
+    }else if(s.step==='act'){
+      body=`<p class="lead">${t('s0.after')}</p>
+      <div class="stack">${S0_ACTS.map(a=>`<button class="opt ${a==='wait'||a==='back'?'quiet':''} ${s.reveal&&a==='word'?'sel':''}" data-act="s0act" data-v="${a}">${t('s0.a.'+a)}</button>`).join('')}</div>
+      ${s.reveal?`<label class="f" for="word">${t('s0.my')}</label><input type="text" id="word" data-bind="word" maxlength="12" placeholder="${t('s0.wordPh')}" value="${esc(s.word||'')}"><div class="row" style="margin-top:6px"><button class="btn" data-act="s0wordOk">${t('s0.wordOk')}</button></div>`:''}`;
+    }else{
+      body=`<p class="lead">${t('s0.intro')}</p><div class="breath" id="br" aria-live="polite"><span id="brl"></span></div>
+      <div class="row" style="justify-content:center"><button class="btn" id="brGo" data-act="breatheStart">${t('s0.start')}</button><button class="btn link" data-act="breatheSkip">${t('s0.skip')}</button></div>`;
+    }
+  }
+  return `<section class="scr"><div class="wk-sm">${walker(S.visited,poseFor(id))}</div>${sceneHead(id)}${body}${backRow}</section>`;
+};
+
+/* 简版蓝图 */
+function liveText(id){
+  const s=S.sc[id];if(!S.visited[id])return t('bp.none');
+  let a='';
+  if(id==='s1')a=t('bp.sym.l',{n:t('sym.'+s.sym),a:t('s1.a.'+s.act)})+(s.act==='rename'?'；'+t('bp.mine',{x:s.ren}):'');
+  if(id==='s3')a=t('bp.s3.l',{w:waveWord(s.v??40),a:t('s3.'+s.act)});
+  if(id==='s2')a=t('bp.rel.l',{n:t('rel.'+s.rel),a:t('s2.a.'+s.act)})+(s.act==='say'&&s.say?'；'+t('bp.my2',{x:s.say}):'');
+  if(id==='s0')a=t('bp.blank.l',{a:t('s0.a.'+s.act)})+(s.act==='word'&&s.word?'；'+t('bp.word',{x:s.word}):'')+'；'+t(s.skipped?'s0.b.skip':'s0.b.done');
+  return a+(s.note?'；'+t('bp.say',{x:s.note}):'');
+}
+/* ExplorationRecord[]：玩家选择只进入这里，不参与蓝图计算 */
+function explorationRecords(){
+  return ORDER.map(id=>{const s=S.sc[id];
+    return {module:id,sceneVersion:SCENE_VERSION,choice:S.visited[id]?(s.act||null):null,
+      playerWords:[s.ren,s.say,s.word,s.note].filter(Boolean).join(' / '),completed:!!S.visited[id]};});
+}
+const birthKey=()=>{const b=S.birth;return `${b.y} · ${String(b.m).padStart(2,'0')} · ${String(b.d).padStart(2,'0')}`;};
+V.bp=()=>{
+  const gateAns=S.gate.map((g,k)=>`<li>${t('gate.q'+k)} → ${g<0?t('bp.noAns'):esc(t('gate.q'+k+'.a')[g])}</li>`).join('');
+  return `<section class="scr"><h2>${t('bp.title')}</h2>
+  <div class="wk-hero">${walker(S.visited,'stand')}</div>${lampCap(S.visited)}
+  <div class="card fixed"><h3>${t('bp.fixed')}</h3><span class="tag sample">${t('bp.sampleTag')}</span>
+   <p class="small" style="margin-top:8px">${t('bp.fixedHelp')}</p>
+   <p class="cap">${t('bp.key',{k:birthKey()})}${S.birthSample?' '+t('bp.keySample'):''}</p>
+   ${ORDER.map(i=>{const f=getFoundation(i);return `<div class="bp-card"><div class="d">${DIGIT[i]}<small>${i.toUpperCase()}</small>${totem(i,!!S.visited[i])}</div><div><strong>${t('scene.'+i+'.name')}（${t('scene.'+i+'.en')}）：${esc(f.name)}</strong><br><span class="small">${esc(f.shortMeaning)}</span><br><span class="cap">${t('bp.code')}</span></div></div>`;}).join('')}
+   <p class="cap" style="margin-top:10px">${t('bp.ver',{a:S.bp.algorithmVersion||t('bp.verNone'),c:esc(S.bp.contentVersion||'—'),p:t(S.bp.provenance==='official'?'bp.provOff':'bp.provDemo')})}<br>${t('bp.totemNote')}</p></div>
+  <div class="card"><h3>${t('bp.live')}</h3><p class="small">${t('bp.liveHelp')}</p>
+   ${ORDER.map(i=>`<p style="margin:0 0 10px"><strong>${t('scene.'+i+'.name')}</strong><br><span class="small">${esc(liveText(i))}</span></p>`).join('')}
+   ${S.gate.length?`<details><summary>${t('bp.gate')}</summary><ul class="small">${gateAns}</ul></details>`:''}</div>
+  <p class="note">${t('bp.sep')}</p>
+  <div class="row" style="margin-top:6px"><button class="btn ghost" data-act="saveCard">${t('bp.card')}</button></div>
+  <p class="cap" id="cardNote">${t('bp.cardNote')}</p>
+  <div class="card"><h3>${t('bp.rep.title')}</h3><p class="small">${t('bp.rep.text')}</p><button class="btn ghost" data-act="report">${t('bp.rep.btn')}</button></div>
+  <div class="row"><button class="btn" data-act="toBottle">${t('bp.next')}</button><button class="btn link" data-act="toMap">${t('back.map')}</button></div>
+</section>`;
+};
+function exportCard(){
+  const W=1080,H=1560,c=document.createElement('canvas');c.width=W;c.height=H;const x=c.getContext('2d');
+  const g=x.createLinearGradient(0,0,0,H);g.addColorStop(0,'#1b2a63');g.addColorStop(1,'#070d24');x.fillStyle=g;x.fillRect(0,0,W,H);
+  const wrap=(txt,px,y,maxW,lh,font,color)=>{x.font=font;x.fillStyle=color;let line='';
+    for(const ch of String(txt)){const w=x.measureText(line+ch).width;if(w>maxW&&line){x.fillText(line,px,y);y+=lh;line=ch;}else line+=ch;}
+    if(line){x.fillText(line,px,y);y+=lh;}return y;};
+  const sf='"Noto Serif SC","Songti SC",serif',sn='"PingFang SC","Noto Sans SC",sans-serif';
+  let y=110;
+  y=wrap('SoulSync Kingdom · 简版 Soul Blueprint（私人卡）',70,y,940,56,`600 40px ${sf}`,'#f0c97a');
+  y=wrap(t('bp.sampleTag'),70,y+10,940,40,`26px ${sn}`,'#a9b4dc');
+  y=wrap(t('bp.fixed'),70,y+40,940,50,`600 34px ${sf}`,'#f0c97a');
+  ORDER.forEach(i=>{const f=getFoundation(i);
+    y=wrap(`${DIGIT[i]} ${i.toUpperCase()} ${t('scene.'+i+'.name')}：${f.name}`,70,y+14,940,44,`600 30px ${sf}`,'#e8ecfb');
+    y=wrap(f.shortMeaning,70,y,940,38,`26px ${sn}`,'#a9b4dc');});
+  y=wrap(t('bp.live'),70,y+50,940,50,`600 34px ${sf}`,'#f0c97a');
+  ORDER.forEach(i=>{y=wrap(`${t('scene.'+i+'.name')}：${liveText(i)}`,70,y+12,940,38,`26px ${sn}`,'#e8ecfb');});
+  wrap(t('bp.sep'),70,H-190,940,40,`26px ${sf}`,'#a9b4dc');
+  wrap(t('bp.cardNote'),70,H-70,940,34,`22px ${sn}`,'#a9b4dc');
+  const a=document.createElement('a');a.href=c.toDataURL('image/png');a.download='soulsync-private-card.png';document.body.appendChild(a);a.click();a.remove();
+}
+
+/* 星愿瓶：撰写 */
+V.bottle=()=>{
+  const b=S.bottle;
+  return `<section class="scr"><h2>${t('btl.title')}</h2><div class="wk-hero">${walker(S.visited,'bottle')}</div>
+  <p class="small">${t('btl.help')}</p>
+  <label class="f" for="exp">${t('btl.exp')}</label><textarea id="exp" data-bind="exp" maxlength="200" placeholder="${t('btl.expPh')}">${esc(b.exp)}</textarea>
+  <label class="f" for="ins">${t('btl.ins')}</label><textarea id="ins" data-bind="ins" maxlength="200" placeholder="${t('btl.insPh')}">${esc(b.ins)}</textarea>
+  <label class="f" for="wsh">${t('btl.wish')}</label><textarea id="wsh" data-bind="wish" maxlength="120" placeholder="${t('btl.wishPh')}">${esc(b.wish)}</textarea>
+  <div class="extra"><h3 style="margin:0 0 4px">${t('btl.extra')}</h3><p class="cap" style="margin:0 0 6px">${t('btl.extraNote')}</p></div>
+  <fieldset style="border:0;padding:0;margin:8px 0 0"><legend class="f" style="padding:0">${t('btl.snip')}</legend>
+   ${['none',...ORDER].map(k=>`<label class="chk"><input type="radio" name="snip" data-bind="snip" value="${k}" ${b.snip===k?'checked':''}><span>${k==='none'?t('btl.snipNone'):k.toUpperCase()+' '+t('scene.'+k+'.name')}</span></label>`).join('')}
+   <p class="cap">${t('btl.snipNote')}</p></fieldset>
+  <label class="chk" style="border:0"><input type="checkbox" data-bind="cw" ${b.cw?'checked':''}><span>${t('btl.cw')}</span></label>
+  <input type="text" id="cwt" data-bind="cwText" maxlength="30" placeholder="${t('btl.cwPh')}" value="${esc(b.cwText)}" aria-label="${t('btl.f.cw')}" ${b.cw?'':'hidden'}>
+  <p class="note">${t('btl.care')}</p>
+  <div class="err" id="berr" role="alert">${esc(b.err||'')}</div>
+  <div class="row"><button class="btn" data-act="toPreview">${t('btl.preview')}</button><button class="btn link" data-act="toWall0">${t('btl.skipWall')}</button></div>
+</section>`;
+};
+
+/* 星愿公开预览（独立同意） */
+V.preview=()=>{
+  const P=buildPublicStarPayload(S);
+  const f=(k,v)=>`<h3 style="margin-top:14px">${t('pv.'+k)}</h3><div class="pv ${v?'':'empty'}">${v?esc(v):t('pv.empty')}</div>`;
+  return `<section class="scr"><h2>${t('pv.title')}</h2><p class="small">${t('pv.help')}</p>
+  <div class="card"><p class="cap" style="margin:0">${t('pv.alias')}</p><p class="lead" style="margin:2px 0 4px" id="aliasv">${esc(P.alias)}</p>
+   <button class="tinybtn" data-act="regen">${t('pv.regen')}</button><p class="cap" style="margin:8px 0 0">${t('pv.aliasNote')}</p></div>
+  ${f('exp',P.experience)}${f('ins',P.insight)}${f('wish',P.wish)}
+  <h3 style="margin-top:14px">${t('pv.snip')}</h3><div class="pv ${P.blueprintSnippet?'':'empty'}">${P.blueprintSnippet?t('pv.snipVal',{n:esc(P.blueprintSnippet.module.toUpperCase()+' '+P.blueprintSnippet.publicName)}):t('pv.snipNone')}</div>
+  <h3 style="margin-top:14px">${t('pv.cw')}</h3><div class="pv ${P.contentWarning?'':'empty'}">${P.contentWarning?esc(P.contentWarning):t('pv.cwNone')}</div>
+  <div class="nopub"><strong>${t('pv.no.t')}</strong><ul><li>${t('pv.no.1')}</li><li>${t('pv.no.2')}</li><li>${t('pv.no.3')}</li></ul></div>
+  <p class="note">${t('pv.local')}</p>
+  <label class="chk"><input type="checkbox" id="consent" data-bind="consent" ${S.consent?'checked':''}><span>${t('pv.consent')}</span></label>
+  <div class="row"><button class="btn" id="pubBtn" data-act="publish" ${S.consent?'':'disabled'}>${t('pv.light')}</button></div>
+  <div class="row" style="margin-top:6px"><button class="btn ghost" data-act="toBottle">${t('pv.back')}</button><button class="btn ghost" data-act="keepPrivate">${t('pv.private')}</button></div>
+</section>`;
+};
+
+/* 生命流星 */
+V.meteor=()=>`<section class="scr" style="text-align:center"><h2>${t('met.title')}</h2>
+  <div class="mstage" id="mst"><canvas id="mc" role="img" aria-label="${t('met.alt')}"></canvas>
+   <div class="mw">${walker(S.visited,'stand')}</div><div class="mbot" id="mbot">${BOTTLE_MINI}</div><i class="mdot" id="mdot"></i></div>
+  <p class="mcap" id="mcap" aria-live="polite"></p>
+  <div id="mfin" hidden><p class="final">${t('met.final')}</p><p class="cap">${t('met.note')}</p>
+   <div class="row" style="justify-content:center"><button class="btn" data-act="toWall0">${t('met.go')}</button></div></div>
+  <div class="row" style="justify-content:center" id="mskip"><button class="btn link" data-act="skipMeteor">${t('met.skip')}</button></div></section>`;
+
+/* 星墙 */
+const MY_POS={x:50,y:52};
+const allStars=()=>S.wall.concat(DEMO.wall.map((o,k)=>({...o,id:'d'+k,sample:true,contentWarning:o.cw||null,experience:o.experience||'',insight:o.insight||'',wish:o.wish||''})));
+V.wall=()=>{
+  const stars=allStars();const sel=stars[S.wallSel];
+  let sheet=`<p class="small" style="margin:0">${t('wall.tapStar')}</p>`;
+  if(sel){
+    const hidden=sel.contentWarning&&!S.wallCw[sel.id]&&!sel.mine;
+    sheet=`<span class="tag ${sel.mine?'':'sample'}">${sel.mine?t('wall.mine'):t('wall.sample')}</span> <span class="cap">${esc(sel.alias)}</span>`;
+    if(hidden)sheet+=`<p style="margin:10px 0">${t('wall.cwShow',{c:esc(sel.contentWarning)})}</p><button class="btn ghost" data-act="cwShow">${t('wall.cwBtn')}</button>`;
+    else{
+      if(sel.contentWarning)sheet+=`<p class="cap" style="margin:8px 0 0">${t('pv.cw')}：${esc(sel.contentWarning)}</p>`;
+      sheet+=[sel.experience,sel.insight,sel.wish].filter(Boolean).map(x=>`<blockquote>${esc(x)}</blockquote>`).join('');
+      if(sel.blueprintSnippet)sheet+=`<p class="cap" style="margin:6px 0 0">${t('pv.snip')}：${esc(sel.blueprintSnippet.module.toUpperCase()+' '+sel.blueprintSnippet.publicName)}</p>`;
+      const g=S.gest[sel.id];
+      sheet+=sel.mine?`<p class="small" style="margin-top:10px">${t('gest.mine')}</p>`
+        :`<p class="small" style="margin:12px 0 8px">${t('gest.ask')}</p><div class="gest">${GEST.map(k=>`<button class="opt g ${g===k?'sel':''}" data-act="gesture" data-v="${k}" aria-pressed="${g===k}"><strong>${t('gest.'+k)}</strong>：<span class="small">${t('gest.'+k+'.s')}</span></button>`).join('')}</div>${g?`<p class="small" style="margin-top:10px">${t('gest.done')}</p>`:`<p class="cap" style="margin-top:8px">${t('gest.note')}</p>`}`;
+    }
+  }
+  return `<section class="scr"><h2>${t('wall.title')}</h2><p class="small">${t('wall.help')}</p>
+  <div class="wall" id="wallbox">${far(5,44)}${far(95,58)}${far(38,96)}${stars.map((s,k)=>`<button class="st ${s.mine?'mine':''} ${S.gest[s.id]?'echoed':''} ${k===S.wallSel?'cur':''}" style="left:${s.mine?MY_POS.x:s.x}%;top:${s.mine?MY_POS.y:s.y}%" data-act="wallSel" data-i="${k}" aria-label="${s.mine?t('wall.mine'):t('wall.sample')}：${esc(s.alias)}"></button>`).join('')}</div>
+  <div class="sheet" aria-live="polite">${sheet}</div>
+  ${S.keptNote?`<p class="note" role="status">${t('wall.privateKept')}</p>`:''}
+  ${S.privateStars.length?`<details><summary>${t('wall.private')}</summary>${S.privateStars.map(p=>`<div class="pv">${esc([p.experience,p.insight,p.wish].filter(Boolean).join('\n')||'—')}${p.blueprintSnippet?'\n'+esc(p.blueprintSnippet.module.toUpperCase()+' '+p.blueprintSnippet.publicName):''}</div>`).join('')}</details>`:''}
+  <p class="note">${t('wall.sampleNote')} ${t('wall.mod')}</p>
+  <p class="small">${t('wall.care')}</p>
+  <div class="row"><button class="btn" data-act="toMap">${t('back.map')}</button><button class="btn link" data-act="restart">${t('again')}</button></div>
+</section>`;
+};
+
+function render(){stopWave();app.innerHTML=V[S.screen]();afterRender();}
+
+/* ---------- 渲染后挂载 ---------- */
+function afterRender(){
+  if(S.screen==='scene'&&S.cur==='s3'&&S.sc.s3.step!=='mirror')startWave();
+  if(S.screen==='meteor')playMeteor();
+  if(S.screen==='map'){
+    const to=S.lastDone||'s1',w=$('#wk');
+    if(w&&S.walkAt&&S.walkAt!==to){
+      requestAnimationFrame(()=>requestAnimationFrame(()=>{w.style.cssText=wkPos(to);dustTrail(w);}));
+      [0,500,1000].forEach(ms=>S.timers.push(setTimeout(()=>{if(S.screen==='map')sfx('step');},ms)));
+    }
+    S.walkAt=to;
+  }
+  if(S.screen==='map'&&S.lastLit)S.lastLit=null; // 提示已随本次渲染展示，此处清除（不再 render）
+  if(S.screen==='wall')echoFx();
+}
+function startWave(){
+  const c=$('#wave');if(!c)return;const ctx=c.getContext('2d');
+  const dpr=Math.min(window.devicePixelRatio||1,2);
+  const W=c.width=c.clientWidth*dpr,H=c.height=c.clientHeight*dpr;
+  let ph=0,last=performance.now();
+  const frame=now=>{
+    const v=(S.sc.s3.v??40)/100,dt=(now-last)/1000;last=now;
+    ph+=dt*(0.6+v*5);
+    ctx.clearRect(0,0,W,H);
+    for(let k=0;k<3;k++){
+      ctx.beginPath();
+      const amp=H*(0.12+0.1*(1-v)+k*0.02),fr=(2+v*7)*(1+k*0.35);
+      for(let x=0;x<=W;x+=4){
+        const y=H/2+Math.sin(x/W*fr*Math.PI*2+ph+k)*amp*(1-k*0.25);
+        x?ctx.lineTo(x,y):ctx.moveTo(x,y);
+      }
+      ctx.strokeStyle=`rgba(240,201,122,${0.85-k*0.25})`;ctx.lineWidth=(2.2-k*0.5)*dpr;ctx.stroke();
+    }
+    if(!reduced())raf=requestAnimationFrame(frame);
+  };
+  frame(performance.now());
+}
+function dustTrail(w){
+  if(reduced())return;
+  const map=w.parentElement;let k=0;
+  const step=()=>{
+    if(S.screen!=='map'||k++>12)return;
+    const a=w.getBoundingClientRect(),b=map.getBoundingClientRect(),d=document.createElement('i');
+    d.className='dust';d.style.left=(a.left-b.left+a.width/2+Math.random()*16-8)+'px';d.style.top=(a.top-b.top+a.height-8+Math.random()*8-4)+'px';
+    map.appendChild(d);setTimeout(()=>d.remove(),1800);S.timers.push(setTimeout(step,120));
+  };
+  step();
+}
+function echoFx(){
+  const id=S.echoFx;S.echoFx=null;if(!id)return;
+  const wall=$('#wallbox'),star=wall&&wall.querySelector('.st.cur');if(!star)return;
+  if(reduced()){star.classList.add('ring');return;}
+  const lamp=document.createElement('div');lamp.className='lampfx';lamp.style.left='50%';lamp.style.top='100%';wall.appendChild(lamp);
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{lamp.style.left=star.style.left;lamp.style.top=star.style.top;}));
+  S.timers.push(setTimeout(()=>{lamp.remove();star.classList.add('ring');sfx('gesture');},1250));
+}
+/* 生命流星：旅人托起瓶 → 灯的一束光入瓶（灯仍亮）→ 升空 → 落入星墙 */
+function drawMeteorEnd(){
+  const c=$('#mc');if(!c)return;const ctx=c.getContext('2d'),dpr=Math.min(window.devicePixelRatio||1,2);
+  const W=c.width=c.clientWidth*dpr,H=c.height=c.clientHeight*dpr;
+  const ex=W*0.85,ey=H*0.18;
+  const g=ctx.createRadialGradient(ex,ey,0,ex,ey,40*dpr);
+  g.addColorStop(0,'rgba(255,240,200,1)');g.addColorStop(.25,'rgba(240,201,122,.6)');g.addColorStop(1,'rgba(240,201,122,0)');
+  ctx.clearRect(0,0,W,H);ctx.fillStyle=g;ctx.beginPath();ctx.arc(ex,ey,40*dpr,0,7);ctx.fill();
+}
+function runMeteorCanvas(){
+  const c=$('#mc');if(!c)return;const ctx=c.getContext('2d'),dpr=Math.min(window.devicePixelRatio||1,2);
+  const W=c.width=c.clientWidth*dpr,H=c.height=c.clientHeight*dpr;
+  const sx=W*0.15,sy=H*0.79,ex=W*0.85,ey=H*0.18;
+  const pt=u=>({x:sx+(ex-sx)*u,y:sy+(ey-sy)*Math.pow(u,0.7)-H*0.12*Math.sin(u*Math.PI)});
+  const T=2800,t0=performance.now();
+  const f=now=>{
+    const u=Math.min((now-t0)/T,1);ctx.clearRect(0,0,W,H);
+    for(let k=0;k<26;k++){
+      const p=pt(Math.max(u-k*0.014,0));
+      ctx.fillStyle=`rgba(255,236,190,${(1-k/26)*0.8})`;
+      ctx.beginPath();ctx.arc(p.x,p.y,(5-k*0.17)*dpr,0,7);ctx.fill();
+    }
+    if(u<1&&S.screen==='meteor')requestAnimationFrame(f);else if(S.screen==='meteor')drawMeteorEnd();
+  };
+  requestAnimationFrame(f);
+}
+function meteorFinal(){
+  clearTimers();
+  const cap=$('#mcap'),b=$('#mbot'),fin=$('#mfin'),sk=$('#mskip');
+  if(cap)cap.textContent=t('met.c4');
+  if(b)b.style.display='none';
+  drawMeteorEnd();
+  if(fin)fin.hidden=false;if(sk)sk.hidden=true;
+}
+function playMeteor(){
+  const cap=$('#mcap'),b=$('#mbot'),dot=$('#mdot');
+  if(reduced()){meteorFinal();return;}
+  cap.textContent=t('met.c1');
+  const at=(ms,fn)=>S.timers.push(setTimeout(()=>{if(S.screen==='meteor')fn();},ms));
+  at(1300,()=>{cap.textContent=t('met.c2');dot.style.opacity='1';requestAnimationFrame(()=>requestAnimationFrame(()=>{dot.style.left='48px';dot.style.top='300px';}));b.classList.add('glow');});
+  at(2500,()=>{dot.style.opacity='0';});
+  at(2900,()=>{cap.textContent=t('met.c3');b.classList.add('rise');runMeteorCanvas();sfx('rise');});
+  at(6000,()=>{meteorFinal();sfx('gesture');});
+}
+
+/* ---------- 背景星空 ---------- */
+(function sky(){
+  const c=$('#sky'),ctx=c.getContext('2d');let W,H,stars=[];
+  const size=()=>{const d=Math.min(window.devicePixelRatio||1,2);W=c.width=innerWidth*d;H=c.height=innerHeight*d;
+    stars=Array.from({length:110},()=>({x:Math.random()*W,y:Math.random()*H,r:(Math.random()*1.3+.3)*d,p:Math.random()*6.28,s:.3+Math.random()*1.2}));draw(0);};
+  const draw=t=>{ctx.clearRect(0,0,W,H);
+    for(const s of stars){const a=.35+.45*Math.sin(t/1000*s.s+s.p);ctx.fillStyle=`rgba(225,232,255,${Math.max(a,.1)})`;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,7);ctx.fill();}};
+  const loop=t=>{draw(t);requestAnimationFrame(loop);};
+  size();addEventListener('resize',size);
+  if(!reduced())requestAnimationFrame(loop);
+})();
+
+/* ---------- 动作 ---------- */
+function setBirth(b,sample){S.birth=b;S.birthSample=sample;S.bp=Adapter1320.compute(b);go('map');}
+function toScene(id){S.cur=id;go('scene');}
+// 离开场景：若处于未完成的重走，恢复旧结果
+function leaveScene(){
+  const id=S.cur;
+  if(S.screen==='scene'&&id&&S.sc[id]&&S.sc[id].replaying&&S.replayBackup[id]){
+    S.sc[id]=S.replayBackup[id];delete S.replayBackup[id];
+  }
+  go('map');
+}
+const A={
+  enter(){S.seenPro=true;go('dream');},
+  skipPro(){S.seenPro=true;S.dream=[0,1,2,3];go('dream');},
+  dreamTake(d){
+    const i=+d.i;if(S.dream.includes(i))return;S.dream.push(i);
+    const b=app.querySelector(`.fl[data-i="${i}"]`);if(b)b.classList.add('gone');
+    const sl=app.querySelector(`.slot[data-slot="${i}"]`);if(sl)sl.classList.add('on');
+    if(S.dream.length===4)S.timers.push(setTimeout(()=>render(),reduced()?100:900));
+  },
+  dreamNext(){go('gate');},
+  gateAns(d){S.gate[S.gq]=+d.v;if(S.gq<2){S.gq++;render();window.scrollTo(0,0);}else go('pw');},
+  pwKey(d){pwPush(d.v);},
+  pwClear(){S.pw='';updatePw();},
+  pwDel(){S.pw=S.pw.slice(0,-1);updatePw();},
+  birthGo(){
+    const y=+S.bd.y,m=+S.bd.m,dd=+S.bd.d;const e=$('#berr');
+    if(!y||!m||!dd||new Date(y,m-1,dd)>new Date()){e.textContent=t('birth.err');return;}
+    setBirth({y,m,d:dd},false);
+  },
+  birthSample(){setBirth({...DEMO.sampleBirth},true);},
+  scene(d){toScene(d.id);},
+  toMap(){leaveScene();},
+  redo(){
+    const id=S.cur;
+    S.replayBackup[id]={...S.sc[id]};
+    S.sc[id]=id==='s3'?{v:40,replaying:true}:{replaying:true};
+    render();window.scrollTo(0,0);
+  },
+  textMap(){S.textMap=!S.textMap;render();},
+  guide(){
+    const pool=ORDER.filter(i=>!S.visited[i]);if(!pool.length)return;
+    const id=pool[Math.floor(Math.random()*pool.length)];S.guided=id;
+    const map=$('#map'),w=$('#wk'),node=$('#node-'+id);if(map)map.dataset.guided=id;
+    if(!map||!w||!node||reduced()){toScene(id);return;}
+    const mb=map.getBoundingClientRect(),wb=w.getBoundingClientRect(),nb=node.getBoundingClientRect();
+    const orb=document.createElement('div');orb.className='lampfx';
+    orb.style.left=(wb.left-mb.left+wb.width/2)+'px';orb.style.top=(wb.top-mb.top+10)+'px';map.appendChild(orb);
+    node.classList.add('pulse');
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{orb.style.left=(nb.left-mb.left+nb.width/2)+'px';orb.style.top=(nb.top-mb.top+29)+'px';}));
+    sfx('gesture');
+    S.timers.push(setTimeout(()=>toScene(id),1500));
+  },
+  gather(){
+    const map=$('#map'),w=$('#wk');
+    const done=()=>{S.gathered=true;sfx('lamp');go('bp');};
+    if(!map||!w||reduced()){done();return;}
+    const mb=map.getBoundingClientRect(),wb=w.getBoundingClientRect();
+    const tx=wb.left-mb.left+wb.width*0.66,ty=wb.top-mb.top+wb.height*0.69;
+    ORDER.forEach(id=>{
+      const nb=$('#node-'+id).getBoundingClientRect(),d=document.createElement('div');d.className='lampfx';
+      d.style.left=(nb.left-mb.left+nb.width/2)+'px';d.style.top=(nb.top-mb.top+29)+'px';map.appendChild(d);
+      requestAnimationFrame(()=>requestAnimationFrame(()=>{d.style.left=tx+'px';d.style.top=ty+'px';}));
+    });
+    $('#gatherBtn').disabled=true;
+    S.timers.push(setTimeout(done,1600));
+  },
+  /* S1 */
+  pickSym(d){const s=S.sc.s1;s.sym=d.v;s.step='act';s.reveal=false;render();window.scrollTo(0,0);},
+  s1Back(){S.sc.s1.step='pick';render();},
+  s1act(d){
+    const s=S.sc.s1;
+    if(d.v==='rename'){s.reveal=true;render();const i=$('#ren');if(i)i.focus();return;}
+    s.act=d.v;s.reveal=false;s.step='mirror';render();window.scrollTo(0,0);
+  },
+  s1renOk(){const s=S.sc.s1,v=(s.ren||'').trim();if(!v){$('#renerr').textContent=t('s1.renErr');return;}s.ren=v;s.act='rename';s.reveal=false;s.step='mirror';render();window.scrollTo(0,0);},
+  /* S3 */
+  slow(){nudge(-15);},fast(){nudge(15);},
+  s3act(d){const s=S.sc.s3;if(s.v===undefined)s.v=40;s.act=d.v;s.step='mirror';stopWave();render();window.scrollTo(0,0);},
+  snd(){
+    const s=S.sc.s3;s.snd=!s.snd;tone(s.snd);
+    const b=$('#sndBtn');if(b)b.textContent=s.snd?t('s3.snd.skip'):t('s3.snd.on');
+  },
+  /* S2 */
+  pickRel(d){
+    const s=S.sc.s2;s.rel=d.v;s.reveal=false;
+    if(d.v==='none'){s.act='none';s.step='mirror';}else s.step='act';
+    render();window.scrollTo(0,0);
+  },
+  s2act(d){
+    const s=S.sc.s2;
+    if(d.v==='say'){s.reveal=true;render();const i=$('#say');if(i)i.focus();return;}
+    s.act=d.v;s.reveal=false;s.step='mirror';render();window.scrollTo(0,0);
+  },
+  s2sayOk(){const s=S.sc.s2;s.say=(s.say||'').trim();s.act='say';s.reveal=false;s.step='mirror';render();window.scrollTo(0,0);},
+  /* S0 */
+  breatheStart(){
+    const br=$('#br'),lab=$('#brl'),btn=$('#brGo');if(!br||btn.disabled)return;
+    btn.disabled=true;br.classList.add('run');let n=0;
+    const tick=()=>{
+      if(n>=6){const s=S.sc.s0;s.skipped=false;s.step='act';render();return;}
+      lab.textContent=n%2===0?t('s0.in'):t('s0.out');n++;S.timers.push(setTimeout(tick,4000));
+    };
+    tick();
+  },
+  breatheSkip(){clearTimers();const s=S.sc.s0;s.skipped=true;s.step='act';render();},
+  s0act(d){
+    const s=S.sc.s0;
+    if(d.v==='back'){leaveScene();return;}
+    if(d.v==='word'){s.reveal=true;render();const i=$('#word');if(i)i.focus();return;}
+    s.act=d.v;s.word='';s.reveal=false;s.step='mirror';render();window.scrollTo(0,0);
+  },
+  s0wordOk(){const s=S.sc.s0;s.word=(s.word||'').trim();s.act=s.word?'word':'blank';s.reveal=false;s.step='mirror';render();window.scrollTo(0,0);},
+  finish(){
+    const id=S.cur,first=!S.visited[id];
+    S.visited[id]=true;S.sc[id].completed=true;delete S.sc[id].replaying;
+    S.lastDone=id;S.lastLit=first?id:null;S.guided=null;
+    if(first)sfx('lamp');
+    delete S.replayBackup[id];
+    go('map');
+  },
+  showBp(){go('bp');},
+  saveCard(){
+    const n=$('#cardNote');
+    try{exportCard();if(n)n.textContent=t('bp.cardDone')+' '+t('bp.cardNote');}
+    catch(e){console.error(e);if(n)n.textContent=t('bp.cardFail');}
+  },
+  report(){openModal(`<h2 id="mtitle">${t('bp.rep.title')}</h2><p>${t('bp.rep.text')}</p><ul><li>${t('bp.rep.1')}</li><li>${t('bp.rep.2')}</li><li>${t('bp.rep.3')}</li></ul><p class="note">${t('bp.rep.status')}</p>`);},
+  toBottle(){go('bottle');},
+  toPreview(){
+    const b=S.bottle,P=buildPublicStarPayload(S);
+    const bad=[['exp',P.experience],['ins',P.insight],['wish',P.wish],['cw',b.cw?b.cwText:'']].filter(([k,v])=>hasContact(v)).map(([k])=>t('btl.f.'+k));
+    if(bad.length){b.err=t('btl.contact',{f:bad.join('、')});$('#berr').textContent=b.err;return;}
+    if(!P.experience&&!P.insight&&!P.wish){b.err=t('btl.empty');$('#berr').textContent=b.err;return;}
+    b.err='';S.consent=false;go('preview');
+  },
+  regen(){
+    S.alias=newAlias();S.consent=false; // 公开内容变了，原同意作废
+    render();const b=$('[data-act=regen]');if(b)b.focus();
+  },
+  keepPrivate(){
+    const P=buildPublicStarPayload(S);S.privateStars.push(P);S.published=null;S.wall=[];S.keptNote=true;S.wallSel=-1;
+    S.bottle=emptyBottle();go('wall');
+  },
+  publish(){
+    if(!S.consent)return;
+    const P=buildPublicStarPayload(S);
+    S.published=P;S.wall=[StarWallAdapter.submitLocal(P)];S.keptNote=false;S.wallSel=0;
+    S.bottle=emptyBottle();
+    go('meteor');
+  },
+  skipMeteor(){meteorFinal();},
+  toWall0(){S.wallSel=S.published?0:-1;go('wall');},
+  wallSel(d){S.wallSel=+d.i;render();},
+  cwShow(){const s=allStars()[S.wallSel];S.wallCw[s.id]=true;render();},
+  gesture(d){
+    const s=allStars()[S.wallSel];if(!s||s.mine)return;
+    if(S.gest[s.id]===d.v){delete S.gest[s.id];S.echoFx=null;}else{S.gest[s.id]=d.v;S.echoFx=s.id;}
+    render();
+  },
+  restart(){openModal(`<h2 id="mtitle">${t('again')}</h2><p>${t('again.confirm')}</p><div class="row"><button class="btn" data-act="restartYes">${t('again.yes')}</button></div>`);},
+  restartYes(){closeModal();const f=S.sfx,sp=S.seenPro;S=fresh();S.sfx=f;S.seenPro=sp;go('intro');}
+};
+function nudge(d){
+  const s=S.sc.s3;s.v=Math.max(0,Math.min(100,(s.v??40)+d));
+  const sl=$('#sl');if(sl)sl.value=s.v;const l=$('#wlab');if(l)l.textContent=waveWord(s.v);syncWaveA11y(s.v);
+  if(audio)audio.o.frequency.value=180+s.v*1.6;if(reduced())startWave();
+}
+function pwPush(n){
+  if(S.pwOk||S.pw.length>=4)return;
+  S.pw+=n;updatePw();
+  if(S.pw.length===4)S.timers.push(setTimeout(checkPw,250));
+}
+function updatePw(){
+  const sk=$('#sock');if(!sk)return;
+  sk.querySelectorAll('u').forEach((u,i)=>{u.textContent=S.pw[i]||'';u.classList.toggle('on',!!S.pw[i]);});
+  const sr=$('#pwsr');if(sr)sr.textContent=t('pw.sr',{n:S.pw.length});
+}
+function checkPw(){
+  if(S.pw==='1320'){
+    S.pwOk=true;$('#door').classList.add('open');$('#pwerr').textContent='';$('#pwsr').textContent=t('pw.open');sfx('lamp');
+    S.timers.push(setTimeout(()=>go('birth'),reduced()?200:1500));
+  }else{
+    S.pwErr++;const sk=$('#sock');sk.classList.add('shake');
+    $('#pwerr').textContent=S.pwErr>=2?t('pw.err')+' '+t('pw.hint'):t('pw.err');
+    S.timers.push(setTimeout(()=>{S.pw='';sk.classList.remove('shake');updatePw();},450));
+  }
+}
+
+/* ---------- 事件代理 ---------- */
+app.addEventListener('click',e=>{
+  const b=e.target.closest('[data-act]');if(!b||b.disabled)return;
+  const f=A[b.dataset.act];if(f)f(b.dataset);
+});
+app.addEventListener('input',e=>{
+  const el=e.target,k=el.dataset.bind;if(!k)return;
+  if(k==='slider'){S.sc.s3.v=+el.value;const l=$('#wlab');if(l)l.textContent=waveWord(el.value);syncWaveA11y(el.value);
+    if(audio)audio.o.frequency.value=180+(+el.value)*1.6;if(reduced())startWave();}
+  if(k==='note')S.sc[S.cur].note=el.value;
+  if(k==='ren')S.sc.s1.ren=el.value;
+  if(k==='say')S.sc.s2.say=el.value;
+  if(k==='word')S.sc.s0.word=el.value;
+  if(k==='exp'||k==='ins'||k==='wish'||k==='cwText'){
+    S.bottle[k]=el.value;
+    if((k==='exp'||k==='ins'||k==='wish')&&S.bottle.err&&el.value.trim()){
+      S.bottle.err='';const e=$('#berr');if(e)e.textContent='';
+    }
+  }
+});
+app.addEventListener('change',e=>{
+  const el=e.target,k=el.dataset.bind;if(!k)return;
+  if(k==='snip')S.bottle.snip=el.value;
+  if(k==='cw'){S.bottle.cw=el.checked;const i=$('#cwt');if(i)i.hidden=!el.checked;}
+  if(k==='consent'){S.consent=el.checked;const p=$('#pubBtn');if(p)p.disabled=!el.checked;}
+  if(k==='by'||k==='bm'||k==='bd'){
+    S.bd[{by:'y',bm:'m',bd:'d'}[k]]=el.value;
+    if(k!=='bd'){const d=$('#bd');if(+S.bd.d>dim(+S.bd.y||2000,+S.bd.m||1))S.bd.d='';d.innerHTML=dayOpts();}
+  }
+});
+document.addEventListener('keydown',e=>{
+  if(S.screen!=='pw'||$('#modal').classList.contains('on'))return;
+  if(/^[0-9]$/.test(e.key))pwPush(e.key);
+  if(e.key==='Backspace'){S.pw=S.pw.slice(0,-1);updatePw();}
+});
+
+/* ---------- 启动 ---------- */
+$('#brand').textContent=t('brand');
+$('#aboutBtn').textContent=t('bar.about');
+$('#aboutBtn').addEventListener('click',()=>openModal(aboutHtml()));
+const sfxBtn=$('#sfxBtn');sfxBtn.textContent=t('sfx.off');
+sfxBtn.addEventListener('click',()=>{S.sfx=!S.sfx;sfxBtn.textContent=t(S.sfx?'sfx.on':'sfx.off');sfxBtn.setAttribute('aria-pressed',S.sfx);sfx('gesture');});
+if(location.hash==='#selftest')window.__ssk={buildPublicStarPayload,getState:()=>S,ORDER};
+render();
+})();
+</script>
+</body>
+</html>

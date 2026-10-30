@@ -1,0 +1,33 @@
+function walker(lit,pose){
+  lit=lit||{};pose=pose||'stand';
+  const rel=pose==='release',hold=pose==='bottle';
+  const cx=rel?89:66,cy=rel?131:104,r=rel?11:12;
+  const q={
+    s1:`M${cx} ${cy}L${cx-r} ${cy}A${r} ${r} 0 0 1 ${cx} ${cy-r}Z`,
+    s3:`M${cx} ${cy}L${cx} ${cy-r}A${r} ${r} 0 0 1 ${cx+r} ${cy}Z`,
+    s2:`M${cx} ${cy}L${cx+r} ${cy}A${r} ${r} 0 0 1 ${cx} ${cy+r}Z`,
+    s0:`M${cx} ${cy}L${cx} ${cy+r}A${r} ${r} 0 0 1 ${cx-r} ${cy}Z`};
+  const n=ORDER.filter(i=>lit[i]).length;
+  const tilt=pose==='wake'?'rotate(9 47 40)':pose==='observe'?'rotate(-7 47 40)':'';
+  const lean=pose==='walk'?'rotate(2.5 50 140)':'';
+  const bottle=hold?`<path d="M20 96h12v-6l-2-3h-8l-2 3z" fill="rgba(240,201,122,.25)" stroke="#f0c97a" stroke-width="1.3"/><rect x="21" y="83" width="10" height="4" rx="1.5" fill="#c99a45"/><circle cx="26" cy="98" r="2.4" fill="#f0c97a"/>`:'';
+  const arm=rel
+    ?`<path d="M60 50C67 66 67 84 65 102" fill="none" stroke="#16255a" stroke-width="7" stroke-linecap="round"/><circle cx="65" cy="103" r="3.2" fill="#e8ecfb"/>`
+    :`<path d="M60 50C71 62 72 78 67 90" fill="none" stroke="#16255a" stroke-width="7" stroke-linecap="round"/><circle cx="67" cy="91" r="3.2" fill="#e8ecfb"/><path d="M67 94V${cy-r}" stroke="#c99a45" stroke-width="1.2"/>`;
+  return `<svg class="walker" viewBox="0 0 100 150" role="img" aria-label="${t('walker.alt')}">
+   <defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d2f70"/><stop offset="1" stop-color="#0a1334"/></linearGradient>
+   <radialGradient id="hg"><stop offset="0" stop-color="#f4f1e6"/><stop offset="1" stop-color="#b9c3e6"/></radialGradient>
+   <radialGradient id="lg"><stop offset="0" stop-color="#f0c97a" stop-opacity=".9"/><stop offset="1" stop-color="#f0c97a" stop-opacity="0"/></radialGradient></defs>
+   <circle cx="${cx}" cy="${cy}" r="${24+n*6}" fill="url(#lg)" opacity="${(0.2+n*0.2).toFixed(2)}"/>
+   <g transform="${lean}">
+   <path d="M33 44C27 72 22 108 16 140C29 135 39 144 50 139C62 144 74 135 84 140C76 108 70 72 62 44Q47 36 33 44Z" fill="url(#cg)" stroke="#c99a45" stroke-width="1.2"/>
+   <path d="M33 44Q47 52 62 44" fill="none" stroke="#f0c97a" stroke-width="2" stroke-linecap="round"/>
+   <path d="M50 52V138" stroke="rgba(240,201,122,.35)" stroke-width="1"/>
+   <g transform="${tilt}"><ellipse cx="47" cy="27" rx="11" ry="13.5" fill="url(#hg)"/></g>
+   ${arm}
+   <path d="M35 50C27 62 25 78 28 90" fill="none" stroke="#16255a" stroke-width="7" stroke-linecap="round"/><circle cx="28" cy="91" r="3.2" fill="#e8ecfb"/>
+   </g>
+   ${ORDER.map(i=>`<path class="lp ${lit[i]?'on':''}" d="${q[i]}"/>`).join('')}
+   <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#c99a45" stroke-width="1.4"/>
+   ${bottle}</svg>`;
+}

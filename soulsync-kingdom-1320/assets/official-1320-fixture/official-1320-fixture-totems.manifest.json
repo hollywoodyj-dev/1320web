@@ -1,0 +1,33 @@
+{
+  "version": "v0.2.3",
+  "status": "OFFICIAL_1320_RESULT_ASSETS_VERIFIED",
+  "scope": "Verified fixture only; this is not the complete per-code registry.",
+  "sourcePage": "https://www.1320soulcode.com/full-report-v2",
+  "foundationOrder": ["S1", "S3", "S2", "S0"],
+  "assets": {
+    "S1-18": {
+      "name": "The Transformer",
+      "file": "official-1320-S1-18-transformer.webp",
+      "sourceUrl": "https://www.1320soulcode.com/S1-44/S18.webp",
+      "sha256": "43a3cd59118c227fab52933fc8428bdfcc85034e91fa4e8d5f5899a8c0dc612d"
+    },
+    "S3-03": {
+      "name": "Explorer",
+      "file": "official-1320-S3-03-explorer.webp",
+      "sourceUrl": "https://www.1320soulcode.com/S3-12/S03.webp",
+      "sha256": "fbea8fb1abd7b35b758a82bb63427bdee06b14c2a263834ecde25c713456a16f"
+    },
+    "S2-27": {
+      "name": "The Soul Shock Mirror",
+      "file": "official-1320-S2-27-soul-shock-mirror.webp",
+      "sourceUrl": "https://www.1320soulcode.com/S2-50/S2-27.webp",
+      "sha256": "b16a15f5d65b318ca25ff95174a9ebf9142f010dc52d6cabfc50e1210db68fe2"
+    },
+    "S0-07": {
+      "name": "Self-Worth Illusion",
+      "file": "official-1320-S0-07-self-worth-illusion.webp",
+      "sourceUrl": "https://www.1320soulcode.com/S0-19/S0-07.webp",
+      "sha256": "080f29c049a3a2f2f2a6796a16f4ccdd42e79c1004c077225c9eaeb18496b9eb"
+    }
+  }
+}

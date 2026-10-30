@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">S3 Vibration 图腾</title>
+  <desc id="desc">向外扩散的双重金色弧线、中心点与水平基线组成的四境视觉图腾。</desc>
+  <g fill="none" stroke="#f0c97a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M26 78a34 34 0 0 1 68 0"/>
+    <path d="M39 78a21 21 0 0 1 42 0"/>
+    <circle stroke-width="3.5" cx="60" cy="78" r="3"/>
+  </g>
+  <path fill="none" stroke="#c99a45" stroke-width="1.4" stroke-linecap="round" d="M22 90H98"/>
+</svg>

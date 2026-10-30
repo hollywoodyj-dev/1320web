@@ -1,0 +1,10 @@
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+@keyframes drift{from{transform:translate(0,0)}to{transform:translate(14px,-18px)}}
+@keyframes shake{25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+@keyframes pulse{50%{box-shadow:0 0 50px 12px rgba(240,201,122,.8)}}
+@keyframes dustfade{to{opacity:0;transform:translateY(-14px) scale(.3)}}
+@keyframes faint{to{opacity:.12}}
+@keyframes br{0%,100%{transform:scale(.6)}50%{transform:scale(1.15)}}
+@keyframes bob{to{transform:translateY(-8px)}}
+@keyframes ring{to{transform:scale(5);opacity:0}}
+@keyframes reveal{0%{transform:scale(.55);opacity:.15;box-shadow:0 0 0 rgba(240,201,122,0)}60%{transform:scale(1.12);opacity:1;box-shadow:0 0 34px rgba(240,201,122,.8)}100%{transform:scale(1)}}

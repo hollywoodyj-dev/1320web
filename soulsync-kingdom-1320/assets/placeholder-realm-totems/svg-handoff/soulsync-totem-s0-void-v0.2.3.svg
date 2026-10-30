@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">S0 Void 图腾</title>
+  <desc id="desc">中心留白的金色内环与外部空间环组成的四境视觉图腾。</desc>
+  <circle fill="none" stroke="#f0c97a" stroke-width="8" cx="60" cy="60" r="25"/>
+  <circle fill="none" stroke="#c99a45" stroke-width="1.4" cx="60" cy="60" r="40"/>
+</svg>

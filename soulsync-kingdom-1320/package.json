@@ -1,0 +1,14 @@
+{
+  "name": "soulsync-kingdom-1320-handoff",
+  "version": "0.2.3",
+  "private": true,
+  "description": "SoulSync Kingdom x 1320 SoulCode - offline single-file prototype handoff. The game itself has zero runtime dependencies.",
+  "scripts": {
+    "test": "python3 -I tools/smoke_test.py src/current/soulsync-kingdom-1320-v0.2.3-visual-dev.html src/current/soulsync-kingdom-1320-v0.2.3-visual-dev-selftest.html",
+    "test:frozen": "python3 -I tools/smoke_test.py src/frozen-baseline-v0.2.2/soulsync-kingdom-1320-v0.2.2.html src/frozen-baseline-v0.2.2/soulsync-kingdom-1320-v0.2.2-selftest.html",
+    "extract-assets": "python3 -I tools/extract_inline_assets.py src/current/soulsync-kingdom-1320-v0.2.3-visual-dev.html assets/inline-extracted-regenerated",
+    "verify-hashes": "sha256sum -c SHA256SUMS.txt"
+  },
+  "devDependencies": {},
+  "notes": "Smoke test uses Python Playwright: pip install playwright && playwright install chromium. No npm packages are required."
+}

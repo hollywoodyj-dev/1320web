@@ -1,0 +1,7 @@
+/* extracted from :root of the game file */
+:root{
+  --ink:#070d24; --deep:#0f1b45; --dusk:#1b2a63; --gold:#f0c97a; --gold-d:#c99a45;
+  --danger:#ffb4a8; --moon:#e8ecfb; --mist:#a9b4dc; --line:rgba(159,171,214,.3); --glow:rgba(240,201,122,.22);
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;
+  --sans:"PingFang SC","Noto Sans SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+}

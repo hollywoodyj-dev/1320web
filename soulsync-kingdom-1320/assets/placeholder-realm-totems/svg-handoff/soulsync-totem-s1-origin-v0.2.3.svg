@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">S1 Origin 图腾</title>
+  <desc id="desc">嫩芽、两片叶子与一粒种子组成的金色四境视觉图腾。</desc>
+  <g fill="none" stroke="#f0c97a" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke-width="8" d="M60 86V58"/>
+    <path fill="#f0c97a" stroke-width="3" d="M60 68C44 68 33 58 33 43C48 43 60 51 60 68Z"/>
+    <path fill="#f0c97a" stroke-width="3" d="M60 58C75 58 87 47 87 31C72 31 60 40 60 58Z"/>
+    <circle stroke-width="3.5" cx="60" cy="101" r="3"/>
+  </g>
+</svg>

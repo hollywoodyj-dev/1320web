@@ -1,0 +1,46 @@
+---
+description: SoulSync Kingdom 1320 local Cursor handoff constraints
+alwaysApply: true
+---
+
+# SoulSync Kingdom 1320 — local handoff
+
+This workspace is an **offline local engineering handoff**. Preview, deploy, and public launch are **not authorized**.
+
+## Source of truth
+
+- Continue from a **copy** of `src/current/soulsync-kingdom-1320-v0.2.3-visual-dev.html`. Never overwrite that file.
+- `src/frozen-baseline-v0.2.2/` is read-only. Do not "fix" it.
+- `src/archive-superseded/` is audit-only.
+- Official Data Pack: `docs/data/SoulSync_Kingdom_1320_Data_Pack_for_Claude_v0.2.3.md`.
+- `docs/superseded/` contains retracted material. Do not treat it as spec.
+
+## Retracted formulas — never implement
+
+Do not put any of the following into code, tests, copy, or specs as a live algorithm:
+
+- `S2 = month + day` / `S2 = 月＋日`
+- `S3 = month × day` / `S3 = 月×日`
+- Derived range claims such as "S3-10..12 unreachable" or "S2 reachable 2–43"
+
+The Data Pack only confirms **input sources** (year→S1, full date→S3, month→S2, day→S0). That is not arithmetic.
+
+The only current in-game formula is the DEMO hash `(y*13+m*7+d*3+i*5)%pool.length`. Keep it labeled demo. Do not present it as official 1320.
+
+## Adapter1320
+
+Do not change `Adapter1320.compute()` until Nova provides a versioned schema, success and error fixtures, and `algorithmVersion` / `contentVersion`. Official results come from a backend proxy, never from a browser copy of the private algorithm. Failures must surface `unconnected` / `validation_failed` / `temporarily_unavailable`. Never silently fall back to DEMO.
+
+## Assets
+
+- Four official WebP files in `assets/official-1320-fixture/` are **fixtures only**. They are not wired into the game.
+- Do not treat four-realm placeholder totems as official numbered totems.
+- Do not invent missing totems, names, or meanings. Do not fill gaps with placeholder SVGs.
+- Missing or mismatched `totemId`↔`code` must error visibly.
+
+## Prototype rules
+
+- No network in the prototype. No `localStorage` / `sessionStorage` / cookies.
+- Public payload stays exactly six keys: `alias, experience, insight, wish, blueprintSnippet, contentWarning`.
+- Secrets never enter the repo. `.env.example` has names and placeholders only.
+- Browser code must never hold `NOVA_1320_API_KEY`.

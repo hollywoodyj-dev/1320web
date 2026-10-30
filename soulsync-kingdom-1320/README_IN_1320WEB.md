@@ -2,10 +2,14 @@
 
 This folder is a **local working copy** of the SoulSync Kingdom 1320 handoff, placed under `hollywoodyj-dev/1320web` at Founder request (2026-10-30). It is **not** wired into the Next.js site, Preview, or production.
 
-- Standalone workspace (source of truth for this machine): `C:\Users\hugoz\soulsync-kingdom-1320`
+**What this folder is for:** [FUNCTION.md](FUNCTION.md)  
+**What the 1320web site agent must implement:** [REQUEST_FOR_1320WEB_AGENT.md](REQUEST_FOR_1320WEB_AGENT.md)
+
+- Standalone workspace (older twin on this machine): `C:\Users\hugoz\soulsync-kingdom-1320`
 - Parent repo: `https://github.com/hollywoodyj-dev/1320web`
-- Game / test checkpoint: `94e2f8d` in the standalone repo
-- Adapter, official algorithm, and hosted Preview remain unauthorized
+- Bridge build: `src/current/soulsync-kingdom-1320-v0.2.4-1320web-bridge.html` (calls `/api/soulsync-kingdom/*`; those routes are not in this folder)
+- Offline visual-dev file stays at v0.2.3 and must not be overwritten
+- Official algorithm stays on the 1320 server. Hosted Preview remains unauthorized
 
 **Not copied here (on purpose):**
 

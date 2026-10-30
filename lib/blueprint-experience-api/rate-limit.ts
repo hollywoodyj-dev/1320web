@@ -41,4 +41,5 @@ export const RATE_LIMITS = {
   resolve: { limit: 30, windowMs: 60_000 },
   profile: { limit: 120, windowMs: 60_000 },
   health: { limit: 30, windowMs: 60_000 },
+  kingdomResolve: { limit: 30, windowMs: 60_000 },
 } as const;

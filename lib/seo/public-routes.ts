@@ -19,6 +19,7 @@ export function getSitemapRoutes(): PublicSeoRoute[] {
 
 /** Paths crawlers should not index (prefix match in robots.txt). */
 export const ROBOTS_DISALLOW_PATHS = [
+  "/soulsync-kingdom",
   "/account",
   "/admin",
   "/api/",

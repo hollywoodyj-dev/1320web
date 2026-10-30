@@ -1,6 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  outputFileTracingIncludes: {
+    "/soulsync-kingdom": [
+      "./soulsync-kingdom-1320/src/current/soulsync-kingdom-1320-v0.2.4-1320web-bridge.html",
+    ],
+    "/soulsync-kingdom/": [
+      "./soulsync-kingdom-1320/src/current/soulsync-kingdom-1320-v0.2.4-1320web-bridge.html",
+    ],
+  },
   // Coze / Blueprint Experience OpenAPI paths (`/v1/...`) → Next route handlers.
   async rewrites() {
     return [
@@ -95,7 +103,14 @@ const nextConfig: NextConfig = {
     ];
   },
   async headers() {
+    const noIndex = [
+      { key: "Cache-Control", value: "no-store" },
+      { key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" },
+    ];
     return [
+      { source: "/soulsync-kingdom", headers: noIndex },
+      { source: "/soulsync-kingdom/", headers: noIndex },
+      { source: "/api/soulsync-kingdom/:path*", headers: noIndex },
       {
         source: "/integration/facilitator",
         headers: [

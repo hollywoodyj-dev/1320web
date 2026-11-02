@@ -1,5 +1,21 @@
-/** Fixture mapping whose bytes were checked against the published sha256. Not a full registry. */
-const VERIFIED_TOTEMS = {
+/**
+ * Official Soul Code card images already published with the live report.
+ * SoulSync is the same 1320 project, so Preview may point at these paths.
+ * A code outside the published pack, or a code whose file is missing, gets
+ * no totem fields. Do not read image bytes here.
+ */
+const PACKS = {
+  S1: { min: 1, max: 44, url: (n: number) => `/S1-44/S${pad(n)}.webp` },
+  S3: { min: 1, max: 12, url: (n: number) => `/S3-12/S${pad(n)}.webp` },
+  S2: { min: 1, max: 50, url: (n: number) => `/S2-50/S2-${pad(n)}.webp` },
+  S0: { min: 0, max: 19, url: (n: number) => `/S0-19/S0-${pad(n)}.webp` },
+  S4: { min: 0, max: 19, url: (n: number) => `/S4-20/S4-${pad(n)}.webp` },
+} as const;
+
+/** public/S2-50 has no S2-45.webp. The other packs are complete. */
+const MISSING_FILES = new Set(["S2-45"]);
+
+const HASH_CHECKED = {
   "S1-18": {
     url: "/S1-44/S18.webp",
     file: "public/S1-44/S18.webp",
@@ -27,10 +43,22 @@ export type VerifiedTotem = {
   totemAssetUrl: string;
 };
 
+function pad(value: number): string {
+  return String(value).padStart(2, "0");
+}
+
 export function verifiedTotemForCode(code: string): VerifiedTotem | null {
-  const entry = VERIFIED_TOTEMS[code as keyof typeof VERIFIED_TOTEMS];
-  if (!entry) return null;
-  return { totemId: code, totemAssetUrl: entry.url };
+  const match = /^(S[0-4])-(\d{2})$/.exec(code);
+  if (!match) return null;
+  const prefix = match[1] as keyof typeof PACKS;
+  const pack = PACKS[prefix];
+  const number = Number(match[2]);
+  if (!pack || number < pack.min || number > pack.max) return null;
+  if (MISSING_FILES.has(code)) return null;
+  const totem = { totemId: code, totemAssetUrl: pack.url(number) };
+  const checked = HASH_CHECKED[code as keyof typeof HASH_CHECKED];
+  if (checked && checked.url !== totem.totemAssetUrl) return null;
+  return totem;
 }
 
 export function verifiedTotemRegistry(): ReadonlyArray<{
@@ -39,5 +67,5 @@ export function verifiedTotemRegistry(): ReadonlyArray<{
   sha256: string;
   url: string;
 }> {
-  return Object.entries(VERIFIED_TOTEMS).map(([code, entry]) => ({ code, ...entry }));
+  return Object.entries(HASH_CHECKED).map(([code, entry]) => ({ code, ...entry }));
 }

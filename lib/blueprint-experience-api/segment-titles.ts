@@ -7,7 +7,7 @@ import type { BlueprintExperienceLocale } from "@/lib/blueprint-experience-api/t
 import { lookupRecord } from "@/lib/lookup-segment-record";
 import { use1320V2Content } from "@/lib/use-1320-v2-content";
 
-type SegmentKey = "s1" | "s3" | "s2" | "s0";
+type SegmentKey = "s1" | "s3" | "s2" | "s0" | "s4";
 
 /**
  * Resolve approved public display names by public segment code only.
@@ -18,6 +18,15 @@ export function getPublicSegmentTitle(
   code: string,
   locale: BlueprintExperienceLocale,
 ): string {
+  if (segment === "s4") {
+    const entry = lookupV2Entry("S4", code);
+    if (!entry) return code;
+    const displayEn = str(entry, "archetype") || str(entry, "display_name") || str(entry, "name");
+    const displayZh = str(entry, "archetype_zh") || str(entry, "display_name_zh");
+    if (locale === "zh-CN") return displayZh || displayEn || code;
+    return displayEn || displayZh || code;
+  }
+
   if (use1320V2Content()) {
     const moduleId = segment.toUpperCase() as "S1" | "S3" | "S2" | "S0";
     const entry = lookupV2Entry(moduleId, code);

@@ -16,7 +16,7 @@ import { verifiedTotemForCode } from "@/lib/soulsync-kingdom/verified-totems";
 const BODY_KEYS = new Set(["birth_date", "locale", "purpose", "consent"]);
 const CONSENT_KEYS = new Set(["blueprint_generation", "personalized_expression"]);
 
-type OfficialCodes = Pick<SoulCodeResult, "s1Code" | "s3Code" | "s2Code" | "s0Code">;
+type OfficialCodes = Pick<SoulCodeResult, "s1Code" | "s3Code" | "s2Code" | "s0Code" | "s4Code">;
 
 export type KingdomResolveOutput = {
   status: number;
@@ -32,9 +32,9 @@ function isRecord(value: unknown): value is Record<string, unknown> {
 }
 
 /**
- * Official S1 / S3 / S2 / S0 only.
- * Returns public codes and existing display names. Attaches a totem only when
- * the code is in the verified fixture and the file hash matches.
+ * Official S1 / S3 / S2 / S0, plus S4 when the calculator returns it.
+ * Returns public codes and existing display names. Attaches the live report's
+ * card image when that code has a published file.
  */
 export function resolveSoulSyncKingdomBlueprint(
   body: unknown,
@@ -72,7 +72,7 @@ export function resolveSoulSyncKingdomBlueprint(
       throw new BlueprintExperienceApiError("BLUEPRINT_SERVICE_UNAVAILABLE");
     }
 
-    const segment = (segmentKey: "s1" | "s3" | "s2" | "s0", code: string) => {
+    const segment = (segmentKey: "s1" | "s3" | "s2" | "s0" | "s4", code: string) => {
       const totem = verifiedTotemForCode(code);
       return {
         code,
@@ -81,6 +81,8 @@ export function resolveSoulSyncKingdomBlueprint(
         ...(totem ? { totemId: totem.totemId, totemAssetUrl: totem.totemAssetUrl } : {}),
       };
     };
+
+    const s4 = codes.s4Code ? segment("s4", codes.s4Code) : undefined;
 
     return {
       status: 200,
@@ -94,6 +96,7 @@ export function resolveSoulSyncKingdomBlueprint(
           s3: segment("s3", codes.s3Code),
           s2: segment("s2", codes.s2Code),
           s0: segment("s0", codes.s0Code),
+          ...(s4 ? { s4 } : {}),
         },
         experience_profile: {},
         governance: {

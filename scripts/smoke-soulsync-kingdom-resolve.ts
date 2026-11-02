@@ -68,6 +68,10 @@ async function main() {
     ),
     "fixture codes keep public names and verified totem urls",
   );
+  const s4 = foundation.s4;
+  assert(s4?.code === "S4-14", "fixture s4");
+  assert(s4?.totemId === "S4-14" && s4?.totemAssetUrl === "/S4-20/S4-14.webp", "fixture s4 logo");
+  assert(success.foundation_order && JSON.stringify(success.foundation_order) === JSON.stringify(["S1", "S3", "S2", "S0"]), "foundation order stays four");
   for (const entry of verifiedTotemRegistry()) {
     const bytes = readFileSync(path.join(process.cwd(), entry.file));
     const hash = createHash("sha256").update(bytes).digest("hex");
@@ -161,13 +165,57 @@ async function main() {
 
   const unmapped = resolveSoulSyncKingdomBlueprint(consentBody(FIXTURE), {
     requestId: "req_unmap",
-    calculate: () => ({ s1Code: "S1-01", s3Code: "S3-01", s2Code: "S2-02", s0Code: "S0-01" }),
+    calculate: () => ({
+      s1Code: "S1-99",
+      s3Code: "S3-99",
+      s2Code: "S2-99",
+      s0Code: "S0-99",
+      s4Code: "S4-99",
+    }),
   });
   const unmappedFoundation = (unmapped.body.foundation ?? {}) as Record<string, { totemId?: string }>;
   assert(
-    ["s1", "s3", "s2", "s0"].every((key) => !unmappedFoundation[key]?.totemId),
-    "unverified codes keep no official totem",
+    ["s1", "s3", "s2", "s0", "s4"].every((key) => !unmappedFoundation[key]?.totemId),
+    "codes outside the published packs keep no official totem",
   );
+
+  const wider = resolveSoulSyncKingdomBlueprint(consentBody(FIXTURE), {
+    requestId: "req_wider",
+    calculate: () => ({
+      s1Code: "S1-06",
+      s3Code: "S3-01",
+      s2Code: "S2-04",
+      s0Code: "S0-10",
+      s4Code: "S4-00",
+    }),
+  });
+  const widerFoundation = (wider.body.foundation ?? {}) as Record<
+    string,
+    { code: string; totemId?: string; totemAssetUrl?: string }
+  >;
+  assert(widerFoundation.s1.totemAssetUrl === "/S1-44/S06.webp", "S1-06 logo");
+  assert(widerFoundation.s3.totemAssetUrl === "/S3-12/S01.webp", "S3-01 logo");
+  assert(widerFoundation.s2.totemAssetUrl === "/S2-50/S2-04.webp", "S2-04 logo");
+  assert(widerFoundation.s0.totemAssetUrl === "/S0-19/S0-10.webp", "S0-10 logo");
+  assert(widerFoundation.s4.totemAssetUrl === "/S4-20/S4-00.webp", "S4-00 logo");
+  assert(
+    ["s1", "s3", "s2", "s0", "s4"].every((key) => widerFoundation[key].totemId === widerFoundation[key].code),
+    "wider logos use the same code as totem id",
+  );
+
+  const missingFile = resolveSoulSyncKingdomBlueprint(consentBody(FIXTURE), {
+    requestId: "req_missing_file",
+    calculate: () => ({
+      s1Code: "S1-01",
+      s3Code: "S3-01",
+      s2Code: "S2-45",
+      s0Code: "S0-01",
+      s4Code: "S4-01",
+    }),
+  });
+  const missingFoundation = (missingFile.body.foundation ?? {}) as Record<string, { totemId?: string }>;
+  assert(!missingFoundation.s2?.totemId, "S2-45 has no published file");
+  assert(missingFoundation.s1?.totemId === "S1-01", "S1-01 still has a published file");
 
   const reflectBody = {
     locale: "zh-CN",

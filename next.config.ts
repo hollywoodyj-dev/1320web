@@ -1,6 +1,24 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  outputFileTracingIncludes: {
+    "/tw-full-report": [
+      "./docs/gzh/1320_S0_EDITORIAL_PASS_v0.1.md",
+      "./docs/gzh/1320_S1_EDITORIAL_PASS_v0.1.md",
+      "./docs/gzh/1320_S2_EDITORIAL_PASS_v0.1.md",
+      "./docs/gzh/1320_S3_EDITORIAL_PASS_v0.1.md",
+      "./docs/gzh/1320_S4_EDITORIAL_PASS_v0.1.md",
+      "./docs/gzh/1320_S5_EDITORIAL_PASS_v0.1.md",
+      "./docs/gzh/1320_S5_RELATIONSHIP_EDITORIAL_PASS_v0.1.md",
+      "./docs/gzh/1320_S5_EXPRESSION_EDITORIAL_PASS_v0.1.md",
+      "./docs/gzh/1320_S5_PATTERN_EDITORIAL_PASS_v0.1.md",
+      "./docs/gzh/1320_S6_EDITORIAL_PASS_v0.1.md",
+      "./docs/gzh/1320_S7_EDITORIAL_PASS_v0.1.md",
+      "./docs/gzh/1320_S8_EDITORIAL_PASS_v0.1.md",
+      "./docs/gzh/1320_S9_EDITORIAL_PASS_v0.1.md",
+      "./docs/gzh/1320_SEVEN_DAY_EDITORIAL_PASS_v0.1.md",
+    ],
+  },
   // Coze / Blueprint Experience OpenAPI paths (`/v1/...`) → Next route handlers.
   async rewrites() {
     return [
@@ -96,6 +114,13 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [
+      {
+        source: "/tw-full-report",
+        headers: [
+          { key: "Cache-Control", value: "no-store" },
+          { key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" },
+        ],
+      },
       {
         source: "/integration/facilitator",
         headers: [

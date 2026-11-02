@@ -45,20 +45,17 @@ function ParagraphCards({ block }: { block: PreviewParagraphBlock }) {
   if (block.missing) {
     return (
       <ReportSegmentGrid>
-        <ReportInsightCard kicker={block.code} title={block.moduleTitle} body="這一則鎖定稿沒有對上的條目。" />
+        <ReportInsightCard kicker={block.code} title={block.moduleTitle} body="這一則沒有對上的條目。" />
       </ReportSegmentGrid>
     );
   }
 
   return (
-    <>
-      {block.note ? <ReportInsightCard kicker={block.code} title="預覽對應" body={block.note} /> : null}
-      <ReportInsightCard
-        kicker={block.code}
-        title={block.entryTitle}
-        paragraphs={block.paragraphs}
-      />
-    </>
+    <ReportInsightCard
+      kicker={block.code}
+      title={block.entryTitle}
+      paragraphs={block.paragraphs}
+    />
   );
 }
 
@@ -93,15 +90,11 @@ export default async function TwFullReportPreviewPage({
 
   return (
     <div className="unified-report-web-shell">
-      <div className="unified-report-web-banner" role="note">
-        預覽。正式站、台灣免費報告和台灣付費交付都沒有改。
-      </div>
       <ReportRoot reportType="full" surface="web">
         <ReportPage pageId="cover" pageNumber={1} totalPages={totalPages}>
           <ReportHero
-            eyebrow="預覽 · 尚未用於正式站"
             title="完整報告"
-            description={`國曆 ${report.birthDateDisplay}。基礎編號 ${report.foundationCodes}。`}
+            description={`國曆 ${report.birthDateDisplay}。${report.foundationCodes}。`}
           />
         </ReportPage>
 

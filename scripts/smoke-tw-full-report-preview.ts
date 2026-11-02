@@ -78,6 +78,11 @@ function main() {
   assert(report.days[5].parts.length === 2, "day 6 keeps two sections apart");
   assert(report.days[6].parts.length === 2, "day 7 keeps two sections apart");
   const pageSource = readFileSync(path.join(process.cwd(), "app", "(site)", "tw-full-report", "page.tsx"), "utf8");
+  const internalWords = ["預覽對應", "鎖定稿", "計算編號", "尚未用於正式站", "付費交付"];
+  const shown = `${visibleText(report)}\n${pageSource}`;
+  for (const word of internalWords) {
+    assert(!shown.includes(word), `reader page omits internal wording ${word}`);
+  }
   assert(pageSource.includes("第 7 天不是完成"), "day 7 is explicitly not completion");
   assert(pageSource.includes("這七天沒有單獨的一天對應它"), "s0 is not given a day");
   assert(

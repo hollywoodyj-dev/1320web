@@ -8,6 +8,18 @@ const nextConfig: NextConfig = {
     "/soulsync-kingdom/": [
       "./soulsync-kingdom-1320/src/current/soulsync-kingdom-1320-v0.2.4-1320web-bridge.html",
     ],
+    "/api/soulsync-kingdom/blueprints/resolve": [
+      "./public/S1-44/S18.webp",
+      "./public/S3-12/S03.webp",
+      "./public/S2-50/S2-27.webp",
+      "./public/S0-19/S0-07.webp",
+    ],
+    "/api/soulsync-kingdom/blueprints/resolve/route": [
+      "./public/S1-44/S18.webp",
+      "./public/S3-12/S03.webp",
+      "./public/S2-50/S2-27.webp",
+      "./public/S0-19/S0-07.webp",
+    ],
   },
   // Coze / Blueprint Experience OpenAPI paths (`/v1/...`) → Next route handlers.
   async rewrites() {

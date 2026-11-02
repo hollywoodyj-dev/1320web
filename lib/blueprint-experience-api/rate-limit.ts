@@ -42,4 +42,5 @@ export const RATE_LIMITS = {
   profile: { limit: 120, windowMs: 60_000 },
   health: { limit: 30, windowMs: 60_000 },
   kingdomResolve: { limit: 30, windowMs: 60_000 },
+  kingdomReflect: { limit: 20, windowMs: 60_000 },
 } as const;

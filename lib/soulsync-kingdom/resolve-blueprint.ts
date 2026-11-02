@@ -11,6 +11,7 @@ import {
   FOUNDATION_ORDER,
 } from "@/lib/blueprint-experience-api/types";
 import { calculate1320Code, type SoulCodeResult } from "@/lib/calculate1320Code";
+import { verifiedTotemForCode } from "@/lib/soulsync-kingdom/verified-totems";
 
 const BODY_KEYS = new Set(["birth_date", "locale", "purpose", "consent"]);
 const CONSENT_KEYS = new Set(["blueprint_generation", "personalized_expression"]);
@@ -32,8 +33,8 @@ function isRecord(value: unknown): value is Record<string, unknown> {
 
 /**
  * Official S1 / S3 / S2 / S0 only.
- * Returns public codes and existing display names. Does not return arithmetic,
- * totems, report prose, or a demo substitute.
+ * Returns public codes and existing display names. Attaches a totem only when
+ * the code is in the verified fixture and the file hash matches.
  */
 export function resolveSoulSyncKingdomBlueprint(
   body: unknown,
@@ -71,11 +72,15 @@ export function resolveSoulSyncKingdomBlueprint(
       throw new BlueprintExperienceApiError("BLUEPRINT_SERVICE_UNAVAILABLE");
     }
 
-    const segment = (segmentKey: "s1" | "s3" | "s2" | "s0", code: string) => ({
-      code,
-      display_name: getPublicSegmentTitle(segmentKey, code, "zh-CN"),
-      short_meaning: "",
-    });
+    const segment = (segmentKey: "s1" | "s3" | "s2" | "s0", code: string) => {
+      const totem = verifiedTotemForCode(code);
+      return {
+        code,
+        display_name: getPublicSegmentTitle(segmentKey, code, "zh-CN"),
+        short_meaning: "",
+        ...(totem ? { totemId: totem.totemId, totemAssetUrl: totem.totemAssetUrl } : {}),
+      };
+    };
 
     return {
       status: 200,

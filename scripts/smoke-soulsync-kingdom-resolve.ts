@@ -6,8 +6,12 @@ import { POST as kingdomResolve } from "../app/api/soulsync-kingdom/blueprints/r
 import { POST as kingdomReflect } from "../app/api/soulsync-kingdom/reflect/route";
 import { GET as kingdomPage } from "../app/soulsync-kingdom/route";
 import { POST as cozeResolve } from "../app/api/v1/blueprints/resolve/route";
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
+import path from "node:path";
 import { reflectSoulSyncKingdom } from "../lib/soulsync-kingdom/reflect";
 import { resolveSoulSyncKingdomBlueprint } from "../lib/soulsync-kingdom/resolve-blueprint";
+import { verifiedTotemRegistry } from "../lib/soulsync-kingdom/verified-totems";
 
 const FIXTURE = "1980-05-22";
 const EXPECTED = { s1: "S1-18", s3: "S3-03", s2: "S2-27", s0: "S0-07" };
@@ -64,6 +68,11 @@ async function main() {
     ),
     "fixture codes keep public names and verified totem urls",
   );
+  for (const entry of verifiedTotemRegistry()) {
+    const bytes = readFileSync(path.join(process.cwd(), entry.file));
+    const hash = createHash("sha256").update(bytes).digest("hex");
+    assert(hash === entry.sha256, `totem hash ${entry.code}`);
+  }
   const serialized = JSON.stringify(success);
   assert(!serialized.includes(FIXTURE), "success body omits birth date");
   assert(!serialized.includes("birth_date"), "success body omits birth_date field");

@@ -1,8 +1,4 @@
-import { createHash } from "node:crypto";
-import { readFileSync } from "node:fs";
-import path from "node:path";
-
-/** Fixture mapping whose file bytes match the published sha256. Not a full registry. */
+/** Fixture mapping whose bytes were checked against the published sha256. Not a full registry. */
 const VERIFIED_TOTEMS = {
   "S1-18": {
     url: "/S1-44/S18.webp",
@@ -34,12 +30,14 @@ export type VerifiedTotem = {
 export function verifiedTotemForCode(code: string): VerifiedTotem | null {
   const entry = VERIFIED_TOTEMS[code as keyof typeof VERIFIED_TOTEMS];
   if (!entry) return null;
-  try {
-    const bytes = readFileSync(path.join(process.cwd(), entry.file));
-    const hash = createHash("sha256").update(bytes).digest("hex");
-    if (hash !== entry.sha256) return null;
-    return { totemId: code, totemAssetUrl: entry.url };
-  } catch {
-    return null;
-  }
+  return { totemId: code, totemAssetUrl: entry.url };
+}
+
+export function verifiedTotemRegistry(): ReadonlyArray<{
+  code: string;
+  file: string;
+  sha256: string;
+  url: string;
+}> {
+  return Object.entries(VERIFIED_TOTEMS).map(([code, entry]) => ({ code, ...entry }));
 }

@@ -1,3 +1,4 @@
+import { getAdvancedModuleCardImageUrlFromCode } from "@/lib/advanced-module-card-asset";
 import { calculate1320Code } from "@/lib/calculate1320Code";
 import {
   duplicateLockedIndexes,
@@ -5,6 +6,8 @@ import {
   loadLockedLibrary,
   type LockedEntry,
 } from "@/lib/gzh/locked-editorial";
+import type { ReportSegmentIconKey } from "@/lib/report-system/report-segment-card-image";
+import { getSegmentCardImageUrl } from "@/lib/segment-card-asset";
 
 const NOTICE_FALLBACK = "今天只留意一件和這段內容有關的事。";
 const QUESTION_FALLBACK = "今天哪一件真實發生的事，讓你想到這一段？";
@@ -17,6 +20,8 @@ export type PreviewParagraphBlock = {
   sourceFile: string;
   missing: boolean;
   note?: string;
+  segmentKey: ReportSegmentIconKey;
+  imageUrl?: string;
 };
 
 export type PracticeLine = {
@@ -56,6 +61,8 @@ function blockFromEntry(
   code: string,
   moduleTitle: string,
   entry: LockedEntry | null,
+  segmentKey: ReportSegmentIconKey,
+  imageUrl: string | undefined,
   note?: string,
 ): PreviewParagraphBlock {
   if (!entry || entry.paragraphs.length === 0) {
@@ -67,6 +74,8 @@ function blockFromEntry(
       sourceFile: entry?.sourceFile ?? "",
       missing: true,
       note,
+      segmentKey,
+      imageUrl,
     };
   }
   return {
@@ -77,6 +86,8 @@ function blockFromEntry(
     sourceFile: entry.sourceFile,
     missing: false,
     note,
+    segmentKey,
+    imageUrl,
   };
 }
 
@@ -127,34 +138,42 @@ export function buildTwFullReportPreview(year: number, month: number, day: numbe
 
   const s4Code = `S4-${String(code.s1).padStart(2, "0")}`;
   const s6Code = `S6-${String(code.s1).padStart(2, "0")}`;
+  const s1Image = getSegmentCardImageUrl("s1", code.s1);
+  const s3Image = getSegmentCardImageUrl("s3", code.s3Raw);
+  const s2Image = getSegmentCardImageUrl("s2", code.s2);
+  const s0Image = getSegmentCardImageUrl("s0", code.s0);
 
   const blocks: PreviewParagraphBlock[] = [
-    blockFromEntry(code.s1Code, "本源", s1),
-    blockFromEntry(code.s3Code, "你怎麼表現", s3),
-    blockFromEntry(code.s2Code, "你的關係", s2),
-    blockFromEntry(code.s0Code, "你反覆回到的模式", s0),
+    blockFromEntry(code.s1Code, "本源", s1, "s1", s1Image),
+    blockFromEntry(code.s3Code, "你怎麼表現", s3, "s3", s3Image),
+    blockFromEntry(code.s2Code, "你的關係", s2, "s2", s2Image),
+    blockFromEntry(code.s0Code, "你反覆回到的模式", s0, "s0", s0Image),
     blockFromEntry(
       s4Code,
       "陰影模式",
       s4,
+      "s4",
+      getAdvancedModuleCardImageUrlFromCode(s4Code),
       "鎖定稿的編號與本源相同。英文正式報告的 S4 計算編號沒有用來選這段文字。",
     ),
     blockFromEntry(
       s6Code,
       "價值與接收",
       s6,
+      "s6",
+      getAdvancedModuleCardImageUrlFromCode(s6Code),
       "鎖定稿的編號與本源相同。英文正式報告的 S6 計算編號沒有用來選這段文字。",
     ),
-    blockFromEntry(code.s7Code, "內在主權", s7),
-    blockFromEntry(code.s8Code, "你帶來的貢獻", s8),
-    blockFromEntry(code.s9Code, "回到生活", s9),
+    blockFromEntry(code.s7Code, "內在主權", s7, "s7", getAdvancedModuleCardImageUrlFromCode(code.s7Code)),
+    blockFromEntry(code.s8Code, "你帶來的貢獻", s8, "s8", getAdvancedModuleCardImageUrlFromCode(code.s8Code)),
+    blockFromEntry(code.s9Code, "回到生活", s9, "s9", getAdvancedModuleCardImageUrlFromCode(code.s9Code)),
   ];
 
   const s5: PreviewParagraphBlock[] = [
-    blockFromEntry(code.s1Code, "本源", s5Origin),
-    blockFromEntry(code.s2Code, "你的關係", s5Relationship),
-    blockFromEntry(code.s3Code, "你怎麼表現", s5Expression),
-    blockFromEntry(code.s0Code, "你反覆回到的模式", s5Pattern),
+    blockFromEntry(code.s1Code, "本源", s5Origin, "s1", s1Image),
+    blockFromEntry(code.s2Code, "你的關係", s5Relationship, "s2", s2Image),
+    blockFromEntry(code.s3Code, "你怎麼表現", s5Expression, "s3", s3Image),
+    blockFromEntry(code.s0Code, "你反覆回到的模式", s5Pattern, "s0", s0Image),
   ];
 
   const days: PracticeDayView[] = [

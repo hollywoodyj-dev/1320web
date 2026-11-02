@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { notFound } from "next/navigation";
-import { ReportHero } from "@/components/report-system/ReportHero";
+import { ReportHero, type ReportHeroTitleIcon } from "@/components/report-system/ReportHero";
 import { ReportInsightCard } from "@/components/report-system/ReportInsightCard";
 import { ReportPage } from "@/components/report-system/ReportPage";
 import { ReportRoot } from "@/components/report-system/ReportRoot";
@@ -11,6 +11,7 @@ import {
   type PreviewParagraphBlock,
 } from "@/lib/gzh/build-tw-full-report-preview";
 import { isTwFullReportPreviewEnabled } from "@/lib/gzh/tw-full-report-preview-access";
+import { REPORT_SEGMENT_FALLBACK_ICONS } from "@/lib/report-system/report-segment-card-image";
 import { isValidBirthDate } from "@/lib/validateBirthDate";
 import "@/styles/report-system/index.css";
 
@@ -27,6 +28,17 @@ function readNumber(value: string | string[] | undefined): number {
   const raw = Array.isArray(value) ? value[0] : value;
   if (!raw) return Number.NaN;
   return Number.parseInt(raw, 10);
+}
+
+function heroIcon(block: PreviewParagraphBlock): ReportHeroTitleIcon | undefined {
+  if (!block.imageUrl) return undefined;
+  return {
+    segmentKey: block.segmentKey,
+    imageUrl: block.imageUrl,
+    fallbackIcon: REPORT_SEGMENT_FALLBACK_ICONS[block.segmentKey],
+    code: block.code,
+    title: block.entryTitle || block.moduleTitle,
+  };
 }
 
 function ParagraphCards({ block }: { block: PreviewParagraphBlock }) {
@@ -105,6 +117,10 @@ export default async function TwFullReportPreviewPage({
                 kicker={block.code}
                 title={block.moduleTitle}
                 body={block.entryTitle || "沒有對上的條目"}
+                segmentKey={block.segmentKey}
+                segmentCode={block.code}
+                iconImageSrc={block.imageUrl}
+                icon={REPORT_SEGMENT_FALLBACK_ICONS[block.segmentKey]}
               />
             ))}
           </ReportSegmentGrid>
@@ -117,7 +133,12 @@ export default async function TwFullReportPreviewPage({
             pageNumber={index + 3}
             totalPages={totalPages}
           >
-            <ReportHero eyebrow={block.code} title={block.moduleTitle} description={block.entryTitle} />
+            <ReportHero
+              eyebrow={block.code}
+              title={block.moduleTitle}
+              description={block.entryTitle}
+              titleIcon={heroIcon(block)}
+            />
             <ParagraphCards block={block} />
           </ReportPage>
         ))}
@@ -130,7 +151,12 @@ export default async function TwFullReportPreviewPage({
           />
           {report.s5.map((block) => (
             <section key={block.moduleTitle}>
-              <ReportHero eyebrow={block.code} title={block.moduleTitle} description={block.entryTitle} />
+              <ReportHero
+                eyebrow={block.code}
+                title={block.moduleTitle}
+                description={block.entryTitle}
+                titleIcon={heroIcon(block)}
+              />
               <ParagraphCards block={block} />
             </section>
           ))}

@@ -59,6 +59,12 @@ function main() {
   assert(report.foundationCodes.includes("S0-07"), "fixture s0");
   assert(report.missing.length === 0, `fixture has no missing locked entries: ${report.missing.join(", ")}`);
   assert(report.duplicateIndexes.length === 0, "locked files have no duplicate indexes");
+  assert(report.blocks[0]?.imageUrl === "/S1-44/S18.webp", "fixture s1 totem");
+  assert(report.blocks[1]?.imageUrl === "/S3-12/S03.webp", "fixture s3 totem");
+  assert(report.blocks[2]?.imageUrl === "/S2-50/S2-27.webp", "fixture s2 totem");
+  assert(report.blocks[3]?.imageUrl === "/S0-19/S0-07.webp", "fixture s0 totem");
+  assert(report.blocks.slice(0, 4).every((block) => Boolean(block.imageUrl)), "foundation totems resolve");
+  assert(report.s5.every((block) => Boolean(block.imageUrl)), "s5 blocks keep their layer totems");
   assert(report.s5.length === 4, "s5 keeps four blocks");
   assert(
     report.s5.map((block) => block.moduleTitle).join("|") === "本源|你的關係|你怎麼表現|你反覆回到的模式",

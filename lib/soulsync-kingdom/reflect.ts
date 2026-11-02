@@ -138,9 +138,11 @@ function oneSentence(text: string): string {
   const compact = text.replace(/\s+/g, "").trim();
   const sentence = (compact.split(/(?<=[。！？])/)[0] ?? compact).slice(0, 80).trim();
   if (!sentence || DATE_PATTERN.test(sentence)) {
+    console.info("[soulsync-kingdom] reflect model", { reason: "empty" });
     throw new BlueprintExperienceApiError("BLUEPRINT_SERVICE_UNAVAILABLE");
   }
   if (/出生|振动|療癒|疗愈|预测|人格|你将会|你会变成/.test(sentence)) {
+    console.info("[soulsync-kingdom] reflect model", { reason: "rejected" });
     throw new BlueprintExperienceApiError("BLUEPRINT_SERVICE_UNAVAILABLE");
   }
   return sentence;
@@ -148,24 +150,43 @@ function oneSentence(text: string): string {
 
 async function completeWithModel(summary: string): Promise<string> {
   if (!isOpenAiConfigured()) {
+    console.info("[soulsync-kingdom] reflect model", { reason: "unconfigured" });
     throw new BlueprintExperienceApiError("BLUEPRINT_SERVICE_UNAVAILABLE");
   }
   const client = new OpenAI(getOpenAiClientOptions());
   const model = getOpenAiModel();
   const isGpt5Family = /^gpt-5/i.test(model);
-  const completion = await client.chat.completions.create({
-    model,
-    ...(isGpt5Family ? { max_completion_tokens: 80 } : { temperature: 0.4, max_tokens: 80 }),
-    messages: [
-      {
-        role: "system",
-        content:
-          "只写一句简体中文，描述玩家刚才点过的选项。不要判断人格，不要写振动或等级，不要预测，不要承诺疗愈或改变。不要提到生日、编号或姓名。",
-      },
-      { role: "user", content: summary },
-    ],
-  });
-  const text = completion.choices[0]?.message?.content?.trim();
+  let text = "";
+  try {
+    const completion = await client.chat.completions.create({
+      model,
+      ...(isGpt5Family ? { max_completion_tokens: 600 } : { temperature: 0.4, max_tokens: 600 }),
+      messages: [
+        {
+          role: "system",
+          content: "只写一句简体中文，描述玩家刚才点过的选项。不评价这个人，不写等级，不写未来，不承诺改变。不写日期、编号或姓名。",
+        },
+        { role: "user", content: summary },
+      ],
+    });
+    text = completion.choices[0]?.message?.content?.trim() ?? "";
+    if (!text) {
+      console.info("[soulsync-kingdom] reflect model", {
+        reason: "empty",
+        finish: completion.choices[0]?.finish_reason ?? "none",
+      });
+    }
+  } catch (error) {
+    if (error instanceof BlueprintExperienceApiError) throw error;
+    const status = typeof error === "object" && error && "status" in error ? Number((error as { status?: unknown }).status) : null;
+    const code = typeof error === "object" && error && "code" in error ? (error as { code?: unknown }).code : null;
+    console.info("[soulsync-kingdom] reflect model", {
+      reason: "model_error",
+      status: Number.isFinite(status) ? status : null,
+      code: typeof code === "string" ? code : null,
+    });
+    throw new BlueprintExperienceApiError("BLUEPRINT_SERVICE_UNAVAILABLE");
+  }
   if (!text) throw new BlueprintExperienceApiError("BLUEPRINT_SERVICE_UNAVAILABLE");
   return oneSentence(text);
 }

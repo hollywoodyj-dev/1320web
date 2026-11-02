@@ -51,17 +51,14 @@ function ParagraphCards({ block }: { block: PreviewParagraphBlock }) {
   }
 
   return (
-    <ReportSegmentGrid>
+    <>
       {block.note ? <ReportInsightCard kicker={block.code} title="預覽對應" body={block.note} /> : null}
-      {block.paragraphs.map((paragraph, index) => (
-        <ReportInsightCard
-          key={`${block.code}-${index}`}
-          kicker={index === 0 ? block.code : undefined}
-          title={index === 0 ? block.entryTitle : block.moduleTitle}
-          body={paragraph}
-        />
-      ))}
-    </ReportSegmentGrid>
+      <ReportInsightCard
+        kicker={block.code}
+        title={block.entryTitle}
+        paragraphs={block.paragraphs}
+      />
+    </>
   );
 }
 

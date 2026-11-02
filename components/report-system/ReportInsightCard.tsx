@@ -8,7 +8,8 @@ type ReportInsightCardProps = {
   segmentCode?: string;
   kicker?: string;
   title: string;
-  body: string;
+  body?: string;
+  paragraphs?: string[];
 };
 
 export function ReportInsightCard({
@@ -19,8 +20,10 @@ export function ReportInsightCard({
   kicker,
   title,
   body,
+  paragraphs,
 }: ReportInsightCardProps) {
   const useSegmentIcon = Boolean(segmentKey);
+  const lines = (paragraphs ?? []).map((line) => line.trim()).filter(Boolean);
 
   return (
     <article
@@ -49,8 +52,12 @@ export function ReportInsightCard({
       </div>
       <div className="card-body">
         {kicker ? <p className="card-kicker">{kicker}</p> : null}
-        <h3>{title}</h3>
-        <p>{body}</p>
+        {title ? <h3>{title}</h3> : null}
+        {lines.length > 0
+          ? lines.map((line, index) => <p key={index}>{line}</p>)
+          : body
+            ? <p>{body}</p>
+            : null}
       </div>
     </article>
   );

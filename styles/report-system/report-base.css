@@ -401,6 +401,10 @@
   line-height: 1.58;
 }
 
+.report-insight-card .card-body p + p {
+  margin-top: 14px;
+}
+
 .locked-preview-block {
   padding: 26px;
   border-radius: 24px;

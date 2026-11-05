@@ -39,7 +39,8 @@ function isImmersiveReportRoute(pathname: string | null): boolean {
     pathname === "/sample-report-v2" ||
     pathname === "/full-report-v2" ||
     pathname === "/full-report-v2-phase1" ||
-    pathname === "/mobile-report-v2"
+    pathname === "/mobile-report-v2" ||
+    pathname === "/tw-origin-report"
   ) {
     return true;
   }
@@ -125,6 +126,8 @@ export function PageShell({ children, leadsEnabled, preferMobileReportShell }: P
   if (immersive) {
     const shellClass = mobileReport
       ? "page-shell--mobile-report"
+      : pathname === "/tw-origin-report"
+        ? "page-shell--origin-report"
       : unifiedWebReport
         ? "page-shell--unified-report-web"
         : "page-shell--full-report";

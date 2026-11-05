@@ -1,0 +1,112 @@
+.page-shell--origin-report {
+  background: #f3efe6;
+}
+
+.origin-report {
+  min-height: 100vh;
+  background: #f3efe6;
+  color: #241c14;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Songti TC", "PMingLiU", serif;
+}
+
+.origin-report-inner {
+  width: min(760px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0 80px;
+}
+
+.origin-kicker {
+  margin: 0 0 12px;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: #7a6244;
+}
+
+.origin-report h1 {
+  margin: 0 0 12px;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.origin-lead,
+.origin-note,
+.origin-date {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.origin-date {
+  margin: 20px 0 8px;
+}
+
+.origin-codes {
+  margin: 0 0 28px;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #5c4a36;
+}
+
+.origin-section {
+  margin: 28px 0;
+  padding-top: 22px;
+  border-top: 1px solid #ddd2c2;
+}
+
+.origin-section h2 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.origin-code {
+  margin: 0 0 18px;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 13px;
+  color: #7a6244;
+}
+
+.origin-section h3 {
+  margin: 18px 0 8px;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+}
+
+.origin-section p,
+.origin-section li {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.origin-section ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.origin-section li + li {
+  margin-top: 6px;
+}
+
+.origin-days {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.origin-day {
+  padding: 12px 14px;
+  background: #fffaf3;
+  border: 1px solid #e4d8c8;
+}
+
+.origin-day strong {
+  display: block;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 13px;
+}

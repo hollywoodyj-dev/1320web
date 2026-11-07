@@ -89,19 +89,20 @@ function forProduct(chapters: V2Chapter[], product: V2Product): V2Chapter[] {
     .filter((chapter) => SAMPLE_CHAPTERS.has(chapter.id))
     .map((chapter) => {
       if (chapter.id !== "02") return chapter;
-      return {
-        ...chapter,
-        blocks: chapter.blocks.flatMap((block) => {
-          if (block.type === "p" && block.text.includes("六個延伸編碼")) return [];
-          if (block.type !== "table") return [block];
-          return [
-            {
-              ...block,
-              rows: block.rows.filter((row) => !EXTENSION_ROW.test(row[0] ?? "")),
-            },
-          ];
-        }),
-      };
+      const blocks: V2Block[] = [];
+      for (const block of chapter.blocks) {
+        if (block.type === "p" && block.text.includes("六個延伸編碼")) continue;
+        if (block.type === "table") {
+          blocks.push({
+            type: "table",
+            headers: block.headers,
+            rows: block.rows.filter((row) => !EXTENSION_ROW.test(row[0] ?? "")),
+          });
+          continue;
+        }
+        blocks.push(block);
+      }
+      return { ...chapter, blocks };
     });
 }
 

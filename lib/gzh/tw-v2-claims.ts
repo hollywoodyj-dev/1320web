@@ -44,8 +44,8 @@ export function claimProblems(claim: IntegrationClaim, signature: string[]): str
   if (claim.locale !== "zh-TW") problems.push("locale");
   if (claim.scenario_status !== "HYPOTHETICAL") problems.push("scenario");
   if (claim.reader_claim_status !== "NO_INFERRED_HISTORY") problems.push("reader-claim");
-  if (!RELATION_TYPES.includes(claim.relation_type)) problems.push("relation");
-  if (!CLAIM_STATUSES.includes(claim.editorial_status)) problems.push("status");
+  if (!(RELATION_TYPES as readonly string[]).includes(claim.relation_type)) problems.push("relation");
+  if (!(CLAIM_STATUSES as readonly string[]).includes(claim.editorial_status)) problems.push("status");
   if (claim.code_ids.length < 2 || claim.code_ids.length > 4) problems.push("code-count");
   if (new Set(claim.code_ids).size !== claim.code_ids.length) problems.push("duplicate-code");
   if (claim.editorial_relation_reason.length < 25) problems.push("reason");

@@ -1,0 +1,96 @@
+[
+  {
+    "integration_id": "INT-19800522-001",
+    "source_snapshot_id": "v5.1-narrative-1980-05-22",
+    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
+    "locale": "zh-TW",
+    "code_ids": ["S1-18", "S3-03", "S4-14", "S5-04"],
+    "relation_type": "BRIDGE",
+    "anchors": [
+      { "code": "S1-18", "source_field": "v5.1.sample.S1-18", "approval_id": "PENDING" },
+      { "code": "S3-03", "source_field": "v5.1.sample.S3-03", "approval_id": "PENDING" },
+      { "code": "S4-14", "source_field": "v5.1.sample.S4-14", "approval_id": "PENDING" },
+      { "code": "S5-04", "source_field": "v5.1.sample.S5-04", "approval_id": "PENDING" }
+    ],
+    "editorial_relation_reason": "改變與探索不斷打開新的做法，完美準備會把開始往後推，結構使命提供一個可修正的落地方式。",
+    "scenario_status": "HYPOTHETICAL",
+    "reader_claim_status": "NO_INFERRED_HISTORY",
+    "customer_text_zh_tw": "如果一個計畫不斷找到新方法，卻總想等到準備更完整才開始，這組象徵主題便提出另一個問題：能否先建立一個允許修正的小步驟？",
+    "editorial_status": "PENDING_REVIEW",
+    "notes_internal": "來源是這一組生日的 v5.1 樣本，不是已核准的 258 筆主資料。不能送到顧客端。"
+  },
+  {
+    "integration_id": "INT-19800522-002",
+    "source_snapshot_id": "v5.1-narrative-1980-05-22",
+    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
+    "locale": "zh-TW",
+    "code_ids": ["S2-27", "S0-07", "S7-00"],
+    "relation_type": "TENSION",
+    "anchors": [
+      { "code": "S2-27", "source_field": "v5.1.sample.S2-27", "approval_id": "PENDING" },
+      { "code": "S0-07", "source_field": "v5.1.sample.S0-07", "approval_id": "PENDING" },
+      { "code": "S7-00", "source_field": "v5.1.sample.S7-00", "approval_id": "PENDING" }
+    ],
+    "editorial_relation_reason": "關係裡的回應會觸動自我評價，主權的方向則把事實、需要與個人選擇留在同一次判斷裡。",
+    "scenario_status": "HYPOTHETICAL",
+    "reader_claim_status": "NO_INFERRED_HISTORY",
+    "customer_text_zh_tw": "在這段關係裡，什麼是需要說清楚的事實，什麼是可以保留的界限？",
+    "editorial_status": "PENDING_REVIEW",
+    "notes_internal": "來源是這一組生日的 v5.1 樣本，不是已核准的 258 筆主資料。不能送到顧客端。"
+  },
+  {
+    "integration_id": "INT-19800522-003",
+    "source_snapshot_id": "v5.1-narrative-1980-05-22",
+    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
+    "locale": "zh-TW",
+    "code_ids": ["S5-04", "S6-28", "S8-00"],
+    "relation_type": "BRIDGE",
+    "anchors": [
+      { "code": "S5-04", "source_field": "v5.1.sample.S5-04", "approval_id": "PENDING" },
+      { "code": "S6-28", "source_field": "v5.1.sample.S6-28", "approval_id": "PENDING" },
+      { "code": "S8-00", "source_field": "v5.1.sample.S8-00", "approval_id": "PENDING" }
+    ],
+    "editorial_relation_reason": "結構、深度理解與臨在可以一起形成貢獻，界線與回饋則讓這份付出不必靠耗盡自己來維持。",
+    "scenario_status": "HYPOTHETICAL",
+    "reader_claim_status": "NO_INFERRED_HISTORY",
+    "customer_text_zh_tw": "我做的哪些事真正創造了價值？又需要什麼支持，才能讓這份貢獻不以耗盡自己為代價？",
+    "editorial_status": "PENDING_REVIEW",
+    "notes_internal": "來源是這一組生日的 v5.1 樣本，不是已核准的 258 筆主資料。不能送到顧客端。"
+  },
+  {
+    "integration_id": "INT-19800522-004",
+    "source_snapshot_id": "v5.1-narrative-1980-05-22",
+    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
+    "locale": "zh-TW",
+    "code_ids": ["S3-03", "S9-07"],
+    "relation_type": "GROUNDING",
+    "anchors": [
+      { "code": "S3-03", "source_field": "v5.1.sample.S3-03", "approval_id": "PENDING" },
+      { "code": "S9-07", "source_field": "v5.1.sample.S9-07", "approval_id": "PENDING" }
+    ],
+    "editorial_relation_reason": "探索打開許多方向，臨在把今天可以驗證的一件事從那些方向裡選出來。",
+    "scenario_status": "HYPOTHETICAL",
+    "reader_claim_status": "NO_INFERRED_HISTORY",
+    "customer_text_zh_tw": "如果今天只能做一件事，哪一件真正與我正在過的生活有關？",
+    "editorial_status": "PENDING_REVIEW",
+    "notes_internal": "來源是這一組生日的 v5.1 樣本，不是已核准的 258 筆主資料。不能送到顧客端。"
+  },
+  {
+    "integration_id": "INT-19800522-005",
+    "source_snapshot_id": "v5.1-narrative-1980-05-22",
+    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
+    "locale": "zh-TW",
+    "code_ids": ["S7-00", "S8-00"],
+    "relation_type": "TENSION",
+    "anchors": [
+      { "code": "S7-00", "source_field": "v5.1.sample.S7-00", "approval_id": "PENDING" },
+      { "code": "S8-00", "source_field": "v5.1.sample.S8-00", "approval_id": "PENDING" }
+    ],
+    "editorial_relation_reason": "臨在可以陪伴，主權提醒這份支持不該變成替對方做決定。",
+    "scenario_status": "HYPOTHETICAL",
+    "reader_claim_status": "NO_INFERRED_HISTORY",
+    "customer_text_zh_tw": "我正在支持他人更有能力地生活，還是在悄悄替他過生活？",
+    "editorial_status": "PENDING_REVIEW",
+    "notes_internal": "來源是這一組生日的 v5.1 樣本，不是已核准的 258 筆主資料。不能送到顧客端。"
+  }
+]

@@ -97,6 +97,13 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        source: "/tw-v2-report",
+        headers: [
+          { key: "Cache-Control", value: "no-store" },
+          { key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" },
+        ],
+      },
+      {
         source: "/integration/facilitator",
         headers: [
           { key: "Cache-Control", value: "no-store" },

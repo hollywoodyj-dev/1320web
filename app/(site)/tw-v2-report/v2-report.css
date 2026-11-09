@@ -92,6 +92,40 @@
   line-height: 1.5;
 }
 
+.v2-card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 18px 0 22px;
+}
+
+.v2-card {
+  padding: 14px 16px;
+  background: #e7eef6;
+}
+
+.v2-card p {
+  margin: 0;
+  font-family: "Segoe UI", "PingFang TC", "Noto Sans TC", sans-serif;
+}
+
+.v2-card-label {
+  color: #3d5a80;
+  font-size: 13px;
+}
+
+.v2-card-title {
+  margin-top: 4px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.v2-card-codes {
+  margin-top: 4px;
+  color: #3d4c63;
+  font-size: 14px;
+}
+
 .v2-table-wrap {
   overflow-x: auto;
   margin: 16px 0 20px;
@@ -131,8 +165,7 @@
     font-size: 46px;
   }
 
-  .v2-day-grid {
+  .v2-card-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 0 28px;
   }
 }

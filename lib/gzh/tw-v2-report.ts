@@ -17,9 +17,10 @@ const EXTENSION_ROW = /^S[4-9]-/;
 export type V2Product = "FULL" | "SAMPLE";
 
 export type V2Block =
-  | { type: "p"; text: string }
-  | { type: "h3"; text: string }
-  | { type: "table"; headers: string[]; rows: string[][] };
+  | { type: "p"; text: string; scope?: "full" }
+  | { type: "h3"; text: string; scope?: "full" }
+  | { type: "table"; headers: string[]; rows: string[][]; scope?: "full" }
+  | { type: "cards"; scope?: "full"; items: Array<{ label: string; title: string; codes: string }> };
 
 export type V2Chapter = {
   id: string;
@@ -91,6 +92,7 @@ function forProduct(chapters: V2Chapter[], product: V2Product): V2Chapter[] {
       if (chapter.id !== "02") return chapter;
       const blocks: V2Block[] = [];
       for (const block of chapter.blocks) {
+        if (block.scope === "full") continue;
         if (block.type === "p" && block.text.includes("六個延伸編碼")) continue;
         if (block.type === "table") {
           blocks.push({
@@ -150,6 +152,9 @@ export function customerVisibleText(report: TwV2Report): string {
     chapter.blocks.map((block) => {
       if (block.type === "table") {
         return [...block.headers, ...block.rows.flat()].join(" ");
+      }
+      if (block.type === "cards") {
+        return block.items.map((item) => `${item.label} ${item.title} ${item.codes}`).join(" ");
       }
       return block.text;
     }),

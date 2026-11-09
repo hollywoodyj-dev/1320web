@@ -30,6 +30,11 @@ assert(text.includes("靈魂震盪鏡像"), "uses the requested S2 name");
 assert(text.includes("保護自身安全比尋找任何「靈魂意義」更重要"), "S2 safety line");
 assert(text.includes("不是靈魂高低、成熟程度或人的優劣排名"), "S3 is not a rank");
 assert(text.includes("也不是收入或成功的保證"), "S6 makes no income promise");
+assert(text.includes("涉及人身安全、健康、法律或財務風險的事項"), "S4 names the professional boundary");
+assert(text.includes("深度理解如何成為他人可以使用的價值"), "S6 states value without a wealth claim");
+assert(text.includes("你的專屬藍圖總覽") && text.includes("當改變、探索與完美要求相遇"), "overview leads with this combination");
+assert(!text.includes("神秘的財富能力"), "the withdrawn wealth phrase stays out");
+assert(!text.includes("你原本只是想讓事情不要失控") && !text.includes("你也可能沒有問自己"), "S5 and S7 do not narrate a real history");
 assert(text.includes("不是回到某個神秘的地方"), "S9 return stays ordinary");
 assert(text.includes("不預測未來"), "ethics statement");
 assert(!text.includes("天生具備"), "five-field ability claim stays out");
@@ -51,7 +56,7 @@ assert(sample.chapters.every((chapter) => !["08", "14", "15"].includes(chapter.i
 assert(sample.days === null, "sample has no seven-day map");
 assert(sample.readerFocus === "工作與界限", "reader focus stays labeled and separate");
 const sampleText = customerVisibleText(sample);
-assert(!sampleText.includes("S4-14") && !sampleText.includes("完美循環"), "sample overview drops extension rows");
+assert(!sampleText.includes("S4-14") && !sampleText.includes("完美循環") && !sampleText.includes("專屬藍圖總覽"), "sample overview drops extension rows");
 
 const blocked = buildTwV2Report(1991, 7, 15);
 assert(blocked.status === "BLOCKED_NO_APPROVED_SOURCE", "another date stays closed");
@@ -67,6 +72,7 @@ assert(claimsForSignature(blocked.codes).length === 0, "another signature gets n
 
 const page = fs.readFileSync(new URL("../app/(site)/tw-v2-report/page.tsx", import.meta.url), "utf8");
 assert(!page.includes("1980-05-22.claims"), "the page does not render internal claims");
+assert(!page.includes("v1.0") && !page.includes("七日對應") && !page.includes("Sample"), "the page leaves internal labels out");
 assert(isTwV2ReportEnabled("www.1320soulcode.com") === false, "production host closed");
 assert(isTwV2ReportEnabled("localhost:3026") === true, "local reading open");
 console.log("PASS tw v2 report");

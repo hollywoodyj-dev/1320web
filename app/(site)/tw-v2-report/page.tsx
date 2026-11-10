@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
+import { Suspense } from "react";
+import { CodeMap } from "@/app/(site)/tw-v2-report/CodeMap";
+import { ReportToolbar } from "@/app/(site)/tw-v2-report/ReportToolbar";
 import { isTwV2ReportEnabled } from "@/lib/gzh/tw-v2-report-access";
 import { buildTwV2Report, isRealCalendarDate, type V2Product } from "@/lib/gzh/tw-v2-report";
 import "./v2-report.css";
@@ -57,20 +60,41 @@ export default async function TwV2ReportPage({
     );
   }
 
-  const report = buildTwV2Report(year, month, day, productOf(one(params.product)), one(params.focus));
+  const product = productOf(one(params.product));
+  const report = buildTwV2Report(year, month, day, product, one(params.focus));
+  const ready = report.status === "REFERENCE_SAMPLE";
 
   return (
     <main className="v2-report">
       <article className="v2-report-inner">
-        <p className="v2-kicker">1320 Soul Code</p>
-        <h1>完整靈魂藍圖</h1>
-        <p className="v2-date">國曆 {report.dateLabel}</p>
-        <p className="v2-codes">{report.codes.join(" · ")}</p>
-        {report.readerFocus ? <p className="v2-focus">你選擇的關注主題：{report.readerFocus}</p> : null}
+        <header className="v2-cover">
+          <p className="v2-kicker">1320 Soul Code</p>
+          <h1>{product === "SAMPLE" ? "四碼閱讀" : "完整靈魂藍圖"}</h1>
+          <p className="v2-date">國曆 {report.dateLabel}</p>
+          <p className="v2-codes">{report.codes.join(" · ")}</p>
+          {report.snapshot ? <p className="v2-cover-theme">{report.snapshot.theme}</p> : null}
+          {report.readerFocus ? <p className="v2-focus">你選擇的關注主題：{report.readerFocus}</p> : null}
+        </header>
+
+        <Suspense fallback={null}>
+          <ReportToolbar
+            year={year}
+            month={month}
+            day={day}
+            product={product}
+            hasNarrative={ready}
+          />
+        </Suspense>
+
+        <CodeMap
+          nodes={report.codeMap}
+          title={product === "SAMPLE" ? "四碼簽名" : "十碼簽名"}
+        />
+
         {report.status === "BLOCKED_NO_APPROVED_SOURCE" ? (
           <section className="v2-blocked">
             <h2>這組編碼還沒有核准敘事</h2>
-            <p>編碼已經對上。這一個生日的敘事還沒有核准，所以這裡先不寫正文。</p>
+            <p>編碼已經對上。這一個生日的敘事還沒有核准，所以這裡先不寫正文，也不會套用其他生日的文章。</p>
           </section>
         ) : (
           <>
@@ -91,6 +115,16 @@ export default async function TwV2ReportPage({
                 <h2>{chapter.title}</h2>
                 {chapter.blocks.map((block, index) => {
                   if (block.type === "h3") return <h3 key={`${chapter.id}-${index}`}>{block.text}</h3>;
+                  if (block.type === "blank") {
+                    return (
+                      <div
+                        key={`${chapter.id}-${index}`}
+                        className="v2-blank"
+                        style={{ minHeight: `${block.lines * 28}px` }}
+                        aria-hidden="true"
+                      />
+                    );
+                  }
                   if (block.type === "cards") {
                     return (
                       <div key={`${chapter.id}-${index}`} className="v2-card-grid">

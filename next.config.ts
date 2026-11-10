@@ -104,6 +104,13 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        source: "/tw-v2-report/:path*",
+        headers: [
+          { key: "Cache-Control", value: "no-store" },
+          { key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" },
+        ],
+      },
+      {
         source: "/integration/facilitator",
         headers: [
           { key: "Cache-Control", value: "no-store" },

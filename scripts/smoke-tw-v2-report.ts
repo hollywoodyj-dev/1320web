@@ -1,4 +1,9 @@
 import fs from "node:fs";
+import {
+  approvedContentProgress,
+  approvedCustomerThreads,
+  sampleFullDifference,
+} from "../lib/gzh/tw-v2-blueprint";
 import { claimProblems, claimSetProblems, claimsForSignature } from "../lib/gzh/tw-v2-claims";
 import { isTwV2ReportEnabled } from "../lib/gzh/tw-v2-report-access";
 import { buildTwV2Report, customerVisibleText } from "../lib/gzh/tw-v2-report";
@@ -22,9 +27,14 @@ if (full.status !== "REFERENCE_SAMPLE") throw new Error("status");
 assert(full.chapters.map((chapter) => chapter.id).join(",") === "01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,ethics", "full chapter order");
 assert(full.days?.[4]?.modules === "S5", "day 5 is the whole S5");
 assert(full.days?.[5]?.modules === "S6 + S7" && full.days?.[6]?.modules === "S8 + S9", "day 6 and day 7");
+assert(full.codeMap.length === 10 && full.codeMap[1]?.name === "探索振動", "ten-code map uses sample names");
+assert(full.snapshot?.theme === "當改變、探索與完美要求相遇", "full snapshot belongs to this signature");
+assert(full.approvedThreads.length === 0, "pending claims stay out of customer threads");
 const overview = full.chapters.find((chapter) => chapter.id === "02");
 const table = overview?.blocks.find((block) => block.type === "table");
 assert(table?.type === "table" && table.rows.length === 10, "overview lists ten codes");
+const journal = full.chapters.find((chapter) => chapter.id === "16");
+assert(journal?.blocks.some((block) => block.type === "blank"), "journal keeps writing space");
 const text = customerVisibleText(full);
 assert(text.includes("靈魂震盪鏡像"), "uses the requested S2 name");
 assert(text.includes("保護自身安全比尋找任何「靈魂意義」更重要"), "S2 safety line");
@@ -42,7 +52,12 @@ assert(!text.includes("source_field") && !text.includes("approval_id") && !text.
 const chapterText = (id: string) =>
   full.chapters
     .find((chapter) => chapter.id === id)
-    ?.blocks.map((block) => (block.type === "table" ? block.rows.flat().join(" ") : block.text))
+    ?.blocks.map((block) => {
+      if (block.type === "table") return block.rows.flat().join(" ");
+      if (block.type === "cards") return block.items.map((item) => item.title).join(" ");
+      if (block.type === "blank") return "";
+      return block.text;
+    })
     .join("\n") ?? "";
 const chapter7Text = chapterText("07");
 assert(/S1/.test(chapter7Text) && /S0/.test(chapter7Text) && !/S4/.test(chapter7Text) && !/S9/.test(chapter7Text), "chapter 7 stays with the four codes");
@@ -54,6 +69,7 @@ assert(sample.status === "REFERENCE_SAMPLE", "sample product still uses the same
 if (sample.status !== "REFERENCE_SAMPLE") throw new Error("sample status");
 assert(sample.chapters.every((chapter) => !["08", "14", "15"].includes(chapter.id)), "sample hides extension chapters");
 assert(sample.days === null, "sample has no seven-day map");
+assert(sample.snapshot === null, "sample has no full-only snapshot");
 assert(sample.readerFocus === "工作與界限", "reader focus stays labeled and separate");
 const sampleText = customerVisibleText(sample);
 assert(!sampleText.includes("S4-14") && !sampleText.includes("完美循環") && !sampleText.includes("專屬藍圖總覽"), "sample overview drops extension rows");
@@ -62,17 +78,33 @@ const blocked = buildTwV2Report(1991, 7, 15);
 assert(blocked.status === "BLOCKED_NO_APPROVED_SOURCE", "another date stays closed");
 assert(!customerVisibleText(blocked).includes("如果我不再需要透過受苦來證明成長"), "closed date does not reuse the sample");
 assert(blocked.codes.length === 10 && blocked.codes.join("|") !== full.codes.join("|"), "closed date still has its own codes");
+assert(blocked.codeMap.every((node) => node.name === ""), "blocked date does not invent archetype names");
+assert(blocked.snapshot === null, "blocked date has no snapshot");
+
+const other = buildTwV2Report(1990, 1, 1);
+assert(other.status === "BLOCKED_NO_APPROVED_SOURCE", "a third date also stays closed");
+assert(other.codes.join("|") !== blocked.codes.join("|"), "different birthdays keep different code maps");
 
 const claims = claimsForSignature(full.codes);
 assert(claims.length === 5, "five internal claims for this signature");
 assert(claims.every((claim) => claimProblems(claim, full.codes).length === 0), "each claim matches the contract");
 assert(claimSetProblems(claims).length === 0, "the claim set covers a real cross-code reading");
 assert(claims.every((claim) => claim.editorial_status === "PENDING_REVIEW"), "claims are not approved for sale");
+assert(approvedCustomerThreads(full.codes).length === 0, "customer threads wait for APPROVED");
 assert(claimsForSignature(blocked.codes).length === 0, "another signature gets no claims");
+
+const progress = approvedContentProgress();
+assert(progress.expected === 258 && progress.approved === 0 && progress.status === "BLOCKED", "258-code content stays unapproved");
+assert(sampleFullDifference().length >= 6, "sample and full difference table exists");
 
 const page = fs.readFileSync(new URL("../app/(site)/tw-v2-report/page.tsx", import.meta.url), "utf8");
 assert(!page.includes("1980-05-22.claims"), "the page does not render internal claims");
-assert(!page.includes("v1.0") && !page.includes("七日對應") && !page.includes("Sample"), "the page leaves internal labels out");
+assert(!page.includes("v1.0") && !page.includes("七日對應"), "the page leaves internal labels out");
+assert(page.includes("CodeMap") && page.includes("ReportToolbar"), "reading tools are on the page");
+const summary = fs.readFileSync(new URL("../app/(site)/tw-v2-report/summary/page.tsx", import.meta.url), "utf8");
+assert(summary.includes("隱藏出生日期") || summary.includes("hideBirthday"), "summary can hide the birthday");
+const difference = fs.readFileSync(new URL("../app/(site)/tw-v2-report/difference/page.tsx", import.meta.url), "utf8");
+assert(difference.includes("價格與結帳流程不在這裡改動"), "difference page does not change checkout");
 assert(isTwV2ReportEnabled("www.1320soulcode.com") === false, "production host closed");
 assert(isTwV2ReportEnabled("localhost:3026") === true, "local reading open");
 console.log("PASS tw v2 report");

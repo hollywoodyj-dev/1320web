@@ -1,0 +1,19 @@
+{
+  "version": "2.0",
+  "status": "BLOCKED",
+  "note": "258 筆正式台繁敘事尚未全部核准。這一檔只記錄狀態，不是顧客內容。",
+  "modules": {
+    "S0": { "expected": 20, "approved": 0 },
+    "S1": { "expected": 44, "approved": 0 },
+    "S2": { "expected": 50, "approved": 0 },
+    "S3": { "expected": 12, "approved": 0 },
+    "S4": { "expected": 20, "approved": 0 },
+    "S5": { "expected": 44, "approved": 0 },
+    "S6": { "expected": 44, "approved": 0 },
+    "S7": { "expected": 7, "approved": 0 },
+    "S8": { "expected": 8, "approved": 0 },
+    "S9": { "expected": 9, "approved": 0 }
+  },
+  "calibration_signature": "S1-18|S3-03|S2-27|S0-07|S4-14|S5-04|S6-28|S7-00|S8-00|S9-07",
+  "calibration_role": "REFERENCE_SAMPLE_ONLY"
+}

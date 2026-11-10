@@ -1,5 +1,14 @@
 import narrative from "@/data/1320-tw-v2/1980-05-22.json";
 import { calculate1320Code } from "@/lib/calculate1320Code";
+import {
+  approvedCustomerThreads,
+  codeMapFromCodes,
+  overviewTableRows,
+  snapshotFromChapter,
+  withJournalBlanks,
+  type BlueprintSnapshot,
+  type CodeNode,
+} from "@/lib/gzh/tw-v2-blueprint";
 
 export const DAY_MAP = [
   { day: "Day 1", modules: "S1" },
@@ -20,7 +29,8 @@ export type V2Block =
   | { type: "p"; text: string; scope?: "full" }
   | { type: "h3"; text: string; scope?: "full" }
   | { type: "table"; headers: string[]; rows: string[][]; scope?: "full" }
-  | { type: "cards"; scope?: "full"; items: Array<{ label: string; title: string; codes: string }> };
+  | { type: "cards"; scope?: "full"; items: Array<{ label: string; title: string; codes: string }> }
+  | { type: "blank"; lines: number };
 
 export type V2Chapter = {
   id: string;
@@ -28,26 +38,32 @@ export type V2Chapter = {
   blocks: V2Block[];
 };
 
-type ReadyReport = {
-  status: "REFERENCE_SAMPLE";
+type ReportBase = {
   version: "2.0";
   product: V2Product;
   dateLabel: string;
+  year: number;
+  month: number;
+  day: number;
   codes: string[];
+  allCodes: string[];
   readerFocus: string | null;
-  preamble: string[];
-  chapters: V2Chapter[];
+  codeMap: CodeNode[];
   days: typeof DAY_MAP | null;
 };
 
-type BlockedReport = {
+type ReadyReport = ReportBase & {
+  status: "REFERENCE_SAMPLE";
+  preamble: string[];
+  chapters: V2Chapter[];
+  snapshot: BlueprintSnapshot | null;
+  approvedThreads: ReturnType<typeof approvedCustomerThreads>;
+};
+
+type BlockedReport = ReportBase & {
   status: "BLOCKED_NO_APPROVED_SOURCE";
-  version: "2.0";
-  product: V2Product;
-  dateLabel: string;
-  codes: string[];
-  readerFocus: string | null;
-  days: typeof DAY_MAP | null;
+  snapshot: null;
+  approvedThreads: [];
 };
 
 export type TwV2Report = ReadyReport | BlockedReport;
@@ -92,7 +108,7 @@ function forProduct(chapters: V2Chapter[], product: V2Product): V2Chapter[] {
       if (chapter.id !== "02") return chapter;
       const blocks: V2Block[] = [];
       for (const block of chapter.blocks) {
-        if (block.scope === "full") continue;
+        if ("scope" in block && block.scope === "full") continue;
         if (block.type === "p" && block.text.includes("六個延伸編碼")) continue;
         if (block.type === "table") {
           blocks.push({
@@ -118,29 +134,42 @@ export function buildTwV2Report(
   const codes = officialCodes(year, month, day);
   const shownCodes = product === "SAMPLE" ? codes.slice(0, 4) : codes;
   const focus = focusOf(readerFocus);
+  const days = product === "FULL" ? DAY_MAP : null;
   const base = {
     version: "2.0" as const,
     product,
     dateLabel: dateLabel(year, month, day),
+    year,
+    month,
+    day,
     codes: shownCodes,
+    allCodes: codes,
     readerFocus: focus,
+    days,
   };
   const sameSignature = codes.join("|") === narrative.codes.join("|");
   if (!sameSignature) {
     return {
       ...base,
       status: "BLOCKED_NO_APPROVED_SOURCE",
-      days: product === "FULL" ? DAY_MAP : null,
+      codeMap: codeMapFromCodes(shownCodes),
+      snapshot: null,
+      approvedThreads: [],
     };
   }
+  const chapters = withJournalBlanks(forProduct(narrative.chapters as V2Chapter[], product), product);
+  const namedRows = overviewTableRows(chapters);
+  const overview = chapters.find((chapter) => chapter.id === "02");
   const preamble =
     product === "SAMPLE" ? narrative.preamble.filter((paragraph) => !/S[4-9]-/.test(paragraph)) : narrative.preamble;
   return {
     ...base,
     status: "REFERENCE_SAMPLE",
     preamble,
-    chapters: forProduct(narrative.chapters as V2Chapter[], product),
-    days: product === "FULL" ? DAY_MAP : null,
+    chapters,
+    codeMap: codeMapFromCodes(shownCodes, namedRows),
+    snapshot: product === "FULL" ? snapshotFromChapter(overview) : null,
+    approvedThreads: approvedCustomerThreads(codes),
   };
 }
 
@@ -156,6 +185,7 @@ export function customerVisibleText(report: TwV2Report): string {
       if (block.type === "cards") {
         return block.items.map((item) => `${item.label} ${item.title} ${item.codes}`).join(" ");
       }
+      if (block.type === "blank") return "";
       return block.text;
     }),
   );

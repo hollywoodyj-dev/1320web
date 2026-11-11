@@ -42,7 +42,19 @@ assert(text.includes("不是靈魂高低、成熟程度或人的優劣排名"), 
 assert(text.includes("也不是收入或成功的保證"), "S6 makes no income promise");
 assert(text.includes("涉及人身安全、健康、法律或財務風險的事項"), "S4 names the professional boundary");
 assert(text.includes("深度理解如何成為他人可以使用的價值"), "S6 states value without a wealth claim");
-assert(text.includes("你的專屬藍圖總覽") && text.includes("當改變、探索與完美要求相遇"), "overview leads with this combination");
+assert(overview?.title === "02｜你的專屬藍圖總覽", "overview chapter title stays once");
+assert(text.includes("當改變、探索與完美要求相遇"), "overview leads with this combination");
+assert(!overview?.blocks.some((block) => block.type === "h3" && block.text === "你的專屬藍圖總覽"), "overview body does not repeat the title");
+assert(!text.includes("你原本只想解決工作裡的一個難題"), "S3 uses a hypothetical opening");
+assert(!text.includes("你可能在同一個星期裡"), "chapter 14 does not narrate a real week");
+const overviewCards = overview?.blocks.find((block) => block.type === "cards");
+assert(overviewCards?.type === "cards" && overviewCards.items.length === 5, "overview has five claim-aligned cards");
+const claimCodeSets = claimsForSignature(full.codes).map((claim) => claim.code_ids.map((code) => code.slice(0, 2)).join(" · "));
+assert(
+  overviewCards?.type === "cards" &&
+    overviewCards.items.every((item) => claimCodeSets.includes(item.codes)),
+  "overview cards use the same code sets as chapter 14 claims",
+);
 assert(!text.includes("神秘的財富能力"), "the withdrawn wealth phrase stays out");
 assert(!text.includes("你原本只是想讓事情不要失控") && !text.includes("你也可能沒有問自己"), "S5 and S7 do not narrate a real history");
 assert(text.includes("不是回到某個神秘的地方"), "S9 return stays ordinary");

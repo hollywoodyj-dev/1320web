@@ -85,6 +85,18 @@ export function snapshotFromChapter(chapter: V2Chapter | undefined): BlueprintSn
   };
 }
 
+/** Keep chapter 02 cards aligned with the same claim set used by chapter 14. */
+export function overviewCardsFromClaims(
+  claims: Array<{ code_ids: string[]; customer_text_zh_tw: string }>,
+): Array<{ label: string; title: string; codes: string }> {
+  const labels = ["第一條線索", "第二條線索", "第三條線索", "第四條線索", "第五條線索"];
+  return claims.slice(0, 5).map((claim, index) => ({
+    label: labels[index] ?? `線索 ${index + 1}`,
+    title: claim.customer_text_zh_tw.slice(0, 18).replace(/[？?].*$/, "") || claim.code_ids.join(" × "),
+    codes: claim.code_ids.map((code) => code.slice(0, 2)).join(" · "),
+  }));
+}
+
 /** Customer-facing threads only when every claim for this signature is APPROVED. */
 export function approvedCustomerThreads(codes: string[]): Array<{
   codes: string[];

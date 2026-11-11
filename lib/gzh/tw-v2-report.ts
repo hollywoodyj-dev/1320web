@@ -1,4 +1,5 @@
-import narrative from "@/data/1320-tw-v2/1980-05-22.json";
+import narrative1980 from "@/data/1320-tw-v2/1980-05-22.json";
+import narrative2008 from "@/data/1320-tw-v2/2008-12-08.json";
 import { calculate1320Code } from "@/lib/calculate1320Code";
 import {
   approvedCustomerThreads,
@@ -22,6 +23,20 @@ export const DAY_MAP = [
 
 const SAMPLE_CHAPTERS = new Set(["01", "02", "03", "04", "05", "06", "07", "ethics"]);
 const EXTENSION_ROW = /^S[4-9]-/;
+
+type StoredNarrative = {
+  status: "REFERENCE_SAMPLE" | "EDITORIAL_CANDIDATE";
+  birth: string;
+  codes: string[];
+  preamble: string[];
+  chapters: V2Chapter[];
+  age_gate?: string;
+  approval?: string;
+  customer_render?: string;
+  note?: string;
+};
+
+const NARRATIVES: StoredNarrative[] = [narrative1980 as StoredNarrative, narrative2008 as StoredNarrative];
 
 export type V2Product = "FULL" | "SAMPLE";
 
@@ -53,17 +68,25 @@ type ReportBase = {
 };
 
 type ReadyReport = ReportBase & {
-  status: "REFERENCE_SAMPLE";
+  status: "REFERENCE_SAMPLE" | "EDITORIAL_CANDIDATE";
   preamble: string[];
   chapters: V2Chapter[];
   snapshot: BlueprintSnapshot | null;
+  coverTheme: string | null;
   approvedThreads: ReturnType<typeof approvedCustomerThreads>;
+  ageGate: string | null;
+  customerRender: "BLOCKED" | "PREVIEW_ONLY";
+  note: string | null;
 };
 
 type BlockedReport = ReportBase & {
   status: "BLOCKED_NO_APPROVED_SOURCE";
   snapshot: null;
+  coverTheme: null;
   approvedThreads: [];
+  ageGate: null;
+  customerRender: "BLOCKED";
+  note: null;
 };
 
 export type TwV2Report = ReadyReport | BlockedReport;
@@ -100,6 +123,17 @@ function focusOf(value: string | null | undefined): string | null {
   return trimmed.slice(0, 80);
 }
 
+function narrativeFor(codes: string[]): StoredNarrative | null {
+  const signature = codes.join("|");
+  return NARRATIVES.find((item) => item.codes.join("|") === signature) ?? null;
+}
+
+function coverThemeFrom(overview: V2Chapter | undefined, snapshot: BlueprintSnapshot | null): string | null {
+  if (snapshot?.theme) return snapshot.theme;
+  const heading = overview?.blocks.find((block) => block.type === "h3");
+  return heading && heading.type === "h3" ? heading.text : null;
+}
+
 function forProduct(chapters: V2Chapter[], product: V2Product): V2Chapter[] {
   if (product === "FULL") return chapters;
   return chapters
@@ -114,7 +148,7 @@ function forProduct(chapters: V2Chapter[], product: V2Product): V2Chapter[] {
           blocks.push({
             type: "table",
             headers: block.headers,
-            rows: block.rows.filter((row) => !EXTENSION_ROW.test(row[0] ?? "")),
+            rows: block.rows.filter((row) => !EXTENSION_ROW.test(row[0] ?? "") && !/^S[4-9]\b/.test(row[0] ?? "")),
           });
           continue;
         }
@@ -147,34 +181,43 @@ export function buildTwV2Report(
     readerFocus: focus,
     days,
   };
-  const sameSignature = codes.join("|") === narrative.codes.join("|");
-  if (!sameSignature) {
+  const narrative = narrativeFor(codes);
+  if (!narrative) {
     return {
       ...base,
       status: "BLOCKED_NO_APPROVED_SOURCE",
       codeMap: codeMapFromCodes(shownCodes),
       snapshot: null,
+      coverTheme: null,
       approvedThreads: [],
+      ageGate: null,
+      customerRender: "BLOCKED",
+      note: null,
     };
   }
   const chapters = withJournalBlanks(forProduct(narrative.chapters as V2Chapter[], product), product);
   const namedRows = overviewTableRows(chapters);
   const overview = chapters.find((chapter) => chapter.id === "02");
+  const snapshot = product === "FULL" ? snapshotFromChapter(overview) : null;
   const preamble =
     product === "SAMPLE" ? narrative.preamble.filter((paragraph) => !/S[4-9]-/.test(paragraph)) : narrative.preamble;
   return {
     ...base,
-    status: "REFERENCE_SAMPLE",
+    status: narrative.status,
     preamble,
     chapters,
     codeMap: codeMapFromCodes(shownCodes, namedRows),
-    snapshot: product === "FULL" ? snapshotFromChapter(overview) : null,
+    snapshot,
+    coverTheme: coverThemeFrom(overview, snapshot),
     approvedThreads: approvedCustomerThreads(codes),
+    ageGate: narrative.age_gate ?? null,
+    customerRender: narrative.customer_render === "BLOCKED" ? "BLOCKED" : "PREVIEW_ONLY",
+    note: narrative.note ?? null,
   };
 }
 
 export function customerVisibleText(report: TwV2Report): string {
-  if (report.status !== "REFERENCE_SAMPLE") {
+  if (report.status === "BLOCKED_NO_APPROVED_SOURCE") {
     return [report.dateLabel, ...report.codes, report.readerFocus ?? ""].join("\n");
   }
   const blocks = report.chapters.flatMap((chapter) =>

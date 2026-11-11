@@ -62,7 +62,8 @@ export default async function TwV2ReportPage({
 
   const product = productOf(one(params.product));
   const report = buildTwV2Report(year, month, day, product, one(params.focus));
-  const ready = report.status === "REFERENCE_SAMPLE";
+  const ready = report.status === "REFERENCE_SAMPLE" || report.status === "EDITORIAL_CANDIDATE";
+  const candidate = report.status === "EDITORIAL_CANDIDATE";
 
   return (
     <main className="v2-report">
@@ -72,9 +73,22 @@ export default async function TwV2ReportPage({
           <h1>{product === "SAMPLE" ? "四碼閱讀" : "完整靈魂藍圖"}</h1>
           <p className="v2-date">國曆 {report.dateLabel}</p>
           <p className="v2-codes">{report.codes.join(" · ")}</p>
-          {report.snapshot ? <p className="v2-cover-theme">{report.snapshot.theme}</p> : null}
+          {report.coverTheme ? <p className="v2-cover-theme">{report.coverTheme}</p> : null}
           {report.readerFocus ? <p className="v2-focus">你選擇的關注主題：{report.readerFocus}</p> : null}
         </header>
+
+        {candidate ? (
+          <section className="v2-candidate-banner">
+            <h2>內部候選敘事 · 尚未核准</h2>
+            <p>
+              這是受保護 Preview 的編輯候選稿，不是正式顧客交付。跨碼關係與原型內容都仍是 PENDING。不得因本頁而視為已核准。
+            </p>
+            {report.ageGate ? (
+              <p>年齡門檻：此生日在內部測試時尚未滿 18 歲，只可作內部品質校準，不可作為未成年人產品交付。</p>
+            ) : null}
+            {report.note ? <p>{report.note}</p> : null}
+          </section>
+        ) : null}
 
         <Suspense fallback={null}>
           <ReportToolbar
@@ -93,7 +107,7 @@ export default async function TwV2ReportPage({
 
         {report.status === "BLOCKED_NO_APPROVED_SOURCE" ? (
           <section className="v2-blocked">
-            <h2>這組編碼還沒有核准敘事</h2>
+            <h2>編碼已產生，敘事尚未核准</h2>
             <p>編碼已經對上。這一個生日的敘事還沒有核准，所以這裡先不寫正文，也不會套用其他生日的文章。</p>
           </section>
         ) : (

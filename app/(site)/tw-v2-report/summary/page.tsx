@@ -76,16 +76,19 @@ export default async function TwV2SummaryPage({
             month={month}
             day={day}
             product={product}
-            hasNarrative={report.status === "REFERENCE_SAMPLE"}
+            hasNarrative={report.status === "REFERENCE_SAMPLE" || report.status === "EDITORIAL_CANDIDATE"}
           />
         </Suspense>
-        {report.status !== "REFERENCE_SAMPLE" || !report.snapshot ? (
+        {report.status === "BLOCKED_NO_APPROVED_SOURCE" ? (
           <section className="v2-blocked">
-            <h2>這組編碼還沒有核准敘事</h2>
-            <p>摘要只在有核准敘事的生日顯示。這一頁不會套用其他生日的內容。</p>
+            <h2>編碼已產生，敘事尚未核准</h2>
+            <p>摘要只在有 Preview 敘事的生日顯示。這一頁不會套用其他生日的內容。</p>
           </section>
-        ) : (
+        ) : report.snapshot ? (
           <section className="v2-summary-card">
+            {report.status === "EDITORIAL_CANDIDATE" ? (
+              <p className="v2-focus">內部候選摘要 · 尚未核准</p>
+            ) : null}
             <h2>{report.snapshot.title}</h2>
             <p className="v2-cover-theme">{report.snapshot.theme}</p>
             <p>{report.snapshot.lead}</p>
@@ -103,6 +106,16 @@ export default async function TwV2SummaryPage({
             <h3>帶著這個問題繼續閱讀</h3>
             <p className="v2-summary-question">{report.snapshot.readingQuestion}</p>
             {report.readerFocus ? <p className="v2-focus">你選擇的關注主題：{report.readerFocus}</p> : null}
+          </section>
+        ) : (
+          <section className="v2-summary-card">
+            {report.status === "EDITORIAL_CANDIDATE" ? (
+              <p className="v2-focus">內部候選摘要 · 尚未核准</p>
+            ) : null}
+            <h2>一頁摘要</h2>
+            {report.coverTheme ? <p className="v2-cover-theme">{report.coverTheme}</p> : null}
+            <p>這一組生日的摘要卡尚未整理成獨立圖卡格式。請先閱讀完整章節。</p>
+            <p className="v2-codes">{report.codes.join(" · ")}</p>
           </section>
         )}
       </article>

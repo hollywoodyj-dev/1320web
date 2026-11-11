@@ -85,6 +85,18 @@ const other = buildTwV2Report(1990, 1, 1);
 assert(other.status === "BLOCKED_NO_APPROVED_SOURCE", "a third date also stays closed");
 assert(other.codes.join("|") !== blocked.codes.join("|"), "different birthdays keep different code maps");
 
+const third = buildTwV2Report(2008, 12, 8, "FULL");
+assert(third.status === "EDITORIAL_CANDIDATE", "2008 is a preview candidate, not approved");
+assert(
+  third.codes.join(" / ") === "S1-10 / S3-03 / S2-20 / S0-01 / S4-01 / S5-33 / S6-14 / S7-00 / S8-07 / S9-00",
+  "2008 fixture codes",
+);
+assert(third.customerRender === "BLOCKED", "2008 stays blocked for customer delivery");
+assert(Boolean(third.ageGate), "2008 keeps the under-18 internal gate");
+assert(customerVisibleText(third).includes("守護者"), "2008 candidate keeps its own narrative");
+assert(!customerVisibleText(third).includes("當改變、探索與完美要求相遇"), "2008 does not reuse the 1980 overview");
+assert(customerVisibleText(third).includes("保護安全比為這些互動尋找任何「靈魂意義」更重要") || customerVisibleText(third).includes("保護安全"), "2008 keeps S2 safety");
+
 const claims = claimsForSignature(full.codes);
 assert(claims.length === 5, "five internal claims for this signature");
 assert(claims.every((claim) => claimProblems(claim, full.codes).length === 0), "each claim matches the contract");
@@ -92,6 +104,9 @@ assert(claimSetProblems(claims).length === 0, "the claim set covers a real cross
 assert(claims.every((claim) => claim.editorial_status === "PENDING_REVIEW"), "claims are not approved for sale");
 assert(approvedCustomerThreads(full.codes).length === 0, "customer threads wait for APPROVED");
 assert(claimsForSignature(blocked.codes).length === 0, "another signature gets no claims");
+const claims2008 = claimsForSignature(third.codes);
+assert(claims2008.length === 5 && claims2008.every((claim) => claim.editorial_status === "PENDING_REVIEW"), "2008 claims stay pending");
+assert(approvedCustomerThreads(third.codes).length === 0, "2008 pending claims stay out of customer threads");
 
 const progress = approvedContentProgress();
 assert(progress.expected === 258 && progress.approved === 0 && progress.status === "BLOCKED", "258-code content stays unapproved");
@@ -101,6 +116,7 @@ const page = fs.readFileSync(new URL("../app/(site)/tw-v2-report/page.tsx", impo
 assert(!page.includes("1980-05-22.claims"), "the page does not render internal claims");
 assert(!page.includes("v1.0") && !page.includes("七日對應"), "the page leaves internal labels out");
 assert(page.includes("CodeMap") && page.includes("ReportToolbar"), "reading tools are on the page");
+assert(page.includes("編碼已產生，敘事尚未核准") || page.includes("內部候選敘事"), "page keeps the release guard wording");
 const summary = fs.readFileSync(new URL("../app/(site)/tw-v2-report/summary/page.tsx", import.meta.url), "utf8");
 assert(summary.includes("隱藏出生日期") || summary.includes("hideBirthday"), "summary can hide the birthday");
 const difference = fs.readFileSync(new URL("../app/(site)/tw-v2-report/difference/page.tsx", import.meta.url), "utf8");

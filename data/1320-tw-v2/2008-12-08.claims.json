@@ -1,0 +1,97 @@
+[
+  {
+    "integration_id": "TC-01",
+    "source_snapshot_id": "2008-12-08-editorial-candidate",
+    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
+    "locale": "zh-TW",
+    "code_ids": ["S1-10", "S7-00", "S5-33"],
+    "relation_type": "TENSION",
+    "anchors": [
+      { "code": "S1-10", "source_field": "canonical.guardian", "approval_id": "PENDING" },
+      { "code": "S7-00", "source_field": "canonical.returning_self", "approval_id": "PENDING" },
+      { "code": "S5-33", "source_field": "canonical.compassionate_leadership", "approval_id": "PENDING" }
+    ],
+    "editorial_relation_reason": "守護、主權與慈悲領導在同一組編碼裡互相拉扯，也互相要求清楚界限。",
+    "scenario_status": "HYPOTHETICAL",
+    "reader_claim_status": "NO_INFERRED_HISTORY",
+    "customer_text_zh_tw": "想保護重要的事，也要容許每個人保有選擇；關懷如果要長久，不能只靠一個人承擔全部。",
+    "editorial_status": "PENDING_REVIEW",
+    "notes_internal": "候選關係，不得因本檔改成 APPROVED。"
+  },
+  {
+    "integration_id": "TC-02",
+    "source_snapshot_id": "2008-12-08-editorial-candidate",
+    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
+    "locale": "zh-TW",
+    "code_ids": ["S2-20", "S0-01", "S4-01"],
+    "relation_type": "BRIDGE",
+    "anchors": [
+      { "code": "S2-20", "source_field": "canonical.attachment_mirror", "approval_id": "PENDING" },
+      { "code": "S0-01", "source_field": "canonical.existence_illusion", "approval_id": "PENDING" },
+      { "code": "S4-01", "source_field": "canonical.proof_loop", "approval_id": "PENDING" }
+    ],
+    "editorial_relation_reason": "關係回應會觸動存在價值，證明循環則可能變成回答那個疑問的行動。不得把 S2 寫成依附診斷。",
+    "scenario_status": "HYPOTHETICAL",
+    "reader_claim_status": "NO_INFERRED_HISTORY",
+    "customer_text_zh_tw": "當外界回應不如預期，我是在辨認事實，還是開始用更多表現去證明自己的價值？",
+    "editorial_status": "PENDING_REVIEW",
+    "notes_internal": "候選關係，不得因本檔改成 APPROVED。"
+  },
+  {
+    "integration_id": "TC-03",
+    "source_snapshot_id": "2008-12-08-editorial-candidate",
+    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
+    "locale": "zh-TW",
+    "code_ids": ["S5-33", "S6-14", "S8-07"],
+    "relation_type": "BRIDGE",
+    "anchors": [
+      { "code": "S5-33", "source_field": "canonical.compassionate_leadership", "approval_id": "PENDING" },
+      { "code": "S6-14", "source_field": "canonical.structure_flow", "approval_id": "PENDING" },
+      { "code": "S8-07", "source_field": "canonical.collective_vision", "approval_id": "PENDING" }
+    ],
+    "editorial_relation_reason": "關懷、結構與整體願景需要落成可共同維護的安排，不是命定職業或收入。",
+    "scenario_status": "HYPOTHETICAL",
+    "reader_claim_status": "NO_INFERRED_HISTORY",
+    "customer_text_zh_tw": "把好意轉成可共同維護的行動時，需要哪些分工、資源與共同決定？",
+    "editorial_status": "PENDING_REVIEW",
+    "notes_internal": "候選關係，不得因本檔改成 APPROVED。"
+  },
+  {
+    "integration_id": "TC-04",
+    "source_snapshot_id": "2008-12-08-editorial-candidate",
+    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
+    "locale": "zh-TW",
+    "code_ids": ["S3-03", "S9-00"],
+    "relation_type": "GROUNDING",
+    "anchors": [
+      { "code": "S3-03", "source_field": "canonical.explorer", "approval_id": "PENDING" },
+      { "code": "S9-00", "source_field": "canonical.silent_return", "approval_id": "PENDING" }
+    ],
+    "editorial_relation_reason": "探索打開可能，靜默把注意力帶回眼前真實可做的事；不得把安靜合理化為逃避。",
+    "scenario_status": "HYPOTHETICAL",
+    "reader_claim_status": "NO_INFERRED_HISTORY",
+    "customer_text_zh_tw": "在嘗試新的可能之餘，哪一件眼前的事值得先安靜地完成？",
+    "editorial_status": "PENDING_REVIEW",
+    "notes_internal": "候選關係，不得因本檔改成 APPROVED。"
+  },
+  {
+    "integration_id": "TC-05",
+    "source_snapshot_id": "2008-12-08-editorial-candidate",
+    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
+    "locale": "zh-TW",
+    "code_ids": ["S1-10", "S2-20", "S6-14", "S8-07"],
+    "relation_type": "BRIDGE",
+    "anchors": [
+      { "code": "S1-10", "source_field": "canonical.guardian", "approval_id": "PENDING" },
+      { "code": "S2-20", "source_field": "canonical.attachment_mirror", "approval_id": "PENDING" },
+      { "code": "S6-14", "source_field": "canonical.structure_flow", "approval_id": "PENDING" },
+      { "code": "S8-07", "source_field": "canonical.collective_vision", "approval_id": "PENDING" }
+    ],
+    "editorial_relation_reason": "守護、關係安全感、可協商流程與整體願景是否構成足夠新意，仍待編輯確認；不足則刪。",
+    "scenario_status": "HYPOTHETICAL",
+    "reader_claim_status": "NO_INFERRED_HISTORY",
+    "customer_text_zh_tw": "我想守護的安全感，能否靠清楚的合作安排與共同願景一起維持，而不是只靠我一個人？",
+    "editorial_status": "PENDING_REVIEW",
+    "notes_internal": "候選關係，不得因本檔改成 APPROVED。"
+  }
+]

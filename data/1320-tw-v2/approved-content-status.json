@@ -1,23 +1,25 @@
 {
   "version": "2.0",
   "status": "BLOCKED",
-  "note": "258 筆正式台繁敘事尚未全部核准。S1 已有 44 筆短版編輯候選（PENDING），不是已核准長篇。reviewer 與 approved_at 必須由實際審核產生，不可自動填寫。",
-  "candidate_snapshot_id": "1320-zhTW-s1-44-review-2026-11-12-rc1",
+  "note": "S1 44 筆 RC2：Wisewave AI 編輯建議全數 NEEDS_REVISION；正式人類核准仍 0。reviewer/approved_at 不可自動填寫。改寫候選可作內部長篇起稿，不可進顧客交付。",
+  "candidate_snapshot_id": "1320-zhTW-s1-44-rewrite-2026-11-12-rc2",
+  "review_package_id": "1320-S1-44-zhTW-editorial-review-2026-11-12-rc2",
   "integration_candidate_snapshot_id": "1320-int-1980-1982-pending-2026-11-12-rc1",
   "modules": {
-    "S0": { "expected": 20, "approved": 0, "editorial_candidates": 0 },
-    "S1": { "expected": 44, "approved": 0, "editorial_candidates": 44 },
-    "S2": { "expected": 50, "approved": 0, "editorial_candidates": 0 },
-    "S3": { "expected": 12, "approved": 0, "editorial_candidates": 0 },
-    "S4": { "expected": 20, "approved": 0, "editorial_candidates": 0 },
-    "S5": { "expected": 44, "approved": 0, "editorial_candidates": 0 },
-    "S6": { "expected": 44, "approved": 0, "editorial_candidates": 0 },
-    "S7": { "expected": 7, "approved": 0, "editorial_candidates": 0 },
-    "S8": { "expected": 8, "approved": 0, "editorial_candidates": 0 },
-    "S9": { "expected": 9, "approved": 0, "editorial_candidates": 0 }
+    "S0": { "expected": 20, "approved": 0, "editorial_candidates": 0, "needs_revision": 0 },
+    "S1": { "expected": 44, "approved": 0, "editorial_candidates": 44, "needs_revision": 44 },
+    "S2": { "expected": 50, "approved": 0, "editorial_candidates": 0, "needs_revision": 0 },
+    "S3": { "expected": 12, "approved": 0, "editorial_candidates": 0, "needs_revision": 0 },
+    "S4": { "expected": 20, "approved": 0, "editorial_candidates": 0, "needs_revision": 0 },
+    "S5": { "expected": 44, "approved": 0, "editorial_candidates": 0, "needs_revision": 0 },
+    "S6": { "expected": 44, "approved": 0, "editorial_candidates": 0, "needs_revision": 0 },
+    "S7": { "expected": 7, "approved": 0, "editorial_candidates": 0, "needs_revision": 0 },
+    "S8": { "expected": 8, "approved": 0, "editorial_candidates": 0, "needs_revision": 0 },
+    "S9": { "expected": 9, "approved": 0, "editorial_candidates": 0, "needs_revision": 0 }
   },
   "calibration_signature": "S1-18|S3-03|S2-27|S0-07|S4-14|S5-04|S6-28|S7-00|S8-00|S9-07",
   "calibration_role": "REFERENCE_SAMPLE_ONLY",
   "next_modules": ["S3", "S2", "S0", "S4", "S5", "S6", "S7", "S8", "S9"],
-  "customer_release": "HOLD"
+  "customer_release": "HOLD",
+  "s1_long_form": "EDITORIAL_DEVELOPMENT_ALLOWED_NOT_APPROVED"
 }

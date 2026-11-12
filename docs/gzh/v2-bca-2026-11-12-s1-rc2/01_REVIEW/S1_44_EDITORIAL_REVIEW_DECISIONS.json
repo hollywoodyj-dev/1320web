@@ -1,0 +1,1377 @@
+{
+  "summary": {
+    "review_package_id": "1320-S1-44-zhTW-editorial-review-2026-11-12-rc2",
+    "input_package_id": "1320-S1-44-zhTW-review-2026-11-12-rc1",
+    "review_date": "2026-11-12",
+    "review_type": "AI_EDITORIAL_ASSESSMENT_NOT_HUMAN_APPROVAL",
+    "module": "S1",
+    "record_count": 44,
+    "decisions": {
+      "APPROVED": 0,
+      "NEEDS_REVISION": 44,
+      "REJECTED": 0
+    },
+    "priority_count": {
+      "P1": 25,
+      "P0": 19
+    },
+    "source_file_sha256_verified": true,
+    "all_five_source_anchors_verified": true,
+    "duplicate_names": [
+      {
+        "name": "穩定者",
+        "codes": [
+          "S1-04",
+          "S1-39"
+        ]
+      },
+      {
+        "name": "遠見者",
+        "codes": [
+          "S1-11",
+          "S1-26"
+        ]
+      }
+    ],
+    "orthography_warning": [
+      {
+        "code": "S1-32",
+        "candidate": "啓明者",
+        "narrative": "啟明者"
+      }
+    ],
+    "formal_approved_count": 0,
+    "customer_release": "HOLD",
+    "requires_human_reviewer_and_approved_at": true,
+    "ready_for_long_form": "EDITORIAL_DEVELOPMENT_ALLOWED_NOT_APPROVED",
+    "next_module": "S3 then S2 then S0"
+  },
+  "records": [
+    {
+      "code": "S1-01",
+      "name_zh_tw_original_candidate": "破曉者",
+      "name_en_source": "The Initiator",
+      "source_code": "S1-01",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "a9f30555a89e575ed69b9a993c22319da6f5f089e09eb1d52f82174487bb2b5b",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "核心對應啟動力與速度陰影，方向正確；但行動、傾聽仍是概念並列，缺少辨識性情境。",
+      "required_revision_zh_tw": "補入「先行動、再邀請夥伴回饋」的小場景，強調開創不等於獨斷。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "一個新提案在討論中停了很久。有人願意先做出第一版，整件事才有了可供討論的形狀。「破曉者」關注的正是啟動的力量；但第一步不是替所有人決定方向。試著做一個小型試行，再邀請相關的人指出你尚未看見的地方。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-02",
+      "name_zh_tw_original_candidate": "連接者",
+      "name_en_source": "The Bridge",
+      "source_code": "S1-02",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "cc99e27da0e4ee63bfd4134955407fc4896e4ba9dcb6b696f95b7c6536f0eec8",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "保留跨立場溝通與過度共感陰影，但與 S1-41／S1-36 容易同質化。",
+      "required_revision_zh_tw": "聚焦人際衝突中的轉譯與雙方同意，避免變成泛用「界限」提醒。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "兩個人對同一件事有截然不同的理解，對話很快僵住。「連接者」提供的視角不是勸誰先退讓，而是把雙方真正在乎的部分說清楚。若你選擇協助溝通，也可以保留自己的立場；連結應讓彼此更能表達，而不是讓其中一人消失。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-03",
+      "name_zh_tw_original_candidate": "預見者",
+      "name_en_source": "The Seer",
+      "source_code": "S1-03",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "da1e901249c61ed0a43fb6411445bfb4ae0d0581828754bdda73855c84ecaaa8",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "原型源頭含超常預見與高頻引導；候選已減弱，但「預見者」仍容易被讀為確定預測。",
+      "required_revision_zh_tw": "寫成觀察可能性、提出假設及實證修正；明確避免預知未來或讀心。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "有時一個不尋常的想法先於證據出現，令人想立刻相信自己「看見了答案」。預見者在這裡是對可能性的敏銳想像，不是預知未來的能力。把靈感寫成可以驗證的假設，找一個低風險的實驗。真正的洞察，也願意接受事實修正。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-04",
+      "name_zh_tw_original_candidate": "穩定者",
+      "name_en_source": "The Stabilizer",
+      "source_code": "S1-04",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "dc6e6e600742f4a07589f4e74fc487e5011c57def4b42538a61f7ad4eb36f55c",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "結構化長期穩定的核心可信，但與 S1-39 同名；讀者無法從名稱分辨。",
+      "required_revision_zh_tw": "本碼聚焦系統流程／長期穩定；與 S1-39 提交有差異的命名候選，待真人決定。",
+      "proposed_name_zh_tw_requires_human_signoff": "秩序穩定者",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION",
+        "NAME_AMBIGUITY_OR_RISK"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "一個合作計畫總靠少數人記住所有細節，久了便容易出錯。穩定者所關注的，不是要求每個人更小心，而是讓流程、責任與回顧時間清楚可見。可靠的安排應容得下變化，也不必讓某一個人永遠當最後的保證。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-05",
+      "name_zh_tw_original_candidate": "催化者",
+      "name_en_source": "The Catalyst",
+      "source_code": "S1-05",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "647cf7612060410c3abcb76109af97385af1bf0010eb6f84b03c799d45883ce6",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "「確認共同目標與同意」忠實化解過度推動的陰影，但催化的創造性仍不夠鮮明。",
+      "required_revision_zh_tw": "加入新提案如何引發自願參與的畫面，保留他人拒絕權。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "一場討論裡，有人提出了令人興奮的新方向，其他人卻還在擔心原有承諾能不能完成。催化的力量有時不在於再加快速度，而在於讓不同的人都能看見改變的理由。先問一句「你願意一起試哪一小步？」比替大家宣布答案更有力量。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-06",
+      "name_zh_tw_original_candidate": "癒合者",
+      "name_en_source": "The Healer",
+      "source_code": "S1-06",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "0ef39ed43f3691b43c5d99312a3c056d18b356b3d714cd2a1d88dd58a97b7f6e",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "關懷與耗竭的張力正確；「癒合者」相對來源「愈合者」是名稱更動，並涉及療癒權威想像。",
+      "required_revision_zh_tw": "確認名稱標準；呈現陪伴／傾聽而非治療效果，與 S1-30 區分。",
+      "proposed_name_zh_tw_requires_human_signoff": "癒合者",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION",
+        "NAME_AMBIGUITY_OR_RISK"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "有人願意聽完朋友一段艱難的心情，沒有急著給建議，只是留出可以說話的空間。癒合者談的是這種細緻的關懷，不是替人治療的能力。陪伴可以有溫度，也需要範圍；當問題需要專業協助，支持對方找到合適資源同樣重要。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-07",
+      "name_zh_tw_original_candidate": "堅毅者",
+      "name_en_source": "The Warrior",
+      "source_code": "S1-07",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "3704cecaa8f5d3603b8f6d84e6c7dbcc366dd538944b6df8063d14b513017a2c",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "堅毅、面對困難的原意保留；現有敘事太像教人減少爭執。",
+      "required_revision_zh_tw": "以守住原則又接受協作的場景辨別勇氣與對抗。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "一件重要的事受到質疑，有人立即準備反擊，也有人選擇先問清楚分歧究竟在哪裡。堅毅不必每次都以對抗證明。守住必要的原則，同時讓新的資訊進來，往往比一路用力更難，也更有建設性。你想堅持的核心究竟是什麼？",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-08",
+      "name_zh_tw_original_candidate": "承載者",
+      "name_en_source": "The Nurturer",
+      "source_code": "S1-08",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "5e209f5fc924fee51e119ee64e94546ad454041914e2af27795c97ca7a396c65",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "耐心照顧與長期承接有保存；現稿與 S1-06／S1-38 的「付出與界限」高度相近。",
+      "required_revision_zh_tw": "改寫為持續照料、資源分工與互惠，突出養育型創造。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "照料一個長期計畫，常有許多不被看見的小事：提醒、整理、接手、等待。承載者提醒我們，耐心的維繫確實有價值；但若所有事情都靠同一個人支撐，再好的心意也很難持續。把需要的資源和可以分擔的工作說出來，照顧才有延續的空間。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-09",
+      "name_zh_tw_original_candidate": "拓界者",
+      "name_en_source": "The Explorer",
+      "source_code": "S1-09",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "185cf2061114d9a14cf34063661f707cf2abcbc7a89d8ca21a115a92d9ec34e7",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "探索與延續的關聯符合來源；段落幾乎可移用 S1-25 或 S1-29。",
+      "required_revision_zh_tw": "聚焦走進陌生領域後將經驗轉成分享成果，與自由適應、發明新方法分開。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "進入陌生領域時，最吸引人的也許是每一步都帶著新鮮感。但真正留下來的，有時是一件完成的小作品、一段可分享的經驗。拓界者不是要求你停止探索，而是邀請你把其中一次發現帶到終點，看看它究竟為生活增添了什麼。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-10",
+      "name_zh_tw_original_candidate": "守護者",
+      "name_en_source": "The Guardian",
+      "source_code": "S1-10",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "280fd6ef4c6ed0f73555d855ee8acf17f4ee46f17f7d4f297f7f8387b492e1fd",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "支持與控制的張力具辨識度，但「擔心失去」不可直接當成讀者心理事實。",
+      "required_revision_zh_tw": "保留條件式並增添尊重對方決定的具體詢問；避開保證安全能力。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "當你很在乎一個人，自然會想替他預先排除麻煩。守護者讓這份心意被看見，也提醒：對方可能有自己的節奏與選擇。與其先把路安排好，不如問「你希望我怎麼支持？」可靠的守護，應該使彼此更有能力，而不是更難離開協助。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-11",
+      "name_zh_tw_original_candidate": "遠見者",
+      "name_en_source": "The Visionary",
+      "source_code": "S1-11",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "03ba442f99f8f390299defefef08a96bde603fc136e24cc2cc0bb5dcdea4d28e",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "長期策略原型合理，但與 S1-26 同名「遠見者」，且遠見主題互相重疊。",
+      "required_revision_zh_tw": "本碼定位長期規劃、階段里程碑；提出不同辨識標題並保留原始名對照。",
+      "proposed_name_zh_tw_requires_human_signoff": "長程遠見者",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION",
+        "NAME_AMBIGUITY_OR_RISK"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "長期目標通常看起來很清楚，真正動手時卻會遇見預算、時間與各種限制。遠見者的價值，在於幫助我們把眼前決定放進更大的時間尺度。把願景拆成幾個能回顧的里程碑，也替調整保留餘地；策略不是把未來說得確定，而是讓今天有方向。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-12",
+      "name_zh_tw_original_candidate": "感應者",
+      "name_en_source": "The Empath",
+      "source_code": "S1-12",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "e7a2bf3facee3b9c8ea8bf8168d2a3547f476273d7eac7c353bb4c2f11151490",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "「察覺別人的感受」可能被誤讀為讀心；來源含高維感知與能量療癒。",
+      "required_revision_zh_tw": "改為留意語氣、表情與互動線索，所有推測需與本人確認。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "談話突然安靜下來，你注意到對方語氣變了，心裡生出一個猜測。感應者提醒我們細節值得留意，但觀察不等於知道他人的內心。也許可以溫和地確認：「剛才這裡有什麼讓你不舒服嗎？」讓答案由對方自己說出來。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-13",
+      "name_zh_tw_original_candidate": "逆行者",
+      "name_en_source": "The Rebel",
+      "source_code": "S1-13",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "b6be695c55f8e4dc116d18c41a629166c68196b9c49ee43f7481580db6f16570",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "對慣例提出質疑的主旨成立；與 S1-34 改革者的制度改善需區分。",
+      "required_revision_zh_tw": "寫「拒絕盲從→提出替代方案」，而非制度優化與評估流程。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "某條被沿用多年的規則，開始顯得不合時宜。逆行者的力量，不只在於指出「這樣不對」，更在於提出另一條值得試的路。當質疑變成可討論的方案，拒絕盲從便不再只是姿態，而能成為負責任的創造。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-14",
+      "name_zh_tw_original_candidate": "傳導者",
+      "name_en_source": "The Teacher",
+      "source_code": "S1-14",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "63267e927442fe257988fedfa3c9274c3238193c7424481412fcfd7fb327408e",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "教學／轉譯核心清楚；「不是頭銜」措辭太絕對，容易低估專業資格。",
+      "required_revision_zh_tw": "改成知識需要可理解的示範，涉及專業範圍仍以合格資格為界。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "學到一件複雜的事後，真正的挑戰常是如何讓別人也能理解。傳導者可以從一個清楚的例子開始，不必一次說完全部理論。分享時承認知識的邊界，涉及專業判斷則尊重相應資格；能讓人自行理解的方法，比把自己放在權威位置更長久。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-15",
+      "name_zh_tw_original_candidate": "入世的靈者",
+      "name_en_source": "The Grounded Mystic",
+      "source_code": "S1-15",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "d6cd6b43618906f68036b01e8d3414f976cc952900fc25eda698423275eeeb98",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "原型將精神探索帶入日常的方向正確；「誰比較覺醒」存在靈性高低排名聯想。",
+      "required_revision_zh_tw": "以日常照顧／責任校準精神理想；強調沒有人因編碼有更高意識等級。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "人有時在思考人生意義，卻忘了回覆眼前重要的訊息、吃一頓飯或好好休息。入世的靈者把抽象探索帶回這些平常事。沒有誰因為談論精神世界就更高等；當理解能改善真實的生活關係，它才有機會成為踏實的實踐。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-16",
+      "name_zh_tw_original_candidate": "和諧者",
+      "name_en_source": "The Harmonizer",
+      "source_code": "S1-16",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "ed018d3df6c068dc9dd8733ff11f61291284dcfd4d607020adc9aade71b409b0",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "協調多方和避免衝突的張力完整；短版仍像通用溝通技巧。",
+      "required_revision_zh_tw": "設置具體分歧情境，突出調和分歧而非壓下分歧。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "一場合作會議裡，兩種立場都各有道理。如果只要求大家快點和好，真正的問題可能繼續存在。和諧者關注的是讓差異被完整聽見，再找可以共同前進的條件。溫和不意味著壓下爭議，反而需要把尚未取得共識的地方說清楚。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-17",
+      "name_zh_tw_original_candidate": "構築者",
+      "name_en_source": "The Architect",
+      "source_code": "S1-17",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "c9fff69a7044c118ff8c496b71ec11b49152eaa5b82e4c8c54b76e6cb2d289be",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "從構想到可運作系統的核心成立；過度規劃敘事偏薄。",
+      "required_revision_zh_tw": "提供「先做可修訂試行版」的步驟，區別 S1-04 的維護穩定。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "有一個構想在紙上已經十分完整，實際使用卻還有很多未知。構築者不必等到所有細節都被預測，才讓第一版進入現實。先建出可測試的小型系統，觀察它如何被使用，再修正架構。好的設計不是拒絕變化，而是能與變化合作。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-18",
+      "name_zh_tw_original_candidate": "轉化者",
+      "name_en_source": "The Transformer",
+      "source_code": "S1-18",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "dc2b5b9145c2ae2bfd615e62040f24edcf892d96aa65f4eb55ca846d435e10ce",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "「痛苦不是成長前提」保留核心教訓；原始力量欄位含特殊能力斷言，需避免滲回。",
+      "required_revision_zh_tw": "以失效方法的重建寫實例，排除命定痛苦、特殊煉化能力及對人生史的推斷。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "過去行之有效的方法，有一天不再適合現在的情況。轉化者提出的不是「你必須重來」，而是先分清值得留下的部分和可以調整的部分。改變不必經過劇烈痛苦才算深刻；有時最重要的重建，是允許自己用更溫柔的方式繼續。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-19",
+      "name_zh_tw_original_candidate": "傳聲者",
+      "name_en_source": "The Communicator",
+      "source_code": "S1-19",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "7a1447fd65b5942cc642170ba9bc65a912b2266a16e92f4b70f0e45fe9ac3330",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "能貼近表達與受眾期待；力量描述抽象且短稿只重複四欄。",
+      "required_revision_zh_tw": "加入在迎合掌聲與如實傳達之間選擇的情境，突出聲音／傳播而非教學。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "準備發表一個觀點時，人很容易先想像聽眾喜歡什麼。傳聲者提醒，清楚表達也包含忠於原本想說的事。先寫下那個最重要的句子，再決定如何讓不同的人聽懂；得到回應很可貴，但不必由掌聲決定你能否發聲。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-20",
+      "name_zh_tw_original_candidate": "心覺者",
+      "name_en_source": "The Heart-Centered",
+      "source_code": "S1-20",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "43b8fb7577a51e101211892da31d08d612cc19be474c3e2486bc851099aa6dd7",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "感受、需要、現實核對符合來源；但 S1-12、S1-33 也使用相近敏感主題。",
+      "required_revision_zh_tw": "聚焦自己內在一致性與關係選擇，不寫成感知他人隱情的能力。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "某次互動令人感到溫暖，也可能突然帶來失落。心覺者讓我們練習珍惜感受，但不必讓一時的情緒直接成為結論。先辨認自己真正在乎的需要，再看看對方實際說了什麼、做了什麼。感受與事實放在一起，選擇會比較清楚。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-21",
+      "name_zh_tw_original_candidate": "整合者",
+      "name_en_source": "The Integrator",
+      "source_code": "S1-21",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "42d5a8f49f17ccd648a74e47c37488fd99d74ad6fa648ecf48dd680c5009f699",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "多領域整合的核心保留，容易退化成「不必承擔全部」的泛用模板。",
+      "required_revision_zh_tw": "加入把不同意見整理成共同問題、容許未解之處的場景。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "當一個團隊各自帶來不同資料，真正困難的往往不是資訊不夠，而是不知道要先回答哪個問題。整合者的長處，是把散落的線索放回同一個脈絡。先找出共同焦點，也承認有些缺口暫時無法補齊；完整不必是同一天完成的任務。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-22",
+      "name_zh_tw_original_candidate": "柔力者",
+      "name_en_source": "The Gentle Power",
+      "source_code": "S1-22",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "f889aacd9ffb44d16c086d68417065a82dc60518acb61d0bd9038e3e2443be04",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "柔軟與清楚主張具辨識性；與 S1-16 的和諧可能混淆。",
+      "required_revision_zh_tw": "區分個人溫柔但堅定的表達，勿重寫成多人協調。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "有人在討論裡不想爭高下，卻有一個清楚而重要的不同意見。柔力者提醒我們，聲音可以溫和，立場仍然鮮明。試著不先道歉，也不必提高音量，只把理由和偏好說完整。讓別人知道你的選擇，是尊重彼此的一部分。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-23",
+      "name_zh_tw_original_candidate": "洞察者",
+      "name_en_source": "The Analyst",
+      "source_code": "S1-23",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "4021740171828ae1a5d5fd0acfc319228cf7f59049b945cfcec2fb59b67c8965",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "分析與感受並存符合來源；原本分析能力被「脆弱」主題蓋過。",
+      "required_revision_zh_tw": "補回拆解問題與辨認證據的正向價值，再談情緒資訊的角色。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "面對複雜問題，分析可以幫助分出哪些是證據、哪些只是猜測。洞察者也邀請我們留意：有時一份過於完整的解釋，仍沒有說出真正的感受。把已知、未知和在意之處分開記下，理性便不必成為拒絕脆弱的外殼。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-24",
+      "name_zh_tw_original_candidate": "光耀者",
+      "name_en_source": "The Radiant Soul",
+      "source_code": "S1-24",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "7b0be27ab8356de9d1e038193aaeee533ad087df62d0dbbc45429e6a63d643ef",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "創作被看見與形象負擔成立；短稿欠缺原型特有的創作舞台。",
+      "required_revision_zh_tw": "加入展示完成作品或分享成果的場景；避免對讀者魅力做先天斷言。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "一件作品終於可以與人分享時，心裡也許同時出現興奮和擔心。光耀者談的是讓創造被看見，而非維持永遠亮眼的形象。拿出一個真正完成的成果，說明你在其中做了什麼；不必把每一次公開都變成一次對自身價值的考試。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-25",
+      "name_zh_tw_original_candidate": "流動者",
+      "name_en_source": "The Flow Walker",
+      "source_code": "S1-25",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "7e863d2cce4f31a1ff5fe28ecc435534882ed402f51fe06a6ba20e3c43301220",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "自由流動與承諾之間的張力成立；和 S1-09 探索的界線未突出。",
+      "required_revision_zh_tw": "聚焦適應變化與保有一個長期錨點，不以新領域探索替代。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "生活改變時，能夠調整方向是一種珍貴的彈性。流動者也會問：有沒有一件事值得在變化裡繼續留下來？不必把自己固定在原地，可以為某項關係、學習或承諾安排可改動的節奏。自由與持續並不是相反的。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-26",
+      "name_zh_tw_original_candidate": "遠見者",
+      "name_en_source": "The Visionary",
+      "source_code": "S1-26",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "5879b9ac7359c4a295e08629917dc0d5232fef6af5f5a603f986c768557a74dc",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "與 S1-11 同名，源頭還包含預測趨勢的確定說法。",
+      "required_revision_zh_tw": "本碼凸顯前瞻創新與向夥伴說明原型；名稱區別、不得宣稱預測未來。",
+      "proposed_name_zh_tw_requires_human_signoff": "未來開拓者",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION",
+        "NAME_AMBIGUITY_OR_RISK"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "一個超前的構想，往往在講述時就讓人感到距離。遠見者在這裡象徵對新形式的想像力，而不是預測未來的本領。把腦中的可能做成可展示的模型，讓夥伴看得見、問得到，也能提出不同意見；新的道路需要對話才能成形。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-27",
+      "name_zh_tw_original_candidate": "重生者",
+      "name_en_source": "The Rebuilder",
+      "source_code": "S1-27",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "292633c121888b9356adc708f45346a57621220c02b03c31f6fe8176b37d4981",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "「不必靠災難重生」是必要修正，仍需避免把創傷／崩塌當作讀者既定經歷。",
+      "required_revision_zh_tw": "補充平穩結束舊習慣的轉換場景，與 S1-18 的溫柔轉化明確區分。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "新的開始不一定發生在某次重大挫折之後。有時只是願意結束一個不再有用的習慣，或重新安排每天的節奏。重生者讓人看見告別與重新建立的可能，也提醒不要把痛苦當成必要門票。平穩的轉身，同樣值得被認真看待。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-28",
+      "name_zh_tw_original_candidate": "量域者",
+      "name_en_source": "The Quantum Mind",
+      "source_code": "S1-28",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "1398712a9ba7a5db65ae374dbfbe09267750e2c76c4b6c4c4d184a4bc095758e",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "複雜思考主旨保留；來源有量子／頻率與 Wisewave 內部權威暗示。",
+      "required_revision_zh_tw": "把「量域」明確限定為跨領域思考的比喻，不能借用量子科學背書。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "一個問題可以從科學、藝術、制度與日常經驗的不同角度觀察。量域者是對這種跨框架思考的象徵稱呼，不是量子科學或超自然感知的證明。挑一個抽象想法，問問它能否解釋具體現象；願意回到身體與生活，概念才真正有了重量。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-29",
+      "name_zh_tw_original_candidate": "創新者",
+      "name_en_source": "The Innovator",
+      "source_code": "S1-29",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "2aee61cb061c6c2bb7868f569b11289d904e307309e65da220ed63bde606faf4",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "發明新方法的主題恰當；與 S1-09／S1-26 區分不足。",
+      "required_revision_zh_tw": "聚焦實驗版本、測試與迭代，避免純粹「多想法」的同義句。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "想出新方法總令人興奮，但創新不會在靈感出現那一刻自動完成。創新者可以把一個新組合做成可試用的版本，再看它是否真的解決問題。容許測試不如預期，也不急著用下一個點子掩蓋結果，發明才會逐步長成有用的事物。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-30",
+      "name_zh_tw_original_candidate": "靈魂療癒者",
+      "name_en_source": "The Soul Healer",
+      "source_code": "S1-30",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "ce85a64b49da071c69168c4feddaac1edc235dec7ae25091ad26ee73bc4ab99f",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "來源有專業治療／靈魂修復暗示，候選已避開，但仍須有資格界線。",
+      "required_revision_zh_tw": "保留傾聽與陪伴，明確區分非臨床支持與需要合格專業人員的治療。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "陪伴處於困難中的人，有時只是認真聽他說完，並協助辨認可以尋求的支持。靈魂療癒者在此是關懷的象徵，不代表具備診斷或治療資格。當需要專業服務時，讓合格人員接手也是負責任的支持；你不必成為每個人生命裡的修復者。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-31",
+      "name_zh_tw_original_candidate": "門之守望者",
+      "name_en_source": "The Gatekeeper",
+      "source_code": "S1-31",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "c39cc2c9318fd7a5a6e5e5ecffd9a5ceb9745963c70cde9880847c709a92c78e",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "保護與信任的比喻清楚；目前「個人空間」略窄，未突出把關辨識。",
+      "required_revision_zh_tw": "加入篩選資訊、建立權限與逐步開放的具體情境；避免能量判定。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "一道門的用途，不只是把外界擋住，也是決定何時、以什麼方式讓人進來。門之守望者關注辨識、選擇與明確的權限。建立必要的界限之後，也可以逐步檢驗新的合作是否值得信任；把關的目的，不是讓生活只剩孤立。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-32",
+      "name_zh_tw_original_candidate": "啓明者",
+      "name_en_source": "The Illuminator",
+      "source_code": "S1-32",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "c09538b6d296997dd0c5cd593cd579e4ab70b867425999af9cf2a8923398702a",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "名稱欄「啓明者」與正文「啟明者」字形不一致；內容與啟示能力來源需去神化。",
+      "required_revision_zh_tw": "正式候選統一「啟明者」，不寫成覺醒他人的責任；邀請可以被拒絕。",
+      "proposed_name_zh_tw_requires_human_signoff": "啟明者",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION",
+        "NAME_AMBIGUITY_OR_RISK"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "有人提出一個新的觀察，讓原本僵住的討論終於有了不同角度。啟明者象徵讓問題變得清楚的表達，不是使他人必然「覺醒」的能力。把洞察說成可以選擇是否採納的邀請；對方不接受，也不代表這次分享失敗。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-33",
+      "name_zh_tw_original_candidate": "感知神諭者",
+      "name_en_source": "The Empath Oracle",
+      "source_code": "S1-33",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "498fb569dddeb53bb6b8f6db010680e4a2bed36f14b5f9c86b24c3c860f15a89",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "「神諭者」名字容易使顧客誤認能預言，來源含讀取無形訊息與療癒斷言。",
+      "required_revision_zh_tw": "人審決定是否保留原名；如保留，需明示僅是象徵，改以互動觀察及查證為核心。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "對談裡的細微變化，可能讓人聯想到許多未說出口的心情。感知神諭者在 1320 中只是象徵名稱，不表示能讀取秘密或預知事件。先辨認可觀察的事實，再問對方是否願意多說一些；保有敏銳，也保留別人為自己說話的權利。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-34",
+      "name_zh_tw_original_candidate": "改革者",
+      "name_en_source": "The Reformer",
+      "source_code": "S1-34",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "7a02557ce2e603092e13e69d0a7e955ed56ed6e916bae1728bba774b67578bb9",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "制度改善、正確性主題可追溯；目前陰影只剩嚴苛自己，丟失改善流程特色。",
+      "required_revision_zh_tw": "展示辨認制度缺口、提出可協商修正，與 S1-13 的反叛區別。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "看到制度裡某個不合理的地方，很容易想一次推翻全部安排。改革者提醒我們，改善也可以從一項可說明的缺口開始。把問題、受影響的人和可協商的修訂方案列清楚，讓新的做法接受檢驗；不必要求世界和自己都立刻完美。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-35",
+      "name_zh_tw_original_candidate": "靈魂領航者",
+      "name_en_source": "The Soul Navigator",
+      "source_code": "S1-35",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "faec0c32b8ce669a875b87a1e8e7deda4609c9d28a649012a1f990af0e2efc70",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "原始內容宣稱天生知道方向／決策準確，具高度權威化風險。",
+      "required_revision_zh_tw": "敘事只能是共同整理選項與資源，不能替使用者或第三人決策。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "當一群人對下一步沒有共識，能把選項和限制整理清楚的人，往往能幫助大家重新討論。靈魂領航者象徵這種方向整理，不是知道誰命運該往哪裡的權威。把決定權留給各自承擔後果的人，也記得照顧自己的路。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-36",
+      "name_zh_tw_original_candidate": "頻率編織者",
+      "name_en_source": "The Frequency Weaver",
+      "source_code": "S1-36",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "bac95ec948447739a2feb6912b8d5ab05426f1b87c077ad4b70a74f03680d5c6",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "將「頻率」轉為協作是合適安全化，但現稿幾乎等同 S1-02／S1-41。",
+      "required_revision_zh_tw": "聚焦不同工作節奏與團體同步；標明頻率是隱喻，非可量測能量。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "一個團隊裡，有人習慣先想清楚，有人喜歡邊做邊改，兩種節奏未必相容。頻率編織者以「編織」形容協作，不代表能量可以被神秘地調整。讓任務、等待時間和溝通方式變得清楚，往往比要求每個人步調完全一致更有幫助。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-37",
+      "name_zh_tw_original_candidate": "意志火焰者",
+      "name_en_source": "The Willpower Flame",
+      "source_code": "S1-37",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "0cbe1d7a21faaaff3f2b413380f252b851d03298e875c6d659216b385634cb12",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "意志耐力與身心限制平衡合理；易與 S1-07 均寫成堅持和放慢。",
+      "required_revision_zh_tw": "強調持續執行、投入節奏與避免過度消耗，非守護原則的勇氣。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "一個長期目標需要很多次不被看見的投入。意志火焰者提醒我們珍惜持續的力量，也留意何時努力已經超過可以承擔的範圍。把休息與回顧排進節奏，不是放棄目標；真正可持續的熱情，應該有重新補充的空間。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-38",
+      "name_zh_tw_original_candidate": "靈魂聆聽者",
+      "name_en_source": "The Soul Listener",
+      "source_code": "S1-38",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "10b3a3cc4c643f99cafcadf953acf123ec26cd3b6c2925945c6158ea5331eaac",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "傾聽與自身聲音的連結成立；與 S1-06／S1-30 關懷主題重疊。",
+      "required_revision_zh_tw": "聚焦對話裡的提問、停頓與雙向表達，不引入療癒效果。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "有人終於願意把心裡的話說出來，通常不是因為聽者給了最好的答案，而是因為中間有足夠的安靜。靈魂聆聽者關注耐心提問與真實聽見，也提醒：對話不應永遠只有一個人的故事。你也可以在適當的時候，說出自己的需要。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-39",
+      "name_zh_tw_original_candidate": "穩定者",
+      "name_en_source": "The Stabilizer",
+      "source_code": "S1-39",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "7bed1017cf7de8b06a66e8516aee5c9017ccf6fd3ffabd7c160b20acf6b28a92",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "同名 S1-04；本碼源頭重點是壓力／危機中的穩住，不能寫成制度維運。",
+      "required_revision_zh_tw": "擬用區別名稱或顧客副標題，突出關鍵時刻的沉著與共同承擔。",
+      "proposed_name_zh_tw_requires_human_signoff": "逆境定心者",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION",
+        "NAME_AMBIGUITY_OR_RISK"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "事情突然變得緊急時，最有用的不一定是立刻做得更多，而是先分清什麼要馬上處理、什麼可以稍後討論。穩定者在這裡象徵壓力中的定心與協作。危機過後，還要把責任交回合適的位置；可靠不意味著長期替所有人扛住一切。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-40",
+      "name_zh_tw_original_candidate": "內在智者",
+      "name_en_source": "The Inner Sage",
+      "source_code": "S1-40",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "8ad09ab89df1474dcb47481a9a342ef30505ed4f36183194740fa3cf869b1c9d",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "沉澱經驗與不占導師位置的轉化適當；短稿仍太像通用謙虛建議。",
+      "required_revision_zh_tw": "寫出分享思考過程、容許未知的情境，避免宣稱天生掌握真理。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "經驗累積得久，常會形成一些值得分享的判斷。內在智者可以把其中的思考過程說出來，讓人理解你為何這樣看，而不是只聽見結論。願意說「這部分我還不知道」，不會讓理解變薄，反而為真正的對話留出位置。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-41",
+      "name_zh_tw_original_candidate": "宇宙橋接者",
+      "name_en_source": "The Cosmic Bridge",
+      "source_code": "S1-41",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "9d8b6b5466a30e4f3971bf2a45e06819b85c49c7dc482b1e4a8f147d3ed71042",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "跨世界觀／跨學科翻譯主題可用，但與 S1-02 連接者重疊。",
+      "required_revision_zh_tw": "專注不同知識語言的轉譯與對等交流；避開宇宙資訊或高維真理說法。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "兩個人使用不同領域的語言，可能都在討論同一個問題，卻一直無法理解彼此。宇宙橋接者將這種跨世界觀的翻譯稱作「橋接」，不涉及超自然知識。先找出可共用的概念，也尊重差異可能無法立即消失；不是每一座橋都得由一個人來搭。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-42",
+      "name_zh_tw_original_candidate": "承光者",
+      "name_en_source": "The Ascension Flame",
+      "source_code": "S1-42",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "cf7d7a8012f1d485751fbbebcfb828ba674a81551daf3dfb3e0f8b94588e4a41",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "來源有升頻、業力與導師等宣稱，候選已收斂；「承光」還可能被誤讀成更高層級。",
+      "required_revision_zh_tw": "用理想如何進入日常貢獻的案例說明；拒絕靈性等級與非凡能力。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "一個值得相信的理想，若只停在漂亮的句子裡，仍很難改變日常。承光者把「光」當成希望與行動的比喻，不代表誰擁有更高的靈性等級。選一件能長久實踐的小事，讓關懷有可見的形狀；也允許自己疲倦、需要他人支持。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-43",
+      "name_zh_tw_original_candidate": "命運編織者",
+      "name_en_source": "The Destiny Weaver",
+      "source_code": "S1-43",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "e8461d8554bac368f6d1f978f21597a6038f83fbaa40dad677f892e75b674728",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "「命運」字面風險高，來源宣稱預感走向與關鍵命運選擇。",
+      "required_revision_zh_tw": "限制於選擇的可能後果與不確定性，不准預言或代替他人決定。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "一個選擇常會帶來不只一種後果，並且影響不同的人。命運編織者在這裡指的是願意思考這些連鎖關係，而非知道未來結局。把可預見的風險、尚不確定的部分和各自的選擇權分開討論，會比宣稱掌握命運更有幫助。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "code": "S1-44",
+      "name_zh_tw_original_candidate": "源之信使",
+      "name_en_source": "The Source Messenger",
+      "source_code": "S1-44",
+      "source_field": [
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction"
+      ],
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_fields_sha256": "a44efb60f8549f2ff68afefc8c857ee49342b6bcb5f02ebf87c6550fdb6fd631",
+      "original_editorial_status": "PENDING_REVIEW",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "來源有源頭訊息、純度與神聖真理宣稱；候選雖否認權威，但仍需修訂敘事。",
+      "required_revision_zh_tw": "把「信使」定義為分享觀點與可質疑的價值提問，不能暗示接收到超然指示。",
+      "proposed_name_zh_tw_requires_human_signoff": null,
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_revised_short_narrative_zh_tw": "有些觀點令人深受觸動，甚至想立刻分享給別人。源之信使提醒我們，訊息的價值不需要靠神聖來源來證明。把自己理解的部分說清楚，允許對方質疑、修正或離開這場對話。即使談的是深刻的問題，也可以像普通人一樣生活。",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "content_approval_state": "PENDING_HUMAN_REVIEW"
+    }
+  ]
+}

@@ -13,6 +13,9 @@ import {
   s1CandidateFor,
   s1CustomerPublishableCodes,
   s1EditorialCandidateCount,
+  s1NeedsRevisionCount,
+  s1PriorityCounts,
+  s1ReviewMeta,
 } from "../lib/gzh/tw-v2-s1-library";
 
 function assert(condition: unknown, label: string) {
@@ -170,11 +173,19 @@ assert(approvedCustomerThreads(fourth.codes).length === 0, "2013 pending claims 
 const progress = approvedContentProgress();
 assert(progress.expected === 258 && progress.approved === 0 && progress.status === "BLOCKED", "258-code content stays unapproved");
 assert(s1EditorialCandidateCount() === 44 && s1ApprovedCount() === 0, "S1 has 44 candidates and zero approvals");
+assert(s1NeedsRevisionCount() === 44, "S1 RC2 marks all 44 as NEEDS_REVISION");
+assert(s1PriorityCounts().P0 === 19 && s1PriorityCounts().P1 === 25, "S1 RC2 keeps P0/P1 split");
 assert(s1CustomerPublishableCodes().length === 0, "S1 candidates stay out of customer publish");
-assert(s1CandidateFor("S1-18")?.name_zh_tw_candidate && !s1CandidateFor("S1-18")?.reviewer, "S1 lookup works without forged reviewer");
+assert(s1CandidateFor("S1-18")?.editorial_status === "NEEDS_REVISION" && !s1CandidateFor("S1-18")?.reviewer, "S1 lookup stays unapproved");
+const s101 = s1CandidateFor("S1-01");
+const shortDraft = s101?.content_zh_tw_candidate?.customer_narrative_short_draft ?? "";
+assert(shortDraft.length > 40 && !shortDraft.startsWith(s101?.content_zh_tw_candidate?.symbolic_core ?? "___"), "S1 rewrite uses an independent short draft");
 assert(s1CandidateFor("S9-01") === null, "S1 library does not invent other modules");
+const review = s1ReviewMeta();
+assert(review.formalApprovedCount === 0 && review.decisions.NEEDS_REVISION === 44, "RC2 review meta stays unapproved");
 const gate = releaseGateSummary();
 assert(gate.publicReleaseEnabled === false && gate.customerState === "HOLD" && gate.approvedZhTwCount === 0, "release gate stays closed");
+assert(gate.s1NeedsRevision === 44, "content status tracks S1 needs revision");
 assert(sampleFullDifference().length >= 6, "sample and full difference table exists");
 
 const page = fs.readFileSync(new URL("../app/(site)/tw-v2-report/page.tsx", import.meta.url), "utf8");

@@ -1,0 +1,47 @@
+{
+  "review_package_id": "1320-S1-44-zhTW-editorial-review-2026-11-12-rc2",
+  "input_package_id": "1320-S1-44-zhTW-review-2026-11-12-rc1",
+  "review_date": "2026-11-12",
+  "review_type": "AI_EDITORIAL_ASSESSMENT_NOT_HUMAN_APPROVAL",
+  "module": "S1",
+  "record_count": 44,
+  "decisions": {
+    "APPROVED": 0,
+    "NEEDS_REVISION": 44,
+    "REJECTED": 0
+  },
+  "priority_count": {
+    "P1": 25,
+    "P0": 19
+  },
+  "source_file_sha256_verified": true,
+  "all_five_source_anchors_verified": true,
+  "duplicate_names": [
+    {
+      "name": "穩定者",
+      "codes": [
+        "S1-04",
+        "S1-39"
+      ]
+    },
+    {
+      "name": "遠見者",
+      "codes": [
+        "S1-11",
+        "S1-26"
+      ]
+    }
+  ],
+  "orthography_warning": [
+    {
+      "code": "S1-32",
+      "candidate": "啓明者",
+      "narrative": "啟明者"
+    }
+  ],
+  "formal_approved_count": 0,
+  "customer_release": "HOLD",
+  "requires_human_reviewer_and_approved_at": true,
+  "ready_for_long_form": "EDITORIAL_DEVELOPMENT_ALLOWED_NOT_APPROVED",
+  "next_module": "S3 then S2 then S0"
+}

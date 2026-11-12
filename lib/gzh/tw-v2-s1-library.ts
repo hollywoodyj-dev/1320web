@@ -1,4 +1,5 @@
 import s1Pack from "@/data/1320-tw-v2/s1-44-editorial-candidate.json";
+import s1Review from "@/data/1320-tw-v2/s1-44-editorial-review-rc2.json";
 import contentStatus from "@/data/1320-tw-v2/approved-content-status.json";
 import releaseGate from "@/data/1320-tw-v2/release-gate-2026-11-12.json";
 
@@ -13,6 +14,8 @@ export function s1CandidatePackMeta() {
     status: s1Pack.status,
     count: s1Pack.records.length,
     note: s1Pack.note,
+    reviewPackageId: s1Pack.review_package_id,
+    reviewSummary: s1Pack.review_summary,
   };
 }
 
@@ -21,11 +24,34 @@ export function s1CandidateFor(code: string): S1CandidateRecord | null {
 }
 
 export function s1EditorialCandidateCount(): number {
-  return s1Pack.records.filter((record) => record.editorial_status === "PENDING_REVIEW").length;
+  return s1Pack.records.length;
+}
+
+export function s1NeedsRevisionCount(): number {
+  return s1Pack.records.filter((record) => record.editorial_status === "NEEDS_REVISION").length;
 }
 
 export function s1ApprovedCount(): number {
   return s1Pack.records.filter((record) => record.editorial_status === "APPROVED").length;
+}
+
+export function s1PriorityCounts(): { P0: number; P1: number } {
+  return {
+    P0: s1Pack.records.filter((record) => record.priority === "P0").length,
+    P1: s1Pack.records.filter((record) => record.priority === "P1").length,
+  };
+}
+
+export function s1ReviewMeta() {
+  return {
+    reviewPackageId: s1Review.review_package_id,
+    reviewType: s1Review.review_type,
+    decisions: s1Review.decisions,
+    formalApprovedCount: s1Review.formal_approved_count,
+    readyForLongForm: s1Review.ready_for_long_form,
+    nextModule: s1Review.next_module,
+    duplicateNames: s1Review.duplicate_names,
+  };
 }
 
 /** Customer delivery stays blocked until real human approval fields exist. */
@@ -52,5 +78,6 @@ export function releaseGateSummary() {
     contentStatus: contentStatus.status,
     approvedTotal: Object.values(contentStatus.modules).reduce((sum, item) => sum + item.approved, 0),
     s1Candidates: contentStatus.modules.S1.editorial_candidates,
+    s1NeedsRevision: contentStatus.modules.S1.needs_revision ?? 0,
   };
 }

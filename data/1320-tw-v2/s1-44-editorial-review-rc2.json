@@ -1,0 +1,578 @@
+{
+  "review_package_id": "1320-S1-44-zhTW-editorial-review-2026-11-12-rc2",
+  "input_package_id": "1320-S1-44-zhTW-review-2026-11-12-rc1",
+  "review_date": "2026-11-12",
+  "review_type": "AI_EDITORIAL_ASSESSMENT_NOT_HUMAN_APPROVAL",
+  "decisions": {
+    "APPROVED": 0,
+    "NEEDS_REVISION": 44,
+    "REJECTED": 0
+  },
+  "priority_count": {
+    "P1": 25,
+    "P0": 19
+  },
+  "duplicate_names": [
+    {
+      "name": "穩定者",
+      "codes": [
+        "S1-04",
+        "S1-39"
+      ]
+    },
+    {
+      "name": "遠見者",
+      "codes": [
+        "S1-11",
+        "S1-26"
+      ]
+    }
+  ],
+  "orthography_warning": [
+    {
+      "code": "S1-32",
+      "candidate": "啓明者",
+      "narrative": "啟明者"
+    }
+  ],
+  "formal_approved_count": 0,
+  "customer_release": "HOLD",
+  "ready_for_long_form": "EDITORIAL_DEVELOPMENT_ALLOWED_NOT_APPROVED",
+  "next_module": "S3 then S2 then S0",
+  "records": [
+    {
+      "code": "S1-01",
+      "name_zh_tw_original_candidate": "破曉者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "核心對應啟動力與速度陰影，方向正確；但行動、傾聽仍是概念並列，缺少辨識性情境。",
+      "required_revision_zh_tw": "補入「先行動、再邀請夥伴回饋」的小場景，強調開創不等於獨斷。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-02",
+      "name_zh_tw_original_candidate": "連接者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "保留跨立場溝通與過度共感陰影，但與 S1-41／S1-36 容易同質化。",
+      "required_revision_zh_tw": "聚焦人際衝突中的轉譯與雙方同意，避免變成泛用「界限」提醒。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-03",
+      "name_zh_tw_original_candidate": "預見者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "原型源頭含超常預見與高頻引導；候選已減弱，但「預見者」仍容易被讀為確定預測。",
+      "required_revision_zh_tw": "寫成觀察可能性、提出假設及實證修正；明確避免預知未來或讀心。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-04",
+      "name_zh_tw_original_candidate": "穩定者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "結構化長期穩定的核心可信，但與 S1-39 同名；讀者無法從名稱分辨。",
+      "required_revision_zh_tw": "本碼聚焦系統流程／長期穩定；與 S1-39 提交有差異的命名候選，待真人決定。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION",
+        "NAME_AMBIGUITY_OR_RISK"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": "秩序穩定者"
+    },
+    {
+      "code": "S1-05",
+      "name_zh_tw_original_candidate": "催化者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "「確認共同目標與同意」忠實化解過度推動的陰影，但催化的創造性仍不夠鮮明。",
+      "required_revision_zh_tw": "加入新提案如何引發自願參與的畫面，保留他人拒絕權。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-06",
+      "name_zh_tw_original_candidate": "癒合者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "關懷與耗竭的張力正確；「癒合者」相對來源「愈合者」是名稱更動，並涉及療癒權威想像。",
+      "required_revision_zh_tw": "確認名稱標準；呈現陪伴／傾聽而非治療效果，與 S1-30 區分。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION",
+        "NAME_AMBIGUITY_OR_RISK"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": "癒合者"
+    },
+    {
+      "code": "S1-07",
+      "name_zh_tw_original_candidate": "堅毅者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "堅毅、面對困難的原意保留；現有敘事太像教人減少爭執。",
+      "required_revision_zh_tw": "以守住原則又接受協作的場景辨別勇氣與對抗。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-08",
+      "name_zh_tw_original_candidate": "承載者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "耐心照顧與長期承接有保存；現稿與 S1-06／S1-38 的「付出與界限」高度相近。",
+      "required_revision_zh_tw": "改寫為持續照料、資源分工與互惠，突出養育型創造。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-09",
+      "name_zh_tw_original_candidate": "拓界者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "探索與延續的關聯符合來源；段落幾乎可移用 S1-25 或 S1-29。",
+      "required_revision_zh_tw": "聚焦走進陌生領域後將經驗轉成分享成果，與自由適應、發明新方法分開。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-10",
+      "name_zh_tw_original_candidate": "守護者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "支持與控制的張力具辨識度，但「擔心失去」不可直接當成讀者心理事實。",
+      "required_revision_zh_tw": "保留條件式並增添尊重對方決定的具體詢問；避開保證安全能力。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-11",
+      "name_zh_tw_original_candidate": "遠見者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "長期策略原型合理，但與 S1-26 同名「遠見者」，且遠見主題互相重疊。",
+      "required_revision_zh_tw": "本碼定位長期規劃、階段里程碑；提出不同辨識標題並保留原始名對照。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION",
+        "NAME_AMBIGUITY_OR_RISK"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": "長程遠見者"
+    },
+    {
+      "code": "S1-12",
+      "name_zh_tw_original_candidate": "感應者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "「察覺別人的感受」可能被誤讀為讀心；來源含高維感知與能量療癒。",
+      "required_revision_zh_tw": "改為留意語氣、表情與互動線索，所有推測需與本人確認。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-13",
+      "name_zh_tw_original_candidate": "逆行者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "對慣例提出質疑的主旨成立；與 S1-34 改革者的制度改善需區分。",
+      "required_revision_zh_tw": "寫「拒絕盲從→提出替代方案」，而非制度優化與評估流程。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-14",
+      "name_zh_tw_original_candidate": "傳導者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "教學／轉譯核心清楚；「不是頭銜」措辭太絕對，容易低估專業資格。",
+      "required_revision_zh_tw": "改成知識需要可理解的示範，涉及專業範圍仍以合格資格為界。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-15",
+      "name_zh_tw_original_candidate": "入世的靈者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "原型將精神探索帶入日常的方向正確；「誰比較覺醒」存在靈性高低排名聯想。",
+      "required_revision_zh_tw": "以日常照顧／責任校準精神理想；強調沒有人因編碼有更高意識等級。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-16",
+      "name_zh_tw_original_candidate": "和諧者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "協調多方和避免衝突的張力完整；短版仍像通用溝通技巧。",
+      "required_revision_zh_tw": "設置具體分歧情境，突出調和分歧而非壓下分歧。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-17",
+      "name_zh_tw_original_candidate": "構築者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "從構想到可運作系統的核心成立；過度規劃敘事偏薄。",
+      "required_revision_zh_tw": "提供「先做可修訂試行版」的步驟，區別 S1-04 的維護穩定。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-18",
+      "name_zh_tw_original_candidate": "轉化者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "「痛苦不是成長前提」保留核心教訓；原始力量欄位含特殊能力斷言，需避免滲回。",
+      "required_revision_zh_tw": "以失效方法的重建寫實例，排除命定痛苦、特殊煉化能力及對人生史的推斷。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-19",
+      "name_zh_tw_original_candidate": "傳聲者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "能貼近表達與受眾期待；力量描述抽象且短稿只重複四欄。",
+      "required_revision_zh_tw": "加入在迎合掌聲與如實傳達之間選擇的情境，突出聲音／傳播而非教學。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-20",
+      "name_zh_tw_original_candidate": "心覺者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "感受、需要、現實核對符合來源；但 S1-12、S1-33 也使用相近敏感主題。",
+      "required_revision_zh_tw": "聚焦自己內在一致性與關係選擇，不寫成感知他人隱情的能力。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-21",
+      "name_zh_tw_original_candidate": "整合者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "多領域整合的核心保留，容易退化成「不必承擔全部」的泛用模板。",
+      "required_revision_zh_tw": "加入把不同意見整理成共同問題、容許未解之處的場景。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-22",
+      "name_zh_tw_original_candidate": "柔力者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "柔軟與清楚主張具辨識性；與 S1-16 的和諧可能混淆。",
+      "required_revision_zh_tw": "區分個人溫柔但堅定的表達，勿重寫成多人協調。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-23",
+      "name_zh_tw_original_candidate": "洞察者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "分析與感受並存符合來源；原本分析能力被「脆弱」主題蓋過。",
+      "required_revision_zh_tw": "補回拆解問題與辨認證據的正向價值，再談情緒資訊的角色。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-24",
+      "name_zh_tw_original_candidate": "光耀者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "創作被看見與形象負擔成立；短稿欠缺原型特有的創作舞台。",
+      "required_revision_zh_tw": "加入展示完成作品或分享成果的場景；避免對讀者魅力做先天斷言。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-25",
+      "name_zh_tw_original_candidate": "流動者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "自由流動與承諾之間的張力成立；和 S1-09 探索的界線未突出。",
+      "required_revision_zh_tw": "聚焦適應變化與保有一個長期錨點，不以新領域探索替代。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-26",
+      "name_zh_tw_original_candidate": "遠見者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "與 S1-11 同名，源頭還包含預測趨勢的確定說法。",
+      "required_revision_zh_tw": "本碼凸顯前瞻創新與向夥伴說明原型；名稱區別、不得宣稱預測未來。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION",
+        "NAME_AMBIGUITY_OR_RISK"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": "未來開拓者"
+    },
+    {
+      "code": "S1-27",
+      "name_zh_tw_original_candidate": "重生者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "「不必靠災難重生」是必要修正，仍需避免把創傷／崩塌當作讀者既定經歷。",
+      "required_revision_zh_tw": "補充平穩結束舊習慣的轉換場景，與 S1-18 的溫柔轉化明確區分。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-28",
+      "name_zh_tw_original_candidate": "量域者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "複雜思考主旨保留；來源有量子／頻率與 Wisewave 內部權威暗示。",
+      "required_revision_zh_tw": "把「量域」明確限定為跨領域思考的比喻，不能借用量子科學背書。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-29",
+      "name_zh_tw_original_candidate": "創新者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "發明新方法的主題恰當；與 S1-09／S1-26 區分不足。",
+      "required_revision_zh_tw": "聚焦實驗版本、測試與迭代，避免純粹「多想法」的同義句。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-30",
+      "name_zh_tw_original_candidate": "靈魂療癒者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "來源有專業治療／靈魂修復暗示，候選已避開，但仍須有資格界線。",
+      "required_revision_zh_tw": "保留傾聽與陪伴，明確區分非臨床支持與需要合格專業人員的治療。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-31",
+      "name_zh_tw_original_candidate": "門之守望者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "保護與信任的比喻清楚；目前「個人空間」略窄，未突出把關辨識。",
+      "required_revision_zh_tw": "加入篩選資訊、建立權限與逐步開放的具體情境；避免能量判定。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-32",
+      "name_zh_tw_original_candidate": "啓明者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "名稱欄「啓明者」與正文「啟明者」字形不一致；內容與啟示能力來源需去神化。",
+      "required_revision_zh_tw": "正式候選統一「啟明者」，不寫成覺醒他人的責任；邀請可以被拒絕。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION",
+        "NAME_AMBIGUITY_OR_RISK"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": "啟明者"
+    },
+    {
+      "code": "S1-33",
+      "name_zh_tw_original_candidate": "感知神諭者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "「神諭者」名字容易使顧客誤認能預言，來源含讀取無形訊息與療癒斷言。",
+      "required_revision_zh_tw": "人審決定是否保留原名；如保留，需明示僅是象徵，改以互動觀察及查證為核心。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-34",
+      "name_zh_tw_original_candidate": "改革者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "制度改善、正確性主題可追溯；目前陰影只剩嚴苛自己，丟失改善流程特色。",
+      "required_revision_zh_tw": "展示辨認制度缺口、提出可協商修正，與 S1-13 的反叛區別。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-35",
+      "name_zh_tw_original_candidate": "靈魂領航者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "原始內容宣稱天生知道方向／決策準確，具高度權威化風險。",
+      "required_revision_zh_tw": "敘事只能是共同整理選項與資源，不能替使用者或第三人決策。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-36",
+      "name_zh_tw_original_candidate": "頻率編織者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "將「頻率」轉為協作是合適安全化，但現稿幾乎等同 S1-02／S1-41。",
+      "required_revision_zh_tw": "聚焦不同工作節奏與團體同步；標明頻率是隱喻，非可量測能量。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-37",
+      "name_zh_tw_original_candidate": "意志火焰者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "意志耐力與身心限制平衡合理；易與 S1-07 均寫成堅持和放慢。",
+      "required_revision_zh_tw": "強調持續執行、投入節奏與避免過度消耗，非守護原則的勇氣。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-38",
+      "name_zh_tw_original_candidate": "靈魂聆聽者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "傾聽與自身聲音的連結成立；與 S1-06／S1-30 關懷主題重疊。",
+      "required_revision_zh_tw": "聚焦對話裡的提問、停頓與雙向表達，不引入療癒效果。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-39",
+      "name_zh_tw_original_candidate": "穩定者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "同名 S1-04；本碼源頭重點是壓力／危機中的穩住，不能寫成制度維運。",
+      "required_revision_zh_tw": "擬用區別名稱或顧客副標題，突出關鍵時刻的沉著與共同承擔。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION",
+        "NAME_AMBIGUITY_OR_RISK"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": "逆境定心者"
+    },
+    {
+      "code": "S1-40",
+      "name_zh_tw_original_candidate": "內在智者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "沉澱經驗與不占導師位置的轉化適當；短稿仍太像通用謙虛建議。",
+      "required_revision_zh_tw": "寫出分享思考過程、容許未知的情境，避免宣稱天生掌握真理。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-41",
+      "name_zh_tw_original_candidate": "宇宙橋接者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P1",
+      "reason_zh_tw": "跨世界觀／跨學科翻譯主題可用，但與 S1-02 連接者重疊。",
+      "required_revision_zh_tw": "專注不同知識語言的轉譯與對等交流；避開宇宙資訊或高維真理說法。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-42",
+      "name_zh_tw_original_candidate": "承光者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "來源有升頻、業力與導師等宣稱，候選已收斂；「承光」還可能被誤讀成更高層級。",
+      "required_revision_zh_tw": "用理想如何進入日常貢獻的案例說明；拒絕靈性等級與非凡能力。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-43",
+      "name_zh_tw_original_candidate": "命運編織者",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "「命運」字面風險高，來源宣稱預感走向與關鍵命運選擇。",
+      "required_revision_zh_tw": "限制於選擇的可能後果與不確定性，不准預言或代替他人決定。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    },
+    {
+      "code": "S1-44",
+      "name_zh_tw_original_candidate": "源之信使",
+      "editorial_recommendation": "NEEDS_REVISION",
+      "priority": "P0",
+      "reason_zh_tw": "來源有源頭訊息、純度與神聖真理宣稱；候選雖否認權威，但仍需修訂敘事。",
+      "required_revision_zh_tw": "把「信使」定義為分享觀點與可質疑的價值提問，不能暗示接收到超然指示。",
+      "issues": [
+        "MECHANICAL_FOUR_FIELD_CONCATENATION"
+      ],
+      "proposed_name_zh_tw_requires_human_signoff": null
+    }
+  ]
+}

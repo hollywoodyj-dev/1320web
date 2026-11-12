@@ -1,0 +1,177 @@
+[
+  {
+    "integration_id": "INT-20130612-01",
+    "source_snapshot_id": "editorial-candidate-2013-06-12",
+    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
+    "locale": "zh-TW",
+    "code_ids": [
+      "S1-06",
+      "S2-18",
+      "S0-15"
+    ],
+    "relation_type": "TENSION",
+    "anchors": [
+      {
+        "code": "S1-06",
+        "source_field": "Archetype ZH",
+        "approval_id": "PENDING_NO_APPROVAL"
+      },
+      {
+        "code": "S2-18",
+        "source_field": "Mirror Archetype",
+        "approval_id": "PENDING_NO_APPROVAL"
+      },
+      {
+        "code": "S0-15",
+        "source_field": "Void Archetype",
+        "approval_id": "PENDING_NO_APPROVAL"
+      }
+    ],
+    "editorial_relation_reason": "同理心的付出與成果評價在互動中可能產生張力；S0提示不把單次未被看見擴展為永久孤單",
+    "scenario_status": "HYPOTHETICAL",
+    "reader_claim_status": "NO_INFERRED_HISTORY",
+    "customer_text_zh_tw": "付出沒有被看見時，如何不把一次回應當成自我價值的全部？被公平看見是合理的需要，卻不必變成整個人的價值考試。",
+    "editorial_status": "PENDING_REVIEW",
+    "notes_internal": "Fixture birthday: 2013-06-12; 第14章第一條; under-18 internal only. Not approved for customer delivery."
+  },
+  {
+    "integration_id": "INT-20130612-02",
+    "source_snapshot_id": "editorial-candidate-2013-06-12",
+    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
+    "locale": "zh-TW",
+    "code_ids": [
+      "S3-02",
+      "S4-13",
+      "S7-02"
+    ],
+    "relation_type": "BRIDGE",
+    "anchors": [
+      {
+        "code": "S3-02",
+        "source_field": "vibration_archetype_zh",
+        "approval_id": "PENDING_NO_APPROVAL"
+      },
+      {
+        "code": "S4-13",
+        "source_field": "Core Loop",
+        "approval_id": "PENDING_NO_APPROVAL"
+      },
+      {
+        "code": "S7-02",
+        "source_field": "Sovereignty Essence",
+        "approval_id": "PENDING_NO_APPROVAL"
+      }
+    ],
+    "editorial_relation_reason": "S3代表開始嘗試；S4關注自動抗拒；S7提供明確表達界限與選擇的橋接",
+    "scenario_status": "HYPOTHETICAL",
+    "reader_claim_status": "NO_INFERRED_HISTORY",
+    "customer_text_zh_tw": "面對建議時，如何區分真正想守護的界限，與只是習慣性反對以證明自主？自由可以是聽見資訊後仍作出自己的選擇。",
+    "editorial_status": "PENDING_REVIEW",
+    "notes_internal": "Fixture birthday: 2013-06-12; 第14章第二條; under-18 internal only. Not approved for customer delivery."
+  },
+  {
+    "integration_id": "INT-20130612-03",
+    "source_snapshot_id": "editorial-candidate-2013-06-12",
+    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
+    "locale": "zh-TW",
+    "code_ids": [
+      "S3-02",
+      "S5-26",
+      "S6-23"
+    ],
+    "relation_type": "GROUNDING",
+    "anchors": [
+      {
+        "code": "S3-02",
+        "source_field": "vibration_archetype_zh",
+        "approval_id": "PENDING_NO_APPROVAL"
+      },
+      {
+        "code": "S5-26",
+        "source_field": "Mission Essence",
+        "approval_id": "PENDING_NO_APPROVAL"
+      },
+      {
+        "code": "S6-23",
+        "source_field": "Value Essence",
+        "approval_id": "PENDING_NO_APPROVAL"
+      }
+    ],
+    "editorial_relation_reason": "火花與未來想法需要可靠、可檢查的投入，才能真正進入生活被驗證，而不是停在聊天裡。",
+    "scenario_status": "HYPOTHETICAL",
+    "reader_claim_status": "NO_INFERRED_HISTORY",
+    "customer_text_zh_tw": "新的想法需要火花，也需要可靠地完成。如何讓可能性進入可以驗證、可修改的生活安排？",
+    "editorial_status": "PENDING_REVIEW",
+    "notes_internal": "Fixture birthday: 2013-06-12; 第14章第三條; under-18 internal only. Not approved for customer delivery."
+  },
+  {
+    "integration_id": "INT-20130612-04",
+    "source_snapshot_id": "editorial-candidate-2013-06-12",
+    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
+    "locale": "zh-TW",
+    "code_ids": [
+      "S1-06",
+      "S7-02",
+      "S8-03"
+    ],
+    "relation_type": "REINFORCEMENT",
+    "anchors": [
+      {
+        "code": "S1-06",
+        "source_field": "Archetype ZH",
+        "approval_id": "PENDING_NO_APPROVAL"
+      },
+      {
+        "code": "S7-02",
+        "source_field": "Sovereignty Essence",
+        "approval_id": "PENDING_NO_APPROVAL"
+      },
+      {
+        "code": "S8-03",
+        "source_field": "Contribution Essence",
+        "approval_id": "PENDING_NO_APPROVAL"
+      }
+    ],
+    "editorial_relation_reason": "同理、洞察與清楚的界限共同支持尊重他人自主的實際幫助",
+    "scenario_status": "HYPOTHETICAL",
+    "reader_claim_status": "NO_INFERRED_HISTORY",
+    "customer_text_zh_tw": "看見別人的需要之後，如何提供幫助，又尊重彼此的選擇權，而不把關心變成替人決定？",
+    "editorial_status": "PENDING_REVIEW",
+    "notes_internal": "Fixture birthday: 2013-06-12; 第14章第四條; under-18 internal only. Not approved for customer delivery."
+  },
+  {
+    "integration_id": "INT-20130612-05",
+    "source_snapshot_id": "editorial-candidate-2013-06-12",
+    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
+    "locale": "zh-TW",
+    "code_ids": [
+      "S2-18",
+      "S0-15",
+      "S9-08"
+    ],
+    "relation_type": "BRIDGE",
+    "anchors": [
+      {
+        "code": "S2-18",
+        "source_field": "Mirror Archetype",
+        "approval_id": "PENDING_NO_APPROVAL"
+      },
+      {
+        "code": "S0-15",
+        "source_field": "Void Archetype",
+        "approval_id": "PENDING_NO_APPROVAL"
+      },
+      {
+        "code": "S9-08",
+        "source_field": "Return Essence",
+        "approval_id": "PENDING_NO_APPROVAL"
+      }
+    ],
+    "editorial_relation_reason": "成果評價與未被看見的感受，透過承認多重自我面向形成整合",
+    "scenario_status": "HYPOTHETICAL",
+    "reader_claim_status": "NO_INFERRED_HISTORY",
+    "customer_text_zh_tw": "一次成果或失落之後，如何允許自己同時有努力、失望與尚未完成的部分，而不把孤獨變成固定身分？",
+    "editorial_status": "PENDING_REVIEW",
+    "notes_internal": "Fixture birthday: 2013-06-12; 第14章第五條; under-18 internal only. Not approved for customer delivery."
+  }
+]

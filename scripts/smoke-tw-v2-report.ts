@@ -125,6 +125,26 @@ assert(!customerVisibleText(third).includes("當改變、探索與完美要求�
 assert(customerVisibleText(third).includes("保護安全比為這些互動尋找任何「靈魂意義」更重要") || customerVisibleText(third).includes("保護安全"), "2008 keeps S2 safety");
 assert(second.codes.join("|") !== full.codes.join("|") && second.codes.join("|") !== third.codes.join("|"), "three fixtures stay distinct");
 
+const fourth = buildTwV2Report(2013, 6, 12, "FULL");
+assert(fourth.status === "EDITORIAL_CANDIDATE", "2013 is a preview candidate, not approved");
+assert(
+  fourth.codes.join(" / ") === "S1-06 / S3-02 / S2-18 / S0-15 / S4-13 / S5-26 / S6-23 / S7-02 / S8-03 / S9-08",
+  "2013 fixture codes",
+);
+assert(fourth.customerRender === "BLOCKED", "2013 stays blocked for customer delivery");
+assert(Boolean(fourth.ageGate), "2013 keeps the under-18 internal gate");
+const fourthText = customerVisibleText(fourth);
+assert(fourthText.includes("愈合者") && fourthText.includes("成就鏡像") && fourthText.includes("孤獨幻象"), "2013 keeps its own archetypes");
+assert(!fourthText.includes("當改變、探索與完美要求相遇"), "2013 does not reuse the 1980 overview");
+assert(!fourthText.includes("心覺者") && !fourthText.includes("轉化者"), "2013 is not a renamed earlier template");
+assert(fourthText.includes("威脅") || fourthText.includes("欺凌") || fourthText.includes("傷害"), "2013 keeps S2 safety");
+assert(fourthText.includes("專業標準"), "2013 keeps S4 professional boundary");
+assert(fourthText.includes("成就鏡像") && fourthText.includes("孤獨幻象"), "2013 keeps S2 and S0 distinct");
+assert(
+  [full, second, third, fourth].map((report) => report.codes.join("|")).every((sig, index, all) => all.indexOf(sig) === index),
+  "four fixtures stay distinct",
+);
+
 const claims = claimsForSignature(full.codes);
 assert(claims.length === 6, "BCA pack has six pending claims for 1980");
 assert(claims.every((claim) => claimProblems(claim, full.codes).length === 0), "each claim matches the contract");
@@ -142,6 +162,10 @@ assert(approvedCustomerThreads(second.codes).length === 0, "1982 pending claims 
 const claims2008 = claimsForSignature(third.codes);
 assert(claims2008.length === 5 && claims2008.every((claim) => claim.editorial_status === "PENDING_REVIEW"), "2008 claims stay pending");
 assert(approvedCustomerThreads(third.codes).length === 0, "2008 pending claims stay out of customer threads");
+const claims2013 = claimsForSignature(fourth.codes);
+assert(claims2013.length === 5 && claims2013.every((claim) => claim.editorial_status === "PENDING_REVIEW"), "2013 claims stay pending");
+assert(claims2013.every((claim) => claimProblems(claim, fourth.codes).length === 0), "2013 claims match the contract");
+assert(approvedCustomerThreads(fourth.codes).length === 0, "2013 pending claims stay out of customer threads");
 
 const progress = approvedContentProgress();
 assert(progress.expected === 258 && progress.approved === 0 && progress.status === "BLOCKED", "258-code content stays unapproved");

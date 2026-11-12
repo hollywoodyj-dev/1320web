@@ -1,6 +1,7 @@
 import claims1980 from "@/data/1320-tw-v2/1980-05-22.claims.json";
 import claims1982 from "@/data/1320-tw-v2/1982-02-03.claims.json";
 import claims2008 from "@/data/1320-tw-v2/2008-12-08.claims.json";
+import claims2013 from "@/data/1320-tw-v2/2013-06-12.claims.json";
 
 export const RELATION_TYPES = ["REINFORCEMENT", "TENSION", "BRIDGE", "GROUNDING"] as const;
 export const CLAIM_STATUSES = ["PENDING_REVIEW", "NEEDS_REVISION", "APPROVED", "REJECTED"] as const;
@@ -20,7 +21,7 @@ const RANGES: Record<string, [number, number]> = {
   S9: [0, 8],
 };
 
-const claims = [...claims1980, ...claims1982, ...claims2008];
+const claims = [...claims1980, ...claims1982, ...claims2008, ...claims2013];
 
 export type IntegrationClaim = (typeof claims)[number];
 

@@ -75,7 +75,7 @@ export function claimProblems(claim: IntegrationClaim, signature: string[]): str
 
 export function claimSetProblems(items: IntegrationClaim[]): string[] {
   const problems: string[] = [];
-  if (items.length < 4 || items.length > 5) problems.push("thread-count");
+  if (items.length < 4 || items.length > 6) problems.push("thread-count");
   const seen = new Set<string>();
   const modules = new Set<string>();
   let crossesLayers = false;

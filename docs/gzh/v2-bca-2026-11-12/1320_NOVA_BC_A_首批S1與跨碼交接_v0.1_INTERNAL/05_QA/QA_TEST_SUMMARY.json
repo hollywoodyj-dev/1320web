@@ -1,0 +1,32 @@
+{
+  "qa_status": "PASS_STRUCTURAL_ONLY",
+  "tests": {
+    "s1_count_44": true,
+    "s1_unique_code": true,
+    "s1_all_present": true,
+    "s1_content_schema": true,
+    "s1_source_fields_match": true,
+    "s1_all_pending": true,
+    "s1_zero_approved": true,
+    "s1_no_customer_publish": true,
+    "s1_no_reviewer_or_approval_time": true,
+    "claim_count_11": true,
+    "claim_schema": true,
+    "claims_all_pending": true,
+    "claims_all_deny_approval_id": true,
+    "claims_source_fields_exist": true,
+    "claim_07_only_four_codes": true,
+    "manifest_258": true,
+    "full_source_s1_44": true,
+    "release_enabled_false": true
+  },
+  "counts": {
+    "S1_candidate": 44,
+    "source_inventory": 258,
+    "claim_candidates": 11,
+    "approved": 0,
+    "customer_ready": 0
+  },
+  "scope": "internal editorial review and authenticated candidate Preview only",
+  "human_editorial_approval": false
+}

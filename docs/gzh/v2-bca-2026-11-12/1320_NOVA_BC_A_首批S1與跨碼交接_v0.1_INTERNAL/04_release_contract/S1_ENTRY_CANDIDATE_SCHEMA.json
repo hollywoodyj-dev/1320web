@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "1320 S1 content candidate (internal-only)",
+  "type": "object",
+  "required": [
+    "code",
+    "module",
+    "locale",
+    "source_code",
+    "source_version",
+    "source_fields_sha256",
+    "source_field_anchors",
+    "content_zh_tw_candidate",
+    "editorial_status",
+    "customer_publishable",
+    "reviewer",
+    "approved_at"
+  ],
+  "properties": {
+    "code": {
+      "type": "string",
+      "pattern": "^S1-[0-9]{2}$"
+    },
+    "module": {
+      "const": "S1"
+    },
+    "locale": {
+      "const": "zh-TW"
+    },
+    "source_code": {
+      "type": "string"
+    },
+    "source_version": {
+      "type": "string"
+    },
+    "source_fields_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "source_field_anchors": {
+      "type": "array",
+      "minItems": 5
+    },
+    "content_zh_tw_candidate": {
+      "type": "object",
+      "required": [
+        "symbolic_core",
+        "explorable_strength",
+        "core_tension",
+        "integration_direction",
+        "customer_narrative_short_draft"
+      ],
+      "properties": {
+        "symbolic_core": {
+          "type": "string",
+          "minLength": 8
+        },
+        "explorable_strength": {
+          "type": "string",
+          "minLength": 8
+        },
+        "core_tension": {
+          "type": "string",
+          "minLength": 8
+        },
+        "integration_direction": {
+          "type": "string",
+          "minLength": 8
+        },
+        "customer_narrative_short_draft": {
+          "type": "string",
+          "minLength": 70
+        }
+      }
+    },
+    "editorial_status": {
+      "enum": [
+        "PENDING_REVIEW",
+        "NEEDS_REVISION",
+        "APPROVED",
+        "REJECTED"
+      ]
+    },
+    "customer_publishable": {
+      "type": "boolean"
+    },
+    "reviewer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "approved_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "editorial_status": {
+            "const": "APPROVED"
+          }
+        },
+        "required": [
+          "editorial_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "reviewer": {
+            "type": "string",
+            "minLength": 2
+          },
+          "approved_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "customer_publishable": {
+            "const": true
+          }
+        },
+        "required": [
+          "reviewer",
+          "approved_at"
+        ]
+      }
+    }
+  ]
+}

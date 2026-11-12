@@ -1,0 +1,216 @@
+{
+  "source_manifest_version": "source-register-2026-11-12-rc1",
+  "modules": [
+    {
+      "module": "S0",
+      "count": 20,
+      "source_version_filename": "1320_S0_Void_Gate_Content_Database_v2_EN.md",
+      "source_sha256": "38f131575a1f0434a2c18b5ca1409ca85dad85ef6a35e6d8a9de26f8320fb7a3",
+      "required_original_fields": [
+        "Reflection Question",
+        "Void Archetype",
+        "Core Illusion",
+        "Void Challenge",
+        "Void Power",
+        "Path of Return",
+        "Reflective Summary",
+        "Integration Key",
+        "One-Week Practice",
+        "Wisewave Guidance",
+        "Safe Language Note"
+      ],
+      "source_records_status": "PRESERVED_INTERNAL",
+      "approved_zh_tw_records": 0
+    },
+    {
+      "module": "S1",
+      "count": 44,
+      "source_version_filename": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "required_original_fields": [
+        "Origin Essence",
+        "Archetype",
+        "Archetype ZH",
+        "Soul Traits",
+        "Strengths",
+        "Shadow Frequency",
+        "Core Lesson",
+        "Mission Direction",
+        "Integration Key",
+        "Wisewave Guidance",
+        "Symbolic Color",
+        "Totem",
+        "Esoteric Link",
+        "Safe Language Note"
+      ],
+      "source_records_status": "PRESERVED_INTERNAL",
+      "approved_zh_tw_records": 0
+    },
+    {
+      "module": "S2",
+      "count": 50,
+      "source_version_filename": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "required_original_fields": [
+        "Reflection Question",
+        "Mirror Archetype",
+        "Relationship Dynamic",
+        "Karmic Loop",
+        "Lesson",
+        "Healing Path",
+        "Reflective Summary",
+        "Integration Key",
+        "Wisewave Guidance",
+        "Safe Language Note"
+      ],
+      "source_records_status": "PRESERVED_INTERNAL",
+      "approved_zh_tw_records": 0
+    },
+    {
+      "module": "S3",
+      "count": 12,
+      "source_version_filename": "1320_S3_Soul_Vibration_Content_Database_v2_EN.json",
+      "source_sha256": "45db7ba264113bd9467042b5f103b04836b370a86f9613a2d38a92a735d31a07",
+      "required_original_fields": [
+        "code",
+        "numeric_value",
+        "module",
+        "name",
+        "name_zh",
+        "layer",
+        "vibration_archetype",
+        "vibration_archetype_zh",
+        "range_min",
+        "range_max",
+        "soul_traits_zh",
+        "strengths_zh",
+        "challenges_zh",
+        "guidance_zh",
+        "vibration_essence",
+        "expression_style",
+        "integration_key",
+        "one_week_practice",
+        "wisewave_guidance",
+        "safe_language_note"
+      ],
+      "source_records_status": "PRESERVED_INTERNAL",
+      "approved_zh_tw_records": 0
+    },
+    {
+      "module": "S4",
+      "count": 20,
+      "source_version_filename": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "source_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+      "required_original_fields": [
+        "Reflection Question",
+        "Core Loop",
+        "Reflective Summary",
+        "Emotional Trigger",
+        "Defense Pattern",
+        "Hidden Need",
+        "Relationship Pattern",
+        "Work & Life Pattern",
+        "Integration Key",
+        "One-Week Practice",
+        "Wisewave Guidance",
+        "Safe Language Note"
+      ],
+      "source_records_status": "PRESERVED_INTERNAL",
+      "approved_zh_tw_records": 0
+    },
+    {
+      "module": "S5",
+      "count": 44,
+      "source_version_filename": "1320_S5_Soul_Mission_Content_Database_v4_EN.md",
+      "source_sha256": "6e068b1d5abb0303a58bc6b2a3da26ec1e1b676c1bb3b4cdc1e3dc9720d09ba0",
+      "required_original_fields": [
+        "1. Mission Essence / 使命本质",
+        "2. What Your Soul Is Learning to Express / 灵魂正在学习表达什么",
+        "3. How Your Patterns Become Mission / 你的模式如何转化为使命",
+        "4. Natural Mission Fields / 自然使命场域",
+        "5. Shadow Distortion of This Mission / 使命的阴影扭曲",
+        "6. Mature Expression / 成熟表达方式",
+        "7. Wisewave Reflection / 玄微引导语",
+        "Safe Language Note"
+      ],
+      "source_records_status": "PRESERVED_INTERNAL",
+      "approved_zh_tw_records": 0
+    },
+    {
+      "module": "S6",
+      "count": 44,
+      "source_version_filename": "1320_S6_Value_Receiving_Content_Database_v1_EN.md",
+      "source_sha256": "82536150746485bdc31a219a42d6dc4a9b2f65bb11f497007618c585c0f71873",
+      "required_original_fields": [
+        "Reflection Question",
+        "1. Value Essence / 价值本质",
+        "2. What Your Soul Is Learning to Receive / 灵魂正在学习接收什么",
+        "3. How Value Wants to Flow / 价值如何流动",
+        "4. Natural Value Fields / 自然价值场域",
+        "5. Shadow Distortion of Receiving / 接收的阴影扭曲",
+        "6. Mature Receiving Expression / 成熟接收方式",
+        "7. Wisewave Reflection / 玄微引导语",
+        "Legacy Source Note",
+        "Safe Language Note"
+      ],
+      "source_records_status": "PRESERVED_INTERNAL",
+      "approved_zh_tw_records": 0
+    },
+    {
+      "module": "S7",
+      "count": 7,
+      "source_version_filename": "1320_S7_Soul_Sovereignty_Content_Database_v1_EN.md",
+      "source_sha256": "b98c38b8de6bba1b7c2c6653dd32ec09e8dd4eb44b3fc8a686d4171f64c603af",
+      "required_original_fields": [
+        "Sovereignty Essence / 主权本质",
+        "What Your Soul Is Learning to Reclaim / 灵魂正在学习收回什么",
+        "Where Power Was Given Away / 力量曾交出去的地方",
+        "Natural Sovereignty Fields / 自然主权场域",
+        "Shadow Distortion of Sovereignty / 主权的阴影扭曲",
+        "Mature Sovereignty Expression / 成熟主权表达",
+        "Wisewave Reflection / 玄微引导语",
+        "Safe Language Note"
+      ],
+      "source_records_status": "PRESERVED_INTERNAL",
+      "approved_zh_tw_records": 0
+    },
+    {
+      "module": "S8",
+      "count": 8,
+      "source_version_filename": "1320_S8_Soul_Contribution_Content_Database_v1_EN.md",
+      "source_sha256": "67676312446e998a48ea35f0cb2804093ff387d6b51e549194fcc9137a7d2bb9",
+      "required_original_fields": [
+        "Contribution Essence / 贡献本质",
+        "What Your Soul Offers / 灵魂提供什么",
+        "How Contribution Flows / 贡献如何流动",
+        "Natural Contribution Fields / 自然贡献场域",
+        "Shadow Distortion of Contribution / 贡献的阴影扭曲",
+        "Mature Contribution Expression / 成熟贡献表达",
+        "Wisewave Reflection / 玄微引导语",
+        "Safe Language Note"
+      ],
+      "source_records_status": "PRESERVED_INTERNAL",
+      "approved_zh_tw_records": 0
+    },
+    {
+      "module": "S9",
+      "count": 9,
+      "source_version_filename": "1320_S9_Return_to_Source_Content_Database_v1_EN.md",
+      "source_sha256": "4b3673688832fa909f6733073eada0c392ee202c295dc74e08c4b1e1d56b832c",
+      "required_original_fields": [
+        "Return Essence / 回源本质",
+        "What Your Soul Remembers / 灵魂记起什么",
+        "How Life Themes Resolve / 生命主题如何整合",
+        "Natural Return Practices / 自然回源练习",
+        "Shadow Distortion of Return / 回源的阴影扭曲",
+        "Mature Return Expression / 成熟回源表达",
+        "Wisewave Reflection / 玄微引导语",
+        "Safe Language Note"
+      ],
+      "source_records_status": "PRESERVED_INTERNAL",
+      "approved_zh_tw_records": 0
+    }
+  ],
+  "records_total": 258,
+  "notes": "欄位清單按保留原文彙整；其中英文字段與舊有高風險措辭不得直接進顧客端。"
+}

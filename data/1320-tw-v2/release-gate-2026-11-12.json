@@ -1,0 +1,108 @@
+{
+  "contract_version": "1320-release-contract-2026-11-12-rc1",
+  "status": "DRAFT_POLICY_FOR_TEAM_CONFIRMATION",
+  "public_release_enabled": false,
+  "approved_zh_tw_count": 0,
+  "editable_source_count": 258,
+  "s1_review_candidate_count": 44,
+  "preview_modes": {
+    "EDITOR_REVIEW_PREVIEW": {
+      "permitted_status": [
+        "PENDING_REVIEW",
+        "NEEDS_REVISION",
+        "APPROVED"
+      ],
+      "access": "trusted authenticated editors and QA staff only",
+      "must_display_watermark": "內部審閱候選｜非正式顧客報告",
+      "must_not_expose_public_url": true,
+      "must_not_accept_payment": true,
+      "logging": "source snapshot + claim ids + generated artifact id"
+    },
+    "CUSTOMER_DELIVERY": {
+      "permitted_status": [
+        "APPROVED"
+      ],
+      "require_source_content_approved": true,
+      "require_claims_approved": true,
+      "require_content_snapshot_version": true,
+      "require_approved_integration_rule_set": true,
+      "require_individual_human_reviewer_and_approved_at": true,
+      "require_product_release_authorization": true,
+      "require_secure_server_side_render_whitelist": true,
+      "require_valid_eligibility_check": true,
+      "current_state": "HOLD"
+    }
+  },
+  "product_scope": {
+    "sample_code_order": [
+      "S1",
+      "S3",
+      "S2",
+      "S0"
+    ],
+    "full_code_order": [
+      "S1",
+      "S3",
+      "S2",
+      "S0",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9"
+    ],
+    "full_scaffold_chapter_count": 17,
+    "four_code_integration_chapter": 7,
+    "ten_code_integration_chapter": 14,
+    "seven_day_map": {
+      "1": [
+        "S1"
+      ],
+      "2": [
+        "S2"
+      ],
+      "3": [
+        "S3"
+      ],
+      "4": [
+        "S4"
+      ],
+      "5": [
+        "S5"
+      ],
+      "6": [
+        "S6",
+        "S7"
+      ],
+      "7": [
+        "S8",
+        "S9"
+      ]
+    },
+    "s0_reflection_throughout_days": true
+  },
+  "release_guard_conditions": [
+    "All code source records used by a specific report are APPROVED with real reviewer and approved_at.",
+    "Every customer-facing cross-code claim is APPROVED and anchored to approved source fields from that same snapshot.",
+    "Claim anchors cannot be PENDING_NO_APPROVAL.",
+    "User-facing chapters 02, 07, 14 use consistent claims; Chapter 07 may only use S1/S3/S2/S0.",
+    "An approved content snapshot and approved integration rule set are active; no draft reference can be substituted.",
+    "Privacy, consent, age eligibility, safety notes, QA, and final product owner release authorization are passed.",
+    "No formulas, source-fields, internal anchors, mapping thresholds, source hashes, or code derivation are served to customer endpoints."
+  ],
+  "when_blocked": {
+    "display_message_zh_tw": "編碼已產生，完整敘事尚未核准。",
+    "status_code": "BLOCKED_NO_APPROVED_SOURCE",
+    "fail_closed": true
+  },
+  "approved_snapshot_naming": {
+    "content": "1320-zhTW-content-vMAJOR.MINOR.PATCH-approved-HASH8",
+    "integration": "1320-integration-zhTW-vMAJOR.MINOR.PATCH-approved-HASH8",
+    "rule": "Approved version identifiers may only be minted after signed editorial review. Partial approved snapshots must specify exact module coverage."
+  },
+  "candidate_snapshot_ids": {
+    "content": "1320-zhTW-s1-44-review-2026-11-12-rc1",
+    "integration": "1320-int-1980-1982-pending-2026-11-12-rc1"
+  }
+}

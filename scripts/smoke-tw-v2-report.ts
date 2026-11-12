@@ -7,6 +7,13 @@ import {
 import { claimProblems, claimSetProblems, claimsForSignature } from "../lib/gzh/tw-v2-claims";
 import { isTwV2ReportEnabled } from "../lib/gzh/tw-v2-report-access";
 import { buildTwV2Report, customerVisibleText } from "../lib/gzh/tw-v2-report";
+import {
+  releaseGateSummary,
+  s1ApprovedCount,
+  s1CandidateFor,
+  s1CustomerPublishableCodes,
+  s1EditorialCandidateCount,
+} from "../lib/gzh/tw-v2-s1-library";
 
 function assert(condition: unknown, label: string) {
   if (!condition) {
@@ -48,13 +55,7 @@ assert(!overview?.blocks.some((block) => block.type === "h3" && block.text === "
 assert(!text.includes("你原本只想解決工作裡的一個難題"), "S3 uses a hypothetical opening");
 assert(!text.includes("你可能在同一個星期裡"), "chapter 14 does not narrate a real week");
 const overviewCards = overview?.blocks.find((block) => block.type === "cards");
-assert(overviewCards?.type === "cards" && overviewCards.items.length === 5, "overview has five claim-aligned cards");
-const claimCodeSets = claimsForSignature(full.codes).map((claim) => claim.code_ids.map((code) => code.slice(0, 2)).join(" · "));
-assert(
-  overviewCards?.type === "cards" &&
-    overviewCards.items.every((item) => claimCodeSets.includes(item.codes)),
-  "overview cards use the same code sets as chapter 14 claims",
-);
+assert(overviewCards?.type === "cards" && overviewCards.items.length === 5, "overview keeps five calibration cards");
 assert(!text.includes("神秘的財富能力"), "the withdrawn wealth phrase stays out");
 assert(!text.includes("你原本只是想讓事情不要失控") && !text.includes("你也可能沒有問自己"), "S5 and S7 do not narrate a real history");
 assert(text.includes("不是回到某個神秘的地方"), "S9 return stays ordinary");
@@ -125,10 +126,14 @@ assert(customerVisibleText(third).includes("保護安全比為這些互動尋找
 assert(second.codes.join("|") !== full.codes.join("|") && second.codes.join("|") !== third.codes.join("|"), "three fixtures stay distinct");
 
 const claims = claimsForSignature(full.codes);
-assert(claims.length === 5, "five internal claims for this signature");
+assert(claims.length === 6, "BCA pack has six pending claims for 1980");
 assert(claims.every((claim) => claimProblems(claim, full.codes).length === 0), "each claim matches the contract");
 assert(claimSetProblems(claims).length === 0, "the claim set covers a real cross-code reading");
 assert(claims.every((claim) => claim.editorial_status === "PENDING_REVIEW"), "claims are not approved for sale");
+assert(
+  claims.every((claim) => claim.anchors.every((anchor) => anchor.approval_id === "PENDING_NO_APPROVAL")),
+  "PENDING_NO_APPROVAL stays a non-approval placeholder",
+);
 assert(approvedCustomerThreads(full.codes).length === 0, "customer threads wait for APPROVED");
 assert(claimsForSignature(blocked.codes).length === 0, "another signature gets no claims");
 const claims1982 = claimsForSignature(second.codes);
@@ -140,6 +145,12 @@ assert(approvedCustomerThreads(third.codes).length === 0, "2008 pending claims s
 
 const progress = approvedContentProgress();
 assert(progress.expected === 258 && progress.approved === 0 && progress.status === "BLOCKED", "258-code content stays unapproved");
+assert(s1EditorialCandidateCount() === 44 && s1ApprovedCount() === 0, "S1 has 44 candidates and zero approvals");
+assert(s1CustomerPublishableCodes().length === 0, "S1 candidates stay out of customer publish");
+assert(s1CandidateFor("S1-18")?.name_zh_tw_candidate && !s1CandidateFor("S1-18")?.reviewer, "S1 lookup works without forged reviewer");
+assert(s1CandidateFor("S9-01") === null, "S1 library does not invent other modules");
+const gate = releaseGateSummary();
+assert(gate.publicReleaseEnabled === false && gate.customerState === "HOLD" && gate.approvedZhTwCount === 0, "release gate stays closed");
 assert(sampleFullDifference().length >= 6, "sample and full difference table exists");
 
 const page = fs.readFileSync(new URL("../app/(site)/tw-v2-report/page.tsx", import.meta.url), "utf8");

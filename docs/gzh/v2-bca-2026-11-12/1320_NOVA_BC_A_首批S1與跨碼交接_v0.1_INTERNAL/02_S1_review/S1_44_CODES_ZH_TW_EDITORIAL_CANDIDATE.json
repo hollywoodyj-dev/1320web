@@ -1,0 +1,2328 @@
+{
+  "package_id": "1320-S1-44-zhTW-review-2026-11-12-rc1",
+  "locale": "zh-TW",
+  "module": "S1",
+  "status": "PENDING_HUMAN_REVIEW_NOT_APPROVED",
+  "records": [
+    {
+      "code": "S1-01",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "破曉者",
+      "name_zh_source": "破晓者",
+      "name_en_source": "The Initiator",
+      "source_code": "S1-01",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "a9f30555a89e575ed69b9a993c22319da6f5f089e09eb1d52f82174487bb2b5b",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 行动力强、直觉快速\n- 天生开路者\n- 以内在驱动力前进\n- 擅长启动、新局、改革"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 在混乱中找到突破点\n- 天生领导力\n- 推动停滞能量向前流动"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易躁动、缺乏耐心\n- 抗拒放慢、无法停下来\n- 以速度代替自我价值"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学习以觉知稳定力量，而非以行动累积价值感。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合开创事业、独立领导、创新工作\n- 在关系中需练习放慢脚步与共创"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "啟動一個新方向，需要速度，也需要知道何時傾聽。",
+        "explorable_strength": "遇到停滯時，破曉者帶來的是讓第一步變得可能的視角。",
+        "core_tension": "如果只用行動速度衡量自己，休息與討論就容易被看成拖延。",
+        "integration_direction": "找一件小事先開始，再留一個節點確認是否仍在正確方向。",
+        "customer_narrative_short_draft": "啟動一個新方向，需要速度，也需要知道何時傾聽。\n\n遇到停滯時，破曉者帶來的是讓第一步變得可能的視角。 如果只用行動速度衡量自己，休息與討論就容易被看成拖延。\n\n找一件小事先開始，再留一個節點確認是否仍在正確方向。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-02",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "連接者",
+      "name_zh_source": "连接者",
+      "name_en_source": "The Bridge",
+      "source_code": "S1-02",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "cc99e27da0e4ee63bfd4134955407fc4896e4ba9dcb6b696f95b7c6536f0eec8",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 温和却有力量\n- 擅长调和冲突与差异\n- 自然而然成为“关系的桥梁”\n- 能在不同世界之间穿梭"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 擅长理解他人动机\n- 让复杂的人际关系恢复流动\n- 能将两种看似对立的能量连接起来"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易过度共情、迷失界限\n- 不敢表达真实需求\n- 担心自己一说“不”就会破坏关系"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学习维护自我，而不是永远做那个“支持所有人”的人。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合沟通、关系辅导、跨领域整合\n- 在灵性工作中具有天然的疗愈能力"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "連結差異，並不等於把每個人的重量都接過來。",
+        "explorable_strength": "連接者提醒人們，理解不同立場可以為合作留下新空間。",
+        "core_tension": "當關係是否和諧變成唯一目標，自己的需求可能失去位置。",
+        "integration_direction": "讓溝通同時包含對方的聲音與自己的界限。",
+        "customer_narrative_short_draft": "連結差異，並不等於把每個人的重量都接過來。\n\n連接者提醒人們，理解不同立場可以為合作留下新空間。 當關係是否和諧變成唯一目標，自己的需求可能失去位置。\n\n讓溝通同時包含對方的聲音與自己的界限。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-03",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "預見者",
+      "name_zh_source": "预见者",
+      "name_en_source": "The Seer",
+      "source_code": "S1-03",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "da1e901249c61ed0a43fb6411445bfb4ae0d0581828754bdda73855c84ecaaa8",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 高度敏感、直觉锐利\n- 能看见别人看不见的方向\n- 具未来感、创新思维\n- 思绪独特，不随波逐流"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 洞察力极高\n- 能识别趋势、潜能与隐形动机\n- 在创造性领域表现突出"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易过度思考\n- 感受太多、难以落地\n- 觉得自己与世界不同，产生孤独感"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "把洞察落地，把感觉变成方向，把灵性放进现实。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合策略、创新、艺术、灵性研究\n- 能成为指导他人觉醒的高频引导者"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "看見遠處的可能，也需要確認腳下有哪些事實。",
+        "explorable_strength": "預見者關注洞察、創意與不尋常的觀察角度。",
+        "core_tension": "想法過多或過於相信直覺，可能忽略證據與當下條件。",
+        "integration_direction": "選一個洞察，用可驗證的小實驗檢查它是否站得住腳。",
+        "customer_narrative_short_draft": "看見遠處的可能，也需要確認腳下有哪些事實。\n\n預見者關注洞察、創意與不尋常的觀察角度。 想法過多或過於相信直覺，可能忽略證據與當下條件。\n\n選一個洞察，用可驗證的小實驗檢查它是否站得住腳。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-04",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "穩定者",
+      "name_zh_source": "稳定者",
+      "name_en_source": "The Stabilizer",
+      "source_code": "S1-04",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "dc6e6e600742f4a07589f4e74fc487e5011c57def4b42538a61f7ad4eb36f55c",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 踏实、可靠、能承载压力\n- 是团队与家人的“定海神针”\n- 有强大耐心与结构能力\n- 做事稳、深、慢、准"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 为他人提供安全感\n- 能把混乱系统化、结构化\n- 擅长长期项目与持续性成长"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 害怕改变、抗拒不确定\n- 容易过度承担、压抑需求\n- 误以为“稳定＝不能出错”"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学会在稳定中保持灵活，让结构服务灵魂，而不是束缚灵魂。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合组织管理、教育、疗愈、财务\n- 是多数团队的“基础频率守护者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "可靠不是永遠不變，而是讓人知道變化時可以怎麼辦。",
+        "explorable_strength": "穩定者象徵將混亂整理成可持續安排的能力方向。",
+        "core_tension": "若把穩定等同於零失誤，就可能承擔太多、排斥必要調整。",
+        "integration_direction": "建立能共同維護、也能定期修訂的簡單流程。",
+        "customer_narrative_short_draft": "可靠不是永遠不變，而是讓人知道變化時可以怎麼辦。\n\n穩定者象徵將混亂整理成可持續安排的能力方向。 若把穩定等同於零失誤，就可能承擔太多、排斥必要調整。\n\n建立能共同維護、也能定期修訂的簡單流程。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-05",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "催化者",
+      "name_zh_source": "催化者",
+      "name_en_source": "The Catalyst",
+      "source_code": "S1-05",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "647cf7612060410c3abcb76109af97385af1bf0010eb6f84b03c799d45883ce6",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 有强烈影响力\n- 进入一个空间就会让能量改变\n- 天生适合破局、突破、激发潜能\n- 带有“激活他人”的频率"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能点醒他人、启发他人\n- 带动团队前进\n- 在关键时刻具有强力突破能量"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易让他人感到压力\n- 能量过强导致误解\n- 常常“点醒别人，却忽略自己”"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学习在激发他人之前，先稳住自己的能量。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合教学、教练、疗愈、创业、公众表达\n- 是“灵魂加速器”，能帮助他人跨越瓶颈"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "帶動改變之前，先留意別人是否準備好參與。",
+        "explorable_strength": "催化者映照促成突破與啟動對話的可能。",
+        "core_tension": "過於急切地推動進度，可能讓原本的好意變成他人的壓力。",
+        "integration_direction": "先確認共同目標與同意，再提出能被選擇的下一步。",
+        "customer_narrative_short_draft": "帶動改變之前，先留意別人是否準備好參與。\n\n催化者映照促成突破與啟動對話的可能。 過於急切地推動進度，可能讓原本的好意變成他人的壓力。\n\n先確認共同目標與同意，再提出能被選擇的下一步。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。"
+      ]
+    },
+    {
+      "code": "S1-06",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "癒合者",
+      "name_zh_source": "愈合者",
+      "name_en_source": "The Healer",
+      "source_code": "S1-06",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "0ef39ed43f3691b43c5d99312a3c056d18b356b3d714cd2a1d88dd58a97b7f6e",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 高度感受性\n- 能读取他人情绪深处\n- 天生具有安抚能量\n- 在混乱中带来温暖与修复"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能疗愈、能倾听、能容纳\n- 直觉性极强的情绪洞察\n- 让人接近后自然放松"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易承担他人情绪\n- 以“照顾别人”逃避照顾自己\n- 害怕表达自身需求"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学习把能量收回自己，而不是不断成为他人的避风港。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合疗愈、咨询、教育、亲密关系引导\n- 在团队中是“能量调频者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "照顧是一種關係品質，並非必須承擔所有痛苦的任務。",
+        "explorable_strength": "癒合者象徵傾聽、照料與為他人保留空間的取向。",
+        "core_tension": "若總把他人需要放在前面，自己的疲倦與求助可能被忽略。",
+        "integration_direction": "練習說清楚可提供的陪伴範圍，也讓自己得到支持。",
+        "customer_narrative_short_draft": "照顧是一種關係品質，並非必須承擔所有痛苦的任務。\n\n癒合者象徵傾聽、照料與為他人保留空間的取向。 若總把他人需要放在前面，自己的疲倦與求助可能被忽略。\n\n練習說清楚可提供的陪伴範圍，也讓自己得到支持。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
+        "S1-06 原始中文為「愈合者」；台繁提案「癒合者」，名稱待真人核准。"
+      ]
+    },
+    {
+      "code": "S1-07",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "堅毅者",
+      "name_zh_source": "坚毅者",
+      "name_en_source": "The Warrior",
+      "source_code": "S1-07",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "3704cecaa8f5d3603b8f6d84e6c7dbcc366dd538944b6df8063d14b513017a2c",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 意志强、行动力高\n- 不轻易退缩\n- 有强烈的目标感与方向感\n- 能在逆境中保持力量"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 在危机中最可靠\n- 能保护自己与所爱之人\n- 拥有突破极限的能力"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 把坚强当成盔甲\n- 害怕脆弱被看见\n- 把斗争当成生活方式"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学习让力量变得柔软，而不是永远在对抗。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合领导、创业、运动、危机处理\n- 灵性道路上是“意志的觉醒者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "堅定能保護重要的事，柔軟則使關係保有空間。",
+        "explorable_strength": "堅毅者呈現面對壓力仍願意前進的象徵品質。",
+        "core_tension": "把每次分歧都當成戰鬥，可能讓脆弱與協作無處安放。",
+        "integration_direction": "先辨認哪些原則值得堅持，再選擇不必對抗的表達方式。",
+        "customer_narrative_short_draft": "堅定能保護重要的事，柔軟則使關係保有空間。\n\n堅毅者呈現面對壓力仍願意前進的象徵品質。 把每次分歧都當成戰鬥，可能讓脆弱與協作無處安放。\n\n先辨認哪些原則值得堅持，再選擇不必對抗的表達方式。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-08",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "承載者",
+      "name_zh_source": "承载者",
+      "name_en_source": "The Nurturer",
+      "source_code": "S1-08",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "5e209f5fc924fee51e119ee64e94546ad454041914e2af27795c97ca7a396c65",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 温暖、踏实、能给予\n- 擅长照顾、支持、陪伴\n- 令他人感到“被接住”\n- 对情感需求极度敏感"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 稳定关系空间\n- 在团队中带来凝聚力\n- 具有养育型创造力"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易牺牲自我\n- 把“付出”当成价值来源\n- 在关系中容易失去界限"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学习在给予的同时，不背叛自己。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合家庭疗愈、心理照护、社区建设\n- 也是团队的“能量承载者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "承接他人不必以失去自己作為代價。",
+        "explorable_strength": "承載者映照長期照料、耐心與維持團隊連結的方向。",
+        "core_tension": "若付出成為唯一的價值證明，就可能難以拒絕不合理要求。",
+        "integration_direction": "將責任分配與資源需求說明清楚，讓照顧可以持續。",
+        "customer_narrative_short_draft": "承接他人不必以失去自己作為代價。\n\n承載者映照長期照料、耐心與維持團隊連結的方向。 若付出成為唯一的價值證明，就可能難以拒絕不合理要求。\n\n將責任分配與資源需求說明清楚，讓照顧可以持續。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-09",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "拓界者",
+      "name_zh_source": "拓界者",
+      "name_en_source": "The Explorer",
+      "source_code": "S1-09",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "185cf2061114d9a14cf34063661f707cf2abcbc7a89d8ca21a115a92d9ec34e7",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 好奇心旺盛\n- 不喜欢停留在同一个框架\n- 热爱学习、体验、旅行、冒险\n- 对未知充满吸引力"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能打开新世界、新视角、新路径\n- 适应力强、不害怕变化\n- 生命充满灵感与创造性"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 缺乏稳定\n- 容易分心，无法长期坚持\n- 逃避深度承诺"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学习把探索能力转化为创造，而不是永远只停在体验层。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合创新、教育、旅行、科技、研究\n- 能成为“世界之间的桥梁”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "跨越熟悉邊界的意義，不只在看到更多，也在留下成果。",
+        "explorable_strength": "拓界者關注探索新領域與願意嘗試陌生可能的態度。",
+        "core_tension": "持續轉換方向時，真正需要累積的練習可能無法深入。",
+        "integration_direction": "選一項新發現，把它完成為能與人分享的作品或經驗。",
+        "customer_narrative_short_draft": "跨越熟悉邊界的意義，不只在看到更多，也在留下成果。\n\n拓界者關注探索新領域與願意嘗試陌生可能的態度。 持續轉換方向時，真正需要累積的練習可能無法深入。\n\n選一項新發現，把它完成為能與人分享的作品或經驗。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。"
+      ]
+    },
+    {
+      "code": "S1-10",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "守護者",
+      "name_zh_source": "守护者",
+      "name_en_source": "The Guardian",
+      "source_code": "S1-10",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "280fd6ef4c6ed0f73555d855ee8acf17f4ee46f17f7d4f297f7f8387b492e1fd",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 忠诚、稳重、可靠\n- 保护欲很强\n- 天生会为他人守住界线\n- 是“团队的盾”"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能识别危险与能量不平衡\n- 在混乱中带来安全感\n- 能为他人撑起空间"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 过度保护、过度控制\n- 不信任他人能力\n- 害怕别人离开导致紧抓不放"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学习放下“守住一切”的责任感，让生命自己流动。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合安全、管理、协调、策略、资源管理\n- 在灵性工作中具有“能量护卫者”的角色"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "守護讓人感到被在乎；真正的信任也允許他人作選擇。",
+        "explorable_strength": "守護者關注對重要的人、關係和承諾投注心力的可能。",
+        "core_tension": "擔心失去有時會變成預先替別人安排，甚至限制對方。",
+        "integration_direction": "區分支持與控制，先問對方希望得到哪一種協助。",
+        "customer_narrative_short_draft": "守護讓人感到被在乎；真正的信任也允許他人作選擇。\n\n守護者關注對重要的人、關係和承諾投注心力的可能。 擔心失去有時會變成預先替別人安排，甚至限制對方。\n\n區分支持與控制，先問對方希望得到哪一種協助。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-11",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "遠見者",
+      "name_zh_source": "远见者",
+      "name_en_source": "The Visionary",
+      "source_code": "S1-11",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "03ba442f99f8f390299defefef08a96bde603fc136e24cc2cc0bb5dcdea4d28e",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 拥有大局观\n- 善于构建未来蓝图\n- 对趋势、模式、可能性敏锐\n- 天生思考超越当下框架"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能设计长期方向与大范围策略\n- 是组织或团队的“未来之眼”\n- 能启发他人看到更大的道路"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 想得太远，忽略当下需要\n- 容易因计划过大而停滞\n- 对行动细节缺乏耐心"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学会让愿景落地，不是只停留在“未来”，而是从当下开始。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合策略、创意领导、趋势研究、灵性引导\n- 能成为推动人类意识前进的“方向制定者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "長期視野能指出方向，但今天仍需要可行的步驟。",
+        "explorable_strength": "遠見者（S1-11）側重規劃大局、辨識模式與長期策略。",
+        "core_tension": "如果只在宏大的未來藍圖裡工作，眼前資源和細節會被忽略。",
+        "integration_direction": "把一個長期目標拆成可檢視的近期里程碑。",
+        "customer_narrative_short_draft": "長期視野能指出方向，但今天仍需要可行的步驟。\n\n遠見者（S1-11）側重規劃大局、辨識模式與長期策略。 如果只在宏大的未來藍圖裡工作，眼前資源和細節會被忽略。\n\n把一個長期目標拆成可檢視的近期里程碑。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-12",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "感應者",
+      "name_zh_source": "感应者",
+      "name_en_source": "The Empath",
+      "source_code": "S1-12",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "e7a2bf3facee3b9c8ea8bf8168d2a3547f476273d7eac7c353bb4c2f11151490",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 能量敏感、直觉型\n- 容易感受他人情绪、气场、潜意识信息\n- 天生具有高维感知能力\n- 属于“情绪雷达”型灵魂"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能看见别人看不见的微妙变化\n- 具有天然的疗愈与陪伴能力\n- 在关系中深具同理心与洞察力"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易被能量淹没\n- 把别人的情绪当成自己的\n- 害怕表达“不”，害怕造成冲突"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学会分辨“属于你”与“属于他人的能量”。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合疗愈、创作、咨询、能量工作\n- 也是团队中最重要的“情绪稳定器”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "察覺別人的感受，仍需區分自己的情緒和對方的訊息。",
+        "explorable_strength": "感應者象徵對互動氛圍敏銳、願意細緻聆聽的可能。",
+        "core_tension": "當他人的情緒都被當作自己的責任，界限會逐漸模糊。",
+        "integration_direction": "先問：這是我真正感受到的，還是我對他人狀態的推測？",
+        "customer_narrative_short_draft": "察覺別人的感受，仍需區分自己的情緒和對方的訊息。\n\n感應者象徵對互動氛圍敏銳、願意細緻聆聽的可能。 當他人的情緒都被當作自己的責任，界限會逐漸模糊。\n\n先問：這是我真正感受到的，還是我對他人狀態的推測？"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-13",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "逆行者",
+      "name_zh_source": "逆行者",
+      "name_en_source": "The Rebel",
+      "source_code": "S1-13",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "b6be695c55f8e4dc116d18c41a629166c68196b9c49ee43f7481580db6f16570",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 拒绝盲从\n- 天生反叛、追求真实\n- 不愿被框架限制\n- 思想独立、行为大胆"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能拆解旧系统\n- 天生的“打破幻相者”\n- 让世界看见另一种道路"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易对权威产生敌意\n- 把反对当成身份\n- 与世界对立而感到孤独"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学习从“反对”进化为“创造”，让反叛成为爱的力量。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合创新、改革、社会倡议、灵性革命\n- 是推动世界改变的强大原型"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "質疑現狀可以打開新路，但反對本身不是終點。",
+        "explorable_strength": "逆行者呈現不急著接受慣例、願意重新審視制度的方向。",
+        "core_tension": "若把反對變成身分，就可能錯過值得保留的事物。",
+        "integration_direction": "把反對意見轉成可討論的替代方案與實際行動。",
+        "customer_narrative_short_draft": "質疑現狀可以打開新路，但反對本身不是終點。\n\n逆行者呈現不急著接受慣例、願意重新審視制度的方向。 若把反對變成身分，就可能錯過值得保留的事物。\n\n把反對意見轉成可討論的替代方案與實際行動。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。"
+      ]
+    },
+    {
+      "code": "S1-14",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "傳導者",
+      "name_zh_source": "传导者",
+      "name_en_source": "The Teacher",
+      "source_code": "S1-14",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "63267e927442fe257988fedfa3c9274c3238193c7424481412fcfd7fb327408e",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 擅长整理知识、传递智慧\n- 天然的指导者、整合者\n- 能把复杂变简单\n- 有“点醒他人”的语言能力"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 影响力深、稳定\n- 能为他人打开理解与觉知之门\n- 在团体中能成为“意识的放大器”"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 害怕自己的知识不够\n- 容易进入完美主义\n- 过度承担教学角色导致耗竭"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学习“以身示范”，而不是用知识证明价值。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合教学、咨询、内容创作、灵性工作\n- 在组织中是“智慧守护者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "真正有用的知識，應能透過實踐而不是頭銜被看見。",
+        "explorable_strength": "傳導者關注分享、教學與將複雜觀念說清楚的可能。",
+        "core_tension": "過度擔心自己不夠專業，容易使分享變成無止盡的準備。",
+        "integration_direction": "在能力範圍內示範一件事，並坦承仍需學習的部分。",
+        "customer_narrative_short_draft": "真正有用的知識，應能透過實踐而不是頭銜被看見。\n\n傳導者關注分享、教學與將複雜觀念說清楚的可能。 過度擔心自己不夠專業，容易使分享變成無止盡的準備。\n\n在能力範圍內示範一件事，並坦承仍需學習的部分。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-15",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "入世的靈者",
+      "name_zh_source": "入世的灵者",
+      "name_en_source": "The Grounded Mystic",
+      "source_code": "S1-15",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "d6cd6b43618906f68036b01e8d3414f976cc952900fc25eda698423275eeeb98",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 灵性高度觉知\n- 又能扎根现实、脚踏实地\n- 把精神理解转化为日常行动\n- 既能看见天，也能走好地"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能桥接灵性与现实\n- 在实践中体现智慧\n- 是灵性团队中最稳定的频率"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易对“不够觉醒的人”失去耐性\n- 忽略自己的身体需要\n- 在灵性与现实之间失衡"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学习把灵性实践放进身体，而不是停留在头脑或能量层。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合疗愈、灵性教练、指导者、咨询与策略\n- 是“灵性实际化”的代表力量"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "內在探索若能照顧日常生活，才不會和現實分離。",
+        "explorable_strength": "入世的靈者象徵將精神性提問帶入身體、工作與關係。",
+        "core_tension": "若過於在意誰比較覺醒，容易忽略真實責任與基本需求。",
+        "integration_direction": "從休息、飲食、誠實溝通等具體生活選擇開始。",
+        "customer_narrative_short_draft": "內在探索若能照顧日常生活，才不會和現實分離。\n\n入世的靈者象徵將精神性提問帶入身體、工作與關係。 若過於在意誰比較覺醒，容易忽略真實責任與基本需求。\n\n從休息、飲食、誠實溝通等具體生活選擇開始。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-16",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "和諧者",
+      "name_zh_source": "和谐者",
+      "name_en_source": "The Harmonizer",
+      "source_code": "S1-16",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "ed018d3df6c068dc9dd8733ff11f61291284dcfd4d607020adc9aade71b409b0",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 天生带有柔和频率\n- 擅长化解紧张与冲突\n- 在混乱中维持平衡\n- 言行自带“能量调频”效果"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 让团队或关系恢复顺畅\n- 能看见多方观点并整合\n- 拥有极强的共情与适应力"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 害怕冲突、习惯退让\n- 容易陷入“维持和谐”的角色\n- 压抑真实情绪导致能量耗竭"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学习在追求和谐的同时，不牺牲自己的真实。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合协调、谈判、管理、人际调解\n- 是团队的重要“能量平衡器”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "和諧不等於沒有分歧，而是讓差異能被安全地說出來。",
+        "explorable_strength": "和諧者映照協調立場、理解彼此節奏的方向。",
+        "core_tension": "為了避免衝突而不斷退讓，會使真正的需要被延後。",
+        "integration_direction": "在溫和語氣裡清楚說出一件自己在意的事。",
+        "customer_narrative_short_draft": "和諧不等於沒有分歧，而是讓差異能被安全地說出來。\n\n和諧者映照協調立場、理解彼此節奏的方向。 為了避免衝突而不斷退讓，會使真正的需要被延後。\n\n在溫和語氣裡清楚說出一件自己在意的事。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-17",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "構築者",
+      "name_zh_source": "构筑者",
+      "name_en_source": "The Architect",
+      "source_code": "S1-17",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "c9fff69a7044c118ff8c496b71ec11b49152eaa5b82e4c8c54b76e6cb2d289be",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 喜欢规划、设计、打造结构\n- 擅长组织系统与框架\n- 以逻辑与远见结合行动\n- 能把抽象概念变成现实"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 有高度执行力\n- 构建长期项目的能力突出\n- 能带领团队打造“从零到一”系统"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易陷入过度规划\n- 不敢在不完美中开始\n- 倾向控制每个细节"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学习允许变化，允许生命也参与设计，而不是全部由你掌控。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合创业、策略规划、产品开发、组织结构设计\n- 在灵性路径上，是将“意识”建成“形态”的灵魂"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "好的結構能支援成長，不必把每個細節都預先控制。",
+        "explorable_strength": "構築者象徵將構想落實為可運作系統的方向。",
+        "core_tension": "當規劃永遠優先於行動，計畫可能變得精密卻難以開始。",
+        "integration_direction": "先建立可修訂的初版，再根據真實使用情況調整。",
+        "customer_narrative_short_draft": "好的結構能支援成長，不必把每個細節都預先控制。\n\n構築者象徵將構想落實為可運作系統的方向。 當規劃永遠優先於行動，計畫可能變得精密卻難以開始。\n\n先建立可修訂的初版，再根據真實使用情況調整。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-18",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "轉化者",
+      "name_zh_source": "转化者",
+      "name_en_source": "The Transformer",
+      "source_code": "S1-18",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "dc2b5b9145c2ae2bfd615e62040f24edcf892d96aa65f4eb55ca846d435e10ce",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 能感知能量变化\n- 生命中常遇到“破而后立”的情境\n- 天生带有深度炼化能力\n- 自身的成长速度比常人快"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 具有穿越低频的力量\n- 能引导他人面对阴影\n- 天生具备重塑生命结构的能力"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 易陷入情绪深渊\n- 误以为痛苦才是成长\n- 把自己放在“修炼者”的压力中"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学习温柔地转化，而不是用痛苦逼迫自己成长。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合疗愈、阴影工作、能量转化、生命教练\n- 是灵魂进化的“加速器”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "改變可以是重新理解與選擇，不必靠受苦證明。",
+        "explorable_strength": "轉化者關注在既有方法失效時，辨認能留下和需要更新的部分。",
+        "core_tension": "若將痛苦當成成長的必要代價，平靜反而可能被低估。",
+        "integration_direction": "找出真正需要改變的一件事，也承認已經足夠好的部分。",
+        "customer_narrative_short_draft": "改變可以是重新理解與選擇，不必靠受苦證明。\n\n轉化者關注在既有方法失效時，辨認能留下和需要更新的部分。 若將痛苦當成成長的必要代價，平靜反而可能被低估。\n\n找出真正需要改變的一件事，也承認已經足夠好的部分。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-19",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "傳聲者",
+      "name_zh_source": "传声者",
+      "name_en_source": "The Communicator",
+      "source_code": "S1-19",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "7a1447fd65b5942cc642170ba9bc65a912b2266a16e92f4b70f0e45fe9ac3330",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 语言敏锐、表达清晰\n- 天生擅长沟通、教学、写作、演讲\n- 善于将复杂能量转为简单理解\n- 能让人“听懂自己”"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 具有强大的表达影响力\n- 能精准洞察他人观点\n- 在团队中常成为发声者"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 过度迎合听众\n- 用表达代替真正的感受\n- 害怕声音被忽略"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学习说真话，而不是只说让别人舒服的话。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合沟通、教学、写作、媒体、咨询\n- 在灵性路径上，是“意识的翻译者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "發聲的價值，在於真實溝通，而不只是獲得掌聲。",
+        "explorable_strength": "傳聲者象徵為觀點找到合適語言、促成理解的可能。",
+        "core_tension": "過度迎合受眾時，自己的立場和感受容易變得模糊。",
+        "integration_direction": "在說出想法之前，先確認自己真正希望傳達的核心。",
+        "customer_narrative_short_draft": "發聲的價值，在於真實溝通，而不只是獲得掌聲。\n\n傳聲者象徵為觀點找到合適語言、促成理解的可能。 過度迎合受眾時，自己的立場和感受容易變得模糊。\n\n在說出想法之前，先確認自己真正希望傳達的核心。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-20",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "心覺者",
+      "name_zh_source": "心觉者",
+      "name_en_source": "The Heart-Centered",
+      "source_code": "S1-20",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "43b8fb7577a51e101211892da31d08d612cc19be474c3e2486bc851099aa6dd7",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 心极度敏锐\n- 做决定依赖感受、直觉、共鸣\n- 具备天然的情感智慧\n- 能在互动中“看见人心”"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 在关系中创造深度与真诚\n- 善于疗愈情绪与连结\n- 能带领他人回到内在真实"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易被情绪牵引\n- 在关系中过度敞开\n- 害怕失去连结而妥协自我"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学习以“自我对齐”为中心，而非情绪反应。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合疗愈、咨询、关系辅导、情绪智力工作\n- 是“心之道路”的引导者"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "感受能提供線索，但仍可以與事實一起被看見。",
+        "explorable_strength": "心覺者關注情感敏銳、真誠連結與重視內在一致性的取向。",
+        "core_tension": "在關係中若只依當下情緒回應，可能忽略其他解釋與自身界限。",
+        "integration_direction": "先辨認感受與需要，再核對發生了什麼，才做選擇。",
+        "customer_narrative_short_draft": "感受能提供線索，但仍可以與事實一起被看見。\n\n心覺者關注情感敏銳、真誠連結與重視內在一致性的取向。 在關係中若只依當下情緒回應，可能忽略其他解釋與自身界限。\n\n先辨認感受與需要，再核對發生了什麼，才做選擇。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-21",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "整合者",
+      "name_zh_source": "整合者",
+      "name_en_source": "The Integrator",
+      "source_code": "S1-21",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "42d5a8f49f17ccd648a74e47c37488fd99d74ad6fa648ecf48dd680c5009f699",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 能把零散信息连接成完整结构\n- 擅长看到“系统背后的系统”\n- 有稳定的洞察与温和的引导力\n- 思维深度高、能沉稳吸收知识"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能整合多领域、多观点、多能量\n- 在团队中是让混乱变清晰的人\n- 擅长将灵性智慧转化为实用方法"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易让自己承担太多\n- 在“做好整合”中迷失自我\n- 对不完整的事物过度敏感"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学习在整合世界之前，先整合自己的节奏与能量。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合策略、系统设计、疗愈、组织统筹、教练\n- 是“整体意识”的代表者"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "整合不同觀點，需要一個能容許尚未完成的節奏。",
+        "explorable_strength": "整合者映照把多種資源與立場放進同一幅圖像的方向。",
+        "core_tension": "若所有缺口都想親自補齊，整理工作可能變成無止盡責任。",
+        "integration_direction": "先確認最重要的共同問題，允許部分答案暫時保留空白。",
+        "customer_narrative_short_draft": "整合不同觀點，需要一個能容許尚未完成的節奏。\n\n整合者映照把多種資源與立場放進同一幅圖像的方向。 若所有缺口都想親自補齊，整理工作可能變成無止盡責任。\n\n先確認最重要的共同問題，允許部分答案暫時保留空白。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。"
+      ]
+    },
+    {
+      "code": "S1-22",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "柔力者",
+      "name_zh_source": "柔力者",
+      "name_en_source": "The Gentle Power",
+      "source_code": "S1-22",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "f889aacd9ffb44d16c086d68417065a82dc60518acb61d0bd9038e3e2443be04",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 气质温柔却内在强大\n- 用“无形力量”改变他人\n- 不争不抢但能稳稳影响环境\n- 天生具有疗愈式存在感"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 在冲突中保持清明\n- 能让身边的人自然稳定下来\n- 是“安静却力量极强”的灵魂"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 害怕自己的强大被看见\n- 过度谦让导致能量失衡\n- 把柔和当成自我隐藏"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学习让力量显现，而不是继续伪装成温和。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合教育、疗愈、辅导、团队文化建设\n- 在灵性工作中，是“频率稳定器”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "溫和不必隱藏力量，堅定也不需要以強勢出現。",
+        "explorable_strength": "柔力者關注柔軟與立場清楚並存的表達方式。",
+        "core_tension": "習慣讓步時，自己的判斷或不願意可能不易被看見。",
+        "integration_direction": "用尊重的語氣說出清楚的偏好，不以退讓作為唯一選項。",
+        "customer_narrative_short_draft": "溫和不必隱藏力量，堅定也不需要以強勢出現。\n\n柔力者關注柔軟與立場清楚並存的表達方式。 習慣讓步時，自己的判斷或不願意可能不易被看見。\n\n用尊重的語氣說出清楚的偏好，不以退讓作為唯一選項。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。"
+      ]
+    },
+    {
+      "code": "S1-23",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "洞察者",
+      "name_zh_source": "洞察者",
+      "name_en_source": "The Analyst",
+      "source_code": "S1-23",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "4021740171828ae1a5d5fd0acfc319228cf7f59049b945cfcec2fb59b67c8965",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 思维敏捷、擅长逻辑\n- 能快速拆解复杂问题\n- 天生对“为什么”高度敏感\n- 能洞察潜在模式、规律与盲点"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 解决问题能力强\n- 擅长策略、研究、分析\n- 在团队中是“思维清晰者”"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 过度理性，情感被忽略\n- 容易陷入过度分析\n- 用逻辑保护自己免于脆弱"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学习让逻辑与直觉并存，让心参与你的智慧。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合策略、心理学、数据分析、咨询、教练\n- 在觉醒道路中，是“看清结构的人”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "分析能釐清問題，也需要讓感受加入理解。",
+        "explorable_strength": "洞察者象徵尋找規律、辨認細節與深入思考的方向。",
+        "core_tension": "若所有脆弱都被理性化，真正需要的溝通可能被延遲。",
+        "integration_direction": "將已知證據、內在感受及尚待確認的部分分開記錄。",
+        "customer_narrative_short_draft": "分析能釐清問題，也需要讓感受加入理解。\n\n洞察者象徵尋找規律、辨認細節與深入思考的方向。 若所有脆弱都被理性化，真正需要的溝通可能被延遲。\n\n將已知證據、內在感受及尚待確認的部分分開記錄。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。"
+      ]
+    },
+    {
+      "code": "S1-24",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "光耀者",
+      "name_zh_source": "光耀者",
+      "name_en_source": "The Radiant Soul",
+      "source_code": "S1-24",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "7b0be27ab8356de9d1e038193aaeee533ad087df62d0dbbc45429e6a63d643ef",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 自带光感、魅力与温度\n- 走到哪里都吸引注意\n- 能点亮人、提升人、激励人\n- 天生是“能量放大器”"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能快速提升空间能量\n- 具有强烈的感染力\n- 在关系中是带来希望的人"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易过度在意他人看法\n- 把“闪耀”当成义务\n- 用光掩盖恐惧与不安"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学习让光自然散发，而不是勉强维持形象。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合激励、表达、教练、社群领导\n- 在灵性工作中，是“带人回到光”的灵魂"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "被看見可以是分享成果，不必成為維持形象的義務。",
+        "explorable_strength": "光耀者映照願意創造、呈現與啟發他人的方向。",
+        "core_tension": "若總擔心自己不夠亮眼，就可能用表現掩飾疲倦或不安。",
+        "integration_direction": "分享一件真實完成的成果，不必替它加上完美的包裝。",
+        "customer_narrative_short_draft": "被看見可以是分享成果，不必成為維持形象的義務。\n\n光耀者映照願意創造、呈現與啟發他人的方向。 若總擔心自己不夠亮眼，就可能用表現掩飾疲倦或不安。\n\n分享一件真實完成的成果，不必替它加上完美的包裝。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。"
+      ]
+    },
+    {
+      "code": "S1-25",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "流動者",
+      "name_zh_source": "流动者",
+      "name_en_source": "The Flow Walker",
+      "source_code": "S1-25",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "7e863d2cce4f31a1ff5fe28ecc435534882ed402f51fe06a6ba20e3c43301220",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 不喜欢拘束\n- 生命路径似乎总在“流动与变化”\n- 有高度适应力\n- 创意与灵感如水般不断更新"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能在变化中找到机会\n- 擅长跨领域、自由创作、灵性探索\n- 能以轻盈方式影响周围的人"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易逃避承诺\n- 缺乏稳定结构\n- 遇到深度课题时想要离开"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "学习在流动中建立锚点，而不是永远漂浮。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合创作者、自由职业、艺术、旅居、心灵探索\n- 在灵性道路上，是“变化的引路人”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "保有彈性是一種自由，承諾則讓自由有地方扎根。",
+        "explorable_strength": "流動者象徵適應新情境、接受變化與調整方向。",
+        "core_tension": "當穩定一出現就想離開，重要關係或長期學習可能難以深化。",
+        "integration_direction": "選擇一項值得留下的承諾，為它安排可調整的節奏。",
+        "customer_narrative_short_draft": "保有彈性是一種自由，承諾則讓自由有地方扎根。\n\n流動者象徵適應新情境、接受變化與調整方向。 當穩定一出現就想離開，重要關係或長期學習可能難以深化。\n\n選擇一項值得留下的承諾，為它安排可調整的節奏。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-26",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "遠見者",
+      "name_zh_source": "远见者",
+      "name_en_source": "The Visionary",
+      "source_code": "S1-26",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "5879b9ac7359c4a295e08629917dc0d5232fef6af5f5a603f986c768557a74dc",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 拥有天生的未来感、直觉性洞察\n- 能在别人看不到的地方看到可能性\n- 思维不受限制，常超前数年\n- 有灵感、创造力、预见力的综合频率"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能预测趋势并创造新路径\n- 在项目初期阶段特别有力量\n- 激励他人突破旧框架"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易活在未来而忽略当下\n- 想法太快、执行跟不上\n- 会因别人“不懂自己”而感到孤独"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "让愿景落地，而不是只停留在高维的灵感中。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合创新、灵性开发、未来研究、品牌创造\n- 在灵魂道路中，是“先行者与开路者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "靈感讓人想像尚未存在的事，落地讓它接受現實檢驗。",
+        "explorable_strength": "遠見者（S1-26）側重超前構想、創新方向與突破既有框架。",
+        "core_tension": "想法走得太快，可能讓合作夥伴難以理解或無法跟上。",
+        "integration_direction": "將一個未來構想說成清楚的原型，邀請具體回饋。",
+        "customer_narrative_short_draft": "靈感讓人想像尚未存在的事，落地讓它接受現實檢驗。\n\n遠見者（S1-26）側重超前構想、創新方向與突破既有框架。 想法走得太快，可能讓合作夥伴難以理解或無法跟上。\n\n將一個未來構想說成清楚的原型，邀請具體回饋。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-27",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "重生者",
+      "name_zh_source": "重生者",
+      "name_en_source": "The Rebuilder",
+      "source_code": "S1-27",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "292633c121888b9356adc708f45346a57621220c02b03c31f6fe8176b37d4981",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 拥有从崩塌中重建的能力\n- 越痛越强、越挫越深\n- 生命常经历“拆解 → 重建”的进化模式\n- 内在韧性极强"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 面对人生低谷能迅速站起来\n- 带领他人从困境中回归力量\n- 对创伤、失落、痛苦有深刻理解"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易把自己放在“必须经历困难”的身份\n- 无意识吸引需要“修复”的关系\n- 把痛苦当成成长的必要条件"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "允许轻松，也是一种重生。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合疗愈、创伤工作、灵魂辅导、使命教练\n- 在灵性道路中，是“破碎之光的重建者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "重新開始不必先經歷一場災難。",
+        "explorable_strength": "重生者關注結束舊方法、讓新的生活安排有空間出現。",
+        "core_tension": "若把困難當成改變的唯一證據，便容易持續尋找劇烈轉折。",
+        "integration_direction": "練習辨認平穩調整同樣可以是一種新的開始。",
+        "customer_narrative_short_draft": "重新開始不必先經歷一場災難。\n\n重生者關注結束舊方法、讓新的生活安排有空間出現。 若把困難當成改變的唯一證據，便容易持續尋找劇烈轉折。\n\n練習辨認平穩調整同樣可以是一種新的開始。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。"
+      ]
+    },
+    {
+      "code": "S1-28",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "量域者",
+      "name_zh_source": "量域者",
+      "name_en_source": "The Quantum Mind",
+      "source_code": "S1-28",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "1398712a9ba7a5db65ae374dbfbe09267750e2c76c4b6c4c4d184a4bc095758e",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 能多维度思考\n- 喜欢探索意识、宇宙、复杂系统\n- 思维跳跃、跨域、非线性\n- 天生具有“频率读懂能力”"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能看到系统背后的能量逻辑\n- 擅长灵性科技、意识模型、抽象概念\n- 能在混乱中捕捉本质"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易思维过快，不被身边人理解\n- 在现实结构中感到不适\n- 可能逃往“知识”来避免情绪深度"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "让你的智慧带你回到身体，而不是离开身体。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合灵性科技（SoulTech）、意识理论、模型构建\n- 是“Wisewave 系统的自然研究者级原型”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "廣闊的思考值得珍惜，身體與日常同樣是理解的一部分。",
+        "explorable_strength": "量域者象徵跨框架思考、探索複雜概念的可能。",
+        "core_tension": "停留在知識與抽象模型裡，有時會避開情緒與生活限制。",
+        "integration_direction": "把一個抽象觀念轉成日常可觀察的行動。",
+        "customer_narrative_short_draft": "廣闊的思考值得珍惜，身體與日常同樣是理解的一部分。\n\n量域者象徵跨框架思考、探索複雜概念的可能。 停留在知識與抽象模型裡，有時會避開情緒與生活限制。\n\n把一個抽象觀念轉成日常可觀察的行動。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。"
+      ]
+    },
+    {
+      "code": "S1-29",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "創新者",
+      "name_zh_source": "创新者",
+      "name_en_source": "The Innovator",
+      "source_code": "S1-29",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "2aee61cb061c6c2bb7868f569b11289d904e307309e65da220ed63bde606faf4",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 不喜欢旧框架\n- 有强烈的创造冲动\n- 看到“新可能”比看到“问题”更快\n- 具备颠覆性、实验性、好奇心"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能突破行业、文化或灵性框架\n- 天生是问题解决者\n- 在变化中反而更有力量"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易厌倦稳定结构\n- 一旦限制太多会想逃走\n- 可能在没有完成旧项目时被新灵感吸走"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "让创新有结构，才会成为力量，而不是混乱。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合创业、策略、产品创新、灵性创意、研究开发\n- 是“新现实的创造者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "新點子需要空間，也需要足夠的完成度。",
+        "explorable_strength": "創新者關注拆解慣例、發明方法與嘗試新組合。",
+        "core_tension": "若每個新靈感都立即取代舊計畫，成果容易停在開頭。",
+        "integration_direction": "選一個想法完成可測試版本，再考慮下一輪創新。",
+        "customer_narrative_short_draft": "新點子需要空間，也需要足夠的完成度。\n\n創新者關注拆解慣例、發明方法與嘗試新組合。 若每個新靈感都立即取代舊計畫，成果容易停在開頭。\n\n選一個想法完成可測試版本，再考慮下一輪創新。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-30",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "靈魂療癒者",
+      "name_zh_source": "灵魂疗愈者",
+      "name_en_source": "The Soul Healer",
+      "source_code": "S1-30",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "ce85a64b49da071c69168c4feddaac1edc235dec7ae25091ad26ee73bc4ab99f",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 感受能力极高\n- 天生能理解他人的痛、恐惧、渴望\n- 具有温柔、深度、稳定的疗愈场\n- 是让人放下防卫的存在"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能让别人“被看见”\n- 擅长情绪疗愈、灵魂修复、能量整合\n- 在关系中创造安全感"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易过度承担他人的情绪\n- 认为必须“帮助所有人”\n- 忽略自己的能量界线"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "疗愈自己，才是疗愈的源头。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合疗愈师、心理咨询、能量工作者、灵魂辅导\n- 是“让破碎灵魂回家的引导者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "陪伴他人恢復，不代表自己必須成為所有人的修復者。",
+        "explorable_strength": "靈魂療癒者是傾聽、關懷與支持改變的象徵名稱，並非專業資格。",
+        "core_tension": "若把所有人的情緒和結果都當成自己的責任，關懷會失去界限。",
+        "integration_direction": "確認支持範圍；專業治療需求仍應交由合格專業人員處理。",
+        "customer_narrative_short_draft": "陪伴他人恢復，不代表自己必須成為所有人的修復者。\n\n靈魂療癒者是傾聽、關懷與支持改變的象徵名稱，並非專業資格。 若把所有人的情緒和結果都當成自己的責任，關懷會失去界限。\n\n確認支持範圍；專業治療需求仍應交由合格專業人員處理。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-31",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "門之守望者",
+      "name_zh_source": "门之守望者",
+      "name_en_source": "The Gatekeeper",
+      "source_code": "S1-31",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "c39cc2c9318fd7a5a6e5e5ecffd9a5ceb9745963c70cde9880847c709a92c78e",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 拥有“通道式”直觉\n- 能感知能量的开合、对错、时机\n- 是群体中最懂得界线与权限的灵魂\n- 对人、事、空间的能量非常敏感"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能分辨真正的机会与幻相\n- 天生守护系统的边界与纯度\n- 擅长做筛选、把关、过滤能量的角色"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易因为敏感而拒绝世界\n- 过度保护自己，关闭能量\n- 把“守护”误解为“隔绝”"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "守护不是排斥，而是让真相进入、让幻相离开。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合灵性顾问、系统守护者、能量管理、过滤机制设计\n- 在灵性系统中，是“结界持有者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "保護自己與接觸世界之間，可以留下可調整的門。",
+        "explorable_strength": "門之守望者關注辨認界限、選擇誰能進入個人空間。",
+        "core_tension": "如果每個未知都被視為威脅，保護可能逐漸變成隔絕。",
+        "integration_direction": "將不可妥協的界限與可以慢慢建立的信任區分開。",
+        "customer_narrative_short_draft": "保護自己與接觸世界之間，可以留下可調整的門。\n\n門之守望者關注辨認界限、選擇誰能進入個人空間。 如果每個未知都被視為威脅，保護可能逐漸變成隔絕。\n\n將不可妥協的界限與可以慢慢建立的信任區分開。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-32",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "啓明者",
+      "name_zh_source": "启明者",
+      "name_en_source": "The Illuminator",
+      "source_code": "S1-32",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "c09538b6d296997dd0c5cd593cd579e4ab70b867425999af9cf2a8923398702a",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 天生带有“照亮盲点”的频率\n- 不经意间让别人看见真实\n- 直觉很准，总能点中核心\n- 自带灵性理解力，学习快、开悟快"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能让人觉醒、看清、顿悟\n- 是灵性教学与意识提升的天然载体\n- 能翻译高维智慧"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易失望于“不愿觉醒的人”\n- 对不诚实非常敏感\n- 有时过度承担“点亮他人”的责任"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "不必唤醒所有人，你只需照亮那些准备好的人。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合教学、灵性引导、觉知训练、Wisewave 类型的频率工作\n- 是“意识的光源”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "分享看見的事，不需要負責讓所有人同意。",
+        "explorable_strength": "啟明者象徵以清楚語言帶出新理解或重新提問的方向。",
+        "core_tension": "若把他人的選擇當成自己的使命，容易產生失望與控制。",
+        "integration_direction": "提出可以被拒絕的邀請，讓理解保留對方的自主。",
+        "customer_narrative_short_draft": "分享看見的事，不需要負責讓所有人同意。\n\n啟明者象徵以清楚語言帶出新理解或重新提問的方向。 若把他人的選擇當成自己的使命，容易產生失望與控制。\n\n提出可以被拒絕的邀請，讓理解保留對方的自主。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-33",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "感知神諭者",
+      "name_zh_source": "感知神谕者",
+      "name_en_source": "The Empath Oracle",
+      "source_code": "S1-33",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "498fb569dddeb53bb6b8f6db010680e4a2bed36f14b5f9c86b24c3c860f15a89",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 情绪直觉极高，能“听见”心的声音\n- 容易共感他人的渴望、悲伤、恐惧\n- 天生带有神谕能力：能读懂能量流\n- 对无形世界敏锐"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 擅长情绪疗愈、内在孩童修复、灵魂咨询\n- 能以柔软方式带出深度真相\n- 是“心之智慧”的沟通者"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易吸收他人情绪\n- 在界线不清时被能量淹没\n- 对情绪的细致度成为负担"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "保持感知，但不必承受。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合情绪智力教练、咨询师、能量阅读者、心灵疗愈\n- 在灵性系统中，是“情感的神谕者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "感知細膩不等於必須承受更多。",
+        "explorable_strength": "感知神諭者是敏銳觀察的象徵名稱，不表示具有預言能力。",
+        "core_tension": "若把情緒細節都視為自己必須處理的訊號，便難以休息。",
+        "integration_direction": "以事實核對感受，同時練習把不屬於自己的責任放回原位。",
+        "customer_narrative_short_draft": "感知細膩不等於必須承受更多。\n\n感知神諭者是敏銳觀察的象徵名稱，不表示具有預言能力。 若把情緒細節都視為自己必須處理的訊號，便難以休息。\n\n以事實核對感受，同時練習把不屬於自己的責任放回原位。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-34",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "改革者",
+      "name_zh_source": "改革者",
+      "name_en_source": "The Reformer",
+      "source_code": "S1-34",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "7a02557ce2e603092e13e69d0a7e955ed56ed6e916bae1728bba774b67578bb9",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 强烈追求真理、秩序与正确性\n- 看到“不对的地方”比别人快\n- 天生具有批判力、改善力、优化能力\n- 对自己要求极高"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能推动团队进步\n- 擅长制度改革、流程优化、价值体系建设\n- 在灵性道路中是“去伪存真”的力量"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易陷入完美主义\n- 对自己过度严格\n- 把“改变世界”放得太重"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "允许世界不完美，也允许自己不完美。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合改革者、系统检查、领导、价值观重塑、灵性真理工作\n- 是“破除伪善、恢复真实”的能量源"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "改善制度不必從否定一切開始。",
+        "explorable_strength": "改革者關注辨認不合適的規則，提出更能服務人的做法。",
+        "core_tension": "要求世界迅速變好時，也可能把同一份嚴苛轉向自己。",
+        "integration_direction": "先選擇一個具體缺口，用可協商的提案開始改變。",
+        "customer_narrative_short_draft": "改善制度不必從否定一切開始。\n\n改革者關注辨認不合適的規則，提出更能服務人的做法。 要求世界迅速變好時，也可能把同一份嚴苛轉向自己。\n\n先選擇一個具體缺口，用可協商的提案開始改變。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。"
+      ]
+    },
+    {
+      "code": "S1-35",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "靈魂領航者",
+      "name_zh_source": "灵魂领航者",
+      "name_en_source": "The Soul Navigator",
+      "source_code": "S1-35",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "faec0c32b8ce669a875b87a1e8e7deda4609c9d28a649012a1f990af0e2efc70",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 直觉稳、方向感强\n- 天生知道“要往哪里走”\n- 能引导他人走出迷雾\n- 对人生路径、选择、命运有深刻感知"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 做决策快又准\n- 在迷失的群体中成为方向的灯塔\n- 擅长使命探索、人生规划、灵魂道路引导"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易替别人决定方向\n- 扛太多责任\n- 忘记自己的道路"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "先导航自己，再导航世界。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合Soul Coach、导师、路径引导者、人生方向咨询\n- 在灵性系统中，是“路径守护者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "看見方向，不等於替每個人掌舵。",
+        "explorable_strength": "靈魂領航者象徵組織資源、協助確認方向的可能，而非命定職責。",
+        "core_tension": "若習慣替別人決定路線，自己的生活和他人的自主都會被擠壓。",
+        "integration_direction": "先確認自己的方向，再問對方是否需要資訊而非指令。",
+        "customer_narrative_short_draft": "看見方向，不等於替每個人掌舵。\n\n靈魂領航者象徵組織資源、協助確認方向的可能，而非命定職責。 若習慣替別人決定路線，自己的生活和他人的自主都會被擠壓。\n\n先確認自己的方向，再問對方是否需要資訊而非指令。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-36",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "頻率編織者",
+      "name_zh_source": "频率编织者",
+      "name_en_source": "The Frequency Weaver",
+      "source_code": "S1-36",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "bac95ec948447739a2feb6912b8d5ab05426f1b87c077ad4b70a74f03680d5c6",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 能自然感知场域的能量状态\n- 擅长让不同频率的人事物“共振”\n- 在看似混乱中找到隐藏的秩序\n- 有独特的连接力、协调力、能量调谐能力"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能让团队能量调整至同一个方向\n- 擅长创造和谐、协作、同步化\n- 在灵性路径中，是“能量流动的设计者”"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易为了维持能量而牺牲自己\n- 在不协调的环境中过度努力\n- 把每个失衡都当成“自己的责任”"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "让能量自然流动，而不是靠你把它们拼在一起。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合团队调频、关系协调、能量疗愈、组织文化设计\n- 是“频率格局的编织者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "協調差異是一種工作，但不是一個人必須維持全部平衡。",
+        "explorable_strength": "頻率編織者以象徵方式描寫跨領域連結與協作。",
+        "core_tension": "當每個不和諧都被視為自己的責任，參與會變得疲憊。",
+        "integration_direction": "聚焦真正需要自己處理的交集，並讓其他人承擔其部分。",
+        "customer_narrative_short_draft": "協調差異是一種工作，但不是一個人必須維持全部平衡。\n\n頻率編織者以象徵方式描寫跨領域連結與協作。 當每個不和諧都被視為自己的責任，參與會變得疲憊。\n\n聚焦真正需要自己處理的交集，並讓其他人承擔其部分。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-37",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "意志火焰者",
+      "name_zh_source": "意志火焰者",
+      "name_en_source": "The Willpower Flame",
+      "source_code": "S1-37",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "0cbe1d7a21faaaff3f2b413380f252b851d03298e875c6d659216b385634cb12",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 具有极强的意志力与行动力\n- 目标明确、执行迅速、极少放弃\n- 生命力旺盛、战斗精神强\n- 具有推动团体前进的能量"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能将想法变成结果\n- 擅长突破瓶颈、克服阻力\n- 对使命拥有持续的耐力与火力"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易用力过度，忽略身心极限\n- 把坚持当成执著\n- 无意识把生命变成“战场模式”"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "用力量，而非用力；用火焰，而非燃尽。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合创业、领导、教练、项目执行、战术统筹\n- 在灵性道路中，是“意志的体现者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "意志可以推動重要的事，也需要看見身心限制。",
+        "explorable_strength": "意志火焰者象徵持續投入、面對難題與保有熱情。",
+        "core_tension": "若把堅持等同於不能休息，行動可能逐漸走向耗損。",
+        "integration_direction": "用可持續的節奏衡量投入，而不是只看承受了多少。",
+        "customer_narrative_short_draft": "意志可以推動重要的事，也需要看見身心限制。\n\n意志火焰者象徵持續投入、面對難題與保有熱情。 若把堅持等同於不能休息，行動可能逐漸走向耗損。\n\n用可持續的節奏衡量投入，而不是只看承受了多少。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。"
+      ]
+    },
+    {
+      "code": "S1-38",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "靈魂聆聽者",
+      "name_zh_source": "灵魂聆听者",
+      "name_en_source": "The Soul Listener",
+      "source_code": "S1-38",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "10b3a3cc4c643f99cafcadf953acf123ec26cd3b6c2925945c6158ea5331eaac",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 拥有深度倾听的天赋\n- 能读懂“话语背后的话”\n- 与人互动时常能听见灵魂层面的信息\n- 是“静默中的智慧”"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 擅长一对一深度陪伴、咨询、疗愈\n- 能轻柔地让别人说出真相\n- 让他人感到安全、被理解、被看见"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易成为他人的“情绪出口”\n- 不敢表达自己真实的需要\n- 用倾听隐藏自己的脆弱"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "倾听世界的同时，也要倾听自己。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合咨询、疗愈、灵魂教练、关系伴行者\n- 在灵性系统中，是“静默的引导者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "傾聽能創造理解，自己的聲音也值得被留下。",
+        "explorable_strength": "靈魂聆聽者關注用專注與耐心陪伴對話的方式。",
+        "core_tension": "若總作為別人的情緒出口，自己的需要容易無處可說。",
+        "integration_direction": "在傾聽之後，也為自己的感受留下同等的表達空間。",
+        "customer_narrative_short_draft": "傾聽能創造理解，自己的聲音也值得被留下。\n\n靈魂聆聽者關注用專注與耐心陪伴對話的方式。 若總作為別人的情緒出口，自己的需要容易無處可說。\n\n在傾聽之後，也為自己的感受留下同等的表達空間。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-39",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "穩定者",
+      "name_zh_source": "稳定者",
+      "name_en_source": "The Stabilizer",
+      "source_code": "S1-39",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "7bed1017cf7de8b06a66e8516aee5c9017ccf6fd3ffabd7c160b20acf6b28a92",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 能在混乱中保持冷静\n- 天生是一种“重心”\n- 周围的人会不自觉向你靠拢、依赖\n- 有脚踏实地、稳固、有耐心的能量"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 在危机中维持秩序\n- 能提供情绪、决策与结构上的稳定\n- 擅长长期项目与持续性的建设"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易被赋予太多责任\n- 把稳定误以为必须维持所有人的状态\n- 害怕改变"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "稳定不是束缚，而是你力量的源点。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合结构管理、长期项目、家庭系统、团队支持\n- 在灵性道路中，是“地气的守护者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "穩定不是守住所有人，而是在變化中保有可依靠的重心。",
+        "explorable_strength": "穩定者（S1-39）側重壓力情境下的沉著與共同支持。",
+        "core_tension": "如果別人的狀態都需要自己維持，可靠就會逐漸成為負擔。",
+        "integration_direction": "將危機處理與長期責任分開，協助建立共同承擔的安排。",
+        "customer_narrative_short_draft": "穩定不是守住所有人，而是在變化中保有可依靠的重心。\n\n穩定者（S1-39）側重壓力情境下的沉著與共同支持。 如果別人的狀態都需要自己維持，可靠就會逐漸成為負擔。\n\n將危機處理與長期責任分開，協助建立共同承擔的安排。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-40",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "內在智者",
+      "name_zh_source": "内在智者",
+      "name_en_source": "The Inner Sage",
+      "source_code": "S1-40",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "8ad09ab89df1474dcb47481a9a342ef30505ed4f36183194740fa3cf869b1c9d",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 天生带有智慧频率，直觉性理解力强\n- 不需要太多输入就能看见本质\n- 思维成熟、洞察深刻、灵性理解快\n- 常被当成“很有智慧的人”"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能看透生命的规律与真相\n- 适合给予深度建议、引领心智和灵魂\n- 在混乱的时代提供清晰与方向"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易被赋予“必须当老师”的角色\n- 把智慧当成保护层，不愿示弱\n- 孤独感强"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "智慧是分享，而不是责任。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合教学、哲学、灵性研究、洞察型引导者\n- 在灵性系统中，是“真理的携带者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "理解得深，不表示必須一直站在教導的位置。",
+        "explorable_strength": "內在智者關注沉澱經驗、形成判斷及分享思考方法。",
+        "core_tension": "如果智慧被拿來掩飾脆弱，交流容易變成單向講解。",
+        "integration_direction": "把經驗當作可供討論的觀點，也坦承未知之處。",
+        "customer_narrative_short_draft": "理解得深，不表示必須一直站在教導的位置。\n\n內在智者關注沉澱經驗、形成判斷及分享思考方法。 如果智慧被拿來掩飾脆弱，交流容易變成單向講解。\n\n把經驗當作可供討論的觀點，也坦承未知之處。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-41",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "宇宙橋接者",
+      "name_zh_source": "宇宙桥接者",
+      "name_en_source": "The Cosmic Bridge",
+      "source_code": "S1-41",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "9d8b6b5466a30e4f3971bf2a45e06819b85c49c7dc482b1e4a8f147d3ed71042",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 扮演“两个世界之间的桥梁”\n- 能同时理解灵性与现实、能量与逻辑\n- 天生具有翻译、整合、统合不同意识层级的能力\n- 在群体中常成为“连接者”、“跨界者”、“整合者”"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 将高维智慧转为可理解的语言\n- 让复杂的思想、系统、知识变得简单\n- 能整合来自不同文化、学科、灵性传统的精华"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易过度承担，扮演所有人的桥\n- 觉得自己必须替世界“沟通所有维度”\n- 在过度跨界时失去自身中心"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "让连接来自自然，而非责任。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合跨界领导、灵性科技（SoulTech）、疗愈与现实融合型工作\n- 在灵性道路中，是“时代转换的桥梁灵魂”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "連接不同世界觀，不等於必須替所有人翻譯一切。",
+        "explorable_strength": "宇宙橋接者是跨群體、跨觀點溝通的象徵名稱。",
+        "core_tension": "若把每個誤解都視為個人責任，容易失去自己的立足點。",
+        "integration_direction": "選擇有共同意願的對話，允許部分差異暫時並存。",
+        "customer_narrative_short_draft": "連接不同世界觀，不等於必須替所有人翻譯一切。\n\n宇宙橋接者是跨群體、跨觀點溝通的象徵名稱。 若把每個誤解都視為個人責任，容易失去自己的立足點。\n\n選擇有共同意願的對話，允許部分差異暫時並存。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-42",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "承光者",
+      "name_zh_source": "承光者",
+      "name_en_source": "The Ascension Flame",
+      "source_code": "S1-42",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "cf7d7a8012f1d485751fbbebcfb828ba674a81551daf3dfb3e0f8b94588e4a41",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 带有强烈的高频“提升力量”\n- 在场域中自动提升他人意识\n- 生命主题围绕觉醒、提升、跨维成长\n- 对真理、纯净、光频率高度敏感"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 是觉醒团体中的“频率升空点”\n- 能带领他人超越幻相、突破旧业力\n- 在高能量环境中像被点亮一样"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易因为“光太强”而感到孤独\n- 不愿意被低频干扰\n- 有时过于超前，导致现实跟不上"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "让你的光落地，而不是悬在半空。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合灵性导师、觉醒引导者、能量升级、Soul Frequency Teachings\n- 在灵性系统中，是“光之延展者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "帶來希望的方式，可以是可見的日常作為。",
+        "explorable_strength": "承光者象徵帶著理想參與現實，讓價值觀有具體表達。",
+        "core_tension": "若把自己想像成永遠需要明亮的人，疲倦與限制便難被承認。",
+        "integration_direction": "讓理想落在一項能長期實踐的小事，而非維持形象。",
+        "customer_narrative_short_draft": "帶來希望的方式，可以是可見的日常作為。\n\n承光者象徵帶著理想參與現實，讓價值觀有具體表達。 若把自己想像成永遠需要明亮的人，疲倦與限制便難被承認。\n\n讓理想落在一項能長期實踐的小事，而非維持形象。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。"
+      ]
+    },
+    {
+      "code": "S1-43",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "命運編織者",
+      "name_zh_source": "命运编织者",
+      "name_en_source": "The Destiny Weaver",
+      "source_code": "S1-43",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "e8461d8554bac368f6d1f978f21597a6038f83fbaa40dad677f892e75b674728",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 能看见生命轨迹的“线索”\n- 有时甚至能预感事件走向\n- 对因果、业力、灵魂路径有独特洞察力\n- 能精准理解别人“为什么会走到这里”"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能引导他人做出改变命运的关键选择\n- 擅长生命周期规划、生命蓝图分析、灵魂契约解读\n- 在群体中常被视为“命运导师”"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易替别人决定太多\n- 误以为“知道命运”就等于“负责命运”\n- 在看见太多时忽略自己的路径"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "看见命运不是为了控制，而是为了觉醒。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合生命蓝图教练、Soul Origin Code 解读者、因果研究者\n- 在灵性道路中，是“命运的编织者，而非操纵者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "理解選擇的連鎖影響，並不等於能夠掌控命運。",
+        "explorable_strength": "命運編織者以象徵語言描繪對多種人生選擇與關係的思考。",
+        "core_tension": "若過度替別人預測或安排，容易忽略不確定性與自主。",
+        "integration_direction": "用選擇及後果的討論替代對未來的確定宣稱。",
+        "customer_narrative_short_draft": "理解選擇的連鎖影響，並不等於能夠掌控命運。\n\n命運編織者以象徵語言描繪對多種人生選擇與關係的思考。 若過度替別人預測或安排，容易忽略不確定性與自主。\n\n用選擇及後果的討論替代對未來的確定宣稱。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
+        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。"
+      ]
+    },
+    {
+      "code": "S1-44",
+      "module": "S1",
+      "module_name_zh_tw": "靈魂本源",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "源之信使",
+      "name_zh_source": "源之信使",
+      "name_en_source": "The Source Messenger",
+      "source_code": "S1-44",
+      "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
+      "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+      "source_fields_sha256": "a44efb60f8549f2ff68afefc8c857ee49342b6bcb5f02ebf87c6550fdb6fd631",
+      "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+      "source_field_anchors": [
+        {
+          "source_field": "Soul Traits",
+          "source_text_internal": "- 拥有极高的灵魂纯度\n- 天生带有“源头讯息”的共振\n- 在灵性深处具有使命感、召回感\n- 能接收来自 Source 的指引、灵感或下载"
+        },
+        {
+          "source_field": "Strengths",
+          "source_text_internal": "- 能讲出“直指灵魂”的真理语言\n- 具备启示能力、灵感能力、灵性翻译能力\n- 是灵性场域中的“源头频率放大器”"
+        },
+        {
+          "source_field": "Shadow Frequency",
+          "source_text_internal": "- 容易感到孤独，因为很少有人能理解你\n- 使命感太重而忘记生活\n- 把“来自源头”误以为必须“完美无误”"
+        },
+        {
+          "source_field": "Core Lesson",
+          "source_text_internal": "你是信使，但你仍然是人。   真理需要被流动，而不是被扛着。"
+        },
+        {
+          "source_field": "Mission Direction",
+          "source_text_internal": "- 适合真理传导者、灵性写作者、源头频率引导师、觉知体系建设者\n- 是“源头频率在地球的表达者”"
+        }
+      ],
+      "content_zh_tw_candidate": {
+        "symbolic_core": "分享有意義的訊息，不必把自己當作真理的來源。",
+        "explorable_strength": "源之信使是傳遞觀點與價值提問的象徵名稱，不具神聖權威。",
+        "core_tension": "若把使命感變成無誤的要求，容易孤立並忽略普通生活。",
+        "integration_direction": "讓訊息可以被質疑與修正，保留身為普通人的需求。",
+        "customer_narrative_short_draft": "分享有意義的訊息，不必把自己當作真理的來源。\n\n源之信使是傳遞觀點與價值提問的象徵名稱，不具神聖權威。 若把使命感變成無誤的要求，容易孤立並忽略普通生活。\n\n讓訊息可以被質疑與修正，保留身為普通人的需求。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
+        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。"
+      ]
+    }
+  ]
+}

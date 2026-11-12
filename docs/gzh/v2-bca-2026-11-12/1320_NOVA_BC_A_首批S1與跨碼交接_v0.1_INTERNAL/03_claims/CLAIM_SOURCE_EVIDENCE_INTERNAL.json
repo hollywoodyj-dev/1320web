@@ -1,0 +1,226 @@
+[
+  {
+    "integration_id": "INT-20261112-001",
+    "code": "S1-18",
+    "source_field": "Core Lesson",
+    "source_version": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+    "source_fields_sha256": "dc2b5b9145c2ae2bfd615e62040f24edcf892d96aa65f4eb55ca846d435e10ce",
+    "source_excerpt_internal": "学习温柔地转化，而不是用痛苦逼迫自己成长。"
+  },
+  {
+    "integration_id": "INT-20261112-001",
+    "code": "S3-03",
+    "source_field": "strengths_zh",
+    "source_version": "1320_S3_Soul_Vibration_Content_Database_v2_EN.json",
+    "source_fields_sha256": "6d22c50bde69cb41950040b225023ac68d87e462beae23c8e9bc0ba48d620878",
+    "source_excerpt_internal": "开放、包容、学习能力强、愿意尝试。"
+  },
+  {
+    "integration_id": "INT-20261112-002",
+    "code": "S1-18",
+    "source_field": "Core Lesson",
+    "source_version": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+    "source_fields_sha256": "dc2b5b9145c2ae2bfd615e62040f24edcf892d96aa65f4eb55ca846d435e10ce",
+    "source_excerpt_internal": "学习温柔地转化，而不是用痛苦逼迫自己成长。"
+  },
+  {
+    "integration_id": "INT-20261112-002",
+    "code": "S3-03",
+    "source_field": "challenges_zh",
+    "source_version": "1320_S3_Soul_Vibration_Content_Database_v2_EN.json",
+    "source_fields_sha256": "6d22c50bde69cb41950040b225023ac68d87e462beae23c8e9bc0ba48d620878",
+    "source_excerpt_internal": "容易迷失、体系混乱、追求“更多”导致分散。"
+  },
+  {
+    "integration_id": "INT-20261112-002",
+    "code": "S4-14",
+    "source_field": "Defense Pattern",
+    "source_version": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+    "source_fields_sha256": "65249890fd6e495a47df698cee52b56a2b40ffd00aed7b404f63f5d9b7b4a9f0",
+    "source_excerpt_internal": "The defense may be refinement without release, harsh self-correction, postponement, or hiding behind preparation."
+  },
+  {
+    "integration_id": "INT-20261112-003",
+    "code": "S4-14",
+    "source_field": "Defense Pattern",
+    "source_version": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+    "source_fields_sha256": "65249890fd6e495a47df698cee52b56a2b40ffd00aed7b404f63f5d9b7b4a9f0",
+    "source_excerpt_internal": "The defense may be refinement without release, harsh self-correction, postponement, or hiding behind preparation."
+  },
+  {
+    "integration_id": "INT-20261112-003",
+    "code": "S5-04",
+    "source_field": "2. What Your Soul Is Learning to Express / 灵魂正在学习表达什么",
+    "source_version": "1320_S5_Soul_Mission_Content_Database_v4_EN.md",
+    "source_fields_sha256": "8483f8686059129b5b61c1ff2c5145733695a1edc2a38fa69aeef6ebbe43037f",
+    "source_excerpt_internal": "The natural gift of this mission is building systems, rhythms, and trustworthy foundations."
+  },
+  {
+    "integration_id": "INT-20261112-004",
+    "code": "S2-27",
+    "source_field": "Karmic Loop",
+    "source_version": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+    "source_fields_sha256": "4c2f0580e02cdfa8a86e604aaf30fa35629f7429545a812a709bb85de8017d63",
+    "source_excerpt_internal": "亲密 → 触发 → 疏离 → 再靠近。"
+  },
+  {
+    "integration_id": "INT-20261112-004",
+    "code": "S0-07",
+    "source_field": "Core Illusion",
+    "source_version": "1320_S0_Void_Gate_Content_Database_v2_EN.md",
+    "source_fields_sha256": "fac1f2723473a3149670556bb41b324b62b463fe7ddeb63f2e3befc719ea9379",
+    "source_excerpt_internal": "觉得自己永远不够。"
+  },
+  {
+    "integration_id": "INT-20261112-004",
+    "code": "S7-00",
+    "source_field": "Sovereignty Essence / 主权本质",
+    "source_version": "1320_S7_Soul_Sovereignty_Content_Database_v1_EN.md",
+    "source_fields_sha256": "69387a653df27e5f1e86d2e649147a4133baa8ccbfc2b55e977b68b85846494b",
+    "source_excerpt_internal": "Your sovereignty begins through returning to yourself before reacting to the field around you."
+  },
+  {
+    "integration_id": "INT-20261112-005",
+    "code": "S5-04",
+    "source_field": "1. Mission Essence / 使命本质",
+    "source_version": "1320_S5_Soul_Mission_Content_Database_v4_EN.md",
+    "source_fields_sha256": "8483f8686059129b5b61c1ff2c5145733695a1edc2a38fa69aeef6ebbe43037f",
+    "source_excerpt_internal": "This Soul Mission points to the invitation to give stable form to what matters. It describes a direction of inner maturation, not a fixed career, destiny, or external obligation."
+  },
+  {
+    "integration_id": "INT-20261112-005",
+    "code": "S6-28",
+    "source_field": "1. Value Essence / 价值本质",
+    "source_version": "1320_S6_Value_Receiving_Content_Database_v1_EN.md",
+    "source_fields_sha256": "6898ad5bc0cc2e1d135d18fec01c507b93e96bd1229f3cd3eef0d7c2acda43b5",
+    "source_excerpt_internal": "This S6 pattern reflects value that grows through depth, power, and transformational capacity. It does not define income or financial destiny; it mirrors how the person may recognize value, offer it clearly, and allow support to return without self-abandonment."
+  },
+  {
+    "integration_id": "INT-20261112-005",
+    "code": "S8-00",
+    "source_field": "Contribution Essence / 贡献本质",
+    "source_version": "1320_S8_Soul_Contribution_Content_Database_v1_EN.md",
+    "source_fields_sha256": "31257339fda8943e865988c042c5f92dc8d2f2d074904bbb46d143cfd09042c3",
+    "source_excerpt_internal": "Your contribution begins through the quality of presence you bring into spaces."
+  },
+  {
+    "integration_id": "INT-20261112-006",
+    "code": "S3-03",
+    "source_field": "one_week_practice",
+    "source_version": "1320_S3_Soul_Vibration_Content_Database_v2_EN.json",
+    "source_fields_sha256": "6d22c50bde69cb41950040b225023ac68d87e462beae23c8e9bc0ba48d620878",
+    "source_excerpt_internal": "For one week, notice when your energy accelerates, contracts, opens, or stabilizes. Write one sentence about what helped you return to grounded presence."
+  },
+  {
+    "integration_id": "INT-20261112-006",
+    "code": "S9-07",
+    "source_field": "Natural Return Practices / 自然回源练习",
+    "source_version": "1320_S9_Return_to_Source_Content_Database_v1_EN.md",
+    "source_fields_sha256": "6c9714c60979b686d4cf990754c8045af7e41a1243300e9880f0a74a7bba21ae",
+    "source_excerpt_internal": "- body awareness\n- mindful action\n- sensory grounding\n- simple routines\n- present-time choice"
+  },
+  {
+    "integration_id": "INT-20261112-007",
+    "code": "S1-20",
+    "source_field": "Soul Traits",
+    "source_version": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+    "source_fields_sha256": "43b8fb7577a51e101211892da31d08d612cc19be474c3e2486bc851099aa6dd7",
+    "source_excerpt_internal": "- 心极度敏锐\n- 做决定依赖感受、直觉、共鸣\n- 具备天然的情感智慧\n- 能在互动中“看见人心”"
+  },
+  {
+    "integration_id": "INT-20261112-007",
+    "code": "S2-05",
+    "source_field": "Relationship Dynamic",
+    "source_version": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+    "source_fields_sha256": "ecdb41b4029a06642303643641d316663d1d6e0ccd669aee943bc7539d7162f0",
+    "source_excerpt_internal": "双方将自己害怕的部分投射到对方身上。"
+  },
+  {
+    "integration_id": "INT-20261112-007",
+    "code": "S0-05",
+    "source_field": "Core Illusion",
+    "source_version": "1320_S0_Void_Gate_Content_Database_v2_EN.md",
+    "source_fields_sha256": "0cd75b3ae19b5256e8fd77df46bbf4f1bf59ea5990a6ea37db949d898cb28d97",
+    "source_excerpt_internal": "情绪等于真相。"
+  },
+  {
+    "integration_id": "INT-20261112-008",
+    "code": "S2-05",
+    "source_field": "Relationship Dynamic",
+    "source_version": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+    "source_fields_sha256": "ecdb41b4029a06642303643641d316663d1d6e0ccd669aee943bc7539d7162f0",
+    "source_excerpt_internal": "双方将自己害怕的部分投射到对方身上。"
+  },
+  {
+    "integration_id": "INT-20261112-008",
+    "code": "S4-10",
+    "source_field": "Defense Pattern",
+    "source_version": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+    "source_fields_sha256": "572f42e389885a642902f499bcccf549f754315f1bb6de03bb567e6c82143861",
+    "source_excerpt_internal": "The defense may be guardedness, emotional testing, suspicion, withdrawal, or presenting strength while hiding tenderness."
+  },
+  {
+    "integration_id": "INT-20261112-008",
+    "code": "S7-01",
+    "source_field": "Sovereignty Essence / 主权本质",
+    "source_version": "1320_S7_Soul_Sovereignty_Content_Database_v1_EN.md",
+    "source_fields_sha256": "9ce5a1390a04892b32bd2c0d517af4d1a44cd5af6ce96708ef5b6d5a45bc1928",
+    "source_excerpt_internal": "Your sovereignty strengthens when you stop outsourcing permission and begin honoring clear inner signals."
+  },
+  {
+    "integration_id": "INT-20261112-009",
+    "code": "S3-01",
+    "source_field": "integration_key",
+    "source_version": "1320_S3_Soul_Vibration_Content_Database_v2_EN.json",
+    "source_fields_sha256": "5aa74b98cd88dbaf9326b1a1960f2ca9b1af3ddcd78b374f9720cb8ee8b7a8bf",
+    "source_excerpt_internal": "The integration begins by expressing this vibration through grounded action, self-awareness, and non-deterministic reflection."
+  },
+  {
+    "integration_id": "INT-20261112-009",
+    "code": "S5-26",
+    "source_field": "2. What Your Soul Is Learning to Express / 灵魂正在学习表达什么",
+    "source_version": "1320_S5_Soul_Mission_Content_Database_v4_EN.md",
+    "source_fields_sha256": "b10f3b9a437b47545550c355f94678a16474f4b5599225a8157f55560663c192",
+    "source_excerpt_internal": "The natural gift of this mission is receiving inspiration and turning it into direction."
+  },
+  {
+    "integration_id": "INT-20261112-009",
+    "code": "S6-26",
+    "source_field": "1. Value Essence / 价值本质",
+    "source_version": "1320_S6_Value_Receiving_Content_Database_v1_EN.md",
+    "source_fields_sha256": "1d4e221049440603829f2d74a8c8c26965aca0b17be6ec229f1b2a1b6d351e16",
+    "source_excerpt_internal": "This S6 pattern reflects value that grows through reason, logic, strategy, and timely decision-making. It does not define income or financial destiny; it mirrors how the person may recognize value, offer it clearly, and allow support to return without self-abandonment."
+  },
+  {
+    "integration_id": "INT-20261112-010",
+    "code": "S6-26",
+    "source_field": "4. Natural Value Fields / 自然价值场域",
+    "source_version": "1320_S6_Value_Receiving_Content_Database_v1_EN.md",
+    "source_fields_sha256": "1d4e221049440603829f2d74a8c8c26965aca0b17be6ec229f1b2a1b6d351e16",
+    "source_excerpt_internal": "strategy, consulting, research, teaching, spiritual or reflective education"
+  },
+  {
+    "integration_id": "INT-20261112-010",
+    "code": "S8-05",
+    "source_field": "Contribution Essence / 贡献本质",
+    "source_version": "1320_S8_Soul_Contribution_Content_Database_v1_EN.md",
+    "source_fields_sha256": "97d75f9c10e4540838c5e74ab908476cecd541600b66de170aae3b087108f9ea",
+    "source_excerpt_internal": "Your contribution moves through helping people, projects, or systems cross thresholds of change."
+  },
+  {
+    "integration_id": "INT-20261112-011",
+    "code": "S0-05",
+    "source_field": "Core Illusion",
+    "source_version": "1320_S0_Void_Gate_Content_Database_v2_EN.md",
+    "source_fields_sha256": "0cd75b3ae19b5256e8fd77df46bbf4f1bf59ea5990a6ea37db949d898cb28d97",
+    "source_excerpt_internal": "情绪等于真相。"
+  },
+  {
+    "integration_id": "INT-20261112-011",
+    "code": "S9-04",
+    "source_field": "Return Essence / 回源本质",
+    "source_version": "1320_S9_Return_to_Source_Content_Database_v1_EN.md",
+    "source_fields_sha256": "aac29d714854932a4fbb98b963a928276419a03c477780cce265a9ecb6963b4d",
+    "source_excerpt_internal": "Your return to source happens through allowing truth to refine identity, hope, relationships, and direction."
+  }
+]

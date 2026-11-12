@@ -1,96 +1,194 @@
 [
   {
-    "integration_id": "INT-19800522-001",
-    "source_snapshot_id": "v5.1-narrative-1980-05-22",
-    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
-    "locale": "zh-TW",
-    "code_ids": ["S1-18", "S3-03", "S4-14", "S5-04"],
-    "relation_type": "BRIDGE",
-    "anchors": [
-      { "code": "S1-18", "source_field": "v5.1.sample.S1-18", "approval_id": "PENDING" },
-      { "code": "S3-03", "source_field": "v5.1.sample.S3-03", "approval_id": "PENDING" },
-      { "code": "S4-14", "source_field": "v5.1.sample.S4-14", "approval_id": "PENDING" },
-      { "code": "S5-04", "source_field": "v5.1.sample.S5-04", "approval_id": "PENDING" }
+    "integration_id": "INT-20261112-001",
+    "source_snapshot_id": "source-register-2026-11-12-rc1",
+    "rule_set_version": "integration-claims-2026-11-12-rc1",
+    "code_ids": [
+      "S1-18",
+      "S3-03"
     ],
-    "editorial_relation_reason": "改變與探索不斷打開新的做法，完美準備會把開始往後推，結構使命提供一個可修正的落地方式。",
+    "relation_type": "REINFORCEMENT",
+    "anchors": [
+      {
+        "code": "S1-18",
+        "source_field": "Core Lesson",
+        "approval_id": "PENDING_NO_APPROVAL"
+      },
+      {
+        "code": "S3-03",
+        "source_field": "strengths_zh",
+        "approval_id": "PENDING_NO_APPROVAL"
+      }
+    ],
+    "editorial_relation_reason": "S1強調不以痛苦促成改變，S3強調開放探索；兩者可共同形成『探索新的改變方式』的象徵入口。",
     "scenario_status": "HYPOTHETICAL",
     "reader_claim_status": "NO_INFERRED_HISTORY",
-    "customer_text_zh_tw": "如果一個計畫不斷找到新方法，卻總想等到準備更完整才開始，這組象徵主題便提出另一個問題：能否先建立一個允許修正的小步驟？",
+    "customer_text_zh_tw": "轉化者提出重新理解舊方法的問題；探索振動則打開新的選項。兩者放在一起，不是催促你持續改變，而是邀請你辨認哪些探索真正服務眼前的需要。",
     "editorial_status": "PENDING_REVIEW",
-    "notes_internal": "來源是這一組生日的 v5.1 樣本，不是已核准的 258 筆主資料。不能送到顧客端。"
+    "locale": "zh-TW",
+    "notes_internal": "Fixture birthday: 1980-05-22; target chapter(s): 02/07. Internal draft ONLY. SOURCE ANCHORS PENDING APPROVAL."
   },
   {
-    "integration_id": "INT-19800522-002",
-    "source_snapshot_id": "v5.1-narrative-1980-05-22",
-    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
-    "locale": "zh-TW",
-    "code_ids": ["S2-27", "S0-07", "S7-00"],
+    "integration_id": "INT-20261112-002",
+    "source_snapshot_id": "source-register-2026-11-12-rc1",
+    "rule_set_version": "integration-claims-2026-11-12-rc1",
+    "code_ids": [
+      "S1-18",
+      "S3-03",
+      "S4-14"
+    ],
     "relation_type": "TENSION",
     "anchors": [
-      { "code": "S2-27", "source_field": "v5.1.sample.S2-27", "approval_id": "PENDING" },
-      { "code": "S0-07", "source_field": "v5.1.sample.S0-07", "approval_id": "PENDING" },
-      { "code": "S7-00", "source_field": "v5.1.sample.S7-00", "approval_id": "PENDING" }
+      {
+        "code": "S1-18",
+        "source_field": "Core Lesson",
+        "approval_id": "PENDING_NO_APPROVAL"
+      },
+      {
+        "code": "S3-03",
+        "source_field": "challenges_zh",
+        "approval_id": "PENDING_NO_APPROVAL"
+      },
+      {
+        "code": "S4-14",
+        "source_field": "Defense Pattern",
+        "approval_id": "PENDING_NO_APPROVAL"
+      }
     ],
-    "editorial_relation_reason": "關係裡的回應會觸動自我評價，主權的方向則把事實、需要與個人選擇留在同一次判斷裡。",
+    "editorial_relation_reason": "S1與S3開啟改變與探索，S4原文描述可能因反覆修訂延後發表，因此形成探索與完美保護間的張力。",
     "scenario_status": "HYPOTHETICAL",
     "reader_claim_status": "NO_INFERRED_HISTORY",
-    "customer_text_zh_tw": "在這段關係裡，什麼是需要說清楚的事實，什麼是可以保留的界限？",
+    "customer_text_zh_tw": "假設一項計畫不斷更新方法，卻遲遲沒有進入實踐，這組編碼可以幫助區分：新的資料真的必要，還是準備已變成避免被評價的方式？",
     "editorial_status": "PENDING_REVIEW",
-    "notes_internal": "來源是這一組生日的 v5.1 樣本，不是已核准的 258 筆主資料。不能送到顧客端。"
+    "locale": "zh-TW",
+    "notes_internal": "Fixture birthday: 1980-05-22; target chapter(s): 14. Internal draft ONLY. SOURCE ANCHORS PENDING APPROVAL."
   },
   {
-    "integration_id": "INT-19800522-003",
-    "source_snapshot_id": "v5.1-narrative-1980-05-22",
-    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
-    "locale": "zh-TW",
-    "code_ids": ["S5-04", "S6-28", "S8-00"],
+    "integration_id": "INT-20261112-003",
+    "source_snapshot_id": "source-register-2026-11-12-rc1",
+    "rule_set_version": "integration-claims-2026-11-12-rc1",
+    "code_ids": [
+      "S4-14",
+      "S5-04"
+    ],
     "relation_type": "BRIDGE",
     "anchors": [
-      { "code": "S5-04", "source_field": "v5.1.sample.S5-04", "approval_id": "PENDING" },
-      { "code": "S6-28", "source_field": "v5.1.sample.S6-28", "approval_id": "PENDING" },
-      { "code": "S8-00", "source_field": "v5.1.sample.S8-00", "approval_id": "PENDING" }
+      {
+        "code": "S4-14",
+        "source_field": "Defense Pattern",
+        "approval_id": "PENDING_NO_APPROVAL"
+      },
+      {
+        "code": "S5-04",
+        "source_field": "2. What Your Soul Is Learning to Express / 灵魂正在学习表达什么",
+        "approval_id": "PENDING_NO_APPROVAL"
+      }
     ],
-    "editorial_relation_reason": "結構、深度理解與臨在可以一起形成貢獻，界線與回饋則讓這份付出不必靠耗盡自己來維持。",
+    "editorial_relation_reason": "S4描述細修、延後與隱藏在準備裡；S5描述建造可信賴的節奏與系統，可作為低風險行動的橋接。",
     "scenario_status": "HYPOTHETICAL",
     "reader_claim_status": "NO_INFERRED_HISTORY",
-    "customer_text_zh_tw": "我做的哪些事真正創造了價值？又需要什麼支持，才能讓這份貢獻不以耗盡自己為代價？",
+    "customer_text_zh_tw": "在可修改的低風險工作中，將完美循環與結構使命並讀：先確認必要標準、完成初版，再用真實回饋安排下一輪修訂。",
     "editorial_status": "PENDING_REVIEW",
-    "notes_internal": "來源是這一組生日的 v5.1 樣本，不是已核准的 258 筆主資料。不能送到顧客端。"
+    "locale": "zh-TW",
+    "notes_internal": "Fixture birthday: 1980-05-22; target chapter(s): 14. Internal draft ONLY. SOURCE ANCHORS PENDING APPROVAL."
   },
   {
-    "integration_id": "INT-19800522-004",
-    "source_snapshot_id": "v5.1-narrative-1980-05-22",
-    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
-    "locale": "zh-TW",
-    "code_ids": ["S3-03", "S9-07"],
+    "integration_id": "INT-20261112-004",
+    "source_snapshot_id": "source-register-2026-11-12-rc1",
+    "rule_set_version": "integration-claims-2026-11-12-rc1",
+    "code_ids": [
+      "S2-27",
+      "S0-07",
+      "S7-00"
+    ],
     "relation_type": "GROUNDING",
     "anchors": [
-      { "code": "S3-03", "source_field": "v5.1.sample.S3-03", "approval_id": "PENDING" },
-      { "code": "S9-07", "source_field": "v5.1.sample.S9-07", "approval_id": "PENDING" }
+      {
+        "code": "S2-27",
+        "source_field": "Karmic Loop",
+        "approval_id": "PENDING_NO_APPROVAL"
+      },
+      {
+        "code": "S0-07",
+        "source_field": "Core Illusion",
+        "approval_id": "PENDING_NO_APPROVAL"
+      },
+      {
+        "code": "S7-00",
+        "source_field": "Sovereignty Essence / 主权本质",
+        "approval_id": "PENDING_NO_APPROVAL"
+      }
     ],
-    "editorial_relation_reason": "探索打開許多方向，臨在把今天可以驗證的一件事從那些方向裡選出來。",
+    "editorial_relation_reason": "S2呈現親近與疏離的關係鏡像，S0描述『永遠不夠』的自我評價，S7強調回應前的自主停頓。",
     "scenario_status": "HYPOTHETICAL",
     "reader_claim_status": "NO_INFERRED_HISTORY",
-    "customer_text_zh_tw": "如果今天只能做一件事，哪一件真正與我正在過的生活有關？",
+    "customer_text_zh_tw": "當關係裡出現不安，可以先把互動事實與對自我價值的解讀分開，再決定需要表達什麼、哪些界限值得保留。",
     "editorial_status": "PENDING_REVIEW",
-    "notes_internal": "來源是這一組生日的 v5.1 樣本，不是已核准的 258 筆主資料。不能送到顧客端。"
+    "locale": "zh-TW",
+    "notes_internal": "Fixture birthday: 1980-05-22; target chapter(s): 02/14. Internal draft ONLY. SOURCE ANCHORS PENDING APPROVAL."
   },
   {
-    "integration_id": "INT-19800522-005",
-    "source_snapshot_id": "v5.1-narrative-1980-05-22",
-    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
-    "locale": "zh-TW",
-    "code_ids": ["S7-00", "S8-00"],
-    "relation_type": "TENSION",
-    "anchors": [
-      { "code": "S7-00", "source_field": "v5.1.sample.S7-00", "approval_id": "PENDING" },
-      { "code": "S8-00", "source_field": "v5.1.sample.S8-00", "approval_id": "PENDING" }
+    "integration_id": "INT-20261112-005",
+    "source_snapshot_id": "source-register-2026-11-12-rc1",
+    "rule_set_version": "integration-claims-2026-11-12-rc1",
+    "code_ids": [
+      "S5-04",
+      "S6-28",
+      "S8-00"
     ],
-    "editorial_relation_reason": "臨在可以陪伴，主權提醒這份支持不該變成替對方做決定。",
+    "relation_type": "REINFORCEMENT",
+    "anchors": [
+      {
+        "code": "S5-04",
+        "source_field": "1. Mission Essence / 使命本质",
+        "approval_id": "PENDING_NO_APPROVAL"
+      },
+      {
+        "code": "S6-28",
+        "source_field": "1. Value Essence / 价值本质",
+        "approval_id": "PENDING_NO_APPROVAL"
+      },
+      {
+        "code": "S8-00",
+        "source_field": "Contribution Essence / 贡献本质",
+        "approval_id": "PENDING_NO_APPROVAL"
+      }
+    ],
+    "editorial_relation_reason": "S5是建立可持續結構，S6是讓深度化成可使用價值，S8是專注與在場的貢獻，三者可以形成不同面向的協作主題。",
     "scenario_status": "HYPOTHETICAL",
     "reader_claim_status": "NO_INFERRED_HISTORY",
-    "customer_text_zh_tw": "我正在支持他人更有能力地生活，還是在悄悄替他過生活？",
+    "customer_text_zh_tw": "有些貢獻來自架構，有些來自深入理解，也有些來自細心參與。這組編碼提出的不是必須付出更多，而是讓分工、成果與支持條件被清楚看見。",
     "editorial_status": "PENDING_REVIEW",
-    "notes_internal": "來源是這一組生日的 v5.1 樣本，不是已核准的 258 筆主資料。不能送到顧客端。"
+    "locale": "zh-TW",
+    "notes_internal": "Fixture birthday: 1980-05-22; target chapter(s): 14. Internal draft ONLY. SOURCE ANCHORS PENDING APPROVAL."
+  },
+  {
+    "integration_id": "INT-20261112-006",
+    "source_snapshot_id": "source-register-2026-11-12-rc1",
+    "rule_set_version": "integration-claims-2026-11-12-rc1",
+    "code_ids": [
+      "S3-03",
+      "S9-07"
+    ],
+    "relation_type": "GROUNDING",
+    "anchors": [
+      {
+        "code": "S3-03",
+        "source_field": "one_week_practice",
+        "approval_id": "PENDING_NO_APPROVAL"
+      },
+      {
+        "code": "S9-07",
+        "source_field": "Natural Return Practices / 自然回源练习",
+        "approval_id": "PENDING_NO_APPROVAL"
+      }
+    ],
+    "editorial_relation_reason": "S3可透過一次有限的嘗試落地；S9提供感官與當下行動的練習，從探索回到可觀察的經驗。",
+    "scenario_status": "HYPOTHETICAL",
+    "reader_claim_status": "NO_INFERRED_HISTORY",
+    "customer_text_zh_tw": "當想法打開很多方向時，不妨先選一項能在今天完成的小嘗試，讓結果成為下一次探索的依據。",
+    "editorial_status": "PENDING_REVIEW",
+    "locale": "zh-TW",
+    "notes_internal": "Fixture birthday: 1980-05-22; target chapter(s): 14. Internal draft ONLY. SOURCE ANCHORS PENDING APPROVAL."
   }
 ]

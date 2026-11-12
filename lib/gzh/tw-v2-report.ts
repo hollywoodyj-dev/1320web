@@ -1,4 +1,5 @@
 import narrative1980 from "@/data/1320-tw-v2/1980-05-22.json";
+import narrative1982 from "@/data/1320-tw-v2/1982-02-03.json";
 import narrative2008 from "@/data/1320-tw-v2/2008-12-08.json";
 import { calculate1320Code } from "@/lib/calculate1320Code";
 import {
@@ -36,7 +37,11 @@ type StoredNarrative = {
   note?: string;
 };
 
-const NARRATIVES: StoredNarrative[] = [narrative1980 as StoredNarrative, narrative2008 as StoredNarrative];
+const NARRATIVES: StoredNarrative[] = [
+  narrative1980 as StoredNarrative,
+  narrative1982 as StoredNarrative,
+  narrative2008 as StoredNarrative,
+];
 
 export type V2Product = "FULL" | "SAMPLE";
 

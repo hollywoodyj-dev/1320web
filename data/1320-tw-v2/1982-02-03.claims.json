@@ -1,0 +1,99 @@
+[
+  {
+    "integration_id": "1982-INT-001",
+    "source_snapshot_id": "1982-02-03-editorial-demo",
+    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
+    "locale": "zh-TW",
+    "code_ids": ["S1-20", "S2-05", "S0-05", "S4-10"],
+    "relation_type": "TENSION",
+    "anchors": [
+      { "code": "S1-20", "source_field": "canonical.heart_centered", "approval_id": "PENDING" },
+      { "code": "S2-05", "source_field": "canonical.projection_mirror", "approval_id": "PENDING" },
+      { "code": "S0-05", "source_field": "canonical.emotion_illusion", "approval_id": "PENDING" },
+      { "code": "S4-10", "source_field": "canonical.defense_loop", "approval_id": "PENDING" }
+    ],
+    "editorial_relation_reason": "敏銳察覺可能走向推測與情緒確信，再觸發保護反應；需分開感受、事實與防衛。",
+    "scenario_status": "HYPOTHETICAL",
+    "reader_claim_status": "NO_INFERRED_HISTORY",
+    "customer_text_zh_tw": "一句話之後，內心發生了什麼？感覺、投射、情緒確信與保護反應如何分開看？",
+    "editorial_status": "PENDING_REVIEW",
+    "notes_internal": "候選關係，非正式核准。"
+  },
+  {
+    "integration_id": "1982-INT-002",
+    "source_snapshot_id": "1982-02-03-editorial-demo",
+    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
+    "locale": "zh-TW",
+    "code_ids": ["S3-01", "S5-26", "S6-26"],
+    "relation_type": "BRIDGE",
+    "anchors": [
+      { "code": "S3-01", "source_field": "canonical.seed", "approval_id": "PENDING" },
+      { "code": "S5-26", "source_field": "canonical.possibility_mission", "approval_id": "PENDING" },
+      { "code": "S6-26", "source_field": "canonical.strategic_actor", "approval_id": "PENDING" }
+    ],
+    "editorial_relation_reason": "種子需要生長條件，可能性需要策略決策才能落地。",
+    "scenario_status": "HYPOTHETICAL",
+    "reader_claim_status": "NO_INFERRED_HISTORY",
+    "customer_text_zh_tw": "想像有了光，還需要站穩的地：哪個尚未成熟的想法，已有足夠資訊可以開始試驗？",
+    "editorial_status": "PENDING_REVIEW",
+    "notes_internal": "候選關係，非正式核准。"
+  },
+  {
+    "integration_id": "1982-INT-003",
+    "source_snapshot_id": "1982-02-03-editorial-demo",
+    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
+    "locale": "zh-TW",
+    "code_ids": ["S0-05", "S7-01", "S9-04"],
+    "relation_type": "BRIDGE",
+    "anchors": [
+      { "code": "S0-05", "source_field": "canonical.emotion_illusion", "approval_id": "PENDING" },
+      { "code": "S7-01", "source_field": "canonical.self_trust", "approval_id": "PENDING" },
+      { "code": "S9-04", "source_field": "canonical.truth_return", "approval_id": "PENDING" }
+    ],
+    "editorial_relation_reason": "感受辨識、自主選擇與尊重真相可以同時留下，不必互相取消。",
+    "scenario_status": "HYPOTHETICAL",
+    "reader_claim_status": "NO_INFERRED_HISTORY",
+    "customer_text_zh_tw": "相信自己，也可以修正自己：感受提醒留意之後，事實與選擇如何決定下一步？",
+    "editorial_status": "PENDING_REVIEW",
+    "notes_internal": "候選關係，非正式核准。"
+  },
+  {
+    "integration_id": "1982-INT-004",
+    "source_snapshot_id": "1982-02-03-editorial-demo",
+    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
+    "locale": "zh-TW",
+    "code_ids": ["S1-20", "S5-26", "S8-05"],
+    "relation_type": "REINFORCEMENT",
+    "anchors": [
+      { "code": "S1-20", "source_field": "canonical.heart_centered", "approval_id": "PENDING" },
+      { "code": "S5-26", "source_field": "canonical.possibility_mission", "approval_id": "PENDING" },
+      { "code": "S8-05", "source_field": "canonical.transformation_contribution", "approval_id": "PENDING" }
+    ],
+    "editorial_relation_reason": "同理與展開方向可以成為實際支持，而不必成為唯一支柱。",
+    "scenario_status": "HYPOTHETICAL",
+    "reader_claim_status": "NO_INFERRED_HISTORY",
+    "customer_text_zh_tw": "有力量地支持，不必成為唯一支柱：支持改變時，哪些責任仍屬於對方？",
+    "editorial_status": "PENDING_REVIEW",
+    "notes_internal": "候選關係，非正式核准。"
+  },
+  {
+    "integration_id": "1982-INT-005",
+    "source_snapshot_id": "1982-02-03-editorial-demo",
+    "rule_set_version": "INTEGRATION-SPEC-1.0.0-rc1",
+    "locale": "zh-TW",
+    "code_ids": ["S2-05", "S4-10", "S6-26", "S9-04"],
+    "relation_type": "GROUNDING",
+    "anchors": [
+      { "code": "S2-05", "source_field": "canonical.projection_mirror", "approval_id": "PENDING" },
+      { "code": "S4-10", "source_field": "canonical.defense_loop", "approval_id": "PENDING" },
+      { "code": "S6-26", "source_field": "canonical.strategic_actor", "approval_id": "PENDING" },
+      { "code": "S9-04", "source_field": "canonical.truth_return", "approval_id": "PENDING" }
+    ],
+    "editorial_relation_reason": "核對事實、安全條件、範圍協商與誠實溝通，讓保護與真話一起留下。",
+    "scenario_status": "HYPOTHETICAL",
+    "reader_claim_status": "NO_INFERRED_HISTORY",
+    "customer_text_zh_tw": "保護、判斷與真話一起留下來：哪些界限需要先說清楚，再談下一步？",
+    "editorial_status": "PENDING_REVIEW",
+    "notes_internal": "候選關係，非正式核准。"
+  }
+]

@@ -97,6 +97,20 @@ const other = buildTwV2Report(1990, 1, 1);
 assert(other.status === "BLOCKED_NO_APPROVED_SOURCE", "a third date also stays closed");
 assert(other.codes.join("|") !== blocked.codes.join("|"), "different birthdays keep different code maps");
 
+const second = buildTwV2Report(1982, 2, 3, "FULL");
+assert(second.status === "EDITORIAL_CANDIDATE", "1982 is a preview candidate, not approved");
+assert(
+  second.codes.join(" / ") === "S1-20 / S3-01 / S2-05 / S0-05 / S4-10 / S5-26 / S6-26 / S7-01 / S8-05 / S9-04",
+  "1982 fixture codes",
+);
+assert(second.customerRender === "BLOCKED", "1982 stays blocked for customer delivery");
+const secondText = customerVisibleText(second);
+assert(secondText.includes("心覺者") && secondText.includes("種子振動"), "1982 keeps its own archetypes");
+assert(!secondText.includes("當改變、探索與完美要求相遇"), "1982 does not reuse the 1980 overview");
+assert(!secondText.includes("轉化者"), "1982 is not a renamed 1980 template");
+assert(secondText.includes("威脅") || secondText.includes("操控") || secondText.includes("傷害"), "1982 keeps S2 safety");
+assert(secondText.includes("人身安全") || secondText.includes("專業標準"), "1982 keeps S4 professional boundary");
+
 const third = buildTwV2Report(2008, 12, 8, "FULL");
 assert(third.status === "EDITORIAL_CANDIDATE", "2008 is a preview candidate, not approved");
 assert(
@@ -108,6 +122,7 @@ assert(Boolean(third.ageGate), "2008 keeps the under-18 internal gate");
 assert(customerVisibleText(third).includes("守護者"), "2008 candidate keeps its own narrative");
 assert(!customerVisibleText(third).includes("當改變、探索與完美要求相遇"), "2008 does not reuse the 1980 overview");
 assert(customerVisibleText(third).includes("保護安全比為這些互動尋找任何「靈魂意義」更重要") || customerVisibleText(third).includes("保護安全"), "2008 keeps S2 safety");
+assert(second.codes.join("|") !== full.codes.join("|") && second.codes.join("|") !== third.codes.join("|"), "three fixtures stay distinct");
 
 const claims = claimsForSignature(full.codes);
 assert(claims.length === 5, "five internal claims for this signature");
@@ -116,6 +131,9 @@ assert(claimSetProblems(claims).length === 0, "the claim set covers a real cross
 assert(claims.every((claim) => claim.editorial_status === "PENDING_REVIEW"), "claims are not approved for sale");
 assert(approvedCustomerThreads(full.codes).length === 0, "customer threads wait for APPROVED");
 assert(claimsForSignature(blocked.codes).length === 0, "another signature gets no claims");
+const claims1982 = claimsForSignature(second.codes);
+assert(claims1982.length === 5 && claims1982.every((claim) => claim.editorial_status === "PENDING_REVIEW"), "1982 claims stay pending");
+assert(approvedCustomerThreads(second.codes).length === 0, "1982 pending claims stay out of customer threads");
 const claims2008 = claimsForSignature(third.codes);
 assert(claims2008.length === 5 && claims2008.every((claim) => claim.editorial_status === "PENDING_REVIEW"), "2008 claims stay pending");
 assert(approvedCustomerThreads(third.codes).length === 0, "2008 pending claims stay out of customer threads");

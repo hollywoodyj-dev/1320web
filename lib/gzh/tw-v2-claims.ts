@@ -1,4 +1,5 @@
 import claims1980 from "@/data/1320-tw-v2/1980-05-22.claims.json";
+import claims1982 from "@/data/1320-tw-v2/1982-02-03.claims.json";
 import claims2008 from "@/data/1320-tw-v2/2008-12-08.claims.json";
 
 export const RELATION_TYPES = ["REINFORCEMENT", "TENSION", "BRIDGE", "GROUNDING"] as const;
@@ -19,7 +20,7 @@ const RANGES: Record<string, [number, number]> = {
   S9: [0, 8],
 };
 
-const claims = [...claims1980, ...claims2008];
+const claims = [...claims1980, ...claims1982, ...claims2008];
 
 export type IntegrationClaim = (typeof claims)[number];
 

@@ -1,0 +1,2072 @@
+{
+  "package_id": "1320-zhTW-s4-20-review-2026-11-16-rc1",
+  "batch": "S4-RC1",
+  "module": "S4",
+  "module_name_zh_tw": "核心陰影模式",
+  "locale": "zh-TW",
+  "source_version": "2.0",
+  "source_document_date": "2026-06-13",
+  "source_file_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+  "source_record_count": 20,
+  "source_fields_per_record": 12,
+  "source_field_names": [
+    "Reflection Question",
+    "Core Loop",
+    "Reflective Summary",
+    "Emotional Trigger",
+    "Defense Pattern",
+    "Hidden Need",
+    "Relationship Pattern",
+    "Work & Life Pattern",
+    "Integration Key",
+    "One-Week Practice",
+    "Wisewave Guidance",
+    "Safe Language Note"
+  ],
+  "editorial_status": "PENDING_HUMAN_REVIEW_NOT_APPROVED",
+  "official_approved_count": 0,
+  "customer_release_state": "HOLD",
+  "no_change_to": "v1.0 / live site / prices / checkout / locked formulas",
+  "records": [
+    {
+      "code": "S4-00",
+      "module": "S4",
+      "module_name_zh_tw": "核心陰影模式",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "斷連循環",
+      "name_zh_source": "The Loop of Disconnection / 断连循环",
+      "source_code": "S4-00",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "source_file_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+      "source_record_sha256": "d8d1151ecd2765daf0559de72f8361ea60d5ae587a7b2d5781e16828a372b4e8",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "172b65260ccfcfb33467d779278d2224eaff6d1459f5993bb10ab80034192694",
+          "source_text_internal": "What unconscious loop repeatedly shapes my experience?"
+        },
+        {
+          "source_field": "Core Loop",
+          "field_sha256": "215a434dc2ee705eafbc5ce69c5306676fb23f0b7e9373183d1dcdd6b87a7ade",
+          "source_text_internal": "When life becomes uncertain, this pattern may create a subtle sense of separation from the body, from others, or from the present moment."
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "7a2af9f142f9b087d1fb4356816f9a64f5212017ee6be07f22f50346ce7714ba",
+          "source_text_internal": "This shadow pattern invites the person to notice where they withdraw from direct experience and move into distance, numbness, or quiet self-protection. It does not mean they are detached by nature. It suggests that disconnection may have become a protective habit when reality feels too much to hold."
+        },
+        {
+          "source_field": "Emotional Trigger",
+          "field_sha256": "dae4a9ed688c0d7e8a404ba73d2a137d6e9f69e08126b49d51f5ba502fdb9fe8",
+          "source_text_internal": "The trigger often appears when the person feels unseen, overwhelmed, emotionally unsafe, or unable to influence what is happening."
+        },
+        {
+          "source_field": "Defense Pattern",
+          "field_sha256": "f67b05b2eee7af9c917cff0ba50a53de397ae416b07b00e17dae8f4a73f2d76e",
+          "source_text_internal": "The defense may be to step back internally, become neutral too quickly, minimize needs, or act as if nothing matters as much as it actually does."
+        },
+        {
+          "source_field": "Hidden Need",
+          "field_sha256": "6c2b152e4b1ea4ab82acb7ac7b06d2e8a1fbc39de704f751e7437cbe8a4117f6",
+          "source_text_internal": "The hidden need is to feel safe enough to remain present without having to disappear emotionally."
+        },
+        {
+          "source_field": "Relationship Pattern",
+          "field_sha256": "1dda8dd9db4867ebdb1dda787830d357c657700b887fb4d8899376dd07437d3a",
+          "source_text_internal": "In relationships, this may show up as silence, delayed responses, difficulty naming feelings, or leaving others unsure of what is happening inside."
+        },
+        {
+          "source_field": "Work & Life Pattern",
+          "field_sha256": "62c74a4f41fb0ce7992d93a429548fb3e2d74538106ccc8d0ac12a68782b2600",
+          "source_text_internal": "In work and life, this may appear as functioning well externally while feeling internally absent, uninspired, or disconnected from deeper motivation."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "932396b0fc19ee280ae7f8e740cf18c5eea1a62b2ca5d48a8c2e592f054b0123",
+          "source_text_internal": "The integration begins by returning to small, honest contact with the present moment rather than forcing immediate emotional openness."
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1a8f860ba2602d2ea959550b7130d43a75dbbe346f1a558fc7a98e1bfbcd2cd4",
+          "source_text_internal": "For one week, pause three times a day and name one body sensation, one emotion, and one need without judging any of them."
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "bb384b499265c9c079ef85d9ec7ed24523c05ba581e06e92800f8ba0f7b723a7",
+          "source_text_internal": "You do not have to leave yourself in order to survive the moment. Presence can begin in a very small way. When you return to one breath, one sensation, and one honest feeling, the loop of disconnection begins to soften."
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+        }
+      ],
+      "source_fields_count": 12,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "當壓力太大時，暫時疏離感受可能是保護方式，並非固定人格。",
+        "explorable_strength": "辨認自己的承受範圍，逐步找回當下的選擇。",
+        "core_tension": "為了撐過事情而長期忽略感受，可能讓需要難以被說出。",
+        "integration_direction": "先找安全與可承受的節奏，再接觸當下的小訊號。",
+        "customer_narrative_short_draft": "一段對話變得太急促，你可能突然只想安靜，甚至覺得自己像退到很遠的地方。斷連循環把這種暫時抽離視為可能的保護反應，而非認定你天生冷淡，也不代表任何醫學診斷。\n\n如果這種情境讓你有共鳴，可以先確認眼前是否安全，再問自己現在較能承受的是休息、說明需要暫停，還是找可信任的人陪伴。回到當下不必用力逼迫自己立刻敞開；有些時候，尊重自己的速度就是第一步。",
+        "life_reflection_question": "當我覺得過度負荷時，最需要哪一種安全且可行的支持？",
+        "required_professional_safety_boundary": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "release_gate": {
+        "approved_snapshot_present": false,
+        "customer_release_eligible": false,
+        "release_state": "HOLD"
+      },
+      "editor_notes": [
+        "不能將短暫疏離寫成失聯症或解離性障礙診斷；需要安全與可承受節奏。",
+        "與其他模組組合後不得建構沒有來源支持的心理診斷或創傷史。",
+        "僅是象徵性反思提案；不得以生日推斷診斷、命運、實際經歷或固定人格。",
+        "真人未簽核，NOVA 不得在顧客端渲染或補寫未核准內容。"
+      ]
+    },
+    {
+      "code": "S4-01",
+      "module": "S4",
+      "module_name_zh_tw": "核心陰影模式",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "證明循環",
+      "name_zh_source": "The Loop of Proving / 证明循环",
+      "source_code": "S4-01",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "source_file_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+      "source_record_sha256": "5495c983c783593345c2b3ebd72ae87a84c6808b3179bbb9d50432469b30e17b",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "172b65260ccfcfb33467d779278d2224eaff6d1459f5993bb10ab80034192694",
+          "source_text_internal": "What unconscious loop repeatedly shapes my experience?"
+        },
+        {
+          "source_field": "Core Loop",
+          "field_sha256": "bb0e171a280457d4324fd855d988fe24315bf831c0333df281525ad3c8b9faf0",
+          "source_text_internal": "This pattern may turn life into a quiet attempt to prove worth through achievement, usefulness, strength, or constant improvement."
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "8593a0e7c9780ee3275325eb4c65d4d2d1a7078caf4fbc82b8155bd87e674787",
+          "source_text_internal": "This shadow pattern invites the person to observe where their actions are driven less by genuine alignment and more by the need to be validated. It does not say they lack value. It points to a place where value may have been outsourced to performance."
+        },
+        {
+          "source_field": "Emotional Trigger",
+          "field_sha256": "b31addce99ba5dba1fa305300df15a9f79a875b30f36d3dc05b0868c26fbc409",
+          "source_text_internal": "The trigger often appears when the person feels compared, overlooked, criticized, or unsure whether their contribution is enough."
+        },
+        {
+          "source_field": "Defense Pattern",
+          "field_sha256": "0f155544026bd1c0b58efebf5f8e0f11720749f42b32fe9949c87d05d0c985a3",
+          "source_text_internal": "The defense may be overworking, over-explaining, taking on too much, or trying to become impressive enough to feel secure."
+        },
+        {
+          "source_field": "Hidden Need",
+          "field_sha256": "5f2f78ff303aa9190261be0f5eab9a34e6775347a74bd530bb3f67ee1e19b498",
+          "source_text_internal": "The hidden need is to feel worthy before producing, pleasing, or proving anything."
+        },
+        {
+          "source_field": "Relationship Pattern",
+          "field_sha256": "1a25dd2674972e552a4b04ade66cb2b457568d08b4fae9a5fe7dbd26186e41a6",
+          "source_text_internal": "In relationships, this may appear as trying to earn love, becoming overly helpful, or feeling anxious when appreciation is not expressed clearly."
+        },
+        {
+          "source_field": "Work & Life Pattern",
+          "field_sha256": "3cb1627adf365332884ae9932d4b602568e676325cdb771976047530ca5e3ef8",
+          "source_text_internal": "In work and life, this may appear as high standards, difficulty resting, and a constant sense that the next achievement will finally bring peace."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "e6a894a7744e176a58be9cab9301a2f7b47b7cfa96bf1284ca35db93751a5605",
+          "source_text_internal": "The integration begins when the person practices acting from inner clarity instead of acting to secure external confirmation."
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "0d73b5012e190facb729e4b3a50c57cdbe3eb80d37b1498d2cd7755573eac0db",
+          "source_text_internal": "For one week, choose one small action each day that is valuable even if nobody notices it, and write down why it mattered to you."
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "3e7b85dcfe630ba39d85d0faf644dd0e64201c7cacf52089ec8375bb925fd937",
+          "source_text_internal": "Your worth is not waiting at the end of another accomplishment. The more you act from worth rather than for worth, the more your effort becomes clean, grounded, and free."
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+        }
+      ],
+      "source_fields_count": 12,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "努力可以追求目標，但人的價值不必永遠由成果證明。",
+        "explorable_strength": "辨認自己真正在乎的事，而非只有他人認可。",
+        "core_tension": "遭到比較或批評時，可能以更多付出換取安全感。",
+        "integration_direction": "找一項即使沒有人稱讚，也值得自己完成的行動。",
+        "customer_narrative_short_draft": "完成一件事後，腦中卻開始想著下一次一定要更好；別人的一句比較，甚至足以讓休息變得不安心。證明循環關注的，是努力何時從願意成長，悄悄變成了向外尋求自我肯定。\n\n你可以在開始一項任務前問：我真的想做這件事，還是擔心不做就不被看見？兩種動機可能同時存在。把目標拆成合理的步驟，也為休息保留位置，讓成果服務你的生活，而不是用生活不斷交換評分。",
+        "life_reflection_question": "最近哪一次，我把「做得好」和「我是否值得」綁在一起？",
+        "required_professional_safety_boundary": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "release_gate": {
+        "approved_snapshot_present": false,
+        "customer_release_eligible": false,
+        "release_state": "HOLD"
+      },
+      "editor_notes": [
+        "證明循環不同於 S0-01 存在幻象；聚焦觸發→過度付出→短暫肯定的循環。",
+        "與其他模組組合後不得建構沒有來源支持的心理診斷或創傷史。",
+        "僅是象徵性反思提案；不得以生日推斷診斷、命運、實際經歷或固定人格。",
+        "真人未簽核，NOVA 不得在顧客端渲染或補寫未核准內容。"
+      ]
+    },
+    {
+      "code": "S4-02",
+      "module": "S4",
+      "module_name_zh_tw": "核心陰影模式",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "認同循環",
+      "name_zh_source": "The Loop of Seeking Approval / 认同循环",
+      "source_code": "S4-02",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "source_file_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+      "source_record_sha256": "39321dab388871bd71dbcd2d8e90b535950450b19de9ebbf5d410c37f9b32732",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "172b65260ccfcfb33467d779278d2224eaff6d1459f5993bb10ab80034192694",
+          "source_text_internal": "What unconscious loop repeatedly shapes my experience?"
+        },
+        {
+          "source_field": "Core Loop",
+          "field_sha256": "b50bb400db6d61d51e564d0ca54e885d8a819e46b3690423192537f340f983b9",
+          "source_text_internal": "This pattern may cause the person to monitor others’ reactions before trusting their own inner knowing."
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "61db304dba4e457e6ac6a84cd06d5bd0024fbaa25f8fad1fb4d41d8a35966c20",
+          "source_text_internal": "This shadow pattern invites the person to notice where they shape themselves around approval, acceptance, or emotional permission from others. It does not mean they are weak. It suggests that belonging may have become more important than self-alignment."
+        },
+        {
+          "source_field": "Emotional Trigger",
+          "field_sha256": "d2e100916c3fdef8bb20215b3bdab0bb5300735843ef897edfd46d8f633068f3",
+          "source_text_internal": "The trigger often appears when there is conflict, silence, disagreement, or the possibility of disappointing someone."
+        },
+        {
+          "source_field": "Defense Pattern",
+          "field_sha256": "2c05dadcf85a01391e0f4e2231c462659bc3c4542d7c6eb3f6b1b49fa99d280c",
+          "source_text_internal": "The defense may be people-pleasing, softening the truth, asking repeatedly for reassurance, or delaying decisions until others approve."
+        },
+        {
+          "source_field": "Hidden Need",
+          "field_sha256": "10000158d340135db75805ee322445be0a0ad4815383946005fbdc27e2e2fc04",
+          "source_text_internal": "The hidden need is to feel safe belonging to oneself, even when external agreement is not guaranteed."
+        },
+        {
+          "source_field": "Relationship Pattern",
+          "field_sha256": "b21280f197a1e062a8dabbf611d72da44a6d7f2431162aed912a6f85b47ff196",
+          "source_text_internal": "In relationships, this may show up as difficulty saying no, fear of being disliked, or adapting so quickly that true needs disappear."
+        },
+        {
+          "source_field": "Work & Life Pattern",
+          "field_sha256": "4379f4b0526c54b45acf44006017ab083d120b52dd37be701554e0181afb30c4",
+          "source_text_internal": "In work and life, this may appear as hesitation to lead, excessive consultation, or choosing acceptable paths over authentic ones."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "24648748c70c14ad9d0e287149f7ff937511b72df02a841f1ef134f5255f8944",
+          "source_text_internal": "The integration begins by practicing small expressions of truth that do not require immediate approval."
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "a97a1882119a01f26a201f5260d86aa07f75bbd81ca1515a2bf962b71cfc4fec",
+          "source_text_internal": "For one week, name one honest preference each day without apologizing for having it."
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "4907cd54a89904038ad623aef8472d0f3796e93bfc552f4c0a8656692107eb20",
+          "source_text_internal": "Approval can feel like safety, but it cannot replace inner alignment. When you allow your truth to exist gently, you begin to belong to yourself again."
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+        }
+      ],
+      "source_fields_count": 12,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "重視他人想法很自然，但重要選擇仍應留有自己的聲音。",
+        "explorable_strength": "在傾聽與表達之間建立雙向關係。",
+        "core_tension": "怕令人失望時，可能不敢提出不同偏好。",
+        "integration_direction": "練習說出一項真實偏好，容許別人暫時不同意。",
+        "customer_narrative_short_draft": "會議中大家都表態了，你其實有另一種看法，卻擔心說出口會破壞氣氛。認同循環描寫的，是對被接受的渴望可能如何使自己的聲音漸漸變小；它不把這份在乎判成軟弱。\n\n可以從低風險的情境練習：「我理解大家的想法，但我比較希望先試這個方式。」別人的不同意見可以帶來新資訊，不必立刻變成對整個自己的否定。真正的合作也需要彼此能安全表達差異。",
+        "life_reflection_question": "如果不急著獲得同意，我最想清楚說出的偏好是什麼？",
+        "required_professional_safety_boundary": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "release_gate": {
+        "approved_snapshot_present": false,
+        "customer_release_eligible": false,
+        "release_state": "HOLD"
+      },
+      "editor_notes": [
+        "對他人認同的需要不是軟弱；避免替讀者推斷過往關係歷史。",
+        "與其他模組組合後不得建構沒有來源支持的心理診斷或創傷史。",
+        "僅是象徵性反思提案；不得以生日推斷診斷、命運、實際經歷或固定人格。",
+        "真人未簽核，NOVA 不得在顧客端渲染或補寫未核准內容。"
+      ]
+    },
+    {
+      "code": "S4-03",
+      "module": "S4",
+      "module_name_zh_tw": "核心陰影模式",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "過度分析循環",
+      "name_zh_source": "The Loop of Overthinking / 过度分析循环",
+      "source_code": "S4-03",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "source_file_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+      "source_record_sha256": "f26e1a8b69c2421798b524994f36a46e06eeff97b64a0b170dad62a2f35972f2",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "172b65260ccfcfb33467d779278d2224eaff6d1459f5993bb10ab80034192694",
+          "source_text_internal": "What unconscious loop repeatedly shapes my experience?"
+        },
+        {
+          "source_field": "Core Loop",
+          "field_sha256": "705e56980d0413f120463e788228fba66126ea96004cfbec5ddc85fbdd9f3e40",
+          "source_text_internal": "This pattern may turn uncertainty into endless analysis, making the mind work harder than the moment actually requires."
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "d39a52731f8241083189e8bc91a8f23316896997b84c8bc30ee6dfc1e8ddc899",
+          "source_text_internal": "This shadow pattern invites the person to observe where thinking becomes a way to avoid feeling, choosing, or entering the unknown. It does not mean intelligence is the problem. It means the mind may be trying to create safety where trust is also needed."
+        },
+        {
+          "source_field": "Emotional Trigger",
+          "field_sha256": "6f43db0c99533a5196448fcc1b89c6c5cc579c6587a2ec639583000eef9ee088",
+          "source_text_internal": "The trigger often appears when a decision has emotional consequences, when outcomes cannot be guaranteed, or when the person fears making the wrong move."
+        },
+        {
+          "source_field": "Defense Pattern",
+          "field_sha256": "4d374b955013c81b400de9238446a32b5827577d6082fcaa132f387432d0f764",
+          "source_text_internal": "The defense may be researching excessively, replaying conversations, postponing action, or seeking perfect certainty before moving."
+        },
+        {
+          "source_field": "Hidden Need",
+          "field_sha256": "8d62f4e09b8a443e1bda8037302a2c3598a6f6667a23dddfa3da3ed5fd199517",
+          "source_text_internal": "The hidden need is to feel supported enough to take a grounded step without total certainty."
+        },
+        {
+          "source_field": "Relationship Pattern",
+          "field_sha256": "5e456039bf4bac8d462aa07cf37c153747198768c00c911083deccbc0cb22987",
+          "source_text_internal": "In relationships, this may appear as interpreting every signal, questioning every tone, or mentally preparing for every possible rejection."
+        },
+        {
+          "source_field": "Work & Life Pattern",
+          "field_sha256": "11350448ad09ddcf8e492d1df1e3682662d23ef73e21ed5356d98e2f4d3d3d12",
+          "source_text_internal": "In work and life, this may appear as planning without beginning, refining without releasing, or delaying decisions until energy is depleted."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "aaf18c7e696cbe28dfe3c12d19fe8b53453f9a23e8adb3e7ebcc37406eaa1b50",
+          "source_text_internal": "The integration begins when the person learns to pair clear thinking with embodied action."
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "820a00a3c7fc4bc5e211f55d43a8e3b4585b140d01a65228524d4cddea1dc5e0",
+          "source_text_internal": "For one week, when a decision feels circular, write down the next smallest honest step and take it within twenty-four hours."
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "d548ff74e11f8d9bc6faae2b5efa73e1e6c717a497c99b567182636945bce8e4",
+          "source_text_internal": "Your mind is a powerful instrument, but it was not meant to replace life. Clarity grows when thought touches action."
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+        }
+      ],
+      "source_fields_count": 12,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "思考能保護決策品質，但並非每個未知都能在行動前解完。",
+        "explorable_strength": "讓證據、感受與小型驗證互相補充。",
+        "core_tension": "反覆蒐集資料，可能讓自己一直停在開始之前。",
+        "integration_direction": "列出目前已知資訊，安排低風險的下一步。",
+        "customer_narrative_short_draft": "準備一個計畫時，你也許已經看過很多資料，卻又覺得還少了最後一個答案。過度分析循環所談的不是理性有問題，而是當不確定感很高時，思考可能成為延後承擔選擇的方式。\n\n可以試著分出哪些是必須查清楚的事實，哪些只是希望完全沒有風險的期待。對低風險問題，先採取可修正的小步驟；對醫療、法律、財務與安全問題，仍應尋求合格專業判斷，不能以「不要想太多」取代必要審慎。",
+        "life_reflection_question": "我現在還需要的是關鍵資訊，還是對可修正嘗試的允許？",
+        "required_professional_safety_boundary": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "release_gate": {
+        "approved_snapshot_present": false,
+        "customer_release_eligible": false,
+        "release_state": "HOLD"
+      },
+      "editor_notes": [
+        "仍應遵守安全、法律、健康等重大事項的審慎判斷，不以衝動代替思考。",
+        "與其他模組組合後不得建構沒有來源支持的心理診斷或創傷史。",
+        "僅是象徵性反思提案；不得以生日推斷診斷、命運、實際經歷或固定人格。",
+        "真人未簽核，NOVA 不得在顧客端渲染或補寫未核准內容。"
+      ]
+    },
+    {
+      "code": "S4-04",
+      "module": "S4",
+      "module_name_zh_tw": "核心陰影模式",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "控制循環",
+      "name_zh_source": "The Loop of Control / 控制循环",
+      "source_code": "S4-04",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "source_file_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+      "source_record_sha256": "0b9dc9add0f9cdc47e8e3ab0a786a8bd4e32e3eeb936ce7f1b3473a483db3019",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "172b65260ccfcfb33467d779278d2224eaff6d1459f5993bb10ab80034192694",
+          "source_text_internal": "What unconscious loop repeatedly shapes my experience?"
+        },
+        {
+          "source_field": "Core Loop",
+          "field_sha256": "ca6ba9d31aeca28d0279cd96cb4a2be232e7e17abbeafcbb731c4e24ea084c29",
+          "source_text_internal": "This pattern may create a strong need to manage outcomes, timing, emotions, or other people’s responses in order to feel safe."
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "bfb19d5dc8bdad2ef7c27fed3435eca3df4c6584e235b8b1e44b74a6a27d4b90",
+          "source_text_internal": "This shadow pattern invites the person to notice where control has become a substitute for trust. It does not mean they are controlling as an identity. It suggests that uncertainty may feel too threatening unless everything is held tightly."
+        },
+        {
+          "source_field": "Emotional Trigger",
+          "field_sha256": "918c4a6ce0e403c16f75729cef90c6373618fa66281994a6946d246c19368015",
+          "source_text_internal": "The trigger often appears when plans change, people behave unpredictably, or important outcomes are outside the person’s direct influence."
+        },
+        {
+          "source_field": "Defense Pattern",
+          "field_sha256": "1f469b42f7401516d2db21ea8d99e14691e2aff5e387f3400e0d200b72a77a11",
+          "source_text_internal": "The defense may be micromanaging, insisting on certainty, becoming rigid, or trying to prevent discomfort before it appears."
+        },
+        {
+          "source_field": "Hidden Need",
+          "field_sha256": "589a334b053023e827f125b0cc92562b69943dde10b9cf17651b85b111311690",
+          "source_text_internal": "The hidden need is to feel stable inside even when life is not fully controllable outside."
+        },
+        {
+          "source_field": "Relationship Pattern",
+          "field_sha256": "551893992bef951255b43c34990cc443d60cfce7ad29d14b03e4a01725c22e2c",
+          "source_text_internal": "In relationships, this may show up as trying to direct conversations, anticipate reactions, or manage closeness through structure and rules."
+        },
+        {
+          "source_field": "Work & Life Pattern",
+          "field_sha256": "7275cf1adec461ee0498917ce8502bb6daad9be580b184be7c3a7060b854b276",
+          "source_text_internal": "In work and life, this may appear as difficulty delegating, fear of improvisation, and stress when others do not follow the expected path."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "e29000b2b74f28e841c21d611b4ef70b84a927059cbd7bca15d617df16a76945",
+          "source_text_internal": "The integration begins by distinguishing responsibility from control."
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1666fee4863a52ce7e53852afce1fd123a978663afa6cb9a0fb17ca6024da82d",
+          "source_text_internal": "For one week, choose one small situation each day where you allow something to unfold without correcting it immediately."
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "0c15513e5b30aba449e62e85f57b58037cd0dcd53923e94bf8e839596e2d596d",
+          "source_text_internal": "Control often begins as protection. Yet life becomes lighter when you realize that steadiness is not the same as holding everything."
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+        }
+      ],
+      "source_fields_count": 12,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "規劃與負責必要，卻不等於能指揮他人的反應與全部結果。",
+        "explorable_strength": "清楚界定可負責、可協商與不可控制的事。",
+        "core_tension": "計畫突然變動時，可能把不安變成對細節的更多要求。",
+        "integration_direction": "保留安全規範，其他部分用可調整的協議合作。",
+        "customer_narrative_short_draft": "原本商量好的計畫因他人的狀況需要改變，你可能第一時間就想重新安排每個環節。控制循環邀請你觀察：這些安排哪些是真正必要，哪些只是想透過確定感減輕心裡的不安？\n\n試著將事情分成「我應負責」「需要共同決定」「無法保證」三類。對安全與專業事項仍嚴守標準；對他人的感受與選擇，則以清楚溝通取代預先控制。這並非放任，而是讓責任有適當的範圍。",
+        "life_reflection_question": "最近哪一件事，我想控制的其實是結果，還是自己對不確定的感受？",
+        "required_professional_safety_boundary": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "release_gate": {
+        "approved_snapshot_present": false,
+        "customer_release_eligible": false,
+        "release_state": "HOLD"
+      },
+      "editor_notes": [
+        "合理安全規範不等於控制缺陷；區分責任與支配他人。",
+        "與其他模組組合後不得建構沒有來源支持的心理診斷或創傷史。",
+        "僅是象徵性反思提案；不得以生日推斷診斷、命運、實際經歷或固定人格。",
+        "真人未簽核，NOVA 不得在顧客端渲染或補寫未核准內容。"
+      ]
+    },
+    {
+      "code": "S4-05",
+      "module": "S4",
+      "module_name_zh_tw": "核心陰影模式",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "逃避循環",
+      "name_zh_source": "The Loop of Avoidance / 逃避循环",
+      "source_code": "S4-05",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "source_file_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+      "source_record_sha256": "320d11eb913f2b1a92f7b91cd7c8d231bfcedfd55eabab52e36ecdb5f0e352ec",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "172b65260ccfcfb33467d779278d2224eaff6d1459f5993bb10ab80034192694",
+          "source_text_internal": "What unconscious loop repeatedly shapes my experience?"
+        },
+        {
+          "source_field": "Core Loop",
+          "field_sha256": "9087a9fcbab7fbbd495724ba80b573f9b687149a2eb8a0ab3873416c3dfb4014",
+          "source_text_internal": "This pattern may lead the person away from discomfort before the deeper message of the discomfort can be understood."
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "940e5901dea27069995161981afdd85d0bc39815659e3397b3f7cbea5397bf70",
+          "source_text_internal": "This shadow pattern invites the person to observe where they move away too quickly from conflict, responsibility, grief, commitment, or necessary change. It does not frame avoidance as failure. It sees avoidance as an old strategy that may no longer serve growth."
+        },
+        {
+          "source_field": "Emotional Trigger",
+          "field_sha256": "8ec046eb2beaa8cf821b56a1a14de95608d0215b164a9df3a84618dbdc024057",
+          "source_text_internal": "The trigger often appears when something requires vulnerability, sustained attention, honest confrontation, or emotional maturity."
+        },
+        {
+          "source_field": "Defense Pattern",
+          "field_sha256": "62ff8d9b340c66bf56e32205d250d8289fbb9f8a7fe0019743dacb56076694eb",
+          "source_text_internal": "The defense may be distraction, busyness, humor, spiritual bypassing, changing the topic, or choosing a new path before completing the current one."
+        },
+        {
+          "source_field": "Hidden Need",
+          "field_sha256": "3edc1d6f4ab20272844b48a7721fa6630f0c3f93deb5b494b6b442e74920992f",
+          "source_text_internal": "The hidden need is to feel capable of staying with discomfort without being consumed by it."
+        },
+        {
+          "source_field": "Relationship Pattern",
+          "field_sha256": "8cbfd0082003fb8d3bfeb6fbd29b29e0d2423b3513b9253db02214d6c705557a",
+          "source_text_internal": "In relationships, this may appear as pulling away when conversations deepen or becoming unavailable when repair is needed."
+        },
+        {
+          "source_field": "Work & Life Pattern",
+          "field_sha256": "f12f6eb4257b9cb2b354e07edd130bbc42a6cc2667dd02da1b0ff70616a44739",
+          "source_text_internal": "In work and life, this may appear as unfinished projects, shifting goals, or repeatedly seeking a fresh start instead of facing the current edge."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "6ece0ec13fafae77e763177a068d47d25d0df08c65efbaf4284f1cf9ff924647",
+          "source_text_internal": "The integration begins by staying with one honest thing long enough for it to reveal its teaching."
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "5c76f50d231c41f8eb3f9878ad8f1781e6a7ea150e8a373862606fc2904abdd7",
+          "source_text_internal": "For one week, choose one avoided task or conversation and take a small, concrete step toward it."
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "446a417cdbd1711d105fd1a7c1a4e1bcf037a4847520f457a0de34728a306a14",
+          "source_text_internal": "Avoidance is not the absence of courage. It is often the memory of overwhelm. You can return slowly. One honest step is enough to begin changing the pattern."
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+        }
+      ],
+      "source_fields_count": 12,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "暫時退開可能合理，但長期繞開重要問題會減少選擇。",
+        "explorable_strength": "以可承受的速度面對一件真正需要處理的事。",
+        "core_tension": "遇到不舒服的對話時，可能用忙碌或換話題離開。",
+        "integration_direction": "先判斷安全，再選一個小範圍與合適時機回應。",
+        "customer_narrative_short_draft": "有件事情一直放在待辦清單上，每當想到它，就想先整理別的事，或開始一個更有趣的新計畫。逃避循環不是批評你不夠勇敢，而是邀請你辨認：這份延後是在保護恢復的需要，還是讓一個可處理的問題越來越難靠近？\n\n可以先決定一個十分小的步驟，例如寫下想問的第一句話，或與對方約定有安全條件的時間。真正危險的情境不必勉強面對；離開威脅不是逃避。",
+        "life_reflection_question": "我延後的事情裡，哪一項適合用一個安全的小步驟開始？",
+        "required_professional_safety_boundary": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "release_gate": {
+        "approved_snapshot_present": false,
+        "customer_release_eligible": false,
+        "release_state": "HOLD"
+      },
+      "editor_notes": [
+        "躲避真實威脅與暫時休息不是缺點；不得要求直接面對危險。",
+        "與其他模組組合後不得建構沒有來源支持的心理診斷或創傷史。",
+        "僅是象徵性反思提案；不得以生日推斷診斷、命運、實際經歷或固定人格。",
+        "真人未簽核，NOVA 不得在顧客端渲染或補寫未核准內容。"
+      ]
+    },
+    {
+      "code": "S4-06",
+      "module": "S4",
+      "module_name_zh_tw": "核心陰影模式",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "情緒吸收循環",
+      "name_zh_source": "The Loop of Emotional Absorption / 情绪吸收循环",
+      "source_code": "S4-06",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "source_file_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+      "source_record_sha256": "4e48765d8aec1d0f1958259a02fa400c201c6f8ee49238fc3b1d09483fcab9eb",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "172b65260ccfcfb33467d779278d2224eaff6d1459f5993bb10ab80034192694",
+          "source_text_internal": "What unconscious loop repeatedly shapes my experience?"
+        },
+        {
+          "source_field": "Core Loop",
+          "field_sha256": "8361804bf1b3204e08672898210746f37a8e1f07f021141fbd889dc85b2b7bb2",
+          "source_text_internal": "This pattern may cause the person to absorb the emotions of others and mistake them for personal responsibility."
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "ef3e6c6bbc684f9fd4025e4f2899e488b18b703947f6634ad2da3cadc58a4b21",
+          "source_text_internal": "This shadow pattern invites the person to notice where empathy turns into energetic over-involvement. It does not mean sensitivity is a flaw. It suggests that the gift of feeling may need stronger boundaries to become sustainable."
+        },
+        {
+          "source_field": "Emotional Trigger",
+          "field_sha256": "de2b51dba81384be2fc3b8c406ef75a6cdb55886f04541bf11d9361199222725",
+          "source_text_internal": "The trigger often appears when someone nearby is disappointed, upset, anxious, or in need of support."
+        },
+        {
+          "source_field": "Defense Pattern",
+          "field_sha256": "214e4eefc38444cb6a4c1732e9b999bfa917bb1540d476c1bfad0da0bfef8643",
+          "source_text_internal": "The defense may be caretaking, fixing, absorbing tension, anticipating needs, or calming others before checking in with oneself."
+        },
+        {
+          "source_field": "Hidden Need",
+          "field_sha256": "c3889f29c8dfe08d021132f040a6a72f9a9cdbb29309ffb5fd14d279682d1dc5",
+          "source_text_internal": "The hidden need is to remain connected without losing the boundary of self."
+        },
+        {
+          "source_field": "Relationship Pattern",
+          "field_sha256": "c681374c6bc46d9176c9ee2e15216e2d7086d3d1eac3cf4dbd66ae4e3973053b",
+          "source_text_internal": "In relationships, this may appear as taking responsibility for another person’s mood or feeling guilty when others are not okay."
+        },
+        {
+          "source_field": "Work & Life Pattern",
+          "field_sha256": "6f03ae6b4b873adfb6d58bf7506d80c38b335789f8ba3416495bbc11014414a6",
+          "source_text_internal": "In work and life, this may appear as emotional fatigue, over-functioning in teams, or becoming the one who silently carries the atmosphere."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "476c1a76f5a22f008bc11f44e76144e835f96aea4c760adace1e8180bd7944e8",
+          "source_text_internal": "The integration begins by learning the difference between compassion and absorption."
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "325b5eb3ce93977a917f7c22a4b71ecc411c0d73a6d82a12961680d9c4628e15",
+          "source_text_internal": "For one week, before helping someone, ask internally: “Is this mine to hold, or mine to witness?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "49cf9e674e339f57b04ee6d34f0d941a072253c9d90da185556ae332e7a39213",
+          "source_text_internal": "Your sensitivity is not asking you to carry everything. It is asking you to listen clearly while remaining rooted in yourself."
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+        }
+      ],
+      "source_fields_count": 12,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "關懷他人，不等於必須承擔他人的所有情緒。",
+        "explorable_strength": "分辨同理、支持與過度負責。",
+        "core_tension": "周遭有人不開心時，可能先急著安撫，忘記自己的狀態。",
+        "integration_direction": "先確認自己能提供什麼，再尊重對方的需求與選擇。",
+        "customer_narrative_short_draft": "朋友心情不好時，你可能立刻開始想辦法，甚至覺得只要對方不開心，自己就不能放鬆。情緒吸收循環描寫的是關懷與責任容易黏在一起的時刻，不表示你能讀取他人的感受，也不要求你變得冷漠。\n\n試著先問對方想要的是傾聽、實際協助，還是一些空間；同時問自己是否有餘力。你可以關心一個人，而不必替他管理全部情緒。若出現危機或安全風險，則需要適當的專業支援。",
+        "life_reflection_question": "我在陪伴他人時，哪一部分是我願意給的，哪一部分已超過負荷？",
+        "required_professional_safety_boundary": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "release_gate": {
+        "approved_snapshot_present": false,
+        "customer_release_eligible": false,
+        "release_state": "HOLD"
+      },
+      "editor_notes": [
+        "不得把同理心寫成讀心術；不能讓讀者背負他人情緒。",
+        "與其他模組組合後不得建構沒有來源支持的心理診斷或創傷史。",
+        "僅是象徵性反思提案；不得以生日推斷診斷、命運、實際經歷或固定人格。",
+        "真人未簽核，NOVA 不得在顧客端渲染或補寫未核准內容。"
+      ]
+    },
+    {
+      "code": "S4-07",
+      "module": "S4",
+      "module_name_zh_tw": "核心陰影模式",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "自我懷疑循環",
+      "name_zh_source": "The Loop of Self-Doubt / 自我怀疑循环",
+      "source_code": "S4-07",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "source_file_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+      "source_record_sha256": "8c301c745ab9d2cab6a848bcb7359e5c478c6daceb19c3ce30dd6c03dff5822e",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "172b65260ccfcfb33467d779278d2224eaff6d1459f5993bb10ab80034192694",
+          "source_text_internal": "What unconscious loop repeatedly shapes my experience?"
+        },
+        {
+          "source_field": "Core Loop",
+          "field_sha256": "50c9649611cd54cef0de404b9a84f4014dffdd8073d4c4b0130328b491656d25",
+          "source_text_internal": "This pattern may cause the person to question their own perception even when their inner signal is already clear."
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "6af75e85d1b2433b570c7d3f309e560eada8a68138cd43726670d64d7f04d80d",
+          "source_text_internal": "This shadow pattern invites the person to notice where they abandon their own knowing in favor of hesitation, second-guessing, or external validation. It does not mean they lack intuition. It suggests that trust in the self may need to be rebuilt through small, consistent choices."
+        },
+        {
+          "source_field": "Emotional Trigger",
+          "field_sha256": "792687eea7336ee9b9cd8cfb0416610dd518410c16b3e8d4b2abaf6b2f3e363f",
+          "source_text_internal": "The trigger often appears when a choice matters, when others disagree, or when the person fears being responsible for the outcome."
+        },
+        {
+          "source_field": "Defense Pattern",
+          "field_sha256": "6acae508854c55dd9ec0b162d7d36aa88dcbfcba5d4b559989290c86f147b8bf",
+          "source_text_internal": "The defense may be indecision, asking too many people, shrinking the original desire, or waiting until circumstances decide for them."
+        },
+        {
+          "source_field": "Hidden Need",
+          "field_sha256": "5bc364700ea0a1f4664ca179f65b4879a96db43971f28ec88d033bfe2d05b952",
+          "source_text_internal": "The hidden need is to feel allowed to trust an inner signal without needing it to be perfect."
+        },
+        {
+          "source_field": "Relationship Pattern",
+          "field_sha256": "209bbc2854383aa3a0891dcebcf58eec03fd85dd659b07776c5e392ad36eed34",
+          "source_text_internal": "In relationships, this may appear as doubting personal feelings, excusing discomfort, or letting others define what happened."
+        },
+        {
+          "source_field": "Work & Life Pattern",
+          "field_sha256": "76331cf1b4650c130e30410060d22887930228bf23780d7bbe180fdfcf7b9e34",
+          "source_text_internal": "In work and life, this may appear as underclaiming ability, delaying visibility, or choosing safe options over aligned ones."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "131c42213b931d81d2b97f39d9de2af1586f899759382052a3ecb3dbabda6090",
+          "source_text_internal": "The integration begins by honoring small inner signals and observing their results over time."
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "df79e2884c2c3c0eb0d5c6979522a45b5b721890aebd2e0774d4e753bc53f1f1",
+          "source_text_internal": "For one week, make one low-risk decision each day based on your first clear inner signal, and record what you notice."
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "4c15d95c4ff50f01b14f62e90362df3ffa70634596b9c78234e26972228865d7",
+          "source_text_internal": "Self-trust is not built through perfect decisions. It is built through returning to yourself after every decision."
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+        }
+      ],
+      "source_fields_count": 12,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "謹慎能使決定更周全，但反覆否定自己也可能遮蔽已有的資訊。",
+        "explorable_strength": "以小規模行動驗證判斷，而不是只靠自我保證。",
+        "core_tension": "他人的不同意見出現時，可能立刻撤回自己的想法。",
+        "integration_direction": "整理理由與限制，允許不同意見存在後再作決定。",
+        "customer_narrative_short_draft": "你原本對某件事有清楚的偏好，聽見別人一句「真的嗎」，卻開始懷疑是不是自己根本不懂。自我懷疑循環關注的，是反覆向外求證可能如何讓個人判斷失去位置；它不表示直覺永遠正確。\n\n把最初的理由寫下來，再收集需要的事實與可信任的意見。對低風險選擇，可以先做一個可修正的嘗試；對重大決定則仍然應謹慎。信任自己不等於拒絕查證，而是讓自己的觀點參與討論。",
+        "life_reflection_question": "如果先不急著否定自己，我對這件事原本有哪些可說明的理由？",
+        "required_professional_safety_boundary": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "release_gate": {
+        "approved_snapshot_present": false,
+        "customer_release_eligible": false,
+        "release_state": "HOLD"
+      },
+      "editor_notes": [
+        "鼓勵基於資訊的小型嘗試，不將直覺視為必然正確。",
+        "與其他模組組合後不得建構沒有來源支持的心理診斷或創傷史。",
+        "僅是象徵性反思提案；不得以生日推斷診斷、命運、實際經歷或固定人格。",
+        "真人未簽核，NOVA 不得在顧客端渲染或補寫未核准內容。"
+      ]
+    },
+    {
+      "code": "S4-08",
+      "module": "S4",
+      "module_name_zh_tw": "核心陰影模式",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "匱乏循環",
+      "name_zh_source": "The Loop of Scarcity / 匮乏循环",
+      "source_code": "S4-08",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "source_file_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+      "source_record_sha256": "d5f259566ba75fcdfe5d8e52ae4c982391e0562b0421d4f8f94b400a74d4b7b9",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "172b65260ccfcfb33467d779278d2224eaff6d1459f5993bb10ab80034192694",
+          "source_text_internal": "What unconscious loop repeatedly shapes my experience?"
+        },
+        {
+          "source_field": "Core Loop",
+          "field_sha256": "7d02c7e6d19b1e67d42f371d103d129a654547baa63698fd653f7afa7c36dbc8",
+          "source_text_internal": "This pattern may interpret life through the fear that there is not enough time, love, opportunity, money, or support."
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "b95077d588ccca910a7c95a8aac5c128e01813e3b0875ca55db9f5f5712c3ffa",
+          "source_text_internal": "This shadow pattern invites the person to observe where scarcity becomes the lens through which choices are made. It does not mean scarcity is imaginary. It means the inner system may continue to operate from lack even when new possibilities are present."
+        },
+        {
+          "source_field": "Emotional Trigger",
+          "field_sha256": "1ed89cbbca49fa7be1e98664efa42c8ad240bf764954f865c8b286968832b488",
+          "source_text_internal": "The trigger often appears when resources feel uncertain, when others receive what the person wants, or when progress seems slower than expected."
+        },
+        {
+          "source_field": "Defense Pattern",
+          "field_sha256": "e6661ddb7947431f66a0a7753888aad98f1f3f5ffd1f61f2ab77851a4d2df1e9",
+          "source_text_internal": "The defense may be grasping, comparing, rushing, withholding, or making choices from fear rather than clarity."
+        },
+        {
+          "source_field": "Hidden Need",
+          "field_sha256": "90df3ed6ee03cb974e4f14d70ccab4a6513d8422133be6d84876c1e747025d30",
+          "source_text_internal": "The hidden need is to feel resourced internally before seeking evidence of abundance externally."
+        },
+        {
+          "source_field": "Relationship Pattern",
+          "field_sha256": "a262438038db764dd440bb60742c499ebe4dc53846bae0e70fe2a811b89ae76b",
+          "source_text_internal": "In relationships, this may appear as fear of losing attention, jealousy, or difficulty trusting that care can remain available."
+        },
+        {
+          "source_field": "Work & Life Pattern",
+          "field_sha256": "17d3ceaa5ba69485a4270f52f743b9587f0013fd64aa878c580b836259a757d6",
+          "source_text_internal": "In work and life, this may appear as undercharging, overworking, taking misaligned opportunities, or feeling behind even while moving forward."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "df8d503572241980608dc4c649b712d2afbebec80bb5d2959f43d3d52d9e216e",
+          "source_text_internal": "The integration begins by noticing where urgency is not the same as truth."
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "c28aa6b952f7f0bea90f420b188f3a8643b69bfe4f08080fc08a5b19be30393e",
+          "source_text_internal": "For one week, before making a choice from pressure, pause and ask: “What would I choose if I believed there was enough space to respond clearly?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "ab4556257ec29e5654a6bb383d0caa095c32acfac407a5c7060c73c4cf859499",
+          "source_text_internal": "Scarcity narrows the field of vision. When you return to steadiness, you may still act wisely, but you no longer act as if fear is the only reality."
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+        }
+      ],
+      "source_fields_count": 12,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "資源不足可能是真實處境，不能只靠轉念就消失。",
+        "explorable_strength": "分辨可調度的資源與被焦慮加重的急迫感。",
+        "core_tension": "擔心失去時，可能匆忙接受不合適的選項。",
+        "integration_direction": "先盤點現有條件、實際缺口與可獲得的支持。",
+        "customer_narrative_short_draft": "看到別人得到機會，自己卻仍在等待，心裡也許浮現「如果現在不抓住，以後就沒有了」。匱乏循環關注急迫感如何影響選擇，但絕不否認貧困、資源不平等或真正的財務壓力。\n\n若情境安全，可以先把確定的資源與缺口列出來，詢問哪些協助或替代方案存在。當涉及金錢、合約或債務，應依專業標準評估，不能用「相信豐盛」替代現實規劃。你不必因為現實艱難而責怪自己。",
+        "life_reflection_question": "目前真正缺少的是什麼？我能取得哪些可信任、具體的協助？",
+        "required_professional_safety_boundary": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "release_gate": {
+        "approved_snapshot_present": false,
+        "customer_release_eligible": false,
+        "release_state": "HOLD"
+      },
+      "editor_notes": [
+        "現實貧困與財務風險不能以心態改善取代；避免責怪處境。",
+        "與其他模組組合後不得建構沒有來源支持的心理診斷或創傷史。",
+        "僅是象徵性反思提案；不得以生日推斷診斷、命運、實際經歷或固定人格。",
+        "真人未簽核，NOVA 不得在顧客端渲染或補寫未核准內容。"
+      ]
+    },
+    {
+      "code": "S4-09",
+      "module": "S4",
+      "module_name_zh_tw": "核心陰影模式",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "躁動循環",
+      "name_zh_source": "The Loop of Restlessness / 躁动循环",
+      "source_code": "S4-09",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "source_file_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+      "source_record_sha256": "5f621fdfc8d36812a091f0220a83b6d39ce99166d08395d5d216bc6dd5178ed2",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "172b65260ccfcfb33467d779278d2224eaff6d1459f5993bb10ab80034192694",
+          "source_text_internal": "What unconscious loop repeatedly shapes my experience?"
+        },
+        {
+          "source_field": "Core Loop",
+          "field_sha256": "8dfffa910795f6ba7011d08e09918922f60c804d354ee5707c6954cc9d9e204e",
+          "source_text_internal": "This pattern may keep the person moving, searching, changing, or improving before the current experience has been fully integrated."
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "144b4d6fd7d70f8129c54dc829a7a6c49c3108963dfb88f931e204e6d24135dc",
+          "source_text_internal": "This shadow pattern invites the person to observe where movement becomes an escape from depth. It does not mean change is wrong. It suggests that the desire for expansion may sometimes bypass the need for grounding."
+        },
+        {
+          "source_field": "Emotional Trigger",
+          "field_sha256": "41db6a10e99e95cc21076ddafae8c4150b857b956e641c3c20f697aa029db29a",
+          "source_text_internal": "The trigger often appears when life becomes quiet, repetitive, emotionally intimate, or slower than the person’s inner pace."
+        },
+        {
+          "source_field": "Defense Pattern",
+          "field_sha256": "eaf8900791b7968726d3eeb7299fed4676ff602dbc98baff5cd79720715550f1",
+          "source_text_internal": "The defense may be chasing novelty, starting many things, leaving too soon, or turning discomfort into a need for immediate change."
+        },
+        {
+          "source_field": "Hidden Need",
+          "field_sha256": "2f3ba6d63ad0148ffc9743ee0c1198a5841346000067dece8814b4290d00df94",
+          "source_text_internal": "The hidden need is to feel alive without needing constant stimulation."
+        },
+        {
+          "source_field": "Relationship Pattern",
+          "field_sha256": "79160004aaffb17c6cff883cfd9e831a5bbe11076e5cc891fc6a00fc18dcc689",
+          "source_text_internal": "In relationships, this may appear as craving intensity, fearing routine, or mistaking calmness for disconnection."
+        },
+        {
+          "source_field": "Work & Life Pattern",
+          "field_sha256": "8e42359ccedd9d2ebd0a883729477739a929f8fed4a5bc367d43ae794924ceca",
+          "source_text_internal": "In work and life, this may appear as scattered focus, frequent reinvention, or difficulty sustaining one direction long enough to receive its fruits."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "7f2ca46ed41a0c173dc7c4b99b4cedcb0e678895d19ce25d6c76b3e10ab43721",
+          "source_text_internal": "The integration begins by allowing depth to become as valuable as movement."
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "da89acb652865b2bf715e9996a86da961d63d3fdb3cd0cee33e75900aa089d33",
+          "source_text_internal": "For one week, choose one ongoing commitment and give it steady attention for fifteen minutes each day without adding something new."
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "627559e82479ecdc368622bc1d41c49c6d2505a9885f8914b3e2ece2b21c2336",
+          "source_text_internal": "Not every new beginning is freedom. Sometimes freedom begins when you stay long enough to meet the part of you that wants to run."
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+        }
+      ],
+      "source_fields_count": 12,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "尋求新鮮感很自然，安靜與持續也能帶來深度。",
+        "explorable_strength": "選擇值得停留的一件事，允許經驗慢慢展開。",
+        "core_tension": "節奏放慢時，可能急著換目標、換環境。",
+        "integration_direction": "練習把一段低風險計畫完成，再決定是否轉向。",
+        "customer_narrative_short_draft": "一個新計畫剛有起色，你卻開始覺得日復一日太沒意思，想立刻尋找下一個刺激。躁動循環不否定好奇與創意，而是邀請你看看：有沒有時候，安靜被誤解成停滯，讓原本值得深入的事提早結束？\n\n可以選一項你仍然在乎的事情，替它設一段可回顧的時間，再決定是否調整。並不是所有改變都需要被阻止；重要的是讓選擇來自真實需要，而不只是逃離眼前的平穩。",
+        "life_reflection_question": "我最近想改變方向，是因為不再適合，還是因為安靜讓我不習慣？",
+        "required_professional_safety_boundary": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "release_gate": {
+        "approved_snapshot_present": false,
+        "customer_release_eligible": false,
+        "release_state": "HOLD"
+      },
+      "editor_notes": [
+        "區分適應性變化與為逃避感受而不斷轉向。",
+        "與其他模組組合後不得建構沒有來源支持的心理診斷或創傷史。",
+        "僅是象徵性反思提案；不得以生日推斷診斷、命運、實際經歷或固定人格。",
+        "真人未簽核，NOVA 不得在顧客端渲染或補寫未核准內容。"
+      ]
+    },
+    {
+      "code": "S4-10",
+      "module": "S4",
+      "module_name_zh_tw": "核心陰影模式",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "防禦循環",
+      "name_zh_source": "The Loop of Protection / 防御循环",
+      "source_code": "S4-10",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "source_file_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+      "source_record_sha256": "4241318a65b1d06a1a172c5f1e7889ece8afb36dd8a83b1d22adbad2bffc0f69",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "172b65260ccfcfb33467d779278d2224eaff6d1459f5993bb10ab80034192694",
+          "source_text_internal": "What unconscious loop repeatedly shapes my experience?"
+        },
+        {
+          "source_field": "Core Loop",
+          "field_sha256": "b200f9949b60ed528e0434265f494be8264f3dee9edb45684197209ad84c9450",
+          "source_text_internal": "This pattern may create strong protective walls around the heart, the body, or the person’s deeper needs."
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "34893559f7e851a8d48e99a2675b13891ea8317537dd61882df259b708418f82",
+          "source_text_internal": "This shadow pattern invites the person to notice where protection has become automatic, even in situations where openness may be possible. It does not judge the wall. It recognizes that the wall may once have been necessary, while also asking whether it is still the only option."
+        },
+        {
+          "source_field": "Emotional Trigger",
+          "field_sha256": "4b353d90ef5c3631d9e5bd2ff8a251e7948bbbca5dde951d6763c478856df40b",
+          "source_text_internal": "The trigger often appears when trust is uncertain, when closeness increases, or when old memories of being hurt are activated."
+        },
+        {
+          "source_field": "Defense Pattern",
+          "field_sha256": "3b0ffbe17c91a2ac6c23cd7cdeb0dd596af30256721620b318aaefe17ce9f72a",
+          "source_text_internal": "The defense may be guardedness, emotional testing, suspicion, withdrawal, or presenting strength while hiding tenderness."
+        },
+        {
+          "source_field": "Hidden Need",
+          "field_sha256": "4a1fd6a7cbb2b372c16c4c419f0610ed818658e88db1e9d97ee9694ab2831435",
+          "source_text_internal": "The hidden need is to feel protected without having to remain closed."
+        },
+        {
+          "source_field": "Relationship Pattern",
+          "field_sha256": "bd49d036652d7b31bd237d295962454955848a4414490e457862cbb78fc3f538",
+          "source_text_internal": "In relationships, this may appear as difficulty receiving care, expecting disappointment, or needing repeated proof before relaxing."
+        },
+        {
+          "source_field": "Work & Life Pattern",
+          "field_sha256": "e39e209df98466b42c81c514362f9c7759fcea14a57d0986ab54332ab3412e2a",
+          "source_text_internal": "In work and life, this may appear as independence taken to the point of isolation, reluctance to ask for support, or keeping creative work hidden."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "133b79de87b47df4a367fd1430e37939649730970c9d187121d4c0d95857c925",
+          "source_text_internal": "The integration begins by letting protection become flexible rather than permanent."
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "85dcb94895282ce617a35e269671d8ba2bee9f681cd1f358005bcc6a9f5e0030",
+          "source_text_internal": "For one week, practice one small act of safe receptivity, such as accepting help, naming a need, or allowing appreciation to land."
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "35a631f3f032222b6121acc909afc008980553ce9a42357aca3f63af8e902218",
+          "source_text_internal": "Your protection deserves respect. It kept something precious intact. Now it can learn to open by choice, not by force."
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+        }
+      ],
+      "source_fields_count": 12,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "保護自己是正當需要；可以調整的只是不再必要的僵硬防備。",
+        "explorable_strength": "在安全條件下辨認可建立信任的方式。",
+        "core_tension": "害怕受傷時，可能對所有靠近都預先提高戒備。",
+        "integration_direction": "先核對風險，選擇可信任的對象與可控制的界限。",
+        "customer_narrative_short_draft": "當有人願意靠近，你可能很珍惜這份好意，卻也擔心一旦接受就會失去選擇權。防禦循環關注的是保護方式何時可能過度固定；它絕不表示戒備本身錯誤，更不能推斷讀者曾經遭遇特定傷害。\n\n你可以先觀察對方是否尊重「不」、是否持續守信，再自行決定靠近多少。若存在威脅、操控或暴力，保持距離、保護安全與尋求協助是優先事項。信任不是任何人應該無條件交出的義務。",
+        "life_reflection_question": "我想守護的界限有哪些？哪些關係真的展現出值得信任的行動？",
+        "required_professional_safety_boundary": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "release_gate": {
+        "approved_snapshot_present": false,
+        "customer_release_eligible": false,
+        "release_state": "HOLD"
+      },
+      "editor_notes": [
+        "不可把現實防護／暴力受害者警覺病理化；安全與拒絕優先。",
+        "與其他模組組合後不得建構沒有來源支持的心理診斷或創傷史。",
+        "僅是象徵性反思提案；不得以生日推斷診斷、命運、實際經歷或固定人格。",
+        "真人未簽核，NOVA 不得在顧客端渲染或補寫未核准內容。"
+      ]
+    },
+    {
+      "code": "S4-11",
+      "module": "S4",
+      "module_name_zh_tw": "核心陰影模式",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "理想化循環",
+      "name_zh_source": "The Loop of Idealization / 理想化循环",
+      "source_code": "S4-11",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "source_file_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+      "source_record_sha256": "3a3c2cc5ca6e047354f4d81b82a7d40e436a7810fe8ee6f3b07d3f2008ba1042",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "172b65260ccfcfb33467d779278d2224eaff6d1459f5993bb10ab80034192694",
+          "source_text_internal": "What unconscious loop repeatedly shapes my experience?"
+        },
+        {
+          "source_field": "Core Loop",
+          "field_sha256": "60685cafa4b8a1cd946b085c13f2e290c9d06b2c1c5fb877932ecbb3ade9162e",
+          "source_text_internal": "This pattern may cause the person to attach to an ideal image of a person, path, role, or future before seeing reality clearly."
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "50efd343b84426b0fe47ad83ccc74991633789e943d7e0186b7af3c8798d1088",
+          "source_text_internal": "This shadow pattern invites the person to observe where imagination becomes stronger than direct evidence. It does not mean vision is wrong. It suggests that vision needs contact with reality in order to mature."
+        },
+        {
+          "source_field": "Emotional Trigger",
+          "field_sha256": "99ff017c495dcd38afd58ba0fd8c1bcd6e783133591fb976523e28735c439a97",
+          "source_text_internal": "The trigger often appears when the person deeply wants meaning, belonging, love, or a sense of destined direction."
+        },
+        {
+          "source_field": "Defense Pattern",
+          "field_sha256": "7b2d40ca315e5eea01b12a1db9e4558860bc08a0359f45b190988925df902601",
+          "source_text_internal": "The defense may be romanticizing, overlooking inconsistencies, projecting potential, or staying loyal to what something could be rather than what it is."
+        },
+        {
+          "source_field": "Hidden Need",
+          "field_sha256": "487f6fb31aeb45da2b8f0c8f69d7972c4a51f183c37cf7f2d4e14ee760aa51cf",
+          "source_text_internal": "The hidden need is to keep hope without abandoning discernment."
+        },
+        {
+          "source_field": "Relationship Pattern",
+          "field_sha256": "f13acf5379b632ab34acffa7fd2d60e64cd26e25b4ae37abba5297d77ccd96d5",
+          "source_text_internal": "In relationships, this may appear as seeing the best in someone while ignoring the pattern of how they actually show up."
+        },
+        {
+          "source_field": "Work & Life Pattern",
+          "field_sha256": "72e86e1948d855ce80667d719adcc3319084e377fdc095a398c310dac27c149d",
+          "source_text_internal": "In work and life, this may appear as committing to a vision before checking capacity, structure, timing, or real-world alignment."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "f5105f13c55b37f2fd60d86ea062fc1898749f9dd982446dbc36734805e39cc8",
+          "source_text_internal": "The integration begins when the person allows truth to refine hope rather than destroy it."
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "e64815f54469f9f7f3692583a8d8e835b613ad67631966710d83de09dce787dc",
+          "source_text_internal": "For one week, choose one area of life and write two lists: what I imagine, and what reality is consistently showing me."
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "8fecb421ee733f4a2e695b609a6e9914ea1c23b079c5e9e7aac4ad08d111363c",
+          "source_text_internal": "Hope is beautiful when it stays connected to truth. What is real does not need to be forced into an image in order to matter."
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+        }
+      ],
+      "source_fields_count": 12,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "希望與想像可以啟發選擇，也需要與真實行為核對。",
+        "explorable_strength": "在珍惜可能性的同時，辨認已發生的事實。",
+        "core_tension": "被一個理想吸引時，可能忽略持續出現的矛盾訊號。",
+        "integration_direction": "記錄期待與實際表現，允許重新評估。",
+        "customer_narrative_short_draft": "有時某個人、機會或計畫在剛開始顯得格外契合，讓你忍不住替未來補上許多美好的畫面。理想化循環不是要你放棄希望，而是邀請你問：我現在珍惜的是眼前真實的互動，還是我預想它可能成為的樣子？\n\n可以把對方做過的事、已確定的條件與自己的期待分開。若發現反覆越界或安全問題，不應用「對方潛力很好」來合理化。真正能延續的期待，需要與現實保持對話。",
+        "life_reflection_question": "我現在相信的，是持續可見的行動，還是一個尚未被驗證的美好想像？",
+        "required_professional_safety_boundary": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "release_gate": {
+        "approved_snapshot_present": false,
+        "customer_release_eligible": false,
+        "release_state": "HOLD"
+      },
+      "editor_notes": [
+        "理想化不能合理化持續的不安全行為。",
+        "與其他模組組合後不得建構沒有來源支持的心理診斷或創傷史。",
+        "僅是象徵性反思提案；不得以生日推斷診斷、命運、實際經歷或固定人格。",
+        "真人未簽核，NOVA 不得在顧客端渲染或補寫未核准內容。"
+      ]
+    },
+    {
+      "code": "S4-12",
+      "module": "S4",
+      "module_name_zh_tw": "核心陰影模式",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "拯救循環",
+      "name_zh_source": "The Loop of Rescuing / 拯救循环",
+      "source_code": "S4-12",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "source_file_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+      "source_record_sha256": "7f8e98870859b9d77a4edbe169665a430b72077def744b00a91fbf90ae1759e2",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "172b65260ccfcfb33467d779278d2224eaff6d1459f5993bb10ab80034192694",
+          "source_text_internal": "What unconscious loop repeatedly shapes my experience?"
+        },
+        {
+          "source_field": "Core Loop",
+          "field_sha256": "6ee2816c05d0c6d7bcd841d734d8ae1ce8c1af51aa166054961c6bff08f4fb5f",
+          "source_text_internal": "This pattern may place the person in the role of helper, fixer, or emotional rescuer before mutual responsibility is established."
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "764580dbb6a8f1e3f4169efffbba9a9c76ca8a34369f93776fdcbcc1f2fc97fe",
+          "source_text_internal": "This shadow pattern invites the person to notice where helping becomes a way to feel needed, safe, or valuable. It does not make care wrong. It asks whether care is being offered from freedom or from an unconscious need to secure connection."
+        },
+        {
+          "source_field": "Emotional Trigger",
+          "field_sha256": "6aaf2e4551a3572b8dd291608f644a6989050b076fbe68326a5aa0be805dc274",
+          "source_text_internal": "The trigger often appears when someone appears vulnerable, lost, wounded, or unable to hold their own responsibility."
+        },
+        {
+          "source_field": "Defense Pattern",
+          "field_sha256": "bd0720de608a51372477ed3c904774be8fbbe86c2533363bc246f0e79c9e1101",
+          "source_text_internal": "The defense may be over-giving, over-advising, taking responsibility for another person’s growth, or confusing love with repair work."
+        },
+        {
+          "source_field": "Hidden Need",
+          "field_sha256": "0f63031263500d4a9e15dc7df793f35fa45d9bd98c38423678f41d7f907faa59",
+          "source_text_internal": "The hidden need is to feel loved without having to become necessary."
+        },
+        {
+          "source_field": "Relationship Pattern",
+          "field_sha256": "adb0f44e8f7de21de2a434633efd480107481d7783ee8d8f3dc39bd252312ec0",
+          "source_text_internal": "In relationships, this may appear as choosing people who need support more than they can offer reciprocity."
+        },
+        {
+          "source_field": "Work & Life Pattern",
+          "field_sha256": "673f4255da25dbfc706426012baaee30a4bafdaf94b6018e0a6ae0786f1b7cdc",
+          "source_text_internal": "In work and life, this may appear as carrying the emotional or practical weight of a team, family, or project without clear consent or balance."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "3e33cd5a42aa3bb2a56258f45e9d2218c5391c180df03441f5a800c636690275",
+          "source_text_internal": "The integration begins by honoring compassion while returning responsibility to its rightful place."
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "56767f461d3ad2021dc8587c59336d90eadd98e5701c4868cd2deb9a4882d14e",
+          "source_text_internal": "For one week, before stepping in to help, ask: “Was I asked, am I resourced, and does this support their responsibility?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "2fd86b8308be99571688e7c20f3338083178c4848be4bc591b970b4a5b2d0b04",
+          "source_text_internal": "You can care deeply without becoming the bridge someone refuses to build within themselves. Love does not require self-abandonment."
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+        }
+      ],
+      "source_fields_count": 12,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "伸出援手很重要，但改變一個人的生活不能由旁人代替完成。",
+        "explorable_strength": "在同理、同意與責任分工中提供支持。",
+        "core_tension": "看到他人困難時，可能急著接管決定與後果。",
+        "integration_direction": "先問對方需要什麼，也確認自己的支持範圍。",
+        "customer_narrative_short_draft": "看到身邊的人陷入困境，你可能很想立刻替他整理全部答案，甚至替他做出決定。拯救循環提醒：關懷可以是真誠的，但當幫助使彼此的選擇權都變小，就需要重新確認界限。\n\n可以先問對方希望得到傾聽、資訊還是實際協助，並坦白說明自己的能力範圍。有些風險需要專業人員介入，不應由親友一肩承擔。把責任放回適當位置，不代表不在乎。",
+        "life_reflection_question": "在我想幫助一個人時，是否先問過對方真正需要的支持？",
+        "required_professional_safety_boundary": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "release_gate": {
+        "approved_snapshot_present": false,
+        "customer_release_eligible": false,
+        "release_state": "HOLD"
+      },
+      "editor_notes": [
+        "不要要求讀者承擔診斷、治療或他人生活決定。",
+        "與其他模組組合後不得建構沒有來源支持的心理診斷或創傷史。",
+        "僅是象徵性反思提案；不得以生日推斷診斷、命運、實際經歷或固定人格。",
+        "真人未簽核，NOVA 不得在顧客端渲染或補寫未核准內容。"
+      ]
+    },
+    {
+      "code": "S4-13",
+      "module": "S4",
+      "module_name_zh_tw": "核心陰影模式",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "抗拒循環",
+      "name_zh_source": "The Loop of Resistance / 抗拒循环",
+      "source_code": "S4-13",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "source_file_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+      "source_record_sha256": "f92c314afabd1ac13e5d0d8281fc743df9f84d0d547e418a56c2ab5fbfdcaaef",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "172b65260ccfcfb33467d779278d2224eaff6d1459f5993bb10ab80034192694",
+          "source_text_internal": "What unconscious loop repeatedly shapes my experience?"
+        },
+        {
+          "source_field": "Core Loop",
+          "field_sha256": "83f49fd0e51353000e279ebe61f4b20c8229f2b23c010c290831b93c6728ffe1",
+          "source_text_internal": "This pattern may meet guidance, structure, authority, or feedback with immediate resistance before the deeper truth has been considered."
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "cbbfc56f77e39963a75ffaf1c41099b7f7abf618acb5a444a67a5221e89cfae0",
+          "source_text_internal": "This shadow pattern invites the person to observe where resistance protects autonomy but may also block growth. It does not make rebellion wrong. It asks whether the person is responding to the present moment or reacting to an old experience of being controlled."
+        },
+        {
+          "source_field": "Emotional Trigger",
+          "field_sha256": "264d41ffe9c0bb52735e7f8ee7f4e7dea9feac4758d34ada01e8ff1d0dc6c300",
+          "source_text_internal": "The trigger often appears when the person feels told what to do, misunderstood, restricted, or placed inside a framework they did not choose."
+        },
+        {
+          "source_field": "Defense Pattern",
+          "field_sha256": "5cd9b17b5dd9fa5ca02bc024ee17f0d6fcdd6afd81013848572c917b97b56ca0",
+          "source_text_internal": "The defense may be refusal, argument, withdrawal, dismissing support, or defining oneself through opposition."
+        },
+        {
+          "source_field": "Hidden Need",
+          "field_sha256": "d8d8728aa08a68f567157e03bb58976340bb47d72c17333f3b0ebb951bcc8668",
+          "source_text_internal": "The hidden need is to feel free while still being able to receive what is useful."
+        },
+        {
+          "source_field": "Relationship Pattern",
+          "field_sha256": "5dad45545299a1be802862a16ed30a4c529f3f939e6db4dfcfde35eaf18fe7d6",
+          "source_text_internal": "In relationships, this may appear as pushing back against care, advice, or requests even when the connection itself is not unsafe."
+        },
+        {
+          "source_field": "Work & Life Pattern",
+          "field_sha256": "4b9d3352c45a7407a1d98c596d359161233f0725779be1a0cf18381dfbbd6ed7",
+          "source_text_internal": "In work and life, this may appear as difficulty collaborating with systems, mentors, managers, or structures that could actually support progress."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "5df63e513c90215a1e57e817ef026ff7a56446ee86dfd24bf30e70b5b2f9ff7f",
+          "source_text_internal": "The integration begins by separating true inner authority from automatic opposition."
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "54530c5ededfc02f19a2920f4314beecfccf511e5bbb27495025428af1567191",
+          "source_text_internal": "For one week, when resistance arises, pause and ask: “What part of this is control, and what part of this may be useful information?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "350dd75040df6559d17179fc7706a44eeec4a0ad2a7db8bc11bd3c8e9df75113",
+          "source_text_internal": "Freedom is not the same as rejecting everything. True sovereignty can listen, discern, and choose without needing to fight every form."
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+        }
+      ],
+      "source_fields_count": 12,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "拒絕不適合的要求是自主；值得留意的是是否一律拒絕任何回饋。",
+        "explorable_strength": "分辨保護界限與反射性反對。",
+        "core_tension": "被指示或限制時，可能還沒聽完就想推開整個建議。",
+        "integration_direction": "先確認安全與選擇權，再判斷建議哪部分有用。",
+        "customer_narrative_short_draft": "有人提出一項做法，你心裡可能立即浮現「為什麼一定要照你的方式」。抗拒循環不是說不服從就是問題；對不合理、侵害或危險的要求說不，本來就很重要。它要探索的是：在安全且可協商的情境裡，反對是否有時先於真正理解。\n\n可以先問清楚對方希望解決什麼問題，再分辨哪些原則不能退讓、哪些做法可以討論。你有權拒絕，也有權選擇採納一部分有用的意見。自主不一定要透過持續對抗來證明。",
+        "life_reflection_question": "我最近拒絕的一個建議，究竟侵犯了哪個界限，還是有部分值得重新理解？",
+        "required_professional_safety_boundary": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "release_gate": {
+        "approved_snapshot_present": false,
+        "customer_release_eligible": false,
+        "release_state": "HOLD"
+      },
+      "editor_notes": [
+        "合理拒絕、反抗侵害或危險命令不是需要修正的缺陷。",
+        "與其他模組組合後不得建構沒有來源支持的心理診斷或創傷史。",
+        "僅是象徵性反思提案；不得以生日推斷診斷、命運、實際經歷或固定人格。",
+        "真人未簽核，NOVA 不得在顧客端渲染或補寫未核准內容。"
+      ]
+    },
+    {
+      "code": "S4-14",
+      "module": "S4",
+      "module_name_zh_tw": "核心陰影模式",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "完美循環",
+      "name_zh_source": "The Loop of Perfection / 完美循环",
+      "source_code": "S4-14",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "source_file_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+      "source_record_sha256": "86b1e1015e4d4bf8492bfe011a53a9ccdebb3b8df49aad26b63eeb6388b983f4",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "172b65260ccfcfb33467d779278d2224eaff6d1459f5993bb10ab80034192694",
+          "source_text_internal": "What unconscious loop repeatedly shapes my experience?"
+        },
+        {
+          "source_field": "Core Loop",
+          "field_sha256": "47f183827d16597a27506cbf772235c0c665435cdc44b19aa5d7d5a953730fdb",
+          "source_text_internal": "This pattern may delay expression, intimacy, or action until the person feels polished, ready, certain, or beyond criticism."
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "7197a1c4f229df4955551f796fe1ba9648eee3e8c10d30a98c879c332d6910df",
+          "source_text_internal": "This shadow pattern invites the person to notice where the desire to do things well becomes a reason not to begin, reveal, or risk being seen. It does not make excellence wrong. It shows where excellence may have become tied to emotional safety."
+        },
+        {
+          "source_field": "Emotional Trigger",
+          "field_sha256": "fa6a9b951e3e586446a3ef3f74f7827ec6ce46c758a630bbc6156ab6bf77da2c",
+          "source_text_internal": "The trigger often appears when the person may be evaluated, misunderstood, compared, or seen before they feel fully prepared."
+        },
+        {
+          "source_field": "Defense Pattern",
+          "field_sha256": "d8cefe3a3c4d8c82d6b181c6973a4daa55ac786917660f85d7595e431b807a7c",
+          "source_text_internal": "The defense may be refinement without release, harsh self-correction, postponement, or hiding behind preparation."
+        },
+        {
+          "source_field": "Hidden Need",
+          "field_sha256": "ad5f1d3e07b95d805d76c6e4872024b29c9f029d9f7f7681bb3b902928d2bd3c",
+          "source_text_internal": "The hidden need is to feel safe being in process, not only admired when complete."
+        },
+        {
+          "source_field": "Relationship Pattern",
+          "field_sha256": "7188dd26fb4ecaa829cb6791f7f084ea35318f5afea28a4c52d3e37495a73199",
+          "source_text_internal": "In relationships, this may appear as editing emotions before sharing them, fearing neediness, or trying to be easy to love."
+        },
+        {
+          "source_field": "Work & Life Pattern",
+          "field_sha256": "20955d0274b2a6c64f3a608b2e2f037b99f5e2c6f5cc510bfcfe4faa8dc9cea5",
+          "source_text_internal": "In work and life, this may appear as unfinished projects, reluctance to publish, or difficulty learning publicly."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "2806253fdbe9737e43db603af6eeee9ff4426cd6ff3c32e6df23f1ca24edcea1",
+          "source_text_internal": "The integration begins when the person allows honest participation to matter more than flawless presentation."
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "32e6540270105104dfbd5df0668d521ebd0682b32dfc9da7d55197477750c745",
+          "source_text_internal": "For one week, share or complete one small imperfect action that moves something real forward."
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "2cd5b108b4761378eb852efa785352821fb4ebe6d715a68c18f74e5cd5285203",
+          "source_text_internal": "Perfection often promises protection, but it can quietly prevent life from touching you. What is real is allowed to begin unfinished."
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+        }
+      ],
+      "source_fields_count": 12,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "品質可以被要求，但若永遠等到無瑕，重要行動可能停在準備階段。",
+        "explorable_strength": "讓實作、回饋與修訂成為成長的一部分。",
+        "core_tension": "擔心被評價時，可能反覆修改而不敢推出成果。",
+        "integration_direction": "區分必要品質門檻與可以在回饋中調整的部分。",
+        "customer_narrative_short_draft": "一份作品已經接近完成，你卻又想再修一次，因為擔心別人看到不夠好的地方。完美循環關注的不是高標準本身，而是準備是否逐漸成了避免被看見的保護方式。\n\n試著為不同工作設下合理門檻：涉及安全與專業的部分必須符合規範；其他可以改進的部分，則可以在取得回饋後修訂。允許自己以負責任但尚未完美的樣子參與，不需要把每次公開都當作對價值的審判。",
+        "life_reflection_question": "我現在繼續修改，是在改善必要品質，還是在避免被人看見？",
+        "required_professional_safety_boundary": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "release_gate": {
+        "approved_snapshot_present": false,
+        "customer_release_eligible": false,
+        "release_state": "HOLD"
+      },
+      "editor_notes": [
+        "品質要求與過度延宕須區分；專業品質門檻仍須遵守。",
+        "與其他模組組合後不得建構沒有來源支持的心理診斷或創傷史。",
+        "僅是象徵性反思提案；不得以生日推斷診斷、命運、實際經歷或固定人格。",
+        "真人未簽核，NOVA 不得在顧客端渲染或補寫未核准內容。"
+      ]
+    },
+    {
+      "code": "S4-15",
+      "module": "S4",
+      "module_name_zh_tw": "核心陰影模式",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "靈性繞行循環",
+      "name_zh_source": "The Loop of Spiritual Bypassing / 灵性绕行循环",
+      "source_code": "S4-15",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "source_file_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+      "source_record_sha256": "aecb6764eaba52761bedc70eec08082cf84fecba4e31d138f698a4edbcdb1ab8",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "172b65260ccfcfb33467d779278d2224eaff6d1459f5993bb10ab80034192694",
+          "source_text_internal": "What unconscious loop repeatedly shapes my experience?"
+        },
+        {
+          "source_field": "Core Loop",
+          "field_sha256": "ba276fbdf7eba6b30abb0dc07e180609a642ee1a27d48c566cb8894c355125bb",
+          "source_text_internal": "This pattern may use insight, acceptance, or higher perspective to move away from emotions that still need honest contact."
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "323fcfef1cdaedc6a0eae0b093a2aa08cd228449b3b6c260a97cbebfeeafa36b",
+          "source_text_internal": "This shadow pattern invites the person to notice where spiritual language or reflective understanding becomes a way to avoid grief, anger, boundaries, or practical responsibility. It does not reject spirituality. It asks for spirituality to become embodied and truthful."
+        },
+        {
+          "source_field": "Emotional Trigger",
+          "field_sha256": "625baeda1670fbbd2ac8fe84e6645aa4ecda9de01abfb9b92a33a32bfc70491c",
+          "source_text_internal": "The trigger often appears when the person feels pain that does not fit their preferred self-image of being calm, wise, loving, or evolved."
+        },
+        {
+          "source_field": "Defense Pattern",
+          "field_sha256": "049a0a42ab7ce98739bef2204cf6a47be9524653695de0db7e4921f964d20d2e",
+          "source_text_internal": "The defense may be over-accepting, explaining pain too quickly, forgiving before feeling, or turning every wound into a lesson before the body has been heard."
+        },
+        {
+          "source_field": "Hidden Need",
+          "field_sha256": "4315afa21720f2c53349182709695582d81ce4e57584819de06a0370e6219ebc",
+          "source_text_internal": "The hidden need is to be allowed to be human without losing the path of awareness."
+        },
+        {
+          "source_field": "Relationship Pattern",
+          "field_sha256": "48f297853434c8f22da3ec24e95769dc6f9032d090ef8b82a70433dd9c110dca",
+          "source_text_internal": "In relationships, this may appear as avoiding conflict through spiritual explanations or minimizing personal hurt in the name of compassion."
+        },
+        {
+          "source_field": "Work & Life Pattern",
+          "field_sha256": "517d8752fa23758225141b7a75eae6cd8ea50321405907a39a716b6ebc2c919e",
+          "source_text_internal": "In work and life, this may appear as vision without structure, insight without action, or inner work without outer accountability."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "eba05da509cd11a85495c94dfeb9d65210e8249a9d6edb515c0ef3526d2f9b52",
+          "source_text_internal": "The integration begins by letting truth include the body, emotions, boundaries, and behavior."
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "6c4f408585ba7c946e0e6b2480cb81a416390c08e78a3a4c8a16196e6f87df72",
+          "source_text_internal": "For one week, when you explain a feeling, first pause and name the feeling plainly before giving it meaning."
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "e20f6fe1b064f41ecff7c827db484f93f98bbb81df3bca9beff5eba9e8d11c5e",
+          "source_text_internal": "Awareness is not an escape from being human. The higher view becomes real only when it can hold the raw truth of the moment."
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+        }
+      ],
+      "source_fields_count": 12,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "理解與接納不能取代對情緒、身體、界限及實際責任的照顧。",
+        "explorable_strength": "讓抽象領悟與真實生活需要互相核對。",
+        "core_tension": "面對受傷或衝突時，可能急著用「這是成長」跳過感受。",
+        "integration_direction": "允許問題保持具體，必要時尋求專業或法律協助。",
+        "customer_narrative_short_draft": "有時一件事明明讓人難過，周圍卻急著說「把它當成一堂課就好」。靈性繞行循環邀請我們留意：當意義被說得太快，是否反而讓真正需要處理的傷害、憤怒或界限失去位置？\n\n理解可以在適當時候幫助人，但不必替代真實感受，更不要求受傷的人原諒、忍耐或重返不安全的處境。先確認事實、需求與必要協助，讓任何領悟都能經得起現實檢驗。",
+        "life_reflection_question": "我是否曾急著替某件難受的事找到意義，而跳過必要的照顧或處理？",
+        "required_professional_safety_boundary": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "release_gate": {
+        "approved_snapshot_present": false,
+        "customer_release_eligible": false,
+        "release_state": "HOLD"
+      },
+      "editor_notes": [
+        "不可用靈性意義消解實際傷害或催促原諒。",
+        "與其他模組組合後不得建構沒有來源支持的心理診斷或創傷史。",
+        "僅是象徵性反思提案；不得以生日推斷診斷、命運、實際經歷或固定人格。",
+        "真人未簽核，NOVA 不得在顧客端渲染或補寫未核准內容。"
+      ]
+    },
+    {
+      "code": "S4-16",
+      "module": "S4",
+      "module_name_zh_tw": "核心陰影模式",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "自我犧牲循環",
+      "name_zh_source": "The Loop of Self-Sacrifice / 自我牺牲循环",
+      "source_code": "S4-16",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "source_file_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+      "source_record_sha256": "d91b7a35250085a0d98ab2d71af81bc1cd0b7ae2fd3b52d15958b685aedcd866",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "172b65260ccfcfb33467d779278d2224eaff6d1459f5993bb10ab80034192694",
+          "source_text_internal": "What unconscious loop repeatedly shapes my experience?"
+        },
+        {
+          "source_field": "Core Loop",
+          "field_sha256": "658f0f176b58d1cfb68de1e608b34ec9c9ecd39868229c7a43c7e4284eea8558",
+          "source_text_internal": "This pattern may lead the person to give, support, tolerate, or endure beyond what is honest for their own energy."
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "e24c8b329634598a75602d0e9c5c6368d5136dab1a86fc6507e667d8c099dad1",
+          "source_text_internal": "This shadow pattern invites the person to observe where goodness becomes self-erasure. It does not criticize generosity. It points to the moment when giving loses its clarity because the self has been left out of the equation."
+        },
+        {
+          "source_field": "Emotional Trigger",
+          "field_sha256": "791cc53528356bb437720ce9f011860d2120ec4ac02e939205ca8f3e9f2f4279",
+          "source_text_internal": "The trigger often appears when someone needs help, when conflict may arise, or when the person fears being seen as selfish."
+        },
+        {
+          "source_field": "Defense Pattern",
+          "field_sha256": "d5f21763e165463b1d998bfaa83aafabe6b85dc20b1bed79abe8651c0909839e",
+          "source_text_internal": "The defense may be over-tolerance, saying yes too quickly, minimizing exhaustion, or believing love must be proven through endurance."
+        },
+        {
+          "source_field": "Hidden Need",
+          "field_sha256": "7af23bb2f91fe280d81ed34b155e8a2740b30fdf1d09b6a3afc0d3e5cc1c1627",
+          "source_text_internal": "The hidden need is to know that care can include the self without becoming selfish."
+        },
+        {
+          "source_field": "Relationship Pattern",
+          "field_sha256": "b93a37590ee26bb22c91ffb8d924ac07f0430435d0a41eb1e42baff234f6f2f1",
+          "source_text_internal": "In relationships, this may appear as unequal giving, quiet resentment, or staying in roles that no longer feel truthful."
+        },
+        {
+          "source_field": "Work & Life Pattern",
+          "field_sha256": "02c3cfdd02815fd53d0820ec244c3c6efe5f1f1abbad828f3523c4d1ab00ce05",
+          "source_text_internal": "In work and life, this may appear as burnout, invisible labor, or being relied upon because the person rarely reveals their limits."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "d5b5564132330a26c34dfc7178cbd5fa27a40def607eee8c2161b72e4b3503ab",
+          "source_text_internal": "The integration begins by allowing boundaries to become part of love."
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "894aa60e6fd464d5ae3c4999f674c9380d81e0c456e62eec7a47dd16f52ba2af",
+          "source_text_internal": "For one week, notice every automatic yes and pause before responding. Ask: “Do I have the capacity to give this honestly?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "20b73a2bea779b700e5d5c6f13a79237f0ee59a3c9328beaf8f14a8c7b92269c",
+          "source_text_internal": "Your care becomes clearer when you are included in it. A boundary is not the end of love; it is where love becomes sustainable."
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+        }
+      ],
+      "source_fields_count": 12,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "願意付出不必以失去自己的健康、時間與界限為代價。",
+        "explorable_strength": "在照顧別人時，也能看見自己的需要。",
+        "core_tension": "害怕被視為自私時，可能答應超出負荷的要求。",
+        "integration_direction": "先確認可以承擔的範圍，再提出清楚的支持方式。",
+        "customer_narrative_short_draft": "你可能常常先說「沒關係，我來」，直到自己的安排一再被延後。自我犧牲循環並不否定照顧他人的價值，它邀請你看看：某些付出是否慢慢變成了不敢拒絕的習慣？\n\n可以先確認自己真正有多少時間和能力，再回覆需要幫助的人。涉及照顧責任與安全時，應確保妥善安排，而不是突然丟下必要義務。清楚說出界限，是讓關懷得以持續的一部分。",
+        "life_reflection_question": "有哪一件幫忙，我需要重新說明自己能做到的範圍？",
+        "required_professional_safety_boundary": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "release_gate": {
+        "approved_snapshot_present": false,
+        "customer_release_eligible": false,
+        "release_state": "HOLD"
+      },
+      "editor_notes": [
+        "照顧義務與必要安全責任不能因界限倡議而無視。",
+        "與其他模組組合後不得建構沒有來源支持的心理診斷或創傷史。",
+        "僅是象徵性反思提案；不得以生日推斷診斷、命運、實際經歷或固定人格。",
+        "真人未簽核，NOVA 不得在顧客端渲染或補寫未核准內容。"
+      ]
+    },
+    {
+      "code": "S4-17",
+      "module": "S4",
+      "module_name_zh_tw": "核心陰影模式",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "孤立循環",
+      "name_zh_source": "The Loop of Isolation / 孤立循环",
+      "source_code": "S4-17",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "source_file_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+      "source_record_sha256": "3b34a7605970e6efb2692fa3fd77024463ec6bd00a53fd72b5fb51bfbf00c911",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "172b65260ccfcfb33467d779278d2224eaff6d1459f5993bb10ab80034192694",
+          "source_text_internal": "What unconscious loop repeatedly shapes my experience?"
+        },
+        {
+          "source_field": "Core Loop",
+          "field_sha256": "8295f7e47f615284214d87640ef34d9fc49e332da03a28ea01efb3608090bdfb",
+          "source_text_internal": "This pattern may convince the person that they must process, solve, or carry things alone."
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "d7971bf0985312f75a8127fa4d0cd3026561c7546fb3a6a9e99e62f216ecd101",
+          "source_text_internal": "This shadow pattern invites the person to notice where independence becomes isolation. It does not deny their strength. It asks whether strength has become a place to hide from receiving support."
+        },
+        {
+          "source_field": "Emotional Trigger",
+          "field_sha256": "f85c9dc1faba181a34ae6e555be9d11d8fcd21da65bad9f3ad02538adb74f7c8",
+          "source_text_internal": "The trigger often appears when the person feels misunderstood, disappointed by others, or afraid that needing support will create vulnerability."
+        },
+        {
+          "source_field": "Defense Pattern",
+          "field_sha256": "0f3eb4b8cac3996718cf872d221c364cecfa7c1b9eb82529d9913f2a9556e32a",
+          "source_text_internal": "The defense may be self-containment, emotional privacy, disappearing during difficulty, or assuming others will not understand."
+        },
+        {
+          "source_field": "Hidden Need",
+          "field_sha256": "f4f1d1eb2fee994cbc20fd29a992e8bb095359115cf57e760e12e7fd5e70b909",
+          "source_text_internal": "The hidden need is to experience support without feeling weak, exposed, or indebted."
+        },
+        {
+          "source_field": "Relationship Pattern",
+          "field_sha256": "41f2350791a3f014a6a784e1db34d76ad74220181b9484b1f4f4fe5bdb9b6445",
+          "source_text_internal": "In relationships, this may appear as keeping struggles private, helping others more than being helped, or leaving before dependence can form."
+        },
+        {
+          "source_field": "Work & Life Pattern",
+          "field_sha256": "0a3bb30fc96fc68f740d42088fb7955a673a1bd2d0137e1b71abda0ea86f3986",
+          "source_text_internal": "In work and life, this may appear as carrying excessive responsibility, avoiding collaboration, or not showing work until it feels completely safe."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "fc325ec050704bcce9ecaa7ebb753a335b1bc4a9393aea51cc678943930d7e3b",
+          "source_text_internal": "The integration begins by practicing chosen, discerning openness rather than total self-reliance."
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "a1e836c8f1ed09fbd975a63675ba48135ffb95a33c1479295d860b4a944b64dc",
+          "source_text_internal": "For one week, share one real but manageable truth with someone who has shown consistency and care."
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "b95ff39c93ed65300b8ac7f783789e6e7ada8b70499173749f7bbd05430ea731",
+          "source_text_internal": "You do not have to collapse to receive support. You can remain whole and still allow another person to stand beside you."
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+        }
+      ],
+      "source_fields_count": 12,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "獨立值得珍惜，但不必凡事由一個人承擔。",
+        "explorable_strength": "選擇可信任的連結，而非被迫全部敞開。",
+        "core_tension": "失望或怕麻煩別人時，可能把困難完全藏起來。",
+        "integration_direction": "從一個清楚的小需求開始嘗試求助。",
+        "customer_narrative_short_draft": "遇到難題時，你也許習慣先告訴自己「我再想辦法就好」，即使早已很疲累。孤立循環關注的，是不願求助何時從一種選擇，慢慢變成唯一能接受的方法。\n\n不必向所有人交代自己，也不需要因為想獨處而自責。若願意，可以選一個尊重界限的人，只說出目前需要的具體協助。可靠的支持不一定要求完全坦白；允許自己被幫助，也可以是審慎而自主的決定。",
+        "life_reflection_question": "最近哪個難題，我可以向可信任的人提出一項具體而有限的求助？",
+        "required_professional_safety_boundary": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "release_gate": {
+        "approved_snapshot_present": false,
+        "customer_release_eligible": false,
+        "release_state": "HOLD"
+      },
+      "editor_notes": [
+        "選擇獨處可能健康；重點是是否有支持選項而非一律外向。",
+        "與其他模組組合後不得建構沒有來源支持的心理診斷或創傷史。",
+        "僅是象徵性反思提案；不得以生日推斷診斷、命運、實際經歷或固定人格。",
+        "真人未簽核，NOVA 不得在顧客端渲染或補寫未核准內容。"
+      ]
+    },
+    {
+      "code": "S4-18",
+      "module": "S4",
+      "module_name_zh_tw": "核心陰影模式",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "強度循環",
+      "name_zh_source": "The Loop of Intensity / 强度循环",
+      "source_code": "S4-18",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "source_file_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+      "source_record_sha256": "340c8f12db575db8fe7f93c13ba230dc7948b4c067a0e24a96cbcc94bfde2d4b",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "172b65260ccfcfb33467d779278d2224eaff6d1459f5993bb10ab80034192694",
+          "source_text_internal": "What unconscious loop repeatedly shapes my experience?"
+        },
+        {
+          "source_field": "Core Loop",
+          "field_sha256": "4923346c491e194b9d50bcf34a72a50290304612a71ef4a144968c27b336f3da",
+          "source_text_internal": "This pattern may make emotional intensity feel like truth, urgency, chemistry, or transformation."
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "7bbf4c0d4c877df7454e306e40da26e3851829be87cbc3beaa1899f97ddb341c",
+          "source_text_internal": "This shadow pattern invites the person to observe where intensity is mistaken for depth. It does not make strong feeling wrong. It asks whether the nervous system has learned to recognize activation more easily than steadiness."
+        },
+        {
+          "source_field": "Emotional Trigger",
+          "field_sha256": "0e1bbb48d82303c14f6aced807ad8ef2b31c4eeca1f572e6a3f9c6ebffd4cb4b",
+          "source_text_internal": "The trigger often appears when there is uncertainty, attraction, conflict, crisis, or the possibility of deep change."
+        },
+        {
+          "source_field": "Defense Pattern",
+          "field_sha256": "09d57ba47c3e542aa64011cd7e62b9fdc31c87aca8f4b2ef39cfd5d17dd35897",
+          "source_text_internal": "The defense may be dramatizing, escalating, seeking catharsis, or choosing situations that feel powerful but not necessarily nourishing."
+        },
+        {
+          "source_field": "Hidden Need",
+          "field_sha256": "b6d4c80a6798e6c4c4ae7f99300e3667e95c97f04de9f29db1f064e9a1d1072d",
+          "source_text_internal": "The hidden need is to feel alive, moved, and transformed without needing chaos to create meaning."
+        },
+        {
+          "source_field": "Relationship Pattern",
+          "field_sha256": "e70f8fd2c7d4f59414a62970b0d388b5ed4c200fc2e731b48f6e2adcd61da7a8",
+          "source_text_internal": "In relationships, this may appear as confusing anxiety with passion, conflict with intimacy, or rupture with importance."
+        },
+        {
+          "source_field": "Work & Life Pattern",
+          "field_sha256": "afc260879f6119625a605d8d81319e69af02f6679ef2f01fa30148336102f8b8",
+          "source_text_internal": "In work and life, this may appear as thriving in crisis while struggling with steady growth, maintenance, or quiet consistency."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "b72426aafeb73813d695464b4f0af504030738445f28d952baab693d045dafd9",
+          "source_text_internal": "The integration begins when the person learns to recognize calm depth as real, not empty."
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "ab5f9fb40e75407f805e959f15655c464e66795983b8c99e5b00c754ff573d9a",
+          "source_text_internal": "For one week, notice when urgency rises and ask: “Is this truth, activation, or a familiar intensity?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "ab3f10b688146ce21c9b19250efc0501c0b3c225b3c477022bd31778eaf4098d",
+          "source_text_internal": "Depth does not always arrive as fire. Sometimes the most transformative thing is the steady presence that no longer requires chaos."
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+        }
+      ],
+      "source_fields_count": 12,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "情緒或事件的強烈程度，不必等於關係真實或改變深刻。",
+        "explorable_strength": "分辨熱烈、急迫與穩定的長期價值。",
+        "core_tension": "衝突或快速變化可能被誤認為更有意義。",
+        "integration_direction": "在安全的節奏裡觀察行動是否持續可靠。",
+        "customer_narrative_short_draft": "有些互動十分激烈，令人覺得「這一定很重要」；平穩的日子反而可能被認為少了什麼。強度循環邀請你辨認：感受越強烈，是否就一定代表選擇越適合？\n\n可以觀察對方是否尊重界限、行動是否一致，以及自己能否自在休息。暴力、威脅、操控或危險的衝突不應被包裝成深刻的愛與成長。真正有力量的改變，也可以在平靜和可持續的生活裡發生。",
+        "life_reflection_question": "我曾把哪一次強烈的感受當成確定答案？還有哪些事實值得核對？",
+        "required_professional_safety_boundary": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "release_gate": {
+        "approved_snapshot_present": false,
+        "customer_release_eligible": false,
+        "release_state": "HOLD"
+      },
+      "editor_notes": [
+        "激烈情緒與危險關係不可被浪漫化成命定深度。",
+        "與其他模組組合後不得建構沒有來源支持的心理診斷或創傷史。",
+        "僅是象徵性反思提案；不得以生日推斷診斷、命運、實際經歷或固定人格。",
+        "真人未簽核，NOVA 不得在顧客端渲染或補寫未核准內容。"
+      ]
+    },
+    {
+      "code": "S4-19",
+      "module": "S4",
+      "module_name_zh_tw": "核心陰影模式",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "未表達真相循環",
+      "name_zh_source": "The Loop of Unexpressed Truth / 未表达真相循环",
+      "source_code": "S4-19",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file": "1320_S4_Core_Shadow_Pattern_Content_Database_v2_EN.md",
+      "source_file_sha256": "2fc1f4899b6593db026f2b81b2ee3a430fa9c36fb21c3429745f84f7f7f7be55",
+      "source_record_sha256": "b170f2e7d942ddb25f02b0154b1c82667af4b7aa12fc672b424058e87a899581",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "172b65260ccfcfb33467d779278d2224eaff6d1459f5993bb10ab80034192694",
+          "source_text_internal": "What unconscious loop repeatedly shapes my experience?"
+        },
+        {
+          "source_field": "Core Loop",
+          "field_sha256": "8ebedea81546e572b305a21fd0df6041a37de35adb6c766a9e3bd4645a1b341f",
+          "source_text_internal": "This pattern may keep the person’s truth inside until it becomes tension, resentment, confusion, or distance."
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "f106390a3656fb4855fa509f5094102a366b9318f956a48685ca430d4105d6a0",
+          "source_text_internal": "This shadow pattern invites the person to notice where silence protects peace on the surface while creating separation underneath. It does not demand harsh expression. It asks for honest expression that is grounded, timely, and respectful."
+        },
+        {
+          "source_field": "Emotional Trigger",
+          "field_sha256": "979b1409f3191cca0307a3df1a321c85eec8c4d908da7e52af09e45e09da7acc",
+          "source_text_internal": "The trigger often appears when speaking honestly may disappoint someone, change a dynamic, or reveal a need that feels vulnerable."
+        },
+        {
+          "source_field": "Defense Pattern",
+          "field_sha256": "48a28e649496b2d01d874f676e77cf03ff2c5a143e4012c82234eb3807e8deda",
+          "source_text_internal": "The defense may be withholding, hinting, overthinking words, pretending to agree, or waiting until pressure turns into sudden release."
+        },
+        {
+          "source_field": "Hidden Need",
+          "field_sha256": "1228deae271aa54ad5ceb877592b270ea58c78631c66d8b8f7381b4809a45bf8",
+          "source_text_internal": "The hidden need is to trust that truth can be expressed without destroying connection."
+        },
+        {
+          "source_field": "Relationship Pattern",
+          "field_sha256": "74be3c0ac0e5536ef45e41a923fd64bd7279af255559352415f7667a1b1a6cac",
+          "source_text_internal": "In relationships, this may appear as unspoken needs, delayed honesty, or expecting others to sense what has not been named."
+        },
+        {
+          "source_field": "Work & Life Pattern",
+          "field_sha256": "a8a3f8a42ca7a600034f7eb4def9cc8525a66da1b1db7dacf59049d1140f1019",
+          "source_text_internal": "In work and life, this may appear as not advocating for oneself, avoiding necessary feedback, or letting misalignment continue too long."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "9295be02d826e1fb7f4c24c8a364459a0c51958df660e544a727792fcbb0da81",
+          "source_text_internal": "The integration begins with simple, direct, non-accusatory truth spoken before the body has to carry it as pressure."
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "25f7457e0d4ab3d1a460e185ccf5438280ee488bd40e6de2012a73c0c361ad8c",
+          "source_text_internal": "For one week, practice one clean sentence each day: “What is true for me is…”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "8371f54b218ab55094d533fffdc73847d23e3fa300c0c39ffaf0977fc5331a8c",
+          "source_text_internal": "Your truth does not have to be loud to be real. When spoken clearly and early, it becomes a bridge rather than a rupture."
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity."
+        }
+      ],
+      "source_fields_count": 12,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "真誠需要適當的時機與安全條件，不必等到積累成壓力才說。",
+        "explorable_strength": "以清楚而不指責的語言表達需求與偏好。",
+        "core_tension": "怕破壞關係時，可能一直沉默或只給出暗示。",
+        "integration_direction": "先辨認安全，選擇合適對象與方式說出一個具體需要。",
+        "customer_narrative_short_draft": "討論中你其實有不同想法，卻連續幾次說「都可以」，直到後來越想越委屈。未表達真相循環描寫的，是反覆把自己放到最後，可能使溝通逐漸失去準確性。\n\n如果情境安全，可以嘗試一句清楚而平穩的表達：「我想先說明我的需要。」說出真實不必以激烈爭吵換取，也不保證每個人都會同意。如果面對的是威脅或報復風險，優先尋求安全協助，而不是勉強直接對質。",
+        "life_reflection_question": "有哪件重要的事，我一直期待別人猜到，卻尚未在安全條件下說清楚？",
+        "required_professional_safety_boundary": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "release_gate": {
+        "approved_snapshot_present": false,
+        "customer_release_eligible": false,
+        "release_state": "HOLD"
+      },
+      "editor_notes": [
+        "面對報復或威脅時不能強迫直接溝通，安全優先。",
+        "與其他模組組合後不得建構沒有來源支持的心理診斷或創傷史。",
+        "僅是象徵性反思提案；不得以生日推斷診斷、命運、實際經歷或固定人格。",
+        "真人未簽核，NOVA 不得在顧客端渲染或補寫未核准內容。"
+      ]
+    }
+  ]
+}

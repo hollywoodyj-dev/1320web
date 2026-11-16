@@ -1,0 +1,28 @@
+{
+  "module": "S0",
+  "date": "2026-11-16",
+  "record_count": 20,
+  "source_field_count_each": 11,
+  "total_source_field_anchors": 220,
+  "distinct_source_record_sha256": 20,
+  "distinct_narrative_texts": 20,
+  "count_pending": 20,
+  "count_officially_approved": 0,
+  "missing_source_fields": 0,
+  "four_case_codes": {
+    "1980-05-22": "S0-07",
+    "1982-02-03": "S0-05",
+    "2008-12-08": "S0-01",
+    "2013-06-12": "S0-15"
+  },
+  "checks": {
+    "all_expected_codes": true,
+    "source_sha_matches": true,
+    "anchor_sha_matches": true,
+    "all_source_fields_preserved": true,
+    "narratives_independent_from_summary": true,
+    "all_release_gates_fail_closed": true,
+    "four_calibration_codes_present": true,
+    "mandatory_safety_boundary": "S0 editorial safety checked"
+  }
+}

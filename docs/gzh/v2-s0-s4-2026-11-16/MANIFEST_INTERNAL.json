@@ -1,0 +1,70 @@
+{
+  "handoff_id": "1320-zhTW-s0-s4-40-review-2026-11-16-rc1",
+  "order": [
+    "S0-20 RC1",
+    "S4-20 RC1"
+  ],
+  "description": "NOVA INTERNAL ONLY",
+  "modules": {
+    "S0": {
+      "total": 20,
+      "source_fields_per_record": 11,
+      "total_source_fields": 220,
+      "editorial_status": "PENDING_REVIEW",
+      "approved_count": 0,
+      "package_file": "1320_S0_20_NOVA_REVIEW_RC1_INTERNAL.zip"
+    },
+    "S4": {
+      "total": 20,
+      "source_fields_per_record": 12,
+      "total_source_fields": 240,
+      "editorial_status": "PENDING_REVIEW",
+      "approved_count": 0,
+      "package_file": "1320_S4_20_NOVA_REVIEW_RC1_INTERNAL.zip"
+    }
+  },
+  "calibration_cases": [
+    {
+      "birthday": "1980-05-22",
+      "S2": "S2-27",
+      "S0": "S0-07",
+      "S4": "S4-14",
+      "status": "INTERNAL_CALIBRATION_ONLY"
+    },
+    {
+      "birthday": "1982-02-03",
+      "S2": "S2-05",
+      "S0": "S0-05",
+      "S4": "S4-10",
+      "status": "INTERNAL_CALIBRATION_ONLY"
+    },
+    {
+      "birthday": "2008-12-08",
+      "S2": "S2-20",
+      "S0": "S0-01",
+      "S4": "S4-01",
+      "status": "INTERNAL_CALIBRATION_ONLY"
+    },
+    {
+      "birthday": "2013-06-12",
+      "S2": "S2-18",
+      "S0": "S0-15",
+      "S4": "S4-13",
+      "status": "INTERNAL_CALIBRATION_ONLY"
+    }
+  ],
+  "all_40_pending": true,
+  "official_approved_count_total_258": 0,
+  "release": "HOLD",
+  "v1_production_price_checkout": "NO_CHANGE",
+  "reviewer": null,
+  "approved_at": null,
+  "rules": [
+    "source_text_internal must be restricted to internal editors",
+    "no auto approval",
+    "no new formula or customer routing",
+    "S0 no diagnosis/fate/victim-blame",
+    "S4 mandatory exact safety sentence",
+    "underage calibration not customer release"
+  ]
+}

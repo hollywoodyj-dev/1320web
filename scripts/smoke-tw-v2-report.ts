@@ -36,6 +36,22 @@ import {
   s2RequiredSafetyBoundary,
   s2UnreachableCodes,
 } from "../lib/gzh/tw-v2-s2-library";
+import {
+  s0ApprovedCount,
+  s0CandidateFor,
+  s0CustomerPublishableCodes,
+  s0EditorialCandidateCount,
+  s0PendingCount,
+} from "../lib/gzh/tw-v2-s0-library";
+import {
+  s4AllHaveRequiredSafetyBoundary,
+  s4ApprovedCount,
+  s4CandidateFor,
+  s4CustomerPublishableCodes,
+  s4EditorialCandidateCount,
+  s4PendingCount,
+  s4RequiredSafetyBoundary,
+} from "../lib/gzh/tw-v2-s4-library";
 
 function assert(condition: unknown, label: string) {
   if (!condition) {
@@ -230,6 +246,25 @@ assert(
   "S2 safety sentence matches the locked wording",
 );
 assert(s2CandidateFor("S1-01") === null, "S2 library does not invent S1 codes");
+assert(s0EditorialCandidateCount() === 20 && s0PendingCount() === 20 && s0ApprovedCount() === 0, "S0 has 20 pending candidates");
+assert(s0CustomerPublishableCodes().length === 0, "S0 candidates stay out of customer publish");
+assert(s0CandidateFor("S0-07")?.name_zh_tw_candidate === "自我價值幻象" && !s0CandidateFor("S0-07")?.reviewer, "S0-07 calibration name stays unapproved");
+assert(s0CandidateFor("S0-05")?.name_zh_tw_candidate === "情緒幻象", "S0-05 emotion name present");
+assert(s0CandidateFor("S0-01")?.name_zh_tw_candidate === "存在幻象", "S0-01 existence name present");
+assert(s0CandidateFor("S0-15")?.name_zh_tw_candidate === "孤獨幻象", "S0-15 loneliness name present");
+assert(s0CandidateFor("S1-01") === null, "S0 library does not invent S1 codes");
+assert(s4EditorialCandidateCount() === 20 && s4PendingCount() === 20 && s4ApprovedCount() === 0, "S4 has 20 pending candidates");
+assert(s4CustomerPublishableCodes().length === 0, "S4 candidates stay out of customer publish");
+assert(s4CandidateFor("S4-14")?.name_zh_tw_candidate === "完美循環" && !s4CandidateFor("S4-14")?.reviewer, "S4-14 calibration name stays unapproved");
+assert(s4CandidateFor("S4-10")?.name_zh_tw_candidate === "防禦循環", "S4-10 defense name present");
+assert(s4CandidateFor("S4-01")?.name_zh_tw_candidate === "證明循環", "S4-01 proof name present");
+assert(s4CandidateFor("S4-13")?.name_zh_tw_candidate === "抗拒循環", "S4-13 resistance name present");
+assert(s4AllHaveRequiredSafetyBoundary(), "S4 keeps the required professional safety sentence");
+assert(
+  s4RequiredSafetyBoundary() === "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。",
+  "S4 safety sentence matches the locked wording",
+);
+assert(s4CandidateFor("S1-01") === null, "S4 library does not invent S1 codes");
 assert(sampleFullDifference().length >= 6, "sample and full difference table exists");
 
 const page = fs.readFileSync(new URL("../app/(site)/tw-v2-report/page.tsx", import.meta.url), "utf8");

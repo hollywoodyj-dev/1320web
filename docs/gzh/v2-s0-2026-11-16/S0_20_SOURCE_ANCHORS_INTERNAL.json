@@ -1,0 +1,1247 @@
+{
+  "module": "S0",
+  "source_sha256": "38f131575a1f0434a2c18b5ca1409ca85dad85ef6a35e6d8a9de26f8320fb7a3",
+  "privacy": "INTERNAL_ONLY_DO_NOT_RENDER_TO_CUSTOMERS",
+  "source_anchors": [
+    {
+      "code": "S0-00",
+      "raw_title": "零点原型",
+      "source_record_sha256": "eef327f571232df7c10a5c00604ce1f2a7544eb45d1590c6688bb1444194a5bf",
+      "anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "d70e288cba710344a15528412736c6481af209d85443d6a2bf24daa036d7692c",
+          "source_text_internal": "What core illusion am I invited to see through?"
+        },
+        {
+          "source_field": "Void Archetype",
+          "field_sha256": "d931f9ebb262d5ac2c6360f2be58a8da4368e3fbd96f400f7e3da97d6bd1f7f5",
+          "source_text_internal": "零点原型"
+        },
+        {
+          "source_field": "Core Illusion",
+          "field_sha256": "3dc11fe9ada9f5e792cf98eea9171d71f8eca836a628519991c06efbcda74e52",
+          "source_text_internal": "一切都必须从外界获得。"
+        },
+        {
+          "source_field": "Void Challenge",
+          "field_sha256": "23c519962c90c02c2d03249a3b71795b62566b3b3bf2b4f509b311b9e2ae2e36",
+          "source_text_internal": "无法停下来，持续寻求确认。"
+        },
+        {
+          "source_field": "Void Power",
+          "field_sha256": "b7abade62292182d3aded5a32eff3013d2c98aedfbe01420dcae42374b5d8552",
+          "source_text_internal": "完全回到内在中心的能力。"
+        },
+        {
+          "source_field": "Path of Return",
+          "field_sha256": "d1fe396d18142e1fda9a6fd0c8d4d3829fa8f19bed8cb513768f4ea2e58886bc",
+          "source_text_internal": "稳定存在，练习“什么也不做”。"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "ca24d8f9b3008807beef2cf07b1be0e34f2df8852c0413ab818ad0f1d3e57197",
+          "source_text_internal": "This Void Gate reflects the illusion of: 一切都必须从外界获得。 It invites the user to observe where this belief may shape perception, reactions, and self-protection without treating it as fate or fixed identity."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "e703eff1035b04b9d9ee51a871e75c7f0f16cca3b869f5dd670dde253e172da2",
+          "source_text_internal": "The integration begins through: 稳定存在，练习“什么也不做”。"
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1e0880eba0b0e7dbe60b5d66a3a7266316b79778edac6b02f09586eb29343ba4",
+          "source_text_internal": "For one week, pause once a day and ask: “Where did this illusion appear today, and what would feel more true, grounded, and kind?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "0a7ba5048311e4c88fd9b5ced8625b55f863339ace6822a3039f79cb65ed4b1b",
+          "source_text_internal": "你越是放下，越靠近真相。"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity."
+        }
+      ]
+    },
+    {
+      "code": "S0-01",
+      "raw_title": "存在幻象",
+      "source_record_sha256": "c04b40368bb0cc4ce0921bc3b6bdce6e8ba0540656bd5474cd0e3f6aa1c28216",
+      "anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "d70e288cba710344a15528412736c6481af209d85443d6a2bf24daa036d7692c",
+          "source_text_internal": "What core illusion am I invited to see through?"
+        },
+        {
+          "source_field": "Void Archetype",
+          "field_sha256": "ddf80019ea96fb4fb3b3471311d7757afba02e23baa91a7af7538ea6b815933f",
+          "source_text_internal": "存在幻象"
+        },
+        {
+          "source_field": "Core Illusion",
+          "field_sha256": "5a5f8afe95279a30a9340d6e27efe09225e160f0ef583fe92809d69880c47892",
+          "source_text_internal": "觉得自己不够好，不够有价值。"
+        },
+        {
+          "source_field": "Void Challenge",
+          "field_sha256": "0e9e4145b8fc2e47cb0547d37da8b00559b84bf876c622c98832667e3d8f5acd",
+          "source_text_internal": "自我价值依赖外部评价。"
+        },
+        {
+          "source_field": "Void Power",
+          "field_sha256": "5b9839524a17b4e0a82efe437ffe70738c961cd229bcbc7ef38584b8d37522a9",
+          "source_text_internal": "深度的自我肯定。"
+        },
+        {
+          "source_field": "Path of Return",
+          "field_sha256": "c531cfb581a162887799781203b12e657dbc4be38f05a39e36b9560a5e989429",
+          "source_text_internal": "练习不证明自己。"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "f8de8c303eaebf4783b98137f224996ea0240dd344d6b37059904ad1d7301ae1",
+          "source_text_internal": "This Void Gate reflects the illusion of: 觉得自己不够好，不够有价值。 It invites the user to observe where this belief may shape perception, reactions, and self-protection without treating it as fate or fixed identity."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "20261e03b2937d0d571457fa44c5f101213dc81b10427b3c0da66ed31e74e301",
+          "source_text_internal": "The integration begins through: 练习不证明自己。"
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1e0880eba0b0e7dbe60b5d66a3a7266316b79778edac6b02f09586eb29343ba4",
+          "source_text_internal": "For one week, pause once a day and ask: “Where did this illusion appear today, and what would feel more true, grounded, and kind?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "697b9eb1c10d8163dae5a4d7daf58c03fb72d1ee78629cf8b443fc06060ab1c9",
+          "source_text_internal": "你本来就足够，不需被证明。"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity."
+        }
+      ]
+    },
+    {
+      "code": "S0-02",
+      "raw_title": "控制幻象",
+      "source_record_sha256": "ab3c11ff1372ed2ffcdd8d64923576bf2c8c82f2698479ce87d554e3f5ccdb3e",
+      "anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "d70e288cba710344a15528412736c6481af209d85443d6a2bf24daa036d7692c",
+          "source_text_internal": "What core illusion am I invited to see through?"
+        },
+        {
+          "source_field": "Void Archetype",
+          "field_sha256": "63e27ab04bfd7377373fbb6516bf764ba4b23e67f529a1971c5bf8cde1709530",
+          "source_text_internal": "控制幻象"
+        },
+        {
+          "source_field": "Core Illusion",
+          "field_sha256": "a83af80d23b3ae413f2d6f156701ec4c2eab4312ca3d29ed1949a5133543ca7c",
+          "source_text_internal": "认为必须掌控一切才会安全。"
+        },
+        {
+          "source_field": "Void Challenge",
+          "field_sha256": "d24907f987088dead165aeb252c89bb199899ce03021bf9e1c3d5d2182f28e9b",
+          "source_text_internal": "无法信任过程。"
+        },
+        {
+          "source_field": "Void Power",
+          "field_sha256": "6378078682c3869f89ccf4ecce866b53a5aaebeb569abc0e40422c059c2f4a8e",
+          "source_text_internal": "放手与顺流的力量。"
+        },
+        {
+          "source_field": "Path of Return",
+          "field_sha256": "6b22c8620096d4b5e6bfe38fe6f2940a4499d94c27de7e23130d8e0959565eb8",
+          "source_text_internal": "练习允许事情自然发生。"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "1605b90eaee2bb79599587d1f4adf564e77f7c2a5179075771eae7bcb99c4008",
+          "source_text_internal": "This Void Gate reflects the illusion of: 认为必须掌控一切才会安全。 It invites the user to observe where this belief may shape perception, reactions, and self-protection without treating it as fate or fixed identity."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "37bd46dff2a7b27fb78ffaee451a463c143762abc3d15009d50e9d57daff1006",
+          "source_text_internal": "The integration begins through: 练习允许事情自然发生。"
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1e0880eba0b0e7dbe60b5d66a3a7266316b79778edac6b02f09586eb29343ba4",
+          "source_text_internal": "For one week, pause once a day and ask: “Where did this illusion appear today, and what would feel more true, grounded, and kind?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "0bfced647172609217018692dd4f04f7020e837fdc9b5ee62427b1bf27e62cbc",
+          "source_text_internal": "控制是恐惧的反应，信任是真正的力量。"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity."
+        }
+      ]
+    },
+    {
+      "code": "S0-03",
+      "raw_title": "分离幻象",
+      "source_record_sha256": "f88f654c80577d513d2f02254f8e2e06fee9d8c6ebd059d291c37e1aaaf1c863",
+      "anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "d70e288cba710344a15528412736c6481af209d85443d6a2bf24daa036d7692c",
+          "source_text_internal": "What core illusion am I invited to see through?"
+        },
+        {
+          "source_field": "Void Archetype",
+          "field_sha256": "411d53a4806615cfb79955331506876ef52cef0a132afbe601b84beb7e10f152",
+          "source_text_internal": "分离幻象"
+        },
+        {
+          "source_field": "Core Illusion",
+          "field_sha256": "c7067f5da749556aae7bb30c2caa8758ae1239e54990312c9266c0842331320b",
+          "source_text_internal": "认为自己与世界分离。"
+        },
+        {
+          "source_field": "Void Challenge",
+          "field_sha256": "4aad4ba2ede1f6e554cef1182229b1e98d6db0818e12b2d6ebbd9168a51c7c9d",
+          "source_text_internal": "孤立、自我封闭、孤独。"
+        },
+        {
+          "source_field": "Void Power",
+          "field_sha256": "fd5dae8defabdd5b0670633de7ca6e0b8abcd1c0f2edd4e37dbd5124f324b5fc",
+          "source_text_internal": "建立连接与合一感。"
+        },
+        {
+          "source_field": "Path of Return",
+          "field_sha256": "9652c25890e5e293883e473c37b117732a64cd856b2c926ded45dae30fa9e131",
+          "source_text_internal": "用开放取代防御。"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "fac6532c01bdaa83b248dded21166da08cae6126d7624acb2a22f576dcc4c09e",
+          "source_text_internal": "This Void Gate reflects the illusion of: 认为自己与世界分离。 It invites the user to observe where this belief may shape perception, reactions, and self-protection without treating it as fate or fixed identity."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "2dbf96c64da7c199c8024082d81f234b65e3df95e6ed10e5073032bf91031925",
+          "source_text_internal": "The integration begins through: 用开放取代防御。"
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1e0880eba0b0e7dbe60b5d66a3a7266316b79778edac6b02f09586eb29343ba4",
+          "source_text_internal": "For one week, pause once a day and ask: “Where did this illusion appear today, and what would feel more true, grounded, and kind?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "70c7d27a456ca59f9fbd9751ade0822041410f4e72ab7b73cfe0b80dfb8794d7",
+          "source_text_internal": "你从未与世界分离过。"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity."
+        }
+      ]
+    },
+    {
+      "code": "S0-04",
+      "raw_title": "完美幻象",
+      "source_record_sha256": "cfd363268ed61c34a49125bf7dc7a033ef80138b8c74f70ad1250516c68854ca",
+      "anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "d70e288cba710344a15528412736c6481af209d85443d6a2bf24daa036d7692c",
+          "source_text_internal": "What core illusion am I invited to see through?"
+        },
+        {
+          "source_field": "Void Archetype",
+          "field_sha256": "bc2b9563ad6d9f0e0108fe2ee095cde87b732098cbfb26033ef0a3681621302f",
+          "source_text_internal": "完美幻象"
+        },
+        {
+          "source_field": "Core Illusion",
+          "field_sha256": "73ab526db5d8b379e7bccc4b3db933b69cd50555d78f1bd40bf76d923dfb81d0",
+          "source_text_internal": "认为必须做到完美才值得被爱。"
+        },
+        {
+          "source_field": "Void Challenge",
+          "field_sha256": "45aa4bb6899e70493bef2fa175b051f1701a1390bb63f98d65264bde0ac154df",
+          "source_text_internal": "追求理想自我。"
+        },
+        {
+          "source_field": "Void Power",
+          "field_sha256": "b30ebf2e60c88d5b260044154a100fc4c1ad2a1bf43450dfb162a99190f7ddc7",
+          "source_text_internal": "接纳真实的自己。"
+        },
+        {
+          "source_field": "Path of Return",
+          "field_sha256": "22ae9f5bd574b988f28157432e0a209364e979fbfb32cde50dfcfccd388f010f",
+          "source_text_internal": "看见不完美的美。"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "7aeaa1f269946eaedb388b74f4896c119308ad9ce8f842ecc270c2008a5953b8",
+          "source_text_internal": "This Void Gate reflects the illusion of: 认为必须做到完美才值得被爱。 It invites the user to observe where this belief may shape perception, reactions, and self-protection without treating it as fate or fixed identity."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "b541cd22a26dfd3e53e4e95cb1dad4a29c56920c50567a23b3fa82d2a9a552b2",
+          "source_text_internal": "The integration begins through: 看见不完美的美。"
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1e0880eba0b0e7dbe60b5d66a3a7266316b79778edac6b02f09586eb29343ba4",
+          "source_text_internal": "For one week, pause once a day and ask: “Where did this illusion appear today, and what would feel more true, grounded, and kind?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "b2cc72eee89564954ba5d656ee3b1ce04a33b9a29e1758fc4e740fc7698c820a",
+          "source_text_internal": "完美不是目标，真实才是。"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity."
+        }
+      ]
+    },
+    {
+      "code": "S0-05",
+      "raw_title": "情绪幻象",
+      "source_record_sha256": "da3c9000886ceeb56bc14ead8cef4f35b00282ab85a7c42a817e33d493cab836",
+      "anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "d70e288cba710344a15528412736c6481af209d85443d6a2bf24daa036d7692c",
+          "source_text_internal": "What core illusion am I invited to see through?"
+        },
+        {
+          "source_field": "Void Archetype",
+          "field_sha256": "e6f067bb1ba3abf05795861a8c03bc389628956dd769f483d7d4145ab386f312",
+          "source_text_internal": "情绪幻象"
+        },
+        {
+          "source_field": "Core Illusion",
+          "field_sha256": "7efa0e09ebc2052e0a957604cab300568e91f77c4f31178156fa6db6682e6f8b",
+          "source_text_internal": "情绪等于真相。"
+        },
+        {
+          "source_field": "Void Challenge",
+          "field_sha256": "3d9d20827b54876a586247a4fb153dcf43e09f0c21b96da578f37e3e73317dc5",
+          "source_text_internal": "被强烈反应牵引。"
+        },
+        {
+          "source_field": "Void Power",
+          "field_sha256": "65f976e8f862486c29b6c76e61b02cdbfd56b76921caec63e466ffb88c283d93",
+          "source_text_internal": "成为情绪的观察者。"
+        },
+        {
+          "source_field": "Path of Return",
+          "field_sha256": "96977626788e926d8f57b1dac6184b3423e3bb2a40997f988753f946b59fe3c7",
+          "source_text_internal": "练习觉知呼吸与情绪分离。"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "efd2a42c803c34e8c4fab85742e3f4152279bf2cc0156a7d441e743f1fef957f",
+          "source_text_internal": "This Void Gate reflects the illusion of: 情绪等于真相。 It invites the user to observe where this belief may shape perception, reactions, and self-protection without treating it as fate or fixed identity."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "e3a2e000f66ee5f4f9d37f9e400819e70c5efa7a2f5f0680de0810b237d094f4",
+          "source_text_internal": "The integration begins through: 练习觉知呼吸与情绪分离。"
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1e0880eba0b0e7dbe60b5d66a3a7266316b79778edac6b02f09586eb29343ba4",
+          "source_text_internal": "For one week, pause once a day and ask: “Where did this illusion appear today, and what would feel more true, grounded, and kind?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "353f7288a2f10a240c813f8d38f1151b8ea1323df97f478ad2cb37db7196f61b",
+          "source_text_internal": "情绪在说话，但你不是情绪。"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity."
+        }
+      ]
+    },
+    {
+      "code": "S0-06",
+      "raw_title": "角色幻象",
+      "source_record_sha256": "8317f21a5affc115eca69a005d63ea4a25d1fb5904b96f9bd1189b6895885d0b",
+      "anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "d70e288cba710344a15528412736c6481af209d85443d6a2bf24daa036d7692c",
+          "source_text_internal": "What core illusion am I invited to see through?"
+        },
+        {
+          "source_field": "Void Archetype",
+          "field_sha256": "54ce81f4d47762d078ce63bc59ad5e8a9f19374b14d1ad0bb8d8cc5ae2bbd0f8",
+          "source_text_internal": "角色幻象"
+        },
+        {
+          "source_field": "Core Illusion",
+          "field_sha256": "eb1f002f5a33f531ad7c2e7cacb00255bbad1c75e46864bb594d1c8a51ff6189",
+          "source_text_internal": "将自己等同于身份或角色。"
+        },
+        {
+          "source_field": "Void Challenge",
+          "field_sha256": "a8801eec246233362137959828763ab1e3c741d62cd448d4661dff31ebe30d61",
+          "source_text_internal": "害怕失去身份。"
+        },
+        {
+          "source_field": "Void Power",
+          "field_sha256": "d57e58e6839ca95fd688071b660a34469dc1a7fc04daa0acf7d8c98252d828f3",
+          "source_text_internal": "回到存在本身。"
+        },
+        {
+          "source_field": "Path of Return",
+          "field_sha256": "d44ece5bc9a9cbbc93499f333fa0c264c320070d90eb46b9e99a37597e333643",
+          "source_text_internal": "放下身份标签。"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "22ee2cf8453825de1733b92cd3324b3da3ac5f62f59a1a8c54e8782c753f3c9f",
+          "source_text_internal": "This Void Gate reflects the illusion of: 将自己等同于身份或角色。 It invites the user to observe where this belief may shape perception, reactions, and self-protection without treating it as fate or fixed identity."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "ca2069633ed65410794a77b05b173ebf10a6f87d22d470f7f7ed46e56d4ef838",
+          "source_text_internal": "The integration begins through: 放下身份标签。"
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1e0880eba0b0e7dbe60b5d66a3a7266316b79778edac6b02f09586eb29343ba4",
+          "source_text_internal": "For one week, pause once a day and ask: “Where did this illusion appear today, and what would feel more true, grounded, and kind?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "31e99188f0034d64cfdb634ee7f71b3573564ceb547dfc3d7d66935471c2bd45",
+          "source_text_internal": "你不是角色，你是意识。"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity."
+        }
+      ]
+    },
+    {
+      "code": "S0-07",
+      "raw_title": "自我价值幻象",
+      "source_record_sha256": "228e65a07c7633b5e7cabc679040d03a01f400aa37b2288199518e5a3095d138",
+      "anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "d70e288cba710344a15528412736c6481af209d85443d6a2bf24daa036d7692c",
+          "source_text_internal": "What core illusion am I invited to see through?"
+        },
+        {
+          "source_field": "Void Archetype",
+          "field_sha256": "a24a045c757c534cb7dd1027c1afc22de339f03d669e63a6a06e266cd888d9cc",
+          "source_text_internal": "自我价值幻象"
+        },
+        {
+          "source_field": "Core Illusion",
+          "field_sha256": "ffa7a8ea2c80c1652cdfa50f79a8af6d8b53e1cdee16d1c7b53a34ab358cbfad",
+          "source_text_internal": "觉得自己永远不够。"
+        },
+        {
+          "source_field": "Void Challenge",
+          "field_sha256": "26c89399815ba4bd1a47e597de96c4f7eb3ddee84f93323a6f6e9a86bbef0643",
+          "source_text_internal": "自我设限、否定自己。"
+        },
+        {
+          "source_field": "Void Power",
+          "field_sha256": "285f50ea705afbaf7b0923b7c28c14c50b334915ae2bb8983217091ff40619c5",
+          "source_text_internal": "看见自身光芒的能力。"
+        },
+        {
+          "source_field": "Path of Return",
+          "field_sha256": "24e797779b8f7ea8b3695a1844426c28b835ed69805b53da51946ff973bead3b",
+          "source_text_internal": "练习感恩与允许。"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "ab398df002cd2f0ff45a4f2ea60746c4ecce5aa841bdaa45b1ec1c3350163643",
+          "source_text_internal": "This Void Gate reflects the illusion of: 觉得自己永远不够。 It invites the user to observe where this belief may shape perception, reactions, and self-protection without treating it as fate or fixed identity."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "1e297df0580ec7b8b91472b6dc2f748c88e068d8410508bb410d178da628504e",
+          "source_text_internal": "The integration begins through: 练习感恩与允许。"
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1e0880eba0b0e7dbe60b5d66a3a7266316b79778edac6b02f09586eb29343ba4",
+          "source_text_internal": "For one week, pause once a day and ask: “Where did this illusion appear today, and what would feel more true, grounded, and kind?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "cd6e19b5c64acb8329ba2a0858920f3e18bee3f4ab2d486c443fee7b9d9fca61",
+          "source_text_internal": "你的价值不是结果，而是本质。"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity."
+        }
+      ]
+    },
+    {
+      "code": "S0-08",
+      "raw_title": "依附幻象",
+      "source_record_sha256": "7b9cdbaea48782195a4578c9cf0dafd70b2695267c8f02b9199a7ec3b7c25218",
+      "anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "d70e288cba710344a15528412736c6481af209d85443d6a2bf24daa036d7692c",
+          "source_text_internal": "What core illusion am I invited to see through?"
+        },
+        {
+          "source_field": "Void Archetype",
+          "field_sha256": "3633fd56612905f6b3a7aca4210e9452ea19485a1c5e8834c4d87218fcc41bd7",
+          "source_text_internal": "依附幻象"
+        },
+        {
+          "source_field": "Core Illusion",
+          "field_sha256": "6bb7e286f774f3d081defcd5b25bccd37cc4ca8952d8c3146bf8efaca23f20e0",
+          "source_text_internal": "认为幸福必须来自关系。"
+        },
+        {
+          "source_field": "Void Challenge",
+          "field_sha256": "200b854555c9c70c7808f17d23c8d2caee6e3d705f552748b368169ff7862d6f",
+          "source_text_internal": "容易依赖他人。"
+        },
+        {
+          "source_field": "Void Power",
+          "field_sha256": "70cb88407c6537916ec8abd9be128edb72b5cfecf4c5557a38253f542191f2e4",
+          "source_text_internal": "情绪自给能力。"
+        },
+        {
+          "source_field": "Path of Return",
+          "field_sha256": "5c4daa1634093f0e4ba7a8979ce8cb37386bd993e1e5091432435e768508e1e7",
+          "source_text_internal": "回到自身的内在安全感。"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "97de93fced96d687289f09a70973704ce7dde45b6d64082b160847c42bd98276",
+          "source_text_internal": "This Void Gate reflects the illusion of: 认为幸福必须来自关系。 It invites the user to observe where this belief may shape perception, reactions, and self-protection without treating it as fate or fixed identity."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "6561754392a3ccf77a19f050ea92b43e50f4d19f51cce14d2caf38d6606871f2",
+          "source_text_internal": "The integration begins through: 回到自身的内在安全感。"
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1e0880eba0b0e7dbe60b5d66a3a7266316b79778edac6b02f09586eb29343ba4",
+          "source_text_internal": "For one week, pause once a day and ask: “Where did this illusion appear today, and what would feel more true, grounded, and kind?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "84be12a4e9ed3aaa656e1b7976476835a1d3e2a887c7278d9dcb012d169b2484",
+          "source_text_internal": "关系不是来源，你自己才是。"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity."
+        }
+      ]
+    },
+    {
+      "code": "S0-09",
+      "raw_title": "评价幻象",
+      "source_record_sha256": "b284f6a110dc08462225a677683171357c208b14418a0de6ec2cb6790a38c5d4",
+      "anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "d70e288cba710344a15528412736c6481af209d85443d6a2bf24daa036d7692c",
+          "source_text_internal": "What core illusion am I invited to see through?"
+        },
+        {
+          "source_field": "Void Archetype",
+          "field_sha256": "407b78c89a823ba4681737aff2f3ced22dbedee1090ea2c0a84c69d4bf034eee",
+          "source_text_internal": "评价幻象"
+        },
+        {
+          "source_field": "Core Illusion",
+          "field_sha256": "8c7ee7f9d89cc9f5f596bddc4d375119038998e7564558088e484d8f922d1792",
+          "source_text_internal": "你相信他人的眼光比自己的真实更重要。"
+        },
+        {
+          "source_field": "Void Challenge",
+          "field_sha256": "f4ad6595ada3c512e167a62c60d12fbb2fd337080079ce9fb06dbdf375abcc0b",
+          "source_text_internal": "害怕被评价。"
+        },
+        {
+          "source_field": "Void Power",
+          "field_sha256": "7c7b38fbd6ca1a9ca512549f4687fa414a84e9a20803a7ab276587f9e97bffad",
+          "source_text_internal": "自主定义自我价值。"
+        },
+        {
+          "source_field": "Path of Return",
+          "field_sha256": "626f6b7d2b86a8a8bf1275c77d202770e6f776801b3d44fc30e676ad7942b9b2",
+          "source_text_internal": "停止向外询问“我好吗”。"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "b7a1a42ce99f208ecd600390d92c273f0edb421e832bc84e38fd0d0da26597e6",
+          "source_text_internal": "This Void Gate reflects the illusion of: 你相信他人的眼光比自己的真实更重要。 It invites the user to observe where this belief may shape perception, reactions, and self-protection without treating it as fate or fixed identity."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "efd68398366157aea5dd000fffd002e53dae68e8342ce7ab18b8fe6621801bb0",
+          "source_text_internal": "The integration begins through: 停止向外询问“我好吗”。"
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1e0880eba0b0e7dbe60b5d66a3a7266316b79778edac6b02f09586eb29343ba4",
+          "source_text_internal": "For one week, pause once a day and ask: “Where did this illusion appear today, and what would feel more true, grounded, and kind?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "f80dee14ab4b13f6bedae57d2c17e12c294bf101c8b20113724da942381eb19f",
+          "source_text_internal": "别人的声音不是你的真相。"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity."
+        }
+      ]
+    },
+    {
+      "code": "S0-10",
+      "raw_title": "时间幻象",
+      "source_record_sha256": "8bbae8e30dfd42bd7f4a017993f26497ead0482198bf567a55ea73466c4ebd48",
+      "anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "d70e288cba710344a15528412736c6481af209d85443d6a2bf24daa036d7692c",
+          "source_text_internal": "What core illusion am I invited to see through?"
+        },
+        {
+          "source_field": "Void Archetype",
+          "field_sha256": "76475ff681e4b4d92c4e403eb1816576c1803209d89ea6e125bf3c1dcf4b6675",
+          "source_text_internal": "时间幻象"
+        },
+        {
+          "source_field": "Core Illusion",
+          "field_sha256": "fb39328647163289c3dc7ac719360c3bfbc5976c3c53598c23619398460b72f5",
+          "source_text_internal": "害怕来不及、害怕错过。"
+        },
+        {
+          "source_field": "Void Challenge",
+          "field_sha256": "0ffd81d31147c9b09f53bc69afefed7cc6838bf60a23500506ff0b2e0fd2008f",
+          "source_text_internal": "焦虑未来、无法当下。"
+        },
+        {
+          "source_field": "Void Power",
+          "field_sha256": "d51a841371a118a57ecc229232c72452f3ed8a1ccb6cf10c8df2584e6a288c80",
+          "source_text_internal": "临在的力量。"
+        },
+        {
+          "source_field": "Path of Return",
+          "field_sha256": "e1d9ee72821b5fdd60a34ff43c7573cc8f9d4daec47e9e8173412f5af53cf516",
+          "source_text_internal": "回到此刻。"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "85bcc6d1ffa1d44d7093c0e8501db9706539ddff547b4c9196b5b4538a83a2be",
+          "source_text_internal": "This Void Gate reflects the illusion of: 害怕来不及、害怕错过。 It invites the user to observe where this belief may shape perception, reactions, and self-protection without treating it as fate or fixed identity."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "a5d138b3129ff4b36ca07d9424e836b6aad4c21a9f499b554b72eb4c050b4485",
+          "source_text_internal": "The integration begins through: 回到此刻。"
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1e0880eba0b0e7dbe60b5d66a3a7266316b79778edac6b02f09586eb29343ba4",
+          "source_text_internal": "For one week, pause once a day and ask: “Where did this illusion appear today, and what would feel more true, grounded, and kind?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "78bb55a138d4addf4348658c9462d0f2895a5cb4e1083514fbf79a9c092e2acf",
+          "source_text_internal": "当下就是全部。"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity."
+        }
+      ]
+    },
+    {
+      "code": "S0-11",
+      "raw_title": "责任幻象",
+      "source_record_sha256": "1c29c07b62b074b92d09b660954f75d100865bcbb6ff10eac896ef45444a56f8",
+      "anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "d70e288cba710344a15528412736c6481af209d85443d6a2bf24daa036d7692c",
+          "source_text_internal": "What core illusion am I invited to see through?"
+        },
+        {
+          "source_field": "Void Archetype",
+          "field_sha256": "e9f60e28ea16428d0a3e2535f4c50dc28f79ff6e921f2c84ac4106f8f2c0f8f8",
+          "source_text_internal": "责任幻象"
+        },
+        {
+          "source_field": "Core Illusion",
+          "field_sha256": "61e3eced017aa00fae91cf6e7371ae374bd84df90251934936c08f137e9f9618",
+          "source_text_internal": "认为必须承担一切。"
+        },
+        {
+          "source_field": "Void Challenge",
+          "field_sha256": "b35f4d53e101da8b67c7faea4686465745ad7ce800bbc319684ebd8c1aa6504f",
+          "source_text_internal": "过度负责、耗尽自己。"
+        },
+        {
+          "source_field": "Void Power",
+          "field_sha256": "6154876c283ceb1723899f2f2aceed63a39e21cbd8b6f80cd4f239b4ad8fdf4a",
+          "source_text_internal": "清晰界限与智慧分辨。"
+        },
+        {
+          "source_field": "Path of Return",
+          "field_sha256": "0e97cacab689589d39d668b0c0600e2864af20ddff3cb4fcddcc9937217e3752",
+          "source_text_internal": "只承担属于你的部分。"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "5d1f69452c64ff724e372293db5366f2be3b789c0206c84078ff57d5aefb9ff6",
+          "source_text_internal": "This Void Gate reflects the illusion of: 认为必须承担一切。 It invites the user to observe where this belief may shape perception, reactions, and self-protection without treating it as fate or fixed identity."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "3fa5c3375c8d735b6928dc251a60a0df0490f34a603b0ea6507d325f18504666",
+          "source_text_internal": "The integration begins through: 只承担属于你的部分。"
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1e0880eba0b0e7dbe60b5d66a3a7266316b79778edac6b02f09586eb29343ba4",
+          "source_text_internal": "For one week, pause once a day and ask: “Where did this illusion appear today, and what would feel more true, grounded, and kind?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "a1227a37629c488627e420f53595bfbbc66778598a7e899f49cd8964f6e99c52",
+          "source_text_internal": "责任不是负担，而是选择。"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity."
+        }
+      ]
+    },
+    {
+      "code": "S0-12",
+      "raw_title": "比较幻象",
+      "source_record_sha256": "eea5fd2b0b404cccdc6f9594f650985676b3d04be06f2149598ac9cbf24c3a7f",
+      "anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "d70e288cba710344a15528412736c6481af209d85443d6a2bf24daa036d7692c",
+          "source_text_internal": "What core illusion am I invited to see through?"
+        },
+        {
+          "source_field": "Void Archetype",
+          "field_sha256": "7f77402e0cda4b159d297de2f74224b117cce5b4c7e8ea2e44df36975d9a7dc5",
+          "source_text_internal": "比较幻象"
+        },
+        {
+          "source_field": "Core Illusion",
+          "field_sha256": "a190a07cbd27d090f49002bd96d50b8dc6e049c340059d7589dc92e993c6fccc",
+          "source_text_internal": "通过比较定义自己。"
+        },
+        {
+          "source_field": "Void Challenge",
+          "field_sha256": "95387f2010d1872f05450d146293b7357e212bffe8ec5682cbc12aec3162bcdf",
+          "source_text_internal": "自卑与优越循环。"
+        },
+        {
+          "source_field": "Void Power",
+          "field_sha256": "4b239682c2fc71bf94bf14a37a840e10509b6cbc3cd8fbea974d302cf66cfba2",
+          "source_text_internal": "自我稳定与独立价值感。"
+        },
+        {
+          "source_field": "Path of Return",
+          "field_sha256": "96960a39fc6d701aec0173909e1a053bbe201347b858e871424b94cb535ed92e",
+          "source_text_internal": "从形象回到灵魂本质。"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "f464bd23f5c180ed5b91da947198ec975bc02a1bc62cb5577bbf377ef551fb4c",
+          "source_text_internal": "This Void Gate reflects the illusion of: 通过比较定义自己。 It invites the user to observe where this belief may shape perception, reactions, and self-protection without treating it as fate or fixed identity."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "26fc86934feb9b177534ac503fa7c66ddb046b2f7341d9f6bdfa0e493a34763b",
+          "source_text_internal": "The integration begins through: 从形象回到灵魂本质。"
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1e0880eba0b0e7dbe60b5d66a3a7266316b79778edac6b02f09586eb29343ba4",
+          "source_text_internal": "For one week, pause once a day and ask: “Where did this illusion appear today, and what would feel more true, grounded, and kind?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "f79c56b330611f2b2013c5ffdf89a79a923c9dc12c55f4b496df6214a3f39277",
+          "source_text_internal": "你是独一无二的表达。"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity."
+        }
+      ]
+    },
+    {
+      "code": "S0-13",
+      "raw_title": "意义幻象",
+      "source_record_sha256": "7f71d2095e2937c3ea1d2a590fe3fb62dc2113b266646666a54710c7e2655cd7",
+      "anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "d70e288cba710344a15528412736c6481af209d85443d6a2bf24daa036d7692c",
+          "source_text_internal": "What core illusion am I invited to see through?"
+        },
+        {
+          "source_field": "Void Archetype",
+          "field_sha256": "aa14a54e61e20ad582b8a92cb9b761a9ecd0e271cade78e2bc5c95ec534ad5b9",
+          "source_text_internal": "意义幻象"
+        },
+        {
+          "source_field": "Core Illusion",
+          "field_sha256": "f961e1bdc81ac8c1b9ee3d21a675f06d530eff28f7e718134cdfbad6a0f5b909",
+          "source_text_internal": "认为生命必须有“伟大目的”。"
+        },
+        {
+          "source_field": "Void Challenge",
+          "field_sha256": "e886e6fbf98684714b9b8df0af04b824d111559d85a76788135f6311b546a4a8",
+          "source_text_internal": "对成就与意义过度执着。"
+        },
+        {
+          "source_field": "Void Power",
+          "field_sha256": "34d32f4609626437c5c1e7c98783d04f370c71bc916a1c2a3e0dc769f208f177",
+          "source_text_internal": "在平凡中看见真实。"
+        },
+        {
+          "source_field": "Path of Return",
+          "field_sha256": "2bc6d8707c2b0126aa1c1e224d6793848a18ef751143d6fb05bb9d4745931809",
+          "source_text_internal": "从目标感回到存在。"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "f888f53dca36300a146ae9ef428e1e7b7b58c3e383fd6e57a4decb16f904ab5b",
+          "source_text_internal": "This Void Gate reflects the illusion of: 认为生命必须有“伟大目的”。 It invites the user to observe where this belief may shape perception, reactions, and self-protection without treating it as fate or fixed identity."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "644b879df58661d1a1369d914fa3ed96f609bc33745282f779b1c934d1cbdb69",
+          "source_text_internal": "The integration begins through: 从目标感回到存在。"
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1e0880eba0b0e7dbe60b5d66a3a7266316b79778edac6b02f09586eb29343ba4",
+          "source_text_internal": "For one week, pause once a day and ask: “Where did this illusion appear today, and what would feel more true, grounded, and kind?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "4a44d7d4a13124b96a147ee002f7237ccbedd726cfd5bdda5b9eedebf96b1227",
+          "source_text_internal": "意义不是寻找，是存在。"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity."
+        }
+      ]
+    },
+    {
+      "code": "S0-14",
+      "raw_title": "愧疚幻象",
+      "source_record_sha256": "dd267533f92b285c999020071c450984b4a8d5e196242c281c41c5683c2d3a4f",
+      "anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "d70e288cba710344a15528412736c6481af209d85443d6a2bf24daa036d7692c",
+          "source_text_internal": "What core illusion am I invited to see through?"
+        },
+        {
+          "source_field": "Void Archetype",
+          "field_sha256": "12c241881208cc509c82f95ce5a69955e16312f5011abe2e5eeb8afa2d1bbfe8",
+          "source_text_internal": "愧疚幻象"
+        },
+        {
+          "source_field": "Core Illusion",
+          "field_sha256": "93bc9f95b59c02b780378e178161585b0b1d837cdca14891f4120f3948ce191e",
+          "source_text_internal": "觉得自己需要补偿、赎罪。"
+        },
+        {
+          "source_field": "Void Challenge",
+          "field_sha256": "57d8f74ed319ab4b21b377b9267ddc843df5a6833ed41bfb4855335acd8edf3e",
+          "source_text_internal": "自我惩罚、情绪沉重。"
+        },
+        {
+          "source_field": "Void Power",
+          "field_sha256": "742568f4ad0c604a272b9fe9fc4f51371e426b3b281ddc3a2c3361f70aed28b2",
+          "source_text_internal": "自我宽恕的能力。"
+        },
+        {
+          "source_field": "Path of Return",
+          "field_sha256": "63bf6ca17d2b0a4e1bde32afcb9bed6b8d6c9408490a93c16043452ff4989a67",
+          "source_text_internal": "放下过往记忆的重量。"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "728b5342bc8299ba3b960840105dfa9db0d7f6a6433be29094ffe92d668fa416",
+          "source_text_internal": "This Void Gate reflects the illusion of: 觉得自己需要补偿、赎罪。 It invites the user to observe where this belief may shape perception, reactions, and self-protection without treating it as fate or fixed identity."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "cdee76136cd540582652217faaec5fba86562544870b7a47de1339ba371b0111",
+          "source_text_internal": "The integration begins through: 放下过往记忆的重量。"
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1e0880eba0b0e7dbe60b5d66a3a7266316b79778edac6b02f09586eb29343ba4",
+          "source_text_internal": "For one week, pause once a day and ask: “Where did this illusion appear today, and what would feel more true, grounded, and kind?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "9f7be8fc05af6f2a4542a78a49ef736d2638280027daf58f0219fd991adeb1ad",
+          "source_text_internal": "你已经被原谅，只是你还没放过自己。"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity."
+        }
+      ]
+    },
+    {
+      "code": "S0-15",
+      "raw_title": "孤独幻象",
+      "source_record_sha256": "1820ba4e5c77b59bf4ec69c80da577264e1a7d9cc83c7da7aa4fb0205958e654",
+      "anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "d70e288cba710344a15528412736c6481af209d85443d6a2bf24daa036d7692c",
+          "source_text_internal": "What core illusion am I invited to see through?"
+        },
+        {
+          "source_field": "Void Archetype",
+          "field_sha256": "688f268476ee2c9f11042ce9ba9d416d557f47b9939d3dad46b51eb2880af2cc",
+          "source_text_internal": "孤独幻象"
+        },
+        {
+          "source_field": "Core Illusion",
+          "field_sha256": "f775bb96c8784e5de817f746db3bde190a73cc335b3609722d1d743a3a8354f4",
+          "source_text_internal": "觉得没人理解、没人能看见你。"
+        },
+        {
+          "source_field": "Void Challenge",
+          "field_sha256": "f74b824737d73b7f46a8e22579286e7f3e0f6c4c672c563dc3ded602e47e4080",
+          "source_text_internal": "自我隔离、深度寂寞。"
+        },
+        {
+          "source_field": "Void Power",
+          "field_sha256": "4e26cabce8e4e561e54e34915cb9a713227066977c8442e856351de257a2f70d",
+          "source_text_internal": "自我连接能力。"
+        },
+        {
+          "source_field": "Path of Return",
+          "field_sha256": "5429f10e91b0c0ab94d62577c9b05d08686993453b4c586cc9530dfc387caf70",
+          "source_text_internal": "从外求连接回到内在陪伴。"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "ebf5b7c97f603d8753a29c3dcfbec645a377c45093a7a83e50abc7ded50be54b",
+          "source_text_internal": "This Void Gate reflects the illusion of: 觉得没人理解、没人能看见你。 It invites the user to observe where this belief may shape perception, reactions, and self-protection without treating it as fate or fixed identity."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "270041db6436bb034a32765a9c79a1db75555bc715a78495832dad6c10f86e91",
+          "source_text_internal": "The integration begins through: 从外求连接回到内在陪伴。"
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1e0880eba0b0e7dbe60b5d66a3a7266316b79778edac6b02f09586eb29343ba4",
+          "source_text_internal": "For one week, pause once a day and ask: “Where did this illusion appear today, and what would feel more true, grounded, and kind?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "8059bf94444fd4c26bed874740e4af557fbf1a1f922bf3c82f6dafeed9ef1ae5",
+          "source_text_internal": "孤独是你回归灵魂的入口。"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity."
+        }
+      ]
+    },
+    {
+      "code": "S0-16",
+      "raw_title": "控诉幻象",
+      "source_record_sha256": "886b269b00c2887e8cc7d5d006fbf814ff26493bffb23b4c0ff53ee28fccee1f",
+      "anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "d70e288cba710344a15528412736c6481af209d85443d6a2bf24daa036d7692c",
+          "source_text_internal": "What core illusion am I invited to see through?"
+        },
+        {
+          "source_field": "Void Archetype",
+          "field_sha256": "7795920e3ce2ea9a0bdba25f185e027eb9160db98e81d40e461dbd4fb2d4c363",
+          "source_text_internal": "控诉幻象"
+        },
+        {
+          "source_field": "Core Illusion",
+          "field_sha256": "4108a14ed5f81ebf48623f4c07dc245fe9d3a25d9ea9e3eca012d817f7cee4f5",
+          "source_text_internal": "将痛苦归因于他人。"
+        },
+        {
+          "source_field": "Void Challenge",
+          "field_sha256": "8879f61579c2e264520cde6dfad5de3d21f264dc74e53728111f2564794d47ba",
+          "source_text_internal": "指责、受害者思维。"
+        },
+        {
+          "source_field": "Void Power",
+          "field_sha256": "4403adb9cc8c835ecff88dbff6c800ba0613e4be66d2c2528bdf6747c5ceb687",
+          "source_text_internal": "承担自身情绪与选择。"
+        },
+        {
+          "source_field": "Path of Return",
+          "field_sha256": "fd628fcad5d7d53fe28f8951c6bd84d653d0044af2f30e8a44045c5459286e1e",
+          "source_text_internal": "让他人从你的故事中退出。"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "34e45e594b3df529e2561b44b7a0aa975e8c61f38309bc8563ff87f4e521ca43",
+          "source_text_internal": "This Void Gate reflects the illusion of: 将痛苦归因于他人。 It invites the user to observe where this belief may shape perception, reactions, and self-protection without treating it as fate or fixed identity."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "246c4229ee071a4828c4ef8307912f3603ae31d54f2b962357679844395818ba",
+          "source_text_internal": "The integration begins through: 让他人从你的故事中退出。"
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1e0880eba0b0e7dbe60b5d66a3a7266316b79778edac6b02f09586eb29343ba4",
+          "source_text_internal": "For one week, pause once a day and ask: “Where did this illusion appear today, and what would feel more true, grounded, and kind?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "422210958a991a85529080110c652ae9296be1077bf3512cf46a884bd8b85dd3",
+          "source_text_internal": "痛苦来自误认，不来自他人。"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity."
+        }
+      ]
+    },
+    {
+      "code": "S0-17",
+      "raw_title": "自我否定幻象",
+      "source_record_sha256": "ea1ad9dff23a60d849806f6988e83289c5b10374a55088cdbe1fd3b306c656ec",
+      "anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "d70e288cba710344a15528412736c6481af209d85443d6a2bf24daa036d7692c",
+          "source_text_internal": "What core illusion am I invited to see through?"
+        },
+        {
+          "source_field": "Void Archetype",
+          "field_sha256": "c76aff12cf6de1cc66d46d4945d2caf976471af0026722c3da9f4b59a054dfee",
+          "source_text_internal": "自我否定幻象"
+        },
+        {
+          "source_field": "Core Illusion",
+          "field_sha256": "aabe490e4a895b768e0ff5ce82c45afe6b5db875ec1f96ff7bbde1aeb20e8050",
+          "source_text_internal": "“我不值得”、“我不够好”。"
+        },
+        {
+          "source_field": "Void Challenge",
+          "field_sha256": "de62b4f5b62304ce2a82660dae15dc7ac3ece480803824f146cee793f004e61c",
+          "source_text_internal": "深度否认自身价值。"
+        },
+        {
+          "source_field": "Void Power",
+          "field_sha256": "c3105046ff079d69e60dfc1bbe7b4beec492fb857190f4d67379df10de4eb666",
+          "source_text_internal": "觉醒的自我肯定。"
+        },
+        {
+          "source_field": "Path of Return",
+          "field_sha256": "7c09d4e01c4afd8f830dd63053bf86f398f9a0662eaf4e72644b62b72c3676d6",
+          "source_text_internal": "用觉知看见自己的光。"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "c2055a736335b3abff1ee673e3a182d7f9dc32e00fbd131eb0881106521bf27a",
+          "source_text_internal": "This Void Gate reflects the illusion of: “我不值得”、“我不够好”。 It invites the user to observe where this belief may shape perception, reactions, and self-protection without treating it as fate or fixed identity."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "c7571b6abf3b08acbab4f1f890575835fb58293ed5945ab06bb25647a3e5dc74",
+          "source_text_internal": "The integration begins through: 用觉知看见自己的光。"
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1e0880eba0b0e7dbe60b5d66a3a7266316b79778edac6b02f09586eb29343ba4",
+          "source_text_internal": "For one week, pause once a day and ask: “Where did this illusion appear today, and what would feel more true, grounded, and kind?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "ef4a2d822b915a9f03d4d1e24ba2ade369425fc0229928e1a77a4194cdcdd31a",
+          "source_text_internal": "你否定的是幻象，不是真实的你。"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity."
+        }
+      ]
+    },
+    {
+      "code": "S0-18",
+      "raw_title": "努力幻象",
+      "source_record_sha256": "655db61c01d9852ba0d81b2099811f6b3ec46ca3de87914e21e2bf929d289b69",
+      "anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "d70e288cba710344a15528412736c6481af209d85443d6a2bf24daa036d7692c",
+          "source_text_internal": "What core illusion am I invited to see through?"
+        },
+        {
+          "source_field": "Void Archetype",
+          "field_sha256": "1d45e2f4131ef5890fc9fd2358fff3788fbd51c30cdbdd7ac29155cfdd412a3c",
+          "source_text_internal": "努力幻象"
+        },
+        {
+          "source_field": "Core Illusion",
+          "field_sha256": "9c95f649e0f75a6b6279ca2f624e58ac96feca7e44673f69824c46680f7aa86d",
+          "source_text_internal": "相信努力可以换来一切。"
+        },
+        {
+          "source_field": "Void Challenge",
+          "field_sha256": "daabea0e6f2440527c1cde6b2b69e3f7e331dd2e598eea10cdddb1e5dcedc350",
+          "source_text_internal": "用努力逃避真实。"
+        },
+        {
+          "source_field": "Void Power",
+          "field_sha256": "b2439abddbe9943b682fc0e3b7993e46b49b3afe2374ac7f18b9196d416c024a",
+          "source_text_internal": "顺流与允许的智慧。"
+        },
+        {
+          "source_field": "Path of Return",
+          "field_sha256": "af0bddc8249dd419f968de88b72381c7887792e79ebbdc5234dd447e2596ad4f",
+          "source_text_internal": "从“做更多”回到“成为自己”。"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "16464e85aee19e205db4eca31151709aaa4bb7538cd961e7e278d52ca6a2086a",
+          "source_text_internal": "This Void Gate reflects the illusion of: 相信努力可以换来一切。 It invites the user to observe where this belief may shape perception, reactions, and self-protection without treating it as fate or fixed identity."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "231ea59b66e849a3d8e19912680917385717dd20304ecfe60c54df44ded893a8",
+          "source_text_internal": "The integration begins through: 从“做更多”回到“成为自己”。"
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1e0880eba0b0e7dbe60b5d66a3a7266316b79778edac6b02f09586eb29343ba4",
+          "source_text_internal": "For one week, pause once a day and ask: “Where did this illusion appear today, and what would feel more true, grounded, and kind?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "6866671097de123bbb41c147227069e5ad83226e008ee8c84bfc043bf599b490",
+          "source_text_internal": "努力不是力量，真实才是。"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity."
+        }
+      ]
+    },
+    {
+      "code": "S0-19",
+      "raw_title": "生存幻象",
+      "source_record_sha256": "432ec659e230ffca56e95dd838e0e25d920a85ba7c615d1cc5481e9ee6fe3035",
+      "anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "d70e288cba710344a15528412736c6481af209d85443d6a2bf24daa036d7692c",
+          "source_text_internal": "What core illusion am I invited to see through?"
+        },
+        {
+          "source_field": "Void Archetype",
+          "field_sha256": "d50b98632325d48e25d915bce6083cd6566fa39e1f37929675aaaa98d17205ed",
+          "source_text_internal": "生存幻象"
+        },
+        {
+          "source_field": "Core Illusion",
+          "field_sha256": "223858757efb6044c81a341661c57dc4c2892388c9314a1d036967c345cbdc8b",
+          "source_text_internal": "认为世界是危险的，必须防御。"
+        },
+        {
+          "source_field": "Void Challenge",
+          "field_sha256": "586b71919b8fa3ce60a3b2a54891ecdbf3113b1ea155a78172a1ed6385ed0021",
+          "source_text_internal": "焦虑、恐惧、紧绷。"
+        },
+        {
+          "source_field": "Void Power",
+          "field_sha256": "db4e157ca9318b4b60d6330325b4ffbfdfdde2d4f0d9261a5922d4e7ac604944",
+          "source_text_internal": "深度安全感。"
+        },
+        {
+          "source_field": "Path of Return",
+          "field_sha256": "024a635930e3e1cde6264782edd29e45b1eb18acb3e75b39a3c5e3bfd7656662",
+          "source_text_internal": "练习放松、呼吸、信任。"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "070f4672b0a42518ed2d393fc346a636a816800228a0a2660a2b6d9df0881332",
+          "source_text_internal": "This Void Gate reflects the illusion of: 认为世界是危险的，必须防御。 It invites the user to observe where this belief may shape perception, reactions, and self-protection without treating it as fate or fixed identity."
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "f20ccbf62efe468fff7766813297f95f705b81fd6b13cf208cfca0d25ca4a588",
+          "source_text_internal": "The integration begins through: 练习放松、呼吸、信任。"
+        },
+        {
+          "source_field": "One-Week Practice",
+          "field_sha256": "1e0880eba0b0e7dbe60b5d66a3a7266316b79778edac6b02f09586eb29343ba4",
+          "source_text_internal": "For one week, pause once a day and ask: “Where did this illusion appear today, and what would feel more true, grounded, and kind?”"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "bee1fc965eeab81e21c82439fab0fdaa56579cbd431337aa339d01804e41cbfa",
+          "source_text_internal": "你从未真正被威胁过。"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524",
+          "source_text_internal": "This interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, medical, legal, financial, or religious advice, and it does not define a fixed identity."
+        }
+      ]
+    }
+  ]
+}

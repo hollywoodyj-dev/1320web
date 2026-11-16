@@ -25,6 +25,16 @@ import {
   s3PendingCount,
   s3UnreachableCodes,
 } from "../lib/gzh/tw-v2-s3-library";
+import {
+  s2AllHaveRequiredSafetyBoundary,
+  s2ApprovedCount,
+  s2CandidateFor,
+  s2CustomerPublishableCodes,
+  s2EditorialCandidateCount,
+  s2PendingCount,
+  s2RequiredSafetyBoundary,
+  s2UnreachableCodes,
+} from "../lib/gzh/tw-v2-s2-library";
 
 function assert(condition: unknown, label: string) {
   if (!condition) {
@@ -201,6 +211,19 @@ assert(s3CandidateFor("S3-01")?.name_zh_tw_candidate === "種子振動", "S3-01 
 assert(s3CandidateFor("S3-02")?.name_zh_tw_candidate === "火花振動", "S3-02 spark name present");
 assert(s3UnreachableCodes().join(",") === "S3-10,S3-11,S3-12", "S3-10 to S3-12 stay unreachable by formula");
 assert(s3CandidateFor("S1-01") === null, "S3 library does not invent S1 codes");
+assert(s2EditorialCandidateCount() === 50 && s2PendingCount() === 50 && s2ApprovedCount() === 0, "S2 has 50 pending candidates");
+assert(s2CustomerPublishableCodes().length === 0, "S2 candidates stay out of customer publish");
+assert(s2CandidateFor("S2-27")?.name_zh_tw_candidate === "靈魂震盪鏡像" && !s2CandidateFor("S2-27")?.reviewer, "S2-27 calibration name stays unapproved");
+assert(s2CandidateFor("S2-05")?.name_zh_tw_candidate === "投射鏡像", "S2-05 projection name present");
+assert(s2CandidateFor("S2-20")?.name_zh_tw_candidate === "依戀模式鏡像", "S2-20 attachment name present");
+assert(s2CandidateFor("S2-18")?.name_zh_tw_candidate === "成就鏡像", "S2-18 achievement name present");
+assert(s2UnreachableCodes().join(",") === "S2-01,S2-44,S2-45,S2-46,S2-47,S2-48,S2-49,S2-50", "S2 unreachable codes stay source-only");
+assert(s2AllHaveRequiredSafetyBoundary(), "S2 keeps the required relationship safety sentence");
+assert(
+  s2RequiredSafetyBoundary() === "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。",
+  "S2 safety sentence matches the locked wording",
+);
+assert(s2CandidateFor("S1-01") === null, "S2 library does not invent S1 codes");
 assert(sampleFullDifference().length >= 6, "sample and full difference table exists");
 
 const page = fs.readFileSync(new URL("../app/(site)/tw-v2-report/page.tsx", import.meta.url), "utf8");

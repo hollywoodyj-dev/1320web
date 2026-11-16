@@ -1,0 +1,3826 @@
+{
+  "package_id": "1320-zhTW-s2-50-review-2026-11-16-rc1",
+  "batch": "S2-SECOND",
+  "module": "S2",
+  "module_name_zh_tw": "靈魂鏡像",
+  "locale": "zh-TW",
+  "source_version": "2.0",
+  "source_document_date": "2026-06-13",
+  "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+  "source_record_count": 50,
+  "reachable_by_current_formula": 42,
+  "source_only_unreachable_count": 8,
+  "editorial_status": "PENDING_HUMAN_REVIEW_NOT_APPROVED",
+  "official_approved_count": 0,
+  "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。",
+  "records": [
+    {
+      "code": "S2-01",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "安全感鏡像",
+      "name_zh_source": "安全感镜像",
+      "source_code": "S2-01",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "b8821618a65926d1d7cb247f923a8ccc948411773f69370134d1048e4e94e368",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "bd80ed3683ff43cd18280f44c23ceec3e2db6b7e7e69057a64d48b7980c59173"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "772f22e80eb2652e95156e1500e70e9c4ea7e0e5a34c2c0b569aeab55a61cbac"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "6f43e7956d6461c2bde259ff8b688d490abb635220c88314e32271369b792eb9"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "7b14b762ef30b782d6683fdc0a86b8402743e7e899b6943b1b86c588a9be3d41"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "74b7786b76351d8e04067b087013dbbdca29a1ea1cde8e2928d60ae4d2269a25"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "b67e08a98e9e3752c21e5829004a7394eb8a023bf4b1fa11e58cc9c68e80a951"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "b60eff781b86ffb7f7e716f8cedea4f9671d7e666313f5ed454af160d4139a14"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "7580e0e713decdb3e958107360711fd69e304e83f8ebe385b3d6bd6e4322d42b"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": false,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "安全感可以在關係中被照顧，也需要個人可依靠的支持。",
+        "explorable_strength": "辨認靠近與退開之間真正需要的安心條件。",
+        "core_tension": "害怕失去與害怕過度親近可能交替出現。",
+        "integration_direction": "區分具體的安全需求與尚待確認的擔憂，逐步建立界限。",
+        "customer_narrative_short_draft": "一段友誼變得重要時，一方也許很希望常常聯繫，卻又在對方靠近時突然想保持距離。「安全感鏡像」描寫這種靠近與退開的拉扯，而不是斷言任何人有被遺棄的經歷。\n\n若這個情境讓人有所共鳴，可以先問自己：需要的是較固定的聯繫方式、明確的約定，還是能自由說「今天想獨處」的空間？安全感不必由某個人單獨保證，也可以從可確認的事實、可靠的支持與清楚的界限慢慢建立。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "不得預設童年創傷、被拋棄經歷或診斷依附障礙。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。",
+        "目前生日映射不可達；僅保留來源，不得強行提供給顧客。"
+      ]
+    },
+    {
+      "code": "S2-02",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "控制鏡像",
+      "name_zh_source": "控制镜像",
+      "source_code": "S2-02",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "a7938576776eb1a4691a4f43eaf7c4ca0b16aa7b37aa6a8921f85a39dea68154",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "45c3b18f14400a0a9e76938dbb439be66790ed201bd7e0eef49f9b947035ff7b"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "289ddd5e99ef0766451ab1c7a365bb6f3fb998dd3400793074e5e1bcb3b5ccba"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "3638a4836225e0166ad4494fd49e91f8433bd0b6099e4b669fa627c495dd82ea"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "03d0aa20a39d4ce305fefc0ee04cc3e925fd32e49baf989eda4220a9cef6afbd"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "0bb61c4d6d93e20bcbc94712af3ee594b5703e3a103e0d86762b1f25b9a0aefe"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "cfce5f62a02549ebaec6964519b1b7aad8a4eb7ce102402dc522a1de67c97169"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "bc66576370fa46ec91c0793b27a766a6d5923c8f95331399891d11369eac7425"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "2627864f3ed9f7dd14ea616162cad81e3766e3c0374779e95ca4455f321a3956"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "當兩個人都想掌握節奏，溝通可能逐漸失去彈性。",
+        "explorable_strength": "看見協商、信任與各自負責的空間。",
+        "core_tension": "要求對方按自己的方式回應，可能導致憤怒與委屈。",
+        "integration_direction": "先談可共同決定的事項，再確認各自能選擇的部分。",
+        "customer_narrative_short_draft": "一起準備活動時，兩個人都認為自己的安排最有效率。原本是想把事情做好，最後卻忙著確認誰有最後決定權。「控制鏡像」關注的是協作如何變成彼此施壓，而不是要求任何一方無條件讓步。\n\n可以把問題拆開：哪些標準需要共同同意？哪些細節可以各自處理？當互動涉及強迫、威脅或持續限制自由時，那不只是內在恐懼，應先保護安全；只有在相互尊重的情況下，信任才有可實踐的基礎。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "不得將實際操控或脅迫淡化為雙方共同功課。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-03",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "自我價值鏡像",
+      "name_zh_source": "自我价值镜像",
+      "source_code": "S2-03",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "7dc53ebe79d03bc064d9d93e789065e182da1d1e2c43b77d6ba421b58c837573",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "802aac0157ed4431d62a185fe55dd357842b60d8c429e402b581bba7ea51b543"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "d1152b71d6ae4a5bfbc18a9ef45f47de49cd4065849d9a25e69485ebbf6785e9"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "8de50de52b830719ec00dee114ad4296553f2efb110194ca2dff5c1b7c17c644"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "7e82cdb12f32b67ae25fae0e5b1327e21d90f942261de1df1c3787c2ed4b9565"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "6ef02cba8ccbf99893e50fbc7dbae1db7a028ee789debf0c442b364f94a121c7"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "4c5929b91697a592bc6836df1c3defc9bc72eeabe766735ed0aa54736f66ccca"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "c0c10df35a508ab3db2821ff5abf5d64c040437de417c7c84f3545cef94b1cb7"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "852123568fef4f74ecbbc0cfec252ff8653d1eb3fafacc2c4d37008d6513bdc1"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "他人的回應可以是資訊，卻不是整個人的價值證明。",
+        "explorable_strength": "辨認關係回饋與個人自我評價的區別。",
+        "core_tension": "一次不被稱讚或認同，可能被擴大成全面的自我懷疑。",
+        "integration_direction": "記下可改進的具體事情，同時保留基本自我尊重。",
+        "customer_narrative_short_draft": "兩個人合作完成作品，其中一人提出修改建議。那原本只是關於作品的回饋，卻可能被聽成「你做得不夠好，所以不值得被重視」。「自我價值鏡像」邀請人注意這種推論。\n\n不妨先確認：對方究竟評價了哪一件事？其中有哪些可以討論或不必接受的部分？被認可很令人高興，但即使沒有得到預期的肯定，也不需要把一個結果升格為對自己的全部判斷。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "與 S2-14 認可及 S2-06 求證區分：本碼聚焦自我否定。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-04",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "依賴鏡像",
+      "name_zh_source": "依赖镜像",
+      "source_code": "S2-04",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "64044b02bbce899ebd3a6d8d3f082c481690f8793b5b47b65c3fa0b175dcea0a",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "03766a780bb95fdcf19ab6c405749f53df9fd1cbc30aa3f297b272af88cd9b1f"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "a8d0d623787aa8bf421f96361aac86d4044e9c349eaddf7bc61a38f66831d70d"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "34c2b7b1235930af110c957511969eb9d6662c5033143207eeef2b716e1f6718"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "440edaa3cce2201a25cbabf4f557c5d6e267018e9794bf67afa11cbefa876250"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "f3330dac95d489d749311647779465b4ed1b4fa33108cfd7c219406b1376f3cb"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "79d11f2cb147e3e28e327e24b899a00908564eeda36d147d057fc65a558738f3"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "e8605f664788bdf5f87a0395b0c6676e85ca6c2dbb37209af19a1f56152d58d4"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "7f9493fdbd7fcfaf9b89c5316055a1d437948c01f12b3e422a1960d69a5c4ae5"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "親近與自主可以同時存在，不必以融合證明關係。",
+        "explorable_strength": "探索共同生活中保留個人時間與支持的可能。",
+        "core_tension": "過度依附可能讓分開的時刻變得難以承受。",
+        "integration_direction": "建立不依賴單一關係的日常節奏與支持網絡。",
+        "customer_narrative_short_draft": "一位朋友開始有新的活動安排，另一個人雖然理解，卻忽然不知道沒有他陪伴時自己能做什麼。「依賴鏡像」把注意力放在兩人的生活是否逐漸只剩同一個重心，而非替任何關係貼上不健康的標籤。\n\n可以先保留一項自己願意持續的興趣，約定適合彼此的聯繫方式，也確認需要支持時還能求助哪些人。靠近不是把所有時間合併；能各自生活，也可能讓相聚更真實。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "不以依賴暗示讀者有特定情感病症。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-05",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "投射鏡像",
+      "name_zh_source": "投射镜像",
+      "source_code": "S2-05",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "134fe81ef9c67f8bd0fd5e854302b86f126d71dc38ec455db832d49371af663e",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "ebbce9f5d4f68cc1b686406d98b01abcbedd4a3776da7eb70976667c0081b5e8"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "a5eb47fe42d9cc0624a50e2c5dd745b2ae20dd59c9173dc0e3a1468787fa8658"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "64e1c9949a3798e59e59673cd26fef809560bc007f372854b1f8177a61c305f1"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "3cbd248fbbcf1ffa4dd13a7a08451fe5827d0467b862062ebbc98eb2acf1676c"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "790308817130936605823dede0bebb9c79eda0853d90071b5aa13952215e3de4"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "97717e4c4a704ebaf544d610a9b35de2daec794d2f5b2644502d9edfacaa8a25"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "6197ab7706ed90683e899c1d3b17fcb613f3c10da0e21f94d82e915102c23372"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "46d906cbd6a63e24ac1c9a0dc5207a3c11677ea38e83dc12c9f321f42f3482a6"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "強烈的第一反應，未必就是對他人動機的準確判斷。",
+        "explorable_strength": "學習區分可觀察行為、個人解讀與尚未確認的推測。",
+        "core_tension": "將自己的擔心投向對方，可能使誤解迅速升高。",
+        "integration_direction": "先核對具體事實，再以提問取代直接指責。",
+        "customer_narrative_short_draft": "訊息裡的一句「再談」可以被理解成忙碌，也可能被聽成拒絕。兩種解釋之間，有一段尚未得到確認的空白。「投射鏡像」聚焦的就是這段空白如何被想像填滿，不代表所有衝突都源自某一方的心理投射。\n\n若感到不安，可以先寫下：對方實際說了什麼？我推測了什麼？還需要問清楚什麼？同時也要觀察對方的行為是否持續失信或越界。辨認自己的解讀，不等於替他人的不當行為開脫。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "不能把對方實際傷害一概說成讀者投射；與 S0 情緒幻象區分。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-06",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "求證鏡像",
+      "name_zh_source": "求证镜像",
+      "source_code": "S2-06",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "8467d24de83ef60b3e5c3e52e7c7da030770024d1c711446d51d3a22521bdfb4",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "5cbec7094fc69b20d8af53ba925502bb57f1f066fd68e6e5bf7fd01819f26d16"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "40cbf88f680b52aa92318666d7b690612a26bbf4e5cc93ddc14629cf0b634b6f"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "90232c54adc14add432f0f47ac64e5abbe87c54295bb763a51bbeeedffe2f47a"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "258d0603bebc9f8ec1d93e3e26ca3e80eba2fda9d2ff7a18647cc5a78eee914f"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "b4e9f625761e4e4509084a0254d0a7ed2468986505d2d44b08f263f12b52275a"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "509797cd4399775276a92b14c347c6622303b756f7083c3337fa55866bbc700b"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "619ebd36dee6acb0ece5c729edd70e5b9f176b28dea963addc2d84336b6aa78c"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "4bc1e24894b7beacba6547f65742625392af7b72b6a87967163424be6c6c4a09"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "反覆尋求肯定，可能使原本的關係對話變成考核。",
+        "explorable_strength": "察覺需要被確認的時刻，並嘗試清楚表達需求。",
+        "core_tension": "一次回答帶來短暫安心，下一次不確定又重新出現。",
+        "integration_direction": "把抽象的保證要求轉成可以討論的具體安排。",
+        "customer_narrative_short_draft": "有人一再問重要的人：「你真的在乎我嗎？」即使得到回答，稍後又需要再次確認。「求證鏡像」描述的，是口頭保證和實際安心之間可能存在的落差，而不是責怪誰太需要愛。\n\n可以試著把問題說得更明確：我想知道我們是否約好下次見面的時間，還是我需要你聽完一件在意的事？肯定可以接受；也可以慢慢學會讓自己的價值，不必每次都等待別人的證明。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "聚焦要求保證的循環；與 S2-14 外界認可相區分。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-07",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "挫敗鏡像",
+      "name_zh_source": "挫败镜像",
+      "source_code": "S2-07",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "68681849a1e6f1cf4050315dcc8e04944310784c0097b30526a9a673b1f12933",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "ac7b8264b8aa281424ebef0145a10d2ecfc4199e17e4639a4eae7274ce196c04"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "4a5486eed4c385a222e5ef8432ebd1977f105cd2336207e0cd49058b49383651"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "c16dc1b32a087e846973b73b1e3ab7f83c8d972827307b1c07c5915fb33954f3"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "466575d7305ad985b2e38c9a4ce14bfee2655a316bea6c5562c8ca6286b1edfe"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "f1346316df22327ef9bc697411f85b071ba56c394da3897926b3f149e56c4856"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "f2eb4139a4cb808394ab112b8bc6aadda88b3300a762c2e7626fbc71c5a2eaef"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "3b1b8721352a23741a242a0c2334fc16684d093a54e1595ce7ad9d6afec2faa4"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "509ab61899c292a5898cd44ef0333e4fc2f4f202b0855138c271ec41fcbeb1a6"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "挫折的回饋可以幫助修正方法，不必延伸成否定自己。",
+        "explorable_strength": "辨認共同目標和實際可改進的部分。",
+        "core_tension": "越想證明自己，越可能在疲憊時把失望看得更重。",
+        "integration_direction": "將成果回饋、關係感受及自我價值分開檢視。",
+        "customer_narrative_short_draft": "一起練習一件新技能，其中一人的進度比較快。另一人也許會更用力追趕，卻在一次失誤後覺得整段努力都沒有意義。「挫敗鏡像」談的是互動中的失落如何放大對成果的焦慮。\n\n若想繼續努力，可以先把可改善的技能列清楚，重新安排練習與休息，並確認對方是否真的提出了否定，還是自己先替回饋加上了評語。失敗需要被看見，但不必被用作整個人的評分。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "勿要求容忍羞辱性評價；與 S2-18 成就及 S2-34 失敗恐懼區分。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-08",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "競爭鏡像",
+      "name_zh_source": "竞争镜像",
+      "source_code": "S2-08",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "43848d1f0ed509260d191ba718f6f40e3602db4b5f82a75495179792d58120b5",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "8df26f42bddddd594ba7d4657ca9ab19f847554e915e1fdb4c7dddec7975bc77"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "90bcf17058f19bbfd6c7fb7404867cf19782c90a7f208924c4d5db97125d0df6"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "cfafa7061cdca9388c47dd5ec912d514c4e5e75377f091b8f65eeca392f38dc3"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "48415a6469a12bd65145137f499d080faa2c5bf84b53f1e79bc4f8064d63bee2"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "ab2dac2a6b2176c89d71f58ad641cec169f999c015040f99932f35706161d6cb"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "871651869d96d460e7d1d3ab3a47c625ffe3fb3eccb60f833f7be54c414a5a9d"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "32ead1a2fbb13a0321f8d198c15f8708709b2c0369bb5fcba9d4260172ea25c6"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "719bcabb037d1a62ad09a74e08a77639543853ea6f8fa7a6ebfa62b2d5bcd7aa"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "比較能提供資訊，卻不必把親近的人變成對手。",
+        "explorable_strength": "發現彼此的不同優勢與可共同進步之處。",
+        "core_tension": "互相衡量高低可能使合作逐漸成為競賽。",
+        "integration_direction": "將比較轉成各自可實踐的目標與合作機會。",
+        "customer_narrative_short_draft": "同一個團隊裡，有人獲得稱讚，另一個人立刻想起自己尚未完成的事。原本可以一起高興的時刻，忽然變成暗中的計分。「競爭鏡像」關注的是親近關係裡的比較心，而非斷言競爭一定不好。\n\n如果共同目標需要公平評量，就讓規則清楚；如果只是習慣性的高低比較，可以改問：我欣賞對方的哪項能力？自己的下一個練習是什麼？讓差異成為資訊，而不是彼此價值的排行。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "不可將具體職場不公平簡化為嫉妒。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-09",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "羞恥鏡像",
+      "name_zh_source": "羞耻镜像",
+      "source_code": "S2-09",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "7ee66326c60c4d5cdca79fd77da2f0242b3c07da73ba24fb479ba0386b8588f7",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "178760aa9de83721b78ce90951d76f827f3ed0f977f485343665a0d838c32fae"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "5aa38a368bce9533d2273e2b8881909cf2ddd26cca7de2e790ea562d5dd72832"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "4e7d2090f5bbaee5ad3093376cfc76f2fbdac7baf664b3b7f1c0641242c239df"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "579916e93e8024bfcbce5d2cdd05807d42598fefbe0cc9363f0041176ceed65c"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "e19f1afdb2f9cbfaf10c6881a2b0afcd8eab371aa9bb428c38b8b731e6d5444d"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "9a439c9c58cef795689415e401959402dec4a532d1837aca5dc0fdd30e39d265"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "8d7c37bbd01e695e7d13615238d337e0aaa6881838c61911181aef511bea83c5"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "2d04087be32fa7f87acb457b59bc7b34c7dcebe897fc68558ab120cbb346c723"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "當羞愧出現，保持沉默不一定能讓人更被理解。",
+        "explorable_strength": "看見脆弱可以循序、在安全的關係中表達。",
+        "core_tension": "越怕暴露不完美，越可能被不了解的感覺困住。",
+        "integration_direction": "選擇可信任的人與合適範圍，練習說出一部分真實。",
+        "customer_narrative_short_draft": "某個小失誤在談話裡被提起，有人表面說沒關係，心裡卻決定以後少說一點。沉默久了，別人更難理解他真正擔心什麼。「羞恥鏡像」描寫這種想隱藏又想被理解的矛盾。\n\n不需要向任何人交代全部私事。若環境足夠安全，可以試著說出一個具體感受，例如「這件事讓我有點難為情，想慢慢談」。若對方持續羞辱或利用你的脆弱，保留距離與求助同樣是合理的選擇。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "不可鼓勵向不安全對象暴露創傷或隱私。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-10",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "冷漠鏡像",
+      "name_zh_source": "冷漠镜像",
+      "source_code": "S2-10",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "faf86958f9c804855ffea9c9c1dd062f4c8239c50186bfaaa3ebe3abcc69d5c4",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "5596d10f07004561725964304fb93d1bc11d83a8b40372c89bffeea044ec163e"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "9fe9ee7ae45a7b167dfd966fc58f23fae108de90b5fa3dd015a4aed6f396a9ff"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "45aeef559315117fa3d40f494e0ebf21b55334dcaeef7aee54a76eba9678f1e5"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "f81c354fc4c4d6c52e5fd38b396b6d5909ef6b85443a41532802b8150aa35379"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "9850754239122eb9e617325bd4c0d9a8c7683a3e4c417199887d0a76eaa53fa9"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "369ffa197af4298ddc84b51458a91866d50cbd5215d39539e764a5f9bb3105cb"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "e4da9810965e7982546088cc72fa8fda314350eb666613cb6f1dc7397287de98"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "dedb7843b35a3bc8938fd4ed572c9b49b700d372dbac955db30b24cb9a8c57e7"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "聯繫速度是關係資訊的一部分，卻不能單獨說明全部在意程度。",
+        "explorable_strength": "辨認對聯繫與回應的實際需求。",
+        "core_tension": "因距離不斷追問，可能讓原有的溝通更緊繃。",
+        "integration_direction": "談出雙方可遵守的聯繫方式，並觀察實際行動。",
+        "customer_narrative_short_draft": "一個人習慣當天回覆訊息，另一個人則常在忙完後才看手機。頻率不一致，容易被解讀成冷漠。「冷漠鏡像」邀請人分清回應習慣與實際關係品質，不是要求誰忍受長期忽視。\n\n可以具體談談：重要訊息多久內需要回覆？什麼情況應主動告知？如果對方願意協商，規則就有機會調整；若持續無視明確需求，也要允許自己根據事實重新評估關係。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "不得以『放下期待』合理化持續忽略或冷暴力。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-11",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "責任鏡像",
+      "name_zh_source": "责任镜像",
+      "source_code": "S2-11",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "606a1a5651efb511152be090ae38be44b0435e884b1c1d9166fe5bbc5943c48e",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "124adaba14b749fd7c97972345dce4777971c9e167b830185a793dd1d7c9e31c"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "9d11746c7d1621236ed4939106b99182ec50b554a65a41866e50d1c9710cb0a4"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "a53055f2d2aa3c58cb40681772045e7d99347637ee65236705a1d6861e296a26"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "9d01c48c84c7d5a1ce3889e28a1ec24e270f5e21f123a5cf1d26f58e371cf679"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "f95538ef9c84146b5b6e6f6cd7f199799b46b229b9702fe249b46691358db483"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "ec5d244f779bc5741f8d7025cea49feed09b08ea5eb3fd56f65f863095391be2"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "ba5768d82fac10412ee3c808ab4d94592caf225ae8fa2a2dd4e95f25f6101009"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "a70cb43243ae8297834f1a223c95eca5096c1dff2e61eb1a29b27c354184a74c"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "責任若長期失衡，支持便可能變成單方面承擔。",
+        "explorable_strength": "辨認共同義務、可分工部分與真正需要協助的地方。",
+        "core_tension": "一方越接手，另一方越退後，最後雙方都感到不滿。",
+        "integration_direction": "把責任、資源與檢查時間攤開討論。",
+        "customer_narrative_short_draft": "兩個人共同照顧一項任務，其中一位總在最後關頭補位。久了，他覺得自己不能停，另一位則越來越少主動參與。「責任鏡像」關注的是這種分工逐漸失去平衡的過程。\n\n先列出哪些事情原本就是共同承諾，再談每個人實際能做的部分。若某人正因疾病、年齡或處境需要照顧，公平不代表平均分配；重要的是有沒有足夠資源、清楚同意，以及可以持續的安排。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "避免把照護責任或權力不對等簡化為雙方能量交換。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-12",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "逃避鏡像",
+      "name_zh_source": "逃避镜像",
+      "source_code": "S2-12",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "67227a4f2c0a80188fa675c1fe62bfa762c2b9fd27b686118d6a3a0ab77a8d25",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "27fa82cee17cc7b43f2dd6e4205afdf676caf6b1b654d7e85355108ec61525c3"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "d6e2f41bdbb616a420c89b22dda2bc8277844f88823a43f8dbdf0f8112b028b3"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "9512e2c69402fb951ea0d66a1cd520d175d65fac00131d18ef13efdf6a4a69ac"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "062774752d179b75da118f6bf592e8bd21fa5713b89ad2457b9f105baed8fa87"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "71697f6817d22bdf2df5ec17e8ffaaf74839de49c12103b8cb6b1ec52d2d28a6"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "8230915244b0e8cdbe3053e883f8bf2f4c730455d0da1ff399ecdc596e0f95d1"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "6905bc8b212c8063da0c265cc6aa2c9067f58632cb838670fbc03b24eb23e5de"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "005cb4e369c5397bf005ed2b1b52abbd309b97a7afed20773b2ecff304c8e2fe"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "不談問題有時是暫時保護，長期迴避卻可能讓誤解累積。",
+        "explorable_strength": "找出適合開始對話的時間與低壓方式。",
+        "core_tension": "壓住感受、突然爆發、再度沉默，可能反覆出現。",
+        "integration_direction": "用具體事件和可承受的談話步驟取代全面指責。",
+        "customer_narrative_short_draft": "一項小分歧被擱在一旁，幾次之後，原本不大的問題突然引發激烈爭論。「逃避鏡像」描寫的是談話一再延後的循環，並不是說每次沉默都代表不負責任。\n\n如果雙方願意談，可以先約定一段不被打斷的時間，只處理一件可描述的事。需要暫停時，也可以說清楚何時再談。但若沉默是為了避免威脅或暴力，優先保護自己，而不是勉強完成一場『坦誠對話』。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "明確區分安全性避險與一般溝通逃避。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-13",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "批判鏡像",
+      "name_zh_source": "批判镜像",
+      "source_code": "S2-13",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "b346b053dc29141b569b173dcd5c027f6a301845417c6886acaed3e377488cc9",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "4807d08721584e8c5fbb2c4476e60397754c71c6d02fe533bf1c0aca26eb3b18"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "0bc969dc64f20922033df2485762af54ed603a59c1bfbf4d59b1b1c86831e127"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "24fca53dfe2f4235069888225f795a2b00a4918e0f76fe1e274cda2ebc57200a"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "aa327adeebcfe60816afe66ac14f82db05f872232e706eda46b7ea4d2de11d7c"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "9a3b604eefc58d651f58bc93cb5446553b338dd19f272e6f62b315304679333c"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "2d52aa87b521e3c9f8dd8c3649d9b5ae20d3019f30cb778f2f139fc059051d36"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "252224b8d7792ff35f3bd4a04fce1f9c1a7f0146d14777e9971352e9c654f8b7"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "efb7c519bdc5a0896a721f1be84e17c6c8bce92e2a61caeb691b39ccd7a9f0a5"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "批評若只剩對人的判定，就難再討論真正的問題。",
+        "explorable_strength": "將指責轉為可觀察的行為與明確需求。",
+        "core_tension": "一方評判、另一方防衛，可能把小事變成相互攻擊。",
+        "integration_direction": "先談具體影響，再問各自願意如何調整。",
+        "customer_narrative_short_draft": "有人說「你總是這麼不負責任」，對方立刻回答「你才最愛挑毛病」。一句話尚未碰到真正的分工問題，對話就進入攻防。「批判鏡像」讓人看見，評價人格往往比描述事件更容易傷害合作。\n\n可以改成：「上次約定的時間沒有完成，我需要知道下一次怎樣安排。」若批評裡包含羞辱或貶低，仍須辨識其傷害，不能要求受傷的一方單方面更有同理心。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "不能把言語羞辱等同一般意見分歧。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-14",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "認可鏡像",
+      "name_zh_source": "认可镜像",
+      "source_code": "S2-14",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "e192a39e5976095df2a8af3e9e802a3a13ad206219f1ac004d4014642518981a",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "5aacf159c094072b19172c5a62e2fb737b3fffbcedbc56eb053cb435fa65d7e6"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "c142f343faab2846aaa59eda2059b5663f55edbd53c1fb75f4e49380818d4a61"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "d76beed5c3b96431f4e8e4a0aec9c188199d83f3ae9393c6a2bbbfe4096ade56"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "1e3ffd70116515445a55545ff86dacb933abf80c0bc327ab99d90dcda5b4ef76"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "17d0a0d760032983b36b6c6d2e3df1ba665f22031617b2dbce0f7f9780479177"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "4b088f6091cee27a4956e719f387ba64d741dbff5116eedcf4389d05f175e6ec"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "c48c57304dd980cfcbddb88693b4155e68c1d4ba3b271ab46bce8ea8bfca2066"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "a497cdd5b8dec444995e72b072c40ada2303b4ec4f113e4b3435d3cec7b7159b"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "被看見是一種合理需要，但認可不應成為唯一的立足點。",
+        "explorable_strength": "辨認希望得到的回饋與可自行確認的付出。",
+        "core_tension": "他人的讚賞變少時，可能開始懷疑自己的存在感。",
+        "integration_direction": "記錄真實努力及需要的具體回饋，不以稱讚定義全部。",
+        "customer_narrative_short_draft": "一項工作已經完成，周圍的人卻忙著下一件事，沒有特別提起。有人因此覺得自己完全不被重視。「認可鏡像」談的是渴望被看見的心情，而不是要求人從此不需要肯定。\n\n可以具體詢問回饋，或向同伴說出哪種支持對自己重要。同時也讓自己看見已完成的部分：對方有沒有稱讚，是關係的一項資訊，卻不能概括你投入的全部。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "與 S2-03 自我價值及 S2-06 重複求證差異需保留。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-15",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "信任鏡像",
+      "name_zh_source": "信任镜像",
+      "source_code": "S2-15",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "c175b6920baab903704569803d05bd277b9783ce03c7601cb9002055132b5e1d",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "7e98fa7806289563b30b08f9c56c36128154f32c35f8c20029a2368b96ae7edb"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "5d62ff85dcae16b369e3dc5f138435efaa6406908b0acffaab42d11a9d6d0737"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "12f56c97bd512b41a3a43f22d63774f2f3244ca24bf33472bc27b06bc8e5ca98"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "cb32191a3585644eb02f51a7f3dac7ba0d565e21629c5c9ecd1bf59223c075de"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "9b2fb38f2129582c343ae8f507515d7e1f1fc2c546b12949be2bc5c635c407f9"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "f84f075eb9a98a6cf53a01aee026b2613417516207de1af9dcef97feba086301"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "16ede0612f6d7fdf3f1335e7a8e5392318c819ee25f68fa4cf77eaf50f187066"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "6037127799a42a9bc0616e219fd36f58622b92aaaf949aa285e865dbc00eb7cd"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "信任需要行動支持，不能只靠不斷試探或口頭宣言。",
+        "explorable_strength": "探索透明溝通與可驗證的承諾。",
+        "core_tension": "當不確定被轉成測試，雙方可能越來越難坦誠。",
+        "integration_direction": "說清楚需要的可靠行為，並以長期事實判斷。",
+        "customer_narrative_short_draft": "有人故意延後回覆，想看看對方會不會主動來找；另一人察覺後，也開始猜測自己是否被考驗。「信任鏡像」描寫這種試探如何取代原本可以直接說明的需要。\n\n如果關係值得經營，可以談哪些約定對彼此重要，再觀察是否真正做到。信任不是要求自己忽略不誠實，也不是對一切保持懷疑；它需要在可檢驗的行為中慢慢累積。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "必須尊重背叛、欺瞞等客觀事實，不把不信任全歸因讀者。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-16",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "感情強度鏡像",
+      "name_zh_source": "感情强度镜像",
+      "source_code": "S2-16",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "0e556e6f6ed633f6cb109aff4b9489aace6bc92055dc597c65957bd4f8645ba9",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "9365721e5e0ccc0c33bf5296f3bb36cf7e986834591d87b1a48cc0f90aa2e8f3"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "5e98408547ec2f323ed8dea57c487bae3c40f8b8347ef1ab8dad8719016c3e34"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "feebfe1904bf59351e743bdb8c4e4a26b79440a487fb71306fc8128a0c2cd4da"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "181e881016b1e2be90c492684da284c698f3e2fa57bd55621334f20cc703126e"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "2dcf1e63dbef0b6d916b1935fae7db833347f4d02408f59da607569205d50eab"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "0a10a43860ce9b7be8608efc1712eb98754f12c7db9371b1094814b1adc16523"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "af03165177e7975435d0bb91b03b15d8953e98371a50951fe163a4a13910d67d"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "ec55c736ac69a7adaeb341d55917f5dd99d3717f35636a9a5807d06408142f3f"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "情緒濃度與關係品質不是同一回事。",
+        "explorable_strength": "分辨強烈靠近與平穩互動各自帶來什麼。",
+        "core_tension": "過度依賴激烈感受，可能忽略日常的可靠性。",
+        "integration_direction": "從日常尊重、承諾與溝通來衡量關係。",
+        "customer_narrative_short_draft": "有些互動總是先聊得很熱烈，接著忽然冷下來，過一段時間又恢復親密。「感情強度鏡像」關注情緒起伏是否被誤認為關係一定深刻，而不是替某段感情預言結局。\n\n試著看看高低起伏之外，是否仍有互相尊重、可靠約定與可以平靜討論的時刻。令人心動的強烈感受可以真實存在，但它不足以替代安全、誠實與日常照顧。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "不得浪漫化反覆分合或虐待循環。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-17",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "界限鏡像",
+      "name_zh_source": "界限镜像",
+      "source_code": "S2-17",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "710f6ca89a605b4f294e201842b563ebf59b3799d214f035c9fdccbe7c96bb5e",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "2cf34e6933a40309e918633954402d2556deb7ca2c34a704433d0d6afbe0e6c2"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "875ee982da42d36d810f5aa7251150fcaaa1792b380cd818d5ef722bb41f4402"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "f578fdd3febdec881569bcca4b6145b896b79908db4f66b320500a4a82387a45"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "597d3eb5bc2c1f16baa6810426307d9b4774ac2d0e8117e1f59a232016570732"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "8b3ddb1209d02fbb8abeaedff05e7893759a058e0b51617569c2b585d4ad48ec"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "9594bc776d0d321b4c22621d8e3c7c2c988660f79b14c7bfd506ea87d1193641"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "69223b0f670f6f6f9efff9352e4eff85a49cf33ede1ea5f1915dbd257f66de4e"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "aa11c9bc8d7a93449762bbf2f26779e905f771cd6ee519aba5dfe6af12a330d7"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "清楚的界限幫助關係理解彼此，而不是單方面拒絕靠近。",
+        "explorable_strength": "辨認個人時間、身體、資訊與決策的自主權。",
+        "core_tension": "界限不清時，容易出現侵入或被迫配合。",
+        "integration_direction": "用具體且可執行的方式表達同意與不同意。",
+        "customer_narrative_short_draft": "朋友想借用私人帳號，說只是圖個方便。當事人即使不舒服，也可能擔心拒絕會傷感情。「界限鏡像」提醒，信任不代表必須交出隱私或選擇權。\n\n可以說：「這個帳號我不分享，我們改用其他方式合作。」能明確說出不願意，也能聽見對方的界限。若拒絕後出現施壓、威脅或報復，問題便不只是溝通技巧，而需要優先保護安全。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "身體同意、隱私與人身安全屬硬界限；不可建議妥協。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-18",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "成就鏡像",
+      "name_zh_source": "成就镜像",
+      "source_code": "S2-18",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "a25318746cb9dc23147c1acb5161cd96a8a1bd4b2007dcf6a712394bed1c4c69",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "5df039777cd0fe5369107b89883586c5d2b087f922ea1fecbe7a886258fa6aa0"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "0a4b30886d92c84895815f85f9516371b0519a4169da744217a04f713a63f21c"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "8a0ab2a8f3b6d9674ef6830a93e86d7aa067a7aaa8a5a53f777e033b2e50b039"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "cbd275d586ad3f4248bdcaeb7fdb991b0b681c817b5aa016a963007c5c63d668"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "2f37b8747ce2ecb66576b38897f1100e911a7da9cae076a6c737a9c43adb2e76"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "04bef2036afb3572e82eec948d19fe03812f05041caddb2dcc5680be47c2b304"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "639873ac7b0505769f85e4632d3b91fe9fec5bcb9408917a904658b641876dbb"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "f8b47b499efccba9d00733c7e65ef6b1374583795399bf55665a86149545834b"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "成就可以是共同努力的成果，不該成為關係裡的價值測驗。",
+        "explorable_strength": "辨識目標期待和彼此支持的方式。",
+        "core_tension": "互相比較進度，可能讓努力漸漸轉為疲憊與自責。",
+        "integration_direction": "討論可行目標與休息安排，保留對當下努力的肯定。",
+        "customer_narrative_short_draft": "同學合作準備活動，一人很快完成任務，另一人則還在修正。進度差異可能讓人想要加倍努力，也可能開始擔心自己拖累了大家。「成就鏡像」聚焦的是成果期待如何進入關係，而非宣稱誰天生更有成就。\n\n試著把共同目標拆成真正需要完成的工作，談清楚分工與資源，也承認已經付出的時間。被比較的感受值得重視，但一個人不必靠不斷衝刺來證明自己有資格被尊重。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "校準 2013-06-12；避免預設成人職業與學歷成就，與 S2-07 區分。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-19",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "自我表達鏡像",
+      "name_zh_source": "自我表达镜像",
+      "source_code": "S2-19",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "86f563716d1ec75c5a1cf679c440c780a500c5567c972ea9cdb40dff152b91ab",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "235dccadd88809f21d85c89d12d4d07fd5b24b4f0014c0173b216f8eb1608017"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "9f4eddd43780dc7d0b395c49e4e592336e01cedd7ad80c56274b229941b367b9"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "ee986932c4f29da37e51a254ab2a823bb5aaf386a38639e437f00dd386a45d9c"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "4a898d5433cc0ca74d9abfe08236d715a736db4ad6844e813b02f0611c9a7c3b"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "18f16eb27966505edec53d71164acdb4f458f7e076e77a0472d82f1d22dff672"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "b537c3ff7374cf8ce2eef5821d40c96c2a7c707dbf26f4753a4a228631e0d143"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "49eea68514ea980d2b203546b8c5f8fbde342dfba6aaa6ae3a8e8e9a572a3f49"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "a753aa17bbb78123670ab72e76788e47d1918226a272c8c2f9599074f8ca3d3c"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "真實表達可以清楚而溫和，不必等到壓抑爆發。",
+        "explorable_strength": "練習讓想法和感受在適當時刻被聽見。",
+        "core_tension": "害怕被誤解而沉默，可能讓委屈越積越多。",
+        "integration_direction": "用第一人稱說明事件、感受與希望的回應。",
+        "customer_narrative_short_draft": "某次討論時，一個人明明不同意，卻怕掃興而說「都可以」。幾次之後，不滿終於在另一件小事上爆發。「自我表達鏡像」不是要求任何人變得外向，而是關注沉默和激烈表達之間是否還有其他選擇。\n\n如果環境安全，可以先從一句具體的話開始：「這個安排我有不同想法，想說明原因。」對方是否願意聽也同樣重要。表達真實不代表必須接受羞辱或持續爭吵。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "需將不敢表達與對方實際打壓清楚分開。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-20",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "依戀模式鏡像",
+      "name_zh_source": "依恋模式镜像",
+      "source_code": "S2-20",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "7ba7fda7857af9dd8f58f1096d3c937e7eef700959568be73511963ead8ed95b",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "f0553755eeeb76e8bd2f21173922da9231059926ace5a1144e62f4fb2335ff34"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "4a63f02f37121b1e39ebb0a10555fa04e420342749f82b8c3f49114e764ae50b"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "ccf580ae7c93e549ad8b10e9c48cf350397c8ec2dbec8fdfe29bef9142913e0a"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "f932df6887c397678350aa33580aa2a5df62fe4825871a95df17490625d65627"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "c5cc5fbd15bd4a585a36470d5fa60ff4506eb0f800cacc03c0efbc5f80715cb6"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "bdb70f839e918aab79c9e8bc84bc160cfe0f76e090a31e861fbba10efea79ead"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "5b29d4df5c3059d1aba6e8b45c1be31d5135dfac031d9f18b615cc7148b657a5"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "92f699d30c488efc96f82343cf54e925daa923293f0beab7640c6eaea687b306"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "靠近與退開可能形成關係節奏，但不等於固定的心理診斷。",
+        "explorable_strength": "觀察對聯繫、個人空間及回應的不同需要。",
+        "core_tension": "一方追問、一方迴避，可能使彼此更難理解。",
+        "integration_direction": "把想靠近的理由與需要的空間說清楚，尊重彼此選擇。",
+        "customer_narrative_short_draft": "有人在訊息遲來時會想多問幾句，另一個人則在壓力大時需要安靜。這兩種回應若不被說清楚，可能造成一再追逐與退開。「依戀模式鏡像」是互動的觀察語言，並不能據此診斷依附類型。\n\n可以討論適合的聯繫頻率、暫停方式與重新對話的時間；也觀察彼此是否真的尊重約定。關係的節奏可以協商，但任何人都不需要為留住對方而放棄安全或自主。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "校準 2008-12-08；不得診斷依附型態或將不當行為合理化。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-21",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "情緒共鳴鏡像",
+      "name_zh_source": "情绪共鸣镜像",
+      "source_code": "S2-21",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "b363148022d5fedf60f3e6621d9c6f36aa1794566b319a41bba20a300fa3b938",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "fea8b4cf5469cdae928e37ee7545da3b6ca41541bdf178aef88a160a99fc1e70"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "99358ff30857f4d209b3ffd98373e75b7166cdec0c5b5600256449a3f63b2d4e"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "e4006b66415840db6621afd1d3a718a847863316408fd9d3cc38d82545ec9164"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "94bf7d8198e2912561abfc42f8ae70d79902d4c0daa4f227ba4ece6641df3a76"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "16eb89c46e8ffaf44e1b7a4ec8234bcb13211c85c27f2ccc485aa8a2be38230c"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "affb350a72d4656285951650727f40380bbe809fbc5c361cbe0065200ea6cc97"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "75410c2ab1f6668e4416dbacf3c8b31e7781e1c3515b541fd4d7d15f77746760"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "ed7497b334111ae3c9d495f006fa0cba07877bc0ffbf8dd4fd05fbca48160194"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "彼此情緒會互相影響，仍可以各自辨認與承擔。",
+        "explorable_strength": "看見情緒共鳴與事實確認並行的可能。",
+        "core_tension": "把對方的情緒全接到自己身上，可能使界限模糊。",
+        "integration_direction": "先分別說明自己的感受，再確認需要的支持。",
+        "customer_narrative_short_draft": "一位同伴因為計畫受挫而情緒低落，旁邊的人也跟著緊繃，甚至急著把所有問題接過來。「情緒共鳴鏡像」談的是同理心如何影響互動，不是能感應他人看不見的能量。\n\n可以先問：「你希望我聽你說，還是一起想方法？」同時也留意自己的狀態。理解對方不等於必須承受對方全部情緒；每個人的感受，都有權被清楚說出來。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "避免能量讀取的事實宣稱，與 S2-24 情緒壓抑區分。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-22",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "期待鏡像",
+      "name_zh_source": "期待镜像",
+      "source_code": "S2-22",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "70485700ea201acd1fd236db1fc574654b49bae2e8476d482729a5feefc7609c",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "9543408afd082a04d40a5151768e90b20d7ebd163c5604444c726e497478fef3"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "eb09821f4f65b8dacd261eed10863a144d236848cdc56f48e157fe463cfc2420"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "666c92d0b86afa4d45a53657031bf8ba1bf83390d6a3d2d09e0344e41d73de70"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "d87c89d8d1dd404160c59825c4ca408a0380d159219fda5fcf851adb919fda09"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "7711628d4031340799b9ef42bbc775fbcd0be895ae7cd94c35f72c66206f9ce5"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "02ea1992fee500d3eb1745f1a63fdf0bb5a298ffef20dbec6e4c71f26420a503"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "8f1f27923169edeb18b2adc7a02e5775254a06c6a12284175c1c6ce2150bcd72"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "a4e3fc50fc2c1d0656ac388deb9dd166b01ecb8e3a583c0803019508512517fd"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "期待值得被說明，而不是默默要求他人完成一個角色。",
+        "explorable_strength": "辨認期待中的具體承諾與個人想像。",
+        "core_tension": "期待越高卻越少說出口，失望可能反覆累積。",
+        "integration_direction": "把可協商的安排說清楚，也承認不同人的限制。",
+        "customer_narrative_short_draft": "兩個人約好一起完成一個活動，其中一人希望對方不只到場，還要主動安排每個細節；另一人卻以為做到約定就已足夠。「期待鏡像」關注的是彼此腦中的角色劇本未必相同。\n\n把期待改寫成能討論的事項，例如希望誰先準備、需要幾次確認、哪些部分可以自行決定。如果重要承諾一直落空，也應如實看待，而不是一味要求自己降低期待。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "不得把合理契約、照顧義務或安全需求降格為幻想。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-23",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "付出鏡像",
+      "name_zh_source": "付出镜像",
+      "source_code": "S2-23",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "65401ddb76fd98bd0f58be753b8d0f947b0930e5d109d59b8fe46245d59ab3bb",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "65ff3f1e5755623525bd83bf545ddc54e6b1236c937e266d87157aa032b7945a"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "71b8ff7b7748be2c84c96b187e5c21ebf81e075e122373c4cc7b9ad156faa4ce"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "2fa7e360bc3f2914d36aece3a5f0643f40164f57d39c80a65fd6e290e79a6862"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "5c4edce161c1c6d37915b808b7fbedde4d8eb8582677732e8694f31a619ce473"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "53f1e27bcd41e744e390f52f4d50bff51b757906f5ee6daa52d671e84013c1e8"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "d3856eb916bd8d27aba0aaa5a46b49b34b1a96f5880bf243bc5a90ef5e20c0f5"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "8480777a5f6051a52ea2e9e4a1f45665156178c92f6973722da17199c7ec334f"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "9be5bb146a8b5368f0ad14f5273d2439288651d7666195267c71cbff3555b252"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "付出需要被看見，也需要可以持續的互惠。",
+        "explorable_strength": "探索照顧、給予與提出需求之間的平衡。",
+        "core_tension": "不斷多做一點，可能換來更少的討論與更多的失落。",
+        "integration_direction": "在付出前確認意願、範圍與相互支持。",
+        "customer_narrative_short_draft": "某人總是主動整理資料、提醒截止時間，久了大家都認為這是理所當然。他沒有停止付出，心裡卻越來越失望。「付出鏡像」描寫的是自願幫忙如何變成固定責任。\n\n可以先確認哪些工作確實願意繼續做，哪些需要共同分擔，再談清楚分工。關心別人並不需要用耗盡自己換取肯定；而別人是否願意公平回應，也同樣需要被看見。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "與 S2-11 責任及 S2-25 被需要作不同主題。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-24",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "情緒壓抑鏡像",
+      "name_zh_source": "情绪压抑镜像",
+      "source_code": "S2-24",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "402d2c131951577e9135d53b1ab6f91b08a6c164ccc3110f4d1b9e341807811c",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "a5964e44f75790cc13e872334fc411bc4044c98a82a840625cca3106a18204a7"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "be48d77cdf0c052dba4c07de7cf66a3bc265e041c8768d95e756f56907038fe0"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "17b5085294237f0ed4f76a5ac183edf8f514911cbcc39748eb8e2f6b69fddd16"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "298918e65e0b21b912a54a540f9d433133b5c98597b3efa2018878df30e1e1bf"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "85a322575ad9890eb3bc228cbf2f8cd1beb8766d58da85159b461200aa74dc55"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "6f18e998fe7da3c787fd063d85d1f7b1a99ac6eb89b42bd7dc078ac607b2c8d8"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "55aba7e95528e40e267307037c3cb1a9a3b87432c0bc45e87d0ebdb5dedff5a9"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "7585deb290eb096ef446684813d3a374bf8469072c423467389af52158db2bed"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "情緒可以循序表達，不必一直壓住直到爆發。",
+        "explorable_strength": "辨認早期不舒服的訊號及安全表達方式。",
+        "core_tension": "一再忍耐可能使對話在較晚時刻變得激烈。",
+        "integration_direction": "用短而清楚的句子提前說明不適與需要。",
+        "customer_narrative_short_draft": "一次安排被臨時更動，有人想說自己很不方便，卻連續幾次都回答「沒關係」。直到另一件小事發生，才忽然說出積壓許久的不滿。「情緒壓抑鏡像」關注這段沉默的累積。\n\n可以嘗試在比較早的時候說：「我需要一點時間調整，現在不太方便。」如果情緒已經很強烈，先暫停再討論也可以。需要安全距離時，無須為了表達而勉強留在有威脅的場景。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "與 S2-19 表達恐懼不同；焦點是壓抑累積與爆發。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-25",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "被需要鏡像",
+      "name_zh_source": "被需要镜像",
+      "source_code": "S2-25",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "cf2223f67d1b4c8f910758066f8a945f8af11e604e523240f9f027a8ab32b64b",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "dda5941846cc2aa93fb1323e68a9cb397af6bb69270aa869234fab8912eb699d"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "cdf48534d6f38a33abc072bd4bbecfe2d912c407bcd9a6e24e41f3378f9ec4ed"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "783deb6f3fcb40b79ad60b26a1d07213d1be18e63d118765df744d54ba4f37bf"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "d471331fad3bd3852d10287b85313463ac3765d76dab09f81b0b454319b1dcdc"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "489c902592b71e5afb2ff7024e556c3e942aafc43ea6184a4e1a5b56e32ccfd6"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "62479129c3b19752aaccf7bcd52e3a0d75fda210f9b566ad34918bcae298bbc6"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "060352b71c5cb4fc704bf1a7bb2c99763d0f02e0854469f7798830ace03ff711"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "de83799cf530533496be85261c87b0a64138e254946e76814669065561c2a127"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "被需要不是個人價值的唯一來源。",
+        "explorable_strength": "察覺支持他人與保有自身生活的可能。",
+        "core_tension": "若靠承擔責任換取位置，可能逐漸不敢說不。",
+        "integration_direction": "保留可以由他人分擔的工作與自己真正想做的事。",
+        "customer_narrative_short_draft": "某個群組裡，總有人在第一時間回答所有問題。當別人逐漸學會自行處理，他反而不知道自己還有沒有被需要。「被需要鏡像」探索的是角色與存在感之間的關係。\n\n如果有共鳴，可以練習只在自己願意且有能力時提供協助，也讓其他人嘗試。被重視可以有很多理由，並不一定需要扮演不可取代的人；健康的支持也應讓彼此越來越能自主。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "不能把實際被迫照護責任寫成主動追求被需要。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-26",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "否認鏡像",
+      "name_zh_source": "否认镜像",
+      "source_code": "S2-26",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "62e30e278fb80d0bf7e60eeace693eef21b6f5776642b3f9f65fa08d0a5a7928",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "afcf4296ac36eee95061779a840238de2ac62d9fbabd9e5f40390966575913b5"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "3108bfe8ada2c466ab54806089a0441e79cd52720c29b572e485c0e031c10630"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "6566c920a92e65457a41e39cb010ce83eb881286e89c9d37d467229ecd6b0ec0"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "cc42c676f2734c5c4e29ccbcb2712dbd15e7d1e3c0b1c38b2f1d7de28a55cbb1"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "04cf621565869239f085f855ce4d73a55fa2193ef7a4b9e8e5c42ec89b9ee61c"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "d3520ac5f01a9a2815ff936c4aaf621d39379cbe0d7b330d423eb407a0b4e227"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "64ecae99eeb100b0e3ffa528360d7ddfb1021689ff3cb3669fcae359ebd7bd0c"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "2144044ae482014314fc47cd5307101dd7685946738d4e203204cf5df8fc6c4d"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "感受值得被表達，但是否被理解不能全靠反覆爭辯。",
+        "explorable_strength": "分辨被否認的痛感與對話中可確認的事實。",
+        "core_tension": "愈努力說服對方承認，可能愈陷入原地爭吵。",
+        "integration_direction": "說出具體影響，並觀察對方是否願意尊重。",
+        "customer_narrative_short_draft": "有人說「這句話讓我難受」，對方卻立刻回答「你想太多了」。於是，原本想談的是影響，後來卻變成誰有權決定感受是否合理。「否認鏡像」關注這種互動，而非要求任何一方先證明自己感受正確。\n\n可以清楚說：「我知道你可能不是這個意思，但這件事確實影響我。」如果對方願意討論，才有機會理解；若一再貶低與否認，保護自己的界限比得到對方認可更重要。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "不得以『自我認同』淡化持續煤氣燈操控或心理傷害。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-27",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "靈魂震盪鏡像",
+      "name_zh_source": "灵魂震荡镜像",
+      "source_code": "S2-27",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "8f826bb82c0269597b80b03af1ca7e2318a93a75db36d561006174034292bf83",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "ad6c7934ba4d0a35f15a65971ef64d172dde963a10ae5696d7e7c80db0364f5e"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "3b496bcc3087352ccf7f77bb48fff6d7d076cc181e4c358d7b44c72e3d0dbcb4"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "51c47827bce7eeef86b97568ff6889818e22fba0c192f48ce05661fed5c4bf6b"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "25dd2ff1ba2c708876ffa96c6040c9e34cfba3276124d23ae7370d694a91c13c"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "e0c7aa28f5166aaa8556fd62f0c80e27a8e7ac44626fcfee56d74612f5484436"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "456d49c393e96189edab6b6bf4e9313904cc16060780fb5473558ed91361260b"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "a7d4dd5f29db175ddbc288bf66cb13415bffe0df5211e341d2488c38b1d512fe"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "f3ff498355df3bb94558c1e00de99b8cc168db84055f1bdc9167f02d6d513e21"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "強烈的關係波動不代表命定，也不要求以痛苦交換親密。",
+        "explorable_strength": "把情緒反應與雙方實際的溝通行為一起看見。",
+        "core_tension": "靠近、觸動、疏離、再靠近可能反覆消耗關係。",
+        "integration_direction": "確認事實、需要和界限，不以震盪作為成長證據。",
+        "customer_narrative_short_draft": "兩個人原本相處親密，某次誤會後忽然冷淡，過一段時間又想重新靠近。「靈魂震盪鏡像」用震盪形容這類關係起伏，不是說誰是命中注定的靈魂伴侶，更不是預測你必然經歷這種模式。\n\n如果遇到類似情況，可以先釐清雙方實際說了什麼、約定了什麼，以及哪些需要沒有被看見。真正的靠近應容得下尊重與安全；任何傷害都不需要被浪漫化為『靈魂必修課』。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "校準 1980-05-22；必須保留關係傷害安全提醒且不可浪漫化虐待。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-28",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "舊傷鏡像",
+      "name_zh_source": "旧伤镜像",
+      "source_code": "S2-28",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "e21bbc18f652899b3d56286b82157e15d5e1f73a9b5b85d45076846d9399d621",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "51ac44bbe5d83374cdc2dc9c9222f8f10f997266716d68bd80d2f085b7610599"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "0ffb83e3e6c891e201c89f41ca124d6fbce469bde818e0f2fa46bfff628fb3ac"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "6e8e6add8f2f501c1ceeac798e92b64328aa924dd7dd450cf48882beb1fb61fb"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "8341574e919f1b4c2654c1859fbbdb004cb41cefc57ff1990b634cfbdf46e83a"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "d5f28c16db2a13eede64170a5cc498851474fe7fd807833043ca13d79f5f760b"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "a5b19fd277b22e1f7e2225e5e3070ff921d0e4020ef70b0f5ba8c2ca0320de68"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "3a958f8558830ec5d8e6da58e2fdf6426c1eea736b14a452b039b35980edcd19"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "8dd587a60c9c45f8d1121304c7c8bed8e0082afde4788a05239dae8871ba4130"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "舊經驗可能影響現在的理解，但不能因此忽略當下事實。",
+        "explorable_strength": "觀察過去經驗與新互動之間可能出現的聯想。",
+        "core_tension": "若把相似情境當成同一個結果，誤解可能重演。",
+        "integration_direction": "先核對現在的行為與界限，必要時尋求合格支持。",
+        "customer_narrative_short_draft": "一個人曾在合作中被失約，之後遇到新的團隊，便對稍晚的回覆格外警覺。「舊傷鏡像」提出的不是你一定有創傷，而是過去經驗有時會影響對新事件的理解。\n\n可以把現在有證據的部分與自己擔心的可能分開，慢慢判斷是否值得信任。如果過往經驗涉及創傷或現在互動有傷害，相關支持應以安全與專業需求為優先，而不是要求自己把一切解讀成鏡像。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "不可預設讀者曾有創傷，不得替代創傷專業處理。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-29",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "逃避親密鏡像",
+      "name_zh_source": "逃避亲密镜像",
+      "source_code": "S2-29",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "0e84d534267b46106a4cbaa38aa050914605f123ec1fd8afa4f7ad27cf12949a",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "b1bad78db21030187c7d0629197c67c1f467bee3a41d26945dfad670ded3dff6"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "65f2193a11c58acacda65a6a6172d60189a9f6f961a59305bef5479dac3c6e8b"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "5f02aa344ea4fed1d2cc10ac495e8592bc10c5193e46c8d949de4fe5d16bb5ed"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "ed3ccf6c2aa7f5b1125ddfe349d121761795568680e5f8a87225db9823d20b5d"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "7367dcecadd7839440bc754f59ba9118f6559d6a9180177a7c487118dde036aa"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "8ce519ae406e49cbee154c6ece5025c6f916870c48f281e0491b38b480e3d7b9"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "1ba58bc86d0b04f4179d0cebb0d0e8850ceff9cf290a615594bc61bbffdef13d"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "74eee31b758e6cc5736d36b89198c2120bf60c790bc4aecede09cdae5899dbfd"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "想親近也想保有空間，是可以被討論的兩種需要。",
+        "explorable_strength": "辨認親密節奏與個人界限。",
+        "core_tension": "接近時突然退開，可能讓雙方都難以理解。",
+        "integration_direction": "以可承受的步伐說明自己願意的靠近方式。",
+        "customer_narrative_short_draft": "一段友誼逐漸深入，有人很珍惜聊天的時間，卻在對方開始期待更多分享時感到不自在。「逃避親密鏡像」關注這份矛盾，不代表每個需要獨處的人都有問題。\n\n若環境安全，可以說：「我想繼續認識你，但有些事情希望慢慢來。」對方願意尊重，關係才有共同選擇的空間。若有壓力或越界，保留距離也可能是最清楚的回應。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "區分正常隱私自主與恐懼迴避；不得強迫敞開。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-30",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "完美主義鏡像",
+      "name_zh_source": "完美主义镜像",
+      "source_code": "S2-30",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "2c2a597c7c5892c7dd1dadb631a6e9c97147a4e8d17960f7d2d17822fc57968f",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "78f2c2c70b0287866cc5a8f796f86f5bb131d3a187d6ee06b2b4407e55dcc715"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "67e93742659626d2077efa42eda5baeffcaacc26c242c7e4f39124c1423ea903"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "92c2423c328f8586279a74a8ecb133d6b7299f4c1597e61eb870f911cba1d74b"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "b728ce91839f539bf461592c7edc19fe74d942f7e91170f874ed721da2a248b8"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "d7373fcbdf9a1bfb6f5cf424ff49d07cdc45558aebddc49898636ba0010a2d13"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "4581b4c4a0815ad71547faf7475a311b1310970d6348daf1505a8f60e91e41d9"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "6261143233ac1f917140e8d5ada11c8948446b5fd8a0c5450e2969845bfbfd8a"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "f876758608d7a190074f45601a25dc7b181b2085a241941c7045fea17ba62921"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "對關係的理想值得理解，也需要容許真實差異。",
+        "explorable_strength": "區分重要底線與可以協商的偏好。",
+        "core_tension": "當一切都必須符合想像，失望與批判可能反覆出現。",
+        "integration_direction": "確認不可妥協的安全條件，再討論可調整的期待。",
+        "customer_narrative_short_draft": "兩個人對如何度過週末各有喜好，其中一方總覺得「真正合拍的人不需要商量」。一次次落差被視為感情不夠好。「完美主義鏡像」描寫的是理想化期待如何壓過現實對話。\n\n可以先把安全、誠實與尊重列為重要底線，再把時間安排、表達習慣等放進協商。接受不完美不等於放低安全標準；它是讓真實的人，而不是想像中的角色，走進關係。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "不得要求放棄安全底線，以免與 S4 完美循環混淆。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-31",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "隱藏需求鏡像",
+      "name_zh_source": "隐藏需求镜像",
+      "source_code": "S2-31",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "22a03ce0ba5d2320380e45d95ffe19ba1e0697885595ebaaa315c7e3b356f830",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "093151a550ea2c6689ef1ca7088250e243db6e9690a562c61f269e6dbf7e7ecd"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "212e8e7513311f98ad7ef9a20d820022ec42e89fe0f81372384db90d68c771f2"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "0919522683e5887a3612f30ff52a826af57a764159e511f94a756fcf3fd5c84f"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "31a5997ca347b66c73a7e4f52cc948fb5e5df66f8175b3a00653648197a5ff0a"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "cd2143a98c12bf1957aced607bbb06baf4301370773fdf51a4b28aea1c36dd25"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "95973f98b11b8a7f32399a7077df59b1a6452f3ea3fbb789efdcaa2defafc5bc"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "e510b2cb202662ff24580cc1344c8783170da8dffe760d2d3661f4cbff586cba"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "09aa60f993d2ba13010996f65a7169c591b9b6437dce0a3ae6dd5d13785a7fbc"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "需要若只留在心裡，他人往往無從理解。",
+        "explorable_strength": "練習把模糊期待轉成可以說出的請求。",
+        "core_tension": "不說、不被滿足、感到委屈的循環可能持續。",
+        "integration_direction": "說清楚想要的協助，並允許對方回答。",
+        "customer_narrative_short_draft": "有人希望朋友在重要日子主動陪伴，卻從未提過這份期待。當對方沒有安排，失望便慢慢變成生氣。「隱藏需求鏡像」關注的是尚未說出口的願望，而非認為重要的人應該事事猜中。\n\n可以試著說：「那一天對我很重要，如果你有空，我希望一起過。」說出需求不保證一定被滿足，但至少讓雙方有真實討論的起點；拒絕也應獲得尊重。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "聚焦需求未說出口；不可替持續忽視的一方開脫。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-32",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "價值交換鏡像",
+      "name_zh_source": "价值交换镜像",
+      "source_code": "S2-32",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "f558c2e091bce33b71ab56d6c113ba6a876b4df3c03c7a35d9fae2a7a916f1b8",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "04c15df44035c3f38a4259b25eb7433b0cda7ef1849319111042a4d4e42dab9b"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "6f8236f33327ab86fd51ec9d460f66962a4e760d0d1dd43c6559b1aeddad36c2"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "d177dbc96a403f1a49c38baabf3a2991e2effa7d254a2ac84affd0218973318f"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "4c5ba1fd8487af639df61d753c8458f2528313709db1648ddb8a7a670616a069"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "d467d0b0ec85c2ddc8ef9ce86316d9214b5e031a5a509d9b328b6e8aaa2b2c5e"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "edb8a74597b0052de1f1956f2f5714d59041b19aa74ce10fedc7e17f3707031d"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "49cf11b9ae78f82d925e2614671100cf0414cc58bdc1e33938feb01b75ab5925"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "92886d8eeead4ff59dbb598672de915c3679f604ceebdaac583bad2ed26af741"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "互惠可以被談清楚，感情卻不必變成一筆永遠還不完的帳。",
+        "explorable_strength": "辨認服務、資源與情感支持的不同交換方式。",
+        "core_tension": "若一切付出都被用來衡量是否值得被愛，關係容易失衡。",
+        "integration_direction": "分清實際義務與情感期待，讓雙方同意交換條件。",
+        "customer_narrative_short_draft": "兩個人常互相幫忙，某次其中一人突然說：「我替你做了這麼多，你應該更在乎我。」具體的幫忙逐漸被換成情感要求。「價值交換鏡像」提醒，關係中的資源往來與情感承諾需要分開。\n\n如果合作涉及金錢、工時或財物，就把條件說清楚；如果是關心與陪伴，也讓彼此有說不的餘地。公平不等於否認交換，而是避免把愛變成被迫支付的價格。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "不得否認合法契約、金錢責任或以無條件愛要求無償勞動。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-33",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "情緒失衡鏡像",
+      "name_zh_source": "情绪失衡镜像",
+      "source_code": "S2-33",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "782043f90e321934693378a27f0d7b500016594ef538d6c5295ccf42feb0aaaf",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "e45be59aebe0fdfbdcc150510c1b556016aadd5b2891f98d3f29a9e5d048bbf3"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "3f399e385d28a770187aa27d5c8ec656dbdd20664e3ed6287426e3d00081a57d"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "f855b82636d1cf11702dba2283d9e579591c5f8208ee9799879c3fe8b1f838f7"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "a95a4e2f2d1d0f45674a11d81244522f14f2253522af6d2f152c6e958925897b"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "13abc6441471eea9fab4b41d74e089497c3f51620f7bb5051fde9b23fb10ceb1"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "9bac31c2572559e40d657d5d747f349654b9773b9ed73e5a2a50ca352e44394d"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "3ae667396a00853697bef757728bb31701b6ed329fcf439b076f6dd3836e980a"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "e4138cdd3f9ae818d866c73d10827b619089321bcb0e9aa0c8e2d2cc55406ec5"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "情緒起伏值得看見，也需要事實與調節空間。",
+        "explorable_strength": "注意互相帶動情緒的節奏。",
+        "core_tension": "一方激動、另一方退開，可能形成反覆的緊繃。",
+        "integration_direction": "在合適時刻分辨感受、事件與希望的回應。",
+        "customer_narrative_short_draft": "討論一件分工問題時，一人語速越來越快，另一人則越說越少。沉默又被解讀成不在乎，使原本的問題更難處理。「情緒失衡鏡像」關注這種互相影響的節奏。\n\n可以先約定暫停，等雙方較能聽見彼此時，再回到具體事件。情緒是真實的經驗，但它不必單獨決定對方的意圖；也不能用『只是情緒』否認實際傷害。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "避免以情緒起伏直接推斷精神疾病或推卸責任。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-34",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "失敗恐懼鏡像",
+      "name_zh_source": "失败恐惧镜像",
+      "source_code": "S2-34",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "48a6b9dd40f09da292985e09cb8c0483b228e2e599171402eff1bc8ea1da8e7d",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "376ed1314a2aa723b5748c48b789eda738ddf9eb001558770eb0931c241f143c"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "f6a5f7d77200633092186ccd7ad7c7879ffe234d82e327c13fb5a04844b93acb"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "18f9238b849b3e868b845203d63b78b48019120631742d5bfedfa7760dd317f7"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "002b02d821cd412823a891d6df0e0774d75a0769f06ff52e8fbc21829500d5b9"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "7935b2fd474ee55da0879bd044676401878ee72db0ceab4bd8ade50b1e846692"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "b32c92159d2c6b96cd0479432facf3fcee8b294131c3cbaadf2d48d37d389b33"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "a3a232ce5ca81b525350069adc4e7a5646d0ef1f8660d02030392c0c1fdfbf81"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "b695cce332642aab910b4126a0161794f924eabaf96a1a00833e0c7b8d83d287"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "別人的成果不會自動抹去自己的努力。",
+        "explorable_strength": "辨認對失敗的擔心與外界成就比較。",
+        "core_tension": "害怕做不好可能讓人不敢嘗試，反而加深懷疑。",
+        "integration_direction": "選一個可實踐的目標，按自己的節奏檢視進展。",
+        "customer_narrative_short_draft": "一位同伴完成了一項亮眼的作品，另一位還在起步。原本是值得欣賞的成果，卻被看成自己不應再嘗試的證明。「失敗恐懼鏡像」聚焦於比較引起的退縮。\n\n可以重新整理自己的起點、資源與下一步，而不是借用別人的結果替自己打分。若有真實的競爭規則或評量，也應公平看待；他人的成功並不天然代表你的失敗。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "與 S2-08 比較競爭、S2-18 成就焦慮區分。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-35",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "依賴認可鏡像",
+      "name_zh_source": "依赖认可镜像",
+      "source_code": "S2-35",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "8f34d1017165dd70dd6bd94c0f4aa833a7147cc86efe652a656d36394fe66adc",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "b86870b7230a96c939160494e90354e9776ec7a29a4b5b9d788b0e409a693f81"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "c71958638f448a17015388886ab0820d1af207135a444a301871aa10adb5f90b"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "2e0a8b01fb62eae1a66484b0180a0c76769cd3b72b908beeab0653a61985c127"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "2388b2f51c61d3afff8cd9db4d38deac30e9f6e7be4736e4aa2ff191a75340db"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "f2ac0e07476a4d3b44715ab91e2e17b9e04b0fd7456d9c7f92a2edcbed16e3ff"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "587a21196cafcaf476342e23af1723921e8f053d42364236e537686074fd90de"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "e1171cb92d5c990ba6fc34fba2a0c758053561e1d9bd761b5a72b165aff5190b"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "1d8a702831839b075f80edaea7ada2fe242bad81d12cbf81f179fdab1e8155e9"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "確認對方是否滿意，不必以犧牲自己的真實為代價。",
+        "explorable_strength": "辨認討好行為與真誠合作的界線。",
+        "core_tension": "先迎合再感到空虛，可能讓需要更加隱藏。",
+        "integration_direction": "在低風險的互動中練習表達不同偏好。",
+        "customer_narrative_short_draft": "一群朋友選活動，有人總是搶先說「大家決定就好」，即使自己其實想去另一個地方。「依賴認可鏡像」關注的是維持他人滿意如何擠掉個人的選擇。\n\n可以先在小事上說：「我比較想選這個，不過可以一起討論。」考慮別人的感受是合作的一部分，卻不必成為每次都改變自己答案的理由。若周圍的人以生氣或威脅懲罰不同意見，重點應轉向安全與支持。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "區分討好與被迫順從；與 S2-06 反覆求證不同。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-36",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "挑戰鏡像",
+      "name_zh_source": "挑战镜像",
+      "source_code": "S2-36",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "fc2f3c5be47b093906d5c596f794052ce5250c1a22d257b887d1884fe9e4108b",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "486601d1b9d5ad79fb2e9988828b2e10051df6487bae5378ce2609d00bd88109"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "f702c492ea6c906122dad2d1370230afbec5a0985056af789e58175b06a9ecf5"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "60877e1039f29821553c2b2706179ef3a9f416f6391b3196af98b8f758928036"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "c2d7668d63557e93d264fc3cdccc887ec073a0b90cdc88404fbf6a2c6c4910c0"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "62ad4a352f5d3dea7fdb1e9b634c09b481e80453b9981a2a201870fdf8170fa2"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "5413251ce0235ace21f07ffe5bcb8bc3f2bd02e978246782dfa9a812f287d7c7"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "4785fe11dd220082b3a225c02783cac8ee65a34488e04e64e27d9df20eb58f9f"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "8a18dfe41e7aa0600531cdd4dcbafcdda4f0b8d6fd83accffae089ef14d30f6d"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "被挑戰時可以保持開放，也不必放棄自己的判斷。",
+        "explorable_strength": "從不同意見中辨認值得檢視的假設。",
+        "core_tension": "把每次提問當成攻擊，可能讓合作困在防衛。",
+        "integration_direction": "區分建設性回饋與越界批評，選擇可驗證的調整。",
+        "customer_narrative_short_draft": "一個提案在討論時受到質疑，提出的人立刻想用更多資料反擊。「挑戰鏡像」關注的不是誰輸誰贏，而是被問到盲點時，是否還能聽見其中可能有用的部分。\n\n可以先請對方具體說明疑慮，再決定哪一項值得測試。開放不等於照單全收；如果對方持續羞辱或施壓，也需要守住界限。關係中的挑戰是否有建設性，應由事實與互相尊重來判斷。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "不能把霸凌、羞辱當成值得接受的成長挑戰。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-37",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "意義感鏡像",
+      "name_zh_source": "意义感镜像",
+      "source_code": "S2-37",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "b1afb73494fe3e317b2133fe9af56fd9b237709adbf8e18ea89ad59dd427ebac",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "5a1d22c2c6a174c3942c59fdbdf3b6da8f05da58e5f599dc725fea15745f97e0"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "5c63e6fd78944e58f3aa0a09735c9cdccf27be3700cc434ef0bf283d72d2beae"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "922573c0ad515ec36b397b08c032c4e79501c1b531704b98c2bc2993338f480d"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "27c03ff961533035f7605cb755058b6d4bf58d98e19c876473c1e0fafaa8c282"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "53340a64d967762b43b7a8e8609d6f1d0bbd6471fe9f950bf95c3d398ad0e1e6"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "533843da66e1beb5ed84989316e72224a325aff0c564d8988596325b19401cca"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "0bfe6c6b9abf6f1de4e192b3c2ace650f0556866f38902e0b3baf4f5828f9d92"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "f7044cbefe61977fc828692e5f259062e7199328bf855b2aa511ce8d7baef693"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "關係能啟發新的提問，但人生方向不必由另一個人決定。",
+        "explorable_strength": "重新整理自身重視的價值與選擇。",
+        "core_tension": "若只用對方的認同作為方向，意義感可能變得不穩。",
+        "integration_direction": "寫下自己重視的三件事，再看看關係如何支持或阻礙它們。",
+        "customer_narrative_short_draft": "朋友對你的計畫提出不同看法，原本很確定的方向突然顯得模糊。「意義感鏡像」關注的是互動如何引發『我為什麼想做這件事』的提問，而不是宣稱某段關係帶有指定命運。\n\n不妨把他人的建議和自己的理由分開寫下：哪些值得採納？哪些選擇仍希望自己負責？允許人生方向經過調整，也不必每次被質疑就否定整段努力。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "不得以編碼給人生目的或命定使命。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-38",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "孤獨鏡像",
+      "name_zh_source": "孤独镜像",
+      "source_code": "S2-38",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "a82ea7319dec726bed5847b3a3bb809db5f1d71744964955ec9eb4e836b529d1",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "85bae10534ab496d6f52a29751ae71ec75db4579e49f8ef24b74f20e0aad2548"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "81986734faff7f89af17ffbbed1bd9bca9ca5201e7b7ec1fd5d99d2001ac66ec"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "118a86e791ec739813f9f0492e88785e509641287dfdf935dcfdc4feeb056ff1"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "be7db052e74b41d88c8110860fc8fbf7381247d788478504e9ba2dc9b0d11c1c"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "616c54b9ff8cab1ec10abb3dc081e04351dff15c414294f86a54d94925bcdd24"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "ae7ba41cd5d9305657b41e59a5c5843e7064288933a65506523480c79169ee52"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "5ab9e7963c2418ac761f0cb1524074d5ee3e2f1c70fdb9ce4f123394f94dc463"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "75bd883ed5d6a3a306615f3b5655cfb4dffe07c3af5637b1ff4c42ed18a2a226"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "身處關係之中仍可能感到孤單，這份感受值得被聽見。",
+        "explorable_strength": "辨認希望被理解的具體部分。",
+        "core_tension": "越努力求靠近卻越難說明需要，孤單可能加深。",
+        "integration_direction": "嘗試表達需要，也維持關係之外的支持。",
+        "customer_narrative_short_draft": "一群人一起完成活動，結束後卻有人覺得自己從頭到尾都沒有真正被理解。「孤獨鏡像」所指的不是一定沒有人陪伴，而是熱鬧和被理解之間仍可能有距離。\n\n可以想想最希望別人理解哪件事，試著向可信任的人說清楚；也可以選擇獨處、創作或尋求其他支持。孤單不必被解釋成靈魂命運，更不需要為了避免孤單留在傷害性的關係裡。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "避免孤獨宿命論或要求留在不安全關係。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-39",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "理想化鏡像",
+      "name_zh_source": "理想化镜像",
+      "source_code": "S2-39",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "bdfe937819476379315b50eb8a38a96865ac0dd95f02f0dde1eff71cb4babe47",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "3e0701d32e22dedff1e08a36fa8d8583c6cdb6d35eab7047bde569972423a1d7"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "f3496538600c8d1a881e01ca8fe79be03310ae223c8889163b191082ac534b45"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "1935fc7f0502109f7c77ed97d1e689b89279ce59b12e0d607e14337133421801"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "d1fb7e554025e6a4bed6484d2f98b7ff61ae019c9beca2948ea54a12ffe9bf14"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "589f1267a69c9ef426cb718ef6181a9238b2dddad1410b3ee2469ebc41d2d369"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "15c6c64fd81ad78f4e58081f64f056dbf7cf2bd6494315d9e353de854022328e"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "e10720fb15cb5705a5f5dec7963502c1de9cd969e9177493fbd7c261b3eecd16"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "f4ea2e6a10101cd2e154a67b0630695eda051202dddbeba708911a929a1e0558"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "欣賞一個人，不必把他放在永遠正確的位置。",
+        "explorable_strength": "看見他人的優點，也容許真實限制。",
+        "core_tension": "過度理想化後的落差，可能變成急遽的失望或貶低。",
+        "integration_direction": "以具體行為建立信任，而非完美形象。",
+        "customer_narrative_short_draft": "剛認識一位令人敬佩的人，聽他說話時每個想法都像很有道理。後來發現他也會忘記約定，失望便來得特別強烈。「理想化鏡像」觀察的是讚賞如何被放大成完美期待。\n\n不妨同時保留兩件事：他有哪些真實值得欣賞的行為？有哪些地方仍需觀察或討論？尊重一個人，不需要替他的問題找藉口；看見限制，也不必否定所有曾經的好處。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "避免偶像崇拜或在實際危害時要求『包容』。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-40",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "情緒投降鏡像",
+      "name_zh_source": "情绪投降镜像",
+      "source_code": "S2-40",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "98be07a6679fd5d963c676bba420207d09afe958d33b64e77f42040aada253ca",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "760e4e40d3939522784ce87dadafd75f40b774aa086318b2a8e5c2aab655ffbb"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "902db162a78acb8e2fab61ec1a4fc46b37f0c15727053b5abf24015ebc18afac"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "8d613283799e9e75f12f1c6bb7f185a5ba8d7cc6e1fc9462573c47deb7c21b6b"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "6c295d4a8e8c40391637aaa49c413df897731a15083ce6b8c3cfbb4dc76a08cc"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "4fc7b73efe2591cb0be27c6f4622973bdd97efe29a8db369b419c2e3e1d8b752"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "7f9053edc4aa9a6202fafa356117abbd731dd910f1ad9c2bfed76dd2bbf92537"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "f9a92ee1b90286f6564f2ad074ace6f048fa54a6038cf97ef5f7fa42993f4043"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "a2b072f18e240cc192ad72614c39151baf601ab848bde49763087fb41fff4b48"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "順從不一定等於真心同意，溫柔也需要選擇的空間。",
+        "explorable_strength": "辨認他人情緒與自己的意願。",
+        "core_tension": "一再讓步後的委屈，可能在下一次互動中爆發。",
+        "integration_direction": "練習在安全情境下說出可以接受及不能接受的部分。",
+        "customer_narrative_short_draft": "有人一生氣，周圍的人就立即改變安排，只希望衝突快點結束。久而久之，真正的意願反而越來越難被詢問。「情緒投降鏡像」描寫的是以順從換取平靜的代價。\n\n可以在低風險情境先說：「我需要時間考慮，現在不能直接答應。」但如果順從是為了避免暴力、威脅或報復，就不能簡化成個人不夠自主；應優先尋求安全與支持。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "強制區分保命性配合與一般過度順從。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-41",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "犧牲鏡像",
+      "name_zh_source": "牺牲镜像",
+      "source_code": "S2-41",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "f997b80cfa8c7a4c78f61e172888bc2a86cfa28cf1798d084a7159d4a744ce7e",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "f58173f095b86d7f8126b6bfa82103ce8a939e8e434635777d74b3398c49d038"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "76b0006abd17c186fb1115678c0e8db2356087034a864d283f8ed8b2e84e4faa"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "5738735e53615849307e50c00a9c6afd35f9658d94e67c87112ed43374f8c0fe"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "097142832e50c39099b310b67641d00bdbbc24b945cd8dcc960c105c77ab376e"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "351fb25cb236ee51dcd2b49b3136a7c43a1e56e4728593dad16a83173247cdc0"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "dce460a913f7e43dd961d86e990a05bd381994e09707014e5d25caf309f3fbe6"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "c72d837c4a9af4e577d7536aa7cb6319bcdc22b67e434e1094c46aad65d4229b"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "37aa358f92ff59e7506f5585b653a59dff38cb3a9f5c5822130c5e564284e29f"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "愛不需要以不斷犧牲個人安全和基本需要來證明。",
+        "explorable_strength": "辨認自願付出、互相支持與被迫承擔的差別。",
+        "core_tension": "若習慣靠忍耐維持關係，疲憊與忽略可能累積。",
+        "integration_direction": "先看見自身需要，再檢視關係是否存在尊重。",
+        "customer_narrative_short_draft": "為了維持關係，有人總是放棄自己的休息、安排與意見。每一次看似只讓出一點，久了卻難以說出自己真正想要什麼。「犧牲鏡像」關注這份逐漸失衡的付出。\n\n可以問：這是我自由選擇的幫助，還是因為拒絕會受到懲罰？前者可重新協商，後者需要重視安全。關係不應以忍受傷害作為忠誠的證明，也不應要求其中一人永遠退讓。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "不以自我關懷替代虐待情境的安全規劃。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-42",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "拒絕鏡像",
+      "name_zh_source": "拒绝镜像",
+      "source_code": "S2-42",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "ea83cabd4750c26497576fae54af27fd519ee188bd2deb822c10494aff39e8bc",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "f68f99d029fa38c5243c3ea1307972b4ef499fb3c6af21c30fb2c0ee26bb92f9"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "7528a32787d2ba83a25b9d9059e5686d86e3da9c0383615a0351c749b57d20ca"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "380222596f984cf03f5db39b114548435bb0d93524b3e35365e555263ae091bd"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "de7646d7ee38ae8e5f52d0840f25cb4776fc8ba61bca9a86f4c3c9b61961c338"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "8ca53ea0295956cde28274017e2b25e3fd9a436c57559ee1438dc016ac98d393"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "59facaf37ef434615292b0ebf93abe67e38f13f8b7075c0a296e557e202b3e87"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "b57adac846915f4efdad18646a117fb25d455785d0265c22c32a386fa65c85e7"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "f147385cac7f97cae2a89c2473af50908aa3b84863271b549e00e43bc32b9967"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "一次拒絕能說明某件事不合適，卻不等於否定整個人。",
+        "explorable_strength": "探索表達需求與容許他人選擇的能力。",
+        "core_tension": "怕被拒絕而不開口，可能讓彼此一直缺乏資訊。",
+        "integration_direction": "以具體、尊重的邀請開始，也接受對方的答覆。",
+        "customer_narrative_short_draft": "有人想邀請朋友一起參加活動，話到嘴邊卻想起對方也許會說不，最後什麼都沒問。「拒絕鏡像」關注的不是一定會被拒絕，而是未發生的結果如何影響了當下表達。\n\n可以從一個負擔較小的請求開始：「你這週有興趣一起去嗎？」對方的回答屬於他的自由，也提供了關係的真實資訊。你可以在失望時照顧自己，不必把拒絕當成身分評語。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "不得以此迫使他人反覆追求或無視拒絕。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-43",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "控訴鏡像",
+      "name_zh_source": "控诉镜像",
+      "source_code": "S2-43",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "2557348122af5ac427def0a783aa4b3100f4545f6ca31eb2cdfef2a135fa944a",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "fbae6def12debf05c6068a19dba1b4457072be3a244adc0e960865ace8975e74"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "87d58087960973669a0c9ee5735a18a88ea47560af82d60d8425847fe6461d48"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "61ab1dc9bd6ba4d502b108af83f971aa7d9bfc05c0ac2b767b97b96611504caa"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "818951dbedec5588401263e82b4f570cdc815f3afe56fe56a8984d42d39b4f0b"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "8c98d152635a1de083275462d37960c117282a6e17d66869e5ca1a2336347d9f"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "2bc9e86adc989546e6660921f588613c5c9f7599088689247b7b0cc344d4be2f"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "bdd074e4098e2028be61a60388b03c15067cbb4fee1b7ed621e2830c55ea11ae"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "ba2a7cbd846977ee8efa9b1261227161a7a93cb8b08ae0a5049cac44cefd18de"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": true,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "控訴容易使談話進入攻防，具體責任仍要被處理。",
+        "explorable_strength": "辨識指責背後真正需要解決的行為。",
+        "core_tension": "互相責怪可能讓問題反覆發生而沒有修正。",
+        "integration_direction": "確認事實與影響，釐清各自應承擔的部分。",
+        "customer_narrative_short_draft": "一次計畫延誤，兩人很快從討論時間表變成互相指責「都是你害的」。越想證明自己的委屈，越少人記得原本要解決什麼。「控訴鏡像」關注的是對話陷入控告與防衛的節奏。\n\n可以先回到可核對的事件：哪項約定沒有完成？造成了什麼影響？誰有能力修補？如果其中存在欺騙、威脅或實際傷害，責任不能以『雙方都要放下指責』平均分攤。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "客觀傷害責任不能被抽象化成雙方共同投射。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。"
+      ]
+    },
+    {
+      "code": "S2-44",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "愧疚鏡像",
+      "name_zh_source": "愧疚镜像",
+      "source_code": "S2-44",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "9bbf16fa20aa3dc415ce9da09e450ba6380b7b5efa09ad999f3f74af55c0dfeb",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "791eda48623f78ddad9de01a14eb44ab1a9ebe34abb1d9bcd064b47d2b8a2b68"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "ce80362defa76f003cd022efbbfaf566865f88ba388709d0f54109b1fdd95d2a"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "897db46bebe67d76fcc429b716e2e47459f2c966c65a8df9e93f8f1318791e81"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "a75303251ebae036db154672980a3420a5cd97c6b85f823c6bf60e495fb1cfd4"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "9110f88f00693ba6b44808d3cc43d5168c0410af44bbed7747c33c6dd87e10a4"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "4a3cba6549ad3c695f25b73f6fea435f664ead826d5a4ba1b736a2c47dd085df"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "6c13a21492023d55a2815704109d606436134471c371302450cc37b2b33939ce"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "ea9977fc4d0a753e12f273b9efc51a1264d7ba4eb35b48e8d8ba7dbb3ad74dcb"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": false,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "愧疚可以提醒人檢視責任，但不必成為無限補償。",
+        "explorable_strength": "分辨實際造成的影響與模糊的負罪感。",
+        "core_tension": "愈補償愈疲憊，可能讓關係失去清楚的界線。",
+        "integration_direction": "對真正需要負責的事採取行動，對額外要求保留判斷。",
+        "customer_narrative_short_draft": "有人忘記了一次約定，主動道歉並補上安排；之後對方每次要求幫忙，都會再提起這件事。「愧疚鏡像」關注的是原本可修復的失誤如何變成持續的負擔。\n\n可先確認哪些後果已經承擔、哪些仍需補救，再決定是否接受新要求。如果對方利用愧疚施壓，清楚設限很重要；如果自己確實造成損害，也不應用『放下愧疚』取代合理責任。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "區分被操弄的愧疚與客觀需補救的傷害。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。",
+        "目前生日映射不可達；僅保留來源，不得強行提供給顧客。"
+      ]
+    },
+    {
+      "code": "S2-45",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "情緒忽略鏡像",
+      "name_zh_source": "情绪忽略镜像",
+      "source_code": "S2-45",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "e1659bf247f8d988661361bdf0b430a9e1a057bde975a7dcf90dcff19830bd9c",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "f857bde5c2f46edb16715cdf58d0dc526e86736fc98d88567f742e44a68939ea"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "f4d6df3e4b8c56a499c36baf2b8b05ee8e4888b17449cc56a60ad64156c75d68"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "0d418e234815b6f958031e2c71acde83f0514ef8451281691f3d931a6d89f4dc"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "efd3ba4051230b0babf3523763a0c33acea97fe53624f98cf79fed51f6a7d929"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "89b21c48a43b68e03d080bd798969085352d7f373e06ec1258946fd50614a849"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "a1ac12da5fa14f6df519473a5f441851c9b628572c0e6c07087d7ff7c6a50503"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "8cb508927127f4cfaabbaeb84b32bc824fd5332b454f9afcf34460930230dceb"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "863d72edebded68409ce049fc90a279fcef5e52945fd56bb3348c1d40336ff32"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": false,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "情緒需要被看見，但是否被忽略要回到實際互動核對。",
+        "explorable_strength": "辨認想要的傾聽、回應與關注方式。",
+        "core_tension": "覺得沒被重視卻無法說明，可能使距離越來越大。",
+        "integration_direction": "說明具體時刻和需求，也觀察對方是否願意回應。",
+        "customer_narrative_short_draft": "一個人分享了讓自己很在意的事，對方卻急著轉到別的話題。那一刻可能留下被忽略的感覺。「情緒忽略鏡像」探索的是沒有被接住的感受，而不是判定所有對方反應都出於惡意。\n\n可以試著說：「剛才那件事對我很重要，希望你能聽我多說一點。」如果對方無法做到，也可向其他可信任的人尋求支持。學會照顧自己的感受，不等於必須容忍反覆的輕視。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "不得把情緒忽略責任全部轉回讀者內在。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。",
+        "目前生日映射不可達；僅保留來源，不得強行提供給顧客。"
+      ]
+    },
+    {
+      "code": "S2-46",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "投入不對等鏡像",
+      "name_zh_source": "投入不对等镜像",
+      "source_code": "S2-46",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "7b412db0378a1076c3650faef80c2c340347ae7b23c2a1dec0c3c1c8d10d7a3f",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "f34205cc267a6522cade7695adcfbfee55611dccc531b305c014765eb84773bc"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "8872cef9756ba0a8cfeb1579efc55ffed19d1e55755ec8c4b5bc4e1603eff64e"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "0aa31e4afd89ebede83e1bdadfd8aa9452363e7c5cfc3ef597029be220b77829"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "c5746a3b4834b32c1cbe38a80aa4a8fc86227afd33dee176ffe2be5f1389e71d"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "ef11fdb1d89fbe91e71d2886096f4556284dd5da641852de2da8f3e41470c6aa"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "3905038d6cef1dfa6287eaadb3831a799c649db1a37d7ee18de13e2041c8f88c"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "bd1796858129b0d55b96942015a4eec69adb1faff0cacffe5ce11e3ad53b4fe6"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "47229f9bc358a0d8786384a676d87e53542d7c6d80aedfefe27394cd70dc4b31"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": false,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "投入節奏不同，需要被說明，而不是靠推拉猜測。",
+        "explorable_strength": "辨認雙方願意承擔的時間、關注與承諾。",
+        "core_tension": "一方加快、一方退開，可能形成反覆追逐。",
+        "integration_direction": "坦誠談清目前意願，尊重不一致的結果。",
+        "customer_narrative_short_draft": "兩個人正在討論合作，一人希望下週就投入大量時間，另一人卻還想先完成手上的事。「投入不對等鏡像」描寫的是節奏落差，而不是認定慢的一方比較不重視。\n\n先問清楚每個人能投入多少、何時重新評估，也允許協商後發現條件不適合。尊重差異不是要求一方無限等待，更不是要求另一方在壓力下答應。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "不可將明確拒絕浪漫化為需要更努力追求。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。",
+        "目前生日映射不可達；僅保留來源，不得強行提供給顧客。"
+      ]
+    },
+    {
+      "code": "S2-47",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "自我懷疑鏡像",
+      "name_zh_source": "自我怀疑镜像",
+      "source_code": "S2-47",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "1e5b44cd57e172529e32a5e8708d46dcb3fc724e1b5aeafa00df3d5c626ce46d",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "8a856eb9f053fdd86d1a286f4d36b807bcf0f4cb303a4ec648df541c68abb397"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "d10406071974131a03cd58da799ddb4357687dd8ae7e26120d418e6e4f544748"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "c760a08fc717ec1c6cd65edbed71d211393dd2f2315d82f4a544cbf24184e795"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "86e587472026c4443d8dba2d6bf35c0043716ff6e1ba50bee0cce7d702f6feea"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "5f02c99e7731d46f67de9d821bd5a19e92f219ed1bb93bfae71bbb83ae78617a"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "21e2817f0bd242e564778a7e2e5f26b1e4bb6a8e6f36d22581a3150d7bd55a1a"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "51f818963d37c2786b78bfdb9b54ee6ad10e98d9668520663b7088399fb4616a"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "09c25e2c5ca3f5eac53993dc7808624093ec0d823453ae9cdce46361412ad067"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": false,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "他人的一個回應可能觸動自我懷疑，但不足以確定自己的能力。",
+        "explorable_strength": "分辨具體回饋和內在的全面否定。",
+        "core_tension": "懷疑導致退縮，可能讓能被驗證的問題一直沒有答案。",
+        "integration_direction": "小範圍核對事實，建立可追蹤的自我信任。",
+        "customer_narrative_short_draft": "某次討論時，有人提問一句「你確定嗎？」當事人原本已有準備，卻突然覺得自己什麼都不懂。「自我懷疑鏡像」關注這種從一個問題跳到全面否定的過程。\n\n可以先確認對方具體懷疑哪個部分，再回顧手上真正有的證據。需要修正就修正，沒有問題也不必替自己定罪。信任自己不是永遠確信正確，而是知道如何面對未知和重新查證。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "與 S2-03 自我價值及 S2-34 失敗恐懼作區分。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。",
+        "目前生日映射不可達；僅保留來源，不得強行提供給顧客。"
+      ]
+    },
+    {
+      "code": "S2-48",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "承諾鏡像",
+      "name_zh_source": "承诺镜像",
+      "source_code": "S2-48",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "349d409bd2a2d515e51f7a2f725446943f23543d08efb26881823237ac94281a",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "ec473c12bf8b1de026e8e653d3c8cd9015d18550177dd95cd01539e9df2f971b"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "fd6fd626fb3fdd587de068494c3ab9499bbd216b04fdcc681a37f82b636a321d"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "679b8d980e85c61c5a593a1780c2d3cb3686b05baedb54a3e008bf66b5320dca"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "d27afb0190204df62a29409f8274a2064f8d04132d4aad8fea4e0b5b57581e3a"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "988e991e77f5f41aa1563bce4f838607ce94f23ae8bacab5bd479a8cb6bdb6d6"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "6272e8e44d5f2549b042c91468efd73030edab55499152cdf025e84e8aac1294"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "547df56c3cc07d66b3ef424cd973d4a9c7d26b54a6f21c3b444898ea085fe268"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "b01427683aaa75569ede538a88d2d58a16c5d378116326b820b43debb2f4bb62"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": false,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "承諾需要自由同意，也需要說到做到。",
+        "explorable_strength": "觀察雙方對未來安排的清楚程度。",
+        "core_tension": "一味催促承諾，可能使談話越來越像壓力測試。",
+        "integration_direction": "談具體條件與時間，也承認彼此可能選擇不同。",
+        "customer_narrative_short_draft": "某個合作關係發展順利，一方希望立即確認下一年的安排，另一方卻尚未評估資源。「承諾鏡像」關注的是期待確定與保留選擇之間的拉扯。\n\n與其反覆要求『你到底會不會答應』，可以談清楚需要決定的事項、時間與條件。承諾不是靠說服取得，已做出的承諾也不應被隨意忽略；是否繼續合作，仍由各自承擔的人決定。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "區分自願承諾與客觀履約責任，不宜鼓勵無條件等待。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。",
+        "目前生日映射不可達；僅保留來源，不得強行提供給顧客。"
+      ]
+    },
+    {
+      "code": "S2-49",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "投入恐懼鏡像",
+      "name_zh_source": "投入恐惧镜像",
+      "source_code": "S2-49",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "9feacaa79713898ebde807a2bd6a94f03ccf341dfd5bbb0792f2884bac7bb98e",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "233556ef4aab823a40ddfb0a5b35bf7d95bb4680fc20a86566dc4956e870b236"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "26df6cd80694141387d0369bd69694ba8a0e337138ff8d99c0fcbeb56757e81f"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "4417f846ea0128d45941041806202a5fe6f0db8cf0178b66b07b0e5f6eb8c788"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "50b76eba53e1bbdcd86917710a5dce390bc648ebee3530365d3a76ec2fe9a063"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "327bfa51f83c986bbda5bca172f5408c35dfc22f05381df356c4091b575aa06f"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "79dbfe61b5aa0a7e9c7d322964b8b39971c20e5c88c8063cb2ef647049e3917e"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "17e399e30371539de520fed0cbddf227257eaba701959e4ff67bfeeda83e2212"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "a5a61123df89e09581a2a22f1af3dd988b70a8ca937a14b287fca4474cd95ea0"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": false,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "對投入有顧慮時，可以放慢，也可以清楚說明原因。",
+        "explorable_strength": "尊重漸進參與與自主決定。",
+        "core_tension": "渴望靠近又立刻退後，可能讓安排難以延續。",
+        "integration_direction": "先找到可承擔的投入範圍，保留退出與調整空間。",
+        "customer_narrative_short_draft": "有人很想參與一個長期社群計畫，聽見需要固定投入時又開始猶豫。「投入恐懼鏡像」不要求人勇敢到立刻答應，它提醒的是：擔心是否能被說成可討論的條件。\n\n可以先選擇短期試行、明確工時或回顧日期，再決定是否深入。投入不必一次到位；若條件本來就不適合，選擇不參與也是有界限的決定。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "勿把有理由的安全顧慮說成恐懼或缺陷。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。",
+        "目前生日映射不可達；僅保留來源，不得強行提供給顧客。"
+      ]
+    },
+    {
+      "code": "S2-50",
+      "module": "S2",
+      "module_name_zh_tw": "靈魂鏡像",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "靈魂伴侶鏡像",
+      "name_zh_source": "灵魂伴侣镜像",
+      "source_code": "S2-50",
+      "source_file": "1320_S2_Soul_Mirror_Content_Database_v2_EN.md",
+      "source_version": "2.0",
+      "source_document_date": "2026-06-13",
+      "source_file_sha256": "8fa43b3f70f9a0b7d7daa5232767ed5cb02de9cb31aa74901941a8e860c95680",
+      "source_record_sha256": "48430e15e2fc4ef1727624fdaf55fe937b7d30c96a4c5eff2459eb3f45c4e332",
+      "source_field_anchors": [
+        {
+          "source_field": "Reflection Question",
+          "field_sha256": "1350a4451b69e0f4315c3f1b9d491cd3c2f97571dc10bdd261004cf30dd951aa"
+        },
+        {
+          "source_field": "Mirror Archetype",
+          "field_sha256": "3e33872ae99a9692aa833ff4cd38a6df0f96ae891f7e9922ccf39962d972e1a1"
+        },
+        {
+          "source_field": "Relationship Dynamic",
+          "field_sha256": "bd3c1d2f3186c9a1735ea69e4e696ceace259d41039487a8da955a1761863d12"
+        },
+        {
+          "source_field": "Karmic Loop",
+          "field_sha256": "48c6292093dd02f1ee0b663e12aa135fdc3eb76fd335c41dc192efe0eb82ff67"
+        },
+        {
+          "source_field": "Lesson",
+          "field_sha256": "fa843ad51b59a95dc8440b7afe769eea2826dd5432ce8d4de1956fa27309e895"
+        },
+        {
+          "source_field": "Healing Path",
+          "field_sha256": "e75c9158b3feb75bb8a017302830e6a33df051c94abedd12637d0bcda791dc39"
+        },
+        {
+          "source_field": "Reflective Summary",
+          "field_sha256": "e28b4cd175b53becbf4713479ef58ccf31ae928b847a9190b725951b4b0284a6"
+        },
+        {
+          "source_field": "Integration Key",
+          "field_sha256": "2dc0b36908765b32351ea780ad46ac1946b3d40c20eb11b834761305359fdb45"
+        },
+        {
+          "source_field": "Wisewave Guidance",
+          "field_sha256": "b662d2d822922e2ddce9e9f3c2c0198df9698b9b25b2312cbb07335a14e6c705"
+        },
+        {
+          "source_field": "Safe Language Note",
+          "field_sha256": "37e672f9c7d4db0dac907aeee78c2ad1c8608a29c4e815a616ca47a564e49524"
+        }
+      ],
+      "source_fields_count": 10,
+      "reachable_by_current_formula": false,
+      "content_zh_tw_candidate": {
+        "symbolic_core": "「靈魂伴侶」只是象徵語言，不能證明任何關係命定或必須延續。",
+        "explorable_strength": "從重要互動中辨認自己重視的需要、選擇與成長。",
+        "core_tension": "將劇烈起伏視為宿命，可能忽略不安全的行為。",
+        "integration_direction": "以相互尊重、事實與安全為準，不以命運說法替代判斷。",
+        "customer_narrative_short_draft": "一段關係令人深受觸動，可能讓人想用『我們一定注定相遇』來解釋所有感受。「靈魂伴侶鏡像」在 1320 中只是對重要關係的象徵性提問，無法證明兩人具有特殊契約，也不能預測重逢。\n\n如果這段關係帶來新的理解，可以留下有用的部分；若存在傷害、操控或恐懼，也不必因為『靈魂功課』而繼續承受。關係是否值得靠近，仍需要雙方的自由選擇、尊重與真實行為。",
+        "required_relationship_safety_boundary": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "editor_notes": [
+        "來源涉及命定伴侶與反覆分離：高風險來源保留、正文反宿命化；現行公式不可達。",
+        "獨立短篇為人工編輯候選；不得由生日推斷讀者實際經歷、感情命運、診斷或關係對錯。",
+        "需由真人核准後才可列入正式內容快照；現行未核准候選僅供受保護 Preview。",
+        "目前生日映射不可達；僅保留來源，不得強行提供給顧客。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "package_id": "1320-zhTW-s2-50-review-2026-11-16-rc1",
+  "format": "zip",
+  "status": "PENDING_HUMAN_REVIEW_NOT_APPROVED",
+  "release": "HOLD",
+  "files": [
+    {
+      "file": "NOVA_S2_50_HANDOFF.md",
+      "size_bytes": 3003,
+      "sha256": "8cf58e82e77b33a33166084fe06da258e93b753dd291056701111d8b7774e7e8"
+    },
+    {
+      "file": "README_FIRST.md",
+      "size_bytes": 922,
+      "sha256": "35d5df3a42b2d6e92e576aadefb5106680a22a7d9f68b60df40a332899b2e51c"
+    },
+    {
+      "file": "S2_50_CODES_ZH_TW_EDITORIAL_CANDIDATE.json",
+      "size_bytes": 196478,
+      "sha256": "f1bb5e042ca0c2745e903e1cffc13692ea3c7ffbd5d76fbce4c93c4f92ffe18d"
+    },
+    {
+      "file": "S2_50_CONTINUOUS_READING_NOTES.md",
+      "size_bytes": 4000,
+      "sha256": "9aba11ff7831651bba458b3389620d04cff15708c15ba33f761011a4b77042dd"
+    },
+    {
+      "file": "S2_50_EDITORIAL_TRACKER.csv",
+      "size_bytes": 21313,
+      "sha256": "6396f3bf8e27f34b01a8b8d44dbe8ef871bd4e71185c993f6b56d8d60cf9d662"
+    },
+    {
+      "file": "S2_50_QA_MACHINE_RESULTS.json",
+      "size_bytes": 2938,
+      "sha256": "7ec294445c67648a72ff621746828513bf7a90450a5a7c987eabe4e35a4ed7b9"
+    },
+    {
+      "file": "S2_50_QA_SUMMARY.md",
+      "size_bytes": 2626,
+      "sha256": "055f4eae80fd9a764fc7d026e3ea2ae5816ebe529e3b35ccb4404eaee22aeaf6"
+    },
+    {
+      "file": "S2_50_REVIEW_READABLE.txt",
+      "size_bytes": 71478,
+      "sha256": "bb6cd7480496d97ca5ded2e1cf4d5e720761deda500e83400cb93672200ead2c"
+    },
+    {
+      "file": "S2_50_SOURCE_ANCHORS_INTERNAL.jsonl",
+      "size_bytes": 65398,
+      "sha256": "8ecf22ea4fbf580270a493ceb93b86c0265bb1f5cc3c1632cb034380f5a4047c"
+    },
+    {
+      "file": "S2_50_台繁獨立短篇逐碼審閱候選_RC1.md",
+      "size_bytes": 71475,
+      "sha256": "56edb4fd514c304e4dd48531cc96bd6f286bde1d65c9a5a2a4d9d6ec22eada57"
+    }
+  ]
+}

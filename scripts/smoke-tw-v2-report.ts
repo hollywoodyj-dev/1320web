@@ -17,6 +17,14 @@ import {
   s1PriorityCounts,
   s1ReviewMeta,
 } from "../lib/gzh/tw-v2-s1-library";
+import {
+  s3ApprovedCount,
+  s3CandidateFor,
+  s3CustomerPublishableCodes,
+  s3EditorialCandidateCount,
+  s3PendingCount,
+  s3UnreachableCodes,
+} from "../lib/gzh/tw-v2-s3-library";
 
 function assert(condition: unknown, label: string) {
   if (!condition) {
@@ -186,6 +194,13 @@ assert(review.formalApprovedCount === 0 && review.decisions.NEEDS_REVISION === 4
 const gate = releaseGateSummary();
 assert(gate.publicReleaseEnabled === false && gate.customerState === "HOLD" && gate.approvedZhTwCount === 0, "release gate stays closed");
 assert(gate.s1NeedsRevision === 44, "content status tracks S1 needs revision");
+assert(s3EditorialCandidateCount() === 12 && s3PendingCount() === 12 && s3ApprovedCount() === 0, "S3 has 12 pending candidates");
+assert(s3CustomerPublishableCodes().length === 0, "S3 candidates stay out of customer publish");
+assert(s3CandidateFor("S3-03")?.name_zh_tw_candidate === "探索振動" && !s3CandidateFor("S3-03")?.reviewer, "S3-03 calibration name stays unapproved");
+assert(s3CandidateFor("S3-01")?.name_zh_tw_candidate === "種子振動", "S3-01 seed name present");
+assert(s3CandidateFor("S3-02")?.name_zh_tw_candidate === "火花振動", "S3-02 spark name present");
+assert(s3UnreachableCodes().join(",") === "S3-10,S3-11,S3-12", "S3-10 to S3-12 stay unreachable by formula");
+assert(s3CandidateFor("S1-01") === null, "S3 library does not invent S1 codes");
 assert(sampleFullDifference().length >= 6, "sample and full difference table exists");
 
 const page = fs.readFileSync(new URL("../app/(site)/tw-v2-report/page.tsx", import.meta.url), "utf8");

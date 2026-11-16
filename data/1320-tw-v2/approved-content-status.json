@@ -1,15 +1,16 @@
 {
   "version": "2.0",
   "status": "BLOCKED",
-  "note": "S1 RC2：NEEDS_REVISION 44／正式核准 0。S3 RC1：PENDING_REVIEW 12／正式核准 0。S2 RC1：PENDING_REVIEW 50／正式核准 0。reviewer/approved_at 不可自動填寫。顧客發布 HOLD。",
-  "candidate_snapshot_id": "1320-zhTW-s1-44-rewrite-2026-11-12-rc2",
+  "note": "S1 RC3.2：PENDING_REVIEW 44／正式核准 0（RC2 NEEDS_REVISION 已由母稿候選承接，仍待真人簽核）。S3 RC1：PENDING 12／0。S2 RC1：PENDING 50／0。reviewer/approved_at 不可自動填寫。顧客發布 HOLD。",
+  "candidate_snapshot_id": "1320-zhTW-s1-44-master-2026-11-16-rc3.2-name-candidate",
   "review_package_id": "1320-S1-44-zhTW-editorial-review-2026-11-12-rc2",
+  "s1_prior_rc2_snapshot_id": "1320-zhTW-s1-44-rewrite-2026-11-12-rc2",
   "s3_candidate_snapshot_id": "1320-zhTW-s3-12-review-2026-11-16-rc1",
   "s2_candidate_snapshot_id": "1320-zhTW-s2-50-review-2026-11-16-rc1",
   "integration_candidate_snapshot_id": "1320-int-1980-1982-pending-2026-11-12-rc1",
   "modules": {
     "S0": { "expected": 20, "approved": 0, "editorial_candidates": 0, "needs_revision": 0 },
-    "S1": { "expected": 44, "approved": 0, "editorial_candidates": 44, "needs_revision": 44 },
+    "S1": { "expected": 44, "approved": 0, "editorial_candidates": 44, "needs_revision": 0 },
     "S2": { "expected": 50, "approved": 0, "editorial_candidates": 50, "needs_revision": 0 },
     "S3": { "expected": 12, "approved": 0, "editorial_candidates": 12, "needs_revision": 0 },
     "S4": { "expected": 20, "approved": 0, "editorial_candidates": 0, "needs_revision": 0 },
@@ -24,6 +25,7 @@
   "next_modules": ["S0", "S4", "S5", "S6", "S7", "S8", "S9"],
   "customer_release": "HOLD",
   "s1_long_form": "EDITORIAL_DEVELOPMENT_ALLOWED_NOT_APPROVED",
+  "s1_notes": "RC3.2 為標準母稿＋四碼名稱候選（S1-04 基石者／S1-11 擘畫者／S1-26 前瞻者／S1-39 定錨者）。名稱與正文皆待真人簽核。",
   "s3_notes": "S3-10～S3-12 來源保留但當前公式不可達；不得為測試改映射。",
   "s2_notes": "S2-01、S2-44～S2-50 來源保留但當前公式不可達；關係安全句必須保留不可改寫。模組名為靈魂鏡像；S2-27 個別名為靈魂震盪鏡像。"
 }

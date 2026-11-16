@@ -1,32 +1,40 @@
 {
-  "package_id": "1320-S1-44-short-narrative-rewrite-2026-11-12-rc2",
+  "package_id": "1320-zhTW-s1-44-master-2026-11-16-rc3.2-name-candidate",
   "locale": "zh-TW",
   "module": "S1",
-  "status": "NEEDS_REVISION_NOT_APPROVED",
-  "snapshot_id": "1320-zhTW-s1-44-rewrite-2026-11-12-rc2",
-  "review_package_id": "1320-S1-44-zhTW-editorial-review-2026-11-12-rc2",
-  "input_package_id": "1320-S1-44-zhTW-review-2026-11-12-rc1",
-  "note": "RC2 短版改寫候選。Wisewave AI 編輯建議全數 NEEDS_REVISION，不是人類正式簽核。reviewer/approved_at 保持空。",
-  "review_summary": {
-    "APPROVED": 0,
-    "NEEDS_REVISION": 44,
-    "REJECTED": 0,
-    "P0": 19,
-    "P1": 25,
-    "review_type": "AI_EDITORIAL_ASSESSMENT_NOT_HUMAN_APPROVAL",
-    "customer_release": "HOLD"
-  },
+  "status": "PENDING_REVIEW_NOT_APPROVED",
+  "snapshot_id": "1320-zhTW-s1-44-master-2026-11-16-rc3.2-name-candidate",
+  "package_status": "PENDING_HUMAN_REVIEW_NOT_APPROVED",
+  "source_version": "2.0",
+  "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+  "previous_short_rc2_sha256": "e7a8c3a551de03dc6290d680a3dc7a9b13f07e595d3fcfd7efa4487c057017ab",
+  "previous_master_package_id": "1320-zhTW-s1-44-master-2026-11-16-rc3.1-candidate",
+  "revision_basis": "S1 v2 canonical original + RC2 rewrite + RC3 mother text; RC3.2 4-code zh-TW display-name candidate normalization only",
+  "change_scope": "DISPLAY_NAME_ONLY_FOUR_CODES; no archetype meaning, source, code, formula or mapping changes",
+  "approval_scope": "NONE",
+  "official_approved_count": 0,
+  "review_package_id_prior": "1320-S1-44-zhTW-editorial-review-2026-11-12-rc2",
+  "note": "S1 44 筆標準母稿 RC3.2（含四碼台繁顯示名稱候選）。全部 PENDING_REVIEW，非正式核准。不因本批自動核准；customer_publishable=false。",
+  "name_patch_package_id": "1320-zhTW-s1-44-master-2026-11-16-rc3.2-name-candidate",
+  "name_patch_codes": [
+    "S1-04",
+    "S1-11",
+    "S1-26",
+    "S1-39"
+  ],
   "records": [
     {
       "code": "S1-01",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "破曉者",
+      "name_zh_source": "破晓者",
+      "name_en_source": "The Initiator",
       "source_code": "S1-01",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "a9f30555a89e575ed69b9a993c22319da6f5f089e09eb1d52f82174487bb2b5b",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -34,40 +42,56 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "啟動一個新方向，需要速度，也需要知道何時傾聽。",
-        "explorable_strength": "遇到停滯時，破曉者帶來的是讓第一步變得可能的視角。",
-        "core_tension": "如果只用行動速度衡量自己，休息與討論就容易被看成拖延。",
-        "integration_direction": "找一件小事先開始，再留一個節點確認是否仍在正確方向。",
-        "customer_narrative_short_draft": "一個新提案在討論中停了很久。有人願意先做出第一版，整件事才有了可供討論的形狀。「破曉者」關注的正是啟動的力量；但第一步不是替所有人決定方向。試著做一個小型試行，再邀請相關的人指出你尚未看見的地方。"
+      "master_content_zh_tw": {
+        "positioning": "讓停滯的事有第一個可見的起點",
+        "symbolic_core": "開創的核心是使可能進入現實，而非永遠比別人快。",
+        "archetype_strength": "敢在未有完整答案時提出初步方案，帶動團隊脫離停滯。",
+        "inner_tension": "急著前進時，容易把他人的討論或自己的休息當成阻礙。",
+        "life_insight": "第一步的價值在於開啟共同修正，不在於證明自己最有行動力。",
+        "integration_direction": "挑一件卡住的小事完成可回饋的初版，請一位相關者指出盲點。",
+        "reflection_question": "回想最近一次急著完成的事：我當時最怕停下來面對什麼？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "核心對應啟動力與速度陰影，方向正確；但行動、傾聽仍是概念並列，缺少辨識性情境。",
-      "required_revision_zh_tw": "補入「先行動、再邀請夥伴回饋」的小場景，強調開創不等於獨斷。",
+      "customer_narrative_candidate": {
+        "title": "破曉者｜讓停滯的事有第一個可見的起點",
+        "paragraphs": [
+          "有時一件事在心裡醞釀很久，卻因為誰都想等到準備周全而遲遲沒有開始。當有人願意先畫出草圖、提出日期或試做第一步，原本模糊的討論才有了可碰觸的形狀。「破曉者」把注意力放在這種開端。",
+          "但啟動並不意味著獨自決定方向。若你曾在等待別人回覆時感到煩躁，可以回想：自己在追的是事情真正的需要，還是害怕一慢下來就失去價值？別人的疑問也許不是拒絕，而是讓下一步更穩的材料。",
+          "你可以先做一個足夠小、足以修改的版本，再邀請他人加入。真正的開創，留下的不只是速度，還有讓更多人有機會一起走下去的起點。"
+        ],
+        "body": "有時一件事在心裡醞釀很久，卻因為誰都想等到準備周全而遲遲沒有開始。當有人願意先畫出草圖、提出日期或試做第一步，原本模糊的討論才有了可碰觸的形狀。「破曉者」把注意力放在這種開端。\n\n但啟動並不意味著獨自決定方向。若你曾在等待別人回覆時感到煩躁，可以回想：自己在追的是事情真正的需要，還是害怕一慢下來就失去價值？別人的疑問也許不是拒絕，而是讓下一步更穩的材料。\n\n你可以先做一個足夠小、足以修改的版本，再邀請他人加入。真正的開創，留下的不只是速度，還有讓更多人有機會一起走下去的起點。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "讓停滯的事有第一個可見的起點",
+        "symbolic_core": "開創的核心是使可能進入現實，而非永遠比別人快。",
+        "explorable_strength": "敢在未有完整答案時提出初步方案，帶動團隊脫離停滯。",
+        "core_tension": "急著前進時，容易把他人的討論或自己的休息當成阻礙。",
+        "life_insight": "第一步的價值在於開啟共同修正，不在於證明自己最有行動力。",
+        "integration_direction": "挑一件卡住的小事完成可回饋的初版，請一位相關者指出盲點。",
+        "reflection_question": "回想最近一次急著完成的事：我當時最怕停下來面對什麼？",
+        "customer_narrative_short_draft": "有時一件事在心裡醞釀很久，卻因為誰都想等到準備周全而遲遲沒有開始。當有人願意先畫出草圖、提出日期或試做第一步，原本模糊的討論才有了可碰觸的形狀。「破曉者」把注意力放在這種開端。\n\n但啟動並不意味著獨自決定方向。若你曾在等待別人回覆時感到煩躁，可以回想：自己在追的是事情真正的需要，還是害怕一慢下來就失去價值？別人的疑問也許不是拒絕，而是讓下一步更穩的材料。\n\n你可以先做一個足夠小、足以修改的版本，再邀請他人加入。真正的開創，留下的不只是速度，還有讓更多人有機會一起走下去的起點。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-02",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "連接者",
+      "name_zh_source": "连接者",
+      "name_en_source": "The Bridge",
       "source_code": "S1-02",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "cc99e27da0e4ee63bfd4134955407fc4896e4ba9dcb6b696f95b7c6536f0eec8",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -75,40 +99,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "連結差異，並不等於把每個人的重量都接過來。",
-        "explorable_strength": "連接者提醒人們，理解不同立場可以為合作留下新空間。",
-        "core_tension": "當關係是否和諧變成唯一目標，自己的需求可能失去位置。",
-        "integration_direction": "讓溝通同時包含對方的聲音與自己的界限。",
-        "customer_narrative_short_draft": "兩個人對同一件事有截然不同的理解，對話很快僵住。「連接者」提供的視角不是勸誰先退讓，而是把雙方真正在乎的部分說清楚。若你選擇協助溝通，也可以保留自己的立場；連結應讓彼此更能表達，而不是讓其中一人消失。"
+      "master_content_zh_tw": {
+        "positioning": "在不同立場之間保留彼此的聲音",
+        "symbolic_core": "連結的價值是使差異得以被聽見，而非要求所有人一致。",
+        "archetype_strength": "能理解彼此不同的關注點，為合作建立可以談話的空間。",
+        "inner_tension": "太在意關係順利，可能不敢說出自己的需要與不同意。",
+        "life_insight": "好的橋梁不需要把自身當作消耗品；對話也應包含橋梁自己的位置。",
+        "integration_direction": "選一場分歧談話，練習同時轉述對方的重點和自己的界限。",
+        "reflection_question": "我是否曾把「讓大家都沒事」當成自己唯一的責任？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "保留跨立場溝通與過度共感陰影，但與 S1-41／S1-36 容易同質化。",
-      "required_revision_zh_tw": "聚焦人際衝突中的轉譯與雙方同意，避免變成泛用「界限」提醒。",
+      "customer_narrative_candidate": {
+        "title": "連接者｜在不同立場之間保留彼此的聲音",
+        "paragraphs": [
+          "一段對話走到僵局時，雙方可能都覺得沒有被理解。「連接者」不是來替任何一方判定誰比較有理，而是把彼此真正關心的事重新放到桌面：一個人在乎效率，另一個人可能在乎被尊重。",
+          "如果你常被請去居中協調，或許能感受到讓事情重新流動的成就感。但也可能有一刻，你明明不認同某種安排，卻因為不想破壞氣氛而沒有說出口。那不是連結必然要付出的代價。",
+          "試著讓對話包含三個聲音：對方的、另一方的，以及你自己的。當界限也能被聽見，連結才不會建立在某個人的消失之上。"
+        ],
+        "body": "一段對話走到僵局時，雙方可能都覺得沒有被理解。「連接者」不是來替任何一方判定誰比較有理，而是把彼此真正關心的事重新放到桌面：一個人在乎效率，另一個人可能在乎被尊重。\n\n如果你常被請去居中協調，或許能感受到讓事情重新流動的成就感。但也可能有一刻，你明明不認同某種安排，卻因為不想破壞氣氛而沒有說出口。那不是連結必然要付出的代價。\n\n試著讓對話包含三個聲音：對方的、另一方的，以及你自己的。當界限也能被聽見，連結才不會建立在某個人的消失之上。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "在不同立場之間保留彼此的聲音",
+        "symbolic_core": "連結的價值是使差異得以被聽見，而非要求所有人一致。",
+        "explorable_strength": "能理解彼此不同的關注點，為合作建立可以談話的空間。",
+        "core_tension": "太在意關係順利，可能不敢說出自己的需要與不同意。",
+        "life_insight": "好的橋梁不需要把自身當作消耗品；對話也應包含橋梁自己的位置。",
+        "integration_direction": "選一場分歧談話，練習同時轉述對方的重點和自己的界限。",
+        "reflection_question": "我是否曾把「讓大家都沒事」當成自己唯一的責任？",
+        "customer_narrative_short_draft": "一段對話走到僵局時，雙方可能都覺得沒有被理解。「連接者」不是來替任何一方判定誰比較有理，而是把彼此真正關心的事重新放到桌面：一個人在乎效率，另一個人可能在乎被尊重。\n\n如果你常被請去居中協調，或許能感受到讓事情重新流動的成就感。但也可能有一刻，你明明不認同某種安排，卻因為不想破壞氣氛而沒有說出口。那不是連結必然要付出的代價。\n\n試著讓對話包含三個聲音：對方的、另一方的，以及你自己的。當界限也能被聽見，連結才不會建立在某個人的消失之上。"
+      },
+      "peer_distinction_codes": [
+        "S1-41"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-03",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "預見者",
+      "name_zh_source": "预见者",
+      "name_en_source": "The Seer",
       "source_code": "S1-03",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "da1e901249c61ed0a43fb6411445bfb4ae0d0581828754bdda73855c84ecaaa8",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -116,40 +158,56 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "看見遠處的可能，也需要確認腳下有哪些事實。",
-        "explorable_strength": "預見者關注洞察、創意與不尋常的觀察角度。",
-        "core_tension": "想法過多或過於相信直覺，可能忽略證據與當下條件。",
-        "integration_direction": "選一個洞察，用可驗證的小實驗檢查它是否站得住腳。",
-        "customer_narrative_short_draft": "有時一個不尋常的想法先於證據出現，令人想立刻相信自己「看見了答案」。預見者在這裡是對可能性的敏銳想像，不是預知未來的能力。把靈感寫成可以驗證的假設，找一個低風險的實驗。真正的洞察，也願意接受事實修正。"
+      "master_content_zh_tw": {
+        "positioning": "用想像辨認可能，再讓事實檢驗",
+        "symbolic_core": "前瞻洞察是一種探索角度，不是預知結果的能力。",
+        "archetype_strength": "容易提出不尋常的觀察與創意假設，拓展原有思考框架。",
+        "inner_tension": "把直覺當成確定答案，或在太多想像中難以落地。",
+        "life_insight": "值得信任的洞察願意被現實修正，想像與驗證可以互相支持。",
+        "integration_direction": "把一個靈感改寫成「我猜想……，可藉由……確認」。",
+        "reflection_question": "最近哪一個我深信的想法，還缺少可以核對的證據？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P0",
-      "reason_zh_tw": "原型源頭含超常預見與高頻引導；候選已減弱，但「預見者」仍容易被讀為確定預測。",
-      "required_revision_zh_tw": "寫成觀察可能性、提出假設及實證修正；明確避免預知未來或讀心。",
+      "customer_narrative_candidate": {
+        "title": "預見者｜用想像辨認可能，再讓事實檢驗",
+        "paragraphs": [
+          "你是否遇過某個念頭突然出現，讓你覺得眼前的問題還有另一種解法？「預見者」將這種不依常規思考的時刻放大，鼓勵人留意尚未被嘗試的可能。",
+          "可是，能夠想像尚未發生的事，並不表示知道未來會如何發展。當一個想法太令人興奮，我們也可能選擇性忽略不符期待的資訊；當想法過多，又容易在真正行動之前耗盡力氣。",
+          "不妨挑選一個最想追究的洞察，用低風險的方式去試。結果若不同於預期，也是一種收穫：你不是失去直覺，而是在讓想像多一分與世界對話的能力。"
+        ],
+        "body": "你是否遇過某個念頭突然出現，讓你覺得眼前的問題還有另一種解法？「預見者」將這種不依常規思考的時刻放大，鼓勵人留意尚未被嘗試的可能。\n\n可是，能夠想像尚未發生的事，並不表示知道未來會如何發展。當一個想法太令人興奮，我們也可能選擇性忽略不符期待的資訊；當想法過多，又容易在真正行動之前耗盡力氣。\n\n不妨挑選一個最想追究的洞察，用低風險的方式去試。結果若不同於預期，也是一種收穫：你不是失去直覺，而是在讓想像多一分與世界對話的能力。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "用想像辨認可能，再讓事實檢驗",
+        "symbolic_core": "前瞻洞察是一種探索角度，不是預知結果的能力。",
+        "explorable_strength": "容易提出不尋常的觀察與創意假設，拓展原有思考框架。",
+        "core_tension": "把直覺當成確定答案，或在太多想像中難以落地。",
+        "life_insight": "值得信任的洞察願意被現實修正，想像與驗證可以互相支持。",
+        "integration_direction": "把一個靈感改寫成「我猜想……，可藉由……確認」。",
+        "reflection_question": "最近哪一個我深信的想法，還缺少可以核對的證據？",
+        "customer_narrative_short_draft": "你是否遇過某個念頭突然出現，讓你覺得眼前的問題還有另一種解法？「預見者」將這種不依常規思考的時刻放大，鼓勵人留意尚未被嘗試的可能。\n\n可是，能夠想像尚未發生的事，並不表示知道未來會如何發展。當一個想法太令人興奮，我們也可能選擇性忽略不符期待的資訊；當想法過多，又容易在真正行動之前耗盡力氣。\n\n不妨挑選一個最想追究的洞察，用低風險的方式去試。結果若不同於預期，也是一種收穫：你不是失去直覺，而是在讓想像多一分與世界對話的能力。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-04",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
-      "name_zh_tw_candidate": "穩定者",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
+      "name_zh_tw_candidate": "基石者",
+      "name_zh_source": "稳定者",
+      "name_en_source": "The Stabilizer",
       "source_code": "S1-04",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "dc6e6e600742f4a07589f4e74fc487e5011c57def4b42538a61f7ad4eb36f55c",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -157,40 +215,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "可靠不是永遠不變，而是讓人知道變化時可以怎麼辦。",
-        "explorable_strength": "穩定者象徵將混亂整理成可持續安排的能力方向。",
-        "core_tension": "若把穩定等同於零失誤，就可能承擔太多、排斥必要調整。",
-        "integration_direction": "建立能共同維護、也能定期修訂的簡單流程。",
-        "customer_narrative_short_draft": "一個合作計畫總靠少數人記住所有細節，久了便容易出錯。穩定者所關注的，不是要求每個人更小心，而是讓流程、責任與回顧時間清楚可見。可靠的安排應容得下變化，也不必讓某一個人永遠當最後的保證。"
+      "master_content_zh_tw": {
+        "positioning": "建立可共同維護的長期秩序",
+        "symbolic_core": "可靠的結構可以持續調整，不以零失誤或控制一切為條件。",
+        "archetype_strength": "擅長整理責任、時間與流程，支持長期合作與累積。",
+        "inner_tension": "把秩序等同安全時，可能過度擔責或難以接受變動。",
+        "life_insight": "穩定的真正成果是讓事情不再只靠某一個人苦撐。",
+        "integration_direction": "找出一項反覆出錯的工作，寫下共享流程與定期修訂時間。",
+        "reflection_question": "我建立的規則是在幫助大家，還是在要求自己永遠不能出錯？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P0",
-      "reason_zh_tw": "結構化長期穩定的核心可信，但與 S1-39 同名；讀者無法從名稱分辨。",
-      "required_revision_zh_tw": "本碼聚焦系統流程／長期穩定；與 S1-39 提交有差異的命名候選，待真人決定。",
+      "customer_narrative_candidate": {
+        "title": "基石者｜建立可共同維護的長期秩序",
+        "paragraphs": [
+          "有些可靠不是轟轟烈烈的表現，而是每週有人確認進度、每個步驟都有明確的接手方式。「基石者」S1-04 著眼於這類可長久運作的結構：讓好的安排不必只存在某個人的記憶裡。",
+          "如果你習慣把事情整理得井井有條，也許會在變化發生時感到不安。不是因為你做得不夠好，而是結構若只能在一切照計畫進行時成立，便容易成為另一種負擔。",
+          "試著問自己：哪一部分可以交由別人共同維護？哪一條規則需要重新談？當流程能跟著現實修正，穩定才不只是守住原樣，而是讓人有餘裕持續前進。"
+        ],
+        "body": "有些可靠不是轟轟烈烈的表現，而是每週有人確認進度、每個步驟都有明確的接手方式。「基石者」S1-04 著眼於這類可長久運作的結構：讓好的安排不必只存在某個人的記憶裡。\n\n如果你習慣把事情整理得井井有條，也許會在變化發生時感到不安。不是因為你做得不夠好，而是結構若只能在一切照計畫進行時成立，便容易成為另一種負擔。\n\n試著問自己：哪一部分可以交由別人共同維護？哪一條規則需要重新談？當流程能跟著現實修正，穩定才不只是守住原樣，而是讓人有餘裕持續前進。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "建立可共同維護的長期秩序",
+        "symbolic_core": "可靠的結構可以持續調整，不以零失誤或控制一切為條件。",
+        "explorable_strength": "擅長整理責任、時間與流程，支持長期合作與累積。",
+        "core_tension": "把秩序等同安全時，可能過度擔責或難以接受變動。",
+        "life_insight": "穩定的真正成果是讓事情不再只靠某一個人苦撐。",
+        "integration_direction": "找出一項反覆出錯的工作，寫下共享流程與定期修訂時間。",
+        "reflection_question": "我建立的規則是在幫助大家，還是在要求自己永遠不能出錯？",
+        "customer_narrative_short_draft": "有些可靠不是轟轟烈烈的表現，而是每週有人確認進度、每個步驟都有明確的接手方式。「基石者」S1-04 著眼於這類可長久運作的結構：讓好的安排不必只存在某個人的記憶裡。\n\n如果你習慣把事情整理得井井有條，也許會在變化發生時感到不安。不是因為你做得不夠好，而是結構若只能在一切照計畫進行時成立，便容易成為另一種負擔。\n\n試著問自己：哪一部分可以交由別人共同維護？哪一條規則需要重新談？當流程能跟著現實修正，穩定才不只是守住原樣，而是讓人有餘裕持續前進。"
+      },
+      "peer_distinction_codes": [
+        "S1-39"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": "S1-04著重「流程、制度、長期維護」；與S1-39壓力現場的即時安定有別。 台繁顯示名稱由「穩定者」改提案為「基石者」，依原型核心區分；仍待具名真人正式核准。"
     },
     {
       "code": "S1-05",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "催化者",
+      "name_zh_source": "催化者",
+      "name_en_source": "The Catalyst",
       "source_code": "S1-05",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "647cf7612060410c3abcb76109af97385af1bf0010eb6f84b03c799d45883ce6",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -198,39 +274,56 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "帶動改變之前，先留意別人是否準備好參與。",
-        "explorable_strength": "催化者映照促成突破與啟動對話的可能。",
-        "core_tension": "過於急切地推動進度，可能讓原本的好意變成他人的壓力。",
-        "integration_direction": "先確認共同目標與同意，再提出能被選擇的下一步。",
-        "customer_narrative_short_draft": "一場討論裡，有人提出了令人興奮的新方向，其他人卻還在擔心原有承諾能不能完成。催化的力量有時不在於再加快速度，而在於讓不同的人都能看見改變的理由。先問一句「你願意一起試哪一小步？」比替大家宣布答案更有力量。"
+      "master_content_zh_tw": {
+        "positioning": "讓改變成為可以共同選擇的邀請",
+        "symbolic_core": "催化是打開改變的可能，不是替他人決定改變速度。",
+        "archetype_strength": "能提出新方向、促成對話並幫助團體突破停滯。",
+        "inner_tension": "太急於推進時，容易忽略他人的準備與同意。",
+        "life_insight": "一個改變是否能持續，往往取決於參與者是否真正理解並願意加入。",
+        "integration_direction": "提出改變前，先問彼此在乎的目標，邀請選擇一個小試驗。",
+        "reflection_question": "我希望別人改變，是因為我們有共同需要，還是我不能容忍等待？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "「確認共同目標與同意」忠實化解過度推動的陰影，但催化的創造性仍不夠鮮明。",
-      "required_revision_zh_tw": "加入新提案如何引發自願參與的畫面，保留他人拒絕權。",
+      "customer_narrative_candidate": {
+        "title": "催化者｜讓改變成為可以共同選擇的邀請",
+        "paragraphs": [
+          "一群人沿用舊方法很久，有一天有人指出新的可能，整個場面忽然活絡起來。「催化者」關注這股讓停滯開始鬆動的力量，它可能是一個問題、一個示範，或一次願意說出不同想法的勇氣。",
+          "然而，提出新方向的人不一定比其他人更早理解所有代價。對你來說很清楚的下一步，可能對別人意味著要放下既有承諾。急於推進時，好意也會令人感到被迫。",
+          "如果這個視角與你有共鳴，下次可以先問：「你最在意改變後會失去什麼？」讓改變成為可以討論、可以同意、也可以暫時拒絕的邀請。"
+        ],
+        "body": "一群人沿用舊方法很久，有一天有人指出新的可能，整個場面忽然活絡起來。「催化者」關注這股讓停滯開始鬆動的力量，它可能是一個問題、一個示範，或一次願意說出不同想法的勇氣。\n\n然而，提出新方向的人不一定比其他人更早理解所有代價。對你來說很清楚的下一步，可能對別人意味著要放下既有承諾。急於推進時，好意也會令人感到被迫。\n\n如果這個視角與你有共鳴，下次可以先問：「你最在意改變後會失去什麼？」讓改變成為可以討論、可以同意、也可以暫時拒絕的邀請。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "讓改變成為可以共同選擇的邀請",
+        "symbolic_core": "催化是打開改變的可能，不是替他人決定改變速度。",
+        "explorable_strength": "能提出新方向、促成對話並幫助團體突破停滯。",
+        "core_tension": "太急於推進時，容易忽略他人的準備與同意。",
+        "life_insight": "一個改變是否能持續，往往取決於參與者是否真正理解並願意加入。",
+        "integration_direction": "提出改變前，先問彼此在乎的目標，邀請選擇一個小試驗。",
+        "reflection_question": "我希望別人改變，是因為我們有共同需要，還是我不能容忍等待？",
+        "customer_narrative_short_draft": "一群人沿用舊方法很久，有一天有人指出新的可能，整個場面忽然活絡起來。「催化者」關注這股讓停滯開始鬆動的力量，它可能是一個問題、一個示範，或一次願意說出不同想法的勇氣。\n\n然而，提出新方向的人不一定比其他人更早理解所有代價。對你來說很清楚的下一步，可能對別人意味著要放下既有承諾。急於推進時，好意也會令人感到被迫。\n\n如果這個視角與你有共鳴，下次可以先問：「你最在意改變後會失去什麼？」讓改變成為可以討論、可以同意、也可以暫時拒絕的邀請。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-06",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "癒合者",
+      "name_zh_source": "愈合者",
+      "name_en_source": "The Healer",
       "source_code": "S1-06",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "0ef39ed43f3691b43c5d99312a3c056d18b356b3d714cd2a1d88dd58a97b7f6e",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -238,41 +331,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "照顧是一種關係品質，並非必須承擔所有痛苦的任務。",
-        "explorable_strength": "癒合者象徵傾聽、照料與為他人保留空間的取向。",
-        "core_tension": "若總把他人需要放在前面，自己的疲倦與求助可能被忽略。",
-        "integration_direction": "練習說清楚可提供的陪伴範圍，也讓自己得到支持。",
-        "customer_narrative_short_draft": "有人願意聽完朋友一段艱難的心情，沒有急著給建議，只是留出可以說話的空間。癒合者談的是這種細緻的關懷，不是替人治療的能力。陪伴可以有溫度，也需要範圍；當問題需要專業協助，支持對方找到合適資源同樣重要。"
+      "master_content_zh_tw": {
+        "positioning": "以關懷陪伴，不承擔所有人的修復",
+        "symbolic_core": "照顧建立在傾聽與尊重之上，不是療效或神奇能力。",
+        "archetype_strength": "願意留意他人的感受，提供陪伴與日常支持。",
+        "inner_tension": "容易忽略自己的需求，或把對方的結果當成個人責任。",
+        "life_insight": "真正的關懷不需要犧牲自己，也知道何時尋求專業協助。",
+        "integration_direction": "說清楚可以陪伴的時間與方式；超出能力範圍時協助尋求資源。",
+        "reflection_question": "當別人難過時，我能分清「我願意陪伴」與「我必須解決」嗎？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P0",
-      "reason_zh_tw": "關懷與耗竭的張力正確；「癒合者」相對來源「愈合者」是名稱更動，並涉及療癒權威想像。",
-      "required_revision_zh_tw": "確認名稱標準；呈現陪伴／傾聽而非治療效果，與 S1-30 區分。",
+      "customer_narrative_candidate": {
+        "title": "癒合者｜以關懷陪伴，不承擔所有人的修復",
+        "paragraphs": [
+          "有時真正令人記得的陪伴，不是一句漂亮的安慰，而是有人願意聽完你的話，不急著下結論。「癒合者」讓我們看見這種細緻而日常的關懷：它可以發生在朋友間，也可以發生在一段平凡的互相照顧裡。",
+          "如果你習慣成為別人求助的對象，也許曾有過答應太多、卻不知道怎麼停下來的時刻。試著辨認自己的疲憊，不代表你不夠善良。每個人的情緒和康復歷程，都不能由另一個人獨自負責。",
+          "你可以溫和地說明能提供什麼支持，也允許自己需要支持。若涉及疾病、創傷或治療需求，合格的專業人員比任何原型名稱都更重要。"
+        ],
+        "body": "有時真正令人記得的陪伴，不是一句漂亮的安慰，而是有人願意聽完你的話，不急著下結論。「癒合者」讓我們看見這種細緻而日常的關懷：它可以發生在朋友間，也可以發生在一段平凡的互相照顧裡。\n\n如果你習慣成為別人求助的對象，也許曾有過答應太多、卻不知道怎麼停下來的時刻。試著辨認自己的疲憊，不代表你不夠善良。每個人的情緒和康復歷程，都不能由另一個人獨自負責。\n\n你可以溫和地說明能提供什麼支持，也允許自己需要支持。若涉及疾病、創傷或治療需求，合格的專業人員比任何原型名稱都更重要。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "以關懷陪伴，不承擔所有人的修復",
+        "symbolic_core": "照顧建立在傾聽與尊重之上，不是療效或神奇能力。",
+        "explorable_strength": "願意留意他人的感受，提供陪伴與日常支持。",
+        "core_tension": "容易忽略自己的需求，或把對方的結果當成個人責任。",
+        "life_insight": "真正的關懷不需要犧牲自己，也知道何時尋求專業協助。",
+        "integration_direction": "說清楚可以陪伴的時間與方式；超出能力範圍時協助尋求資源。",
+        "reflection_question": "當別人難過時，我能分清「我願意陪伴」與「我必須解決」嗎？",
+        "customer_narrative_short_draft": "有時真正令人記得的陪伴，不是一句漂亮的安慰，而是有人願意聽完你的話，不急著下結論。「癒合者」讓我們看見這種細緻而日常的關懷：它可以發生在朋友間，也可以發生在一段平凡的互相照顧裡。\n\n如果你習慣成為別人求助的對象，也許曾有過答應太多、卻不知道怎麼停下來的時刻。試著辨認自己的疲憊，不代表你不夠善良。每個人的情緒和康復歷程，都不能由另一個人獨自負責。\n\n你可以溫和地說明能提供什麼支持，也允許自己需要支持。若涉及疾病、創傷或治療需求，合格的專業人員比任何原型名稱都更重要。"
+      },
+      "peer_distinction_codes": [
+        "S1-30"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "S1-06 原始中文為「愈合者」；台繁提案「癒合者」，名稱待真人核准。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": "「癒合者」為台繁候選名；來源中文「愈合者」。應在批准前鎖定名稱，禁止醫療療效暗示。"
     },
     {
       "code": "S1-07",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "堅毅者",
+      "name_zh_source": "坚毅者",
+      "name_en_source": "The Warrior",
       "source_code": "S1-07",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "3704cecaa8f5d3603b8f6d84e6c7dbcc366dd538944b6df8063d14b513017a2c",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -280,40 +390,56 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "堅定能保護重要的事，柔軟則使關係保有空間。",
-        "explorable_strength": "堅毅者呈現面對壓力仍願意前進的象徵品質。",
-        "core_tension": "把每次分歧都當成戰鬥，可能讓脆弱與協作無處安放。",
-        "integration_direction": "先辨認哪些原則值得堅持，再選擇不必對抗的表達方式。",
-        "customer_narrative_short_draft": "一件重要的事受到質疑，有人立即準備反擊，也有人選擇先問清楚分歧究竟在哪裡。堅毅不必每次都以對抗證明。守住必要的原則，同時讓新的資訊進來，往往比一路用力更難，也更有建設性。你想堅持的核心究竟是什麼？"
+      "master_content_zh_tw": {
+        "positioning": "守住重要原則，而不把分歧都變戰場",
+        "symbolic_core": "堅定是能辨認值得捍衛的事，也能在必要時調整做法。",
+        "archetype_strength": "面對困難仍可持續行動，協助保護重要承諾。",
+        "inner_tension": "若把退讓視為失敗，容易用對抗掩蓋不安與脆弱。",
+        "life_insight": "力量可以同時包含勇氣、柔軟與接受協助。",
+        "integration_direction": "選一個分歧，寫下不可退讓的原則與可以協商的方式。",
+        "reflection_question": "最近一次爭執裡，我想保護的究竟是原則，還是「不能輸」的感覺？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "堅毅、面對困難的原意保留；現有敘事太像教人減少爭執。",
-      "required_revision_zh_tw": "以守住原則又接受協作的場景辨別勇氣與對抗。",
+      "customer_narrative_candidate": {
+        "title": "堅毅者｜守住重要原則，而不把分歧都變戰場",
+        "paragraphs": [
+          "遇到被質疑的時候，有些人會立刻準備辯護，彷彿退後一步就等於失去自己。「堅毅者」讓我們重新看待堅持：它關注的並非每場爭論誰勝誰負，而是什麼值得被好好守護。",
+          "持續前進有時需要很大的力氣；承認疲倦、說出擔心，甚至請人幫忙，也可能同樣需要勇氣。當分歧被當成戰鬥，原本可以合作的人反而會漸漸遠離。",
+          "如果你想試試另一種方式，不妨先說明自己在意的底線，再問對方有哪些不同考量。原則不一定要靠聲量證明，力量也不必永遠帶著盔甲。"
+        ],
+        "body": "遇到被質疑的時候，有些人會立刻準備辯護，彷彿退後一步就等於失去自己。「堅毅者」讓我們重新看待堅持：它關注的並非每場爭論誰勝誰負，而是什麼值得被好好守護。\n\n持續前進有時需要很大的力氣；承認疲倦、說出擔心，甚至請人幫忙，也可能同樣需要勇氣。當分歧被當成戰鬥，原本可以合作的人反而會漸漸遠離。\n\n如果你想試試另一種方式，不妨先說明自己在意的底線，再問對方有哪些不同考量。原則不一定要靠聲量證明，力量也不必永遠帶著盔甲。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "守住重要原則，而不把分歧都變戰場",
+        "symbolic_core": "堅定是能辨認值得捍衛的事，也能在必要時調整做法。",
+        "explorable_strength": "面對困難仍可持續行動，協助保護重要承諾。",
+        "core_tension": "若把退讓視為失敗，容易用對抗掩蓋不安與脆弱。",
+        "life_insight": "力量可以同時包含勇氣、柔軟與接受協助。",
+        "integration_direction": "選一個分歧，寫下不可退讓的原則與可以協商的方式。",
+        "reflection_question": "最近一次爭執裡，我想保護的究竟是原則，還是「不能輸」的感覺？",
+        "customer_narrative_short_draft": "遇到被質疑的時候，有些人會立刻準備辯護，彷彿退後一步就等於失去自己。「堅毅者」讓我們重新看待堅持：它關注的並非每場爭論誰勝誰負，而是什麼值得被好好守護。\n\n持續前進有時需要很大的力氣；承認疲倦、說出擔心，甚至請人幫忙，也可能同樣需要勇氣。當分歧被當成戰鬥，原本可以合作的人反而會漸漸遠離。\n\n如果你想試試另一種方式，不妨先說明自己在意的底線，再問對方有哪些不同考量。原則不一定要靠聲量證明，力量也不必永遠帶著盔甲。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-08",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "承載者",
+      "name_zh_source": "承载者",
+      "name_en_source": "The Nurturer",
       "source_code": "S1-08",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "5e209f5fc924fee51e119ee64e94546ad454041914e2af27795c97ca7a396c65",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -321,40 +447,56 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "承接他人不必以失去自己作為代價。",
-        "explorable_strength": "承載者映照長期照料、耐心與維持團隊連結的方向。",
-        "core_tension": "若付出成為唯一的價值證明，就可能難以拒絕不合理要求。",
-        "integration_direction": "將責任分配與資源需求說明清楚，讓照顧可以持續。",
-        "customer_narrative_short_draft": "照料一個長期計畫，常有許多不被看見的小事：提醒、整理、接手、等待。承載者提醒我們，耐心的維繫確實有價值；但若所有事情都靠同一個人支撐，再好的心意也很難持續。把需要的資源和可以分擔的工作說出來，照顧才有延續的空間。"
+      "master_content_zh_tw": {
+        "positioning": "讓長期的照顧由多人共同承擔",
+        "symbolic_core": "承載的本質是穩定滋養與支持，而不是無止盡地犧牲。",
+        "archetype_strength": "能長期投入照料、維持連結並留意細節。",
+        "inner_tension": "可能把付出當成被需要的證明，難以分配責任。",
+        "life_insight": "能被分享的照顧比由一個人扛住的照顧更能延續。",
+        "integration_direction": "清點一項長期承諾，把可協作的工作與資源需求說清楚。",
+        "reflection_question": "我提供的照顧，是自由選擇，還是怕不付出就失去位置？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "耐心照顧與長期承接有保存；現稿與 S1-06／S1-38 的「付出與界限」高度相近。",
-      "required_revision_zh_tw": "改寫為持續照料、資源分工與互惠，突出養育型創造。",
+      "customer_narrative_candidate": {
+        "title": "承載者｜讓長期的照顧由多人共同承擔",
+        "paragraphs": [
+          "一份照顧往往不是某個戲劇性的瞬間，而是一次次提醒、記得、等待和接手。「承載者」看見的是這些不容易被點名、卻讓關係和團隊得以延續的小事。",
+          "當你總是願意多做一點，別人可能逐漸以為這一切不需要花費心力。你是否也曾在心裡期待有人注意，卻又不敢說自己已經太累？付出的價值不需要靠耗盡自己來證明。",
+          "把責任攤開來談，不會讓關懷變少。它只是讓原本集中在一個人身上的重量，變成可以被看見、被協助、也被持續維護的共同承諾。"
+        ],
+        "body": "一份照顧往往不是某個戲劇性的瞬間，而是一次次提醒、記得、等待和接手。「承載者」看見的是這些不容易被點名、卻讓關係和團隊得以延續的小事。\n\n當你總是願意多做一點，別人可能逐漸以為這一切不需要花費心力。你是否也曾在心裡期待有人注意，卻又不敢說自己已經太累？付出的價值不需要靠耗盡自己來證明。\n\n把責任攤開來談，不會讓關懷變少。它只是讓原本集中在一個人身上的重量，變成可以被看見、被協助、也被持續維護的共同承諾。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "讓長期的照顧由多人共同承擔",
+        "symbolic_core": "承載的本質是穩定滋養與支持，而不是無止盡地犧牲。",
+        "explorable_strength": "能長期投入照料、維持連結並留意細節。",
+        "core_tension": "可能把付出當成被需要的證明，難以分配責任。",
+        "life_insight": "能被分享的照顧比由一個人扛住的照顧更能延續。",
+        "integration_direction": "清點一項長期承諾，把可協作的工作與資源需求說清楚。",
+        "reflection_question": "我提供的照顧，是自由選擇，還是怕不付出就失去位置？",
+        "customer_narrative_short_draft": "一份照顧往往不是某個戲劇性的瞬間，而是一次次提醒、記得、等待和接手。「承載者」看見的是這些不容易被點名、卻讓關係和團隊得以延續的小事。\n\n當你總是願意多做一點，別人可能逐漸以為這一切不需要花費心力。你是否也曾在心裡期待有人注意，卻又不敢說自己已經太累？付出的價值不需要靠耗盡自己來證明。\n\n把責任攤開來談，不會讓關懷變少。它只是讓原本集中在一個人身上的重量，變成可以被看見、被協助、也被持續維護的共同承諾。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-09",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "拓界者",
+      "name_zh_source": "拓界者",
+      "name_en_source": "The Explorer",
       "source_code": "S1-09",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "185cf2061114d9a14cf34063661f707cf2abcbc7a89d8ca21a115a92d9ec34e7",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -362,39 +504,56 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "跨越熟悉邊界的意義，不只在看到更多，也在留下成果。",
-        "explorable_strength": "拓界者關注探索新領域與願意嘗試陌生可能的態度。",
-        "core_tension": "持續轉換方向時，真正需要累積的練習可能無法深入。",
-        "integration_direction": "選一項新發現，把它完成為能與人分享的作品或經驗。",
-        "customer_narrative_short_draft": "進入陌生領域時，最吸引人的也許是每一步都帶著新鮮感。但真正留下來的，有時是一件完成的小作品、一段可分享的經驗。拓界者不是要求你停止探索，而是邀請你把其中一次發現帶到終點，看看它究竟為生活增添了什麼。"
+      "master_content_zh_tw": {
+        "positioning": "把探索帶回可以留下的成果",
+        "symbolic_core": "探索讓視野向外打開，完成使所見成為自己的經驗。",
+        "archetype_strength": "對未知保持好奇，善於嘗試不同領域與路徑。",
+        "inner_tension": "若不斷追逐新鮮感，可能難以累積深度或完成承諾。",
+        "life_insight": "真正的自由不只是不停前往別處，也包含選擇為何留下。",
+        "integration_direction": "從最近的新發現選一件，完成一份作品或具體紀錄。",
+        "reflection_question": "我下一次想轉換方向時，是出於好奇，還是想避開深入？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "探索與延續的關聯符合來源；段落幾乎可移用 S1-25 或 S1-29。",
-      "required_revision_zh_tw": "聚焦走進陌生領域後將經驗轉成分享成果，與自由適應、發明新方法分開。",
+      "customer_narrative_candidate": {
+        "title": "拓界者｜把探索帶回可以留下的成果",
+        "paragraphs": [
+          "每次接觸陌生的地方、知識或做法，世界似乎都會大一點。「拓界者」不是告訴你必須四處奔走，而是以探索象徵那份願意打開邊界、看看別種可能性的心。",
+          "探索容易帶來興奮，也容易在下一個新刺激出現後被擱在一旁。也許你曾開始很多有趣的計畫，卻很少有機會回頭看看哪一個真正改變了自己的生活。",
+          "試著讓一次發現有結尾：完成一段分享、做出一件作品，或持續練習一個月。你不必放棄探索；你只是把經過的地方，慢慢變成自己的路。"
+        ],
+        "body": "每次接觸陌生的地方、知識或做法，世界似乎都會大一點。「拓界者」不是告訴你必須四處奔走，而是以探索象徵那份願意打開邊界、看看別種可能性的心。\n\n探索容易帶來興奮，也容易在下一個新刺激出現後被擱在一旁。也許你曾開始很多有趣的計畫，卻很少有機會回頭看看哪一個真正改變了自己的生活。\n\n試著讓一次發現有結尾：完成一段分享、做出一件作品，或持續練習一個月。你不必放棄探索；你只是把經過的地方，慢慢變成自己的路。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "把探索帶回可以留下的成果",
+        "symbolic_core": "探索讓視野向外打開，完成使所見成為自己的經驗。",
+        "explorable_strength": "對未知保持好奇，善於嘗試不同領域與路徑。",
+        "core_tension": "若不斷追逐新鮮感，可能難以累積深度或完成承諾。",
+        "life_insight": "真正的自由不只是不停前往別處，也包含選擇為何留下。",
+        "integration_direction": "從最近的新發現選一件，完成一份作品或具體紀錄。",
+        "reflection_question": "我下一次想轉換方向時，是出於好奇，還是想避開深入？",
+        "customer_narrative_short_draft": "每次接觸陌生的地方、知識或做法，世界似乎都會大一點。「拓界者」不是告訴你必須四處奔走，而是以探索象徵那份願意打開邊界、看看別種可能性的心。\n\n探索容易帶來興奮，也容易在下一個新刺激出現後被擱在一旁。也許你曾開始很多有趣的計畫，卻很少有機會回頭看看哪一個真正改變了自己的生活。\n\n試著讓一次發現有結尾：完成一段分享、做出一件作品，或持續練習一個月。你不必放棄探索；你只是把經過的地方，慢慢變成自己的路。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-10",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "守護者",
+      "name_zh_source": "守护者",
+      "name_en_source": "The Guardian",
       "source_code": "S1-10",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "280fd6ef4c6ed0f73555d855ee8acf17f4ee46f17f7d4f297f7f8387b492e1fd",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -402,40 +561,56 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "守護讓人感到被在乎；真正的信任也允許他人作選擇。",
-        "explorable_strength": "守護者關注對重要的人、關係和承諾投注心力的可能。",
-        "core_tension": "擔心失去有時會變成預先替別人安排，甚至限制對方。",
-        "integration_direction": "區分支持與控制，先問對方希望得到哪一種協助。",
-        "customer_narrative_short_draft": "當你很在乎一個人，自然會想替他預先排除麻煩。守護者讓這份心意被看見，也提醒：對方可能有自己的節奏與選擇。與其先把路安排好，不如問「你希望我怎麼支持？」可靠的守護，應該使彼此更有能力，而不是更難離開協助。"
+      "master_content_zh_tw": {
+        "positioning": "保護重要關係，同時尊重彼此的選擇",
+        "symbolic_core": "守護是有意識的支持，不是因為害怕失去而控制。",
+        "archetype_strength": "願意維護承諾，為重要的人事物提供安全與資源。",
+        "inner_tension": "出於擔憂預先安排太多，可能使對方難以自主。",
+        "life_insight": "信任不是不關心，而是容許對方逐漸具備自己的能力。",
+        "integration_direction": "下一次想主動介入時，先問對方希望怎樣得到支持。",
+        "reflection_question": "我是在協助對方，還是在試著消除自己對未知的焦慮？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "支持與控制的張力具辨識度，但「擔心失去」不可直接當成讀者心理事實。",
-      "required_revision_zh_tw": "保留條件式並增添尊重對方決定的具體詢問；避開保證安全能力。",
+      "customer_narrative_candidate": {
+        "title": "守護者｜保護重要關係，同時尊重彼此的選擇",
+        "paragraphs": [
+          "看到在乎的人可能受挫，我們常想先把麻煩處理好。「守護者」映照這份願意付出時間與資源的心，也提醒人注意：關懷的形式，未必和對方真正需要的一樣。",
+          "如果你曾替別人安排下一步，卻發現對方並不領情，那份失落或許值得慢慢看見。不是所有拒絕幫助都在拒絕愛；有時對方只是希望自己試一試。",
+          "守護可以從一句簡單的詢問開始：「你需要我陪著、提供資訊，還是先讓你自己處理？」當選擇權留在對方手裡，支持才更可能帶來長久的信任。"
+        ],
+        "body": "看到在乎的人可能受挫，我們常想先把麻煩處理好。「守護者」映照這份願意付出時間與資源的心，也提醒人注意：關懷的形式，未必和對方真正需要的一樣。\n\n如果你曾替別人安排下一步，卻發現對方並不領情，那份失落或許值得慢慢看見。不是所有拒絕幫助都在拒絕愛；有時對方只是希望自己試一試。\n\n守護可以從一句簡單的詢問開始：「你需要我陪著、提供資訊，還是先讓你自己處理？」當選擇權留在對方手裡，支持才更可能帶來長久的信任。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "保護重要關係，同時尊重彼此的選擇",
+        "symbolic_core": "守護是有意識的支持，不是因為害怕失去而控制。",
+        "explorable_strength": "願意維護承諾，為重要的人事物提供安全與資源。",
+        "core_tension": "出於擔憂預先安排太多，可能使對方難以自主。",
+        "life_insight": "信任不是不關心，而是容許對方逐漸具備自己的能力。",
+        "integration_direction": "下一次想主動介入時，先問對方希望怎樣得到支持。",
+        "reflection_question": "我是在協助對方，還是在試著消除自己對未知的焦慮？",
+        "customer_narrative_short_draft": "看到在乎的人可能受挫，我們常想先把麻煩處理好。「守護者」映照這份願意付出時間與資源的心，也提醒人注意：關懷的形式，未必和對方真正需要的一樣。\n\n如果你曾替別人安排下一步，卻發現對方並不領情，那份失落或許值得慢慢看見。不是所有拒絕幫助都在拒絕愛；有時對方只是希望自己試一試。\n\n守護可以從一句簡單的詢問開始：「你需要我陪著、提供資訊，還是先讓你自己處理？」當選擇權留在對方手裡，支持才更可能帶來長久的信任。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-11",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
-      "name_zh_tw_candidate": "遠見者",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
+      "name_zh_tw_candidate": "擘畫者",
+      "name_zh_source": "远见者",
+      "name_en_source": "The Visionary",
       "source_code": "S1-11",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "03ba442f99f8f390299defefef08a96bde603fc136e24cc2cc0bb5dcdea4d28e",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -443,40 +618,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "長期視野能指出方向，但今天仍需要可行的步驟。",
-        "explorable_strength": "遠見者（S1-11）側重規劃大局、辨識模式與長期策略。",
-        "core_tension": "如果只在宏大的未來藍圖裡工作，眼前資源和細節會被忽略。",
-        "integration_direction": "把一個長期目標拆成可檢視的近期里程碑。",
-        "customer_narrative_short_draft": "長期目標通常看起來很清楚，真正動手時卻會遇見預算、時間與各種限制。遠見者的價值，在於幫助我們把眼前決定放進更大的時間尺度。把願景拆成幾個能回顧的里程碑，也替調整保留餘地；策略不是把未來說得確定，而是讓今天有方向。"
+      "master_content_zh_tw": {
+        "positioning": "以長程策略照顧當下的選擇",
+        "symbolic_core": "遠見是看見時間尺度與整體方向，不是保證未來。",
+        "archetype_strength": "擅長規劃長期方向，辨識進程中的關聯與階段。",
+        "inner_tension": "目標過大時，可能忽略眼前資源而難以起步。",
+        "life_insight": "策略的意義，是讓今天可以採取的步驟與明天的方向連結。",
+        "integration_direction": "選一個一年後的目標，拆成下週可完成、可回顧的里程碑。",
+        "reflection_question": "我的長期願景中，哪個部分仍缺少今天可以開始的一步？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P0",
-      "reason_zh_tw": "長期策略原型合理，但與 S1-26 同名「遠見者」，且遠見主題互相重疊。",
-      "required_revision_zh_tw": "本碼定位長期規劃、階段里程碑；提出不同辨識標題並保留原始名對照。",
+      "customer_narrative_candidate": {
+        "title": "擘畫者｜以長程策略照顧當下的選擇",
+        "paragraphs": [
+          "談起未來時，有些想法能把眼前零散的努力連成清楚的方向。「擘畫者」S1-11 探索的，是長期規劃與辨認大局的能力：不只問下一步怎麼做，也問這一步在整段旅程裡有什麼意義。",
+          "只是，大圖像越動人，越可能遮住時間、經費與人的限制。你是否曾把理想描繪得完整，卻因為第一步太小而覺得不值得做？這種落差未必表示理想錯了，而是提醒它需要新的尺度。",
+          "試著將願景拆成幾個可以檢視的階段，允許自己根據結果修正。遠見不是對未來的宣判，而是讓今天更有方向感的一種思考方式。"
+        ],
+        "body": "談起未來時，有些想法能把眼前零散的努力連成清楚的方向。「擘畫者」S1-11 探索的，是長期規劃與辨認大局的能力：不只問下一步怎麼做，也問這一步在整段旅程裡有什麼意義。\n\n只是，大圖像越動人，越可能遮住時間、經費與人的限制。你是否曾把理想描繪得完整，卻因為第一步太小而覺得不值得做？這種落差未必表示理想錯了，而是提醒它需要新的尺度。\n\n試著將願景拆成幾個可以檢視的階段，允許自己根據結果修正。遠見不是對未來的宣判，而是讓今天更有方向感的一種思考方式。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "以長程策略照顧當下的選擇",
+        "symbolic_core": "遠見是看見時間尺度與整體方向，不是保證未來。",
+        "explorable_strength": "擅長規劃長期方向，辨識進程中的關聯與階段。",
+        "core_tension": "目標過大時，可能忽略眼前資源而難以起步。",
+        "life_insight": "策略的意義，是讓今天可以採取的步驟與明天的方向連結。",
+        "integration_direction": "選一個一年後的目標，拆成下週可完成、可回顧的里程碑。",
+        "reflection_question": "我的長期願景中，哪個部分仍缺少今天可以開始的一步？",
+        "customer_narrative_short_draft": "談起未來時，有些想法能把眼前零散的努力連成清楚的方向。「擘畫者」S1-11 探索的，是長期規劃與辨認大局的能力：不只問下一步怎麼做，也問這一步在整段旅程裡有什麼意義。\n\n只是，大圖像越動人，越可能遮住時間、經費與人的限制。你是否曾把理想描繪得完整，卻因為第一步太小而覺得不值得做？這種落差未必表示理想錯了，而是提醒它需要新的尺度。\n\n試著將願景拆成幾個可以檢視的階段，允許自己根據結果修正。遠見不是對未來的宣判，而是讓今天更有方向感的一種思考方式。"
+      },
+      "peer_distinction_codes": [
+        "S1-26"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": "S1-11 原型側重長程規劃與策略；S1-26 原型側重前瞻創新與原型驗證。兩者原始來源名同為「远见者／The Visionary」，只更動台繁候選顯示名稱，待真人核准。"
     },
     {
       "code": "S1-12",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "感應者",
+      "name_zh_source": "感应者",
+      "name_en_source": "The Empath",
       "source_code": "S1-12",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "e7a2bf3facee3b9c8ea8bf8168d2a3547f476273d7eac7c353bb4c2f11151490",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -484,40 +677,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "察覺別人的感受，仍需區分自己的情緒和對方的訊息。",
-        "explorable_strength": "感應者象徵對互動氛圍敏銳、願意細緻聆聽的可能。",
-        "core_tension": "當他人的情緒都被當作自己的責任，界限會逐漸模糊。",
-        "integration_direction": "先問：這是我真正感受到的，還是我對他人狀態的推測？",
-        "customer_narrative_short_draft": "談話突然安靜下來，你注意到對方語氣變了，心裡生出一個猜測。感應者提醒我們細節值得留意，但觀察不等於知道他人的內心。也許可以溫和地確認：「剛才這裡有什麼讓你不舒服嗎？」讓答案由對方自己說出來。"
+      "master_content_zh_tw": {
+        "positioning": "留意情緒線索，也讓他人親自說明",
+        "symbolic_core": "敏感是一種觀察的起點，並不等同知道他人內心。",
+        "archetype_strength": "能注意到語氣、表情與互動氛圍的細節。",
+        "inner_tension": "可能把自己的推測當成對方的感受，或承擔過多情緒責任。",
+        "life_insight": "同理需要確認與尊重，不能只有觀察者的猜測。",
+        "integration_direction": "選一次不確定的互動，用不預設答案的問題溫和確認。",
+        "reflection_question": "我說「我感覺他在生氣」時，哪些是看見的事實，哪些只是猜想？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P0",
-      "reason_zh_tw": "「察覺別人的感受」可能被誤讀為讀心；來源含高維感知與能量療癒。",
-      "required_revision_zh_tw": "改為留意語氣、表情與互動線索，所有推測需與本人確認。",
+      "customer_narrative_candidate": {
+        "title": "感應者｜留意情緒線索，也讓他人親自說明",
+        "paragraphs": [
+          "有人說話比平常短了一點，或在你講完後突然沉默。你也許會立刻注意到氣氛改變，心裡出現很多可能的解釋。「感應者」把焦點放在對這類細節的敏感。",
+          "但敏感不等於準確讀心。對方也許疲倦、分心，或正想著與你無關的事。如果把每個微小變化都當成自己的責任，想理解別人的心意，反而可能讓自己無法安定。",
+          "可以先把觀察和推測分開，再用一句開放的問題確認。真正的理解不是替對方把故事寫完，而是容許對方說出屬於自己的版本。"
+        ],
+        "body": "有人說話比平常短了一點，或在你講完後突然沉默。你也許會立刻注意到氣氛改變，心裡出現很多可能的解釋。「感應者」把焦點放在對這類細節的敏感。\n\n但敏感不等於準確讀心。對方也許疲倦、分心，或正想著與你無關的事。如果把每個微小變化都當成自己的責任，想理解別人的心意，反而可能讓自己無法安定。\n\n可以先把觀察和推測分開，再用一句開放的問題確認。真正的理解不是替對方把故事寫完，而是容許對方說出屬於自己的版本。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "留意情緒線索，也讓他人親自說明",
+        "symbolic_core": "敏感是一種觀察的起點，並不等同知道他人內心。",
+        "explorable_strength": "能注意到語氣、表情與互動氛圍的細節。",
+        "core_tension": "可能把自己的推測當成對方的感受，或承擔過多情緒責任。",
+        "life_insight": "同理需要確認與尊重，不能只有觀察者的猜測。",
+        "integration_direction": "選一次不確定的互動，用不預設答案的問題溫和確認。",
+        "reflection_question": "我說「我感覺他在生氣」時，哪些是看見的事實，哪些只是猜想？",
+        "customer_narrative_short_draft": "有人說話比平常短了一點，或在你講完後突然沉默。你也許會立刻注意到氣氛改變，心裡出現很多可能的解釋。「感應者」把焦點放在對這類細節的敏感。\n\n但敏感不等於準確讀心。對方也許疲倦、分心，或正想著與你無關的事。如果把每個微小變化都當成自己的責任，想理解別人的心意，反而可能讓自己無法安定。\n\n可以先把觀察和推測分開，再用一句開放的問題確認。真正的理解不是替對方把故事寫完，而是容許對方說出屬於自己的版本。"
+      },
+      "peer_distinction_codes": [
+        "S1-33"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-13",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "逆行者",
+      "name_zh_source": "逆行者",
+      "name_en_source": "The Rebel",
       "source_code": "S1-13",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "b6be695c55f8e4dc116d18c41a629166c68196b9c49ee43f7481580db6f16570",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -525,39 +736,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "質疑現狀可以打開新路，但反對本身不是終點。",
-        "explorable_strength": "逆行者呈現不急著接受慣例、願意重新審視制度的方向。",
-        "core_tension": "若把反對變成身分，就可能錯過值得保留的事物。",
-        "integration_direction": "把反對意見轉成可討論的替代方案與實際行動。",
-        "customer_narrative_short_draft": "某條被沿用多年的規則，開始顯得不合時宜。逆行者的力量，不只在於指出「這樣不對」，更在於提出另一條值得試的路。當質疑變成可討論的方案，拒絕盲從便不再只是姿態，而能成為負責任的創造。"
+      "master_content_zh_tw": {
+        "positioning": "從質疑舊規範走向提出替代方案",
+        "symbolic_core": "不盲從是一種檢視能力，創造才使質疑具有建設性。",
+        "archetype_strength": "敢指出不合理慣例，為不同做法打開空間。",
+        "inner_tension": "可能因習慣反對而忽略可保留的部分，甚至與人持續對立。",
+        "life_insight": "獨立思考不必以永遠站在對面為代價。",
+        "integration_direction": "針對一條不合適的規則，提出可以小範圍試行的替代方案。",
+        "reflection_question": "我反對的究竟是哪項影響，還是我已習慣用反對確定自己的位置？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "對慣例提出質疑的主旨成立；與 S1-34 改革者的制度改善需區分。",
-      "required_revision_zh_tw": "寫「拒絕盲從→提出替代方案」，而非制度優化與評估流程。",
+      "customer_narrative_candidate": {
+        "title": "逆行者｜從質疑舊規範走向提出替代方案",
+        "paragraphs": [
+          "一項規則已經用了很多年，大家卻不再清楚它為何存在。「逆行者」關注敢於提出疑問的那個時刻：當「一直都是這樣」不再足以回答真正的需要。",
+          "但是，質疑會不會慢慢變成習慣？如果每一次有人提出做法，你都先看見它的問題，也許值得問問自己，哪些部分其實仍有價值。保留與改變，不一定只能選一邊。",
+          "把不滿整理成可討論的方案，並說明希望改善什麼。當反對有了方向，它便不只是對權威說不，更是為共同生活留下一條可試的路。"
+        ],
+        "body": "一項規則已經用了很多年，大家卻不再清楚它為何存在。「逆行者」關注敢於提出疑問的那個時刻：當「一直都是這樣」不再足以回答真正的需要。\n\n但是，質疑會不會慢慢變成習慣？如果每一次有人提出做法，你都先看見它的問題，也許值得問問自己，哪些部分其實仍有價值。保留與改變，不一定只能選一邊。\n\n把不滿整理成可討論的方案，並說明希望改善什麼。當反對有了方向，它便不只是對權威說不，更是為共同生活留下一條可試的路。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "從質疑舊規範走向提出替代方案",
+        "symbolic_core": "不盲從是一種檢視能力，創造才使質疑具有建設性。",
+        "explorable_strength": "敢指出不合理慣例，為不同做法打開空間。",
+        "core_tension": "可能因習慣反對而忽略可保留的部分，甚至與人持續對立。",
+        "life_insight": "獨立思考不必以永遠站在對面為代價。",
+        "integration_direction": "針對一條不合適的規則，提出可以小範圍試行的替代方案。",
+        "reflection_question": "我反對的究竟是哪項影響，還是我已習慣用反對確定自己的位置？",
+        "customer_narrative_short_draft": "一項規則已經用了很多年，大家卻不再清楚它為何存在。「逆行者」關注敢於提出疑問的那個時刻：當「一直都是這樣」不再足以回答真正的需要。\n\n但是，質疑會不會慢慢變成習慣？如果每一次有人提出做法，你都先看見它的問題，也許值得問問自己，哪些部分其實仍有價值。保留與改變，不一定只能選一邊。\n\n把不滿整理成可討論的方案，並說明希望改善什麼。當反對有了方向，它便不只是對權威說不，更是為共同生活留下一條可試的路。"
+      },
+      "peer_distinction_codes": [
+        "S1-34"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-14",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "傳導者",
+      "name_zh_source": "传导者",
+      "name_en_source": "The Teacher",
       "source_code": "S1-14",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "63267e927442fe257988fedfa3c9274c3238193c7424481412fcfd7fb327408e",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -565,40 +795,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "真正有用的知識，應能透過實踐而不是頭銜被看見。",
-        "explorable_strength": "傳導者關注分享、教學與將複雜觀念說清楚的可能。",
-        "core_tension": "過度擔心自己不夠專業，容易使分享變成無止盡的準備。",
-        "integration_direction": "在能力範圍內示範一件事，並坦承仍需學習的部分。",
-        "customer_narrative_short_draft": "學到一件複雜的事後，真正的挑戰常是如何讓別人也能理解。傳導者可以從一個清楚的例子開始，不必一次說完全部理論。分享時承認知識的邊界，涉及專業判斷則尊重相應資格；能讓人自行理解的方法，比把自己放在權威位置更長久。"
+      "master_content_zh_tw": {
+        "positioning": "把複雜理解化為他人能自行使用的方法",
+        "symbolic_core": "知識分享的核心是讓別人能理解與判斷，而非建立權威地位。",
+        "archetype_strength": "善於整理觀念、示範方法並引導學習。",
+        "inner_tension": "擔心自己準備不足，可能不斷延後分享或背負過多教導責任。",
+        "life_insight": "好的傳遞留給他人思考與修正的自由，也承認專業邊界。",
+        "integration_direction": "選一個熟悉的概念，用例子和可操作步驟解釋，並標記未知之處。",
+        "reflection_question": "我想讓別人理解一件事，還是希望別人相信我什麼都懂？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "教學／轉譯核心清楚；「不是頭銜」措辭太絕對，容易低估專業資格。",
-      "required_revision_zh_tw": "改成知識需要可理解的示範，涉及專業範圍仍以合格資格為界。",
+      "customer_narrative_candidate": {
+        "title": "傳導者｜把複雜理解化為他人能自行使用的方法",
+        "paragraphs": [
+          "一件你已經理解的事，對初次接觸的人可能仍像一團霧。「傳導者」在意的不是說出更多專有名詞，而是找到讓複雜概念可以被一步步理解的方式。",
+          "如果你很重視分享品質，可能會擔心還有資料沒讀、還有問題答不出。這份謹慎值得保留，但也不需要把「知道全部」當成開始交流的資格。分享方法與示範，比宣稱自己掌握答案更能留下空間。",
+          "試著從一個貼近日常的例子開始，明確說出適用範圍；遇到需要合格專業判斷的事，也願意轉介。被理解的知識可以持續生長，不必靠教導者永遠正確。"
+        ],
+        "body": "一件你已經理解的事，對初次接觸的人可能仍像一團霧。「傳導者」在意的不是說出更多專有名詞，而是找到讓複雜概念可以被一步步理解的方式。\n\n如果你很重視分享品質，可能會擔心還有資料沒讀、還有問題答不出。這份謹慎值得保留，但也不需要把「知道全部」當成開始交流的資格。分享方法與示範，比宣稱自己掌握答案更能留下空間。\n\n試著從一個貼近日常的例子開始，明確說出適用範圍；遇到需要合格專業判斷的事，也願意轉介。被理解的知識可以持續生長，不必靠教導者永遠正確。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "把複雜理解化為他人能自行使用的方法",
+        "symbolic_core": "知識分享的核心是讓別人能理解與判斷，而非建立權威地位。",
+        "explorable_strength": "善於整理觀念、示範方法並引導學習。",
+        "core_tension": "擔心自己準備不足，可能不斷延後分享或背負過多教導責任。",
+        "life_insight": "好的傳遞留給他人思考與修正的自由，也承認專業邊界。",
+        "integration_direction": "選一個熟悉的概念，用例子和可操作步驟解釋，並標記未知之處。",
+        "reflection_question": "我想讓別人理解一件事，還是希望別人相信我什麼都懂？",
+        "customer_narrative_short_draft": "一件你已經理解的事，對初次接觸的人可能仍像一團霧。「傳導者」在意的不是說出更多專有名詞，而是找到讓複雜概念可以被一步步理解的方式。\n\n如果你很重視分享品質，可能會擔心還有資料沒讀、還有問題答不出。這份謹慎值得保留，但也不需要把「知道全部」當成開始交流的資格。分享方法與示範，比宣稱自己掌握答案更能留下空間。\n\n試著從一個貼近日常的例子開始，明確說出適用範圍；遇到需要合格專業判斷的事，也願意轉介。被理解的知識可以持續生長，不必靠教導者永遠正確。"
+      },
+      "peer_distinction_codes": [
+        "S1-40"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-15",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "入世的靈者",
+      "name_zh_source": "入世的灵者",
+      "name_en_source": "The Grounded Mystic",
       "source_code": "S1-15",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "d6cd6b43618906f68036b01e8d3414f976cc952900fc25eda698423275eeeb98",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -606,40 +854,56 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "內在探索若能照顧日常生活，才不會和現實分離。",
-        "explorable_strength": "入世的靈者象徵將精神性提問帶入身體、工作與關係。",
-        "core_tension": "若過於在意誰比較覺醒，容易忽略真實責任與基本需求。",
-        "integration_direction": "從休息、飲食、誠實溝通等具體生活選擇開始。",
-        "customer_narrative_short_draft": "人有時在思考人生意義，卻忘了回覆眼前重要的訊息、吃一頓飯或好好休息。入世的靈者把抽象探索帶回這些平常事。沒有誰因為談論精神世界就更高等；當理解能改善真實的生活關係，它才有機會成為踏實的實踐。"
+      "master_content_zh_tw": {
+        "positioning": "讓精神性提問回到日常照料",
+        "symbolic_core": "內在探索若能落實於身體、生活與關係，才有可觀察的意義。",
+        "archetype_strength": "能把抽象的價值提問轉成日常實踐與選擇。",
+        "inner_tension": "若太關注覺醒程度，可能忽略基本需求或對他人產生優越感。",
+        "life_insight": "沒有人的價值取決於靈性程度；深刻理解可以體現在平凡的責任裡。",
+        "integration_direction": "從一項具體的生活照顧開始：休息、回覆、飲食或真誠表達。",
+        "reflection_question": "最近我思考過的重要道理，有沒有真正改善一件平凡的小事？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P0",
-      "reason_zh_tw": "原型將精神探索帶入日常的方向正確；「誰比較覺醒」存在靈性高低排名聯想。",
-      "required_revision_zh_tw": "以日常照顧／責任校準精神理想；強調沒有人因編碼有更高意識等級。",
+      "customer_narrative_candidate": {
+        "title": "入世的靈者｜讓精神性提問回到日常照料",
+        "paragraphs": [
+          "有時我們花很多時間思考生命的意義，卻在忙碌中忘了吃飯、休息，或回應身邊真正需要溝通的人。「入世的靈者」把兩種看似不同的生活放在一起：抽象的提問，與觸手可及的日常。",
+          "談論精神世界不會讓任何人高於他人。若一份理解使我們更難接受差異，或讓自己長期忽略身體的訊號，就值得重新檢視它是否真的帶來照料與連結。",
+          "不妨挑一件可以在今天完成的事：真誠說出一個需要、準時休息，或好好履行一個承諾。那些微小的選擇，正是思想與生活相遇的地方。"
+        ],
+        "body": "有時我們花很多時間思考生命的意義，卻在忙碌中忘了吃飯、休息，或回應身邊真正需要溝通的人。「入世的靈者」把兩種看似不同的生活放在一起：抽象的提問，與觸手可及的日常。\n\n談論精神世界不會讓任何人高於他人。若一份理解使我們更難接受差異，或讓自己長期忽略身體的訊號，就值得重新檢視它是否真的帶來照料與連結。\n\n不妨挑一件可以在今天完成的事：真誠說出一個需要、準時休息，或好好履行一個承諾。那些微小的選擇，正是思想與生活相遇的地方。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "讓精神性提問回到日常照料",
+        "symbolic_core": "內在探索若能落實於身體、生活與關係，才有可觀察的意義。",
+        "explorable_strength": "能把抽象的價值提問轉成日常實踐與選擇。",
+        "core_tension": "若太關注覺醒程度，可能忽略基本需求或對他人產生優越感。",
+        "life_insight": "沒有人的價值取決於靈性程度；深刻理解可以體現在平凡的責任裡。",
+        "integration_direction": "從一項具體的生活照顧開始：休息、回覆、飲食或真誠表達。",
+        "reflection_question": "最近我思考過的重要道理，有沒有真正改善一件平凡的小事？",
+        "customer_narrative_short_draft": "有時我們花很多時間思考生命的意義，卻在忙碌中忘了吃飯、休息，或回應身邊真正需要溝通的人。「入世的靈者」把兩種看似不同的生活放在一起：抽象的提問，與觸手可及的日常。\n\n談論精神世界不會讓任何人高於他人。若一份理解使我們更難接受差異，或讓自己長期忽略身體的訊號，就值得重新檢視它是否真的帶來照料與連結。\n\n不妨挑一件可以在今天完成的事：真誠說出一個需要、準時休息，或好好履行一個承諾。那些微小的選擇，正是思想與生活相遇的地方。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-16",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "和諧者",
+      "name_zh_source": "和谐者",
+      "name_en_source": "The Harmonizer",
       "source_code": "S1-16",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "ed018d3df6c068dc9dd8733ff11f61291284dcfd4d607020adc9aade71b409b0",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -647,40 +911,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "和諧不等於沒有分歧，而是讓差異能被安全地說出來。",
-        "explorable_strength": "和諧者映照協調立場、理解彼此節奏的方向。",
-        "core_tension": "為了避免衝突而不斷退讓，會使真正的需要被延後。",
-        "integration_direction": "在溫和語氣裡清楚說出一件自己在意的事。",
-        "customer_narrative_short_draft": "一場合作會議裡，兩種立場都各有道理。如果只要求大家快點和好，真正的問題可能繼續存在。和諧者關注的是讓差異被完整聽見，再找可以共同前進的條件。溫和不意味著壓下爭議，反而需要把尚未取得共識的地方說清楚。"
+      "master_content_zh_tw": {
+        "positioning": "讓差異可以被安全而清楚地討論",
+        "symbolic_core": "和諧不是沒有分歧，而是能讓彼此保持尊重地面對分歧。",
+        "archetype_strength": "善於調和節奏、理解不同意見並促進合作。",
+        "inner_tension": "可能因害怕衝突而先退讓，壓住真正的問題。",
+        "life_insight": "共識不等於沉默，沒有共識的部分也可以被明確保留。",
+        "integration_direction": "在一場分歧裡，練習說出一件自己不同意但願意繼續討論的事。",
+        "reflection_question": "我最近維護的和諧，是彼此被聽見，還是大家都沒說真話？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "協調多方和避免衝突的張力完整；短版仍像通用溝通技巧。",
-      "required_revision_zh_tw": "設置具體分歧情境，突出調和分歧而非壓下分歧。",
+      "customer_narrative_candidate": {
+        "title": "和諧者｜讓差異可以被安全而清楚地討論",
+        "paragraphs": [
+          "當氣氛開始緊繃，最容易出現的一句話是「算了，不要吵了」。「和諧者」讓我們看見另一種可能：不急著要求所有人和好，而是讓不同的需要可以安全地被說出。",
+          "如果你常習慣先退讓，或許值得回想，哪些問題在表面平靜之後仍然存在。你不必靠壓下自己的意見來證明溫柔；真正持久的協調，往往從一個清楚而不傷害人的不同意開始。",
+          "試著把共識與分歧都寫下來。當人們知道哪些地方還需要時間，關係反而不必靠假裝一致來維持。"
+        ],
+        "body": "當氣氛開始緊繃，最容易出現的一句話是「算了，不要吵了」。「和諧者」讓我們看見另一種可能：不急著要求所有人和好，而是讓不同的需要可以安全地被說出。\n\n如果你常習慣先退讓，或許值得回想，哪些問題在表面平靜之後仍然存在。你不必靠壓下自己的意見來證明溫柔；真正持久的協調，往往從一個清楚而不傷害人的不同意開始。\n\n試著把共識與分歧都寫下來。當人們知道哪些地方還需要時間，關係反而不必靠假裝一致來維持。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "讓差異可以被安全而清楚地討論",
+        "symbolic_core": "和諧不是沒有分歧，而是能讓彼此保持尊重地面對分歧。",
+        "explorable_strength": "善於調和節奏、理解不同意見並促進合作。",
+        "core_tension": "可能因害怕衝突而先退讓，壓住真正的問題。",
+        "life_insight": "共識不等於沉默，沒有共識的部分也可以被明確保留。",
+        "integration_direction": "在一場分歧裡，練習說出一件自己不同意但願意繼續討論的事。",
+        "reflection_question": "我最近維護的和諧，是彼此被聽見，還是大家都沒說真話？",
+        "customer_narrative_short_draft": "當氣氛開始緊繃，最容易出現的一句話是「算了，不要吵了」。「和諧者」讓我們看見另一種可能：不急著要求所有人和好，而是讓不同的需要可以安全地被說出。\n\n如果你常習慣先退讓，或許值得回想，哪些問題在表面平靜之後仍然存在。你不必靠壓下自己的意見來證明溫柔；真正持久的協調，往往從一個清楚而不傷害人的不同意開始。\n\n試著把共識與分歧都寫下來。當人們知道哪些地方還需要時間，關係反而不必靠假裝一致來維持。"
+      },
+      "peer_distinction_codes": [
+        "S1-36"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-17",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "構築者",
+      "name_zh_source": "构筑者",
+      "name_en_source": "The Architect",
       "source_code": "S1-17",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "c9fff69a7044c118ff8c496b71ec11b49152eaa5b82e4c8c54b76e6cb2d289be",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -688,40 +970,56 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "好的結構能支援成長，不必把每個細節都預先控制。",
-        "explorable_strength": "構築者象徵將構想落實為可運作系統的方向。",
-        "core_tension": "當規劃永遠優先於行動，計畫可能變得精密卻難以開始。",
-        "integration_direction": "先建立可修訂的初版，再根據真實使用情況調整。",
-        "customer_narrative_short_draft": "有一個構想在紙上已經十分完整，實際使用卻還有很多未知。構築者不必等到所有細節都被預測，才讓第一版進入現實。先建出可測試的小型系統，觀察它如何被使用，再修正架構。好的設計不是拒絕變化，而是能與變化合作。"
+      "master_content_zh_tw": {
+        "positioning": "將構想搭成可檢驗、可調整的系統",
+        "symbolic_core": "結構是支持現實運作的工具，不是預先控制每個變數。",
+        "archetype_strength": "擅長將概念拆成流程、角色與可以持續運作的架構。",
+        "inner_tension": "若過度追求精密，可能遲遲不讓方案接受真實使用。",
+        "life_insight": "好的設計會從經驗中學習，願意留出未完成的部分。",
+        "integration_direction": "做一個小型可使用版本，記錄真實回饋再決定修訂。",
+        "reflection_question": "我現在繼續規劃，是因為確有缺口，還是因為不敢讓人使用？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "從構想到可運作系統的核心成立；過度規劃敘事偏薄。",
-      "required_revision_zh_tw": "提供「先做可修訂試行版」的步驟，區別 S1-04 的維護穩定。",
+      "customer_narrative_candidate": {
+        "title": "構築者｜將構想搭成可檢驗、可調整的系統",
+        "paragraphs": [
+          "有些人面對一個想法，總能迅速想到如何安排步驟、角色與資源。「構築者」讓這份將抽象變成結構的能力有了形狀，並提醒：架構的目的，是讓真正的事情可以發生。",
+          "計畫越完整，越可能讓人捨不得交給現實檢驗。你也許曾為細節反覆修改，卻因此錯過了最有用的資訊——人們實際使用時會遇到什麼。",
+          "先讓一個小版本運作起來，再依結果改進。結構不是一座永遠不能更動的建築；它可以像好用的工具，隨著使用者與環境一起調整。"
+        ],
+        "body": "有些人面對一個想法，總能迅速想到如何安排步驟、角色與資源。「構築者」讓這份將抽象變成結構的能力有了形狀，並提醒：架構的目的，是讓真正的事情可以發生。\n\n計畫越完整，越可能讓人捨不得交給現實檢驗。你也許曾為細節反覆修改，卻因此錯過了最有用的資訊——人們實際使用時會遇到什麼。\n\n先讓一個小版本運作起來，再依結果改進。結構不是一座永遠不能更動的建築；它可以像好用的工具，隨著使用者與環境一起調整。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "將構想搭成可檢驗、可調整的系統",
+        "symbolic_core": "結構是支持現實運作的工具，不是預先控制每個變數。",
+        "explorable_strength": "擅長將概念拆成流程、角色與可以持續運作的架構。",
+        "core_tension": "若過度追求精密，可能遲遲不讓方案接受真實使用。",
+        "life_insight": "好的設計會從經驗中學習，願意留出未完成的部分。",
+        "integration_direction": "做一個小型可使用版本，記錄真實回饋再決定修訂。",
+        "reflection_question": "我現在繼續規劃，是因為確有缺口，還是因為不敢讓人使用？",
+        "customer_narrative_short_draft": "有些人面對一個想法，總能迅速想到如何安排步驟、角色與資源。「構築者」讓這份將抽象變成結構的能力有了形狀，並提醒：架構的目的，是讓真正的事情可以發生。\n\n計畫越完整，越可能讓人捨不得交給現實檢驗。你也許曾為細節反覆修改，卻因此錯過了最有用的資訊——人們實際使用時會遇到什麼。\n\n先讓一個小版本運作起來，再依結果改進。結構不是一座永遠不能更動的建築；它可以像好用的工具，隨著使用者與環境一起調整。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-18",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "轉化者",
+      "name_zh_source": "转化者",
+      "name_en_source": "The Transformer",
       "source_code": "S1-18",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "dc2b5b9145c2ae2bfd615e62040f24edcf892d96aa65f4eb55ca846d435e10ce",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -729,40 +1027,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "改變可以是重新理解與選擇，不必靠受苦證明。",
-        "explorable_strength": "轉化者關注在既有方法失效時，辨認能留下和需要更新的部分。",
-        "core_tension": "若將痛苦當成成長的必要代價，平靜反而可能被低估。",
-        "integration_direction": "找出真正需要改變的一件事，也承認已經足夠好的部分。",
-        "customer_narrative_short_draft": "過去行之有效的方法，有一天不再適合現在的情況。轉化者提出的不是「你必須重來」，而是先分清值得留下的部分和可以調整的部分。改變不必經過劇烈痛苦才算深刻；有時最重要的重建，是允許自己用更溫柔的方式繼續。"
+      "master_content_zh_tw": {
+        "positioning": "辨認值得留下與需要更新的部分",
+        "symbolic_core": "轉化是重新理解與選擇，不以痛苦作為成長證明。",
+        "archetype_strength": "遇到舊方法失效時，能回看經驗並尋找替代方式。",
+        "inner_tension": "可能把劇烈改變視為唯一有效的進步，低估平穩與休息。",
+        "life_insight": "真正的更新不必摧毀已有的一切，也能以溫柔方式前進。",
+        "integration_direction": "列出目前一件事中值得保留、可以停止、可以試新的各一項。",
+        "reflection_question": "我是否曾因為改變看起來太平凡，就忽略它其實很重要？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P0",
-      "reason_zh_tw": "「痛苦不是成長前提」保留核心教訓；原始力量欄位含特殊能力斷言，需避免滲回。",
-      "required_revision_zh_tw": "以失效方法的重建寫實例，排除命定痛苦、特殊煉化能力及對人生史的推斷。",
+      "customer_narrative_candidate": {
+        "title": "轉化者｜辨認值得留下與需要更新的部分",
+        "paragraphs": [
+          "某些做法曾經幫助過你，到了不同階段卻可能不再合用。「轉化者」關注的不是命中注定要經歷危機，而是當環境與需要改變時，能重新理解自己手上有哪些選擇。",
+          "人有時會以為，只有經過劇烈痛苦，改變才足夠深刻。若你也有過這種想法，可以試著看看那些沒有戲劇性、卻確實讓生活更有餘裕的調整：一次誠實溝通、一項被修訂的習慣，或一個不再勉強自己的決定。",
+          "轉化可以包含告別，也可以包含保留。你不必推翻全部過去才能向前，只需要慢慢分辨，什麼仍適合此刻的自己。"
+        ],
+        "body": "某些做法曾經幫助過你，到了不同階段卻可能不再合用。「轉化者」關注的不是命中注定要經歷危機，而是當環境與需要改變時，能重新理解自己手上有哪些選擇。\n\n人有時會以為，只有經過劇烈痛苦，改變才足夠深刻。若你也有過這種想法，可以試著看看那些沒有戲劇性、卻確實讓生活更有餘裕的調整：一次誠實溝通、一項被修訂的習慣，或一個不再勉強自己的決定。\n\n轉化可以包含告別，也可以包含保留。你不必推翻全部過去才能向前，只需要慢慢分辨，什麼仍適合此刻的自己。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "辨認值得留下與需要更新的部分",
+        "symbolic_core": "轉化是重新理解與選擇，不以痛苦作為成長證明。",
+        "explorable_strength": "遇到舊方法失效時，能回看經驗並尋找替代方式。",
+        "core_tension": "可能把劇烈改變視為唯一有效的進步，低估平穩與休息。",
+        "life_insight": "真正的更新不必摧毀已有的一切，也能以溫柔方式前進。",
+        "integration_direction": "列出目前一件事中值得保留、可以停止、可以試新的各一項。",
+        "reflection_question": "我是否曾因為改變看起來太平凡，就忽略它其實很重要？",
+        "customer_narrative_short_draft": "某些做法曾經幫助過你，到了不同階段卻可能不再合用。「轉化者」關注的不是命中注定要經歷危機，而是當環境與需要改變時，能重新理解自己手上有哪些選擇。\n\n人有時會以為，只有經過劇烈痛苦，改變才足夠深刻。若你也有過這種想法，可以試著看看那些沒有戲劇性、卻確實讓生活更有餘裕的調整：一次誠實溝通、一項被修訂的習慣，或一個不再勉強自己的決定。\n\n轉化可以包含告別，也可以包含保留。你不必推翻全部過去才能向前，只需要慢慢分辨，什麼仍適合此刻的自己。"
+      },
+      "peer_distinction_codes": [
+        "S1-27"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": "不預設讀者經歷重大創傷，亦不將痛苦視為靈魂修煉義務。"
     },
     {
       "code": "S1-19",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "傳聲者",
+      "name_zh_source": "传声者",
+      "name_en_source": "The Communicator",
       "source_code": "S1-19",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "7a1447fd65b5942cc642170ba9bc65a912b2266a16e92f4b70f0e45fe9ac3330",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -770,40 +1086,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "發聲的價值，在於真實溝通，而不只是獲得掌聲。",
-        "explorable_strength": "傳聲者象徵為觀點找到合適語言、促成理解的可能。",
-        "core_tension": "過度迎合受眾時，自己的立場和感受容易變得模糊。",
-        "integration_direction": "在說出想法之前，先確認自己真正希望傳達的核心。",
-        "customer_narrative_short_draft": "準備發表一個觀點時，人很容易先想像聽眾喜歡什麼。傳聲者提醒，清楚表達也包含忠於原本想說的事。先寫下那個最重要的句子，再決定如何讓不同的人聽懂；得到回應很可貴，但不必由掌聲決定你能否發聲。"
+      "master_content_zh_tw": {
+        "positioning": "讓真實觀點找到能被理解的語言",
+        "symbolic_core": "表達是建立理解的過程，不以掌聲或認可決定價值。",
+        "archetype_strength": "能將複雜想法整理成清楚訊息，促進交流。",
+        "inner_tension": "可能為迎合聽眾而淡化自己的立場或真正感受。",
+        "life_insight": "有效溝通既要顧及對方能否聽懂，也不能遺忘自己為何說。",
+        "integration_direction": "發言前先寫下最想傳達的一句話，再依聽眾調整說法。",
+        "reflection_question": "我上次改寫想法時，哪些是為了清晰，哪些只是怕不被喜歡？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "能貼近表達與受眾期待；力量描述抽象且短稿只重複四欄。",
-      "required_revision_zh_tw": "加入在迎合掌聲與如實傳達之間選擇的情境，突出聲音／傳播而非教學。",
+      "customer_narrative_candidate": {
+        "title": "傳聲者｜讓真實觀點找到能被理解的語言",
+        "paragraphs": [
+          "準備說出一件重要的事之前，你可能會想像聽的人如何反應，於是修改措辭、刪去某些句子。「傳聲者」關注語言帶來的連結，也提醒人留意：在讓別人聽懂之前，自己是否還記得最初想說什麼。",
+          "對聽眾敏感是一種能力，但如果每一次表達都要先經過他人的喜好審查，自己的聲音可能漸漸失去形狀。沒有得到掌聲，也不表示內容就失去了意義。",
+          "先寫下你真正在乎的核心，再選擇清楚而尊重的方式說出來。好的溝通不保證被所有人同意，卻能讓彼此有機會真正理解。"
+        ],
+        "body": "準備說出一件重要的事之前，你可能會想像聽的人如何反應，於是修改措辭、刪去某些句子。「傳聲者」關注語言帶來的連結，也提醒人留意：在讓別人聽懂之前，自己是否還記得最初想說什麼。\n\n對聽眾敏感是一種能力，但如果每一次表達都要先經過他人的喜好審查，自己的聲音可能漸漸失去形狀。沒有得到掌聲，也不表示內容就失去了意義。\n\n先寫下你真正在乎的核心，再選擇清楚而尊重的方式說出來。好的溝通不保證被所有人同意，卻能讓彼此有機會真正理解。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "讓真實觀點找到能被理解的語言",
+        "symbolic_core": "表達是建立理解的過程，不以掌聲或認可決定價值。",
+        "explorable_strength": "能將複雜想法整理成清楚訊息，促進交流。",
+        "core_tension": "可能為迎合聽眾而淡化自己的立場或真正感受。",
+        "life_insight": "有效溝通既要顧及對方能否聽懂，也不能遺忘自己為何說。",
+        "integration_direction": "發言前先寫下最想傳達的一句話，再依聽眾調整說法。",
+        "reflection_question": "我上次改寫想法時，哪些是為了清晰，哪些只是怕不被喜歡？",
+        "customer_narrative_short_draft": "準備說出一件重要的事之前，你可能會想像聽的人如何反應，於是修改措辭、刪去某些句子。「傳聲者」關注語言帶來的連結，也提醒人留意：在讓別人聽懂之前，自己是否還記得最初想說什麼。\n\n對聽眾敏感是一種能力，但如果每一次表達都要先經過他人的喜好審查，自己的聲音可能漸漸失去形狀。沒有得到掌聲，也不表示內容就失去了意義。\n\n先寫下你真正在乎的核心，再選擇清楚而尊重的方式說出來。好的溝通不保證被所有人同意，卻能讓彼此有機會真正理解。"
+      },
+      "peer_distinction_codes": [
+        "S1-38"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-20",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "心覺者",
+      "name_zh_source": "心觉者",
+      "name_en_source": "The Heart-Centered",
       "source_code": "S1-20",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "43b8fb7577a51e101211892da31d08d612cc19be474c3e2486bc851099aa6dd7",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -811,40 +1145,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "感受能提供線索，但仍可以與事實一起被看見。",
-        "explorable_strength": "心覺者關注情感敏銳、真誠連結與重視內在一致性的取向。",
-        "core_tension": "在關係中若只依當下情緒回應，可能忽略其他解釋與自身界限。",
-        "integration_direction": "先辨認感受與需要，再核對發生了什麼，才做選擇。",
-        "customer_narrative_short_draft": "某次互動令人感到溫暖，也可能突然帶來失落。心覺者讓我們練習珍惜感受，但不必讓一時的情緒直接成為結論。先辨認自己真正在乎的需要，再看看對方實際說了什麼、做了什麼。感受與事實放在一起，選擇會比較清楚。"
+      "master_content_zh_tw": {
+        "positioning": "珍惜感受，同時讓事實與界限參與判斷",
+        "symbolic_core": "情感能指出在乎的需要，卻不是對外在事實的唯一證據。",
+        "archetype_strength": "願意留意真誠感受，在互動中重視連結與一致性。",
+        "inner_tension": "當情緒強烈時，可能忽略其他解釋或不易說出界限。",
+        "life_insight": "理解自己的心，不需要把每個感受都當成行動命令。",
+        "integration_direction": "記錄一個情緒時刻：我感受到什麼、知道什麼、需要什麼。",
+        "reflection_question": "哪次互動讓我把心中的感覺，直接當成對方真正的意思？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P0",
-      "reason_zh_tw": "感受、需要、現實核對符合來源；但 S1-12、S1-33 也使用相近敏感主題。",
-      "required_revision_zh_tw": "聚焦自己內在一致性與關係選擇，不寫成感知他人隱情的能力。",
+      "customer_narrative_candidate": {
+        "title": "心覺者｜珍惜感受，同時讓事實與界限參與判斷",
+        "paragraphs": [
+          "有時一句話帶來很深的溫暖，有時一段沉默又讓心裡突然失落。「心覺者」提供的不是「你一定很敏感」的標籤，而是邀請你看看，感受在自己的生命裡究竟扮演什麼角色。",
+          "感受可能提醒我們很重視一段連結，也可能夾雜尚未確認的推測。當不安升起，你可以先辨認三件事：我真正在感受什麼？我認為發生了什麼？我實際知道的又是什麼？答案未必相同。",
+          "讓情緒與事實並排，不會削弱感受的重要；它只是讓你不必急著替自己或別人下結論。你仍可以珍惜連結，也保留為自己說明需要與界限的空間。"
+        ],
+        "body": "有時一句話帶來很深的溫暖，有時一段沉默又讓心裡突然失落。「心覺者」提供的不是「你一定很敏感」的標籤，而是邀請你看看，感受在自己的生命裡究竟扮演什麼角色。\n\n感受可能提醒我們很重視一段連結，也可能夾雜尚未確認的推測。當不安升起，你可以先辨認三件事：我真正在感受什麼？我認為發生了什麼？我實際知道的又是什麼？答案未必相同。\n\n讓情緒與事實並排，不會削弱感受的重要；它只是讓你不必急著替自己或別人下結論。你仍可以珍惜連結，也保留為自己說明需要與界限的空間。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "珍惜感受，同時讓事實與界限參與判斷",
+        "symbolic_core": "情感能指出在乎的需要，卻不是對外在事實的唯一證據。",
+        "explorable_strength": "願意留意真誠感受，在互動中重視連結與一致性。",
+        "core_tension": "當情緒強烈時，可能忽略其他解釋或不易說出界限。",
+        "life_insight": "理解自己的心，不需要把每個感受都當成行動命令。",
+        "integration_direction": "記錄一個情緒時刻：我感受到什麼、知道什麼、需要什麼。",
+        "reflection_question": "哪次互動讓我把心中的感覺，直接當成對方真正的意思？",
+        "customer_narrative_short_draft": "有時一句話帶來很深的溫暖，有時一段沉默又讓心裡突然失落。「心覺者」提供的不是「你一定很敏感」的標籤，而是邀請你看看，感受在自己的生命裡究竟扮演什麼角色。\n\n感受可能提醒我們很重視一段連結，也可能夾雜尚未確認的推測。當不安升起，你可以先辨認三件事：我真正在感受什麼？我認為發生了什麼？我實際知道的又是什麼？答案未必相同。\n\n讓情緒與事實並排，不會削弱感受的重要；它只是讓你不必急著替自己或別人下結論。你仍可以珍惜連結，也保留為自己說明需要與界限的空間。"
+      },
+      "peer_distinction_codes": [
+        "S1-12"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": "不可把敏銳或情感作為讀心能力。"
     },
     {
       "code": "S1-21",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "整合者",
+      "name_zh_source": "整合者",
+      "name_en_source": "The Integrator",
       "source_code": "S1-21",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "42d5a8f49f17ccd648a74e47c37488fd99d74ad6fa648ecf48dd680c5009f699",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -852,39 +1204,56 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "整合不同觀點，需要一個能容許尚未完成的節奏。",
-        "explorable_strength": "整合者映照把多種資源與立場放進同一幅圖像的方向。",
-        "core_tension": "若所有缺口都想親自補齊，整理工作可能變成無止盡責任。",
-        "integration_direction": "先確認最重要的共同問題，允許部分答案暫時保留空白。",
-        "customer_narrative_short_draft": "當一個團隊各自帶來不同資料，真正困難的往往不是資訊不夠，而是不知道要先回答哪個問題。整合者的長處，是把散落的線索放回同一個脈絡。先找出共同焦點，也承認有些缺口暫時無法補齊；完整不必是同一天完成的任務。"
+      "master_content_zh_tw": {
+        "positioning": "從散落資訊中找到共同問題",
+        "symbolic_core": "整合是建立脈絡與優先順序，而非獨自填補所有缺口。",
+        "archetype_strength": "能聯繫不同知識、資源與立場，幫助團隊看見整體。",
+        "inner_tension": "可能因追求完整而承接過多工作，難以接受未知。",
+        "life_insight": "有意義的整體允許部分空白，先釐清當下真正要回答的問題。",
+        "integration_direction": "將一項複雜工作先寫成核心問題，再區分已知與待查。",
+        "reflection_question": "我現在想再蒐集資料，是因為問題不清楚，還是無法容忍空白？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "多領域整合的核心保留，容易退化成「不必承擔全部」的泛用模板。",
-      "required_revision_zh_tw": "加入把不同意見整理成共同問題、容許未解之處的場景。",
+      "customer_narrative_candidate": {
+        "title": "整合者｜從散落資訊中找到共同問題",
+        "paragraphs": [
+          "當資訊從不同方向湧來，資料可能很多，卻仍不知道下一步要做什麼。「整合者」關注的不是擁有所有答案，而是把散落的線索重新放進同一個脈絡，找出眼前真正值得回答的問題。",
+          "如果你很擅長看到彼此的關聯，也可能在別人遇到缺口時習慣補上自己的時間。慢慢地，「讓事情完整」成了一份沒有盡頭的責任。可是，承認尚未知道的部分，並不會使整體失去價值。",
+          "不妨先找出共同焦點，為尚待查證的事留下清楚標記。整合不是把每個人、每件事都扛在身上，而是讓問題和責任回到適合的位置。"
+        ],
+        "body": "當資訊從不同方向湧來，資料可能很多，卻仍不知道下一步要做什麼。「整合者」關注的不是擁有所有答案，而是把散落的線索重新放進同一個脈絡，找出眼前真正值得回答的問題。\n\n如果你很擅長看到彼此的關聯，也可能在別人遇到缺口時習慣補上自己的時間。慢慢地，「讓事情完整」成了一份沒有盡頭的責任。可是，承認尚未知道的部分，並不會使整體失去價值。\n\n不妨先找出共同焦點，為尚待查證的事留下清楚標記。整合不是把每個人、每件事都扛在身上，而是讓問題和責任回到適合的位置。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "從散落資訊中找到共同問題",
+        "symbolic_core": "整合是建立脈絡與優先順序，而非獨自填補所有缺口。",
+        "explorable_strength": "能聯繫不同知識、資源與立場，幫助團隊看見整體。",
+        "core_tension": "可能因追求完整而承接過多工作，難以接受未知。",
+        "life_insight": "有意義的整體允許部分空白，先釐清當下真正要回答的問題。",
+        "integration_direction": "將一項複雜工作先寫成核心問題，再區分已知與待查。",
+        "reflection_question": "我現在想再蒐集資料，是因為問題不清楚，還是無法容忍空白？",
+        "customer_narrative_short_draft": "當資訊從不同方向湧來，資料可能很多，卻仍不知道下一步要做什麼。「整合者」關注的不是擁有所有答案，而是把散落的線索重新放進同一個脈絡，找出眼前真正值得回答的問題。\n\n如果你很擅長看到彼此的關聯，也可能在別人遇到缺口時習慣補上自己的時間。慢慢地，「讓事情完整」成了一份沒有盡頭的責任。可是，承認尚未知道的部分，並不會使整體失去價值。\n\n不妨先找出共同焦點，為尚待查證的事留下清楚標記。整合不是把每個人、每件事都扛在身上，而是讓問題和責任回到適合的位置。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-22",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "柔力者",
+      "name_zh_source": "柔力者",
+      "name_en_source": "The Gentle Power",
       "source_code": "S1-22",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "f889aacd9ffb44d16c086d68417065a82dc60518acb61d0bd9038e3e2443be04",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -892,39 +1261,56 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "溫和不必隱藏力量，堅定也不需要以強勢出現。",
-        "explorable_strength": "柔力者關注柔軟與立場清楚並存的表達方式。",
-        "core_tension": "習慣讓步時，自己的判斷或不願意可能不易被看見。",
-        "integration_direction": "用尊重的語氣說出清楚的偏好，不以退讓作為唯一選項。",
-        "customer_narrative_short_draft": "有人在討論裡不想爭高下，卻有一個清楚而重要的不同意見。柔力者提醒我們，聲音可以溫和，立場仍然鮮明。試著不先道歉，也不必提高音量，只把理由和偏好說完整。讓別人知道你的選擇，是尊重彼此的一部分。"
+      "master_content_zh_tw": {
+        "positioning": "用溫和而清楚的方式表達力量",
+        "symbolic_core": "柔軟與堅定可以並存，立場不必靠強勢來成立。",
+        "archetype_strength": "擅長以尊重的方式維持對話，又能堅持重要的選擇。",
+        "inner_tension": "若把溫柔理解為讓步，容易讓自己的不同意被忽略。",
+        "life_insight": "能說出「不」也是一種溫柔，因為它使關係更真實。",
+        "integration_direction": "挑一個小偏好，不先道歉，只以平穩語氣完整表達。",
+        "reflection_question": "我是否曾經用「沒關係」掩蓋自己其實很在乎的事？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "柔軟與清楚主張具辨識性；與 S1-16 的和諧可能混淆。",
-      "required_revision_zh_tw": "區分個人溫柔但堅定的表達，勿重寫成多人協調。",
+      "customer_narrative_candidate": {
+        "title": "柔力者｜用溫和而清楚的方式表達力量",
+        "paragraphs": [
+          "在一場意見分歧裡，你可能不想提高音量，也不想傷害任何人。但這不代表你沒有想守住的立場。「柔力者」讓人看見一種不靠壓迫、也不靠退讓的力量。",
+          "如果你曾多次說「我都可以」，卻在事情結束後感到失落，也許可以問問自己：那真的是自由選擇，還是擔心說出偏好會讓人不高興？把需要說清楚，不等於製造衝突。",
+          "下次不妨用平穩的語氣說：「這件事我有不同想法，原因是……」讓對方知道真實的你，也讓彼此有機會練習尊重。"
+        ],
+        "body": "在一場意見分歧裡，你可能不想提高音量，也不想傷害任何人。但這不代表你沒有想守住的立場。「柔力者」讓人看見一種不靠壓迫、也不靠退讓的力量。\n\n如果你曾多次說「我都可以」，卻在事情結束後感到失落，也許可以問問自己：那真的是自由選擇，還是擔心說出偏好會讓人不高興？把需要說清楚，不等於製造衝突。\n\n下次不妨用平穩的語氣說：「這件事我有不同想法，原因是……」讓對方知道真實的你，也讓彼此有機會練習尊重。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "用溫和而清楚的方式表達力量",
+        "symbolic_core": "柔軟與堅定可以並存，立場不必靠強勢來成立。",
+        "explorable_strength": "擅長以尊重的方式維持對話，又能堅持重要的選擇。",
+        "core_tension": "若把溫柔理解為讓步，容易讓自己的不同意被忽略。",
+        "life_insight": "能說出「不」也是一種溫柔，因為它使關係更真實。",
+        "integration_direction": "挑一個小偏好，不先道歉，只以平穩語氣完整表達。",
+        "reflection_question": "我是否曾經用「沒關係」掩蓋自己其實很在乎的事？",
+        "customer_narrative_short_draft": "在一場意見分歧裡，你可能不想提高音量，也不想傷害任何人。但這不代表你沒有想守住的立場。「柔力者」讓人看見一種不靠壓迫、也不靠退讓的力量。\n\n如果你曾多次說「我都可以」，卻在事情結束後感到失落，也許可以問問自己：那真的是自由選擇，還是擔心說出偏好會讓人不高興？把需要說清楚，不等於製造衝突。\n\n下次不妨用平穩的語氣說：「這件事我有不同想法，原因是……」讓對方知道真實的你，也讓彼此有機會練習尊重。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-23",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "洞察者",
+      "name_zh_source": "洞察者",
+      "name_en_source": "The Analyst",
       "source_code": "S1-23",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "4021740171828ae1a5d5fd0acfc319228cf7f59049b945cfcec2fb59b67c8965",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -932,39 +1318,56 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "分析能釐清問題，也需要讓感受加入理解。",
-        "explorable_strength": "洞察者象徵尋找規律、辨認細節與深入思考的方向。",
-        "core_tension": "若所有脆弱都被理性化，真正需要的溝通可能被延遲。",
-        "integration_direction": "將已知證據、內在感受及尚待確認的部分分開記錄。",
-        "customer_narrative_short_draft": "面對複雜問題，分析可以幫助分出哪些是證據、哪些只是猜測。洞察者也邀請我們留意：有時一份過於完整的解釋，仍沒有說出真正的感受。把已知、未知和在意之處分開記下，理性便不必成為拒絕脆弱的外殼。"
+      "master_content_zh_tw": {
+        "positioning": "辨認問題的證據，也容許感受被理解",
+        "symbolic_core": "分析是釐清資訊與推理，不必把情緒完全排除。",
+        "archetype_strength": "擅長拆解問題、發現規律與辨識假設。",
+        "inner_tension": "可能透過持續分析延後情感溝通，或過度相信邏輯已說明一切。",
+        "life_insight": "清楚思考也包括承認哪些部分與人的感受相關，尚不能由數據回答。",
+        "integration_direction": "面對一個困擾，分列證據、推測、感受與需確認事項。",
+        "reflection_question": "我目前的分析是否已回答問題，還是替我避開一場必要的對話？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "分析與感受並存符合來源；原本分析能力被「脆弱」主題蓋過。",
-      "required_revision_zh_tw": "補回拆解問題與辨認證據的正向價值，再談情緒資訊的角色。",
+      "customer_narrative_candidate": {
+        "title": "洞察者｜辨認問題的證據，也容許感受被理解",
+        "paragraphs": [
+          "面對一個複雜情況，有些人會先找出事實、分類線索，再嘗試拼成可以理解的規律。「洞察者」重視這份讓混亂變得清楚的分析能力，它能幫助我們不被第一個印象牽著走。",
+          "不過，生活有時不是分析得越完整，心裡就越安定。即使知道一場衝突從何而來，也未必等於說出了自己受到什麼影響。當邏輯成了唯一安全的語言，真正想被聽見的感受可能繼續留在原地。",
+          "試著把已確認的證據、尚未核實的解釋，以及自己的感受分開。你不用放下理性，而是讓它與更多真實資訊一起工作。"
+        ],
+        "body": "面對一個複雜情況，有些人會先找出事實、分類線索，再嘗試拼成可以理解的規律。「洞察者」重視這份讓混亂變得清楚的分析能力，它能幫助我們不被第一個印象牽著走。\n\n不過，生活有時不是分析得越完整，心裡就越安定。即使知道一場衝突從何而來，也未必等於說出了自己受到什麼影響。當邏輯成了唯一安全的語言，真正想被聽見的感受可能繼續留在原地。\n\n試著把已確認的證據、尚未核實的解釋，以及自己的感受分開。你不用放下理性，而是讓它與更多真實資訊一起工作。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "辨認問題的證據，也容許感受被理解",
+        "symbolic_core": "分析是釐清資訊與推理，不必把情緒完全排除。",
+        "explorable_strength": "擅長拆解問題、發現規律與辨識假設。",
+        "core_tension": "可能透過持續分析延後情感溝通，或過度相信邏輯已說明一切。",
+        "life_insight": "清楚思考也包括承認哪些部分與人的感受相關，尚不能由數據回答。",
+        "integration_direction": "面對一個困擾，分列證據、推測、感受與需確認事項。",
+        "reflection_question": "我目前的分析是否已回答問題，還是替我避開一場必要的對話？",
+        "customer_narrative_short_draft": "面對一個複雜情況，有些人會先找出事實、分類線索，再嘗試拼成可以理解的規律。「洞察者」重視這份讓混亂變得清楚的分析能力，它能幫助我們不被第一個印象牽著走。\n\n不過，生活有時不是分析得越完整，心裡就越安定。即使知道一場衝突從何而來，也未必等於說出了自己受到什麼影響。當邏輯成了唯一安全的語言，真正想被聽見的感受可能繼續留在原地。\n\n試著把已確認的證據、尚未核實的解釋，以及自己的感受分開。你不用放下理性，而是讓它與更多真實資訊一起工作。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-24",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "光耀者",
+      "name_zh_source": "光耀者",
+      "name_en_source": "The Radiant Soul",
       "source_code": "S1-24",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "7b0be27ab8356de9d1e038193aaeee533ad087df62d0dbbc45429e6a63d643ef",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -972,39 +1375,56 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "被看見可以是分享成果，不必成為維持形象的義務。",
-        "explorable_strength": "光耀者映照願意創造、呈現與啟發他人的方向。",
-        "core_tension": "若總擔心自己不夠亮眼，就可能用表現掩飾疲倦或不安。",
-        "integration_direction": "分享一件真實完成的成果，不必替它加上完美的包裝。",
-        "customer_narrative_short_draft": "一件作品終於可以與人分享時，心裡也許同時出現興奮和擔心。光耀者談的是讓創造被看見，而非維持永遠亮眼的形象。拿出一個真正完成的成果，說明你在其中做了什麼；不必把每一次公開都變成一次對自身價值的考試。"
+      "master_content_zh_tw": {
+        "positioning": "讓作品被看見，而不以形象維持價值",
+        "symbolic_core": "展現創造的意義在於分享真實成果，不必永遠耀眼。",
+        "archetype_strength": "樂於呈現創作與觀點，能帶來活力和鼓舞。",
+        "inner_tension": "可能過度在意評價，習慣用光鮮表現掩藏不安。",
+        "life_insight": "被看見不是一次人格考試；人也有安靜與不完美的權利。",
+        "integration_direction": "選一件真實完成的作品，分享過程與限制，不必再修飾到完美。",
+        "reflection_question": "我最想被看見的是作品本身，還是別人對我的肯定？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "創作被看見與形象負擔成立；短稿欠缺原型特有的創作舞台。",
-      "required_revision_zh_tw": "加入展示完成作品或分享成果的場景；避免對讀者魅力做先天斷言。",
+      "customer_narrative_candidate": {
+        "title": "光耀者｜讓作品被看見，而不以形象維持價值",
+        "paragraphs": [
+          "當一件作品、一次演出或一份心力終於可以與人分享，興奮之中常也藏著擔憂：如果沒有人喜歡呢？「光耀者」讓我們探索展示與創造的力量，而不是要求每個人都成為舞台中心。",
+          "如果你曾因為表現不如預期而否定自己，也許值得回頭看看，做這件事時最初在乎的是什麼。分享可以帶來連結，但外界反應無法替你衡量整個人的價值。",
+          "你可以讓完成的事物以本來的樣子出現，說明其中的努力，也坦承它仍有可修正之處。真正發光的未必是完美形象，而是願意真實呈現的勇氣。"
+        ],
+        "body": "當一件作品、一次演出或一份心力終於可以與人分享，興奮之中常也藏著擔憂：如果沒有人喜歡呢？「光耀者」讓我們探索展示與創造的力量，而不是要求每個人都成為舞台中心。\n\n如果你曾因為表現不如預期而否定自己，也許值得回頭看看，做這件事時最初在乎的是什麼。分享可以帶來連結，但外界反應無法替你衡量整個人的價值。\n\n你可以讓完成的事物以本來的樣子出現，說明其中的努力，也坦承它仍有可修正之處。真正發光的未必是完美形象，而是願意真實呈現的勇氣。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "讓作品被看見，而不以形象維持價值",
+        "symbolic_core": "展現創造的意義在於分享真實成果，不必永遠耀眼。",
+        "explorable_strength": "樂於呈現創作與觀點，能帶來活力和鼓舞。",
+        "core_tension": "可能過度在意評價，習慣用光鮮表現掩藏不安。",
+        "life_insight": "被看見不是一次人格考試；人也有安靜與不完美的權利。",
+        "integration_direction": "選一件真實完成的作品，分享過程與限制，不必再修飾到完美。",
+        "reflection_question": "我最想被看見的是作品本身，還是別人對我的肯定？",
+        "customer_narrative_short_draft": "當一件作品、一次演出或一份心力終於可以與人分享，興奮之中常也藏著擔憂：如果沒有人喜歡呢？「光耀者」讓我們探索展示與創造的力量，而不是要求每個人都成為舞台中心。\n\n如果你曾因為表現不如預期而否定自己，也許值得回頭看看，做這件事時最初在乎的是什麼。分享可以帶來連結，但外界反應無法替你衡量整個人的價值。\n\n你可以讓完成的事物以本來的樣子出現，說明其中的努力，也坦承它仍有可修正之處。真正發光的未必是完美形象，而是願意真實呈現的勇氣。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-25",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "流動者",
+      "name_zh_source": "流动者",
+      "name_en_source": "The Flow Walker",
       "source_code": "S1-25",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "7e863d2cce4f31a1ff5fe28ecc435534882ed402f51fe06a6ba20e3c43301220",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -1012,40 +1432,56 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "保有彈性是一種自由，承諾則讓自由有地方扎根。",
-        "explorable_strength": "流動者象徵適應新情境、接受變化與調整方向。",
-        "core_tension": "當穩定一出現就想離開，重要關係或長期學習可能難以深化。",
-        "integration_direction": "選擇一項值得留下的承諾，為它安排可調整的節奏。",
-        "customer_narrative_short_draft": "生活改變時，能夠調整方向是一種珍貴的彈性。流動者也會問：有沒有一件事值得在變化裡繼續留下來？不必把自己固定在原地，可以為某項關係、學習或承諾安排可改動的節奏。自由與持續並不是相反的。"
+      "master_content_zh_tw": {
+        "positioning": "在變動中保有彈性，也能選擇留下",
+        "symbolic_core": "流動是順應情境變化，承諾是讓所珍惜之事能持續發展。",
+        "archetype_strength": "擅長適應不同場合、重新安排步調。",
+        "inner_tension": "可能在需要深入的時刻想換方向，錯過累積的機會。",
+        "life_insight": "穩定與自由不是敵人；能自己選擇留在哪裡，也是一種自由。",
+        "integration_direction": "選定一件值得持續的事，為它設定可調整但不輕易取消的節奏。",
+        "reflection_question": "我最近想離開一件事，是它真的不合適，還是我害怕進入下一層深度？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "自由流動與承諾之間的張力成立；和 S1-09 探索的界線未突出。",
-      "required_revision_zh_tw": "聚焦適應變化與保有一個長期錨點，不以新領域探索替代。",
+      "customer_narrative_candidate": {
+        "title": "流動者｜在變動中保有彈性，也能選擇留下",
+        "paragraphs": [
+          "生活經常改變，有時原本的計畫忽然不再適合。「流動者」讓人看見順勢調整的可能：不把自己綁在舊路上，願意在新的條件裡重新找步伐。",
+          "但每一次改變都意味著要重來。你是否也有過因為別處看起來更有趣，而把已經開始累積的關係或學習擱在一旁？這並非一定不好，只是提醒我們，離開與留下都值得被認真選擇。",
+          "可以為重要的承諾留下彈性的空間，而不是要求自己永遠不變。流動不代表沒有根；它也可以是一條仍然知道自己在往哪裡走的河。"
+        ],
+        "body": "生活經常改變，有時原本的計畫忽然不再適合。「流動者」讓人看見順勢調整的可能：不把自己綁在舊路上，願意在新的條件裡重新找步伐。\n\n但每一次改變都意味著要重來。你是否也有過因為別處看起來更有趣，而把已經開始累積的關係或學習擱在一旁？這並非一定不好，只是提醒我們，離開與留下都值得被認真選擇。\n\n可以為重要的承諾留下彈性的空間，而不是要求自己永遠不變。流動不代表沒有根；它也可以是一條仍然知道自己在往哪裡走的河。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "在變動中保有彈性，也能選擇留下",
+        "symbolic_core": "流動是順應情境變化，承諾是讓所珍惜之事能持續發展。",
+        "explorable_strength": "擅長適應不同場合、重新安排步調。",
+        "core_tension": "可能在需要深入的時刻想換方向，錯過累積的機會。",
+        "life_insight": "穩定與自由不是敵人；能自己選擇留在哪裡，也是一種自由。",
+        "integration_direction": "選定一件值得持續的事，為它設定可調整但不輕易取消的節奏。",
+        "reflection_question": "我最近想離開一件事，是它真的不合適，還是我害怕進入下一層深度？",
+        "customer_narrative_short_draft": "生活經常改變，有時原本的計畫忽然不再適合。「流動者」讓人看見順勢調整的可能：不把自己綁在舊路上，願意在新的條件裡重新找步伐。\n\n但每一次改變都意味著要重來。你是否也有過因為別處看起來更有趣，而把已經開始累積的關係或學習擱在一旁？這並非一定不好，只是提醒我們，離開與留下都值得被認真選擇。\n\n可以為重要的承諾留下彈性的空間，而不是要求自己永遠不變。流動不代表沒有根；它也可以是一條仍然知道自己在往哪裡走的河。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-26",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
-      "name_zh_tw_candidate": "遠見者",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
+      "name_zh_tw_candidate": "前瞻者",
+      "name_zh_source": "远见者",
+      "name_en_source": "The Visionary",
       "source_code": "S1-26",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "5879b9ac7359c4a295e08629917dc0d5232fef6af5f5a603f986c768557a74dc",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -1053,40 +1489,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "靈感讓人想像尚未存在的事，落地讓它接受現實檢驗。",
-        "explorable_strength": "遠見者（S1-26）側重超前構想、創新方向與突破既有框架。",
-        "core_tension": "想法走得太快，可能讓合作夥伴難以理解或無法跟上。",
-        "integration_direction": "將一個未來構想說成清楚的原型，邀請具體回饋。",
-        "customer_narrative_short_draft": "一個超前的構想，往往在講述時就讓人感到距離。遠見者在這裡象徵對新形式的想像力，而不是預測未來的本領。把腦中的可能做成可展示的模型，讓夥伴看得見、問得到，也能提出不同意見；新的道路需要對話才能成形。"
+      "master_content_zh_tw": {
+        "positioning": "把前瞻構想變成可以討論的原型",
+        "symbolic_core": "創新的前瞻性來自提出未曾實現的可能，不是保證趨勢。",
+        "archetype_strength": "能想像新組合、跳出慣例，為未知方向建立第一個概念。",
+        "inner_tension": "構想過快或過於抽象，可能使他人無法理解，也難以落實。",
+        "life_insight": "想法要成為共同創造，需要一個他人可以看見、質疑與修改的形狀。",
+        "integration_direction": "做出未來構想的一頁圖或粗略模型，邀請不同背景的人回饋。",
+        "reflection_question": "我認為「大家不懂」的時候，是否已把想法說成對方可以檢驗的形式？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P0",
-      "reason_zh_tw": "與 S1-11 同名，源頭還包含預測趨勢的確定說法。",
-      "required_revision_zh_tw": "本碼凸顯前瞻創新與向夥伴說明原型；名稱區別、不得宣稱預測未來。",
+      "customer_narrative_candidate": {
+        "title": "前瞻者｜把前瞻構想變成可以討論的原型",
+        "paragraphs": [
+          "有時你想到的方式，現在還沒有現成的名稱或流程。「前瞻者」S1-26 著眼於這種前瞻創新：敢問如果條件不同，事情是否能以全新的形式發生。",
+          "超前的想像往往很吸引人，也可能讓人陷入孤單，因為別人聽不到腦中那幅尚未形成的畫面。這時候，問題未必是誰不夠有遠見，而是構想還缺少可以共同觀看的語言。",
+          "試著將一個想法畫成草圖、做出可操作模型，或示範其中最關鍵的環節。當別人能指出疑問，新的可能才真正開始與世界相遇。"
+        ],
+        "body": "有時你想到的方式，現在還沒有現成的名稱或流程。「前瞻者」S1-26 著眼於這種前瞻創新：敢問如果條件不同，事情是否能以全新的形式發生。\n\n超前的想像往往很吸引人，也可能讓人陷入孤單，因為別人聽不到腦中那幅尚未形成的畫面。這時候，問題未必是誰不夠有遠見，而是構想還缺少可以共同觀看的語言。\n\n試著將一個想法畫成草圖、做出可操作模型，或示範其中最關鍵的環節。當別人能指出疑問，新的可能才真正開始與世界相遇。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "把前瞻構想變成可以討論的原型",
+        "symbolic_core": "創新的前瞻性來自提出未曾實現的可能，不是保證趨勢。",
+        "explorable_strength": "能想像新組合、跳出慣例，為未知方向建立第一個概念。",
+        "core_tension": "構想過快或過於抽象，可能使他人無法理解，也難以落實。",
+        "life_insight": "想法要成為共同創造，需要一個他人可以看見、質疑與修改的形狀。",
+        "integration_direction": "做出未來構想的一頁圖或粗略模型，邀請不同背景的人回饋。",
+        "reflection_question": "我認為「大家不懂」的時候，是否已把想法說成對方可以檢驗的形式？",
+        "customer_narrative_short_draft": "有時你想到的方式，現在還沒有現成的名稱或流程。「前瞻者」S1-26 著眼於這種前瞻創新：敢問如果條件不同，事情是否能以全新的形式發生。\n\n超前的想像往往很吸引人，也可能讓人陷入孤單，因為別人聽不到腦中那幅尚未形成的畫面。這時候，問題未必是誰不夠有遠見，而是構想還缺少可以共同觀看的語言。\n\n試著將一個想法畫成草圖、做出可操作模型，或示範其中最關鍵的環節。當別人能指出疑問，新的可能才真正開始與世界相遇。"
+      },
+      "peer_distinction_codes": [
+        "S1-11"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": "S1-11 原型側重長程規劃與策略；S1-26 原型側重前瞻創新與原型驗證。兩者原始來源名同為「远见者／The Visionary」，只更動台繁候選顯示名稱，待真人核准。"
     },
     {
       "code": "S1-27",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "重生者",
+      "name_zh_source": "重生者",
+      "name_en_source": "The Rebuilder",
       "source_code": "S1-27",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "292633c121888b9356adc708f45346a57621220c02b03c31f6fe8176b37d4981",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -1094,39 +1548,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "重新開始不必先經歷一場災難。",
-        "explorable_strength": "重生者關注結束舊方法、讓新的生活安排有空間出現。",
-        "core_tension": "若把困難當成改變的唯一證據，便容易持續尋找劇烈轉折。",
-        "integration_direction": "練習辨認平穩調整同樣可以是一種新的開始。",
-        "customer_narrative_short_draft": "新的開始不一定發生在某次重大挫折之後。有時只是願意結束一個不再有用的習慣，或重新安排每天的節奏。重生者讓人看見告別與重新建立的可能，也提醒不要把痛苦當成必要門票。平穩的轉身，同樣值得被認真看待。"
+      "master_content_zh_tw": {
+        "positioning": "允許平穩的重新開始",
+        "symbolic_core": "重生象徵重建生活安排，不預設讀者曾經崩潰或遭受創傷。",
+        "archetype_strength": "能從過去的經驗辨認不合用的模式，重新組織生活。",
+        "inner_tension": "可能把劇烈困難當成改變的必要條件，或被「必須堅強」困住。",
+        "life_insight": "一個溫和的改變也可以是真正的開始，不需要等待危機證明。",
+        "integration_direction": "挑一個已不適合的習慣，設計一個更合乎目前需要的新安排。",
+        "reflection_question": "有哪些轉變已經在發生，只因為不夠劇烈而被我忽略？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P0",
-      "reason_zh_tw": "「不必靠災難重生」是必要修正，仍需避免把創傷／崩塌當作讀者既定經歷。",
-      "required_revision_zh_tw": "補充平穩結束舊習慣的轉換場景，與 S1-18 的溫柔轉化明確區分。",
+      "customer_narrative_candidate": {
+        "title": "重生者｜允許平穩的重新開始",
+        "paragraphs": [
+          "新的開始不一定有戲劇性的轉折。也許只是你終於決定停止一個不合適的習慣，重新整理生活節奏，或學著用另一種方式與人互動。「重生者」讓我們看見這些重新建立的時刻。",
+          "人有時相信，自己必須先跌得很深，才算真正學會站起來。這個想法或許來自一些動人的故事，但它不該成為任何人的義務。你不需要為了成長尋找痛苦，也不必證明自己能忍受多少。",
+          "若有某件小事已經開始改變，不妨承認它。重建可以是緩慢、安靜的；它的意義來自是否讓生活更適合你，而不是曾付出多大的代價。"
+        ],
+        "body": "新的開始不一定有戲劇性的轉折。也許只是你終於決定停止一個不合適的習慣，重新整理生活節奏，或學著用另一種方式與人互動。「重生者」讓我們看見這些重新建立的時刻。\n\n人有時相信，自己必須先跌得很深，才算真正學會站起來。這個想法或許來自一些動人的故事，但它不該成為任何人的義務。你不需要為了成長尋找痛苦，也不必證明自己能忍受多少。\n\n若有某件小事已經開始改變，不妨承認它。重建可以是緩慢、安靜的；它的意義來自是否讓生活更適合你，而不是曾付出多大的代價。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "允許平穩的重新開始",
+        "symbolic_core": "重生象徵重建生活安排，不預設讀者曾經崩潰或遭受創傷。",
+        "explorable_strength": "能從過去的經驗辨認不合用的模式，重新組織生活。",
+        "core_tension": "可能把劇烈困難當成改變的必要條件，或被「必須堅強」困住。",
+        "life_insight": "一個溫和的改變也可以是真正的開始，不需要等待危機證明。",
+        "integration_direction": "挑一個已不適合的習慣，設計一個更合乎目前需要的新安排。",
+        "reflection_question": "有哪些轉變已經在發生，只因為不夠劇烈而被我忽略？",
+        "customer_narrative_short_draft": "新的開始不一定有戲劇性的轉折。也許只是你終於決定停止一個不合適的習慣，重新整理生活節奏，或學著用另一種方式與人互動。「重生者」讓我們看見這些重新建立的時刻。\n\n人有時相信，自己必須先跌得很深，才算真正學會站起來。這個想法或許來自一些動人的故事，但它不該成為任何人的義務。你不需要為了成長尋找痛苦，也不必證明自己能忍受多少。\n\n若有某件小事已經開始改變，不妨承認它。重建可以是緩慢、安靜的；它的意義來自是否讓生活更適合你，而不是曾付出多大的代價。"
+      },
+      "peer_distinction_codes": [
+        "S1-18"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-28",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "量域者",
+      "name_zh_source": "量域者",
+      "name_en_source": "The Quantum Mind",
       "source_code": "S1-28",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "1398712a9ba7a5db65ae374dbfbe09267750e2c76c4b6c4c4d184a4bc095758e",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -1134,39 +1607,56 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "廣闊的思考值得珍惜，身體與日常同樣是理解的一部分。",
-        "explorable_strength": "量域者象徵跨框架思考、探索複雜概念的可能。",
-        "core_tension": "停留在知識與抽象模型裡，有時會避開情緒與生活限制。",
-        "integration_direction": "把一個抽象觀念轉成日常可觀察的行動。",
-        "customer_narrative_short_draft": "一個問題可以從科學、藝術、制度與日常經驗的不同角度觀察。量域者是對這種跨框架思考的象徵稱呼，不是量子科學或超自然感知的證明。挑一個抽象想法，問問它能否解釋具體現象；願意回到身體與生活，概念才真正有了重量。"
+      "master_content_zh_tw": {
+        "positioning": "用多重視角思考，仍回到可觀察的現實",
+        "symbolic_core": "跨框架思考是一種概念探索，不是量子物理或能量讀取的科學宣稱。",
+        "archetype_strength": "樂於連結抽象模型、複雜系統與不同領域知識。",
+        "inner_tension": "可能停留在理論裡，避開具體情緒或現實限制。",
+        "life_insight": "越宏大的想法，越需要回答它如何幫助一件真實問題。",
+        "integration_direction": "選一個跨領域概念，定義可觀察的例子與不適用的範圍。",
+        "reflection_question": "我現在使用的抽象解釋，能否回答眼前的實際問題？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P0",
-      "reason_zh_tw": "複雜思考主旨保留；來源有量子／頻率與 Wisewave 內部權威暗示。",
-      "required_revision_zh_tw": "把「量域」明確限定為跨領域思考的比喻，不能借用量子科學背書。",
+      "customer_narrative_candidate": {
+        "title": "量域者｜用多重視角思考，仍回到可觀察的現實",
+        "paragraphs": [
+          "同一個問題，如果從藝術、制度、科學與個人經驗分別觀察，可能會出現截然不同的解釋。「量域者」藉這個象徵名稱，讓人思考跨領域聯想的價值，而不是宣稱擁有超常感知或科學認證。",
+          "當一個概念足夠精彩，我們也可能不自覺地停留在它的語言裡。理論可以解釋很多可能，卻未必立即告訴你今天應該如何溝通、如何休息，或如何處理一件具體的事。",
+          "試著問：這個想法能在哪個日常情境被觀察？有哪些部分仍只是比喻？讓思想回到生活，不會讓它失去廣闊，反而更能看見真正的作用。"
+        ],
+        "body": "同一個問題，如果從藝術、制度、科學與個人經驗分別觀察，可能會出現截然不同的解釋。「量域者」藉這個象徵名稱，讓人思考跨領域聯想的價值，而不是宣稱擁有超常感知或科學認證。\n\n當一個概念足夠精彩，我們也可能不自覺地停留在它的語言裡。理論可以解釋很多可能，卻未必立即告訴你今天應該如何溝通、如何休息，或如何處理一件具體的事。\n\n試著問：這個想法能在哪個日常情境被觀察？有哪些部分仍只是比喻？讓思想回到生活，不會讓它失去廣闊，反而更能看見真正的作用。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "用多重視角思考，仍回到可觀察的現實",
+        "symbolic_core": "跨框架思考是一種概念探索，不是量子物理或能量讀取的科學宣稱。",
+        "explorable_strength": "樂於連結抽象模型、複雜系統與不同領域知識。",
+        "core_tension": "可能停留在理論裡，避開具體情緒或現實限制。",
+        "life_insight": "越宏大的想法，越需要回答它如何幫助一件真實問題。",
+        "integration_direction": "選一個跨領域概念，定義可觀察的例子與不適用的範圍。",
+        "reflection_question": "我現在使用的抽象解釋，能否回答眼前的實際問題？",
+        "customer_narrative_short_draft": "同一個問題，如果從藝術、制度、科學與個人經驗分別觀察，可能會出現截然不同的解釋。「量域者」藉這個象徵名稱，讓人思考跨領域聯想的價值，而不是宣稱擁有超常感知或科學認證。\n\n當一個概念足夠精彩，我們也可能不自覺地停留在它的語言裡。理論可以解釋很多可能，卻未必立即告訴你今天應該如何溝通、如何休息，或如何處理一件具體的事。\n\n試著問：這個想法能在哪個日常情境被觀察？有哪些部分仍只是比喻？讓思想回到生活，不會讓它失去廣闊，反而更能看見真正的作用。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": "「量域」為象徵名稱，禁止以量子科學作為支持原型真實性的證據。"
     },
     {
       "code": "S1-29",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "創新者",
+      "name_zh_source": "创新者",
+      "name_en_source": "The Innovator",
       "source_code": "S1-29",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "2aee61cb061c6c2bb7868f569b11289d904e307309e65da220ed63bde606faf4",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -1174,40 +1664,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "新點子需要空間，也需要足夠的完成度。",
-        "explorable_strength": "創新者關注拆解慣例、發明方法與嘗試新組合。",
-        "core_tension": "若每個新靈感都立即取代舊計畫，成果容易停在開頭。",
-        "integration_direction": "選一個想法完成可測試版本，再考慮下一輪創新。",
-        "customer_narrative_short_draft": "想出新方法總令人興奮，但創新不會在靈感出現那一刻自動完成。創新者可以把一個新組合做成可試用的版本，再看它是否真的解決問題。容許測試不如預期，也不急著用下一個點子掩蓋結果，發明才會逐步長成有用的事物。"
+      "master_content_zh_tw": {
+        "positioning": "讓新方法經過測試與迭代",
+        "symbolic_core": "創新不只是點子新，還包含能實際解決問題的嘗試。",
+        "archetype_strength": "善於拆解既有方法、重新組合材料並試驗不同方案。",
+        "inner_tension": "可能過早跳向下一個靈感，讓成果無法接受驗證。",
+        "life_insight": "保留對新事物的熱情，也要看見失敗試驗帶來的資訊。",
+        "integration_direction": "選一個點子做出可測試版本，記錄結果後才開啟下一輪。",
+        "reflection_question": "我最享受的是提出想法，還是願意看見它在現實中是否有用？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "發明新方法的主題恰當；與 S1-09／S1-26 區分不足。",
-      "required_revision_zh_tw": "聚焦實驗版本、測試與迭代，避免純粹「多想法」的同義句。",
+      "customer_narrative_candidate": {
+        "title": "創新者｜讓新方法經過測試與迭代",
+        "paragraphs": [
+          "一個難題出現時，總有人能想起不同領域的做法，提出誰也沒試過的新組合。「創新者」重視這種願意實驗的視角，提醒我們原有規則並非唯一答案。",
+          "新點子令人興奮，測試卻可能讓人失望：實際效果不如想像，別人的反應也不一致。如果每次遇見落差就立刻換一個方向，想法便很難知道自己真正能做什麼。",
+          "不妨先完成一個足夠小的實驗，記錄失敗也記錄發現。創新最珍貴的不是永遠正確，而是讓下一次嘗試更靠近現實需要。"
+        ],
+        "body": "一個難題出現時，總有人能想起不同領域的做法，提出誰也沒試過的新組合。「創新者」重視這種願意實驗的視角，提醒我們原有規則並非唯一答案。\n\n新點子令人興奮，測試卻可能讓人失望：實際效果不如想像，別人的反應也不一致。如果每次遇見落差就立刻換一個方向，想法便很難知道自己真正能做什麼。\n\n不妨先完成一個足夠小的實驗，記錄失敗也記錄發現。創新最珍貴的不是永遠正確，而是讓下一次嘗試更靠近現實需要。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "讓新方法經過測試與迭代",
+        "symbolic_core": "創新不只是點子新，還包含能實際解決問題的嘗試。",
+        "explorable_strength": "善於拆解既有方法、重新組合材料並試驗不同方案。",
+        "core_tension": "可能過早跳向下一個靈感，讓成果無法接受驗證。",
+        "life_insight": "保留對新事物的熱情，也要看見失敗試驗帶來的資訊。",
+        "integration_direction": "選一個點子做出可測試版本，記錄結果後才開啟下一輪。",
+        "reflection_question": "我最享受的是提出想法，還是願意看見它在現實中是否有用？",
+        "customer_narrative_short_draft": "一個難題出現時，總有人能想起不同領域的做法，提出誰也沒試過的新組合。「創新者」重視這種願意實驗的視角，提醒我們原有規則並非唯一答案。\n\n新點子令人興奮，測試卻可能讓人失望：實際效果不如想像，別人的反應也不一致。如果每次遇見落差就立刻換一個方向，想法便很難知道自己真正能做什麼。\n\n不妨先完成一個足夠小的實驗，記錄失敗也記錄發現。創新最珍貴的不是永遠正確，而是讓下一次嘗試更靠近現實需要。"
+      },
+      "peer_distinction_codes": [
+        "S1-26"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-30",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "靈魂療癒者",
+      "name_zh_source": "灵魂疗愈者",
+      "name_en_source": "The Soul Healer",
       "source_code": "S1-30",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "ce85a64b49da071c69168c4feddaac1edc235dec7ae25091ad26ee73bc4ab99f",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -1215,40 +1723,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "陪伴他人恢復，不代表自己必須成為所有人的修復者。",
-        "explorable_strength": "靈魂療癒者是傾聽、關懷與支持改變的象徵名稱，並非專業資格。",
-        "core_tension": "若把所有人的情緒和結果都當成自己的責任，關懷會失去界限。",
-        "integration_direction": "確認支持範圍；專業治療需求仍應交由合格專業人員處理。",
-        "customer_narrative_short_draft": "陪伴處於困難中的人，有時只是認真聽他說完，並協助辨認可以尋求的支持。靈魂療癒者在此是關懷的象徵，不代表具備診斷或治療資格。當需要專業服務時，讓合格人員接手也是負責任的支持；你不必成為每個人生命裡的修復者。"
+      "master_content_zh_tw": {
+        "positioning": "陪伴困難與情緒，不宣稱治療能力",
+        "symbolic_core": "「靈魂療癒」為支持與傾聽的象徵，不構成任何專業資格或療效。",
+        "archetype_strength": "能以尊重、耐心的方式提供情感支持與安全感。",
+        "inner_tension": "可能把他人的痛苦與改善結果當成自己必須完成的工作。",
+        "life_insight": "支持包含知道界限與轉介資源，不必成為任何人的拯救者。",
+        "integration_direction": "面對求助時，先確認對方需要陪伴、資訊還是專業協助。",
+        "reflection_question": "當別人希望我幫忙時，我是否知道自己真正能做與不能做的事？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P0",
-      "reason_zh_tw": "來源有專業治療／靈魂修復暗示，候選已避開，但仍須有資格界線。",
-      "required_revision_zh_tw": "保留傾聽與陪伴，明確區分非臨床支持與需要合格專業人員的治療。",
+      "customer_narrative_candidate": {
+        "title": "靈魂療癒者｜陪伴困難與情緒，不宣稱治療能力",
+        "paragraphs": [
+          "有時在艱難時刻，人最需要的不是立刻被修好，而是有人願意尊重地聽他說話。「靈魂療癒者」以象徵方式描寫關懷和陪伴，並不代表任何人因為生日編碼就有診斷、治療或修復他人的能力。",
+          "如果你經常被信任、被傾訴，也許曾感覺自己一定得拿出有用的回答。這份壓力值得被看見：陪伴可以真誠，但你無法替別人承擔全部經歷，也不必以對方是否好轉衡量自身價值。",
+          "試著先確認對方需要什麼支持；如果涉及心理或身體健康問題，合格的專業人員應優先參與。知道何時停下、何時交接，也是一種成熟而溫柔的照顧。"
+        ],
+        "body": "有時在艱難時刻，人最需要的不是立刻被修好，而是有人願意尊重地聽他說話。「靈魂療癒者」以象徵方式描寫關懷和陪伴，並不代表任何人因為生日編碼就有診斷、治療或修復他人的能力。\n\n如果你經常被信任、被傾訴，也許曾感覺自己一定得拿出有用的回答。這份壓力值得被看見：陪伴可以真誠，但你無法替別人承擔全部經歷，也不必以對方是否好轉衡量自身價值。\n\n試著先確認對方需要什麼支持；如果涉及心理或身體健康問題，合格的專業人員應優先參與。知道何時停下、何時交接，也是一種成熟而溫柔的照顧。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "陪伴困難與情緒，不宣稱治療能力",
+        "symbolic_core": "「靈魂療癒」為支持與傾聽的象徵，不構成任何專業資格或療效。",
+        "explorable_strength": "能以尊重、耐心的方式提供情感支持與安全感。",
+        "core_tension": "可能把他人的痛苦與改善結果當成自己必須完成的工作。",
+        "life_insight": "支持包含知道界限與轉介資源，不必成為任何人的拯救者。",
+        "integration_direction": "面對求助時，先確認對方需要陪伴、資訊還是專業協助。",
+        "reflection_question": "當別人希望我幫忙時，我是否知道自己真正能做與不能做的事？",
+        "customer_narrative_short_draft": "有時在艱難時刻，人最需要的不是立刻被修好，而是有人願意尊重地聽他說話。「靈魂療癒者」以象徵方式描寫關懷和陪伴，並不代表任何人因為生日編碼就有診斷、治療或修復他人的能力。\n\n如果你經常被信任、被傾訴，也許曾感覺自己一定得拿出有用的回答。這份壓力值得被看見：陪伴可以真誠，但你無法替別人承擔全部經歷，也不必以對方是否好轉衡量自身價值。\n\n試著先確認對方需要什麼支持；如果涉及心理或身體健康問題，合格的專業人員應優先參與。知道何時停下、何時交接，也是一種成熟而溫柔的照顧。"
+      },
+      "peer_distinction_codes": [
+        "S1-06"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": "絕不可把原型作醫療診斷、心理治療資格、療效保證。"
     },
     {
       "code": "S1-31",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "門之守望者",
+      "name_zh_source": "门之守望者",
+      "name_en_source": "The Gatekeeper",
       "source_code": "S1-31",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "c39cc2c9318fd7a5a6e5e5ecffd9a5ceb9745963c70cde9880847c709a92c78e",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -1256,40 +1782,56 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "保護自己與接觸世界之間，可以留下可調整的門。",
-        "explorable_strength": "門之守望者關注辨認界限、選擇誰能進入個人空間。",
-        "core_tension": "如果每個未知都被視為威脅，保護可能逐漸變成隔絕。",
-        "integration_direction": "將不可妥協的界限與可以慢慢建立的信任區分開。",
-        "customer_narrative_short_draft": "一道門的用途，不只是把外界擋住，也是決定何時、以什麼方式讓人進來。門之守望者關注辨識、選擇與明確的權限。建立必要的界限之後，也可以逐步檢驗新的合作是否值得信任；把關的目的，不是讓生活只剩孤立。"
+      "master_content_zh_tw": {
+        "positioning": "分辨值得接納與需要保護的界限",
+        "symbolic_core": "界限讓互動有選擇與安全，不等於把未知全數排斥。",
+        "archetype_strength": "善於辨識個人空間、角色權限與需要清楚的協作條件。",
+        "inner_tension": "可能把陌生視為威脅，讓防護逐漸變成孤立。",
+        "life_insight": "值得保護的底線與可以逐步建立的信任應被區分。",
+        "integration_direction": "畫出三類界限：不可接受、需討論、可以慢慢嘗試。",
+        "reflection_question": "我的拒絕是為了真正的安全，還是因為任何未知都讓我不安？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "保護與信任的比喻清楚；目前「個人空間」略窄，未突出把關辨識。",
-      "required_revision_zh_tw": "加入篩選資訊、建立權限與逐步開放的具體情境；避免能量判定。",
+      "customer_narrative_candidate": {
+        "title": "門之守望者｜分辨值得接納與需要保護的界限",
+        "paragraphs": [
+          "門的用途不只有擋住外面的人，也讓我們能決定何時、以什麼方式邀請他人進來。「門之守望者」以這個畫面探討界限與選擇：哪些事值得保護，哪些接觸需要先談清楚條件。",
+          "如果你很擅長替自己把關，也許會發現，當每個陌生情況都被預設為風險，生活變得越來越難有新的可能。不過，保護自己不是錯；真正的課題是辨認不同程度的風險，而非一律關門。",
+          "你可以把不可妥協的底線說明清楚，也讓低風險的信任逐步接受檢驗。好的界限不是把世界隔在外頭，而是讓你更有自主地與世界互動。"
+        ],
+        "body": "門的用途不只有擋住外面的人，也讓我們能決定何時、以什麼方式邀請他人進來。「門之守望者」以這個畫面探討界限與選擇：哪些事值得保護，哪些接觸需要先談清楚條件。\n\n如果你很擅長替自己把關，也許會發現，當每個陌生情況都被預設為風險，生活變得越來越難有新的可能。不過，保護自己不是錯；真正的課題是辨認不同程度的風險，而非一律關門。\n\n你可以把不可妥協的底線說明清楚，也讓低風險的信任逐步接受檢驗。好的界限不是把世界隔在外頭，而是讓你更有自主地與世界互動。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "分辨值得接納與需要保護的界限",
+        "symbolic_core": "界限讓互動有選擇與安全，不等於把未知全數排斥。",
+        "explorable_strength": "善於辨識個人空間、角色權限與需要清楚的協作條件。",
+        "core_tension": "可能把陌生視為威脅，讓防護逐漸變成孤立。",
+        "life_insight": "值得保護的底線與可以逐步建立的信任應被區分。",
+        "integration_direction": "畫出三類界限：不可接受、需討論、可以慢慢嘗試。",
+        "reflection_question": "我的拒絕是為了真正的安全，還是因為任何未知都讓我不安？",
+        "customer_narrative_short_draft": "門的用途不只有擋住外面的人，也讓我們能決定何時、以什麼方式邀請他人進來。「門之守望者」以這個畫面探討界限與選擇：哪些事值得保護，哪些接觸需要先談清楚條件。\n\n如果你很擅長替自己把關，也許會發現，當每個陌生情況都被預設為風險，生活變得越來越難有新的可能。不過，保護自己不是錯；真正的課題是辨認不同程度的風險，而非一律關門。\n\n你可以把不可妥協的底線說明清楚，也讓低風險的信任逐步接受檢驗。好的界限不是把世界隔在外頭，而是讓你更有自主地與世界互動。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-32",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
-      "name_zh_tw_candidate": "啓明者",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
+      "name_zh_tw_candidate": "啟明者",
+      "name_zh_source": "启明者",
+      "name_en_source": "The Illuminator",
       "source_code": "S1-32",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "c09538b6d296997dd0c5cd593cd579e4ab70b867425999af9cf2a8923398702a",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -1297,40 +1839,56 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "分享看見的事，不需要負責讓所有人同意。",
-        "explorable_strength": "啟明者象徵以清楚語言帶出新理解或重新提問的方向。",
-        "core_tension": "若把他人的選擇當成自己的使命，容易產生失望與控制。",
-        "integration_direction": "提出可以被拒絕的邀請，讓理解保留對方的自主。",
-        "customer_narrative_short_draft": "有人提出一個新的觀察，讓原本僵住的討論終於有了不同角度。啟明者象徵讓問題變得清楚的表達，不是使他人必然「覺醒」的能力。把洞察說成可以選擇是否採納的邀請；對方不接受，也不代表這次分享失敗。"
+      "master_content_zh_tw": {
+        "positioning": "提出能照亮問題的新理解，而不替他人覺醒",
+        "symbolic_core": "啟明是清楚表達新觀察，沒有能力或義務使別人接受。",
+        "archetype_strength": "善於指出盲點、重新提問並提供不同思考角度。",
+        "inner_tension": "可能將他人的不同意理解為抗拒真相，產生失望或控制。",
+        "life_insight": "分享是一種邀請，對方始終可以不認同、暫時保留或另有選擇。",
+        "integration_direction": "把一個洞察寫成可被質疑的提問，而非必須接受的結論。",
+        "reflection_question": "當別人不同意我的觀察，我是否仍能尊重對方的判斷？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P0",
-      "reason_zh_tw": "名稱欄「啓明者」與正文「啟明者」字形不一致；內容與啟示能力來源需去神化。",
-      "required_revision_zh_tw": "正式候選統一「啟明者」，不寫成覺醒他人的責任；邀請可以被拒絕。",
+      "customer_narrative_candidate": {
+        "title": "啟明者｜提出能照亮問題的新理解，而不替他人覺醒",
+        "paragraphs": [
+          "有時一個問題被困住很久，只需要有人提出新的問法，大家便開始看見先前沒有注意的角度。「啟明者」以照明作比喻，關注讓一件事更清楚的表達，而非賦予任何人使他人「覺醒」的超常能力。",
+          "若你很重視分享自己的理解，也許曾在對方不接受時感到沮喪。可是，人們有不同經驗與考量；同一個觀點被聽見，不代表它必須成為所有人的答案。",
+          "試著把你看見的事說成一份可以選擇的邀請。你不必負責改變別人的心，而能專注於誠實、清楚地表達，也讓自己的觀點有被修正的可能。"
+        ],
+        "body": "有時一個問題被困住很久，只需要有人提出新的問法，大家便開始看見先前沒有注意的角度。「啟明者」以照明作比喻，關注讓一件事更清楚的表達，而非賦予任何人使他人「覺醒」的超常能力。\n\n若你很重視分享自己的理解，也許曾在對方不接受時感到沮喪。可是，人們有不同經驗與考量；同一個觀點被聽見，不代表它必須成為所有人的答案。\n\n試著把你看見的事說成一份可以選擇的邀請。你不必負責改變別人的心，而能專注於誠實、清楚地表達，也讓自己的觀點有被修正的可能。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "提出能照亮問題的新理解，而不替他人覺醒",
+        "symbolic_core": "啟明是清楚表達新觀察，沒有能力或義務使別人接受。",
+        "explorable_strength": "善於指出盲點、重新提問並提供不同思考角度。",
+        "core_tension": "可能將他人的不同意理解為抗拒真相，產生失望或控制。",
+        "life_insight": "分享是一種邀請，對方始終可以不認同、暫時保留或另有選擇。",
+        "integration_direction": "把一個洞察寫成可被質疑的提問，而非必須接受的結論。",
+        "reflection_question": "當別人不同意我的觀察，我是否仍能尊重對方的判斷？",
+        "customer_narrative_short_draft": "有時一個問題被困住很久，只需要有人提出新的問法，大家便開始看見先前沒有注意的角度。「啟明者」以照明作比喻，關注讓一件事更清楚的表達，而非賦予任何人使他人「覺醒」的超常能力。\n\n若你很重視分享自己的理解，也許曾在對方不接受時感到沮喪。可是，人們有不同經驗與考量；同一個觀點被聽見，不代表它必須成為所有人的答案。\n\n試著把你看見的事說成一份可以選擇的邀請。你不必負責改變別人的心，而能專注於誠實、清楚地表達，也讓自己的觀點有被修正的可能。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": "名稱原簡體「启明者」；台繁提案鎖定前使用「啟明者」，避免「啓／啟」混用。"
     },
     {
       "code": "S1-33",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "感知神諭者",
+      "name_zh_source": "感知神谕者",
+      "name_en_source": "The Empath Oracle",
       "source_code": "S1-33",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "498fb569dddeb53bb6b8f6db010680e4a2bed36f14b5f9c86b24c3c860f15a89",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -1338,40 +1896,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "感知細膩不等於必須承受更多。",
-        "explorable_strength": "感知神諭者是敏銳觀察的象徵名稱，不表示具有預言能力。",
-        "core_tension": "若把情緒細節都視為自己必須處理的訊號，便難以休息。",
-        "integration_direction": "以事實核對感受，同時練習把不屬於自己的責任放回原位。",
-        "customer_narrative_short_draft": "對談裡的細微變化，可能讓人聯想到許多未說出口的心情。感知神諭者在 1320 中只是象徵名稱，不表示能讀取秘密或預知事件。先辨認可觀察的事實，再問對方是否願意多說一些；保有敏銳，也保留別人為自己說話的權利。"
+      "master_content_zh_tw": {
+        "positioning": "以細膩觀察支持理解，不借神諭宣稱權威",
+        "symbolic_core": "「神諭」是歷史或象徵名稱，不代表讀心、預言或靈視能力。",
+        "archetype_strength": "善於留意互動細節，可能用敏銳提問促成更深理解。",
+        "inner_tension": "可能承擔未被說出的情緒，或把猜測當成必須處理的訊號。",
+        "life_insight": "對人的尊重包括承認自己不知道，讓他人有權親自說明。",
+        "integration_direction": "從一次互動中列出看到的事實與自己的推測，再邀請核對。",
+        "reflection_question": "我想理解別人時，是否給了對方說「你猜錯了」的空間？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P0",
-      "reason_zh_tw": "「神諭者」名字容易使顧客誤認能預言，來源含讀取無形訊息與療癒斷言。",
-      "required_revision_zh_tw": "人審決定是否保留原名；如保留，需明示僅是象徵，改以互動觀察及查證為核心。",
+      "customer_narrative_candidate": {
+        "title": "感知神諭者｜以細膩觀察支持理解，不借神諭宣稱權威",
+        "paragraphs": [
+          "一段談話裡的停頓、表情與語氣，常會令人聯想到許多未說出口的心事。「感知神諭者」以傳統象徵名稱指向細膩觀察，但它並不是預言、讀心或取得秘密訊息的能力。",
+          "如果你容易注意到這些線索，也許會忍不住推測對方其實在想什麼；久了還可能把所有不愉快的變化都視為自己應該處理的事。可是，每一份猜測都需要保留被修正的可能。",
+          "可以從一句「我注意到你剛才停了一下，要不要多說一點？」開始。理解不是替人揭示命運，而是提供一個能安全說出自己版本的空間。"
+        ],
+        "body": "一段談話裡的停頓、表情與語氣，常會令人聯想到許多未說出口的心事。「感知神諭者」以傳統象徵名稱指向細膩觀察，但它並不是預言、讀心或取得秘密訊息的能力。\n\n如果你容易注意到這些線索，也許會忍不住推測對方其實在想什麼；久了還可能把所有不愉快的變化都視為自己應該處理的事。可是，每一份猜測都需要保留被修正的可能。\n\n可以從一句「我注意到你剛才停了一下，要不要多說一點？」開始。理解不是替人揭示命運，而是提供一個能安全說出自己版本的空間。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "以細膩觀察支持理解，不借神諭宣稱權威",
+        "symbolic_core": "「神諭」是歷史或象徵名稱，不代表讀心、預言或靈視能力。",
+        "explorable_strength": "善於留意互動細節，可能用敏銳提問促成更深理解。",
+        "core_tension": "可能承擔未被說出的情緒，或把猜測當成必須處理的訊號。",
+        "life_insight": "對人的尊重包括承認自己不知道，讓他人有權親自說明。",
+        "integration_direction": "從一次互動中列出看到的事實與自己的推測，再邀請核對。",
+        "reflection_question": "我想理解別人時，是否給了對方說「你猜錯了」的空間？",
+        "customer_narrative_short_draft": "一段談話裡的停頓、表情與語氣，常會令人聯想到許多未說出口的心事。「感知神諭者」以傳統象徵名稱指向細膩觀察，但它並不是預言、讀心或取得秘密訊息的能力。\n\n如果你容易注意到這些線索，也許會忍不住推測對方其實在想什麼；久了還可能把所有不愉快的變化都視為自己應該處理的事。可是，每一份猜測都需要保留被修正的可能。\n\n可以從一句「我注意到你剛才停了一下，要不要多說一點？」開始。理解不是替人揭示命運，而是提供一個能安全說出自己版本的空間。"
+      },
+      "peer_distinction_codes": [
+        "S1-12"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": "「感知神諭者」可能造成權威聯想，正式顯示名需真人評估是否保留或加釋義。"
     },
     {
       "code": "S1-34",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "改革者",
+      "name_zh_source": "改革者",
+      "name_en_source": "The Reformer",
       "source_code": "S1-34",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "7a02557ce2e603092e13e69d0a7e955ed56ed6e916bae1728bba774b67578bb9",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -1379,39 +1955,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "改善制度不必從否定一切開始。",
-        "explorable_strength": "改革者關注辨認不合適的規則，提出更能服務人的做法。",
-        "core_tension": "要求世界迅速變好時，也可能把同一份嚴苛轉向自己。",
-        "integration_direction": "先選擇一個具體缺口，用可協商的提案開始改變。",
-        "customer_narrative_short_draft": "看到制度裡某個不合理的地方，很容易想一次推翻全部安排。改革者提醒我們，改善也可以從一項可說明的缺口開始。把問題、受影響的人和可協商的修訂方案列清楚，讓新的做法接受檢驗；不必要求世界和自己都立刻完美。"
+      "master_content_zh_tw": {
+        "positioning": "以可協商的具體改善取代苛求完美",
+        "symbolic_core": "改革從辨認規則造成的影響開始，不需否定全部既有安排。",
+        "archetype_strength": "能發現流程與制度的不足，提出更合理的做法。",
+        "inner_tension": "過度追求正確時，可能對自己和他人同樣嚴苛。",
+        "life_insight": "改進是一個可以修訂的過程，不是一場要求世界立刻完美的考試。",
+        "integration_direction": "選一項不合理流程，寫明影響、替代方案與可回顧的檢驗期。",
+        "reflection_question": "我希望改善的究竟是什麼？哪些要求已超出眼前可實現的範圍？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "制度改善、正確性主題可追溯；目前陰影只剩嚴苛自己，丟失改善流程特色。",
-      "required_revision_zh_tw": "展示辨認制度缺口、提出可協商修正，與 S1-13 的反叛區別。",
+      "customer_narrative_candidate": {
+        "title": "改革者｜以可協商的具體改善取代苛求完美",
+        "paragraphs": [
+          "有時一個大家早已習慣的流程，其實讓某些人反覆花費不必要的力氣。「改革者」關注的是這樣的缺口：不只問規則是否被遵守，也問規則究竟有沒有好好服務人。",
+          "當你很容易看見不合理之處，也可能越來越難容忍事情尚未改善。那份急切甚至會轉向自己，彷彿每一個缺點都必須立即被修正。可是，改進並不因為分階段進行就失去價值。",
+          "試著把問題說明得夠具體：誰受到影響、可以先調整什麼、如何知道效果。改革不是把一切推翻，而是讓更好的做法有機會被共同採用。"
+        ],
+        "body": "有時一個大家早已習慣的流程，其實讓某些人反覆花費不必要的力氣。「改革者」關注的是這樣的缺口：不只問規則是否被遵守，也問規則究竟有沒有好好服務人。\n\n當你很容易看見不合理之處，也可能越來越難容忍事情尚未改善。那份急切甚至會轉向自己，彷彿每一個缺點都必須立即被修正。可是，改進並不因為分階段進行就失去價值。\n\n試著把問題說明得夠具體：誰受到影響、可以先調整什麼、如何知道效果。改革不是把一切推翻，而是讓更好的做法有機會被共同採用。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "以可協商的具體改善取代苛求完美",
+        "symbolic_core": "改革從辨認規則造成的影響開始，不需否定全部既有安排。",
+        "explorable_strength": "能發現流程與制度的不足，提出更合理的做法。",
+        "core_tension": "過度追求正確時，可能對自己和他人同樣嚴苛。",
+        "life_insight": "改進是一個可以修訂的過程，不是一場要求世界立刻完美的考試。",
+        "integration_direction": "選一項不合理流程，寫明影響、替代方案與可回顧的檢驗期。",
+        "reflection_question": "我希望改善的究竟是什麼？哪些要求已超出眼前可實現的範圍？",
+        "customer_narrative_short_draft": "有時一個大家早已習慣的流程，其實讓某些人反覆花費不必要的力氣。「改革者」關注的是這樣的缺口：不只問規則是否被遵守，也問規則究竟有沒有好好服務人。\n\n當你很容易看見不合理之處，也可能越來越難容忍事情尚未改善。那份急切甚至會轉向自己，彷彿每一個缺點都必須立即被修正。可是，改進並不因為分階段進行就失去價值。\n\n試著把問題說明得夠具體：誰受到影響、可以先調整什麼、如何知道效果。改革不是把一切推翻，而是讓更好的做法有機會被共同採用。"
+      },
+      "peer_distinction_codes": [
+        "S1-13"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": "與 S1-13 的「質疑慣例」區分；本碼重點為制度改善、流程優化與價值標準的合理化。"
     },
     {
       "code": "S1-35",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "靈魂領航者",
+      "name_zh_source": "灵魂领航者",
+      "name_en_source": "The Soul Navigator",
       "source_code": "S1-35",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "faec0c32b8ce669a875b87a1e8e7deda4609c9d28a649012a1f990af0e2efc70",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -1419,40 +2014,56 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "看見方向，不等於替每個人掌舵。",
-        "explorable_strength": "靈魂領航者象徵組織資源、協助確認方向的可能，而非命定職責。",
-        "core_tension": "若習慣替別人決定路線，自己的生活和他人的自主都會被擠壓。",
-        "integration_direction": "先確認自己的方向，再問對方是否需要資訊而非指令。",
-        "customer_narrative_short_draft": "當一群人對下一步沒有共識，能把選項和限制整理清楚的人，往往能幫助大家重新討論。靈魂領航者象徵這種方向整理，不是知道誰命運該往哪裡的權威。把決定權留給各自承擔後果的人，也記得照顧自己的路。"
+      "master_content_zh_tw": {
+        "positioning": "整理方向與選項，不代替別人做決定",
+        "symbolic_core": "方向感是協助理解可能路徑，而非替他人宣判人生。",
+        "archetype_strength": "擅長比較選項、辨識限制，幫助共同討論下一步。",
+        "inner_tension": "若習慣替別人決定，會使雙方都失去應有的自主與責任。",
+        "life_insight": "真正可靠的引路，是讓每個人更能自己看清並選擇。",
+        "integration_direction": "在提供意見前先問：你需要資訊、一起分析，還是只是有人聽？",
+        "reflection_question": "我給出的建議，是讓對方更能選擇，還是讓自己感覺被需要？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P0",
-      "reason_zh_tw": "原始內容宣稱天生知道方向／決策準確，具高度權威化風險。",
-      "required_revision_zh_tw": "敘事只能是共同整理選項與資源，不能替使用者或第三人決策。",
+      "customer_narrative_candidate": {
+        "title": "靈魂領航者｜整理方向與選項，不代替別人做決定",
+        "paragraphs": [
+          "當一群人不知道下一步怎麼走，清楚整理選項與限制，常比急著宣布方向更有幫助。「靈魂領航者」把這樣的整理能力比喻為領航，而不是宣稱誰天生知道別人的命運。",
+          "如果你常被問意見，可能漸漸習慣替人作決定；一旦結果不如預期，自己也跟著背起責任。可以試著分辨：你提供的是資訊與經驗，還是正在接過本屬於對方的選擇權？",
+          "先確認對方想獲得什麼協助，再一起整理可能路徑。好的領航讓人更清楚地看見自己的航向，不必成為任何人唯一能依賴的羅盤。"
+        ],
+        "body": "當一群人不知道下一步怎麼走，清楚整理選項與限制，常比急著宣布方向更有幫助。「靈魂領航者」把這樣的整理能力比喻為領航，而不是宣稱誰天生知道別人的命運。\n\n如果你常被問意見，可能漸漸習慣替人作決定；一旦結果不如預期，自己也跟著背起責任。可以試著分辨：你提供的是資訊與經驗，還是正在接過本屬於對方的選擇權？\n\n先確認對方想獲得什麼協助，再一起整理可能路徑。好的領航讓人更清楚地看見自己的航向，不必成為任何人唯一能依賴的羅盤。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "整理方向與選項，不代替別人做決定",
+        "symbolic_core": "方向感是協助理解可能路徑，而非替他人宣判人生。",
+        "explorable_strength": "擅長比較選項、辨識限制，幫助共同討論下一步。",
+        "core_tension": "若習慣替別人決定，會使雙方都失去應有的自主與責任。",
+        "life_insight": "真正可靠的引路，是讓每個人更能自己看清並選擇。",
+        "integration_direction": "在提供意見前先問：你需要資訊、一起分析，還是只是有人聽？",
+        "reflection_question": "我給出的建議，是讓對方更能選擇，還是讓自己感覺被需要？",
+        "customer_narrative_short_draft": "當一群人不知道下一步怎麼走，清楚整理選項與限制，常比急著宣布方向更有幫助。「靈魂領航者」把這樣的整理能力比喻為領航，而不是宣稱誰天生知道別人的命運。\n\n如果你常被問意見，可能漸漸習慣替人作決定；一旦結果不如預期，自己也跟著背起責任。可以試著分辨：你提供的是資訊與經驗，還是正在接過本屬於對方的選擇權？\n\n先確認對方想獲得什麼協助，再一起整理可能路徑。好的領航讓人更清楚地看見自己的航向，不必成為任何人唯一能依賴的羅盤。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-36",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "頻率編織者",
+      "name_zh_source": "频率编织者",
+      "name_en_source": "The Frequency Weaver",
       "source_code": "S1-36",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "bac95ec948447739a2feb6912b8d5ab05426f1b87c077ad4b70a74f03680d5c6",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -1460,40 +2071,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "協調差異是一種工作，但不是一個人必須維持全部平衡。",
-        "explorable_strength": "頻率編織者以象徵方式描寫跨領域連結與協作。",
-        "core_tension": "當每個不和諧都被視為自己的責任，參與會變得疲憊。",
-        "integration_direction": "聚焦真正需要自己處理的交集，並讓其他人承擔其部分。",
-        "customer_narrative_short_draft": "一個團隊裡，有人習慣先想清楚，有人喜歡邊做邊改，兩種節奏未必相容。頻率編織者以「編織」形容協作，不代表能量可以被神秘地調整。讓任務、等待時間和溝通方式變得清楚，往往比要求每個人步調完全一致更有幫助。"
+      "master_content_zh_tw": {
+        "positioning": "調整協作節奏，而非神秘地控制能量",
+        "symbolic_core": "頻率是團體節奏的象徵比喻，不是可以測量的人格能量。",
+        "archetype_strength": "能留意不同工作節奏與溝通需求，協助跨組合作。",
+        "inner_tension": "可能把每一場協作不順都視為自己必須調和的責任。",
+        "life_insight": "共同合作不要求每個人一樣，而需要清楚的交接與同意。",
+        "integration_direction": "為一次合作列出各方節奏、接手時間和需要被確認的條件。",
+        "reflection_question": "在最近一場合作中，我是否把不是自己的部分也接過來了？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "將「頻率」轉為協作是合適安全化，但現稿幾乎等同 S1-02／S1-41。",
-      "required_revision_zh_tw": "聚焦不同工作節奏與團體同步；標明頻率是隱喻，非可量測能量。",
+      "customer_narrative_candidate": {
+        "title": "頻率編織者｜調整協作節奏，而非神秘地控制能量",
+        "paragraphs": [
+          "團隊裡有人習慣先想清楚，有人習慣做了再改。兩種節奏各有理由，卻常在交接時互相誤解。「頻率編織者」將這些不同的步調比喻為編織，指的是協作與協調，而不是神祕地調整他人的能量。",
+          "如果你總是負責讓大家合拍，可能不知不覺在每個缺口出現時補上自己的時間。表面上流程變順了，久了卻只有你知道背後付出多少。",
+          "可以先讓任務和等待時間被說清楚，決定哪些交集真正需要你參與。協作不必由一個人維持所有平衡；讓責任回到共同安排，編織才能持續。"
+        ],
+        "body": "團隊裡有人習慣先想清楚，有人習慣做了再改。兩種節奏各有理由，卻常在交接時互相誤解。「頻率編織者」將這些不同的步調比喻為編織，指的是協作與協調，而不是神祕地調整他人的能量。\n\n如果你總是負責讓大家合拍，可能不知不覺在每個缺口出現時補上自己的時間。表面上流程變順了，久了卻只有你知道背後付出多少。\n\n可以先讓任務和等待時間被說清楚，決定哪些交集真正需要你參與。協作不必由一個人維持所有平衡；讓責任回到共同安排，編織才能持續。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "調整協作節奏，而非神秘地控制能量",
+        "symbolic_core": "頻率是團體節奏的象徵比喻，不是可以測量的人格能量。",
+        "explorable_strength": "能留意不同工作節奏與溝通需求，協助跨組合作。",
+        "core_tension": "可能把每一場協作不順都視為自己必須調和的責任。",
+        "life_insight": "共同合作不要求每個人一樣，而需要清楚的交接與同意。",
+        "integration_direction": "為一次合作列出各方節奏、接手時間和需要被確認的條件。",
+        "reflection_question": "在最近一場合作中，我是否把不是自己的部分也接過來了？",
+        "customer_narrative_short_draft": "團隊裡有人習慣先想清楚，有人習慣做了再改。兩種節奏各有理由，卻常在交接時互相誤解。「頻率編織者」將這些不同的步調比喻為編織，指的是協作與協調，而不是神祕地調整他人的能量。\n\n如果你總是負責讓大家合拍，可能不知不覺在每個缺口出現時補上自己的時間。表面上流程變順了，久了卻只有你知道背後付出多少。\n\n可以先讓任務和等待時間被說清楚，決定哪些交集真正需要你參與。協作不必由一個人維持所有平衡；讓責任回到共同安排，編織才能持續。"
+      },
+      "peer_distinction_codes": [
+        "S1-16"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-37",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "意志火焰者",
+      "name_zh_source": "意志火焰者",
+      "name_en_source": "The Willpower Flame",
       "source_code": "S1-37",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "0cbe1d7a21faaaff3f2b413380f252b851d03298e875c6d659216b385634cb12",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -1501,39 +2130,56 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "意志可以推動重要的事，也需要看見身心限制。",
-        "explorable_strength": "意志火焰者象徵持續投入、面對難題與保有熱情。",
-        "core_tension": "若把堅持等同於不能休息，行動可能逐漸走向耗損。",
-        "integration_direction": "用可持續的節奏衡量投入，而不是只看承受了多少。",
-        "customer_narrative_short_draft": "一個長期目標需要很多次不被看見的投入。意志火焰者提醒我們珍惜持續的力量，也留意何時努力已經超過可以承擔的範圍。把休息與回顧排進節奏，不是放棄目標；真正可持續的熱情，應該有重新補充的空間。"
+      "master_content_zh_tw": {
+        "positioning": "讓意志成為可持續投入的力量",
+        "symbolic_core": "堅持的價值來自持續而合宜的行動，不是忍耐耗損。",
+        "archetype_strength": "能長期投入目標，在遇到阻力時維持動能。",
+        "inner_tension": "容易以工作量衡量決心，忽略身體和心理需要。",
+        "life_insight": "休息與調整不是意志的反面，而是能長久前進的條件。",
+        "integration_direction": "為一項長期目標安排固定回顧與休息，觀察精力如何變化。",
+        "reflection_question": "我現在堅持的是重要目標，還是害怕承認自己需要停一下？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "意志耐力與身心限制平衡合理；易與 S1-07 均寫成堅持和放慢。",
-      "required_revision_zh_tw": "強調持續執行、投入節奏與避免過度消耗，非守護原則的勇氣。",
+      "customer_narrative_candidate": {
+        "title": "意志火焰者｜讓意志成為可持續投入的力量",
+        "paragraphs": [
+          "有些目標不會因一次漂亮的衝刺而完成，而要靠長時間的重複投入。「意志火焰者」讓這份持續的動力被看見，也讓我們問：如何使熱情不在過程中逐漸燃盡？",
+          "若你很在乎把事情做完，可能會在身體已經疲憊時仍要求自己再撐一下。短期忍耐有時必要，但如果「不能停」變成唯一證明投入的方式，最初珍惜的事也可能失去滋養。",
+          "試著把恢復精力的時間寫進計畫。真正有力量的意志，不只有向前，也包含知道何時補充、何時修訂目標。"
+        ],
+        "body": "有些目標不會因一次漂亮的衝刺而完成，而要靠長時間的重複投入。「意志火焰者」讓這份持續的動力被看見，也讓我們問：如何使熱情不在過程中逐漸燃盡？\n\n若你很在乎把事情做完，可能會在身體已經疲憊時仍要求自己再撐一下。短期忍耐有時必要，但如果「不能停」變成唯一證明投入的方式，最初珍惜的事也可能失去滋養。\n\n試著把恢復精力的時間寫進計畫。真正有力量的意志，不只有向前，也包含知道何時補充、何時修訂目標。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "讓意志成為可持續投入的力量",
+        "symbolic_core": "堅持的價值來自持續而合宜的行動，不是忍耐耗損。",
+        "explorable_strength": "能長期投入目標，在遇到阻力時維持動能。",
+        "core_tension": "容易以工作量衡量決心，忽略身體和心理需要。",
+        "life_insight": "休息與調整不是意志的反面，而是能長久前進的條件。",
+        "integration_direction": "為一項長期目標安排固定回顧與休息，觀察精力如何變化。",
+        "reflection_question": "我現在堅持的是重要目標，還是害怕承認自己需要停一下？",
+        "customer_narrative_short_draft": "有些目標不會因一次漂亮的衝刺而完成，而要靠長時間的重複投入。「意志火焰者」讓這份持續的動力被看見，也讓我們問：如何使熱情不在過程中逐漸燃盡？\n\n若你很在乎把事情做完，可能會在身體已經疲憊時仍要求自己再撐一下。短期忍耐有時必要，但如果「不能停」變成唯一證明投入的方式，最初珍惜的事也可能失去滋養。\n\n試著把恢復精力的時間寫進計畫。真正有力量的意志，不只有向前，也包含知道何時補充、何時修訂目標。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-38",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "靈魂聆聽者",
+      "name_zh_source": "灵魂聆听者",
+      "name_en_source": "The Soul Listener",
       "source_code": "S1-38",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "10b3a3cc4c643f99cafcadf953acf123ec26cd3b6c2925945c6158ea5331eaac",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -1541,40 +2187,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "傾聽能創造理解，自己的聲音也值得被留下。",
-        "explorable_strength": "靈魂聆聽者關注用專注與耐心陪伴對話的方式。",
-        "core_tension": "若總作為別人的情緒出口，自己的需要容易無處可說。",
-        "integration_direction": "在傾聽之後，也為自己的感受留下同等的表達空間。",
-        "customer_narrative_short_draft": "有人終於願意把心裡的話說出來，通常不是因為聽者給了最好的答案，而是因為中間有足夠的安靜。靈魂聆聽者關注耐心提問與真實聽見，也提醒：對話不應永遠只有一個人的故事。你也可以在適當的時候，說出自己的需要。"
+      "master_content_zh_tw": {
+        "positioning": "以耐心聆聽創造雙向交流",
+        "symbolic_core": "傾聽是讓人有機會表達，不能讓聽者永遠失去自己的聲音。",
+        "archetype_strength": "能專注於對方的說法，用提問幫助釐清感受與需要。",
+        "inner_tension": "可能反覆作為情緒出口，不敢說出自己的界限或經驗。",
+        "life_insight": "好的對話既有安靜，也有互相回應；聆聽者同樣值得被理解。",
+        "integration_direction": "一次深談後，練習詢問自己是否還有需要被說出的部分。",
+        "reflection_question": "我是否因為被認為「很會聽」，就不再允許自己表達？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "傾聽與自身聲音的連結成立；與 S1-06／S1-30 關懷主題重疊。",
-      "required_revision_zh_tw": "聚焦對話裡的提問、停頓與雙向表達，不引入療癒效果。",
+      "customer_narrative_candidate": {
+        "title": "靈魂聆聽者｜以耐心聆聽創造雙向交流",
+        "paragraphs": [
+          "有些話之所以終於能說出口，不是因為對方提出了解方，而是因為有人安靜地聽到最後。「靈魂聆聽者」看見耐心與不急著評斷的價值，並非宣稱能聽見什麼超自然訊息。",
+          "可是，如果每次對話都只有別人的故事，久了你可能會忘記自己也有想說的事。被信任很珍貴，卻不意味著你要隨時擔任情緒的容器。",
+          "試著在適當的時刻說出自己的感受，或溫和說明今天能聆聽多久。雙向的尊重，才讓陪伴不必以一個人的沉默作為代價。"
+        ],
+        "body": "有些話之所以終於能說出口，不是因為對方提出了解方，而是因為有人安靜地聽到最後。「靈魂聆聽者」看見耐心與不急著評斷的價值，並非宣稱能聽見什麼超自然訊息。\n\n可是，如果每次對話都只有別人的故事，久了你可能會忘記自己也有想說的事。被信任很珍貴，卻不意味著你要隨時擔任情緒的容器。\n\n試著在適當的時刻說出自己的感受，或溫和說明今天能聆聽多久。雙向的尊重，才讓陪伴不必以一個人的沉默作為代價。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "以耐心聆聽創造雙向交流",
+        "symbolic_core": "傾聽是讓人有機會表達，不能讓聽者永遠失去自己的聲音。",
+        "explorable_strength": "能專注於對方的說法，用提問幫助釐清感受與需要。",
+        "core_tension": "可能反覆作為情緒出口，不敢說出自己的界限或經驗。",
+        "life_insight": "好的對話既有安靜，也有互相回應；聆聽者同樣值得被理解。",
+        "integration_direction": "一次深談後，練習詢問自己是否還有需要被說出的部分。",
+        "reflection_question": "我是否因為被認為「很會聽」，就不再允許自己表達？",
+        "customer_narrative_short_draft": "有些話之所以終於能說出口，不是因為對方提出了解方，而是因為有人安靜地聽到最後。「靈魂聆聽者」看見耐心與不急著評斷的價值，並非宣稱能聽見什麼超自然訊息。\n\n可是，如果每次對話都只有別人的故事，久了你可能會忘記自己也有想說的事。被信任很珍貴，卻不意味著你要隨時擔任情緒的容器。\n\n試著在適當的時刻說出自己的感受，或溫和說明今天能聆聽多久。雙向的尊重，才讓陪伴不必以一個人的沉默作為代價。"
+      },
+      "peer_distinction_codes": [
+        "S1-19"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-39",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
-      "name_zh_tw_candidate": "穩定者",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
+      "name_zh_tw_candidate": "定錨者",
+      "name_zh_source": "稳定者",
+      "name_en_source": "The Stabilizer",
       "source_code": "S1-39",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "7bed1017cf7de8b06a66e8516aee5c9017ccf6fd3ffabd7c160b20acf6b28a92",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -1582,40 +2246,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "穩定不是守住所有人，而是在變化中保有可依靠的重心。",
-        "explorable_strength": "穩定者（S1-39）側重壓力情境下的沉著與共同支持。",
-        "core_tension": "如果別人的狀態都需要自己維持，可靠就會逐漸成為負擔。",
-        "integration_direction": "將危機處理與長期責任分開，協助建立共同承擔的安排。",
-        "customer_narrative_short_draft": "事情突然變得緊急時，最有用的不一定是立刻做得更多，而是先分清什麼要馬上處理、什麼可以稍後討論。穩定者在這裡象徵壓力中的定心與協作。危機過後，還要把責任交回合適的位置；可靠不意味著長期替所有人扛住一切。"
+      "master_content_zh_tw": {
+        "positioning": "在壓力當下釐清優先事項與共同支持",
+        "symbolic_core": "壓力中的穩定是先辨認可處理之事，而非一人扛住所有危機。",
+        "archetype_strength": "遇到急迫情境時能放慢判斷，協助重整優先順序。",
+        "inner_tension": "可能被依賴過度，將臨時救援變成長期個人責任。",
+        "life_insight": "安定現場與長期治理是兩件事，危機過後應重新分工。",
+        "integration_direction": "當事情緊急時先列出即刻、安全、可延後三類事項，事後交接。",
+        "reflection_question": "危機解除後，我是否仍在替別人承擔原本不屬於我的責任？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P0",
-      "reason_zh_tw": "同名 S1-04；本碼源頭重點是壓力／危機中的穩住，不能寫成制度維運。",
-      "required_revision_zh_tw": "擬用區別名稱或顧客副標題，突出關鍵時刻的沉著與共同承擔。",
+      "customer_narrative_candidate": {
+        "title": "定錨者｜在壓力當下釐清優先事項與共同支持",
+        "paragraphs": [
+          "當事情突然出了狀況，現場最需要的有時不是有人立刻做更多，而是有人能先說清楚什麼必須馬上處理、什麼可以稍後再談。「定錨者」S1-39 聚焦這種壓力下的沉著。",
+          "如果別人常在混亂時倚靠你，你也許會得到信任，卻同時背負一份難以卸下的期待。把現場安定下來值得肯定，但危機過後，每個人的責任仍需要回到適當的位置。",
+          "下次事情緊急時，不妨先確認安全與優先事項，再安排交接。可靠不是永遠替所有人撐住，而是協助大家重新找回各自能承擔的部分。"
+        ],
+        "body": "當事情突然出了狀況，現場最需要的有時不是有人立刻做更多，而是有人能先說清楚什麼必須馬上處理、什麼可以稍後再談。「定錨者」S1-39 聚焦這種壓力下的沉著。\n\n如果別人常在混亂時倚靠你，你也許會得到信任，卻同時背負一份難以卸下的期待。把現場安定下來值得肯定，但危機過後，每個人的責任仍需要回到適當的位置。\n\n下次事情緊急時，不妨先確認安全與優先事項，再安排交接。可靠不是永遠替所有人撐住，而是協助大家重新找回各自能承擔的部分。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "在壓力當下釐清優先事項與共同支持",
+        "symbolic_core": "壓力中的穩定是先辨認可處理之事，而非一人扛住所有危機。",
+        "explorable_strength": "遇到急迫情境時能放慢判斷，協助重整優先順序。",
+        "core_tension": "可能被依賴過度，將臨時救援變成長期個人責任。",
+        "life_insight": "安定現場與長期治理是兩件事，危機過後應重新分工。",
+        "integration_direction": "當事情緊急時先列出即刻、安全、可延後三類事項，事後交接。",
+        "reflection_question": "危機解除後，我是否仍在替別人承擔原本不屬於我的責任？",
+        "customer_narrative_short_draft": "當事情突然出了狀況，現場最需要的有時不是有人立刻做更多，而是有人能先說清楚什麼必須馬上處理、什麼可以稍後再談。「定錨者」S1-39 聚焦這種壓力下的沉著。\n\n如果別人常在混亂時倚靠你，你也許會得到信任，卻同時背負一份難以卸下的期待。把現場安定下來值得肯定，但危機過後，每個人的責任仍需要回到適當的位置。\n\n下次事情緊急時，不妨先確認安全與優先事項，再安排交接。可靠不是永遠替所有人撐住，而是協助大家重新找回各自能承擔的部分。"
+      },
+      "peer_distinction_codes": [
+        "S1-04"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": "S1-39聚焦「突發壓力中的沉著、排序、支援」；S1-04聚焦「長期制度與流程維護」。 台繁顯示名稱由「穩定者」改提案為「定錨者」，依原型核心區分；仍待具名真人正式核准。"
     },
     {
       "code": "S1-40",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "內在智者",
+      "name_zh_source": "内在智者",
+      "name_en_source": "The Inner Sage",
       "source_code": "S1-40",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "8ad09ab89df1474dcb47481a9a342ef30505ed4f36183194740fa3cf869b1c9d",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -1623,40 +2305,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "理解得深，不表示必須一直站在教導的位置。",
-        "explorable_strength": "內在智者關注沉澱經驗、形成判斷及分享思考方法。",
-        "core_tension": "如果智慧被拿來掩飾脆弱，交流容易變成單向講解。",
-        "integration_direction": "把經驗當作可供討論的觀點，也坦承未知之處。",
-        "customer_narrative_short_draft": "經驗累積得久，常會形成一些值得分享的判斷。內在智者可以把其中的思考過程說出來，讓人理解你為何這樣看，而不是只聽見結論。願意說「這部分我還不知道」，不會讓理解變薄，反而為真正的對話留出位置。"
+      "master_content_zh_tw": {
+        "positioning": "分享沉澱後的理解，也保留未知",
+        "symbolic_core": "智慧是可以討論的經驗與判斷，不是凌駕他人的真理。",
+        "archetype_strength": "善於整理經驗、形成觀點並說明推理過程。",
+        "inner_tension": "可能把「懂得很多」當成防護，難以顯露困惑與需要。",
+        "life_insight": "承認尚未知道之處，能使理解更真實並邀請互相學習。",
+        "integration_direction": "分享一個觀點時，同時說明依據以及仍不確定的部分。",
+        "reflection_question": "當有人向我請教，我是否允許自己回答「我還不知道」？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "沉澱經驗與不占導師位置的轉化適當；短稿仍太像通用謙虛建議。",
-      "required_revision_zh_tw": "寫出分享思考過程、容許未知的情境，避免宣稱天生掌握真理。",
+      "customer_narrative_candidate": {
+        "title": "內在智者｜分享沉澱後的理解，也保留未知",
+        "paragraphs": [
+          "經驗累積久了，某些判斷會變得更清楚。別人詢問時，你也許能提供值得參考的觀點。「內在智者」探索的是這種經驗沉澱，不是把人放在必須指導別人的位置。",
+          "如果你常被認為可靠、成熟，有時可能難以說自己也困惑。好像一旦承認不知道，就失去了被信任的資格。可是，真正的理解從來不等於對每件事都有答案。",
+          "分享經驗時，不妨說出自己如何得出結論，也誠實標出尚待確認的地方。這樣的智慧不是一座讓人仰望的高台，而是一個可以一起思考的邀請。"
+        ],
+        "body": "經驗累積久了，某些判斷會變得更清楚。別人詢問時，你也許能提供值得參考的觀點。「內在智者」探索的是這種經驗沉澱，不是把人放在必須指導別人的位置。\n\n如果你常被認為可靠、成熟，有時可能難以說自己也困惑。好像一旦承認不知道，就失去了被信任的資格。可是，真正的理解從來不等於對每件事都有答案。\n\n分享經驗時，不妨說出自己如何得出結論，也誠實標出尚待確認的地方。這樣的智慧不是一座讓人仰望的高台，而是一個可以一起思考的邀請。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "分享沉澱後的理解，也保留未知",
+        "symbolic_core": "智慧是可以討論的經驗與判斷，不是凌駕他人的真理。",
+        "explorable_strength": "善於整理經驗、形成觀點並說明推理過程。",
+        "core_tension": "可能把「懂得很多」當成防護，難以顯露困惑與需要。",
+        "life_insight": "承認尚未知道之處，能使理解更真實並邀請互相學習。",
+        "integration_direction": "分享一個觀點時，同時說明依據以及仍不確定的部分。",
+        "reflection_question": "當有人向我請教，我是否允許自己回答「我還不知道」？",
+        "customer_narrative_short_draft": "經驗累積久了，某些判斷會變得更清楚。別人詢問時，你也許能提供值得參考的觀點。「內在智者」探索的是這種經驗沉澱，不是把人放在必須指導別人的位置。\n\n如果你常被認為可靠、成熟，有時可能難以說自己也困惑。好像一旦承認不知道，就失去了被信任的資格。可是，真正的理解從來不等於對每件事都有答案。\n\n分享經驗時，不妨說出自己如何得出結論，也誠實標出尚待確認的地方。這樣的智慧不是一座讓人仰望的高台，而是一個可以一起思考的邀請。"
+      },
+      "peer_distinction_codes": [
+        "S1-14"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-41",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "宇宙橋接者",
+      "name_zh_source": "宇宙桥接者",
+      "name_en_source": "The Cosmic Bridge",
       "source_code": "S1-41",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "9d8b6b5466a30e4f3971bf2a45e06819b85c49c7dc482b1e4a8f147d3ed71042",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -1664,40 +2364,58 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "連接不同世界觀，不等於必須替所有人翻譯一切。",
-        "explorable_strength": "宇宙橋接者是跨群體、跨觀點溝通的象徵名稱。",
-        "core_tension": "若把每個誤解都視為個人責任，容易失去自己的立足點。",
-        "integration_direction": "選擇有共同意願的對話，允許部分差異暫時並存。",
-        "customer_narrative_short_draft": "兩個人使用不同領域的語言，可能都在討論同一個問題，卻一直無法理解彼此。宇宙橋接者將這種跨世界觀的翻譯稱作「橋接」，不涉及超自然知識。先找出可共用的概念，也尊重差異可能無法立即消失；不是每一座橋都得由一個人來搭。"
+      "master_content_zh_tw": {
+        "positioning": "在不同知識與世界觀之間建立可理解的橋",
+        "symbolic_core": "跨世界觀溝通是翻譯不同概念，不涉及宇宙或超自然能力。",
+        "archetype_strength": "能辨認多種領域中相通的問題與不同的語言方式。",
+        "inner_tension": "可能把所有誤解視為自己的責任，導致過度調解。",
+        "life_insight": "好的橋接既尋找共同語言，也尊重無法立即消除的差異。",
+        "integration_direction": "挑兩種不同領域的說法，整理共通問題與不能直接對譯的部分。",
+        "reflection_question": "我是否曾太急著讓所有人互相理解，反而忽略自己是否願意參與？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P1",
-      "reason_zh_tw": "跨世界觀／跨學科翻譯主題可用，但與 S1-02 連接者重疊。",
-      "required_revision_zh_tw": "專注不同知識語言的轉譯與對等交流；避開宇宙資訊或高維真理說法。",
+      "customer_narrative_candidate": {
+        "title": "宇宙橋接者｜在不同知識與世界觀之間建立可理解的橋",
+        "paragraphs": [
+          "兩個人談著同一個問題，卻因為使用不同領域的詞彙，怎麼說都像在各講各話。「宇宙橋接者」以寬廣的名稱，比喻跨知識體系、文化或世界觀的轉譯能力，而不是神秘的宇宙知識。",
+          "如果你喜歡尋找不同觀點之間的關聯，也許很容易把每一次誤解都當成自己需要解開的結。可是，有些差異來自真正不同的價值與選擇，不一定能靠翻譯完全消除。",
+          "你可以先釐清雙方在回答什麼問題，也指出不能直接互換的概念。搭橋不意味著所有人都得過橋，尤其不意味著每一座橋都得由你建造。"
+        ],
+        "body": "兩個人談著同一個問題，卻因為使用不同領域的詞彙，怎麼說都像在各講各話。「宇宙橋接者」以寬廣的名稱，比喻跨知識體系、文化或世界觀的轉譯能力，而不是神秘的宇宙知識。\n\n如果你喜歡尋找不同觀點之間的關聯，也許很容易把每一次誤解都當成自己需要解開的結。可是，有些差異來自真正不同的價值與選擇，不一定能靠翻譯完全消除。\n\n你可以先釐清雙方在回答什麼問題，也指出不能直接互換的概念。搭橋不意味著所有人都得過橋，尤其不意味著每一座橋都得由你建造。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "在不同知識與世界觀之間建立可理解的橋",
+        "symbolic_core": "跨世界觀溝通是翻譯不同概念，不涉及宇宙或超自然能力。",
+        "explorable_strength": "能辨認多種領域中相通的問題與不同的語言方式。",
+        "core_tension": "可能把所有誤解視為自己的責任，導致過度調解。",
+        "life_insight": "好的橋接既尋找共同語言，也尊重無法立即消除的差異。",
+        "integration_direction": "挑兩種不同領域的說法，整理共通問題與不能直接對譯的部分。",
+        "reflection_question": "我是否曾太急著讓所有人互相理解，反而忽略自己是否願意參與？",
+        "customer_narrative_short_draft": "兩個人談著同一個問題，卻因為使用不同領域的詞彙，怎麼說都像在各講各話。「宇宙橋接者」以寬廣的名稱，比喻跨知識體系、文化或世界觀的轉譯能力，而不是神秘的宇宙知識。\n\n如果你喜歡尋找不同觀點之間的關聯，也許很容易把每一次誤解都當成自己需要解開的結。可是，有些差異來自真正不同的價值與選擇，不一定能靠翻譯完全消除。\n\n你可以先釐清雙方在回答什麼問題，也指出不能直接互換的概念。搭橋不意味著所有人都得過橋，尤其不意味著每一座橋都得由你建造。"
+      },
+      "peer_distinction_codes": [
+        "S1-02"
+      ],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": "與S1-02人際立場橋接不同，本碼定位在跨文化、知識體系和世界觀語言的轉譯。"
     },
     {
       "code": "S1-42",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "承光者",
+      "name_zh_source": "承光者",
+      "name_en_source": "The Ascension Flame",
       "source_code": "S1-42",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "cf7d7a8012f1d485751fbbebcfb828ba674a81551daf3dfb3e0f8b94588e4a41",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -1705,39 +2423,56 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "帶來希望的方式，可以是可見的日常作為。",
-        "explorable_strength": "承光者象徵帶著理想參與現實，讓價值觀有具體表達。",
-        "core_tension": "若把自己想像成永遠需要明亮的人，疲倦與限制便難被承認。",
-        "integration_direction": "讓理想落在一項能長期實踐的小事，而非維持形象。",
-        "customer_narrative_short_draft": "一個值得相信的理想，若只停在漂亮的句子裡，仍很難改變日常。承光者把「光」當成希望與行動的比喻，不代表誰擁有更高的靈性等級。選一件能長久實踐的小事，讓關懷有可見的形狀；也允許自己疲倦、需要他人支持。"
+      "master_content_zh_tw": {
+        "positioning": "用可見的日常實踐承接理想與希望",
+        "symbolic_core": "光是理想與鼓舞的象徵，不代表靈性等級或比別人更純淨。",
+        "archetype_strength": "能把理想轉為可分享的行動，為群體帶來希望。",
+        "inner_tension": "可能為維持正向形象而否認疲憊，或對他人產生高低比較。",
+        "life_insight": "一個人值得被支持，不需要永遠明亮或完美。",
+        "integration_direction": "選一件符合自身價值的小事持續練習，同時安排必要休息。",
+        "reflection_question": "我想實踐的理想，是在幫助生活，還是讓我不敢承認脆弱？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P0",
-      "reason_zh_tw": "來源有升頻、業力與導師等宣稱，候選已收斂；「承光」還可能被誤讀成更高層級。",
-      "required_revision_zh_tw": "用理想如何進入日常貢獻的案例說明；拒絕靈性等級與非凡能力。",
+      "customer_narrative_candidate": {
+        "title": "承光者｜用可見的日常實踐承接理想與希望",
+        "paragraphs": [
+          "有些理想很動人，但若一直停在話語裡，便不容易看見它如何影響生活。「承光者」將光當成希望的比喻，邀請我們把相信的事化成看得見的日常行動，而不是宣稱誰擁有更高的靈性。",
+          "如果你習慣成為鼓舞別人的人，也許會有不敢說自己累了的時候。可是，人可以同時懷抱希望和需要照顧；低落並不意味著你失去了原本的價值。",
+          "不妨選一件能長期做到的小事，讓理想有穩定的形狀。你也可以尋求陪伴，允許自己有不想發光的日子。"
+        ],
+        "body": "有些理想很動人，但若一直停在話語裡，便不容易看見它如何影響生活。「承光者」將光當成希望的比喻，邀請我們把相信的事化成看得見的日常行動，而不是宣稱誰擁有更高的靈性。\n\n如果你習慣成為鼓舞別人的人，也許會有不敢說自己累了的時候。可是，人可以同時懷抱希望和需要照顧；低落並不意味著你失去了原本的價值。\n\n不妨選一件能長期做到的小事，讓理想有穩定的形狀。你也可以尋求陪伴，允許自己有不想發光的日子。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "用可見的日常實踐承接理想與希望",
+        "symbolic_core": "光是理想與鼓舞的象徵，不代表靈性等級或比別人更純淨。",
+        "explorable_strength": "能把理想轉為可分享的行動，為群體帶來希望。",
+        "core_tension": "可能為維持正向形象而否認疲憊，或對他人產生高低比較。",
+        "life_insight": "一個人值得被支持，不需要永遠明亮或完美。",
+        "integration_direction": "選一件符合自身價值的小事持續練習，同時安排必要休息。",
+        "reflection_question": "我想實踐的理想，是在幫助生活，還是讓我不敢承認脆弱？",
+        "customer_narrative_short_draft": "有些理想很動人，但若一直停在話語裡，便不容易看見它如何影響生活。「承光者」將光當成希望的比喻，邀請我們把相信的事化成看得見的日常行動，而不是宣稱誰擁有更高的靈性。\n\n如果你習慣成為鼓舞別人的人，也許會有不敢說自己累了的時候。可是，人可以同時懷抱希望和需要照顧；低落並不意味著你失去了原本的價值。\n\n不妨選一件能長期做到的小事，讓理想有穩定的形狀。你也可以尋求陪伴，允許自己有不想發光的日子。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-43",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "命運編織者",
+      "name_zh_source": "命运编织者",
+      "name_en_source": "The Destiny Weaver",
       "source_code": "S1-43",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "e8461d8554bac368f6d1f978f21597a6038f83fbaa40dad677f892e75b674728",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -1745,40 +2480,56 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "理解選擇的連鎖影響，並不等於能夠掌控命運。",
-        "explorable_strength": "命運編織者以象徵語言描繪對多種人生選擇與關係的思考。",
-        "core_tension": "若過度替別人預測或安排，容易忽略不確定性與自主。",
-        "integration_direction": "用選擇及後果的討論替代對未來的確定宣稱。",
-        "customer_narrative_short_draft": "一個選擇常會帶來不只一種後果，並且影響不同的人。命運編織者在這裡指的是願意思考這些連鎖關係，而非知道未來結局。把可預見的風險、尚不確定的部分和各自的選擇權分開討論，會比宣稱掌握命運更有幫助。"
+      "master_content_zh_tw": {
+        "positioning": "理解選擇的連鎖影響，保留不確定性",
+        "symbolic_core": "命運是選擇與後果的象徵討論，並不提供預知未來的能力。",
+        "archetype_strength": "願意思考長期影響、相互關係與不同可能的後果。",
+        "inner_tension": "可能過度推演或替別人規劃，把不確定的未來當成已知。",
+        "life_insight": "對未來負責不是掌控一切，而是分辨風險、資訊和各自的選擇權。",
+        "integration_direction": "在一個決定前列出可能後果、未知因素和由誰負責選擇。",
+        "reflection_question": "我最近說「一定會」的事，有哪些其實仍只是推測？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P0",
-      "reason_zh_tw": "「命運」字面風險高，來源宣稱預感走向與關鍵命運選擇。",
-      "required_revision_zh_tw": "限制於選擇的可能後果與不確定性，不准預言或代替他人決定。",
+      "customer_narrative_candidate": {
+        "title": "命運編織者｜理解選擇的連鎖影響，保留不確定性",
+        "paragraphs": [
+          "一個決定很少只影響眼前：選擇一段學習、一種合作方式，可能讓往後的其他選項也隨之改變。「命運編織者」用編織比喻這些彼此交錯的關係，並不是說任何人能看見命運的答案。",
+          "當我們努力想替事情想得周全，也可能因為害怕不確定而不停推算，甚至替別人安排下一步。但人的經驗不會完全照著任何模型發展，更多資訊也不保證有唯一正確的決定。",
+          "試著把能預見的風險、仍不知道的部分，以及誰需要作決定清楚分開。真正的負責任，是讓選擇有足夠理解，而不是假裝掌握所有結局。"
+        ],
+        "body": "一個決定很少只影響眼前：選擇一段學習、一種合作方式，可能讓往後的其他選項也隨之改變。「命運編織者」用編織比喻這些彼此交錯的關係，並不是說任何人能看見命運的答案。\n\n當我們努力想替事情想得周全，也可能因為害怕不確定而不停推算，甚至替別人安排下一步。但人的經驗不會完全照著任何模型發展，更多資訊也不保證有唯一正確的決定。\n\n試著把能預見的風險、仍不知道的部分，以及誰需要作決定清楚分開。真正的負責任，是讓選擇有足夠理解，而不是假裝掌握所有結局。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "理解選擇的連鎖影響，保留不確定性",
+        "symbolic_core": "命運是選擇與後果的象徵討論，並不提供預知未來的能力。",
+        "explorable_strength": "願意思考長期影響、相互關係與不同可能的後果。",
+        "core_tension": "可能過度推演或替別人規劃，把不確定的未來當成已知。",
+        "life_insight": "對未來負責不是掌控一切，而是分辨風險、資訊和各自的選擇權。",
+        "integration_direction": "在一個決定前列出可能後果、未知因素和由誰負責選擇。",
+        "reflection_question": "我最近說「一定會」的事，有哪些其實仍只是推測？",
+        "customer_narrative_short_draft": "一個決定很少只影響眼前：選擇一段學習、一種合作方式，可能讓往後的其他選項也隨之改變。「命運編織者」用編織比喻這些彼此交錯的關係，並不是說任何人能看見命運的答案。\n\n當我們努力想替事情想得周全，也可能因為害怕不確定而不停推算，甚至替別人安排下一步。但人的經驗不會完全照著任何模型發展，更多資訊也不保證有唯一正確的決定。\n\n試著把能預見的風險、仍不知道的部分，以及誰需要作決定清楚分開。真正的負責任，是讓選擇有足夠理解，而不是假裝掌握所有結局。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "原始名稱與台灣繁體中文候選名稱需審核後鎖定。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": []
     },
     {
       "code": "S1-44",
       "module": "S1",
       "module_name_zh_tw": "靈魂本源",
       "locale": "zh-TW",
+      "edition": "zhTW_master_candidate_rc3_1_2026-11-16",
       "name_zh_tw_candidate": "源之信使",
+      "name_zh_source": "源之信使",
+      "name_en_source": "The Source Messenger",
       "source_code": "S1-44",
       "source_version": "S1_Soul_Origin_Content_Database_v2_EN",
       "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
-      "source_fields_sha256": "a44efb60f8549f2ff68afefc8c857ee49342b6bcb5f02ebf87c6550fdb6fd631",
       "source_field_names": [
         "Soul Traits",
         "Strengths",
@@ -1786,28 +2537,43 @@
         "Core Lesson",
         "Mission Direction"
       ],
-      "content_zh_tw_candidate": {
-        "symbolic_core": "分享有意義的訊息，不必把自己當作真理的來源。",
-        "explorable_strength": "源之信使是傳遞觀點與價值提問的象徵名稱，不具神聖權威。",
-        "core_tension": "若把使命感變成無誤的要求，容易孤立並忽略普通生活。",
-        "integration_direction": "讓訊息可以被質疑與修正，保留身為普通人的需求。",
-        "customer_narrative_short_draft": "有些觀點令人深受觸動，甚至想立刻分享給別人。源之信使提醒我們，訊息的價值不需要靠神聖來源來證明。把自己理解的部分說清楚，允許對方質疑、修正或離開這場對話。即使談的是深刻的問題，也可以像普通人一樣生活。"
+      "master_content_zh_tw": {
+        "positioning": "分享有意義的訊息，不取得神聖權威",
+        "symbolic_core": "源頭是象徵性語言，不能作為無誤真理或神性來源的宣稱。",
+        "archetype_strength": "能將價值提問與深刻觀點整理成有意義的表達。",
+        "inner_tension": "可能背負過大的使命壓力，以為自己必須永遠正確。",
+        "life_insight": "訊息的價值可以接受質疑與修正；說話者始終是普通的人。",
+        "integration_direction": "分享一個重要觀點時，說清楚它來自何種理解與仍可商榷之處。",
+        "reflection_question": "我最想讓人理解的這件事，能否在不宣稱權威的情況下成立？"
       },
-      "editorial_status": "NEEDS_REVISION",
-      "editorial_recommendation": "NEEDS_REVISION",
-      "priority": "P0",
-      "reason_zh_tw": "來源有源頭訊息、純度與神聖真理宣稱；候選雖否認權威，但仍需修訂敘事。",
-      "required_revision_zh_tw": "把「信使」定義為分享觀點與可質疑的價值提問，不能暗示接收到超然指示。",
+      "customer_narrative_candidate": {
+        "title": "源之信使｜分享有意義的訊息，不取得神聖權威",
+        "paragraphs": [
+          "有些話語使人深受觸動，甚至想立刻分享給所有人。「源之信使」用詩性的名字描寫這份傳遞重要觀點的願望，但不意味著某個人真的接收到神聖訊息，或擁有高於他人的真理。",
+          "當一個想法對自己很有意義，可能不自覺期待別人也必須認同。若把「我要傳達的訊息」變成不能被質疑的使命，交流便容易失去自由，而分享者自己也可能承受過重的壓力。",
+          "你可以清楚說出看見了什麼、又是如何理解的，也讓別人保留不同的想法。訊息可以被修正，人也可以休息、生活，不需要為任何觀點扛起終極權威。"
+        ],
+        "body": "有些話語使人深受觸動，甚至想立刻分享給所有人。「源之信使」用詩性的名字描寫這份傳遞重要觀點的願望，但不意味著某個人真的接收到神聖訊息，或擁有高於他人的真理。\n\n當一個想法對自己很有意義，可能不自覺期待別人也必須認同。若把「我要傳達的訊息」變成不能被質疑的使命，交流便容易失去自由，而分享者自己也可能承受過重的壓力。\n\n你可以清楚說出看見了什麼、又是如何理解的，也讓別人保留不同的想法。訊息可以被修正，人也可以休息、生活，不需要為任何觀點扛起終極權威。"
+      },
+      "content_zh_tw_candidate": {
+        "positioning": "分享有意義的訊息，不取得神聖權威",
+        "symbolic_core": "源頭是象徵性語言，不能作為無誤真理或神性來源的宣稱。",
+        "explorable_strength": "能將價值提問與深刻觀點整理成有意義的表達。",
+        "core_tension": "可能背負過大的使命壓力，以為自己必須永遠正確。",
+        "life_insight": "訊息的價值可以接受質疑與修正；說話者始終是普通的人。",
+        "integration_direction": "分享一個重要觀點時，說清楚它來自何種理解與仍可商榷之處。",
+        "reflection_question": "我最想讓人理解的這件事，能否在不宣稱權威的情況下成立？",
+        "customer_narrative_short_draft": "有些話語使人深受觸動，甚至想立刻分享給所有人。「源之信使」用詩性的名字描寫這份傳遞重要觀點的願望，但不意味著某個人真的接收到神聖訊息，或擁有高於他人的真理。\n\n當一個想法對自己很有意義，可能不自覺期待別人也必須認同。若把「我要傳達的訊息」變成不能被質疑的使命，交流便容易失去自由，而分享者自己也可能承受過重的壓力。\n\n你可以清楚說出看見了什麼、又是如何理解的，也讓別人保留不同的想法。訊息可以被修正，人也可以休息、生活，不需要為任何觀點扛起終極權威。"
+      },
+      "peer_distinction_codes": [],
+      "editorial_status": "PENDING_REVIEW",
       "reviewer": null,
       "approved_at": null,
+      "approval_id": null,
       "customer_publishable": false,
       "internal_preview_candidate": true,
-      "editor_notes": [
-        "逐碼編輯新稿，待審核；不得以出生日期宣稱性格、職涯、醫療、感情經歷或未來。",
-        "內部來源原文可能含天生、神諭、命運、療癒等用語；不可直接對外渲染。",
-        "審閱結果：NEEDS_REVISION（針對收到的原版短篇，非正式核准）；請人工審閱此改寫提案。",
-        "此版本僅取代機械四欄拼接段落；原型四欄、名稱與源頭仍需逐碼核對。"
-      ]
+      "live_release_approved": false,
+      "editor_notes": "原始 S1-44 Esoteric Link 欄位疑似附入其他模組長段落，須獨立來源修復，不能移入對外顧客資料。"
     }
   ]
 }

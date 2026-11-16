@@ -1,0 +1,69 @@
+{
+  "package_id": "1320-zhTW-s1-44-master-2026-11-16-rc3.2-name-candidate",
+  "previous_package_id": "1320-zhTW-s1-44-master-2026-11-16-rc3.1-candidate",
+  "locale": "zh-TW",
+  "module": "S1",
+  "change_type": "DISPLAY_NAME_CANDIDATE_ONLY",
+  "rename_records": [
+    {
+      "code": "S1-04",
+      "old_zh_tw": "穩定者",
+      "new_zh_tw_candidate": "基石者",
+      "core_distinction": "建立可共同維護的長期結構、流程與秩序",
+      "source_zh_name_unchanged": "稳定者",
+      "source_en_name_unchanged": "The Stabilizer",
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false
+    },
+    {
+      "code": "S1-11",
+      "old_zh_tw": "遠見者",
+      "new_zh_tw_candidate": "擘畫者",
+      "core_distinction": "大局規劃與長程策略：把未來願景化為現階段可執行的路徑",
+      "source_zh_name_unchanged": "远见者",
+      "source_en_name_unchanged": "The Visionary",
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false
+    },
+    {
+      "code": "S1-26",
+      "old_zh_tw": "遠見者",
+      "new_zh_tw_candidate": "前瞻者",
+      "core_distinction": "前瞻創新與未來可能：讓超前構想形成可驗證的原型",
+      "source_zh_name_unchanged": "远见者",
+      "source_en_name_unchanged": "The Visionary",
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false
+    },
+    {
+      "code": "S1-39",
+      "old_zh_tw": "穩定者",
+      "new_zh_tw_candidate": "定錨者",
+      "core_distinction": "在急迫壓力下釐清優先順序、恢復當下安定",
+      "source_zh_name_unchanged": "稳定者",
+      "source_en_name_unchanged": "The Stabilizer",
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false
+    }
+  ],
+  "customer_release": "HOLD",
+  "human_name_approval_required": true,
+  "not_changed": [
+    "code",
+    "formula",
+    "source text",
+    "source hashes",
+    "underlying archetype definition",
+    "live production",
+    "price",
+    "checkout"
+  ]
+}

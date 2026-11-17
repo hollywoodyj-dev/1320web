@@ -59,6 +59,13 @@ import {
   s5EditorialCandidateCount,
   s5PendingCount,
 } from "../lib/gzh/tw-v2-s5-library";
+import {
+  s6ApprovedCount,
+  s6CandidateFor,
+  s6CustomerPublishableCodes,
+  s6EditorialCandidateCount,
+  s6PendingCount,
+} from "../lib/gzh/tw-v2-s6-library";
 
 function assert(condition: unknown, label: string) {
   if (!condition) {
@@ -279,6 +286,14 @@ assert(s5CandidateFor("S5-26")?.name_zh_tw_candidate === "可能性使命", "S5-
 assert(s5CandidateFor("S5-33")?.name_zh_tw_candidate === "慈悲領導使命", "S5-33 compassion name present");
 assert(s5CandidateFor("S5-01")?.code === "S5-01" && s5CandidateFor("S5-44")?.code === "S5-44", "S5 spans 01 to 44");
 assert(s5CandidateFor("S1-01") === null, "S5 library does not invent S1 codes");
+assert(s6EditorialCandidateCount() === 44 && s6PendingCount() === 44 && s6ApprovedCount() === 0, "S6 has 44 pending candidates");
+assert(s6CustomerPublishableCodes().length === 0, "S6 candidates stay out of customer publish");
+assert(s6CandidateFor("S6-28")?.name_zh_tw_candidate === "深度轉化者" && !s6CandidateFor("S6-28")?.reviewer, "S6-28 calibration name stays unapproved");
+assert(s6CandidateFor("S6-26")?.name_zh_tw_candidate === "策略行動者", "S6-26 strategy name present");
+assert(s6CandidateFor("S6-14")?.name_zh_tw_candidate === "結構流動者", "S6-14 structure name present");
+assert(s6CandidateFor("S6-23")?.name_zh_tw_candidate === "可靠貢獻者", "S6-23 contribution name present");
+assert(s6CandidateFor("S6-01")?.code === "S6-01" && s6CandidateFor("S6-44")?.code === "S6-44", "S6 spans 01 to 44");
+assert(s6CandidateFor("S1-01") === null, "S6 library does not invent S1 codes");
 assert(sampleFullDifference().length >= 6, "sample and full difference table exists");
 
 const page = fs.readFileSync(new URL("../app/(site)/tw-v2-report/page.tsx", import.meta.url), "utf8");

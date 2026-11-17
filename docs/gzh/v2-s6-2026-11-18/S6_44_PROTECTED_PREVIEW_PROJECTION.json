@@ -1,0 +1,724 @@
+{
+  "package_id": "1320-zhTW-s6-44-review-2026-11-18-rc1",
+  "projection": "PROTECTED_INTERNAL_PREVIEW_ONLY",
+  "module": "S6",
+  "locale": "zh-TW",
+  "editorial_status": "PENDING_REVIEW",
+  "reviewer": null,
+  "approved_at": null,
+  "official_approved_count": 0,
+  "customer_publishable": false,
+  "customer_release_state": "HOLD",
+  "access_gate": {
+    "requires_internal_authentication": true,
+    "requires_separate_customer_release_approval": true,
+    "refuse_public_export": true,
+    "do_not_auto_approve": true
+  },
+  "records": [
+    {
+      "code": "S6-01",
+      "name_zh_tw_candidate": "清晰價值接收者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "清晰的自我表達讓價值更容易被辨認",
+        "explorable_strength": "說清楚自己能提供什麼",
+        "core_tension": "因怕評價而過度解釋或隱藏",
+        "integration_direction": "以具體成果與清楚界線取代求認可",
+        "customer_narrative_short_draft": "在小組合作裡，一份做得很用心的提案可能被擱在角落。不是因為它必然沒有價值，也可能只是沒有人知道它解決了什麼問題。\n\n清晰價值接收者談的是：願意讓自己的貢獻被看見，同時不把別人的反應當成存在價值的唯一證明。擔心不夠好時，可能一再補充說明，卻更難提出真正的需求。\n\n試著用一句話描述你的貢獻，再確認對方需要什麼；接受肯定，也容許對方提出不同意見。被理解是一種互動，不必靠拼命證明換取。",
+        "reflection_question": "最近有哪一份努力，你可以用更清楚而不誇大的方式讓人看見？",
+        "reader_connection_scene": "在小組合作裡，一份做得很用心的提案可能被擱在角落。不是因為它必然沒有價值，也可能只是沒有人知道它解決了什麼問題。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-02",
+      "name_zh_tw_candidate": "直覺流動接收者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "直覺能提供方向感，但仍需要現實檢查",
+        "explorable_strength": "聆聽內在感受並觀察時機",
+        "core_tension": "等待徵兆或依賴旁人替自己決定",
+        "integration_direction": "把直覺寫成假設，再用小行動測試",
+        "customer_narrative_short_draft": "面對兩個合作邀約，心裡可能有一種不容易說明的偏好；可是只憑感覺，還不足以知道哪個安排真正適合。\n\n直覺流動接收者邀請人留意內在的訊號，也留意時間、條件和承諾。若擔心判錯而一直問別人，直覺就可能被外界意見淹沒；若只相信感覺，也可能忽略明確風險。\n\n你可以先寫下自己在乎的條件，再核對事實、詢問必要資訊，作出能被修正的選擇。接收新的可能，不等於放棄判斷。",
+        "reflection_question": "下一次感到「好像適合」時，你想先查證哪一項具體條件？",
+        "reader_connection_scene": "面對兩個合作邀約，心裡可能有一種不容易說明的偏好；可是只憑感覺，還不足以知道哪個安排真正適合。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-03",
+      "name_zh_tw_candidate": "創造願景接收者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "讓創造願景形成能被實際使用的作品",
+        "explorable_strength": "從想像中提出新做法",
+        "core_tension": "構想太多而缺少完成和負責",
+        "integration_direction": "選一項最重要的想法做出初版",
+        "customer_narrative_short_draft": "腦中同時浮現好幾種設計，桌面上卻只有尚未完成的草圖。靈感能打開可能性，卻不會替人完成後面的細節。\n\n創造願景接收者的價值不只在於想到新點子，也在於把創意變成他人可以理解和回應的形式。若每次遇到難題就轉向下一個構想，作品可能永遠停在想像階段。\n\n不妨挑一個最想保留的元素，做出小版本，請人試用並聽取意見。能被修改的作品，比完美卻無法落地的願景更能開展交流。",
+        "reflection_question": "你手上哪個創意，已經可以縮小成一件本週能完成的事？",
+        "reader_connection_scene": "腦中同時浮現好幾種設計，桌面上卻只有尚未完成的草圖。靈感能打開可能性，卻不會替人完成後面的細節。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-04",
+      "name_zh_tw_candidate": "穩定累積者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "長期穩定的付出也具有價值",
+        "explorable_strength": "持續累積與耐心維護",
+        "core_tension": "因害怕改變而守住失效的習慣",
+        "integration_direction": "定期檢查穩定是否仍符合需要",
+        "customer_narrative_short_draft": "一項例行工作日復一日順利完成，很少有人特別稱讚，直到某天流程中斷，大家才發現它一直支撐著日常。\n\n穩定累積者讓人看見持續與可靠的份量。只是當熟悉成為唯一的安全感，即使環境已經不同，也可能不願調整做法。\n\n接收新的協助或機會，不必推翻過去的努力。可以先保留有效的部分，再找一個風險可控的小改動，看看長久的穩定能否容納成長。",
+        "reflection_question": "你努力維持的一項習慣，現在仍在幫助你，還是已需要微調？",
+        "reader_connection_scene": "一項例行工作日復一日順利完成，很少有人特別稱讚，直到某天流程中斷，大家才發現它一直支撐著日常。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-05",
+      "name_zh_tw_candidate": "關係表達者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "關係中的真誠表達有其價值",
+        "explorable_strength": "以溝通促進理解和合作",
+        "core_tension": "為被喜歡而不敢說出不同意見",
+        "integration_direction": "在連結他人的同時表達自己的條件",
+        "customer_narrative_short_draft": "一次討論裡，大家看似達成共識，散會後卻有人默默承擔了自己原本不願意做的工作。沒有說出口的界線，常常會讓善意變得沉重。\n\n關係表達者關注用語言建立理解，也提醒我們：能照顧氣氛，不代表必須承接所有期待。若害怕拒絕，交換與合作可能逐漸失去平衡。\n\n試著在答應前說明自己的時間和能力，讓對方有機會協調。真正的關係不需要以隱藏自己換取。",
+        "reflection_question": "哪一次你說了「都可以」，其實更想說清楚自己的需要？",
+        "reader_connection_scene": "一次討論裡，大家看似達成共識，散會後卻有人默默承擔了自己原本不願意做的工作。沒有說出口的界線，常常會讓善意變得沉重。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-06",
+      "name_zh_tw_candidate": "同理療癒者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "同理與陪伴需要同時尊重彼此界線",
+        "explorable_strength": "傾聽感受並提供適度支持",
+        "core_tension": "吸收他人情緒、把自己變成唯一支柱",
+        "integration_direction": "先確認能力範圍，必要時引導專業資源",
+        "customer_narrative_short_draft": "朋友訴說一段難受的經歷，你很想讓對方好過一些，於是一次又一次延長談話；等掛上電話，自己也累得無法休息。\n\n同理療癒者象徵理解與陪伴的品質，不表示有治療他人的特殊能力。對方的難受值得被看見，你的疲憊也同樣真實；關心不等於替人承受所有後果。\n\n先問對方需要傾聽、實際幫忙，還是尋求專業協助，再說出自己可以做到的部分。接收別人的支持，也是一種成熟的互惠。",
+        "reflection_question": "你目前提供的陪伴，有哪一部分需要更清楚的時間或能力界線？",
+        "reader_connection_scene": "朋友訴說一段難受的經歷，你很想讓對方好過一些，於是一次又一次延長談話；等掛上電話，自己也累得無法休息。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-07",
+      "name_zh_tw_candidate": "落地智慧者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "深刻理解需要在日常行動中落地",
+        "explorable_strength": "將抽象觀點轉成可用方法",
+        "core_tension": "用理念迴避當前責任或現實需求",
+        "integration_direction": "以可觀察的小步驟檢驗所理解的道理",
+        "customer_narrative_short_draft": "讀到一句令人震動的話，似乎突然看清了生活的方向；可當帳單、工作和關係問題回到眼前，改變並沒有自動發生。\n\n落地智慧者提醒我們，思想與精神性的理解可以有意義，卻不能取代日常事務。若只在概念裡尋找答案，眼前可以處理的問題反而被放遠。\n\n挑一個你認同的觀點，看看它如何改變今天的一次溝通或安排。能與現實同行的理解，比聽起來深奧的結論更值得保留。",
+        "reflection_question": "你最近認同的一個道理，能落實在哪件看得見的小事上？",
+        "reader_connection_scene": "讀到一句令人震動的話，似乎突然看清了生活的方向；可當帳單、工作和關係問題回到眼前，改變並沒有自動發生。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-08",
+      "name_zh_tw_candidate": "轉化煉金者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "轉變中的失去與新生可以被審慎整理",
+        "explorable_strength": "辨識結束後仍值得保留的資源",
+        "core_tension": "害怕失去而控制人事物",
+        "integration_direction": "把握可選擇的部分，允許他人和情境改變",
+        "customer_narrative_short_draft": "一個熟悉的合作即將結束，心裡可能同時有不捨、焦慮與想立刻掌控安排的衝動。改變讓人看見，哪些東西其實無法全由自己決定。\n\n轉化煉金者談的是從變化中整理出新的價值，而不是要求人必須經歷痛苦才能成長。當害怕失去時，過度控制可能傷害信任，也讓自己無法看清現況。\n\n先確認仍可負責的事項，釐清需要告別與能夠保留的資源。接受協助與變動，不等於否定曾經投入的心力。",
+        "reflection_question": "面對一段變化，你想控制的是事實、他人的選擇，還是自己的不安？",
+        "reader_connection_scene": "一個熟悉的合作即將結束，心裡可能同時有不捨、焦慮與想立刻掌控安排的衝動。改變讓人看見，哪些東西其實無法全由自己決定。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-09",
+      "name_zh_tw_candidate": "策略洞察者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "洞察與策略能降低盲目決策",
+        "explorable_strength": "識別線索並比較可行路徑",
+        "core_tension": "把分析變成無止境的延後",
+        "integration_direction": "設定判斷期限並安排小規模驗證",
+        "customer_narrative_short_draft": "一份計畫列滿了風險分析，連很小的決定都還有三個備案。思考越完整，不一定就越容易開始。\n\n策略洞察者的價值在於看見關聯與可能後果，卻不需要承諾每一步都正確。害怕出錯時，分析也可能成為避免承擔選擇的方式。\n\n為一件低風險的事設定合理查核標準，再做一次可回頭的小測試。判斷力不是消除所有不確定，而是在不確定中保持可修正。",
+        "reflection_question": "有哪個決定，你其實已取得足夠資訊，可以進入試行階段？",
+        "reader_connection_scene": "一份計畫列滿了風險分析，連很小的決定都還有三個備案。思考越完整，不一定就越容易開始。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-10",
+      "name_zh_tw_candidate": "責任建構者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "責任與專業是能力，不是個人價值的全部",
+        "explorable_strength": "建立可信的制度和交付品質",
+        "core_tension": "把成果等同自我價值、長期過度承擔",
+        "integration_direction": "釐清責任分工，容許修正與休息",
+        "customer_narrative_short_draft": "專案快到期限時，有人習慣自動接下尚未完成的工作。事情終於完成，卻發現自己已經連續好幾晚沒有好好休息。\n\n責任建構者關注可靠的執行與專業能力，也提醒人不要把所有成敗都放進自我評價。高標準可以支持品質，過度自責卻可能耗盡持續做事的力量。\n\n試著把必要責任、可協助的部分和不屬於自己的工作分清楚；向團隊提出資源需求，也是成熟的專業表現。",
+        "reflection_question": "目前哪一項責任可以重新分工，而不必由你獨自證明能力？",
+        "reader_connection_scene": "專案快到期限時，有人習慣自動接下尚未完成的工作。事情終於完成，卻發現自己已經連續好幾晚沒有好好休息。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-11",
+      "name_zh_tw_candidate": "擴張探索者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "開放探索能帶來新的視野",
+        "explorable_strength": "接觸未知並帶回可運用的經驗",
+        "core_tension": "不斷轉向新鮮事而忽略承諾",
+        "integration_direction": "為探索保留範圍，也為重要關係負責",
+        "customer_narrative_short_draft": "收到一個新邀請，想到陌生的領域與人，心裡可能立刻亮起來；可是手上還有幾件尚未交付的承諾。\n\n擴張探索者珍視好奇與流動，也需要分辨探索和逃離的差異。新鮮感帶來能量，但若每次遇到困難就轉身離開，別人可能難以預期如何與你合作。\n\n先完成或重新協商既有承諾，再選一項值得嘗試的新方向。自由可以包含清楚的責任，而不是只能靠不斷離開維持。",
+        "reflection_question": "下一個想嘗試的機會，與你已答應的事情該如何並存？",
+        "reader_connection_scene": "收到一個新邀請，想到陌生的領域與人，心裡可能立刻亮起來；可是手上還有幾件尚未交付的承諾。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-12",
+      "name_zh_tw_candidate": "慈悲價值承載者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "溫柔照顧與接受照顧同樣重要",
+        "explorable_strength": "看見他人處境並提出有界限的支持",
+        "core_tension": "把犧牲當成善良的證明",
+        "integration_direction": "讓照顧有雙向選擇和資源分配",
+        "customer_narrative_short_draft": "有人總記得聚會裡誰沒有吃飽、誰沒有人傾聽，卻在被問「你需要什麼」時一時答不出來。關懷久了，也可能忘記自己的需要。\n\n慈悲價值承載者重視把理解轉成支持，但同理心不必用耗損來驗證。若一直替別人先想好安排，也可能忽略對方的選擇權。\n\n照顧之前先問對方是否需要，照顧之後也看看自己有沒有資源補充。能接收善意，和能給出善意一樣值得練習。",
+        "reflection_question": "你最近一次照顧別人時，有沒有替自己保留休息或求助的空間？",
+        "reader_connection_scene": "有人總記得聚會裡誰沒有吃飽、誰沒有人傾聽，卻在被問「你需要什麼」時一時答不出來。關懷久了，也可能忘記自己的需要。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-13",
+      "name_zh_tw_candidate": "可見領導者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "領導的價值在於建立清楚而可共同承擔的方向",
+        "explorable_strength": "提出方向並公開說明決策理由",
+        "core_tension": "害怕曝光或以權力掩蓋不安",
+        "integration_direction": "邀請回饋，讓責任和權限相稱",
+        "customer_narrative_short_draft": "團隊等待有人說明下一步時，站出來的人不一定是最確定答案的人；也可能只是願意讓大家知道目前如何判斷。\n\n可見領導者關注被看見與承擔方向的能力，但領導不等於永遠正確，也不代表需要掌控他人。怕犯錯可能讓人退到幕後，強裝確定也可能使不同意見難以出聲。\n\n說明自己的判斷依據，同時公開哪些地方仍待確認，讓參與者有提問和拒絕的空間。被尊重來自可信的行動，而非不可質疑的形象。",
+        "reflection_question": "假如你需要帶領一件事，哪些決定可以先公開討論？",
+        "reader_connection_scene": "團隊等待有人說明下一步時，站出來的人不一定是最確定答案的人；也可能只是願意讓大家知道目前如何判斷。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-14",
+      "name_zh_tw_candidate": "結構流動者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "善用流程讓價值得以持續流動",
+        "explorable_strength": "規劃步驟、整合資源與系統",
+        "core_tension": "陷入細節或難以信任夥伴",
+        "integration_direction": "分辨必要標準與可以授權的空間",
+        "customer_narrative_short_draft": "一份作業流程可以把差錯降到很低，也可能因每個環節都必須親自核對，讓整個團隊等在同一個位置。\n\n結構流動者重視秩序與系統化的能力，卻不必把每項細節都握在手中。完美主義若使人無法分工，原本用來支持工作的流程反而成了阻礙。\n\n選出真正影響安全與品質的標準，把其他部分交給適合的人試行，再一起檢討。好的結構讓人更能協作，而不是讓所有事情只能靠你。",
+        "reflection_question": "哪個流程已經足夠清楚，可以讓別人共同維護？",
+        "reader_connection_scene": "一份作業流程可以把差錯降到很低，也可能因每個環節都必須親自核對，讓整個團隊等在同一個位置。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-15",
+      "name_zh_tw_candidate": "美學創造者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "美感能幫助經驗被更細緻地理解",
+        "explorable_strength": "把風格、質地與感受融入創作",
+        "core_tension": "用比較或外界評價否認自己的眼光",
+        "integration_direction": "描述作品真正服務的對象與用途",
+        "customer_narrative_short_draft": "兩個設計都符合需求，一個看起來更耀眼，另一個讓使用的人感到自在。怎樣才算「有價值」，未必由最醒目的選項決定。\n\n美學創造者重視感官細節與創作的獨特性。若一直拿自己的作品和別人比較，可能忽略了作品真正帶給人的經驗。\n\n說明你選擇某種形式的理由，請使用者談談感受，而不只追逐讚美。美感可以被討論、被修正，也值得有清楚的使用情境。",
+        "reflection_question": "你喜歡的一種美感，究竟為誰解決了什麼生活中的問題？",
+        "reader_connection_scene": "兩個設計都符合需求，一個看起來更耀眼，另一個讓使用的人感到自在。怎樣才算「有價值」，未必由最醒目的選項決定。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-16",
+      "name_zh_tw_candidate": "扎根價值者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "實際可靠的貢獻能形成信任",
+        "explorable_strength": "照顧資源、維持可持續的日常運作",
+        "core_tension": "只求保險而拒絕有準備的改變",
+        "integration_direction": "用合理風險評估支持小幅升級",
+        "customer_narrative_short_draft": "在熟悉的工作裡，你知道哪些環節最容易出問題，因此總能提前準備。直到新方法出現，第一個念頭可能是「這樣會不會不夠穩」。\n\n扎根價值者看重務實與可信的結果。這份謹慎值得保留，但如果所有變動都被視為威脅，原本累積的經驗便難以幫助自己走進新情境。\n\n先列出不可妥協的安全條件，再挑一項可以試驗的改動。真正的穩定不是完全不變，而是有能力在變化中維持重要的事。",
+        "reflection_question": "哪項新方法可以用有限成本試行，而不必一次放棄熟悉的做法？",
+        "reader_connection_scene": "在熟悉的工作裡，你知道哪些環節最容易出問題，因此總能提前準備。直到新方法出現，第一個念頭可能是「這樣會不會不夠穩」。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-17",
+      "name_zh_tw_candidate": "實用靈性者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "將內在觀察轉成能被使用的生活語言",
+        "explorable_strength": "辨識想法背後的需要並提出具體做法",
+        "core_tension": "停留在抽象象徵而避開現實責任",
+        "integration_direction": "把理解連結到人、時間與行動",
+        "customer_narrative_short_draft": "聽過一場談生命意義的講座後，腦中出現很多新的詞，卻不知道明天與家人的溝通是否會有任何不同。\n\n實用靈性者象徵將內在觀察落實於日常，不代表擁有神秘知識或對別人的人生有解釋權。只談理想、不理現實，可能使深刻感受變成迴避責任的理由。\n\n不妨把一個體會翻譯成具體行動，例如更清楚地表達界線或履行一個承諾。深度不在語言多玄妙，而在生活是否因此更清楚。",
+        "reflection_question": "你最近的一個領悟，可以如何表現在一個普通的日常選擇中？",
+        "reader_connection_scene": "聽過一場談生命意義的講座後，腦中出現很多新的詞，卻不知道明天與家人的溝通是否會有任何不同。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-18",
+      "name_zh_tw_candidate": "柔性力量磁場者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "柔和影響力來自互相尊重而非控制",
+        "explorable_strength": "以安定表達、願景和合作凝聚力量",
+        "core_tension": "在關係裡爭奪主導或害怕失去",
+        "integration_direction": "將影響力改為邀請而非施壓",
+        "customer_narrative_short_draft": "有些人不必提高音量，就能讓大家注意到重要的問題；也有人越想得到配合，越容易讓場面緊繃。\n\n柔性力量磁場者描述的是可以被感受到的信任與影響，不是超自然磁力。當害怕失去位置或關係時，溫和的表達也可能悄悄變成控制。\n\n先詢問他人的想法，說明自己的理由，容許不同決定存在。真正可持續的影響力，讓人保有選擇，而不是必須順從。",
+        "reflection_question": "你想帶動的一件事，是否給了別人足夠清楚的拒絕空間？",
+        "reader_connection_scene": "有些人不必提高音量，就能讓大家注意到重要的問題；也有人越想得到配合，越容易讓場面緊繃。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-19",
+      "name_zh_tw_candidate": "快速革新者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "迅速提出新做法時仍須顧及後果",
+        "explorable_strength": "打破慣性並快速提出試驗",
+        "core_tension": "速度超過查核與溝通",
+        "integration_direction": "以短週期試行代替一次性大改",
+        "customer_narrative_short_draft": "看到一個低效率的流程，你也許能很快想到更簡潔的方法。問題是，使用這個流程的人是否已被詢問，風險是否真的被理解。\n\n快速革新者讓人看見果斷與突破的力量，但創新不等於可以省略必要檢查。若太急著證明新方法有效，原本可避免的錯誤也可能跟著放大。\n\n先設計一個可停止、可回退的小實驗，邀請受影響的人參與。速度可以用來縮短學習時間，不必用來逼迫所有人立刻改變。",
+        "reflection_question": "你最想更新的一項做法，能否先在安全範圍內試行？",
+        "reader_connection_scene": "看到一個低效率的流程，你也許能很快想到更簡潔的方法。問題是，使用這個流程的人是否已被詢問，風險是否真的被理解。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-20",
+      "name_zh_tw_candidate": "韌性執行者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "持續執行與耐力需保留調整能力",
+        "explorable_strength": "在長期任務中保持節奏和可靠性",
+        "core_tension": "因堅持舊方法而看不見替代道路",
+        "integration_direction": "定期檢視目標，必要時改用新途徑",
+        "customer_narrative_short_draft": "一件需要耐力的工作進入第三個月，進度雖慢，仍然有人每天穩穩向前。可是旁邊也可能出現更省力的方法。\n\n韌性執行者重視持續投入，不是要求永遠硬撐。當「我不能放棄」變成唯一標準，改變方法就容易被誤解成失敗。\n\n試著分開看待想守住的目標與可以調整的路徑。保留耐力，也保留休息和重新規劃的權利，成果才有機會被長久維持。",
+        "reflection_question": "你正在堅持的事情裡，哪一個方法其實可以更新？",
+        "reader_connection_scene": "一件需要耐力的工作進入第三個月，進度雖慢，仍然有人每天穩穩向前。可是旁邊也可能出現更省力的方法。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-21",
+      "name_zh_tw_candidate": "敏感美學靈魂",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "細膩感受能讓創作更貼近生活",
+        "explorable_strength": "捕捉情緒與美感中的細節",
+        "core_tension": "把他人評價等同創作價值",
+        "integration_direction": "建立自己的觀察與回饋標準",
+        "customer_narrative_short_draft": "一幅畫、一段旋律或一件手作品，可能因為一句無心的評論，讓創作者突然不願再展示。敏感帶來辨識細節的能力，也可能讓評價顯得特別響亮。\n\n敏感美學靈魂關心如何將感受轉成可交流的作品，而不是永遠獲得稱讚。別人的反應提供資訊，卻不能單獨決定你的表達是否值得存在。\n\n可以選擇可信任的回饋對象，先問作品是否傳達了你真正想說的事。接收建議時，也記得保存自己的觀看角度。",
+        "reflection_question": "當作品得到不同回應時，你想用什麼標準保留真正重要的部分？",
+        "reader_connection_scene": "一幅畫、一段旋律或一件手作品，可能因為一句無心的評論，讓創作者突然不願再展示。敏感帶來辨識細節的能力，也可能讓評價顯得特別響亮。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-22",
+      "name_zh_tw_candidate": "智慧接納者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "生活理解也需要包含對自己的寬容",
+        "explorable_strength": "以經驗和判斷整理複雜處境",
+        "core_tension": "對自己或他人提出過於嚴苛的標準",
+        "integration_direction": "允許不完美資訊與新的理解出現",
+        "customer_narrative_short_draft": "看到別人重複犯錯，很容易想起自己曾經付出的代價，於是忍不住提出嚴厲的建議。經驗能提供洞見，也可能不知不覺變成評斷。\n\n智慧接納者把成熟理解與溫柔態度放在一起。真正的辨識，不需要把自己放在較高的位置；自我批判若太強，也會妨礙看見已經做得足夠好的部分。\n\n試著把「應該」換成「有哪些選擇和條件」，讓自己與他人都能在現有能力下調整。接收新的觀點，也是智慧的一部分。",
+        "reflection_question": "你現在最嚴格要求自己的一件事，是否還容得下學習與犯錯？",
+        "reader_connection_scene": "看到別人重複犯錯，很容易想起自己曾經付出的代價，於是忍不住提出嚴厲的建議。經驗能提供洞見，也可能不知不覺變成評斷。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-23",
+      "name_zh_tw_candidate": "可靠貢獻者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "可靠貢獻的意義在於可驗證的實際幫助",
+        "explorable_strength": "守住承諾並把事情交付完成",
+        "core_tension": "因怕出錯而不敢承接新任務",
+        "integration_direction": "用清楚標準逐步擴大可承擔的範圍",
+        "customer_narrative_short_draft": "遇到需要有人收尾的工作，願意把細節處理好的人往往不顯眼；但事情是否真的完成，大家都看得見。\n\n可靠貢獻者強調穩當的實作能力，不是要人只做熟悉的任務。過度擔心風險時，也可能一再低估自己已具備的能力，讓新合作停在門口。\n\n不妨列出已能勝任的部分，對新的要求設定學習和支援條件。可靠不是零失誤，而是能清楚交代進度、承認限制並修正。",
+        "reflection_question": "最近哪個稍有挑戰的任務，你可以在取得支援後合理承接？",
+        "reader_connection_scene": "遇到需要有人收尾的工作，願意把細節處理好的人往往不顯眼；但事情是否真的完成，大家都看得見。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-24",
+      "name_zh_tw_candidate": "清晰連結者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "有界線的連結比無止境迎合更能長久",
+        "explorable_strength": "表達需求、促成互相理解",
+        "core_tension": "為維持關係而過度服務與難以拒絕",
+        "integration_direction": "把可提供的支持說清楚",
+        "customer_narrative_short_draft": "朋友請你幫忙介紹資源，你願意協助；沒想到訊息越來越多，最後連不相關的事情也都期待你處理。\n\n清晰連結者關注溝通與關係流動，也提醒人：連結不等於全天候待命。當拒絕變得困難，原本自然的互惠可能演變成一方長期付出。\n\n試著在一開始就說明範圍、時間與可以提供的協助。對方是否仍願意聯繫，不必成為你是否值得被尊重的測試。",
+        "reflection_question": "最近一段關係裡，哪個協助範圍需要說得更明白？",
+        "reader_connection_scene": "朋友請你幫忙介紹資源，你願意協助；沒想到訊息越來越多，最後連不相關的事情也都期待你處理。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-25",
+      "name_zh_tw_candidate": "直覺辨識者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "敏銳感受值得重視，但不能獨自充當事實",
+        "explorable_strength": "從細節和感受辨識需要確認的訊息",
+        "core_tension": "被強烈感覺帶走而忽略其他證據",
+        "integration_direction": "先區分感受、推測與已知事實",
+        "customer_narrative_short_draft": "某次交談後，你察覺對方似乎不太自在，心裡慢慢浮出許多可能的原因。也許觀察有所依據，也可能只是資訊還不完整。\n\n直覺辨識者象徵敏銳的察覺，並不表示能讀心或知道別人的真實想法。若把情緒當作結論，可能在尚未求證前就疏遠對方。\n\n先記下具體看到了什麼、自己感受到什麼，再用尊重的方式詢問。精準的辨識包含承認不知道，也包含願意接受不同答案。",
+        "reflection_question": "你最近的一個強烈直覺，哪些部分是事實，哪些還只是推測？",
+        "reader_connection_scene": "某次交談後，你察覺對方似乎不太自在，心裡慢慢浮出許多可能的原因。也許觀察有所依據，也可能只是資訊還不完整。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-26",
+      "name_zh_tw_candidate": "策略行動者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "策略思考的價值要在適時行動中被看見",
+        "explorable_strength": "比較方案並作出有條件的決策",
+        "core_tension": "因過度謹慎一直停在分析",
+        "integration_direction": "以明確門檻選擇並啟動小步驟",
+        "customer_narrative_short_draft": "一份研究資料已經整理得很清楚，下一步卻遲遲沒有決定，因為總能想到還沒查完的一項風險。\n\n策略行動者強調從理性判斷走向負責的實作。分析能提高決策品質，但若永遠等待所有疑點消失，方法再周全也無法知道實際效果。\n\n為方案訂出必要條件與停止點，從可逆的小試行開始。行動不必與理性對立，反而能提供下一輪分析真正需要的資料。",
+        "reflection_question": "你現在最需要的，是更多資料，還是一次設有界線的小試行？",
+        "reader_connection_scene": "一份研究資料已經整理得很清楚，下一步卻遲遲沒有決定，因為總能想到還沒查完的一項風險。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-27",
+      "name_zh_tw_candidate": "慈悲邊界者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "慈悲應與明確責任分界同行",
+        "explorable_strength": "提供溫暖且可持續的支持",
+        "core_tension": "替別人付出超出能力的時間、情緒或金錢",
+        "integration_direction": "先確認責任歸屬，再談如何協助",
+        "customer_narrative_short_draft": "身邊的人遇到困難，你想替他解決燃眉之急；但如果一再由你承擔所有成本，兩個人的選擇空間可能都變得更小。\n\n慈悲邊界者關注有力量的照顧，也提醒我們分辨「我願意支持」和「我必須替他承擔」。需要同理的處境，不等於每一項後果都該由你負責。\n\n先了解對方真正需要什麼、有哪些其他資源，再說出自己能給的部分。涉及健康、財務或人身安全時，仍須尋求適當專業支持。",
+        "reflection_question": "你想幫助的人，哪些責任仍應由他本人或專業資源承擔？",
+        "reader_connection_scene": "身邊的人遇到困難，你想替他解決燃眉之急；但如果一再由你承擔所有成本，兩個人的選擇空間可能都變得更小。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-28",
+      "name_zh_tw_candidate": "深度轉化者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "深度與改變能帶來洞察，但不需透過控制證明",
+        "explorable_strength": "整理複雜變化並保留重要價值",
+        "core_tension": "害怕失去而抓緊人或結果",
+        "integration_direction": "辨認能負責的部分，讓改變有協商空間",
+        "customer_narrative_short_draft": "一個長期合作的方向正在改變，曾經花很多力氣建立的做法卻不再適用。失落和不安有時會讓人更想緊握原來的安排。\n\n深度轉化者描述在劇烈變化中重新辨認價值的能力，不代表必須經歷危機，也不表示擁有操控結果的力量。若把所有變動都看作威脅，互信可能越來越薄。\n\n釐清可保留的承諾、需要調整的做法，以及應由各方自行決定的部分。放下過度控制，不等於放棄必要的保護與責任。",
+        "reflection_question": "當一個重要安排改變時，你最需要守住的是什麼？",
+        "reader_connection_scene": "一個長期合作的方向正在改變，曾經花很多力氣建立的做法卻不再適用。失落和不安有時會讓人更想緊握原來的安排。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-29",
+      "name_zh_tw_candidate": "靈感完成者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "創意透過完成才有機會進入交流",
+        "explorable_strength": "從靈感快速形成可分享的作品",
+        "core_tension": "追逐新念頭而不願進入收尾",
+        "integration_direction": "設定完成標準與交付日期",
+        "customer_narrative_short_draft": "寫了十個有趣的開頭，卻沒有一篇真正交到讀者手上。新的靈感總比修改舊稿來得興奮，但作品的生命往往從分享後才開始。\n\n靈感完成者重視創意與突破，也把持續做完當成同等重要的能力。若一到細節階段就轉換目標，真正可回收的回饋可能一直缺席。\n\n替手上的一件作品訂一個「足以分享」的標準，完成後再開放下一輪修改。不必等到完美才讓創作被看見。",
+        "reflection_question": "哪件未完成的作品，已經可以設定一個實際的交付時間？",
+        "reader_connection_scene": "寫了十個有趣的開頭，卻沒有一篇真正交到讀者手上。新的靈感總比修改舊稿來得興奮，但作品的生命往往從分享後才開始。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-30",
+      "name_zh_tw_candidate": "輕盈責任者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "責任可以帶著節奏與休息完成",
+        "explorable_strength": "規律投入並照顧長期目標",
+        "core_tension": "把辛苦當成價值的證明",
+        "integration_direction": "允許協助、休息與更有效率的方法",
+        "customer_narrative_short_draft": "每天都把待辦清單清空的人，可能很難在事情提早完成時真正休息，總覺得還應該再多做一點。\n\n輕盈責任者談的是有紀律地承擔，而不是以疲憊證明用心。自我要求若只有增加、沒有檢視，原本有意義的投入也可能被壓力吞沒。\n\n為工作訂出完成條件，也為休息留下正當的位置。若有人願意分擔，接受支援不會讓你的付出失去價值。",
+        "reflection_question": "哪一項責任其實已經做到足夠，可以安心結束今天的工作？",
+        "reader_connection_scene": "每天都把待辦清單清空的人，可能很難在事情提早完成時真正休息，總覺得還應該再多做一點。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-31",
+      "name_zh_tw_candidate": "落地思想者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "思想的深度可以與具體生活並存",
+        "explorable_strength": "觀察問題並轉化為實用解法",
+        "core_tension": "用抽象分析忽略身體與現實需求",
+        "integration_direction": "讓觀點回到人、資源和生活節奏",
+        "customer_narrative_short_draft": "閱讀、研究與討論可以帶來清晰感，但房間裡堆著未處理的雜事、身體已經疲倦時，再好的概念也難以替你休息。\n\n落地思想者重視理解事物的深度，同時提醒人：思想不需要與現實生活競爭。若凡事都先抽離分析，自己的感受和需要容易被排到最後。\n\n試著問一個很具體的問題：這項理解能幫助我改善哪個安排？讓思想服務生活，也讓生活經驗修正思想。",
+        "reflection_question": "哪個你研究很久的問題，可以先轉成一個實際行動？",
+        "reader_connection_scene": "閱讀、研究與討論可以帶來清晰感，但房間裡堆著未處理的雜事、身體已經疲倦時，再好的概念也難以替你休息。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-32",
+      "name_zh_tw_candidate": "自我滋養支持者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "支持他人之前也需要照顧自己的資源",
+        "explorable_strength": "提供真誠理解與穩定陪伴",
+        "core_tension": "靠他人的回應確認自身價值",
+        "integration_direction": "練習直接表達需要與接收支持",
+        "customer_narrative_short_draft": "朋友久久沒有回覆訊息，原本只是一般的等待，心裡卻慢慢浮出「是不是我做得不夠好」的疑問。\n\n自我滋養支持者關注深情與體貼，也提醒人把自我照顧放在關係裡。若自己的安定完全取決於別人是否回應，再多的付出也很難真正安心。\n\n可以表達關心，也可以允許彼此有不同節奏；同時替自己安排休息與能獨立完成的小事。被回覆不等於被認可的全部。",
+        "reflection_question": "最近一次等待別人回應時，你能如何先照顧自己的生活？",
+        "reader_connection_scene": "朋友久久沒有回覆訊息，原本只是一般的等待，心裡卻慢慢浮出「是不是我做得不夠好」的疑問。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-33",
+      "name_zh_tw_candidate": "升級穩定者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "持續可靠的基礎也應有更新空間",
+        "explorable_strength": "累積經驗並維持長期投入",
+        "core_tension": "因熟悉而停留在已不合適的位置",
+        "integration_direction": "用既有能力支持逐步轉型",
+        "customer_narrative_short_draft": "你已經把一件工作做到很熟練，每一步都不太需要思考；但環境改變後，原本的流程也許不再帶來同樣的幫助。\n\n升級穩定者重視耐心和多年累積的能力，與「穩定累積者」不同，它特別關注何時需要更新原有基礎。若把改變當成否定過去，經驗反而可能成為停住的理由。\n\n先盤點可保留的技能，再找出一項值得學習的新方法。升級不必是突然翻轉，也可以是讓老本領重新有用。",
+        "reflection_question": "哪一項熟悉的能力，現在需要搭配新的學習才能繼續發揮？",
+        "reader_connection_scene": "你已經把一件工作做到很熟練，每一步都不太需要思考；但環境改變後，原本的流程也許不再帶來同樣的幫助。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-34",
+      "name_zh_tw_candidate": "中心敏感者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "敏銳的感受需要有自己的觀察中心",
+        "explorable_strength": "捕捉氣氛變化並保持同理",
+        "core_tension": "過度受他人情緒牽動",
+        "integration_direction": "將他人的狀態與自己的感受分開",
+        "customer_narrative_short_draft": "走進一場氣氛緊繃的聚會，有人可能立刻變得不自在，甚至以為自己做錯了什麼。但現場的沉默，也可能有許多與自己無關的原因。\n\n中心敏感者談的是對環境細節的敏銳，而不是能讀取神秘能量。若總把別人的反應帶回身上，原本的感受力可能變成持續的疲憊。\n\n先辨認自己確實觀察到的事，再問自己需要什麼；在不清楚時，不急著替他人的心情下結論。能關心現場，也能保留自己的位置。",
+        "reflection_question": "當周遭氣氛改變時，你如何提醒自己不必承擔所有人的情緒？",
+        "reader_connection_scene": "走進一場氣氛緊繃的聚會，有人可能立刻變得不自在，甚至以為自己做錯了什麼。但現場的沉默，也可能有許多與自己無關的原因。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-35",
+      "name_zh_tw_candidate": "真實磁場者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "真誠表達比迎合更有助於互信",
+        "explorable_strength": "以自然的溝通建立合作機會",
+        "core_tension": "依賴掌聲或害怕被拒絕",
+        "integration_direction": "在回饋中保留真實立場",
+        "customer_narrative_short_draft": "一場分享結束後，有人稱讚你，也有人提出不同看法。若只記得最冷淡的一張臉，可能就會忘記自己原本想表達什麼。\n\n真實磁場者以人際表達與合作吸引力作象徵，不是承諾只要做自己就會得到任何成果。當外界反應變成唯一標準，說話就容易越來越不像自己。\n\n保留願意修正的態度，同時說清楚你的立場。能被不同意也能繼續對話，比討好每個人更能建立可靠的連結。",
+        "reflection_question": "哪一個重要觀點，你想在不失禮的前提下更真實地說出來？",
+        "reader_connection_scene": "一場分享結束後，有人稱讚你，也有人提出不同看法。若只記得最冷淡的一張臉，可能就會忘記自己原本想表達什麼。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-36",
+      "name_zh_tw_candidate": "落地分析者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "分析能力需要轉成可檢查的實際改進",
+        "explorable_strength": "拆解問題並找到關鍵變數",
+        "core_tension": "反覆思考而耽誤行動",
+        "integration_direction": "選擇一個指標追蹤小改變",
+        "customer_narrative_short_draft": "一份報表指出三個可能問題，分析得再細，也還不知道改哪一個最有幫助。理解問題和處理問題之間，仍隔著一個小決定。\n\n落地分析者聚焦把邏輯與判斷投入實務，與策略行動者偏重選擇方向不同，它更在意找出能改善流程的具體證據。若每項資料都想查到完美，改善可能一直沒有開始。\n\n挑一個可以觀察的指標，試做一次小調整，再回來比較結果。分析的價值，不在永遠正確，而在能幫助人持續修正。",
+        "reflection_question": "你手上的哪個問題，可以先用一個小實驗收集實際結果？",
+        "reader_connection_scene": "一份報表指出三個可能問題，分析得再細，也還不知道改哪一個最有幫助。理解問題和處理問題之間，仍隔著一個小決定。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-37",
+      "name_zh_tw_candidate": "智慧服務者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "生命智慧可用於服務生活而非取代現實",
+        "explorable_strength": "分享可理解的經驗與實際支持",
+        "core_tension": "以抽離態度否定情感或生活需求",
+        "integration_direction": "用尊重和具體行動實踐理解",
+        "customer_narrative_short_draft": "有人談起挫折時，最需要的也許是被好好聽見，卻收到一長串關於放下執著的道理。觀點可能有用，時機卻未必合適。\n\n智慧服務者關心洞察如何成為支持，而不是誰比誰更明白人生。若以精神性的語言避開情緒或物質需求，容易讓本來能提供的幫助變得遙遠。\n\n先問對方需要什麼，再決定是否分享想法；若只是日常的小事，就先處理小事。智慧不必高高在上，也不必否定現實生活。",
+        "reflection_question": "下一次想給建議時，你可以先問出哪個真正有幫助的問題？",
+        "reader_connection_scene": "有人談起挫折時，最需要的也許是被好好聽見，卻收到一長串關於放下執著的道理。觀點可能有用，時機卻未必合適。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-38",
+      "name_zh_tw_candidate": "開放能量者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "開放互動不必依賴神秘力量的宣稱",
+        "explorable_strength": "以在場、傾聽與合作創造交流",
+        "core_tension": "把感受神秘化或與人疏離",
+        "integration_direction": "用清楚語言描述可觀察的影響",
+        "customer_narrative_short_draft": "有時一場談話之所以讓人感到放鬆，是因為雙方願意專注傾聽，而不是任何人具有看不見的特殊力量。\n\n開放能量者中的「能量」只是象徵交流與在場的感受，並不表示能改變他人身體、財運或命運。若過度神秘化自身影響，反而可能讓人不敢提出質疑。\n\n把自己實際做了什麼說清楚，例如認真聽、適時提問、尊重沉默。越能被理解和檢驗的互動，越容易成為平等的支持。",
+        "reflection_question": "你想帶給別人的良好感受，可以用哪些可觀察的行動來描述？",
+        "reader_connection_scene": "有時一場談話之所以讓人感到放鬆，是因為雙方願意專注傾聽，而不是任何人具有看不見的特殊力量。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-39",
+      "name_zh_tw_candidate": "聚焦火焰者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "熱情透過聚焦才能持續產生作品",
+        "explorable_strength": "以創造力投入一個清楚目標",
+        "core_tension": "隨衝動轉向而消耗自己",
+        "integration_direction": "減少同時進行的目標並保留節奏",
+        "customer_narrative_short_draft": "手邊同時有三個想開始的計畫，最初每個都讓人熱血沸騰；過一段時間，卻發現自己很難說清楚哪件最重要。\n\n聚焦火焰者以火焰象徵熱情和創造力，而不是不可控制的天賦或力量。若每個新點子都立刻投入，疲憊往往先於完成到來。\n\n替目前最在乎的事情保留固定時間，其他靈感先放進備忘錄。聚焦不是壓抑創意，而是讓投入有足夠空間形成結果。",
+        "reflection_question": "如果只能先完成一件事，你願意把注意力放在哪個目標？",
+        "reader_connection_scene": "手邊同時有三個想開始的計畫，最初每個都讓人熱血沸騰；過一段時間，卻發現自己很難說清楚哪件最重要。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-40",
+      "name_zh_tw_candidate": "溫柔架構者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "負責任的規劃也能以溫柔方式進行",
+        "explorable_strength": "建立流程並照顧參與者的承受度",
+        "core_tension": "把所有壓力扛在自己身上",
+        "integration_direction": "讓結構同時安排合作與休息",
+        "customer_narrative_short_draft": "一個活動從場地到人員都安排妥當，負責人卻因為擔心任何疏漏，整晚無法真正參與其中。\n\n溫柔架構者重視規劃、責任和執行，也看見人在結構裡的需要。若把每件事都視為自己的責任，原本為眾人搭建的秩序就可能使自己無法呼吸。\n\n在流程表上寫進可分工的工作、備援安排，以及休息時間。好的架構不只承受事情，也照顧完成事情的人。",
+        "reflection_question": "你最近安排的一項工作，是否也為自己安排了支援與喘息？",
+        "reader_connection_scene": "一個活動從場地到人員都安排妥當，負責人卻因為擔心任何疏漏，整晚無法真正參與其中。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-41",
+      "name_zh_tw_candidate": "行動遠見者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "前瞻的想法需要以當下行動測試",
+        "explorable_strength": "看見長遠方向並安排近期步驟",
+        "core_tension": "為未來擔憂而不敢開始",
+        "integration_direction": "從最能驗證方向的小任務著手",
+        "customer_narrative_short_draft": "討論五年後的改變時，願景可以非常清楚；但當話題回到這個月，大家卻不知道第一項工作要交給誰。\n\n行動遠見者關注長遠視野如何走進眼前，與單純想像可能性不同，重點在可實行的下一步。若一直想把所有未來風險先處理完，方向可能永遠停留在紙上。\n\n把願景拆成一個近期目標，確認負責人和回顧時間；新的資訊出現後再修改。看得遠，不代表需要宣稱知道未來會發生什麼。",
+        "reflection_question": "你目前最重視的長期方向，能先從哪個可衡量的小步驟開始？",
+        "reader_connection_scene": "討論五年後的改變時，願景可以非常清楚；但當話題回到這個月，大家卻不知道第一項工作要交給誰。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-42",
+      "name_zh_tw_candidate": "自我認可深度者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "自我理解不必等到外界給予最終認可",
+        "explorable_strength": "深入觀察自身判斷與需要",
+        "core_tension": "在自我分析中陷入無止盡懷疑",
+        "integration_direction": "以實際經驗校正自我評價",
+        "customer_narrative_short_draft": "一次重要對話後，你可能反覆回想自己說的每句話，試圖判斷是不是哪裡不夠好。反省能帶來清晰，也可能越想越難相信自己的判斷。\n\n自我認可深度者著重深入思考與直覺辨識，但「深度」不需要成為優於別人的標籤。若不斷要求自己找到完美解釋，內在的聲音反而更難被聽清楚。\n\n寫下已知的事實、可以改進的地方，以及已經完成的努力。接受回饋，但不要把每次不確定都當成自我價值的考試。",
+        "reflection_question": "今天有哪些具體行動，足以提醒你不必靠反覆否定自己才能進步？",
+        "reader_connection_scene": "一次重要對話後，你可能反覆回想自己說的每句話，試圖判斷是不是哪裡不夠好。反省能帶來清晰，也可能越想越難相信自己的判斷。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-43",
+      "name_zh_tw_candidate": "協作革新者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "革新可以透過協作而非對抗展開",
+        "explorable_strength": "提出原創方法並容納不同專業",
+        "core_tension": "因抗拒制度而拒絕一切限制",
+        "integration_direction": "分辨必要規範與可重新設計的部分",
+        "customer_narrative_short_draft": "遇到一條看似不合理的規則，直覺可能是立刻推翻；但規則背後或許也保護著某些尚未被看見的需求。\n\n協作革新者關注突破慣性和重新設計的能力。當反對本身變成目標，好的新點子也可能因缺乏合作而難以實現。\n\n先了解限制原本要解決什麼，再邀請受影響的人共同測試替代方案。能協商的改變，往往比單方面推翻更有延續性。",
+        "reflection_question": "你最想改革的一項制度，哪些部分值得保留，哪些可以邀請他人一起重做？",
+        "reader_connection_scene": "遇到一條看似不合理的規則，直覺可能是立刻推翻；但規則背後或許也保護著某些尚未被看見的需求。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    },
+    {
+      "code": "S6-44",
+      "name_zh_tw_candidate": "共同創造領導者",
+      "content_zh_tw_candidate": {
+        "symbolic_core": "有方向的領導可以是共同創造而非獨自承擔",
+        "explorable_strength": "凝聚願景並分配角色與責任",
+        "core_tension": "把團隊成果與個人負擔全部攬下",
+        "integration_direction": "把決策透明化，讓不同聲音有位置",
+        "customer_narrative_short_draft": "一個跨團隊專案開始時，所有人都看向同一位發起者；每件大小事都由他決定，最初方便，久了卻讓大家難以真正參與。\n\n共同創造領導者談的是把方向化為能共同承擔的工作，而不是擁有特殊使命或天生的領導權。若把責任都留在自己身上，孤獨與壓力可能悄悄增加。\n\n清楚分享目標，邀請夥伴決定各自能負責的範圍，也讓不同意見影響計畫。能夠接收別人的能力，正是合作的一部分。",
+        "reflection_question": "你正在帶動的一件事，有哪些決定可以真正交還團隊共同完成？",
+        "reader_connection_scene": "一個跨團隊專案開始時，所有人都看向同一位發起者；每件大小事都由他決定，最初方便，久了卻讓大家難以真正參與。",
+        "narrative_editorial_intent": "假設生活場景 → 原型特定的象徵意義與非必然張力 → 可自主選擇的整合方向；不得斷言讀者實際經驗或預測金錢成果"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "customer_publishable": false
+    }
+  ]
+}

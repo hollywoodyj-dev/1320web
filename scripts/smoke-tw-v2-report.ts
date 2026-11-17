@@ -52,6 +52,13 @@ import {
   s4PendingCount,
   s4RequiredSafetyBoundary,
 } from "../lib/gzh/tw-v2-s4-library";
+import {
+  s5ApprovedCount,
+  s5CandidateFor,
+  s5CustomerPublishableCodes,
+  s5EditorialCandidateCount,
+  s5PendingCount,
+} from "../lib/gzh/tw-v2-s5-library";
 
 function assert(condition: unknown, label: string) {
   if (!condition) {
@@ -265,6 +272,13 @@ assert(
   "S4 safety sentence matches the locked wording",
 );
 assert(s4CandidateFor("S1-01") === null, "S4 library does not invent S1 codes");
+assert(s5EditorialCandidateCount() === 44 && s5PendingCount() === 44 && s5ApprovedCount() === 0, "S5 has 44 pending candidates");
+assert(s5CustomerPublishableCodes().length === 0, "S5 candidates stay out of customer publish");
+assert(s5CandidateFor("S5-04")?.name_zh_tw_candidate === "結構使命" && !s5CandidateFor("S5-04")?.reviewer, "S5-04 calibration name stays unapproved");
+assert(s5CandidateFor("S5-26")?.name_zh_tw_candidate === "可能性使命", "S5-26 possibility name present");
+assert(s5CandidateFor("S5-33")?.name_zh_tw_candidate === "慈悲領導使命", "S5-33 compassion name present");
+assert(s5CandidateFor("S5-01")?.code === "S5-01" && s5CandidateFor("S5-44")?.code === "S5-44", "S5 spans 01 to 44");
+assert(s5CandidateFor("S1-01") === null, "S5 library does not invent S1 codes");
 assert(sampleFullDifference().length >= 6, "sample and full difference table exists");
 
 const page = fs.readFileSync(new URL("../app/(site)/tw-v2-report/page.tsx", import.meta.url), "utf8");

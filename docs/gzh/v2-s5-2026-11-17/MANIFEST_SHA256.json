@@ -1,0 +1,78 @@
+{
+  "package_id": "1320-zhTW-s5-44-review-2026-11-17-rc1",
+  "classification": "INTERNAL_REVIEW_NOT_APPROVED",
+  "created_on": "2026-11-17",
+  "module": "S5",
+  "locale": "zh-TW",
+  "records": 44,
+  "source_field_anchors": 308,
+  "official_approved": 0,
+  "customer_publishable": false,
+  "files": [
+    {
+      "name": "NOVA_S5_44_HANDOFF.md",
+      "bytes": 2426,
+      "sha256": "cef53a0c5da10f315fc2d18b5709e313682cdeabc203f73ee513b351e4721a16"
+    },
+    {
+      "name": "README_FIRST.md",
+      "bytes": 1511,
+      "sha256": "b1a55cc8dea24df8d5492c8666c51a37739c19e7e7049604e0a3e838a08d2243"
+    },
+    {
+      "name": "S5_44_CALIBRATION_FIXTURES_INTERNAL.json",
+      "bytes": 1014,
+      "sha256": "0eb4e7a773b4749ef9f16cb102f15a0433c9c398226983d6f8e35e574ef80591"
+    },
+    {
+      "name": "S5_44_CODES_ZH_TW_EDITORIAL_CANDIDATE.json",
+      "bytes": 288135,
+      "sha256": "50d6d3b8e7f71d7f793045b8d7f2703e17df13f50b0dbeda7183b13122a11aa8"
+    },
+    {
+      "name": "S5_44_CONTINUOUS_READING_NOTES.md",
+      "bytes": 3446,
+      "sha256": "682872cb2d475cebb6000cc3e5b90375cd06fd6393b450e35e85fd3ec7278a89"
+    },
+    {
+      "name": "S5_44_EDITORIAL_TRACKER_RC1.csv",
+      "bytes": 19691,
+      "sha256": "78da661c04d7cb5088092ae3bd6697595b95af63b22b8c16121339ed6073cff1"
+    },
+    {
+      "name": "S5_44_PROTECTED_PREVIEW_PROJECTION.json",
+      "bytes": 70728,
+      "sha256": "ab753c32166b5a36253d1af8028213f0ab288df0c86ef7a201d0ab3f149f12c6"
+    },
+    {
+      "name": "S5_44_QA_SUMMARY.md",
+      "bytes": 2641,
+      "sha256": "30d05224d0a16b425901e4b66d3e6ffdcb8bb9274325fa218c96d412c77173eb"
+    },
+    {
+      "name": "S5_44_REVIEW_READABLE.txt",
+      "bytes": 60510,
+      "sha256": "c85d6b852ba10ecb0fe29ed27991a4664342ede3ee6df15838248fc2c7832627"
+    },
+    {
+      "name": "S5_44_SOURCE_AND_SAFETY_NOTES.md",
+      "bytes": 4397,
+      "sha256": "6f0f67a89758d76b1f5963aceeb2a5bcb4b7456de9d601e00cba92f9b8ca06ba"
+    },
+    {
+      "name": "S5_44_SOURCE_FIELD_ANCHORS_INTERNAL.json",
+      "bytes": 155457,
+      "sha256": "1c23ec6ec46e9e6cd3b02c507135784c3846adc43b101280412cc6d4504069e2"
+    },
+    {
+      "name": "S5_44_台繁獨立短篇逐碼審閱候選_RC1.md",
+      "bytes": 60507,
+      "sha256": "2152d9b6020ba84cbd0eaa8956289363940cccc087b37fb96957f1fc7ee364cd"
+    },
+    {
+      "name": "S5_SOURCE_DATABASE_V4_ORIGINAL_INTERNAL.md",
+      "bytes": 82106,
+      "sha256": "6e068b1d5abb0303a58bc6b2a3da26ec1e1b676c1bb3b4cdc1e3dc9720d09ba0"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "package_id": "1320-zhTW-allmodules-definition-first-standard-2026-11-18-v1-internal",
+  "package_type": "editorial_standard_and_single_code_example",
+  "scope": {
+    "modules": [
+      "S0",
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9"
+    ],
+    "expected_total_codes": 258,
+    "example_codes": [
+      "S1-18"
+    ],
+    "note": "This package contains a standard and one fully drafted example, NOT all 258 expanded definitions."
+  },
+  "locale": "zh-TW",
+  "status": "INTERNAL_EDITORIAL_PROPOSAL",
+  "customer_publishable": false,
+  "existing_release_state_unchanged": true,
+  "required_fields": [
+    "one_sentence_definition",
+    "complete_definition",
+    "symbolic_meaning",
+    "role_within_module",
+    "reflective_purpose",
+    "distinct_from",
+    "strength_and_possibilities",
+    "tensions_and_limits",
+    "meaningful_shift",
+    "everyday_examples",
+    "integration_practice",
+    "reflection_questions",
+    "misreading_and_boundaries",
+    "source_field_anchors",
+    "source_file_sha256"
+  ],
+  "example": {
+    "code": "S1-18",
+    "module": "S1",
+    "name_zh_tw_candidate": "轉化者",
+    "name_en_source": "The Transformer",
+    "source_file": "1320_S1_Soul_Origin_Content_Database_v2_EN.md",
+    "source_file_sha256": "a22a1036dec8b741cf5a67496c3bf49443d847cff142f5d1b04a3fb90a800289",
+    "source_field_anchors": [
+      {
+        "source_field": "Soul Traits",
+        "sha256": "c1664a626d615059f6fb734fa77f387e183b4923eb8d46ef99e9b9325c809bc1",
+        "internal_record_key": "S1-18/Soul Traits"
+      },
+      {
+        "source_field": "Strengths",
+        "sha256": "34a696268832080f824ca60aeeabec4b05a267b6cb04954b4a06b86f6804e121",
+        "internal_record_key": "S1-18/Strengths"
+      },
+      {
+        "source_field": "Shadow Frequency",
+        "sha256": "d5b6ac391bc8df687d2eb1a12ddb49fc7cc1ca9d06b6ffd706a88a1799741b57",
+        "internal_record_key": "S1-18/Shadow Frequency"
+      },
+      {
+        "source_field": "Core Lesson",
+        "sha256": "85ebea287a8b8bc49c0aa466b142252a7a01d446a747ad5b5ad4691167fe9888",
+        "internal_record_key": "S1-18/Core Lesson"
+      },
+      {
+        "source_field": "Mission Direction",
+        "sha256": "4f65a75fe19f29782ebf3f7bb3f19085534a62f705cdfa5929cd47cc2ff83a9b",
+        "internal_record_key": "S1-18/Mission Direction"
+      }
+    ],
+    "one_sentence_definition": "轉化者象徵一種在變化中重新理解經驗、調整舊有方式，讓下一步有機會以不同形式展開的取向。",
+    "complete_definition": "在 1320 的 S1「靈魂本源」中，「轉化者」不是指某個人注定要經歷重大危機，也不是說他天生比別人成長得快。它是一個象徵性的觀察角度：當你發現舊有做法、關係模式或自我理解逐漸不再適合時，你是否願意停下來，辨認究竟發生了什麼變化，並嘗試用新的方式回應？\n\n「轉化」不只是丟掉舊的、追求新的。有時候，它是重新理解一次挫折，把原本只感到羞愧的經驗，整理成對自己需要的認識；有時候，它是在熟悉的方法失效後，不急著推翻全部，而是留住仍有價值的部分，再逐步修正不再合適的地方。\n\n因此，這個原型真正重視的不是破壞與重生的戲劇性，而是**辨識、消化、重組與選擇**。一個安靜而持續的小改變，同樣可以構成深刻的轉化。",
+    "symbolic_meaning": "它代表「經驗可以重新被理解，生活方式也可以被修訂」的可能性。原始資料把這個原型連結到對變化的敏感、面對陰影議題的能力，以及重塑生活結構的傾向；在安全的現代中文語境裡，我們把這些內容解讀為**留意變化、願意面對難題、重新組織做法**，而不是宣稱能感知超自然能量或治療他人。\n\nS1-18 與 S1-27「重生者」有交會，但焦點不同：**轉化者重在經驗如何被重新理解並形成改變；重生者的來源主題則更聚焦在遭遇斷裂後如何重建。** 兩者都不能被解讀為「讀者必然受過重創」。",
+    "role_within_module": "在 S1 靈魂本源這一層，協助讀者觀察面對改變時的態度與選擇。",
+    "reflective_purpose": "辨認哪些經驗值得保留，哪些做法需要更新；成長不必以痛苦證明。",
+    "distinct_from": [
+      {
+        "code": "S1-27",
+        "name": "重生者",
+        "distinction": "S1-18 著重經驗轉化與重新理解；S1-27 的原始重點更偏向斷裂後的重建。"
+      }
+    ],
+    "strength_and_possibilities": "願意重新檢視習以為常的安排，並嘗試將經驗整理成下一步做法。",
+    "tensions_and_limits": "可能過度追求劇烈改變，將痛苦或不停翻新當成進步證據；此僅為可自我檢視的可能性。",
+    "meaningful_shift": "改變的深度不取決於痛苦的強度；也可以採取緩慢、可逆的更新。",
+    "everyday_examples": [
+      {
+        "domain": "工作",
+        "hypothetical": true,
+        "scenario": "舊流程面對新需求不再適用",
+        "reflection": "辨認有效的舊做法、試行局部改變，不必推翻全部。"
+      },
+      {
+        "domain": "關係",
+        "hypothetical": true,
+        "scenario": "雙方慣用的衝突回應方式失效",
+        "reflection": "重新理解彼此需要；若涉及威脅或傷害，安全優先。"
+      },
+      {
+        "domain": "自我照顧",
+        "hypothetical": true,
+        "scenario": "將痛苦或徹底翻新視為成長條件",
+        "reflection": "休息、求助和小調整同樣可能是重要改變。"
+      }
+    ],
+    "integration_practice": "列出一件事值得保留、可以停止、願意安全小試的一部分。",
+    "reflection_questions": [
+      "我是否曾把痛苦或大幅改變當成成長的唯一證據？",
+      "哪個曾經有效的習慣，如今已不太適合我？",
+      "如果不必否定過去，我願意從哪一個安全、可逆的小步驟開始？"
+    ],
+    "misreading_and_boundaries": [
+      "象徵原型，不是人格或精神診斷",
+      "不保證感知能量、療癒能力或人生遭逢危機",
+      "不要求以受苦換取成長",
+      "所有生活情境都是虛構對照，不代表讀者履歷"
+    ],
+    "full_example_markdown": "S1_18_Transformer_Definition_First_Example_RC1.md",
+    "revision_relation": "ADDITIVE_DRAFT_NOT_REPLACING_S1_RC3_2",
+    "editorial_status": "PENDING_REVIEW",
+    "reviewer": null,
+    "approved_at": null,
+    "customer_publishable": false,
+    "live_release_approved": false,
+    "source_text_internal": "INTERNAL_SEPARATE_SOURCE_DATABASE_ONLY"
+  }
+}

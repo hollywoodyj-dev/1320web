@@ -66,6 +66,18 @@ import {
   s6EditorialCandidateCount,
   s6PendingCount,
 } from "../lib/gzh/tw-v2-s6-library";
+import {
+  s7ApprovedCount,
+  s7CandidateFor,
+  s7CustomerPublishableCodes,
+  s7EditorialCandidateCount,
+  s7PendingCount,
+} from "../lib/gzh/tw-v2-s7-library";
+import {
+  definitionFirstExample,
+  definitionFirstRequiredFields,
+  definitionFirstStandardMeta,
+} from "../lib/gzh/tw-v2-definition-first";
 
 function assert(condition: unknown, label: string) {
   if (!condition) {
@@ -294,6 +306,21 @@ assert(s6CandidateFor("S6-14")?.name_zh_tw_candidate === "結構流動者", "S6-
 assert(s6CandidateFor("S6-23")?.name_zh_tw_candidate === "可靠貢獻者", "S6-23 contribution name present");
 assert(s6CandidateFor("S6-01")?.code === "S6-01" && s6CandidateFor("S6-44")?.code === "S6-44", "S6 spans 01 to 44");
 assert(s6CandidateFor("S1-01") === null, "S6 library does not invent S1 codes");
+assert(s7EditorialCandidateCount() === 7 && s7PendingCount() === 7 && s7ApprovedCount() === 0, "S7 has 7 pending candidates");
+assert(s7CustomerPublishableCodes().length === 0, "S7 candidates stay out of customer publish");
+assert(s7CandidateFor("S7-00")?.name_zh_tw_candidate === "回到自身者" && !s7CandidateFor("S7-00")?.reviewer, "S7-00 calibration name stays unapproved");
+assert(s7CandidateFor("S7-01")?.name_zh_tw_candidate === "自我信任者", "S7-01 trust name present");
+assert(s7CandidateFor("S7-02")?.name_zh_tw_candidate === "邊界選擇者", "S7-02 boundary name present");
+assert(s7CandidateFor("S7-06")?.code === "S7-06", "S7 spans 00 to 06");
+assert((s7CandidateFor("S7-00")?.content_zh_tw_candidate?.everyday_examples?.length ?? 0) >= 2, "S7 definition-first keeps at least two examples");
+assert(s7CandidateFor("S1-01") === null, "S7 library does not invent S1 codes");
+const defMeta = definitionFirstStandardMeta();
+assert(defMeta.officialApprovedCount === 0 && defMeta.customerPublishable === false, "definition-first standard stays unapproved");
+assert(defMeta.exampleCode === "S1-18" && definitionFirstRequiredFields().length >= 13, "definition-first keeps S1-18 example and required fields");
+const defExample = definitionFirstExample();
+assert(defExample.editorial_status === "PENDING_REVIEW" && !defExample.reviewer && defExample.customer_publishable === false, "S1-18 definition-first example stays pending");
+assert(defExample.one_sentence_definition.includes("轉化者"), "S1-18 definition-first keeps transformer wording");
+assert(s1CandidateFor("S1-18")?.name_zh_tw_candidate === "轉化者" && s1CandidateFor("S1-18")?.editorial_status === "PENDING_REVIEW", "S1 RC3.2 pack is not overwritten by definition-first example");
 assert(sampleFullDifference().length >= 6, "sample and full difference table exists");
 
 const page = fs.readFileSync(new URL("../app/(site)/tw-v2-report/page.tsx", import.meta.url), "utf8");

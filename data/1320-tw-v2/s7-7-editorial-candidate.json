@@ -1,0 +1,321 @@
+{
+  "package_id": "1320-zhTW-s7-7-narrative-2026-11-18-rc1",
+  "locale": "zh-TW",
+  "module": "S7",
+  "status": "PENDING_REVIEW_NOT_APPROVED",
+  "snapshot_id": "1320-zhTW-s7-7-narrative-2026-11-18-rc1",
+  "source_file": "1320_S7_Soul_Sovereignty_Content_Database_v1_EN.md",
+  "official_approved_count": 0,
+  "note": "S7 7 筆定義先行 Narrative RC1。全部 PENDING_REVIEW，非正式核准。主權非拒絕責任；威脅／傷害時安全與專業優先。",
+  "editorial_standard_aligns_with": "1320-zhTW-allmodules-definition-first-standard-2026-11-18-v1-internal",
+  "records": [
+    {
+      "code": "S7-00",
+      "module": "S7",
+      "module_name_zh_tw": "靈魂主權",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "回到自身者",
+      "name_en_source": "The Returning Self",
+      "source_code": "S7-00",
+      "source_file": "1320_S7_Soul_Sovereignty_Content_Database_v1_EN.md",
+      "source_section_sha256": "625762809f8d6ff88afd3b4337cfa6308fc7bd73f3df1e1d6efd7461419a52c5",
+      "content_zh_tw_candidate": {
+        "one_sentence_definition": "在回應外界以前，先重新聽見自己的感受與選擇。",
+        "complete_definition": "「回到自身者」象徵的是一種先與自己保持連結、再決定如何回應外界的能力。當周圍的人有期待、情緒或急迫要求時，這個原型並不鼓勵你立刻退開，也不要求你立刻答應；它提醒你，回應之前仍然可以有一段屬於自己的停頓。那段停頓讓你分辨：現在發生了什麼、我實際感受到什麼、哪些是他人的需要、哪些才是我願意承擔的部分。",
+        "role_and_purpose": "在 S7「靈魂主權」中，它的作用是將選擇的起點帶回自身。它要探索的不是如何不受任何人影響，而是如何在與人連結時，仍保留確認自身狀態的空間。它和 S7-01「自我信任者」不同：S7-00 先練習停下來與自己接觸；S7-01 更關注在聽取意見後，能否相信自己的判斷並作決定。",
+        "explorable_strength": "覺察自己的反應、為決定留出緩衝、在壓力之下重新整理優先順序；也有助於修復被過度期待擠壓的個人界線。",
+        "core_tension": "停頓可能變成完全不參與，沉靜可能被當成拒絕溝通的理由。真正的主權不必靠消失或切斷關係來證明。",
+        "meaningful_shift": "我可以關心他人，也可以先確認自己；暫停不是放棄連結，而是讓回應更真實。",
+        "everyday_examples": [
+          {
+            "title": "團隊裡的急件",
+            "narrative": "假設同事在會議結束前突然要求你接下一項工作。你可能先感到緊張，想立刻說「好」。若從「回到自身者」的角度觀察，可以先問清楚期限與工作量，再回答自己能負責的範圍。這不是冷漠，而是把回應建立在真實能力上。",
+            "is_hypothetical": true
+          },
+          {
+            "title": "關係裡的情緒",
+            "narrative": "假設一位朋友在情緒激動時傳來許多訊息，你很在乎對方，卻也需要一點時間整理。你可以清楚表示自己何時能好好回覆，而不是被急迫感推著立即承諾。若涉及實際危險，則以安全協助與必要資源為先。",
+            "is_hypothetical": true
+          }
+        ],
+        "reflection_questions": [
+          "最近有哪次我太快回應了別人的期待，卻沒有先問自己能否承擔？",
+          "下一次感到被催促時，我願意留給自己哪一個簡短、可行的停頓？"
+        ],
+        "symbolic_core": "在回應外界以前，先重新聽見自己的感受與選擇。",
+        "customer_narrative_short_draft": "「回到自身者」象徵的是一種先與自己保持連結、再決定如何回應外界的能力。當周圍的人有期待、情緒或急迫要求時，這個原型並不鼓勵你立刻退開，也不要求你立刻答應；它提醒你，回應之前仍然可以有一段屬於自己的停頓。那段停頓讓你分辨：現在發生了什麼、我實際感受到什麼、哪些是他人的需要、哪些才是我願意承擔的部分。\n\n在 S7「靈魂主權」中，它的作用是將選擇的起點帶回自身。它要探索的不是如何不受任何人影響，而是如何在與人連結時，仍保留確認自身狀態的空間。它和 S7-01「自我信任者」不同：S7-00 先練習停下來與自己接觸；S7-01 更關注在聽取意見後，能否相信自己的判斷並作決定。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "review_type": "NOT_HUMAN_APPROVED",
+      "version": "S7_NARRATIVE_RC1"
+    },
+    {
+      "code": "S7-01",
+      "module": "S7",
+      "module_name_zh_tw": "靈魂主權",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "自我信任者",
+      "name_en_source": "The Self-Trusting One",
+      "source_code": "S7-01",
+      "source_file": "1320_S7_Soul_Sovereignty_Content_Database_v1_EN.md",
+      "source_section_sha256": "7b6539f504d48532b6f0bb793bbe69f1435c8b6d2b472f087da2aafd4c0b2723",
+      "content_zh_tw_candidate": {
+        "one_sentence_definition": "讓最終選擇回到自己，不需要等到百分之百確定。",
+        "complete_definition": "「自我信任者」象徵在不確定之中，仍願意認真對待自己的觀察、感受與判斷。自我信任不是認定直覺永遠正確，也不是拒絕請教別人；它是承認外界意見可以提供資訊，卻無法替你承擔每一個私人選擇。當你反覆尋求許可或保證時，這個原型邀請你分辨：自己是真的缺少資訊，還是因為害怕做錯，才希望有人替你下最後的結論。",
+        "role_and_purpose": "它在 S7 的作用，是練習「聽取—辨別—選擇」的完整過程。其反思目的不是培養絕對確定感，而是讓一個人逐步接受：我可以做出有根據、仍可修正的決定。與 S7-04「不再外求許可者」相比，S7-01 強調對自身判斷的信任；S7-04 則聚焦於不再以他人的認可作為表達與行動的前提。",
+        "explorable_strength": "辨別個人需要、整合不同意見、在有條件的情況下自行決策，並對後續修正保持開放。",
+        "core_tension": "自我信任可能走向固執，或把瞬間感覺當成不容質疑的事實。成熟的信任能接受新證據，也知道何時需要專業意見。",
+        "meaningful_shift": "信任自己，不是要求自己永遠正確，而是願意在充分聆聽之後，對自己的選擇負責。",
+        "everyday_examples": [
+          {
+            "title": "選擇進修方向",
+            "narrative": "假設你在兩門課之間猶豫，詢問了很多朋友，卻越聽越不知道自己想學什麼。你可以先整理時間、費用、目標與自己的興趣，再決定先試哪一門。別人的經驗有價值，但只有你能評估這個選擇如何放進自己的生活。",
+            "is_hypothetical": true
+          },
+          {
+            "title": "聽取不同意見",
+            "narrative": "假設你提出一個工作做法，主管指出其中可能的風險。自我信任不表示必須堅持原案；你可以接受有用的提醒，調整方案，同時保留對自己初衷的理解。能夠修正，不會使你的選擇權減少。",
+            "is_hypothetical": true
+          }
+        ],
+        "reflection_questions": [
+          "我最近一直想向誰尋求「保證」，而那個人真的能替我決定嗎？",
+          "若把可查證的資訊與自己的需要放在一起，我能先做出哪個可修正的小決定？"
+        ],
+        "symbolic_core": "讓最終選擇回到自己，不需要等到百分之百確定。",
+        "customer_narrative_short_draft": "「自我信任者」象徵在不確定之中，仍願意認真對待自己的觀察、感受與判斷。自我信任不是認定直覺永遠正確，也不是拒絕請教別人；它是承認外界意見可以提供資訊，卻無法替你承擔每一個私人選擇。當你反覆尋求許可或保證時，這個原型邀請你分辨：自己是真的缺少資訊，還是因為害怕做錯，才希望有人替你下最後的結論。\n\n它在 S7 的作用，是練習「聽取—辨別—選擇」的完整過程。其反思目的不是培養絕對確定感，而是讓一個人逐步接受：我可以做出有根據、仍可修正的決定。與 S7-04「不再外求許可者」相比，S7-01 強調對自身判斷的信任；S7-04 則聚焦於不再以他人的認可作為表達與行動的前提。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "review_type": "NOT_HUMAN_APPROVED",
+      "version": "S7_NARRATIVE_RC1"
+    },
+    {
+      "code": "S7-02",
+      "module": "S7",
+      "module_name_zh_tw": "靈魂主權",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "邊界選擇者",
+      "name_en_source": "The Boundaried Choice",
+      "source_code": "S7-02",
+      "source_file": "1320_S7_Soul_Sovereignty_Content_Database_v1_EN.md",
+      "source_section_sha256": "73c60a85730989ce087c46a2b9d265e70dd2bb191cb574f7e70609e834e2c9ba",
+      "content_zh_tw_candidate": {
+        "one_sentence_definition": "能夠關心、合作與承擔，也能清楚表達自己的限度。",
+        "complete_definition": "「邊界選擇者」象徵把自己的能力、時間與需要一同放入選擇之中。這個原型並不是教人對所有要求說「不」，而是協助辨別什麼能做、什麼需要協商、什麼超出了自己目前的承擔範圍。當關係、服務或責任被誤認為必須永遠有求必應時，善意可能逐漸變成耗損。清楚的界線不是否定他人，而是讓雙方有機會在真實條件下相處。",
+        "role_and_purpose": "在 S7 中，S7-02 的作用是使「我有選擇權」變得具體：允諾之前可以核對資源，拒絕時可以說明範圍，也可以提出替代安排。它與 S7-00 的「先停下來」不同；S7-02 進一步要求把那份自我覺察說成可被他人理解的界線。",
+        "explorable_strength": "辨認容量、協商分工、在照顧與服務中保留自我、以清楚而友善的方式表達限制。",
+        "core_tension": "界線可能變成防禦性高牆，讓必要的協調也無法發生；反過來，害怕拒絕也可能讓自己長期超載。界線需要清楚，也容許情境和資訊改變。",
+        "meaningful_shift": "有界線的關心不會因此減少價值；它讓善意有機會被長久而真實地維持。",
+        "everyday_examples": [
+          {
+            "title": "家庭照顧安排",
+            "narrative": "假設家人希望你固定負責一項照顧工作。你珍惜家人，卻也有工作及休息需求。這時可以先說明自己能提供的時段，再一起討論其他資源；並不需要把「我沒辦法全部承擔」等同於「我不在乎」。",
+            "is_hypothetical": true
+          },
+          {
+            "title": "合作邀請",
+            "narrative": "假設朋友請你免費協助一個長期計畫。你可以欣賞這個想法，同時詢問工作範圍、期限與責任。若條件不合適，提出有限協助或婉拒，都是可以被尊重的選擇。",
+            "is_hypothetical": true
+          }
+        ],
+        "reflection_questions": [
+          "我現在答應的事情裡，有哪一件需要重新說明範圍？",
+          "如果用清楚而不指責的方式表達限制，我最想說的是哪一句話？"
+        ],
+        "symbolic_core": "能夠關心、合作與承擔，也能清楚表達自己的限度。",
+        "customer_narrative_short_draft": "「邊界選擇者」象徵把自己的能力、時間與需要一同放入選擇之中。這個原型並不是教人對所有要求說「不」，而是協助辨別什麼能做、什麼需要協商、什麼超出了自己目前的承擔範圍。當關係、服務或責任被誤認為必須永遠有求必應時，善意可能逐漸變成耗損。清楚的界線不是否定他人，而是讓雙方有機會在真實條件下相處。\n\n在 S7 中，S7-02 的作用是使「我有選擇權」變得具體：允諾之前可以核對資源，拒絕時可以說明範圍，也可以提出替代安排。它與 S7-00 的「先停下來」不同；S7-02 進一步要求把那份自我覺察說成可被他人理解的界線。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "review_type": "NOT_HUMAN_APPROVED",
+      "version": "S7_NARRATIVE_RC1"
+    },
+    {
+      "code": "S7-03",
+      "module": "S7",
+      "module_name_zh_tw": "靈魂主權",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "真實行動者",
+      "name_en_source": "The Truthful Actor",
+      "source_code": "S7-03",
+      "source_file": "1320_S7_Soul_Sovereignty_Content_Database_v1_EN.md",
+      "source_section_sha256": "1e522caed5a906d6ce1d408f8dadd8810ebe7165a1634dd2403098eac60c89c5",
+      "content_zh_tw_candidate": {
+        "one_sentence_definition": "讓看見的真相走進言語與行動，而不只停在理解。",
+        "complete_definition": "「真實行動者」象徵從明白一件事，到願意做出與那份明白一致的行動。許多時候，人可能已經知道自己重視什麼，卻因擔心衝突、評價或結果，遲遲沒有把想法說清楚。這個原型不要求立刻做出劇烈改變，而是提醒：理解若只停留在心裡，生活仍可能沿著舊方式前進；一個有分寸的下一步，能讓價值開始在現實中被看見。",
+        "role_and_purpose": "它在 S7 的作用，是將自我覺察轉成可觀察、可負責的選擇，例如說明立場、修正承諾、完成一項早已認同的重要工作。S7-03 聚焦「從認知到行動的當下轉換」；S7-05「入身主權者」則聚焦日復一日的習慣與一致性。",
+        "explorable_strength": "清楚表達、把想法落實為下一步、在實際選擇中維持尊重，並願意為言語和行動的影響負責。",
+        "core_tension": "說真話可能被誤用為傷人的藉口，行動力也可能變成催促自己或他人的壓力。真實表達不等於沒有時機、方法和界線。",
+        "meaningful_shift": "真實不是一句宣告，而是願意用尊重而可承擔的方式，讓理解成為下一個行動。",
+        "everyday_examples": [
+          {
+            "title": "專案裡的疑慮",
+            "narrative": "假設你注意到一份工作流程可能造成重工，卻一直怕提出來會被認為難合作。真實行動不一定是公開反對；你可以先整理具體情況，提出一次小型測試，讓問題有機會被討論，而不是只在心裡反覆擔心。",
+            "is_hypothetical": true
+          },
+          {
+            "title": "關係裡的需求",
+            "narrative": "假設你希望一段關係有更多可預期的相處時間，過去卻總用「沒關係」帶過。可以在安全、適當的時候說出具體需求，同時願意聽對方的現況。誠實不等於要求對方一定照你的方式做。",
+            "is_hypothetical": true
+          }
+        ],
+        "reflection_questions": [
+          "我已經明白、卻一直沒有落實的一件小事是什麼？",
+          "我能用什麼方式說出真話，而不把清楚變成攻擊？"
+        ],
+        "symbolic_core": "讓看見的真相走進言語與行動，而不只停在理解。",
+        "customer_narrative_short_draft": "「真實行動者」象徵從明白一件事，到願意做出與那份明白一致的行動。許多時候，人可能已經知道自己重視什麼，卻因擔心衝突、評價或結果，遲遲沒有把想法說清楚。這個原型不要求立刻做出劇烈改變，而是提醒：理解若只停留在心裡，生活仍可能沿著舊方式前進；一個有分寸的下一步，能讓價值開始在現實中被看見。\n\n它在 S7 的作用，是將自我覺察轉成可觀察、可負責的選擇，例如說明立場、修正承諾、完成一項早已認同的重要工作。S7-03 聚焦「從認知到行動的當下轉換」；S7-05「入身主權者」則聚焦日復一日的習慣與一致性。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "review_type": "NOT_HUMAN_APPROVED",
+      "version": "S7_NARRATIVE_RC1"
+    },
+    {
+      "code": "S7-04",
+      "module": "S7",
+      "module_name_zh_tw": "靈魂主權",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "不再外求許可者",
+      "name_en_source": "The Unapproved Free Self",
+      "source_code": "S7-04",
+      "source_file": "1320_S7_Soul_Sovereignty_Content_Database_v1_EN.md",
+      "source_section_sha256": "de1c8f238332ac9d2bd932a35370fec01ce7f0e3e90c0f0d9e9fa0cfafee46a0",
+      "content_zh_tw_candidate": {
+        "one_sentence_definition": "即使沒有得到所有人的認同，也可以認真看待自己的方向。",
+        "complete_definition": "「不再外求許可者」象徵一種不再把別人的同意、稱讚或情緒回應，當成自己存在與選擇前提的能力。它並非鼓勵不顧他人，更不是免除共同生活中的責任；它提醒人：我們可以在乎關係，也可以承認不同人對同一個選擇有不同的看法，而不必因此抹去真正的願望、觀點或方向。",
+        "role_and_purpose": "在 S7 中，這個原型的作用是探索「我能否在沒有一致認同時，仍然清楚地表達自己」。它與 S7-01 的自我信任相近，但並不相同：S7-01 面對的是「我相信自己的判斷嗎」；S7-04 面對的是「即使別人不贊同，我還能保留自己的聲音嗎」。",
+        "explorable_strength": "減少過度迎合、表達真實偏好、容納他人的不同意見，在公開表達與人生轉換時保留自主性。",
+        "core_tension": "不再求認可可能走向為反對而反對，甚至把拒絕合作當成自由的證明。成熟的自由能聆聽，也承認行動會影響別人。",
+        "meaningful_shift": "被理解是珍貴的，卻不必成為允許自己真實生活的唯一門票。",
+        "everyday_examples": [
+          {
+            "title": "選擇自己的創作",
+            "narrative": "假設你想發表一篇與主流觀點不同的文章，卻一直修改到完全不像自己的聲音。你可以核對資料與可能影響，接受必要的編輯意見，仍保留文章真正想表達的主張。有人不喜歡它，不代表你沒有表達的資格。",
+            "is_hypothetical": true
+          },
+          {
+            "title": "家人的期待",
+            "narrative": "假設你對生活安排有不同想法，而家人尚未理解。可以先說清楚自己的考量，並誠實討論共同責任；不需要把所有人都說服，才有資格開始考慮下一步。",
+            "is_hypothetical": true
+          }
+        ],
+        "reflection_questions": [
+          "我有哪些想法曾為了得到認同而一再縮小？",
+          "如果我能尊重不同意見，也保留自己的聲音，下一步會有什麼不同？"
+        ],
+        "symbolic_core": "即使沒有得到所有人的認同，也可以認真看待自己的方向。",
+        "customer_narrative_short_draft": "「不再外求許可者」象徵一種不再把別人的同意、稱讚或情緒回應，當成自己存在與選擇前提的能力。它並非鼓勵不顧他人，更不是免除共同生活中的責任；它提醒人：我們可以在乎關係，也可以承認不同人對同一個選擇有不同的看法，而不必因此抹去真正的願望、觀點或方向。\n\n在 S7 中，這個原型的作用是探索「我能否在沒有一致認同時，仍然清楚地表達自己」。它與 S7-01 的自我信任相近，但並不相同：S7-01 面對的是「我相信自己的判斷嗎」；S7-04 面對的是「即使別人不贊同，我還能保留自己的聲音嗎」。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "review_type": "NOT_HUMAN_APPROVED",
+      "version": "S7_NARRATIVE_RC1"
+    },
+    {
+      "code": "S7-05",
+      "module": "S7",
+      "module_name_zh_tw": "靈魂主權",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "入身主權者",
+      "name_en_source": "The Embodied Authority",
+      "source_code": "S7-05",
+      "source_file": "1320_S7_Soul_Sovereignty_Content_Database_v1_EN.md",
+      "source_section_sha256": "b05f75e3ef25dc623fbd0d1ec1e4dcb11e2dca82b07c87c4ebe26f7a7b4dd6d5",
+      "content_zh_tw_candidate": {
+        "one_sentence_definition": "讓自主不只是一個理念，而是日常可觀察的選擇。",
+        "complete_definition": "「入身主權者」象徵把自主與一致性帶進日常節奏的練習。這裡的「入身」不是某種神秘能力，也不是要求以身體感受取代醫學或專業判斷；它指的是：一個人說自己重視休息、界線或誠實時，能否逐步在作息、承諾、工作安排和互動方式中看見相應的行動。真正的主權不需要被宣告成身份資格，而是可以在一次次普通選擇中被檢視。",
+        "role_and_purpose": "在 S7 中，它的作用是將原則轉化為可持續的習慣，讓自我承諾有清楚、合理的實踐形式。它不同於 S7-03「真實行動者」重視一次關鍵的表達或跨出第一步；S7-05 更關注長期行動是否與所重視的價值一致。",
+        "explorable_strength": "建立日常節奏、調整可持續的承諾、透過反覆實踐培養對自己的可靠感，也願意在現實條件改變時重新調整。",
+        "core_tension": "一致性可能被誤解成永不改變，進而變成嚴格的自我表現或精神形象。若只追求看起來有紀律，反而可能忽略休息與現實需要。",
+        "meaningful_shift": "我重視什麼，不只存在於漂亮的理念，也可以慢慢出現在平凡而可持續的安排裡。",
+        "everyday_examples": [
+          {
+            "title": "保留休息時間",
+            "narrative": "假設你經常說健康與休息很重要，行程卻總被臨時要求填滿。與其責怪自己不夠堅定，可以先檢查哪些承諾有協商空間，安排一段能確實做到的休息時間；若身體出現健康問題，仍應尋求合適的專業協助。",
+            "is_hypothetical": true
+          },
+          {
+            "title": "持續實踐理念",
+            "narrative": "假設一個團隊重視開放溝通，但每次會議都只有少數人發言。入身主權的角度不是再多宣示一次理念，而是調整會議流程，讓每個人有實際表達的機會，並持續檢查效果。",
+            "is_hypothetical": true
+          }
+        ],
+        "reflection_questions": [
+          "我很認同的一項價值，現在有哪些具體行動能支持它？",
+          "有哪個「應該做到」的標準，反而需要調整成更符合現實的節奏？"
+        ],
+        "symbolic_core": "讓自主不只是一個理念，而是日常可觀察的選擇。",
+        "customer_narrative_short_draft": "「入身主權者」象徵把自主與一致性帶進日常節奏的練習。這裡的「入身」不是某種神秘能力，也不是要求以身體感受取代醫學或專業判斷；它指的是：一個人說自己重視休息、界線或誠實時，能否逐步在作息、承諾、工作安排和互動方式中看見相應的行動。真正的主權不需要被宣告成身份資格，而是可以在一次次普通選擇中被檢視。\n\n在 S7 中，它的作用是將原則轉化為可持續的習慣，讓自我承諾有清楚、合理的實踐形式。它不同於 S7-03「真實行動者」重視一次關鍵的表達或跨出第一步；S7-05 更關注長期行動是否與所重視的價值一致。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "review_type": "NOT_HUMAN_APPROVED",
+      "version": "S7_NARRATIVE_RC1"
+    },
+    {
+      "code": "S7-06",
+      "module": "S7",
+      "module_name_zh_tw": "靈魂主權",
+      "locale": "zh-TW",
+      "name_zh_tw_candidate": "清醒責任者",
+      "name_en_source": "The Conscious Responsible One",
+      "source_code": "S7-06",
+      "source_file": "1320_S7_Soul_Sovereignty_Content_Database_v1_EN.md",
+      "source_section_sha256": "06539e254e420469c4eb31692129de31e45aca9463212db6f9faffded2665813",
+      "content_zh_tw_candidate": {
+        "one_sentence_definition": "承擔屬於自己的部分，並把不屬於自己的部分還給適當的人。",
+        "complete_definition": "「清醒責任者」象徵在承擔與放手之間辨認分際的能力。責任不是一個人把所有問題都扛起來，也不是為了保有自由而拒絕參與。它要求我們清楚知道：哪些承諾是自己做出的、哪些影響需要修復、哪些決定需要與他人共同商量；同時也承認每個人都擁有自己的選擇與責任。",
+        "role_and_purpose": "在 S7 中，它的作用是把主權與後果放在一起看：既不把責任交給命運、原型或他人，也不因焦慮而接管所有人的部分。它與 S7-02「邊界選擇者」相近，但 S7-02 側重承諾之前的界線與協商；S7-06 更聚焦承諾之後如何清楚履行、修復並完成分工。",
+        "explorable_strength": "釐清責任分工、面對自己的影響、在有問題時提出修復行動，並以清楚溝通取代控制或責怪。",
+        "core_tension": "過度負責可能變成內疚與控制；相反地，也可能因害怕失去自由而迴避必要承諾。清醒的責任不是全部承擔，也不是全部推開。",
+        "meaningful_shift": "真正能承擔的責任，是看清自己的一份，並尊重他人也有屬於他們的一份。",
+        "everyday_examples": [
+          {
+            "title": "團隊出了差錯",
+            "narrative": "假設一項交付延誤，團隊成員開始互相指責。清醒責任的做法可以是：先確認自己承諾的部分完成到哪裡，說明需要補救的事，再與團隊釐清其他工作由誰處理。承認自己的疏漏，不代表承擔全部責任。",
+            "is_hypothetical": true
+          },
+          {
+            "title": "親近關係的分工",
+            "narrative": "假設家中長期由一個人安排所有大小事情。大家可能逐漸習以為常，承擔者也可能覺得不能放手。重新討論分工、明確列出可以交接的事項，能讓責任回到有能力且願意共同參與的人身上。若有人遭受威脅或操控，應優先考慮安全與支持資源，而非單靠分工協商。",
+            "is_hypothetical": true
+          }
+        ],
+        "reflection_questions": [
+          "目前有哪件事我確實需要負責，下一個具體修復步驟是什麼？",
+          "有哪件事其實不屬於我，卻一直因內疚或習慣而由我承擔？"
+        ],
+        "symbolic_core": "承擔屬於自己的部分，並把不屬於自己的部分還給適當的人。",
+        "customer_narrative_short_draft": "「清醒責任者」象徵在承擔與放手之間辨認分際的能力。責任不是一個人把所有問題都扛起來，也不是為了保有自由而拒絕參與。它要求我們清楚知道：哪些承諾是自己做出的、哪些影響需要修復、哪些決定需要與他人共同商量；同時也承認每個人都擁有自己的選擇與責任。\n\n在 S7 中，它的作用是把主權與後果放在一起看：既不把責任交給命運、原型或他人，也不因焦慮而接管所有人的部分。它與 S7-02「邊界選擇者」相近，但 S7-02 側重承諾之前的界線與協商；S7-06 更聚焦承諾之後如何清楚履行、修復並完成分工。"
+      },
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "internal_preview_candidate": true,
+      "review_type": "NOT_HUMAN_APPROVED",
+      "version": "S7_NARRATIVE_RC1"
+    }
+  ]
+}

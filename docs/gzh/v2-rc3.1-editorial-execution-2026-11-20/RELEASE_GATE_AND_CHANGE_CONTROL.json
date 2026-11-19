@@ -1,0 +1,62 @@
+{
+  "version_id": "1320-zhTW-editorial-polish-structure-locked-2026-11-20-rc3.1",
+  "intent": "LANGUAGE_POLISH_ONLY",
+  "published_product_change_authorized": false,
+  "structure_locked": true,
+  "sample_order": [
+    "S1",
+    "S3",
+    "S2",
+    "S0"
+  ],
+  "sample_sections": [
+    "01 S1",
+    "02 S3",
+    "03 S2",
+    "04 S0",
+    "05 synthesis",
+    "06 reflection",
+    "07 closing"
+  ],
+  "full_seventeen_sections": [
+    "01 introduction",
+    "02 10-code overview",
+    "03 S1",
+    "04 S3",
+    "05 S2",
+    "06 S0",
+    "07 4-code synthesis",
+    "08 S4",
+    "09 S5",
+    "10 S6",
+    "11 S7",
+    "12 S8",
+    "13 S9",
+    "14 10-code synthesis",
+    "15 7-day practice",
+    "16 journal",
+    "17 closing"
+  ],
+  "required_code_content_parts": 7,
+  "mandatory_safety": {
+    "S2": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。",
+    "S4": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+  },
+  "locked_s5_s6_source_seven_fields": true,
+  "min_hypothetical_examples_per_code": 2,
+  "source_codes_total": 258,
+  "archived_unreachable_total": 11,
+  "prior_preliminary_reading_pass_count": 241,
+  "current_formal_approved_count": 0,
+  "new_candidate_editorial_status": "PENDING_REVIEW",
+  "reviewer": null,
+  "approved_at": null,
+  "customer_publishable": false,
+  "customer_release_state": "HOLD",
+  "v1_locked": true,
+  "prices_locked": true,
+  "checkout_locked": true,
+  "mapping_locked": true,
+  "internal_preview_only": true,
+  "reference_style_sha256": "a06d2435ce493efe127b0b9289afa301ab880eb75f3f55e61f4ea47caf61b848"
+}

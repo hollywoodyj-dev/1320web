@@ -123,6 +123,13 @@
 - **不覆寫**既有 1980／1982 StoredNarrative fixture；258 核准仍 0；顧客 HOLD。
 - 下一步分開：完整報告真人閱讀、報告橋接簽核、產品層級鎖定。
 
+## 2026-11-20 RC3.1 結構鎖定中文潤色
+
+- 指令包归档；Phase 0 Freeze 完成。
+- Phase 1：1980 Sample RC3 風格鎖定；1982 Sample＋1980／1982 Full RC3.1＋DIFF 已交；機器 QA PASS；**真人審閱 PENDING**。
+- 詳見 `1320_TW_FULL_REPORT_V2_RC3_1_EDITORIAL_HANDOFF_2026-11-20.md`。
+- Phase 2（258 碼分模組）待 Phase 1 真人校準後啟動；正式核准仍 0；顧客 HOLD。
+
 ## 下一輪要交出的證據
 
 - S0–S9 逐碼審核台帳（草稿／待審／已核准）。

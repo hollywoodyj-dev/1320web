@@ -26,4 +26,5 @@ S6 RC1：`1320_TW_FULL_REPORT_V2_S6_HANDOFF_2026-11-18.md`、`v2-s6-2026-11-18/`
 S7 RC1＋定義先行 v1：`1320_TW_FULL_REPORT_V2_S7_AND_DEFINITION_FIRST_HANDOFF_2026-11-18.md`、`v2-s7-2026-11-18/`、`v2-definition-first-2026-11-18/`（S7 PENDING 7；規格＋S1-18 示範，非 258 全稿）。  
 S8 RC1：`1320_TW_FULL_REPORT_V2_S8_HANDOFF_2026-11-18.md`、`v2-s8-2026-11-18/`（PENDING 8，核准 0）。  
 S9 RC1：`1320_TW_FULL_REPORT_V2_S9_HANDOFF_2026-11-19.md`、`v2-s9-2026-11-19/`（PENDING 9，核准 0）。**S0～S9 候選齊；正式核准仍 0／258。**  
-Sample＋Full Report Blueprint RC1：`1320_TW_FULL_REPORT_V2_REPORT_BLUEPRINT_HANDOFF_2026-11-19.md`、`v2-report-blueprint-2026-11-19/`（PENDING 示範；不覆寫既有 fixture；顧客 HOLD）。
+Sample＋Full Report Blueprint RC1：`1320_TW_FULL_REPORT_V2_REPORT_BLUEPRINT_HANDOFF_2026-11-19.md`、`v2-report-blueprint-2026-11-19/`（PENDING 示範；不覆寫既有 fixture；顧客 HOLD）。  
+RC3.1 結構鎖定潤色：`1320_TW_FULL_REPORT_V2_RC3_1_EDITORIAL_HANDOFF_2026-11-20.md`、`v2-rc3.1-editorial-execution-2026-11-20/`、`v2-rc3.1-phase1-pilot-2026-11-20/`（Phase 1 示範 PENDING 真人審閱；258 碼 Phase 2 未啟動；核准 0）。

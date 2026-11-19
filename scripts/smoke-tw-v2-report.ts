@@ -74,6 +74,13 @@ import {
   s7PendingCount,
 } from "../lib/gzh/tw-v2-s7-library";
 import {
+  s8ApprovedCount,
+  s8CandidateFor,
+  s8CustomerPublishableCodes,
+  s8EditorialCandidateCount,
+  s8PendingCount,
+} from "../lib/gzh/tw-v2-s8-library";
+import {
   definitionFirstExample,
   definitionFirstRequiredFields,
   definitionFirstStandardMeta,
@@ -321,6 +328,16 @@ const defExample = definitionFirstExample();
 assert(defExample.editorial_status === "PENDING_REVIEW" && !defExample.reviewer && defExample.customer_publishable === false, "S1-18 definition-first example stays pending");
 assert(defExample.one_sentence_definition.includes("轉化者"), "S1-18 definition-first keeps transformer wording");
 assert(s1CandidateFor("S1-18")?.name_zh_tw_candidate === "轉化者" && s1CandidateFor("S1-18")?.editorial_status === "PENDING_REVIEW", "S1 RC3.2 pack is not overwritten by definition-first example");
+assert(s8EditorialCandidateCount() === 8 && s8PendingCount() === 8 && s8ApprovedCount() === 0, "S8 has 8 pending candidates");
+assert(s8CustomerPublishableCodes().length === 0, "S8 candidates stay out of customer publish");
+assert(s8CandidateFor("S8-00")?.name_zh_tw_candidate === "臨在貢獻者" && !s8CandidateFor("S8-00")?.reviewer, "S8-00 calibration name stays unapproved");
+assert(s8CandidateFor("S8-05")?.name_zh_tw_candidate === "轉化貢獻者", "S8-05 transformation name present");
+assert(s8CandidateFor("S8-07")?.name_zh_tw_candidate === "整體願景貢獻者", "S8-07 vision name present");
+assert(s8CandidateFor("S8-03")?.name_zh_tw_candidate === "洞察貢獻者", "S8-03 insight name present");
+assert(s8CandidateFor("S8-00")?.code === "S8-00" && s8CandidateFor("S8-07")?.code === "S8-07", "S8 spans 00 to 07");
+assert(s8CandidateFor("S8-08") === null, "S8 does not invent S8-08");
+assert((s8CandidateFor("S8-00")?.content_zh_tw_candidate?.everyday_examples?.length ?? 0) >= 2, "S8 definition-first keeps at least two examples");
+assert(s8CandidateFor("S1-01") === null, "S8 library does not invent S1 codes");
 assert(sampleFullDifference().length >= 6, "sample and full difference table exists");
 
 const page = fs.readFileSync(new URL("../app/(site)/tw-v2-report/page.tsx", import.meta.url), "utf8");

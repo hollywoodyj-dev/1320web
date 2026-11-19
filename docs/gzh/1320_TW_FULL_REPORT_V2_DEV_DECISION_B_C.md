@@ -101,6 +101,13 @@
 - 詳見 `1320_TW_FULL_REPORT_V2_S7_AND_DEFINITION_FIRST_HANDOFF_2026-11-18.md`。
 - 下一批：S8 → S9。
 
+## 2026-11-18 S8 8 碼 RC1
+
+- 已收到 S8 定義先行 Narrative：`PENDING_REVIEW` 8，核准 0。
+- 詳見 `1320_TW_FULL_REPORT_V2_S8_HANDOFF_2026-11-18.md` 與 `v2-s8-2026-11-18/`。
+- 公式 0→S8-00；S8-06／S8-07 安全邊界保留；不覆寫 S0～S7。
+- 下一批：S9。
+
 ## 下一輪要交出的證據
 
 - S0–S9 逐碼審核台帳（草稿／待審／已核准）。

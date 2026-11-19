@@ -1,0 +1,10 @@
+﻿code,name_zh_tw,source_name_en,source_name_original,source_section_sha256,source_field_count,editorial_status,human_read_status,reviewer,approved_at,customer_publishable,preview_requires_auth,notes_for_human_review
+S9-00,靜默回源者,Return Through Silence,静默回源者,017afa8442865302884977b198c4d723833262ae3d74db4beb3758291e344679,7,PENDING_REVIEW,NOT_YET_REVIEWED,,,false,true,請與 S9-07 對照：本碼重在安靜停頓，不同於當下參與。
+S9-01,足夠回源者,Return Through Enoughness,足够回源者,38d5e252a1a355c11051381d923499b89a6d36580c18a4c1a1f25d7f2f7b0c1c,7,PENDING_REVIEW,NOT_YET_REVIEWED,,,false,true,確認文本忠於來源、生活情境為假設、與其他碼有獨立辨識度。
+S9-02,信任回源者,Return Through Trust,信任回源者,052416c430ac8105128100575ac31d97d2ec5671d29460973c2ec860e9ead740,7,PENDING_REVIEW,NOT_YET_REVIEWED,,,false,true,確認文本忠於來源、生活情境為假設、與其他碼有獨立辨識度。
+S9-03,連結回源者,Return Through Connection,连接回源者,c4f4be93cd080755c24b21281abc9d88e146289af739ba4486c23e7ad36de243,7,PENDING_REVIEW,NOT_YET_REVIEWED,,,false,true,確認文本忠於來源、生活情境為假設、與其他碼有獨立辨識度。
+S9-04,真相回源者,Return Through Truth,真相回源者,0d990c087e57639217a37c37ebddf1ccbb285308fd140386d2752475dad4a135,7,PENDING_REVIEW,NOT_YET_REVIEWED,,,false,true,確認文本忠於來源、生活情境為假設、與其他碼有獨立辨識度。
+S9-05,臣服回源者,Return Through Surrender,臣服回源者,2dc75240a9ccfc6efa4c299b40d78f95592e2ccdd6904bc0716b0588dab5addd,7,PENDING_REVIEW,NOT_YET_REVIEWED,,,false,true,請確認「臣服」一詞不會被理解成服從權威或忍受傷害；必要時可由真人提出命名修訂。
+S9-06,寬恕回源者,Return Through Forgiveness,宽恕回源者,9cc1820e14c472a8184dea034247f665e95d30acc8d0bff2499584f53e3971c6,7,PENDING_REVIEW,NOT_YET_REVIEWED,,,false,true,請檢查寬恕不等於強制原諒、和解、淡化加害責任；安全優先。
+S9-07,臨在回源者,Return Through Presence,临在回源者,111d99fc07eb18cd4405d98211d3d77c4752d0beeea281356449bfb546870617,7,PENDING_REVIEW,NOT_YET_REVIEWED,,,false,true,請與 S9-00 對照：本碼重在當下的參與及具體行動。
+S9-08,完整回源者,Return Through Wholeness,完整回源者,92507c2d5d3facb848bb3ebc3198e5c09ea1e81efd1d5084305a8d5f18389cd2,7,PENDING_REVIEW,NOT_YET_REVIEWED,,,false,true,確認文本忠於來源、生活情境為假設、與其他碼有獨立辨識度。

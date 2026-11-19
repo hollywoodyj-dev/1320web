@@ -1,0 +1,833 @@
+{
+  "package_id": "1320-zhTW-s9-9-definition-narrative-2026-11-19-rc1",
+  "module": "S9",
+  "locale": "zh-TW",
+  "version": "RC1",
+  "source_file": "1320_S9_Return_to_Source_Content_Database_v1_EN.md",
+  "source_file_sha256": "4b3673688832fa909f6733073eada0c392ee202c295dc74e08c4b1e1d56b832c",
+  "formula_locked": "S9 = (S1 + S0 + S7 + S8) mod 9; 0 is valid",
+  "record_count": 9,
+  "editorial_status": "PENDING_REVIEW",
+  "official_approved_count": 0,
+  "customer_release": "HOLD",
+  "customer_publishable": false,
+  "preview_requires_auth": true,
+  "internal_only_fields": [
+    "source_text_internal",
+    "source_field_anchors",
+    "source_anchor",
+    "source_name_original"
+  ],
+  "records": [
+    {
+      "code": "S9-00",
+      "module": "S9",
+      "name_zh_tw": "靜默回源者",
+      "source_name_en": "Return Through Silence",
+      "source_name_original": "静默回源者",
+      "definition_short_zh_tw": "以安靜與停頓重新聽見自己，不必靠持續表現來確認存在。",
+      "full_definition_zh_tw": "「靜默回源者」象徵一種透過安靜重新與自身相處的方式。在沒有急著解釋、證明或回應外界的片刻，人可以留意自己真正的感受、需要與界線。這裡的「回源」不是進入神祕境界，也不是脫離社會；它指向在日常生活中，暫時放下角色與成果的壓力，恢復對當下處境的清楚感。安靜並不表示答案自動出現，更不是遇到現實問題時必須獨自承受。",
+      "role_and_purpose_zh_tw": "在 S9「回歸源頭」裡，這一碼探索的是：當人生主題走到需要整理、停頓或收束的時刻，我能否不依賴外在評價，也容許自己安靜地存在？其目的不是要求讀者沉默，而是辨識安靜何時能幫助重新聚焦，再帶著清楚的態度回到對話和行動。它與 S9-07 的「在活動中保持臨在」不同，S9-00 特別關注為自己保留安靜空間的能力。",
+      "strengths_zh_tw": "願意暫緩反射式回應、透過安靜觀察感受、在資訊過載時重新整理思緒，並辨識哪些期待其實不必立刻滿足。",
+      "tension_zh_tw": "若把安靜當作永遠不必回應的理由，可能形成退縮、失去連結，或拖延需要面對的責任；反過來，若把每次停頓都看成沒有生產力，也可能錯過必要的休息。安靜不該要求讀者忽略健康、安全或關係中的真實問題。",
+      "daily_life_examples_zh_tw": [
+        {
+          "title": "訊息很多的一天",
+          "narrative": "假設工作群組接連出現不同要求，你可以在非緊急情況下留出短暫時間，整理哪些事項需要回覆、哪些可以稍後處理，再清楚地告知進度；若有緊急風險，仍先處理安全與必要責任。",
+          "is_hypothetical": true
+        },
+        {
+          "title": "談話裡的一次停頓",
+          "narrative": "假設親近的人提出讓你意外的要求。你可以先說明需要一點時間思考，而不是立即答應或反駁。這份停頓的價值，不是讓對方猜測你的意思，而是讓後續回應更真實。",
+          "is_hypothetical": true
+        }
+      ],
+      "insight_zh_tw": "安靜不是離開生活，而是讓自己有能力更清楚地回到生活；我可以暫停表現，卻不必退出責任與連結。",
+      "reflection_questions_zh_tw": [
+        "當外界聲音變多時，我需要的安靜是為了看清什麼？",
+        "安靜過後，我可以用哪一句話或哪個小行動重新參與眼前的事？"
+      ],
+      "interpretation_type": "SYMBOLIC_NON_DIAGNOSTIC",
+      "safe_language_note_zh_tw": "本內容是象徵性自我反思素材，不是人格診斷、能力認證、超自然證明或命運預測。所有案例均屬假設，不代表讀者實際經歷；關係安全、健康、法律與財務事項，應優先採取現實安全措施並尋求必要專業協助。",
+      "source_anchor": {
+        "source_file": "1320_S9_Return_to_Source_Content_Database_v1_EN.md",
+        "source_file_sha256": "4b3673688832fa909f6733073eada0c392ee202c295dc74e08c4b1e1d56b832c",
+        "source_section": "S9-00",
+        "source_section_sha256": "017afa8442865302884977b198c4d723833262ae3d74db4beb3758291e344679",
+        "source_fields_count": 7,
+        "safe_language_source_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa"
+      },
+      "source_field_anchors": [
+        {
+          "field_key": "return_essence",
+          "source_heading": "Return Essence / 回源本质",
+          "sha256": "dab8aa4637d50a4b723c98daec6aecab8fd7d738525ffc4f9f576c95355ac472",
+          "source_text_internal": "Your return to source happens through silence, stillness, and the space before identity forms."
+        },
+        {
+          "field_key": "soul_remembers",
+          "source_heading": "What Your Soul Remembers / 灵魂记起什么",
+          "sha256": "7aeb634630f989dde61ab508396c397ffa8134e462cbc0c50e79087e2f8cdc8c",
+          "source_text_internal": "This code reflects a soul learning that wholeness can be felt without explanation, performance, or conclusion."
+        },
+        {
+          "field_key": "life_themes_resolve",
+          "source_heading": "How Life Themes Resolve / 生命主题如何整合",
+          "sha256": "f40a29812286db5baceac505b5496712c693a056787f0ea4615f1ad8388da72c",
+          "source_text_internal": "Life themes resolve when the person stops demanding constant meaning and allows quiet presence to become enough."
+        },
+        {
+          "field_key": "natural_return_practices",
+          "source_heading": "Natural Return Practices / 自然回源练习",
+          "sha256": "accaca899f18dd4d2108b9bb4fdfd6df983403d60af64242bdb6f1ca543107d9",
+          "source_text_internal": "- silent reflection\n- breath practice\n- nature solitude\n- digital pauses\n- non-performance"
+        },
+        {
+          "field_key": "shadow_distortion",
+          "source_heading": "Shadow Distortion of Return / 回源的阴影扭曲",
+          "sha256": "20143a5548abcaa53676824b0b120d61cce51aa6273d3dde6cf807e9e46ad966",
+          "source_text_internal": "When distorted, return may become withdrawal, dissociation, or avoiding life in the name of peace."
+        },
+        {
+          "field_key": "mature_expression",
+          "source_heading": "Mature Return Expression / 成熟回源表达",
+          "sha256": "a5af4a76c4462de78faddb0b3c41bb8e9d9d79970e21dd96ef2fd9655bd3ec05",
+          "source_text_internal": "Mature return appears as silence that makes the person more present, not less engaged."
+        },
+        {
+          "field_key": "wisewave_reflection",
+          "source_heading": "Wisewave Reflection / 玄微引导语",
+          "sha256": "834b5b8bb1ecd1d3b51c760538c2218658bde5a0c2c4d07eff38abc499342aa1",
+          "source_text_internal": "Source is not far away. It is the quiet that remains when you stop leaving yourself."
+        }
+      ],
+      "source_text_internal": "## S9-00 · Return Through Silence / 静默回源者\n\n### Return Essence / 回源本质\n\nYour return to source happens through silence, stillness, and the space before identity forms.\n\n### What Your Soul Remembers / 灵魂记起什么\n\nThis code reflects a soul learning that wholeness can be felt without explanation, performance, or conclusion.\n\n### How Life Themes Resolve / 生命主题如何整合\n\nLife themes resolve when the person stops demanding constant meaning and allows quiet presence to become enough.\n\n### Natural Return Practices / 自然回源练习\n\n- silent reflection\n- breath practice\n- nature solitude\n- digital pauses\n- non-performance\n\n### Shadow Distortion of Return / 回源的阴影扭曲\n\nWhen distorted, return may become withdrawal, dissociation, or avoiding life in the name of peace.\n\n### Mature Return Expression / 成熟回源表达\n\nMature return appears as silence that makes the person more present, not less engaged.\n\n### Wisewave Reflection / 玄微引导语\n\nSource is not far away. It is the quiet that remains when you stop leaving yourself.\n\n### Safe Language Note\n\nThis interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "preview_requires_auth": true,
+      "source_reachable": true
+    },
+    {
+      "code": "S9-01",
+      "module": "S9",
+      "name_zh_tw": "足夠回源者",
+      "source_name_en": "Return Through Enoughness",
+      "source_name_original": "足够回源者",
+      "definition_short_zh_tw": "把自我價值與表現暫時分開，從「已經足夠」的位置繼續成長。",
+      "full_definition_zh_tw": "「足夠回源者」象徵在不斷追求進步與被認可的生活中，練習辨認一個基本事實：人的尊嚴不需要靠每次成果來交換。這裡的「足夠」，不是說能力已到頂、問題都解決，或不必再努力；它指向不因一次失敗、一次拒絕或某項不足，就否定整個自己。這個原型關注的是把行動從「證明我值得」慢慢轉成「因為我重視，所以我選擇投入」。",
+      "role_and_purpose_zh_tw": "在 S9 中，S9-01 讓人思考：當成就、形象與他人的讚許不再是唯一尺度，是否仍能帶著自尊學習與修正？其目的不是替讀者宣告已經完整，而是探索價值感如何成為更穩定的行動起點。它與 S9-08 的「接納自身多個面向」不同，S9-01 更直接聚焦對自我價值的有條件要求。",
+      "strengths_zh_tw": "辨識過度自我證明、讓休息與創作不必事事有成果、在接受回饋時維持基本自尊，以及在學習過程中採取溫和而有紀律的方式。",
+      "tension_zh_tw": "若把「我已足夠」用成拒絕承認錯誤或逃避成長的口號，會失去反省空間；反過來，若凡事都要做到最好才肯休息，則可能把尊嚴綁在永遠移動的標準上。",
+      "daily_life_examples_zh_tw": [
+        {
+          "title": "一次尚未達標的成果",
+          "narrative": "假設你投入許多時間的提案沒有被採用。可以檢查提案內容是否需要改善，也承認失落；但這個結果不必被擴大成「我這個人沒有價值」。",
+          "is_hypothetical": true
+        },
+        {
+          "title": "沒有展示目的的興趣",
+          "narrative": "假設你想學一項新技能，卻擔心做不好而不敢開始。可以先安排一段只為體驗的練習，不急著發布成果或比較進度；喜歡與不擅長可以同時存在。",
+          "is_hypothetical": true
+        }
+      ],
+      "insight_zh_tw": "我可以認真改善一件事，卻不必用那件事的結果，反覆審判自己是否值得被尊重。",
+      "reflection_questions_zh_tw": [
+        "我最近把哪一項表現誤當成自我價值的證明？",
+        "若不必先證明自己，我仍願意為什麼事情付出努力？"
+      ],
+      "interpretation_type": "SYMBOLIC_NON_DIAGNOSTIC",
+      "safe_language_note_zh_tw": "本內容是象徵性自我反思素材，不是人格診斷、能力認證、超自然證明或命運預測。所有案例均屬假設，不代表讀者實際經歷；關係安全、健康、法律與財務事項，應優先採取現實安全措施並尋求必要專業協助。",
+      "source_anchor": {
+        "source_file": "1320_S9_Return_to_Source_Content_Database_v1_EN.md",
+        "source_file_sha256": "4b3673688832fa909f6733073eada0c392ee202c295dc74e08c4b1e1d56b832c",
+        "source_section": "S9-01",
+        "source_section_sha256": "38d5e252a1a355c11051381d923499b89a6d36580c18a4c1a1f25d7f2f7b0c1c",
+        "source_fields_count": 7,
+        "safe_language_source_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa"
+      },
+      "source_field_anchors": [
+        {
+          "field_key": "return_essence",
+          "source_heading": "Return Essence / 回源本质",
+          "sha256": "15bcb790620b9b83272d42e17c5f3109247fb184833ad020892eaaad5829f096",
+          "source_text_internal": "Your return to source is through remembering that existence does not need to be proven."
+        },
+        {
+          "field_key": "soul_remembers",
+          "source_heading": "What Your Soul Remembers / 灵魂记起什么",
+          "sha256": "e6623a9e610de7682dd95c2e7ee29ac612f8a986a2a5395e3344c4ca980a5926",
+          "source_text_internal": "This code reflects a soul releasing the belief that value must be earned through achievement, beauty, usefulness, or recognition."
+        },
+        {
+          "field_key": "life_themes_resolve",
+          "source_heading": "How Life Themes Resolve / 生命主题如何整合",
+          "sha256": "7e7835a6f1023ec6ef394fd282dbfaedb6a610478b8cd7013c0db2e194fba015",
+          "source_text_internal": "Life themes resolve when the person acts from worth rather than for worth."
+        },
+        {
+          "field_key": "natural_return_practices",
+          "source_heading": "Natural Return Practices / 自然回源练习",
+          "sha256": "776d5f6ebc76ff00d30b0ea5a2fdd6815d43c8bb073ae46d90c670f531e24eec",
+          "source_text_internal": "- self-acceptance\n- rest practice\n- creative expression without proof\n- identity release\n- gentle discipline"
+        },
+        {
+          "field_key": "shadow_distortion",
+          "source_heading": "Shadow Distortion of Return / 回源的阴影扭曲",
+          "sha256": "ed0948f127f676a24d2a6b1c11737eb8759755932acffe37af021a45c6ee920e",
+          "source_text_internal": "When distorted, return may become complacency or avoiding growth by calling everything already complete."
+        },
+        {
+          "field_key": "mature_expression",
+          "source_heading": "Mature Return Expression / 成熟回源表达",
+          "sha256": "f1d13b452feec3fb2c6971b602cb74f698677c9168ad362e7f048c924810f410",
+          "source_text_internal": "Mature return appears as enoughness that still allows honest growth."
+        },
+        {
+          "field_key": "wisewave_reflection",
+          "source_heading": "Wisewave Reflection / 玄微引导语",
+          "sha256": "33a3824cce56378241ddb91131c8dfc44d64bdcff97b292d83aac90cc7bb86de",
+          "source_text_internal": "You were not created as a question mark. You are allowed to live from enough."
+        }
+      ],
+      "source_text_internal": "## S9-01 · Return Through Enoughness / 足够回源者\n\n### Return Essence / 回源本质\n\nYour return to source is through remembering that existence does not need to be proven.\n\n### What Your Soul Remembers / 灵魂记起什么\n\nThis code reflects a soul releasing the belief that value must be earned through achievement, beauty, usefulness, or recognition.\n\n### How Life Themes Resolve / 生命主题如何整合\n\nLife themes resolve when the person acts from worth rather than for worth.\n\n### Natural Return Practices / 自然回源练习\n\n- self-acceptance\n- rest practice\n- creative expression without proof\n- identity release\n- gentle discipline\n\n### Shadow Distortion of Return / 回源的阴影扭曲\n\nWhen distorted, return may become complacency or avoiding growth by calling everything already complete.\n\n### Mature Return Expression / 成熟回源表达\n\nMature return appears as enoughness that still allows honest growth.\n\n### Wisewave Reflection / 玄微引导语\n\nYou were not created as a question mark. You are allowed to live from enough.\n\n### Safe Language Note\n\nThis interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "preview_requires_auth": true,
+      "source_reachable": true
+    },
+    {
+      "code": "S9-02",
+      "module": "S9",
+      "name_zh_tw": "信任回源者",
+      "source_name_en": "Return Through Trust",
+      "source_name_original": "信任回源者",
+      "definition_short_zh_tw": "在做好應負責的部分之後，容許事情存在不能完全掌控的空間。",
+      "full_definition_zh_tw": "「信任回源者」象徵一種在控制與放任之間尋找平衡的方式。當事情有許多變數，人可能以不斷預想、反覆確認或替所有人安排一切，換取暫時的安全感。這個原型所說的「信任」，不是相信宇宙一定會安排好，也不是忽略風險；而是分清楚自己可以採取的行動、必須面對的事實，以及無法保證的結果。如此，行動仍然謹慎，心卻不必被絕對控制的要求佔滿。",
+      "role_and_purpose_zh_tw": "在 S9 裡，S9-02 探索的是：當生命中的計畫、關係或責任需要持續進行，我能否用適度的準備參與，而不是用恐懼要求完全可控？其目的在讓信任與現實責任同時存在。與 S9-05 的「放下已無法改變之事」不同，S9-02 著重在事情尚未定局時，如何帶著不確定性繼續行動。",
+      "strengths_zh_tw": "建立合理計畫、接受合作與分工、定期檢查風險、遇到變化時調整步驟，並承認沒有誰可以保證所有結果。",
+      "tension_zh_tw": "過度控制可能使人疲憊，也可能壓縮他人的自主；但若把信任等同無須準備、只等運氣或拒絕查證，則會使自身暴露於可避免的風險。尤其安全、健康、法律和金錢問題，仍須依實際資訊採取必要措施。",
+      "daily_life_examples_zh_tw": [
+        {
+          "title": "專案等待回覆",
+          "narrative": "假設你已寄出完整提案，卻無法決定對方何時答覆。可以記下合理追蹤日期，先做好自己能處理的其他事，而不是每天不斷猜測對方的想法。",
+          "is_hypothetical": true
+        },
+        {
+          "title": "共同生活的分工",
+          "narrative": "假設家人願意分擔某項家務，你可以說清楚重要的品質標準，再容許對方採取不同做法；必要時討論修正，不必每一步都親自監控。",
+          "is_hypothetical": true
+        }
+      ],
+      "insight_zh_tw": "信任不是停止負責，而是負責到自己能負責的地方，再容許現實有其變化與他人的選擇。",
+      "reflection_questions_zh_tw": [
+        "我正在試圖控制哪一個其實無法保證的結果？",
+        "有哪些合理的查證或準備已足夠，讓我可以先走下一步？"
+      ],
+      "interpretation_type": "SYMBOLIC_NON_DIAGNOSTIC",
+      "safe_language_note_zh_tw": "本內容是象徵性自我反思素材，不是人格診斷、能力認證、超自然證明或命運預測。所有案例均屬假設，不代表讀者實際經歷；關係安全、健康、法律與財務事項，應優先採取現實安全措施並尋求必要專業協助。",
+      "source_anchor": {
+        "source_file": "1320_S9_Return_to_Source_Content_Database_v1_EN.md",
+        "source_file_sha256": "4b3673688832fa909f6733073eada0c392ee202c295dc74e08c4b1e1d56b832c",
+        "source_section": "S9-02",
+        "source_section_sha256": "052416c430ac8105128100575ac31d97d2ec5671d29460973c2ec860e9ead740",
+        "source_fields_count": 7,
+        "safe_language_source_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa"
+      },
+      "source_field_anchors": [
+        {
+          "field_key": "return_essence",
+          "source_heading": "Return Essence / 回源本质",
+          "sha256": "0731b702ff62360f20f41e5a2da584786e8ce29dd2baf4e88058dc2bbf54c3ed",
+          "source_text_internal": "Your return to source happens through loosening control and learning to cooperate with life without becoming passive."
+        },
+        {
+          "field_key": "soul_remembers",
+          "source_heading": "What Your Soul Remembers / 灵魂记起什么",
+          "sha256": "a0c6b6bd9952c82111cea7b81246bbcff09117c59040532724a4cc6b877b5fb0",
+          "source_text_internal": "This code reflects a soul releasing the need to manage every outcome in order to feel safe."
+        },
+        {
+          "field_key": "life_themes_resolve",
+          "source_heading": "How Life Themes Resolve / 生命主题如何整合",
+          "sha256": "c67f8c333471ab4fda0f6925d3712d09ba4b39c13f664b5c0d6338211ff638dc",
+          "source_text_internal": "Life themes resolve when the person distinguishes trust from avoidance and responsibility from control."
+        },
+        {
+          "field_key": "natural_return_practices",
+          "source_heading": "Natural Return Practices / 自然回源练习",
+          "sha256": "90360d712ce14f78ffaf18288222ea9a59a2e6b6462363528ba913494216c365",
+          "source_text_internal": "- surrender practice\n- adaptive planning\n- faith in process\n- nervous system regulation\n- collaborative living"
+        },
+        {
+          "field_key": "shadow_distortion",
+          "source_heading": "Shadow Distortion of Return / 回源的阴影扭曲",
+          "sha256": "e43bbb06b321a3c0829e40096e9da93c655f1dc7a4bb30c257d9731705f81924",
+          "source_text_internal": "When distorted, return may become passivity, magical thinking, or refusing practical responsibility."
+        },
+        {
+          "field_key": "mature_expression",
+          "source_heading": "Mature Return Expression / 成熟回源表达",
+          "sha256": "50a0c3c2ca6a090011254ef3fa2fdb7e2661c01504ff39e4cd24c2875404cf65",
+          "source_text_internal": "Mature return appears as grounded trust: doing the next true thing while allowing life to remain alive."
+        },
+        {
+          "field_key": "wisewave_reflection",
+          "source_heading": "Wisewave Reflection / 玄微引导语",
+          "sha256": "05676e6ad5f602f9751f5c8a532c6916fc2a59e85959ad9db39ab04ef2644c99",
+          "source_text_internal": "Trust is not the absence of action. It is action without the grip of fear."
+        }
+      ],
+      "source_text_internal": "## S9-02 · Return Through Trust / 信任回源者\n\n### Return Essence / 回源本质\n\nYour return to source happens through loosening control and learning to cooperate with life without becoming passive.\n\n### What Your Soul Remembers / 灵魂记起什么\n\nThis code reflects a soul releasing the need to manage every outcome in order to feel safe.\n\n### How Life Themes Resolve / 生命主题如何整合\n\nLife themes resolve when the person distinguishes trust from avoidance and responsibility from control.\n\n### Natural Return Practices / 自然回源练习\n\n- surrender practice\n- adaptive planning\n- faith in process\n- nervous system regulation\n- collaborative living\n\n### Shadow Distortion of Return / 回源的阴影扭曲\n\nWhen distorted, return may become passivity, magical thinking, or refusing practical responsibility.\n\n### Mature Return Expression / 成熟回源表达\n\nMature return appears as grounded trust: doing the next true thing while allowing life to remain alive.\n\n### Wisewave Reflection / 玄微引导语\n\nTrust is not the absence of action. It is action without the grip of fear.\n\n### Safe Language Note\n\nThis interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "preview_requires_auth": true,
+      "source_reachable": true
+    },
+    {
+      "code": "S9-03",
+      "module": "S9",
+      "name_zh_tw": "連結回源者",
+      "source_name_en": "Return Through Connection",
+      "source_name_original": "连接回源者",
+      "definition_short_zh_tw": "透過有界線的連結，讓理解、支持與獨立性可以同時存在。",
+      "full_definition_zh_tw": "「連結回源者」象徵一種不必獨自扛起所有事情，也不必為了關係放棄自己的相處方式。人與人的支持、合作與理解，可能幫助我們重新看見生活中的位置；但連結不等於合而為一，也不是只要親密就必須沒有秘密與界線。這個原型關注的是如何在與他人相遇時，既願意分享、接受幫助，也仍然知道自己的感受、責任與選擇屬於自己。",
+      "role_and_purpose_zh_tw": "在 S9 中，S9-03 探索「生命主題如何透過關係逐漸整合」。它不是要求讀者一定要修復所有關係，而是讓關係回到雙方都可以選擇的位置。與 S9-06 的「寬恕及釋放過去負擔」不同，S9-03 主要關心正在建立、調整或維護的連結品質。",
+      "strengths_zh_tw": "願意表達需要、建立互相支持的友誼、在分歧中練習說明立場，並接受關係可以有不同程度的親近與合作。",
+      "tension_zh_tw": "若將別人的肯定視為自我存在的來源，容易陷入依賴、討好或失去界線；若把獨立理解成不能求助，也可能加深孤立。真正的連結不以承受傷害為交換條件。",
+      "daily_life_examples_zh_tw": [
+        {
+          "title": "朋友之間的求助",
+          "narrative": "假設你正面對一件繁重的事情，可以向可信任的朋友明確提出一項具體請求，同時允許對方依自己的情況答應或拒絕。互相支持並不需要任何一方無限付出。",
+          "is_hypothetical": true
+        },
+        {
+          "title": "合作裡的不同意見",
+          "narrative": "假設夥伴對下一步有不同想法。你可以說清楚自己的顧慮，也請對方表達他的依據；即使最後無法合作，也可以帶著尊重保留界線。若互動帶有威脅或控制，安全優先於維繫關係。",
+          "is_hypothetical": true
+        }
+      ],
+      "insight_zh_tw": "我不必靠離群來證明獨立，也不必靠失去自己來證明親近；連結可以是一種有選擇權的參與。",
+      "reflection_questions_zh_tw": [
+        "在哪段關係裡，我可以更清楚地表達需要而不是期待別人猜到？",
+        "什麼界線能讓這段連結更安全、更真實？"
+      ],
+      "interpretation_type": "SYMBOLIC_NON_DIAGNOSTIC",
+      "safe_language_note_zh_tw": "本內容是象徵性自我反思素材，不是人格診斷、能力認證、超自然證明或命運預測。所有案例均屬假設，不代表讀者實際經歷；關係安全、健康、法律與財務事項，應優先採取現實安全措施並尋求必要專業協助。",
+      "source_anchor": {
+        "source_file": "1320_S9_Return_to_Source_Content_Database_v1_EN.md",
+        "source_file_sha256": "4b3673688832fa909f6733073eada0c392ee202c295dc74e08c4b1e1d56b832c",
+        "source_section": "S9-03",
+        "source_section_sha256": "c4f4be93cd080755c24b21281abc9d88e146289af739ba4486c23e7ad36de243",
+        "source_fields_count": 7,
+        "safe_language_source_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa"
+      },
+      "source_field_anchors": [
+        {
+          "field_key": "return_essence",
+          "source_heading": "Return Essence / 回源本质",
+          "sha256": "7b8da49766f0307390eef15a9d275b6318464aed84148c2de64b8cbdbdf8b9e0",
+          "source_text_internal": "Your return to source is through remembering that separateness is not the whole truth."
+        },
+        {
+          "field_key": "soul_remembers",
+          "source_heading": "What Your Soul Remembers / 灵魂记起什么",
+          "sha256": "6c5a304a864e9d30a0ded82875f4de92a55967c62f5ae7ec4c15f32b36ab1460",
+          "source_text_internal": "This code reflects a soul healing isolation, guardedness, and the belief that they must carry everything alone."
+        },
+        {
+          "field_key": "life_themes_resolve",
+          "source_heading": "How Life Themes Resolve / 生命主题如何整合",
+          "sha256": "4e1894814609bc0fda222b092018d0f7b582ac92c7b4e3fcc82cb3639cf88b92",
+          "source_text_internal": "Life themes resolve when connection becomes chosen, discerning, and rooted in self-presence."
+        },
+        {
+          "field_key": "natural_return_practices",
+          "source_heading": "Natural Return Practices / 自然回源练习",
+          "sha256": "571642b45deb2b92a4a65e85d543d8f903237035fb463725bef706003e91501a",
+          "source_text_internal": "- community\n- repair conversations\n- friendship\n- relational healing\n- shared practice"
+        },
+        {
+          "field_key": "shadow_distortion",
+          "source_heading": "Shadow Distortion of Return / 回源的阴影扭曲",
+          "sha256": "e4b6c7fdceead557d1d5dfd630f6f1cff791d062d21a0809653e51df6251a097",
+          "source_text_internal": "When distorted, return may become merging, dependency, or looking to others as the source of self."
+        },
+        {
+          "field_key": "mature_expression",
+          "source_heading": "Mature Return Expression / 成熟回源表达",
+          "sha256": "2c0fb2cf7bf97e807ad34b626fab823e3de2667ecd98b2fec52bae03c7af9b24",
+          "source_text_internal": "Mature return appears as connection without self-abandonment."
+        },
+        {
+          "field_key": "wisewave_reflection",
+          "source_heading": "Wisewave Reflection / 玄微引导语",
+          "sha256": "e0c8fbfed005084ffd08de6b208708d7fdfe7803072b34f2493254078c86d444",
+          "source_text_internal": "You return to source not by disappearing into others, but by meeting life with an open center."
+        }
+      ],
+      "source_text_internal": "## S9-03 · Return Through Connection / 连接回源者\n\n### Return Essence / 回源本质\n\nYour return to source is through remembering that separateness is not the whole truth.\n\n### What Your Soul Remembers / 灵魂记起什么\n\nThis code reflects a soul healing isolation, guardedness, and the belief that they must carry everything alone.\n\n### How Life Themes Resolve / 生命主题如何整合\n\nLife themes resolve when connection becomes chosen, discerning, and rooted in self-presence.\n\n### Natural Return Practices / 自然回源练习\n\n- community\n- repair conversations\n- friendship\n- relational healing\n- shared practice\n\n### Shadow Distortion of Return / 回源的阴影扭曲\n\nWhen distorted, return may become merging, dependency, or looking to others as the source of self.\n\n### Mature Return Expression / 成熟回源表达\n\nMature return appears as connection without self-abandonment.\n\n### Wisewave Reflection / 玄微引导语\n\nYou return to source not by disappearing into others, but by meeting life with an open center.\n\n### Safe Language Note\n\nThis interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "preview_requires_auth": true,
+      "source_reachable": true
+    },
+    {
+      "code": "S9-04",
+      "module": "S9",
+      "name_zh_tw": "真相回源者",
+      "source_name_en": "Return Through Truth",
+      "source_name_original": "真相回源者",
+      "definition_short_zh_tw": "以事實、真誠與同理整理生活，讓理解不必靠否認現實維持。",
+      "full_definition_zh_tw": "「真相回源者」象徵願意讓現實中的資訊修正自己的期待、理解與行動。有時我們對某件事抱著美好想像，也可能因害怕失去關係或希望，而不願看見已經發生的事。這個原型不是鼓勵冷酷揭穿，也不表示有人天生掌握絕對真理；它關心的是將觀察、推測與情緒分開，容許事實挑戰原有看法，同時保留人的溫度與尊嚴。",
+      "role_and_purpose_zh_tw": "在 S9 中，S9-04 探索「當真實與期待不同時，我如何仍然誠實地活下去」。其作用是協助辨識哪些想法有證據、哪些尚需詢問，以及哪些關係或計畫需要修正。目的不在以真相壓倒他人，而在讓選擇有可靠基礎。它和 S9-02 的「容納不確定」不同：S9-04 特別聚焦確認已有資訊、停止維護不合現實的假設。",
+      "strengths_zh_tw": "核對訊息、溫和地表達難以說出口的事、承認自己的誤判，以及在溝通中同時保留誠實與尊重。",
+      "tension_zh_tw": "若把「我只是在說真相」當成傷害別人的理由，可能變成苛刻與定罪；若害怕衝突而一直避開已知問題，也可能讓誤解累積。對真相的追求需要謙遜：有些判斷仍然只是自己的角度。",
+      "daily_life_examples_zh_tw": [
+        {
+          "title": "合作出現落差",
+          "narrative": "假設兩位同事對工作完成度有不同印象。你可以共同檢查原訂標準、實際交付與記錄，再討論如何補救，而不是直接判定誰不負責任。",
+          "is_hypothetical": true
+        },
+        {
+          "title": "關係中的猜測",
+          "narrative": "假設一則訊息遲遲沒有回覆，你可能感到失落，卻還不知道原因。可以承認自己的感受，再向對方確認實際情況；不要讓猜測直接取代事實。",
+          "is_hypothetical": true
+        }
+      ],
+      "insight_zh_tw": "真誠不必與溫柔對立。把事實看清楚，有時正是讓關係和選擇重新變得可靠的開始。",
+      "reflection_questions_zh_tw": [
+        "我目前堅信的一個判斷，有哪些已知事實可以支持？",
+        "若需要說出一件不容易的真話，怎麼表達才同時清楚且尊重？"
+      ],
+      "interpretation_type": "SYMBOLIC_NON_DIAGNOSTIC",
+      "safe_language_note_zh_tw": "本內容是象徵性自我反思素材，不是人格診斷、能力認證、超自然證明或命運預測。所有案例均屬假設，不代表讀者實際經歷；關係安全、健康、法律與財務事項，應優先採取現實安全措施並尋求必要專業協助。",
+      "source_anchor": {
+        "source_file": "1320_S9_Return_to_Source_Content_Database_v1_EN.md",
+        "source_file_sha256": "4b3673688832fa909f6733073eada0c392ee202c295dc74e08c4b1e1d56b832c",
+        "source_section": "S9-04",
+        "source_section_sha256": "0d990c087e57639217a37c37ebddf1ccbb285308fd140386d2752475dad4a135",
+        "source_fields_count": 7,
+        "safe_language_source_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa"
+      },
+      "source_field_anchors": [
+        {
+          "field_key": "return_essence",
+          "source_heading": "Return Essence / 回源本质",
+          "sha256": "5d539c0314a9680d9b6267d4d34008d41b890e791de4df8e5ed3bce69481419c",
+          "source_text_internal": "Your return to source happens through allowing truth to refine identity, hope, relationships, and direction."
+        },
+        {
+          "field_key": "soul_remembers",
+          "source_heading": "What Your Soul Remembers / 灵魂记起什么",
+          "sha256": "efc87c4d0723d5c11ed22ca0985148d688a4bda6bd66b46c806179873d20a4e6",
+          "source_text_internal": "This code reflects a soul learning that reality is not an enemy of love; it is the ground where love becomes real."
+        },
+        {
+          "field_key": "life_themes_resolve",
+          "source_heading": "How Life Themes Resolve / 生命主题如何整合",
+          "sha256": "de2d097c956c08bf71f5a96192071533cc0844968e0949f10658b72150fd6859",
+          "source_text_internal": "Life themes resolve when the person stops protecting illusions and lets honest seeing become liberation."
+        },
+        {
+          "field_key": "natural_return_practices",
+          "source_heading": "Natural Return Practices / 自然回源练习",
+          "sha256": "21c349037e4696df17211ee4fa3391a93a22444397dc39ec93aa223326daa9ae",
+          "source_text_internal": "- truth-telling\n- discernment\n- journaling reality vs projection\n- ethical repair\n- clear communication"
+        },
+        {
+          "field_key": "shadow_distortion",
+          "source_heading": "Shadow Distortion of Return / 回源的阴影扭曲",
+          "sha256": "e691ccb13c290cb196994c453f9b31abaf06e6f2ddfe0329720c9d1ff67b6433",
+          "source_text_internal": "When distorted, return may become harshness, judgment, or using truth to defend against tenderness."
+        },
+        {
+          "field_key": "mature_expression",
+          "source_heading": "Mature Return Expression / 成熟回源表达",
+          "sha256": "c59ad078bc5a10f3bdd18de692dea0b4be1a8b299571065833300742c0e3a07f",
+          "source_text_internal": "Mature return appears as truth with compassion: clear enough to liberate, gentle enough to be received."
+        },
+        {
+          "field_key": "wisewave_reflection",
+          "source_heading": "Wisewave Reflection / 玄微引导语",
+          "sha256": "5be9604bbe640af511e192062572b4c54429f51083b8fd015e2e2c695abe0688",
+          "source_text_internal": "Truth does not remove love. It removes what love was never meant to carry."
+        }
+      ],
+      "source_text_internal": "## S9-04 · Return Through Truth / 真相回源者\n\n### Return Essence / 回源本质\n\nYour return to source happens through allowing truth to refine identity, hope, relationships, and direction.\n\n### What Your Soul Remembers / 灵魂记起什么\n\nThis code reflects a soul learning that reality is not an enemy of love; it is the ground where love becomes real.\n\n### How Life Themes Resolve / 生命主题如何整合\n\nLife themes resolve when the person stops protecting illusions and lets honest seeing become liberation.\n\n### Natural Return Practices / 自然回源练习\n\n- truth-telling\n- discernment\n- journaling reality vs projection\n- ethical repair\n- clear communication\n\n### Shadow Distortion of Return / 回源的阴影扭曲\n\nWhen distorted, return may become harshness, judgment, or using truth to defend against tenderness.\n\n### Mature Return Expression / 成熟回源表达\n\nMature return appears as truth with compassion: clear enough to liberate, gentle enough to be received.\n\n### Wisewave Reflection / 玄微引导语\n\nTruth does not remove love. It removes what love was never meant to carry.\n\n### Safe Language Note\n\nThis interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "preview_requires_auth": true,
+      "source_reachable": true
+    },
+    {
+      "code": "S9-05",
+      "module": "S9",
+      "name_zh_tw": "臣服回源者",
+      "source_name_en": "Return Through Surrender",
+      "source_name_original": "臣服回源者",
+      "definition_short_zh_tw": "停止徒勞地對抗已發生的事，同時保留選擇與實際行動的能力。",
+      "full_definition_zh_tw": "「臣服回源者」源自 Return Through Surrender。在這裡，「臣服」不是向任何人、權威或傷害低頭，也不是無條件接受不公平；它象徵辨認某些事情已經發生、某些結果無法靠更用力就改變，於是不再把全部力氣用在否認事實。真正可以放下的，是無效的拉扯；仍然可以保留的，是悲傷、界線、必要的抵抗、求助及下一步選擇。這個原型把「接納現實」與「放棄自己」清楚分開。",
+      "role_and_purpose_zh_tw": "在 S9 裡，S9-05 探索的是：當一個生命階段已經結束，或某項限制無法立即改變，我能否不再用強迫自己或他人的方式爭取控制感？其作用是讓原本消耗在否認上的心力，重新轉向可行的照顧與行動。與 S9-02 在不確定中繼續信任不同，S9-05 特別面對「已經不能照原樣進行」的時刻。",
+      "strengths_zh_tw": "容許哀傷與失落、分辨可改變和不可改變之事、結束無效的反覆爭辯，並在現實條件下安排新的步驟。",
+      "tension_zh_tw": "把臣服誤解為忍耐不當對待、放棄求助、停止履行責任，可能讓處境惡化；但如果堅持所有結果都必須符合原先期待，也會失去調整機會。涉及暴力、健康、法律或財務風險時，接納事實不代表不採取必要保護行動。",
+      "daily_life_examples_zh_tw": [
+        {
+          "title": "一項計畫必須改期",
+          "narrative": "假設原訂活動因場地無法使用而必須延期。你可以承認失望，先通知相關人員、確認替代安排，再決定是否取消；不需要責怪自己沒有把所有變數控制住。",
+          "is_hypothetical": true
+        },
+        {
+          "title": "關係結束後的整理",
+          "narrative": "假設一段合作已明確終止。可以保留對失落的感受，同時處理資料交接、財務結算與必要界線，而不靠反覆追問來勉強對方改變決定。",
+          "is_hypothetical": true
+        }
+      ],
+      "insight_zh_tw": "接納已發生的事，不等於認同它、更不等於任人安排；放下無效拉扯，才能把行動留給真正仍能選擇的地方。",
+      "reflection_questions_zh_tw": [
+        "有哪些事情已經改變，而我仍在用舊方法要求它回到原樣？",
+        "如果不再與已發生的事爭辯，我今天仍能做哪個負責任的選擇？"
+      ],
+      "interpretation_type": "SYMBOLIC_NON_DIAGNOSTIC",
+      "safe_language_note_zh_tw": "本內容是象徵性自我反思素材，不是人格診斷、能力認證、超自然證明或命運預測。所有案例均屬假設，不代表讀者實際經歷；關係安全、健康、法律與財務事項，應優先採取現實安全措施並尋求必要專業協助。",
+      "source_anchor": {
+        "source_file": "1320_S9_Return_to_Source_Content_Database_v1_EN.md",
+        "source_file_sha256": "4b3673688832fa909f6733073eada0c392ee202c295dc74e08c4b1e1d56b832c",
+        "source_section": "S9-05",
+        "source_section_sha256": "2dc75240a9ccfc6efa4c299b40d78f95592e2ccdd6904bc0716b0588dab5addd",
+        "source_fields_count": 7,
+        "safe_language_source_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa"
+      },
+      "source_field_anchors": [
+        {
+          "field_key": "return_essence",
+          "source_heading": "Return Essence / 回源本质",
+          "sha256": "c300afae843138088dacab7c15e3c9e39f6c9ffb037ecb95d3467a0f53de2366",
+          "source_text_internal": "Your return to source is through releasing the identity that must force, fix, or explain everything."
+        },
+        {
+          "field_key": "soul_remembers",
+          "source_heading": "What Your Soul Remembers / 灵魂记起什么",
+          "sha256": "9b5fb1011d7ff1bd31ffc01c4ba4b8c3569f074225d1bb3d1e7b92324155efd8",
+          "source_text_internal": "This code reflects a soul learning that some thresholds open through softening, not pressure."
+        },
+        {
+          "field_key": "life_themes_resolve",
+          "source_heading": "How Life Themes Resolve / 生命主题如何整合",
+          "sha256": "4f9529ceca6a929014ada5f4ccd01100ae0760da5843c337569cb0d7cf71ee34",
+          "source_text_internal": "Life themes resolve when effort becomes clean and the person stops using striving to avoid vulnerability."
+        },
+        {
+          "field_key": "natural_return_practices",
+          "source_heading": "Natural Return Practices / 自然回源练习",
+          "sha256": "a86e195dd34d430006224b99a91876c803234a045824d2d1a4505eeef1e64f85",
+          "source_text_internal": "- letting-go rituals\n- grief work\n- acceptance practice\n- energy release\n- completion of old cycles"
+        },
+        {
+          "field_key": "shadow_distortion",
+          "source_heading": "Shadow Distortion of Return / 回源的阴影扭曲",
+          "sha256": "9f3329b2b81b568074a8d746c579e866e99cbf38fc62c806b0e775b3bb37ad3a",
+          "source_text_internal": "When distorted, return may become collapse, resignation, or spiritual bypassing."
+        },
+        {
+          "field_key": "mature_expression",
+          "source_heading": "Mature Return Expression / 成熟回源表达",
+          "sha256": "fa83915bee345cbc5465c59d08567aa9acc40d85fafc8ac4bccdb335e9c85288",
+          "source_text_internal": "Mature return appears as surrendered participation: fully present, but no longer fighting the shape of reality."
+        },
+        {
+          "field_key": "wisewave_reflection",
+          "source_heading": "Wisewave Reflection / 玄微引导语",
+          "sha256": "850b833597bcb280ddc0924babb4ad064a76264d67e3982689c05413cd4e97fa",
+          "source_text_internal": "Surrender is not giving up. It is no longer fighting what must be met."
+        }
+      ],
+      "source_text_internal": "## S9-05 · Return Through Surrender / 臣服回源者\n\n### Return Essence / 回源本质\n\nYour return to source is through releasing the identity that must force, fix, or explain everything.\n\n### What Your Soul Remembers / 灵魂记起什么\n\nThis code reflects a soul learning that some thresholds open through softening, not pressure.\n\n### How Life Themes Resolve / 生命主题如何整合\n\nLife themes resolve when effort becomes clean and the person stops using striving to avoid vulnerability.\n\n### Natural Return Practices / 自然回源练习\n\n- letting-go rituals\n- grief work\n- acceptance practice\n- energy release\n- completion of old cycles\n\n### Shadow Distortion of Return / 回源的阴影扭曲\n\nWhen distorted, return may become collapse, resignation, or spiritual bypassing.\n\n### Mature Return Expression / 成熟回源表达\n\nMature return appears as surrendered participation: fully present, but no longer fighting the shape of reality.\n\n### Wisewave Reflection / 玄微引导语\n\nSurrender is not giving up. It is no longer fighting what must be met.\n\n### Safe Language Note\n\nThis interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "preview_requires_auth": true,
+      "source_reachable": true
+    },
+    {
+      "code": "S9-06",
+      "module": "S9",
+      "name_zh_tw": "寬恕回源者",
+      "source_name_en": "Return Through Forgiveness",
+      "source_name_original": "宽恕回源者",
+      "definition_short_zh_tw": "讓過去的傷害不再替現在做全部決定，同時保留真相、安全與界線。",
+      "full_definition_zh_tw": "「寬恕回源者」象徵在面對過去的失落、自責或衝突時，逐漸鬆開那些持續消耗自己的負擔。這裡的「寬恕」不等於否認傷害、不等於認同對方的行為，也不要求忘記、重建關係或撤銷責任。它也可能先從不再用過去的錯誤永久定義自己開始。是否要原諒某個人、何時願意靠近，完全是讀者自己的選擇；沒有完成寬恕，也不表示不成熟。",
+      "role_and_purpose_zh_tw": "在 S9 中，S9-06 探索「如何帶著真相與自尊重新安排自己與過去的關係」。它的目的不是要求讀者表現得寬宏大量，而是讓記憶、責任與未來選擇不被混為一談。與 S9-03 著重當下的連結不同，S9-06 更關注過去尚未整理完的情緒與關係結尾。",
+      "strengths_zh_tw": "辨認自責與實際責任的差別、容許感受有自己的節奏、在安全情況下尋求修復，或選擇以界線完成一段關係。",
+      "tension_zh_tw": "過早要求自己或別人原諒，可能壓下真實的憤怒、輕忽傷害，甚至把人帶回不安全處境；反過來，若把一次受傷當作人生全部定義，也可能遮住其他可被照顧的需要。寬恕不是必須完成的任務。",
+      "daily_life_examples_zh_tw": [
+        {
+          "title": "一次工作失誤",
+          "narrative": "假設你因疏忽造成團隊額外工作。你可以清楚承擔責任、補救影響、改善流程；在完成必要修正後，也可以練習不再用這次錯誤否定自己整個人。",
+          "is_hypothetical": true
+        },
+        {
+          "title": "一段不安全的關係",
+          "narrative": "假設過去曾有威脅、控制或傷害。你不需要為了追求「寬恕」而聯絡對方、和解或撤除保護措施；維持安全距離、尋求可信任的專業或社會支持，都可以是照顧自己的選擇。",
+          "is_hypothetical": true
+        }
+      ],
+      "insight_zh_tw": "我可以承認曾經發生的傷害，也可以決定不讓它成為我唯一的身份；是否寬恕他人，不必成為任何人的考核。",
+      "reflection_questions_zh_tw": [
+        "在一段過去經驗裡，哪些責任確實屬於我，哪些並不屬於我？",
+        "現在最能照顧我的，是修復、清楚界線、專業支持，還是先允許自己不做決定？"
+      ],
+      "interpretation_type": "SYMBOLIC_NON_DIAGNOSTIC",
+      "safe_language_note_zh_tw": "本內容是象徵性自我反思素材，不是人格診斷、能力認證、超自然證明或命運預測。所有案例均屬假設，不代表讀者實際經歷；關係安全、健康、法律與財務事項，應優先採取現實安全措施並尋求必要專業協助。",
+      "source_anchor": {
+        "source_file": "1320_S9_Return_to_Source_Content_Database_v1_EN.md",
+        "source_file_sha256": "4b3673688832fa909f6733073eada0c392ee202c295dc74e08c4b1e1d56b832c",
+        "source_section": "S9-06",
+        "source_section_sha256": "9cc1820e14c472a8184dea034247f665e95d30acc8d0bff2499584f53e3971c6",
+        "source_fields_count": 7,
+        "safe_language_source_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa"
+      },
+      "source_field_anchors": [
+        {
+          "field_key": "return_essence",
+          "source_heading": "Return Essence / 回源本质",
+          "sha256": "cd562d7608f39df22280aeb9cf281f65df65dfba350c27dc050ead329e05ce0e",
+          "source_text_internal": "Your return to source happens through releasing the weight of blame, guilt, and unfinished emotional contracts."
+        },
+        {
+          "field_key": "soul_remembers",
+          "source_heading": "What Your Soul Remembers / 灵魂记起什么",
+          "sha256": "bcb17dd8bcbc29e7355ea3ebeecc8bb5a624ae9b01640342e217c8a692ef51f1",
+          "source_text_internal": "This code reflects a soul learning that forgiveness is not approval; it is the return of life-force to the self."
+        },
+        {
+          "field_key": "life_themes_resolve",
+          "source_heading": "How Life Themes Resolve / 生命主题如何整合",
+          "sha256": "c2983ef821a586adfc340bf8187772eb76bfbf6ccda8ffc7d4b811c0195ede61",
+          "source_text_internal": "Life themes resolve when the person stops making pain the center of identity and begins reclaiming freedom."
+        },
+        {
+          "field_key": "natural_return_practices",
+          "source_heading": "Natural Return Practices / 自然回源练习",
+          "sha256": "be4af2edb2f9d71dbe58752350cada2e52af752f7d33e399360da06427477c58",
+          "source_text_internal": "- self-forgiveness\n- relationship closure\n- compassionate boundaries\n- memory release\n- repair work"
+        },
+        {
+          "field_key": "shadow_distortion",
+          "source_heading": "Shadow Distortion of Return / 回源的阴影扭曲",
+          "sha256": "67e8f6cc0c0c62a4c9604c32eed542f6a1d11a289e3f059767b14237c688be60",
+          "source_text_internal": "When distorted, return may become premature forgiveness, denying anger, or remaining in harmful patterns to appear evolved."
+        },
+        {
+          "field_key": "mature_expression",
+          "source_heading": "Mature Return Expression / 成熟回源表达",
+          "sha256": "865f32cc5e1dbac2d6b9ae41041b8dc3e7529904167b72a1d749d839adad3c3f",
+          "source_text_internal": "Mature return appears as forgiveness with truth, boundaries, and self-respect."
+        },
+        {
+          "field_key": "wisewave_reflection",
+          "source_heading": "Wisewave Reflection / 玄微引导语",
+          "sha256": "7231f8c6e9cf2d693246d512f8bcd7e0327da43e821f1399fef06ff83b77e3e0",
+          "source_text_internal": "Forgiveness does not ask you to forget yourself. It asks you to stop imprisoning your life in the past."
+        }
+      ],
+      "source_text_internal": "## S9-06 · Return Through Forgiveness / 宽恕回源者\n\n### Return Essence / 回源本质\n\nYour return to source happens through releasing the weight of blame, guilt, and unfinished emotional contracts.\n\n### What Your Soul Remembers / 灵魂记起什么\n\nThis code reflects a soul learning that forgiveness is not approval; it is the return of life-force to the self.\n\n### How Life Themes Resolve / 生命主题如何整合\n\nLife themes resolve when the person stops making pain the center of identity and begins reclaiming freedom.\n\n### Natural Return Practices / 自然回源练习\n\n- self-forgiveness\n- relationship closure\n- compassionate boundaries\n- memory release\n- repair work\n\n### Shadow Distortion of Return / 回源的阴影扭曲\n\nWhen distorted, return may become premature forgiveness, denying anger, or remaining in harmful patterns to appear evolved.\n\n### Mature Return Expression / 成熟回源表达\n\nMature return appears as forgiveness with truth, boundaries, and self-respect.\n\n### Wisewave Reflection / 玄微引导语\n\nForgiveness does not ask you to forget yourself. It asks you to stop imprisoning your life in the past.\n\n### Safe Language Note\n\nThis interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "preview_requires_auth": true,
+      "source_reachable": true
+    },
+    {
+      "code": "S9-07",
+      "module": "S9",
+      "name_zh_tw": "臨在回源者",
+      "source_name_en": "Return Through Presence",
+      "source_name_original": "临在回源者",
+      "definition_short_zh_tw": "從反覆的預想與回想，回到眼前能感受、能辨認、能採取的事。",
+      "full_definition_zh_tw": "「臨在回源者」象徵把注意力從無止境的未來猜測與過去反覆回想，帶回目前正在經歷的生活。這裡的「臨在」不是神奇的精神狀態，也不是只要專注當下就能消除困難；它更接近一種普通但可練習的能力：留意身體的疲勞、辨認眼前已知資訊、聽見正在與自己說話的人，然後做出適合當下的選擇。臨在不是否定記憶和規劃，而是讓規劃不至於取代實際生活。",
+      "role_and_purpose_zh_tw": "在 S9 中，S9-07 探索「生命主題如何在當下被具體地活出來」。其作用是讓再深刻的理解，仍能落回時間、身體、日常關係及可實踐的步驟。它與 S9-00 的安靜停頓不同：S9-07 不一定需要沉默，即使在工作、談話或照顧家務時，也可以練習專注與回應。",
+      "strengths_zh_tw": "留意實際需要、在複雜情境中辨認眼前最重要的事、用簡單習慣讓注意力回到此刻，並把理解轉成下一個小行動。",
+      "tension_zh_tw": "若把「活在當下」當成不必規劃、不必處理財務或安全問題的理由，會忽略真正的責任；若不斷擔心尚未發生的情節，也可能失去今天可以完成的部分。臨在應協助行動，而不是使行動停滯。",
+      "daily_life_examples_zh_tw": [
+        {
+          "title": "忙碌早晨的優先順序",
+          "narrative": "假設一天剛開始就有許多待辦。你可以先確認今天不能延誤的事項、必要的休息與現有資源，再安排第一件可完成的工作，而不是同時思考所有可能失敗的情節。",
+          "is_hypothetical": true
+        },
+        {
+          "title": "一次面對面的談話",
+          "narrative": "假設你與朋友見面，腦中卻反覆想著昨天的爭執。可以先留意自己此刻是否能專心；需要時坦誠說明、稍作整理，再回到對話，而不必假裝完全沒有情緒。",
+          "is_hypothetical": true
+        }
+      ],
+      "insight_zh_tw": "真正的當下，不需要否定過去或未來；它讓我把理解帶回一個可以感受、可以負責、可以選擇的時刻。",
+      "reflection_questions_zh_tw": [
+        "當我開始陷入反覆猜想時，眼前有哪些已知而具體的事？",
+        "此刻最小、最必要，也最符合現實的一個行動是什麼？"
+      ],
+      "interpretation_type": "SYMBOLIC_NON_DIAGNOSTIC",
+      "safe_language_note_zh_tw": "本內容是象徵性自我反思素材，不是人格診斷、能力認證、超自然證明或命運預測。所有案例均屬假設，不代表讀者實際經歷；關係安全、健康、法律與財務事項，應優先採取現實安全措施並尋求必要專業協助。",
+      "source_anchor": {
+        "source_file": "1320_S9_Return_to_Source_Content_Database_v1_EN.md",
+        "source_file_sha256": "4b3673688832fa909f6733073eada0c392ee202c295dc74e08c4b1e1d56b832c",
+        "source_section": "S9-07",
+        "source_section_sha256": "111d99fc07eb18cd4405d98211d3d77c4752d0beeea281356449bfb546870617",
+        "source_fields_count": 7,
+        "safe_language_source_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa"
+      },
+      "source_field_anchors": [
+        {
+          "field_key": "return_essence",
+          "source_heading": "Return Essence / 回源本质",
+          "sha256": "78381453b6f79a7771767b4db3e3de542ce0fd3b5ce5209e200a70d6ade432fa",
+          "source_text_internal": "Your return to source is through entering the present moment fully enough for life to touch you again."
+        },
+        {
+          "field_key": "soul_remembers",
+          "source_heading": "What Your Soul Remembers / 灵魂记起什么",
+          "sha256": "bba9e9e61e47bd4f65680704b39f4d1d3793780456eba1f6d12a1ca827367c83",
+          "source_text_internal": "This code reflects a soul learning to come back from future fear, past loops, and imagined versions of reality."
+        },
+        {
+          "field_key": "life_themes_resolve",
+          "source_heading": "How Life Themes Resolve / 生命主题如何整合",
+          "sha256": "bc754453ebb0fc3e3acc0a0c0bd5716aef057d7a7421c2f5d634ee74063d6c12",
+          "source_text_internal": "Life themes resolve when the person chooses direct experience over constant mental departure."
+        },
+        {
+          "field_key": "natural_return_practices",
+          "source_heading": "Natural Return Practices / 自然回源练习",
+          "sha256": "5d9cb329667590758e63a58665fdd2fbe3f37c62207e7503b7f40edde95ba358",
+          "source_text_internal": "- body awareness\n- mindful action\n- sensory grounding\n- simple routines\n- present-time choice"
+        },
+        {
+          "field_key": "shadow_distortion",
+          "source_heading": "Shadow Distortion of Return / 回源的阴影扭曲",
+          "sha256": "02404f4e8736b6c5482501e353900169c612f4ec6241ebb7745517a03a8788ba",
+          "source_text_internal": "When distorted, return may become passivity, avoidance of planning, or using presence to ignore real responsibilities."
+        },
+        {
+          "field_key": "mature_expression",
+          "source_heading": "Mature Return Expression / 成熟回源表达",
+          "sha256": "b27f49dfdc295195c8d7e3071279400eafa064b408e1de59b2a75292aa940ff3",
+          "source_text_internal": "Mature return appears as presence that sharpens action rather than dulling it."
+        },
+        {
+          "field_key": "wisewave_reflection",
+          "source_heading": "Wisewave Reflection / 玄微引导语",
+          "sha256": "1d908aff98aa6c9ab972c78e0b7c6e59c1f1f239b752e105a19639f7f5e37bee",
+          "source_text_internal": "The present moment is not small. It is the only place your soul can actually return."
+        }
+      ],
+      "source_text_internal": "## S9-07 · Return Through Presence / 临在回源者\n\n### Return Essence / 回源本质\n\nYour return to source is through entering the present moment fully enough for life to touch you again.\n\n### What Your Soul Remembers / 灵魂记起什么\n\nThis code reflects a soul learning to come back from future fear, past loops, and imagined versions of reality.\n\n### How Life Themes Resolve / 生命主题如何整合\n\nLife themes resolve when the person chooses direct experience over constant mental departure.\n\n### Natural Return Practices / 自然回源练习\n\n- body awareness\n- mindful action\n- sensory grounding\n- simple routines\n- present-time choice\n\n### Shadow Distortion of Return / 回源的阴影扭曲\n\nWhen distorted, return may become passivity, avoidance of planning, or using presence to ignore real responsibilities.\n\n### Mature Return Expression / 成熟回源表达\n\nMature return appears as presence that sharpens action rather than dulling it.\n\n### Wisewave Reflection / 玄微引导语\n\nThe present moment is not small. It is the only place your soul can actually return.\n\n### Safe Language Note\n\nThis interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "preview_requires_auth": true,
+      "source_reachable": true
+    },
+    {
+      "code": "S9-08",
+      "module": "S9",
+      "name_zh_tw": "完整回源者",
+      "source_name_en": "Return Through Wholeness",
+      "source_name_original": "完整回源者",
+      "definition_short_zh_tw": "容許自己同時具有力量、限制與矛盾，不必塑造成完美一致的形象。",
+      "full_definition_zh_tw": "「完整回源者」象徵願意把自己不同的面向放回同一個生活脈絡中理解。人可能有勇敢的一面，也有猶豫的一面；想照顧別人，也同時需要被照顧；在某些領域有能力，在另一些領域仍在學習。這裡的「完整」不是完美無缺、每種感受都已被解決，更不是達到比別人更高的靈性層級；它指的是不必把不符合期待的部分全部否認，才能維持對自己的基本理解。",
+      "role_and_purpose_zh_tw": "在 S9 中，S9-08 探索「如何讓先前看似衝突的生命經驗被共同看見」。其作用是把力量與限制、成長與停頓、個人與群體關係放進更寬廣但仍真實的視角。與 S9-01 直接回應自我價值的有條件要求不同，S9-08 關注多個面向如何不互相排斥地共存。",
+      "strengths_zh_tw": "容許複雜情緒、承認長處與不足、避免用單一角色定義自己，並在生活與合作中採取真實而不誇大的表達。",
+      "tension_zh_tw": "如果急著宣告自己「已經整合」，可能壓過尚未處理的困難，或以成熟形象拒絕求助；但若只准自己展現某個理想版本，也會持續否定正常的人性。完整不表示任何行為都無須負責。",
+      "daily_life_examples_zh_tw": [
+        {
+          "title": "接受稱讚也承認不足",
+          "narrative": "假設你在工作上獲得肯定，卻也發現自己仍有不擅長的部分。可以接受成果，同時安排學習，不必因不足否定能力，也不必因成果拒絕回饋。",
+          "is_hypothetical": true
+        },
+        {
+          "title": "照顧者也有需要",
+          "narrative": "假設你常在家中協助其他人，某天卻感到疲累。可以承認自己需要休息、尋找合理分工，而不必為了維持「堅強可靠」的形象而忽略身體與生活。",
+          "is_hypothetical": true
+        }
+      ],
+      "insight_zh_tw": "完整不是讓自己永遠沒有矛盾；而是有能力在真實的矛盾中保持誠實、尊重需要，並持續修正選擇。",
+      "reflection_questions_zh_tw": [
+        "我是否一直只允許自己展現某一種形象？",
+        "如果不急著成為完美版本，我今天可以多承認自己哪一個真實面向？"
+      ],
+      "interpretation_type": "SYMBOLIC_NON_DIAGNOSTIC",
+      "safe_language_note_zh_tw": "本內容是象徵性自我反思素材，不是人格診斷、能力認證、超自然證明或命運預測。所有案例均屬假設，不代表讀者實際經歷；關係安全、健康、法律與財務事項，應優先採取現實安全措施並尋求必要專業協助。",
+      "source_anchor": {
+        "source_file": "1320_S9_Return_to_Source_Content_Database_v1_EN.md",
+        "source_file_sha256": "4b3673688832fa909f6733073eada0c392ee202c295dc74e08c4b1e1d56b832c",
+        "source_section": "S9-08",
+        "source_section_sha256": "92507c2d5d3facb848bb3ebc3198e5c09ea1e81efd1d5084305a8d5f18389cd2",
+        "source_fields_count": 7,
+        "safe_language_source_sha256": "5a1aa3d555d6a557b8dc70d5d2dd2867f3122aa8072b3a0aac3d11dcad9c64fa"
+      },
+      "source_field_anchors": [
+        {
+          "field_key": "return_essence",
+          "source_heading": "Return Essence / 回源本质",
+          "sha256": "7c362c278d9994290dcb4c7fa9920b1affb029c17bb7a40d837ad41e8355ffd1",
+          "source_text_internal": "Your return to source happens through integrating the parts of yourself you once split into good, bad, spiritual, human, strong, or weak."
+        },
+        {
+          "field_key": "soul_remembers",
+          "source_heading": "What Your Soul Remembers / 灵魂记起什么",
+          "sha256": "97bbe9a5b390643ed368feaf3dd5c2c654620665bff5472cc64c9df3cb535d3e",
+          "source_text_internal": "This code reflects a soul learning that wholeness is not perfection; it is honest inclusion."
+        },
+        {
+          "field_key": "life_themes_resolve",
+          "source_heading": "How Life Themes Resolve / 生命主题如何整合",
+          "sha256": "a8f4fc4cab03d3cfab327d6441838505102e6e99983d496c549b3b4aef509172",
+          "source_text_internal": "Life themes resolve when the person stops rejecting pieces of their humanity in order to feel worthy of source."
+        },
+        {
+          "field_key": "natural_return_practices",
+          "source_heading": "Natural Return Practices / 自然回源练习",
+          "sha256": "10e3740cc65d058e579bf2155a3ed4a7dd6df08357ab43546a232665c1dc6455",
+          "source_text_internal": "- shadow integration\n- creative embodiment\n- whole-self reflection\n- community integration\n- service from authenticity"
+        },
+        {
+          "field_key": "shadow_distortion",
+          "source_heading": "Shadow Distortion of Return / 回源的阴影扭曲",
+          "sha256": "9af8da12b118a9658cf96addbd96cb36638f314ecb07469d63c15108feb7618a",
+          "source_text_internal": "When distorted, return may become identity inflation, trying to appear integrated, or bypassing the ordinary human process."
+        },
+        {
+          "field_key": "mature_expression",
+          "source_heading": "Mature Return Expression / 成熟回源表达",
+          "sha256": "75700c9c46178e4c4203b2327121af94a5f8024efdc5dfe13bff774bd0830e74",
+          "source_text_internal": "Mature return appears as simple wholeness: nothing exaggerated, nothing denied."
+        },
+        {
+          "field_key": "wisewave_reflection",
+          "source_heading": "Wisewave Reflection / 玄微引导语",
+          "sha256": "e1ad3cf3d371664f65c50b368f191ce0dea382b034eeef23c92a5600dc7b0693",
+          "source_text_internal": "You return to source by becoming less divided from yourself."
+        }
+      ],
+      "source_text_internal": "## S9-08 · Return Through Wholeness / 完整回源者\n\n### Return Essence / 回源本质\n\nYour return to source happens through integrating the parts of yourself you once split into good, bad, spiritual, human, strong, or weak.\n\n### What Your Soul Remembers / 灵魂记起什么\n\nThis code reflects a soul learning that wholeness is not perfection; it is honest inclusion.\n\n### How Life Themes Resolve / 生命主题如何整合\n\nLife themes resolve when the person stops rejecting pieces of their humanity in order to feel worthy of source.\n\n### Natural Return Practices / 自然回源练习\n\n- shadow integration\n- creative embodiment\n- whole-self reflection\n- community integration\n- service from authenticity\n\n### Shadow Distortion of Return / 回源的阴影扭曲\n\nWhen distorted, return may become identity inflation, trying to appear integrated, or bypassing the ordinary human process.\n\n### Mature Return Expression / 成熟回源表达\n\nMature return appears as simple wholeness: nothing exaggerated, nothing denied.\n\n### Wisewave Reflection / 玄微引导语\n\nYou return to source by becoming less divided from yourself.\n\n### Safe Language Note\n\nThis interpretation is symbolic and reflective. It is not predictive, diagnostic, deterministic, or a statement of fixed identity.",
+      "editorial_status": "PENDING_REVIEW",
+      "reviewer": null,
+      "approved_at": null,
+      "customer_publishable": false,
+      "preview_requires_auth": true,
+      "source_reachable": true
+    }
+  ]
+}

@@ -81,6 +81,13 @@ import {
   s8PendingCount,
 } from "../lib/gzh/tw-v2-s8-library";
 import {
+  s9ApprovedCount,
+  s9CandidateFor,
+  s9CustomerPublishableCodes,
+  s9EditorialCandidateCount,
+  s9PendingCount,
+} from "../lib/gzh/tw-v2-s9-library";
+import {
   definitionFirstExample,
   definitionFirstRequiredFields,
   definitionFirstStandardMeta,
@@ -338,6 +345,43 @@ assert(s8CandidateFor("S8-00")?.code === "S8-00" && s8CandidateFor("S8-07")?.cod
 assert(s8CandidateFor("S8-08") === null, "S8 does not invent S8-08");
 assert((s8CandidateFor("S8-00")?.content_zh_tw_candidate?.everyday_examples?.length ?? 0) >= 2, "S8 definition-first keeps at least two examples");
 assert(s8CandidateFor("S1-01") === null, "S8 library does not invent S1 codes");
+assert(s9EditorialCandidateCount() === 9 && s9PendingCount() === 9 && s9ApprovedCount() === 0, "S9 has 9 pending candidates");
+assert(s9CustomerPublishableCodes().length === 0, "S9 candidates stay out of customer publish");
+assert(s9CandidateFor("S9-07")?.name_zh_tw_candidate === "臨在回源者" && !s9CandidateFor("S9-07")?.reviewer, "S9-07 calibration name stays unapproved");
+assert(s9CandidateFor("S9-04")?.name_zh_tw_candidate === "真相回源者", "S9-04 truth name present");
+assert(s9CandidateFor("S9-00")?.name_zh_tw_candidate === "靜默回源者", "S9-00 silence name present");
+assert(s9CandidateFor("S9-08")?.name_zh_tw_candidate === "完整回源者", "S9-08 wholeness name present");
+assert(s9CandidateFor("S9-00")?.code === "S9-00" && s9CandidateFor("S9-08")?.code === "S9-08", "S9 spans 00 to 08");
+assert((s9CandidateFor("S9-07")?.content_zh_tw_candidate?.everyday_examples?.length ?? 0) >= 2, "S9 definition-first keeps at least two examples");
+assert(s9CandidateFor("S1-01") === null, "S9 library does not invent S1 codes");
+assert(
+  s0EditorialCandidateCount() +
+    s1EditorialCandidateCount() +
+    s2EditorialCandidateCount() +
+    s3EditorialCandidateCount() +
+    s4EditorialCandidateCount() +
+    s5EditorialCandidateCount() +
+    s6EditorialCandidateCount() +
+    s7EditorialCandidateCount() +
+    s8EditorialCandidateCount() +
+    s9EditorialCandidateCount() ===
+    258,
+  "all 258 codes now have pending Chinese candidates",
+);
+assert(
+  s0ApprovedCount() +
+    s1ApprovedCount() +
+    s2ApprovedCount() +
+    s3ApprovedCount() +
+    s4ApprovedCount() +
+    s5ApprovedCount() +
+    s6ApprovedCount() +
+    s7ApprovedCount() +
+    s8ApprovedCount() +
+    s9ApprovedCount() ===
+    0,
+  "formal approvals remain zero across S0-S9",
+);
 assert(sampleFullDifference().length >= 6, "sample and full difference table exists");
 
 const page = fs.readFileSync(new URL("../app/(site)/tw-v2-report/page.tsx", import.meta.url), "utf8");

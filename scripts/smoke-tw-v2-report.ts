@@ -92,6 +92,13 @@ import {
   definitionFirstRequiredFields,
   definitionFirstStandardMeta,
 } from "../lib/gzh/tw-v2-definition-first";
+import {
+  reportBlueprintRc1AllPending,
+  reportBlueprintRc1DemoCodesForDate,
+  reportBlueprintRc1ForDate,
+  reportBlueprintRc1LockedSafety,
+  reportBlueprintRc1Meta,
+} from "../lib/gzh/tw-v2-report-blueprint-rc1";
 
 function assert(condition: unknown, label: string) {
   if (!condition) {
@@ -383,6 +390,68 @@ assert(
   "formal approvals remain zero across S0-S9",
 );
 assert(sampleFullDifference().length >= 6, "sample and full difference table exists");
+
+const blueprintMeta = reportBlueprintRc1Meta();
+assert(
+  blueprintMeta.packageId === "1320-report-blueprint-2026-11-19-rc1" &&
+    blueprintMeta.status === "PENDING_REVIEW" &&
+    blueprintMeta.customerPublishable === false &&
+    blueprintMeta.officialApprovedCount === 0,
+  "report blueprint RC1 stays pending and unpublished",
+);
+assert(
+  blueprintMeta.demoRecordCount === 20 &&
+    blueprintMeta.reportCount === 2 &&
+    blueprintMeta.fullChapterCount === 17 &&
+    blueprintMeta.sampleModuleOrder.join(",") === "S1,S3,S2,S0",
+  "report blueprint keeps Sample S1→S3→S2→S0 and Full 17 chapters",
+);
+assert(
+  blueprintMeta.v1Locked &&
+    blueprintMeta.pricesLocked &&
+    blueprintMeta.checkoutLocked &&
+    blueprintMeta.customerRelease === "HOLD",
+  "report blueprint keeps v1/price/checkout locked and customer HOLD",
+);
+assert(reportBlueprintRc1AllPending(), "all blueprint demo records and projections stay pending");
+assert(
+  reportBlueprintRc1DemoCodesForDate("1980-05-22").join(",") ===
+    "S1-18,S3-03,S2-27,S0-07,S4-14,S5-04,S6-28,S7-00,S8-00,S9-07",
+  "1980 blueprint demo codes match calibration signature",
+);
+assert(
+  reportBlueprintRc1DemoCodesForDate("1982-02-03").join(",") ===
+    "S1-20,S3-01,S2-05,S0-05,S4-10,S5-26,S6-26,S7-01,S8-05,S9-04",
+  "1982 blueprint demo codes stay independent of 1980",
+);
+const bp1980 = reportBlueprintRc1ForDate("1980-05-22");
+const bp1982 = reportBlueprintRc1ForDate("1982-02-03");
+assert(bp1980?.codes?.[0]?.code === "S1-18" && bp1982?.codes?.[0]?.code === "S1-20", "blueprint projections keep distinct birthdays");
+assert(
+  bp1980?.codes?.[0]?.narrative?.def !== bp1982?.codes?.[0]?.narrative?.def,
+  "1980 and 1982 blueprint narratives are independently written",
+);
+const bpSafety = reportBlueprintRc1LockedSafety();
+assert(
+  bpSafety.S2 === "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。" &&
+    bpSafety.S4 === "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。",
+  "report blueprint locks S2 and S4 safety strings",
+);
+const blueprintArchive = fs.readFileSync(
+  new URL("../docs/gzh/v2-report-blueprint-2026-11-19/FULL_19800522_17_CHAPTERS_RC1.md", import.meta.url),
+  "utf8",
+);
+assert(
+  blueprintArchive.includes(bpSafety.S2) && blueprintArchive.includes(bpSafety.S4),
+  "full 1980 blueprint demo retains locked safety sentences",
+);
+assert(
+  !fs
+    .readFileSync(new URL("../data/1320-tw-v2/report-blueprint-demo-candidates-rc1.json", import.meta.url), "utf8")
+    .includes("source_text_internal"),
+  "blueprint runtime demos strip source_text_internal",
+);
+assert(full.snapshot?.theme === "當改變、探索與完美要求相遇", "existing 1980 fixture narrative is not replaced by blueprint RC1");
 
 const page = fs.readFileSync(new URL("../app/(site)/tw-v2-report/page.tsx", import.meta.url), "utf8");
 assert(!page.includes("1980-05-22.claims"), "the page does not render internal claims");

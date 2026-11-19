@@ -1,7 +1,7 @@
 {
   "version": "2.0",
   "status": "BLOCKED",
-  "note": "S0–S9 全 258 碼中文候選已齊；正式核准仍 0／258。S1 44／S3 12／S2 50／S0 20／S4 20／S5 44／S6 44／S7 7／S8 8／S9 9 均 PENDING。定義先行標準 v1＋S1-18 示範已归档。顧客發布 HOLD。真人逐碼閱讀、定義層深化、正式簽核為三件獨立事。",
+  "note": "S0–S9 全 258 碼中文候選已齊；正式核准仍 0／258。Sample＋Full Report Blueprint RC1 已入庫為 PENDING 編輯示範（不覆寫既有 fixture 敘事、不核准任何碼）。顧客發布 HOLD。真人逐碼閱讀、定義層深化、正式簽核、報告橋接簽核為獨立事。",
   "candidate_snapshot_id": "1320-zhTW-s1-44-master-2026-11-16-rc3.2-name-candidate",
   "review_package_id": "1320-S1-44-zhTW-editorial-review-2026-11-12-rc2",
   "s1_prior_rc2_snapshot_id": "1320-zhTW-s1-44-rewrite-2026-11-12-rc2",
@@ -15,6 +15,7 @@
   "s8_candidate_snapshot_id": "1320-zhTW-s8-8-definition-narrative-2026-11-18-rc1",
   "s9_candidate_snapshot_id": "1320-zhTW-s9-9-definition-narrative-2026-11-19-rc1",
   "definition_first_standard_id": "1320-zhTW-allmodules-definition-first-standard-2026-11-18-v1-internal",
+  "report_blueprint_rc1_id": "1320-report-blueprint-2026-11-19-rc1",
   "s0_s4_handoff_id": "1320-zhTW-s0-s4-40-review-2026-11-16-rc1",
   "integration_candidate_snapshot_id": "1320-int-1980-1982-pending-2026-11-12-rc1",
   "modules": {
@@ -35,11 +36,14 @@
   "next_workstreams": [
     "HUMAN_CODE_BY_CODE_READING",
     "DEFINITION_FIRST_DEPTH_PASS",
-    "FORMAL_CONTENT_SIGNOFF"
+    "FORMAL_CONTENT_SIGNOFF",
+    "REPORT_BRIDGE_HUMAN_SIGNOFF",
+    "PRODUCT_TIER_LOCK_SAMPLE_FOUR_PLUS_FULL_SEVENTEEN"
   ],
   "customer_release": "HOLD",
   "s1_long_form": "EDITORIAL_DEVELOPMENT_ALLOWED_NOT_APPROVED",
   "definition_first": "STANDARD_V1_PLUS_S1_18_EXAMPLE_ONLY_NOT_258_FULL_SET",
+  "report_blueprint": "SAMPLE_FOUR_PLUS_FULL_SEVENTEEN_RC1_PENDING_DOES_NOT_REPLACE_FIXTURES",
   "s1_notes": "RC3.2 母稿保留；定義先行 S1-18 示範為獨立候選，不覆寫 RC3.2。",
   "s3_notes": "S3-10～S3-12 來源保留但當前公式不可達；不得為測試改映射。",
   "s2_notes": "S2-01、S2-44～S2-50 來源保留但當前公式不可達；關係安全句必須保留不可改寫。",
@@ -49,5 +53,6 @@
   "s6_notes": "公式 (S1+S3+S0) mod 44，0→S6-44；不承諾收入／成功／財富。",
   "s7_notes": "定義先行 Narrative RC1；主權非拒絕責任；威脅／傷害時安全與專業優先。",
   "s8_notes": "公式 (S5+S6+S7) mod 8，0→S8-00（非 S8-08）；S8-06 非治療；S8-07 非拯救／神聖權威。",
-  "s9_notes": "公式 (S1+S0+S7+S8) mod 9，0 有效；臣服≠服從權威／忍受傷害；寬恕≠要求原諒或放棄安全。"
+  "s9_notes": "公式 (S1+S0+S7+S8) mod 9，0 有效；臣服≠服從權威／忍受傷害；寬恕≠要求原諒或放棄安全。",
+  "report_blueprint_notes": "Sample 四碼完整體驗＋Full 17 章；1980／1982 各 Sample+Full 示範 PENDING；不暗改 Master Architecture Free/Full/Advanced；不覆寫既有 1980／1982 StoredNarrative fixture；橋接文與產品層級仍待產品負責人鎖定。"
 }

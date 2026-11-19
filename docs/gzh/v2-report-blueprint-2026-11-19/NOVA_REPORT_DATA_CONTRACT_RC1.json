@@ -1,0 +1,136 @@
+{
+  "version": "1320-report-blueprint-2026-11-19-rc1",
+  "status": "PENDING_REVIEW",
+  "scope": "INTERNAL_PROTECTED_PREVIEW_ONLY",
+  "source_architecture": "1320_Master_System_Architecture_v2.md",
+  "product_config": "PROJECT_V2_PREVIEW_OVERRIDE_NOT_LIVE",
+  "tiers": {
+    "sample": {
+      "chapters": [
+        "cover_disclaimer",
+        "code_overview",
+        "S1",
+        "S3",
+        "S2",
+        "S0",
+        "four_code_synthesis",
+        "reflection_and_closing"
+      ],
+      "display_module_order": [
+        "S1",
+        "S3",
+        "S2",
+        "S0"
+      ],
+      "required_synthesis": true,
+      "show_S4_or_paid_layer": false
+    },
+    "full": {
+      "chapters": {
+        "01": "intro_disclaimer",
+        "02": "ten_code_overview",
+        "03": "S1",
+        "04": "S3",
+        "05": "S2",
+        "06": "S0",
+        "07": "four_code_synthesis",
+        "08": "S4",
+        "09": "S5",
+        "10": "S6",
+        "11": "S7",
+        "12": "S8",
+        "13": "S9",
+        "14": "ten_code_synthesis",
+        "15": "seven_day_practice",
+        "16": "journal",
+        "17": "closing"
+      },
+      "content_module_order": [
+        "S1",
+        "S3",
+        "S2",
+        "S0",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8",
+        "S9"
+      ]
+    }
+  },
+  "calculation_order": [
+    "S1",
+    "S2",
+    "S3",
+    "S0",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8",
+    "S9"
+  ],
+  "official_mapping_policy": "DO_NOT_MODIFY",
+  "module_narrative_required_fields": [
+    "definition",
+    "module_role",
+    "gift",
+    "tension",
+    "hypothetical_example_1",
+    "hypothetical_example_2",
+    "insight",
+    "reflection_question"
+  ],
+  "s5_s6_seven_blocks_source_preservation": true,
+  "locked_safety_strings": {
+    "S2": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。",
+    "S4": "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。"
+  },
+  "internal_only_fields": [
+    "source_text_internal",
+    "raw_source",
+    "source_quality_note",
+    "reviewer_private_notes",
+    "source_record_original_text"
+  ],
+  "publish_gate": {
+    "all_codes_must_have_human_approval": true,
+    "all_report_bridges_must_have_human_approval": true,
+    "all_customer_publishable_initial": false,
+    "reviewer_initial": null,
+    "approved_at_initial": null,
+    "customer_release": "HOLD",
+    "v1_locked": true,
+    "prices_locked": true,
+    "checkout_locked": true
+  },
+  "non_reachable_source_retention": {
+    "S2": [
+      "S2-01",
+      "S2-44",
+      "S2-45",
+      "S2-46",
+      "S2-47",
+      "S2-48",
+      "S2-49",
+      "S2-50"
+    ],
+    "S3": [
+      "S3-10",
+      "S3-11",
+      "S3-12"
+    ]
+  },
+  "age_policy": "2008-12-08 and 2013-06-12 internal_QA_only; do not publish minors",
+  "example_dates": [
+    {
+      "date": "1980-05-22",
+      "internal_only": true
+    },
+    {
+      "date": "1982-02-03",
+      "internal_only": true
+    }
+  ]
+}

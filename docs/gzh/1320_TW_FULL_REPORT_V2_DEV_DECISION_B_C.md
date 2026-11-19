@@ -115,6 +115,14 @@
 - **S0～S9 全 258 碼中文候選已齊**；正式核准仍 0／258。
 - 下一步分開：逐碼真人閱讀、定義層深化、正式系統簽核。
 
+## 2026-11-19 Sample＋Full Report Blueprint RC1
+
+- 已入庫報告結構藍圖＋1980／1982 各 Sample＋Full 示範：`PENDING_REVIEW`。
+- 詳見 `1320_TW_FULL_REPORT_V2_REPORT_BLUEPRINT_HANDOFF_2026-11-19.md` 與 `v2-report-blueprint-2026-11-19/`。
+- 產品提案：Sample 四碼完整體驗＋Full 十碼 17 章；與早期 Free／Full／Advanced 差異只紀錄、不暗改。
+- **不覆寫**既有 1980／1982 StoredNarrative fixture；258 核准仍 0；顧客 HOLD。
+- 下一步分開：完整報告真人閱讀、報告橋接簽核、產品層級鎖定。
+
 ## 下一輪要交出的證據
 
 - S0–S9 逐碼審核台帳（草稿／待審／已核准）。

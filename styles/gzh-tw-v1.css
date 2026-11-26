@@ -165,28 +165,25 @@
   color: var(--gzh-gold-light);
 }
 
-/* —— Hero: EN banner + official logo —— */
+/* —— Hero: one EN banner plane (logo only in header; no second mark) —— */
 .gzh-hero {
   position: relative;
   overflow: hidden;
-  min-height: 660px;
-  padding: 88px 0 100px;
+  min-height: 650px;
   color: #fffefa;
-  background:
-    radial-gradient(ellipse 54% 70% at 84% 42%, rgba(36, 66, 96, 0.27), transparent 74%),
-    linear-gradient(130deg, var(--gzh-navy-deep), var(--gzh-navy) 58%, #0a1c32);
+  background: linear-gradient(180deg, rgba(7, 14, 28, 0.94), rgba(5, 10, 21, 0.98));
 }
 
 .gzh-hero-banner {
   position: absolute;
   inset: 0;
   z-index: 0;
+  overflow: hidden;
 }
 
 .gzh-hero-banner-img {
   object-fit: cover;
-  object-position: center;
-  opacity: 0.55;
+  opacity: 0.96;
 }
 
 .gzh-hero-banner-img--desktop {
@@ -198,27 +195,42 @@
   display: none;
 }
 
-.gzh-hero::before {
+.gzh-hero-banner::before,
+.gzh-hero-banner::after {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background:
-    linear-gradient(90deg, rgba(4, 12, 25, 0.92) 0%, rgba(4, 12, 25, 0.72) 48%, rgba(4, 12, 25, 0.45) 100%),
-    radial-gradient(circle at 15% 12%, rgba(207, 169, 104, 0.08), transparent 35%);
 }
 
-.gzh-hero-grid {
+.gzh-hero-banner::before {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 8, 20, 0.96) 0%,
+      rgba(3, 8, 20, 0.88) 34%,
+      rgba(3, 8, 20, 0.45) 58%,
+      rgba(3, 8, 20, 0.2) 100%
+    ),
+    radial-gradient(circle at 28% 26%, rgba(236, 172, 63, 0.08), transparent 19rem);
+}
+
+.gzh-hero-banner::after {
+  background: linear-gradient(180deg, transparent 62%, rgba(4, 12, 25, 0.72) 100%);
+}
+
+.gzh-hero-copy {
   position: relative;
   z-index: 2;
-  max-width: 1180px;
+  display: flex;
+  flex-direction: column;
+  max-width: 640px;
   width: calc(100% - 48px);
-  margin-inline: auto;
-  display: grid;
-  grid-template-columns: 1fr 0.87fr;
-  align-items: center;
-  gap: 56px;
+  margin: 0 auto 0 max(24px, calc((100% - 1180px) / 2 + 24px));
+  padding: 72px 24px 64px 16px;
+  min-height: 650px;
+  justify-content: center;
 }
 
 .gzh-hero-title {
@@ -269,68 +281,6 @@
   font-size: 0.78rem;
   color: #b5c0c8;
   margin: 22px 0 0;
-}
-
-.gzh-hero-art {
-  position: relative;
-  max-width: 420px;
-  aspect-ratio: 1;
-  margin: auto;
-  width: 100%;
-  display: grid;
-  place-items: center;
-}
-
-.gzh-hero-art::before {
-  content: "";
-  position: absolute;
-  inset: -14px;
-  border: 1px solid rgba(233, 197, 123, 0.18);
-  border-radius: 50%;
-  box-shadow: 0 0 90px rgba(215, 164, 72, 0.08);
-}
-
-.gzh-hero-art::after {
-  content: "";
-  position: absolute;
-  inset: 22px;
-  border: 1px solid rgba(233, 197, 123, 0.12);
-  border-radius: 50%;
-}
-
-.gzh-hero-logo {
-  width: 88%;
-  height: 88%;
-  object-fit: cover;
-  border-radius: 50%;
-  position: relative;
-  z-index: 2;
-  mix-blend-mode: screen;
-}
-
-.gzh-hero-art-fallback {
-  position: absolute;
-  inset: 10%;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(216, 178, 111, 0.45);
-  border-radius: 50%;
-  background: radial-gradient(circle, #17324a, rgba(7, 19, 37, 0) 72%);
-  color: var(--gzh-gold-light);
-  font: 500 clamp(2.2rem, 6vw, 4.2rem) Georgia, serif;
-  letter-spacing: 0.12em;
-  z-index: 1;
-}
-
-.gzh-hero-art-note {
-  position: absolute;
-  bottom: -34px;
-  width: 100%;
-  text-align: center;
-  color: #cdb68b;
-  font-size: 0.68rem;
-  letter-spacing: 0.2em;
-  margin: 0;
 }
 
 /* —— Buttons —— */
@@ -882,10 +832,6 @@
 }
 
 @media (max-width: 980px) {
-  .gzh-hero-grid {
-    gap: 28px;
-  }
-
   .gzh-four-grid,
   .gzh-path-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -902,7 +848,6 @@
 
 @media (max-width: 760px) {
   .gzh-header-inner,
-  .gzh-hero-grid,
   .gzh-band > .gzh-band-grid,
   .gzh-band > .gzh-section-intro,
   .gzh-band > .gzh-four-grid,
@@ -969,12 +914,14 @@
   }
 
   .gzh-hero {
-    padding: 52px 0 72px;
     min-height: 0;
   }
 
-  .gzh-hero-grid {
-    grid-template-columns: 1fr;
+  .gzh-hero-copy {
+    width: calc(100% - 36px);
+    margin: 0 auto;
+    padding: 52px 0 56px;
+    min-height: 0;
   }
 
   .gzh-hero-banner-img--desktop {
@@ -983,12 +930,16 @@
 
   .gzh-hero-banner-img--mobile {
     display: block;
+    object-position: center 28%;
   }
 
-  .gzh-hero-art {
-    max-width: 300px;
-    width: 78%;
-    margin: 12px auto 28px;
+  .gzh-hero-banner::before {
+    background: linear-gradient(
+      180deg,
+      rgba(3, 8, 20, 0.55) 0%,
+      rgba(3, 8, 20, 0.78) 42%,
+      rgba(3, 8, 20, 0.94) 100%
+    );
   }
 
   .gzh-band-grid,

@@ -551,10 +551,14 @@ const twPage = fs.readFileSync(new URL("../app/tw/page.tsx", import.meta.url), "
 const twCss = fs.readFileSync(new URL("../styles/gzh-tw-v1.css", import.meta.url), "utf8");
 assert(twShell.includes("1320-logo.jpeg") || twShell.includes("BRAND_LOGO_HEADER"), "TW shell uses official logo");
 assert(twHero.includes("hero-banner-desktop") || twHero.includes("heroBannerDesktop"), "TW hero uses EN banner");
-assert(twHero.includes("BRAND_LOGO_HEADER") || twHero.includes("1320-logo"), "TW hero shows official logo mark");
+assert(
+  !twHero.includes("gzh-hero-art") && !twHero.includes("BRAND_LOGO_HEADER"),
+  "TW hero does not stack a second logo on the banner",
+);
 assert(twPage.includes("GzhTwBrandHero") && twPage.includes("foundation"), "TW landing has brand hero + foundation");
 assert(twCss.includes("--gzh-navy") && twCss.includes("--gzh-gold"), "TW CSS uses navy/gold brand tokens");
 assert(!twCss.includes("#2f4a3c"), "TW CSS no longer uses paper/teal accent as brand primary");
+assert(!twCss.includes(".gzh-hero-art"), "TW CSS drops duplicate hero-art layer");
 assert(
   fs.existsSync(
     new URL("../docs/gzh/v2-brand-aligned-tw-ui-rc2-2026-11-26/NOVA_BRAND_ALIGNMENT_SPEC_RC2.md", import.meta.url),

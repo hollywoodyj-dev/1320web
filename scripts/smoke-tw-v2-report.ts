@@ -522,4 +522,44 @@ const difference = fs.readFileSync(new URL("../app/(site)/tw-v2-report/differenc
 assert(difference.includes("價格與結帳流程不在這裡改動"), "difference page does not change checkout");
 assert(isTwV2ReportEnabled("www.1320soulcode.com") === false, "production host closed");
 assert(isTwV2ReportEnabled("localhost:3026") === true, "local reading open");
+
+const brandUi = JSON.parse(
+  fs.readFileSync(new URL("../data/1320-tw-v2/brand-aligned-tw-ui-rc2.json", import.meta.url), "utf8"),
+) as {
+  packId: string;
+  status: string;
+  customer_publishable: boolean;
+  customer_release_state: string;
+  brand_assets: { logo: string; hero_banner_desktop: string; hero_banner_mobile: string };
+};
+assert(brandUi.packId === "1320-brand-aligned-tw-ui-2026-11-26-rc2", "brand UI RC2 pack id");
+assert(brandUi.status === "PENDING_REVIEW", "brand UI remains PENDING_REVIEW");
+assert(brandUi.customer_publishable === false, "brand UI not customer-publishable");
+assert(brandUi.customer_release_state === "HOLD", "brand UI customer HOLD");
+assert(
+  fs.existsSync(new URL("../public/1320-logo.jpeg", import.meta.url)),
+  "official 1320 logo asset present",
+);
+assert(
+  fs.existsSync(new URL("../public/hero-banner-desktop-v1.webp", import.meta.url)) &&
+    fs.existsSync(new URL("../public/hero-banner-v5.webp", import.meta.url)),
+  "EN hero banner assets present for TW",
+);
+const twShell = fs.readFileSync(new URL("../components/gzh/gzh-shell.tsx", import.meta.url), "utf8");
+const twHero = fs.readFileSync(new URL("../components/gzh/gzh-tw-brand-hero.tsx", import.meta.url), "utf8");
+const twPage = fs.readFileSync(new URL("../app/tw/page.tsx", import.meta.url), "utf8");
+const twCss = fs.readFileSync(new URL("../styles/gzh-tw-v1.css", import.meta.url), "utf8");
+assert(twShell.includes("1320-logo.jpeg") || twShell.includes("BRAND_LOGO_HEADER"), "TW shell uses official logo");
+assert(twHero.includes("hero-banner-desktop") || twHero.includes("heroBannerDesktop"), "TW hero uses EN banner");
+assert(twHero.includes("BRAND_LOGO_HEADER") || twHero.includes("1320-logo"), "TW hero shows official logo mark");
+assert(twPage.includes("GzhTwBrandHero") && twPage.includes("foundation"), "TW landing has brand hero + foundation");
+assert(twCss.includes("--gzh-navy") && twCss.includes("--gzh-gold"), "TW CSS uses navy/gold brand tokens");
+assert(!twCss.includes("#2f4a3c"), "TW CSS no longer uses paper/teal accent as brand primary");
+assert(
+  fs.existsSync(
+    new URL("../docs/gzh/v2-brand-aligned-tw-ui-rc2-2026-11-26/NOVA_BRAND_ALIGNMENT_SPEC_RC2.md", import.meta.url),
+  ),
+  "brand UI RC2 archive present",
+);
+
 console.log("PASS tw v2 report");

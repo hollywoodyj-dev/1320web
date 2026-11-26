@@ -1,0 +1,33 @@
+{
+  "packId": "1320-brand-aligned-tw-ui-2026-11-26-rc2",
+  "status": "PENDING_REVIEW",
+  "reviewer": null,
+  "approved_at": null,
+  "customer_publishable": false,
+  "customer_release_state": "HOLD",
+  "archive": "docs/gzh/v2-brand-aligned-tw-ui-rc2-2026-11-26/",
+  "implemented_in": [
+    "styles/gzh-tw-v1.css",
+    "components/gzh/gzh-shell.tsx",
+    "components/gzh/gzh-tw-brand-hero.tsx",
+    "components/gzh/gzh-tw-mobile-nav.tsx",
+    "app/tw/page.tsx",
+    "lib/gzh/tw-brand-ui-rc2.ts"
+  ],
+  "brand_assets": {
+    "logo": "/1320-logo.jpeg",
+    "hero_banner_desktop": "/hero-banner-desktop-v1.webp",
+    "hero_banner_mobile": "/hero-banner-v5.webp",
+    "source": "EN site public assets (same brand warehouse)"
+  },
+  "tokens_note": "RC2 HEX are design approximations from official mark; EN globals remain source of truth for final lock.",
+  "does_not_change": [
+    "v1.0 locked content",
+    "EN production site",
+    "pricing",
+    "checkout",
+    "formula",
+    "account permissions",
+    "258 code approvals"
+  ]
+}

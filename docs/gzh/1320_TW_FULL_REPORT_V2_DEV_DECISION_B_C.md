@@ -138,6 +138,12 @@
 - **不覆寫** fixture；正式核准仍 0；顧客 HOLD。
 - 建議閱讀：兩份 Sample → Full 第 07／14 章。
 
+## 2026-11-26 TW 品牌對齊 UI RC2
+
+- `/tw` 接官方 Logo＋英文站 Hero banner；殼層改深夜藍／金；RC2 归档 `v2-brand-aligned-tw-ui-rc2-2026-11-26/`。
+- 詳見 `1320_TW_BRAND_ALIGNED_UI_RC2_HANDOFF_2026-11-26.md`。
+- **PENDING_REVIEW**；不改英文站／價格／結帳／公式；258 核准仍 0；顧客 HOLD。
+
 ## 下一輪要交出的證據
 
 - S0–S9 逐碼審核台帳（草稿／待審／已核准）。

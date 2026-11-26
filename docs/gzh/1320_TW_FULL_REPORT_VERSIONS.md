@@ -28,4 +28,5 @@ S8 RC1：`1320_TW_FULL_REPORT_V2_S8_HANDOFF_2026-11-18.md`、`v2-s8-2026-11-18/`
 S9 RC1：`1320_TW_FULL_REPORT_V2_S9_HANDOFF_2026-11-19.md`、`v2-s9-2026-11-19/`（PENDING 9，核准 0）。**S0～S9 候選齊；正式核准仍 0／258。**  
 Sample＋Full Report Blueprint RC1：`1320_TW_FULL_REPORT_V2_REPORT_BLUEPRINT_HANDOFF_2026-11-19.md`、`v2-report-blueprint-2026-11-19/`（PENDING 示範；不覆寫既有 fixture；顧客 HOLD）。  
 RC3.1 結構鎖定潤色：`1320_TW_FULL_REPORT_V2_RC3_1_EDITORIAL_HANDOFF_2026-11-20.md`、`v2-rc3.1-editorial-execution-2026-11-20/`、`v2-rc3.1-phase1-pilot-2026-11-20/`（Phase 1 示範 PENDING 真人審閱；258 碼 Phase 2 未啟動；核准 0）。  
-兩組 Free Sample＋Full RC3 成品參考：`1320_TW_FULL_REPORT_V2_TWO_REFERENCE_SETS_RC3_HANDOFF_2026-11-20.md`、`v2-two-reference-sets-rc3-2026-11-20/`（寫作／組裝黃金參考；1980 Sample 正向回饋≠核准；其餘三份待校準；顧客 HOLD）。
+兩組 Free Sample＋Full RC3 成品參考：`1320_TW_FULL_REPORT_V2_TWO_REFERENCE_SETS_RC3_HANDOFF_2026-11-20.md`、`v2-two-reference-sets-rc3-2026-11-20/`（寫作／組裝黃金參考；1980 Sample 正向回饋≠核准；其餘三份待校準；顧客 HOLD）。  
+品牌對齊 UI RC2：`1320_TW_BRAND_ALIGNED_UI_RC2_HANDOFF_2026-11-26.md`、`v2-brand-aligned-tw-ui-rc2-2026-11-26/`（`/tw` Logo＋Hero banner＋深藍金；PENDING_REVIEW；顧客 HOLD）。

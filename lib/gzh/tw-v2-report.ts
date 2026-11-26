@@ -45,6 +45,37 @@ const NARRATIVES: StoredNarrative[] = [
   narrative2013 as StoredNarrative,
 ];
 
+/** Preview-only review queue: birthdays that currently have Chinese narrative fixtures. */
+export const TW_V2_REVIEW_BIRTHDAYS = NARRATIVES.map((item) => {
+  const [year, month, day] = item.birth.split("-").map(Number);
+  return {
+    birth: item.birth,
+    year,
+    month,
+    day,
+    status: item.status,
+    label: item.birth.replace(/-/g, "."),
+    role:
+      item.status === "REFERENCE_SAMPLE"
+        ? "參考樣本"
+        : item.age_gate
+          ? "候選稿 · 未滿18內部"
+          : "編輯候選",
+    ageGate: Boolean(item.age_gate),
+    note: item.note ?? null,
+  };
+}) as ReadonlyArray<{
+  birth: string;
+  year: number;
+  month: number;
+  day: number;
+  status: StoredNarrative["status"];
+  label: string;
+  role: string;
+  ageGate: boolean;
+  note: string | null;
+}>;
+
 export type V2Product = "FULL" | "SAMPLE";
 
 export type V2Block =

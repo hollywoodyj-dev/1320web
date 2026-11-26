@@ -6,7 +6,7 @@ import {
 } from "../lib/gzh/tw-v2-blueprint";
 import { claimProblems, claimSetProblems, claimsForSignature } from "../lib/gzh/tw-v2-claims";
 import { isTwV2ReportEnabled } from "../lib/gzh/tw-v2-report-access";
-import { buildTwV2Report, customerVisibleText } from "../lib/gzh/tw-v2-report";
+import { buildTwV2Report, customerVisibleText, TW_V2_REVIEW_BIRTHDAYS } from "../lib/gzh/tw-v2-report";
 import {
   releaseGateSummary,
   s1ApprovedCount,
@@ -522,6 +522,21 @@ const difference = fs.readFileSync(new URL("../app/(site)/tw-v2-report/differenc
 assert(difference.includes("價格與結帳流程不在這裡改動"), "difference page does not change checkout");
 assert(isTwV2ReportEnabled("www.1320soulcode.com") === false, "production host closed");
 assert(isTwV2ReportEnabled("localhost:3026") === true, "local reading open");
+
+assert(TW_V2_REVIEW_BIRTHDAYS.length === 4, "review queue lists four narrative birthdays");
+assert(
+  TW_V2_REVIEW_BIRTHDAYS.map((item) => item.birth).join("|") ===
+    "1980-05-22|1982-02-03|2008-12-08|2013-06-12",
+  "review queue keeps the known fixture birthdays",
+);
+const reviewUi = fs.readFileSync(new URL("../components/gzh/gzh-tw-review-birthdays.tsx", import.meta.url), "utf8");
+assert(reviewUi.includes("TW_V2_REVIEW_BIRTHDAYS"), "review birthday UI is wired");
+assert(
+  fs
+    .readFileSync(new URL("../app/(site)/tw-v2-report/page.tsx", import.meta.url), "utf8")
+    .includes("GzhTwReviewBirthdays"),
+  "Chinese full report page shows review birthday queue",
+);
 
 const brandUi = JSON.parse(
   fs.readFileSync(new URL("../data/1320-tw-v2/brand-aligned-tw-ui-rc2.json", import.meta.url), "utf8"),

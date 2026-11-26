@@ -3,6 +3,7 @@ import { headers } from "next/headers";
 import { Suspense } from "react";
 import { CodeMap } from "@/app/(site)/tw-v2-report/CodeMap";
 import { ReportToolbar } from "@/app/(site)/tw-v2-report/ReportToolbar";
+import { GzhTwReviewBirthdays } from "@/components/gzh/gzh-tw-review-birthdays";
 import { isTwV2ReportEnabled } from "@/lib/gzh/tw-v2-report-access";
 import { buildTwV2Report, isRealCalendarDate, type V2Product } from "@/lib/gzh/tw-v2-report";
 import "./v2-report.css";
@@ -109,6 +110,7 @@ export default async function TwV2ReportPage({
           <section className="v2-blocked">
             <h2>編碼已產生，敘事尚未核准</h2>
             <p>編碼已經對上。這一個生日的敘事還沒有核准，所以這裡先不寫正文，也不會套用其他生日的文章。</p>
+            <p>請改用下方「可審閱生日」切換到已有中文敘事的樣本，方便核准比對。</p>
           </section>
         ) : (
           <>
@@ -182,6 +184,11 @@ export default async function TwV2ReportPage({
             ))}
           </>
         )}
+
+        <GzhTwReviewBirthdays
+          currentBirth={`${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`}
+          product={product}
+        />
       </article>
     </main>
   );

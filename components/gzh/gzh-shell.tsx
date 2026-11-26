@@ -83,6 +83,7 @@ export function GzhShell({
             <Link href={gzhHref(market, "about")}>{ui.nav.about}</Link>
             <Link href={`${gzhHref(market)}#foundation`}>{ui.nav.foundation}</Link>
             <Link href={gzhHref(market, "free-soul-blueprint")}>{ui.nav.free}</Link>
+            <Link href={gzhHref(market, "review-samples")}>{ui.nav.samples}</Link>
           </div>
           <div>
             <h4>ORIGINAL SITE</h4>

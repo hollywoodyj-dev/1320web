@@ -7,6 +7,15 @@ import { consumeLifePathHandoff } from "@/lib/life-path/handoff";
 import { parseBirthDateInput } from "@/lib/parse-birth-date-input";
 import { submitBirthDate } from "@/lib/submitBirthDate";
 import { BIRTH_FORM } from "@/lib/your-code-content";
+import type { BirthDateMessageLocale } from "@/lib/validateBirthDate";
+
+type BirthDateFormCopy = {
+  labels?: { year?: string; month?: string; day?: string };
+  placeholders?: { year?: string; month?: string; day?: string };
+  submittingLabel?: string;
+  /** Taiwan visitors expect 西元年／月／日 order. */
+  fieldOrder?: "mdy" | "ymd";
+};
 
 type BirthDateFormProps = {
   variant?: "default" | "homepage" | "free-soul-blueprint";
@@ -20,6 +29,9 @@ type BirthDateFormProps = {
   resultPath?: string;
   /** No-JS form target. Taiwan free report posts to `/tw/result`. */
   action?: string;
+  /** Optional locale for labels / validation (TW free form). */
+  messageLocale?: BirthDateMessageLocale;
+  copy?: BirthDateFormCopy;
 };
 
 export function BirthDateForm({
@@ -30,6 +42,8 @@ export function BirthDateForm({
   destination,
   resultPath,
   action = "/generating",
+  messageLocale = "en",
+  copy,
 }: BirthDateFormProps) {
   const formId = useId();
   const prefix = idPrefix ?? formId.replace(/:/g, "");
@@ -92,6 +106,7 @@ export function BirthDateForm({
             : "your-code",
       destination,
       resultPath,
+      messageLocale,
     });
 
     if (!result.ok) {
@@ -135,7 +150,19 @@ export function BirthDateForm({
     onSubmit,
   };
 
-  const ctaLabel = submitLabel ?? (submitting ? "OPENING…" : BIRTH_FORM.submit);
+  const labels = {
+    year: copy?.labels?.year ?? BIRTH_FORM.labels.year,
+    month: copy?.labels?.month ?? BIRTH_FORM.labels.month,
+    day: copy?.labels?.day ?? BIRTH_FORM.labels.day,
+  };
+  const placeholders = {
+    year: copy?.placeholders?.year ?? "YYYY",
+    month: copy?.placeholders?.month ?? "MM",
+    day: copy?.placeholders?.day ?? "DD",
+  };
+  const idleLabel = submitLabel ?? BIRTH_FORM.submit;
+  const busyLabel = copy?.submittingLabel ?? "OPENING…";
+  const ctaLabel = submitting ? busyLabel : idleLabel;
   const submitButton = (
     <button
       type="submit"
@@ -147,69 +174,89 @@ export function BirthDateForm({
       disabled={submitting}
       onPointerUp={onGeneratePointer}
     >
-      {submitting ? "OPENING…" : ctaLabel}
+      {ctaLabel}
     </button>
+  );
+
+  const monthField = (
+    <label className="birthdate-field" htmlFor={`${prefix}-month`}>
+      <span className="birthdate-field-label">{labels.month}</span>
+      <input
+        id={`${prefix}-month`}
+        name="month"
+        aria-label={labels.month}
+        placeholder={placeholders.month}
+        type="text"
+        inputMode="numeric"
+        pattern="[0-9]*"
+        autoComplete="bday-month"
+        value={month}
+        onChange={(e) => setMonth(e.target.value)}
+        onInput={(e) => setMonth(e.currentTarget.value)}
+        onFocus={onFieldFocus}
+      />
+    </label>
+  );
+  const dayField = (
+    <label className="birthdate-field" htmlFor={`${prefix}-day`}>
+      <span className="birthdate-field-label">{labels.day}</span>
+      <input
+        id={`${prefix}-day`}
+        name="day"
+        aria-label={labels.day}
+        placeholder={placeholders.day}
+        type="text"
+        inputMode="numeric"
+        pattern="[0-9]*"
+        autoComplete="bday-day"
+        value={day}
+        onChange={(e) => setDay(e.target.value)}
+        onInput={(e) => setDay(e.currentTarget.value)}
+        onFocus={onFieldFocus}
+      />
+    </label>
+  );
+  const yearField = (
+    <label className="birthdate-field birthdate-field-year" htmlFor={`${prefix}-year`}>
+      <span className="birthdate-field-label">{labels.year}</span>
+      <input
+        id={`${prefix}-year`}
+        name="year"
+        aria-label={labels.year}
+        placeholder={placeholders.year}
+        type="text"
+        inputMode="numeric"
+        pattern="[0-9]*"
+        autoComplete="bday-year"
+        value={year}
+        onChange={(e) => setYear(e.target.value)}
+        onInput={(e) => setYear(e.currentTarget.value)}
+        onFocus={onFieldFocus}
+        onBlur={(e) => {
+          const parsed = parseBirthDateInput(e.target.value, month, day);
+          setYear(parsed.year);
+          setMonth(parsed.month);
+          setDay(parsed.day);
+        }}
+      />
+    </label>
   );
 
   const fieldGrid = (
     <div className="birthdate-field-grid">
-      <label className="birthdate-field" htmlFor={`${prefix}-month`}>
-        <span className="birthdate-field-label">{BIRTH_FORM.labels.month}</span>
-        <input
-          id={`${prefix}-month`}
-          name="month"
-          aria-label={BIRTH_FORM.labels.month}
-          placeholder="MM"
-          type="text"
-          inputMode="numeric"
-          pattern="[0-9]*"
-          autoComplete="bday-month"
-          value={month}
-          onChange={(e) => setMonth(e.target.value)}
-          onInput={(e) => setMonth(e.currentTarget.value)}
-          onFocus={onFieldFocus}
-        />
-      </label>
-      <label className="birthdate-field" htmlFor={`${prefix}-day`}>
-        <span className="birthdate-field-label">{BIRTH_FORM.labels.day}</span>
-        <input
-          id={`${prefix}-day`}
-          name="day"
-          aria-label={BIRTH_FORM.labels.day}
-          placeholder="DD"
-          type="text"
-          inputMode="numeric"
-          pattern="[0-9]*"
-          autoComplete="bday-day"
-          value={day}
-          onChange={(e) => setDay(e.target.value)}
-          onInput={(e) => setDay(e.currentTarget.value)}
-          onFocus={onFieldFocus}
-        />
-      </label>
-      <label className="birthdate-field birthdate-field-year" htmlFor={`${prefix}-year`}>
-        <span className="birthdate-field-label">{BIRTH_FORM.labels.year}</span>
-        <input
-          id={`${prefix}-year`}
-          name="year"
-          aria-label={BIRTH_FORM.labels.year}
-          placeholder="YYYY"
-          type="text"
-          inputMode="numeric"
-          pattern="[0-9]*"
-          autoComplete="bday-year"
-          value={year}
-          onChange={(e) => setYear(e.target.value)}
-          onInput={(e) => setYear(e.currentTarget.value)}
-          onFocus={onFieldFocus}
-          onBlur={(e) => {
-            const parsed = parseBirthDateInput(e.target.value, month, day);
-            setYear(parsed.year);
-            setMonth(parsed.month);
-            setDay(parsed.day);
-          }}
-        />
-      </label>
+      {copy?.fieldOrder === "ymd" ? (
+        <>
+          {yearField}
+          {monthField}
+          {dayField}
+        </>
+      ) : (
+        <>
+          {monthField}
+          {dayField}
+          {yearField}
+        </>
+      )}
     </div>
   );
 

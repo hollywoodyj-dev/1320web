@@ -26,6 +26,7 @@ export default function TwFreeSoulBlueprintPage() {
 
       <div className="gzh-hero-form">
         <GzhTwFreeBirthForm idPrefix="gzh-tw-free" />
+        <p className="gzh-report-note">{GZH_TW_FREE.dateHint}</p>
       </div>
 
       <p className="gzh-trust">{GZH_TW_LANDING.trustLine}</p>

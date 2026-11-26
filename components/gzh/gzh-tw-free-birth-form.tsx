@@ -46,6 +46,21 @@ export function GzhTwFreeBirthForm({ idPrefix }: GzhTwFreeBirthFormProps) {
       variant="free-soul-blueprint"
       idPrefix={idPrefix}
       submitLabel={GZH_TW_FREE.cta}
+      messageLocale="zh-TW"
+      copy={{
+        labels: {
+          year: GZH_TW_FREE.yearLabelFull,
+          month: GZH_TW_FREE.monthLabel,
+          day: GZH_TW_FREE.dayLabel,
+        },
+        placeholders: {
+          year: GZH_TW_FREE.yearPlaceholder,
+          month: GZH_TW_FREE.monthPlaceholder,
+          day: GZH_TW_FREE.dayPlaceholder,
+        },
+        submittingLabel: GZH_TW_FREE.submittingLabel,
+        fieldOrder: "ymd",
+      }}
       onFieldFocus={onFieldFocus}
       destination="result"
       resultPath="/tw/result"

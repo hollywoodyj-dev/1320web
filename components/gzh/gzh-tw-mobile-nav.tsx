@@ -38,6 +38,9 @@ export function GzhTwMobileNav({ market }: { market: GzhMarket }) {
         <Link href={gzhHref(market, "free-soul-blueprint")} onClick={() => setOpen(false)}>
           {ui.nav.free}
         </Link>
+        <Link href={gzhHref(market, "review-samples")} onClick={() => setOpen(false)}>
+          {ui.nav.samples}
+        </Link>
         <Link href="/" lang="en" onClick={() => setOpen(false)}>
           {ui.nav.english}
         </Link>

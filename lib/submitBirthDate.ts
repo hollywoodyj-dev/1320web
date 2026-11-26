@@ -9,7 +9,10 @@ import { trackFunnelEvent } from "@/lib/funnel/track-funnel-event";
 import { devLog } from "@/lib/dev-log";
 import { birthPartsToNumbers, parseBirthDateInput } from "@/lib/parse-birth-date-input";
 import { buildGeneratingHref, buildResultHref, saveSession1320, toSessionPayload } from "@/lib/session1320";
-import { getBirthDateValidationMessage } from "@/lib/validateBirthDate";
+import {
+  getBirthDateValidationMessage,
+  type BirthDateMessageLocale,
+} from "@/lib/validateBirthDate";
 
 export type SubmitBirthDateResult =
   | { ok: true; href: string }
@@ -27,9 +30,12 @@ export function submitBirthDate(
     destination?: "generating" | "result";
     /** Taiwan free report uses `/tw/result`. English stays `/result`. */
     resultPath?: string;
+    /** Validation copy locale; default English. */
+    messageLocale?: BirthDateMessageLocale;
   },
 ): SubmitBirthDateResult {
   const source = options?.source ?? "your-code";
+  const messageLocale = options?.messageLocale ?? "en";
   const attrProps = attributionToAnalyticsProps(loadFunnelAttribution());
 
   if (source === "homepage") {
@@ -46,7 +52,7 @@ export function submitBirthDate(
 
   devLog("submitBirthDate", { parts, year, month, day, source });
 
-  const validationMessage = getBirthDateValidationMessage(year, month, day);
+  const validationMessage = getBirthDateValidationMessage(year, month, day, messageLocale);
   if (validationMessage) {
     trackEvent("calculator_error", { reason: "validation", source });
     if (source === "free-soul-blueprint") {

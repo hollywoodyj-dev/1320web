@@ -100,8 +100,11 @@ export const GZH_TW_BRAND_UI_RC2 = {
   ],
   nav: {
     about: "認識 1320",
+    /** Temporary: anchors home foundation band until a dedicated four-mirror page exists. */
     foundation: "生命藍圖",
+    foundationHrefNote: "TEMP_HOME_ANCHOR",
     free: "免費映照",
+    samples: "樣稿審閱",
     english: "EN",
     cta: "探索我的 Code",
   },

@@ -95,6 +95,9 @@ export default function TwLandingPage() {
           <Link className="gzh-btn gzh-btn--navy" href={gzhHref("tw", "free-soul-blueprint")}>
             {GZH_TW_LANDING.ctaPrimary}
           </Link>
+          <Link className="gzh-btn gzh-btn--outline-dark" href={gzhHref("tw", "review-samples")}>
+            {GZH_TW_BRAND_UI_RC2.nav.samples}
+          </Link>
           <Link className="gzh-btn gzh-btn--outline-dark" href={gzhHref("tw", "about")}>
             {GZH_TW_LANDING.ctaSecondary}
           </Link>

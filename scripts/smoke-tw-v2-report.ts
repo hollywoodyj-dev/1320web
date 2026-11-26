@@ -165,6 +165,10 @@ const chapterText = (id: string) =>
     .join("\n") ?? "";
 const chapter7Text = chapterText("07");
 assert(/S1/.test(chapter7Text) && /S0/.test(chapter7Text) && !/S4/.test(chapter7Text) && !/S9/.test(chapter7Text), "chapter 7 stays with the four codes");
+assert(
+  chapter7Text.includes("情境二") && chapter7Text.includes("關係與生活安排"),
+  "1980 Full ch07 adds a second life-domain scenario",
+);
 const chapter14 = chapterText("14");
 assert(["S1", "S3", "S4", "S5", "S2", "S0", "S7", "S6", "S8", "S9"].every((moduleId) => chapter14.includes(moduleId)), "chapter 14 reaches the ten modules");
 
@@ -200,6 +204,15 @@ const secondText = customerVisibleText(second);
 assert(secondText.includes("心覺者") && secondText.includes("種子振動"), "1982 keeps its own archetypes");
 assert(!secondText.includes("當改變、探索與完美要求相遇"), "1982 does not reuse the 1980 overview");
 assert(!secondText.includes("轉化者"), "1982 is not a renamed 1980 template");
+const secondCh7 =
+  second.chapters
+    .find((chapter) => chapter.id === "07")
+    ?.blocks.map((block) => ("text" in block ? block.text : ""))
+    .join("\n") ?? "";
+assert(
+  secondCh7.includes("情境二") && secondCh7.includes("陌生環境"),
+  "1982 Full ch07 adds unfamiliar-environment incremental value",
+);
 assert(secondText.includes("威脅") || secondText.includes("操控") || secondText.includes("傷害"), "1982 keeps S2 safety");
 assert(secondText.includes("人身安全") || secondText.includes("專業標準"), "1982 keeps S4 professional boundary");
 
@@ -579,6 +592,30 @@ assert(
     new URL("../docs/gzh/v2-brand-aligned-tw-ui-rc2-2026-11-26/NOVA_BRAND_ALIGNMENT_SPEC_RC2.md", import.meta.url),
   ),
   "brand UI RC2 archive present",
+);
+
+const freeBirthForm = fs.readFileSync(
+  new URL("../components/gzh/gzh-tw-free-birth-form.tsx", import.meta.url),
+  "utf8",
+);
+assert(freeBirthForm.includes('messageLocale="zh-TW"'), "TW free form uses zh-TW validation locale");
+assert(freeBirthForm.includes('fieldOrder: "ymd"'), "TW free form uses year-month-day order");
+assert(
+  fs.readFileSync(new URL("../lib/gzh/tw-content.ts", import.meta.url), "utf8").includes("西元年"),
+  "TW free form copy includes 西元年 label",
+);
+const reviewSamplesPage = fs.readFileSync(
+  new URL("../app/tw/review-samples/page.tsx", import.meta.url),
+  "utf8",
+);
+assert(reviewSamplesPage.includes("isTwV2ReportEnabled"), "review samples page is preview-gated");
+assert(reviewSamplesPage.includes("index: false"), "review samples page is noindex");
+assert(twShell.includes("review-samples") && twPage.includes("review-samples"), "TW nav/home links to sample desk");
+assert(
+  fs.existsSync(
+    new URL("../docs/gzh/v2-rc2-rc3-review-handoff-2026-11-27/NOVA_RESPONSE_2026-11-27.md", import.meta.url),
+  ),
+  "RC2/RC3 review handoff response archived",
 );
 
 console.log("PASS tw v2 report");

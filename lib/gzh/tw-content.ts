@@ -90,8 +90,14 @@ export const GZH_TW_FREE = {
   boundary: "看見，而不是斷定。映照，而不是定義。",
   cta: "開始我的生命映照",
   yearLabel: "年",
+  yearLabelFull: "西元年",
   monthLabel: "月",
   dayLabel: "日",
+  yearPlaceholder: "YYYY",
+  monthPlaceholder: "MM",
+  dayPlaceholder: "DD",
+  submittingLabel: "開啟中…",
+  dateHint: "請依西元年／月／日輸入國曆生日；計算公式不變。",
 } as const;
 
 /** Lightweight GZH-1 comprehension research prompt (neutral options) — Traditional. */

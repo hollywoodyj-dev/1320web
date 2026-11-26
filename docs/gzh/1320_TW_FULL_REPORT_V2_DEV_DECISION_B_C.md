@@ -130,6 +130,14 @@
 - 詳見 `1320_TW_FULL_REPORT_V2_RC3_1_EDITORIAL_HANDOFF_2026-11-20.md`。
 - Phase 2（258 碼分模組）待 Phase 1 真人校準後啟動；正式核准仍 0；顧客 HOLD。
 
+## 2026-11-20 兩組 Free Sample＋Full RC3 成品參考
+
+- 四份真正寫完的報告樣稿入庫：`PENDING_REVIEW`；作為 258 碼潤色與組裝品質標準。
+- 詳見 `1320_TW_FULL_REPORT_V2_TWO_REFERENCE_SETS_RC3_HANDOFF_2026-11-20.md` 與 `v2-two-reference-sets-rc3-2026-11-20/`。
+- 1980 Sample 與風格金樣 byte-identical（正向回饋≠正式核准）；1982 Sample＋兩份 Full 待真人校準。
+- **不覆寫** fixture；正式核准仍 0；顧客 HOLD。
+- 建議閱讀：兩份 Sample → Full 第 07／14 章。
+
 ## 下一輪要交出的證據
 
 - S0–S9 逐碼審核台帳（草稿／待審／已核准）。

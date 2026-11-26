@@ -99,6 +99,12 @@ import {
   reportBlueprintRc1LockedSafety,
   reportBlueprintRc1Meta,
 } from "../lib/gzh/tw-v2-report-blueprint-rc1";
+import {
+  twoReferenceSetsRc3AllPending,
+  twoReferenceSetsRc3ForDate,
+  twoReferenceSetsRc3LockedSafety,
+  twoReferenceSetsRc3Meta,
+} from "../lib/gzh/tw-v2-report-two-reference-rc3";
 
 function assert(condition: unknown, label: string) {
   if (!condition) {
@@ -452,6 +458,58 @@ assert(
   "blueprint runtime demos strip source_text_internal",
 );
 assert(full.snapshot?.theme === "當改變、探索與完美要求相遇", "existing 1980 fixture narrative is not replaced by blueprint RC1");
+
+const goldMeta = twoReferenceSetsRc3Meta();
+assert(
+  goldMeta.packageId === "1320-report-two-reference-sets-zhTW-2026-11-20-rc3" &&
+    goldMeta.status === "PENDING_REVIEW" &&
+    goldMeta.customerPublishable === false &&
+    goldMeta.officialApprovedCount === 0 &&
+    goldMeta.narrativeRecordCount === 20,
+  "two-reference RC3 gold pack stays pending with 20 narrative records",
+);
+assert(twoReferenceSetsRc3AllPending(), "all two-reference RC3 narratives stay pending");
+assert(
+  twoReferenceSetsRc3ForDate("1980-05-22").map((r) => r.code_id).join(",") ===
+    "S1-18,S3-03,S2-27,S0-07,S4-14,S5-04,S6-28,S7-00,S8-00,S9-07",
+  "1980 gold reference codes match calibration",
+);
+assert(
+  twoReferenceSetsRc3ForDate("1982-02-03").map((r) => r.code_id).join(",") ===
+    "S1-20,S3-01,S2-05,S0-05,S4-10,S5-26,S6-26,S7-01,S8-05,S9-04",
+  "1982 gold reference codes stay independent",
+);
+const goldSafety = twoReferenceSetsRc3LockedSafety();
+assert(
+  goldSafety.S2 === "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。" &&
+    goldSafety.S4 === "涉及人身安全、健康、法律或財務風險的事項，仍應遵守必要的專業標準。",
+  "two-reference RC3 locks S2 and S4 safety strings",
+);
+const goldSample1980 = fs.readFileSync(
+  new URL("../docs/gzh/v2-two-reference-sets-rc3-2026-11-20/FREE_SAMPLE_1980-05-22_RC3.md", import.meta.url),
+  "utf8",
+);
+const styleLocked = fs.readFileSync(
+  new URL("../docs/gzh/v2-rc3.1-phase1-pilot-2026-11-20/SAMPLE_19800522_RC3_STYLE_LOCKED.md", import.meta.url),
+  "utf8",
+);
+assert(goldSample1980 === styleLocked, "1980 Free Sample RC3 matches the style-locked gold bytes");
+assert(
+  fs
+    .readFileSync(new URL("../docs/gzh/v2-two-reference-sets-rc3-2026-11-20/FULL_REPORT_1980-05-22_RC3.md", import.meta.url), "utf8")
+    .includes(goldSafety.S2) &&
+    fs
+      .readFileSync(new URL("../docs/gzh/v2-two-reference-sets-rc3-2026-11-20/FULL_REPORT_1980-05-22_RC3.md", import.meta.url), "utf8")
+      .includes(goldSafety.S4),
+  "1980 Full RC3 retains locked safety sentences",
+);
+assert(
+  !fs
+    .readFileSync(new URL("../data/1320-tw-v2/report-two-reference-sets-rc3.json", import.meta.url), "utf8")
+    .includes("source_text_internal"),
+  "two-reference RC3 runtime strips source_text_internal",
+);
+assert(full.snapshot?.theme === "當改變、探索與完美要求相遇", "existing 1980 fixture narrative is not replaced by two-reference RC3");
 
 const page = fs.readFileSync(new URL("../app/(site)/tw-v2-report/page.tsx", import.meta.url), "utf8");
 assert(!page.includes("1980-05-22.claims"), "the page does not render internal claims");

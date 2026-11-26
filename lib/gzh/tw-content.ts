@@ -112,6 +112,8 @@ export const GZH_TW_RESULT = {
   metaDescription:
     "依國曆生日看見四個部分：你原本的模樣、你怎麼表現、你的關係、你反覆回到的模式。",
   title: "你的生命映照",
+  freeEyebrow: "FREE SAMPLE · 免費四碼映照",
+  freeLead: "這是免費版：先完整打開基礎四碼。文字會比較精簡，是入口，不是完整報告。",
   boundary: "這是一面鏡子，不是一張判決書。",
   birthPrefix: "國曆",
   parts: [
@@ -122,12 +124,42 @@ export const GZH_TW_RESULT = {
   ],
   mirrorLine: "文字是鏡子，不是判決。",
   mirrorBody: "你可以同意、不同意，或只是多看見一點自己的模式。",
-  fullReportNote: "這是免費的四個部分。完整報告目前是英文。",
+  fullReportNote: "這是免費的四個部分。完整報告目前可先看英文示範；台灣版完整稿仍在審閱中，尚未開放購買。",
   missingDateTitle: "還沒有讀到生日",
   missingDateBody: "這個連結沒有可用的國曆生日。回到免費生命映照，再輸入一次。",
   missingDateCta: "回到免費生命映照",
   missingPart: "這一段的中文說明還在準備中。",
   reflectionTitle: "留給你自己觀察",
+  nextStep: {
+    title: "免費版只是起點，完整藍圖還有更深的一層",
+    body: "英文版同樣會在免費結果後，引導你認識 Full Report。目前先提供示範與說明連結，不開放付款。",
+    freeLabel: "免費四碼",
+    freeLayers: [
+      { code: "S1", title: "靈魂本源" },
+      { code: "S3", title: "靈魂振動" },
+      { code: "S2", title: "靈魂鏡像" },
+      { code: "S0", title: "空性之門" },
+    ],
+    fullLabel: "完整十碼 · Full Report",
+    fullLayers: [
+      { code: "S4", title: "核心陰影" },
+      { code: "S5", title: "靈魂使命" },
+      { code: "S6", title: "價值與接收" },
+      { code: "S7", title: "靈魂主權" },
+      { code: "S8", title: "靈魂貢獻" },
+      { code: "S9", title: "回歸源頭" },
+    ],
+    includes: [
+      "S0–S9 完整十碼",
+      "跨碼整合與 17 章閱讀結構",
+      "七日練習與反思日誌",
+      "Web／Mobile／PDF（英文示範）",
+    ],
+    languageNote: "完整報告示範目前為英文。台灣版完整中文報告尚未正式發布，也不接結帳。",
+    primaryCta: "查看英文 Full Report 示範",
+    secondaryCta: "了解 Full Report 是什麼",
+    holdNote: "暫不提供購買／付款流程。",
+  },
 } as const;
 
 export const GZH_TW_NAV = {

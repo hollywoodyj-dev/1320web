@@ -755,6 +755,72 @@
   color: #a27849;
 }
 
+.gzh-next {
+  margin-top: 2.5rem;
+  padding: 1.5rem 1.25rem;
+  border: 1px solid rgba(24, 42, 57, 0.12);
+  border-radius: 0.35rem;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.gzh-next .gzh-band-copy {
+  max-width: none;
+}
+
+.gzh-next-map {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0.75rem 1rem;
+  align-items: start;
+  margin: 1.25rem 0;
+}
+
+.gzh-next-col {
+  padding: 0.85rem 0.9rem;
+  border: 1px solid rgba(24, 42, 57, 0.1);
+  background: #fffefa;
+}
+
+.gzh-next-label {
+  margin: 0 0 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  color: #a27849;
+}
+
+.gzh-next-col ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--gzh-text);
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+
+.gzh-next-arrow {
+  margin: 1.6rem 0 0;
+  color: #a27849;
+  font-size: 1.25rem;
+}
+
+.gzh-next-includes {
+  margin: 0 0 1rem;
+  padding-left: 1.2rem;
+  color: var(--gzh-text);
+  line-height: 1.75;
+}
+
+@media (max-width: 640px) {
+  .gzh-next-map {
+    grid-template-columns: 1fr;
+  }
+
+  .gzh-next-arrow {
+    margin: 0;
+    text-align: center;
+  }
+}
+
 /* —— Footer —— */
 .gzh-footer {
   background: var(--gzh-navy-deep);

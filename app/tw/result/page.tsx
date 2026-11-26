@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GzhTwFreeReportComplete } from "@/components/gzh/gzh-tw-free-report-complete";
+import { GzhTwFreeResultNext } from "@/components/gzh/gzh-tw-free-result-next";
 import { calculate1320Code } from "@/lib/calculate1320Code";
 import { containsCjk, pickLocalized } from "@/lib/getLocalized";
 import { get1320ContentV1 } from "@/lib/get1320Content";
@@ -87,7 +88,9 @@ export default async function TwResultPage({
 
   return (
     <article className="gzh-free gzh-report">
+      <p className="gzh-eyebrow">{GZH_TW_RESULT.freeEyebrow}</p>
       <h1 className="gzh-hero-brand">{GZH_TW_RESULT.title}</h1>
+      <p className="gzh-hero-lead">{GZH_TW_RESULT.freeLead}</p>
       <p className="gzh-boundary">{GZH_TW_RESULT.boundary}</p>
       <p className="gzh-trust">{formatBirthLabel(year, month, day)}</p>
 
@@ -130,6 +133,8 @@ export default async function TwResultPage({
       ) : null}
 
       <p className="gzh-report-note">{GZH_TW_RESULT.fullReportNote}</p>
+
+      <GzhTwFreeResultNext year={year} month={month} day={day} />
       <GzhTwFreeReportComplete />
     </article>
   );

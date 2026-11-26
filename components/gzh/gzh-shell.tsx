@@ -80,7 +80,7 @@ export function GzhShell({
           </div>
           <div>
             <h4>EXPLORE</h4>
-            <Link href={`${gzhHref(market)}#about`}>{ui.nav.about}</Link>
+            <Link href={gzhHref(market, "about")}>{ui.nav.about}</Link>
             <Link href={`${gzhHref(market)}#foundation`}>{ui.nav.foundation}</Link>
             <Link href={gzhHref(market, "free-soul-blueprint")}>{ui.nav.free}</Link>
           </div>
@@ -89,8 +89,8 @@ export function GzhShell({
             <a href="https://www.1320soulcode.com/" target="_blank" rel="noopener noreferrer">
               1320 英文官方網站
             </a>
-            <Link href={privacy.privacyHref}>隱私權</Link>
-            <Link href={privacy.termsHref}>使用條款</Link>
+            <Link href={privacy.privacyHref}>隱私權（英文）</Link>
+            <Link href={privacy.termsHref}>使用條款（英文）</Link>
           </div>
         </div>
         <div className="gzh-footer-bottom">

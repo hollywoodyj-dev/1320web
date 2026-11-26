@@ -26,7 +26,7 @@ export function GzhTwMobileNav({ market }: { market: GzhMarket }) {
         id="gzh-navigation"
         aria-label="主要導覽"
       >
-        <Link href={`${gzhHref(market)}#about`} onClick={() => setOpen(false)}>
+        <Link href={gzhHref(market, "about")} onClick={() => setOpen(false)}>
           {ui.nav.about}
         </Link>
         <Link

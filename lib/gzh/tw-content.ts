@@ -124,7 +124,7 @@ export const GZH_TW_RESULT = {
   ],
   mirrorLine: "文字是鏡子，不是判決。",
   mirrorBody: "你可以同意、不同意，或只是多看見一點自己的模式。",
-  fullReportNote: "這是免費的四個部分。完整報告目前可先看英文示範；台灣版完整稿仍在審閱中，尚未開放購買。",
+  fullReportNote: "這是免費的四個部分。完整中文報告可在下方 Preview 審閱；尚未正式核准，也不開放購買。",
   missingDateTitle: "還沒有讀到生日",
   missingDateBody: "這個連結沒有可用的國曆生日。回到免費生命映照，再輸入一次。",
   missingDateCta: "回到免費生命映照",
@@ -132,7 +132,7 @@ export const GZH_TW_RESULT = {
   reflectionTitle: "留給你自己觀察",
   nextStep: {
     title: "免費版只是起點，完整藍圖還有更深的一層",
-    body: "英文版同樣會在免費結果後，引導你認識 Full Report。目前先提供示範與說明連結，不開放付款。",
+    body: "接下來可進入中文完整報告 Preview，供內部審閱。敘事仍可能是 PENDING／候選稿；不代表已正式核准。",
     freeLabel: "免費四碼",
     freeLayers: [
       { code: "S1", title: "靈魂本源" },
@@ -140,7 +140,7 @@ export const GZH_TW_RESULT = {
       { code: "S2", title: "靈魂鏡像" },
       { code: "S0", title: "空性之門" },
     ],
-    fullLabel: "完整十碼 · Full Report",
+    fullLabel: "完整十碼 · 中文 Full Report",
     fullLayers: [
       { code: "S4", title: "核心陰影" },
       { code: "S5", title: "靈魂使命" },
@@ -153,12 +153,13 @@ export const GZH_TW_RESULT = {
       "S0–S9 完整十碼",
       "跨碼整合與 17 章閱讀結構",
       "七日練習與反思日誌",
-      "Web／Mobile／PDF（英文示範）",
+      "中文 Preview（內部審閱）",
     ],
-    languageNote: "完整報告示範目前為英文。台灣版完整中文報告尚未正式發布，也不接結帳。",
-    primaryCta: "查看英文 Full Report 示範",
-    secondaryCta: "了解 Full Report 是什麼",
-    holdNote: "暫不提供購買／付款流程。",
+    languageNote:
+      "完整報告為繁體中文 Preview。僅部分生日有參考／候選敘事；其他生日會顯示編碼但正文可能尚未核准。",
+    primaryCta: "查看中文完整報告",
+    secondaryCta: "查看中文四碼試讀",
+    holdNote: "僅供審閱 · 暫不提供購買／付款 · 顧客發布 HOLD",
   },
 } as const;
 

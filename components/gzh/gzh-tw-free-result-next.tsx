@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { GZH_TW_RESULT } from "@/lib/gzh/tw-content";
-import { SAMPLE_REPORT_HREF } from "@/lib/site-nav";
 
 type GzhTwFreeResultNextProps = {
   year: number;
@@ -8,14 +7,16 @@ type GzhTwFreeResultNextProps = {
   day: number;
 };
 
-/** EN-style free→full next step, without checkout or payment. */
+/** Free → Chinese Full Report Preview (no checkout). */
 export function GzhTwFreeResultNext({ year, month, day }: GzhTwFreeResultNextProps) {
   const copy = GZH_TW_RESULT.nextStep;
-  const sampleHref = `${SAMPLE_REPORT_HREF}?year=${year}&month=${month}&day=${day}`;
+  const qs = `year=${year}&month=${month}&day=${day}`;
+  const fullHref = `/tw-v2-report?${qs}`;
+  const sampleHref = `/tw-v2-report?${qs}&product=sample`;
 
   return (
     <section className="gzh-next" aria-labelledby="gzh-next-title">
-      <p className="gzh-eyebrow">FREE → FULL</p>
+      <p className="gzh-eyebrow">FREE → FULL · ZH-TW PREVIEW</p>
       <h2 id="gzh-next-title" className="gzh-section-title">
         {copy.title}
       </h2>
@@ -57,10 +58,10 @@ export function GzhTwFreeResultNext({ year, month, day }: GzhTwFreeResultNextPro
       <p className="gzh-boundary">{copy.holdNote}</p>
 
       <div className="gzh-cta-row">
-        <Link className="gzh-btn gzh-btn--navy" href={sampleHref} lang="en">
+        <Link className="gzh-btn gzh-btn--navy" href={fullHref}>
           {copy.primaryCta}
         </Link>
-        <Link className="gzh-btn gzh-btn--outline-dark" href="/full-report" lang="en">
+        <Link className="gzh-btn gzh-btn--outline-dark" href={sampleHref}>
           {copy.secondaryCta}
         </Link>
       </div>

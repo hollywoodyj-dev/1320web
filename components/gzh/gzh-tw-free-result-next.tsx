@@ -16,7 +16,8 @@ export function GzhTwFreeResultNext({ year, month, day }: GzhTwFreeResultNextPro
   const fullHref = `/tw-v2-report?${qs}`;
   const sampleHref = `/tw-v2-report?${qs}&product=sample`;
   const birth = `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
-  const hasNarrative = TW_V2_REVIEW_BIRTHDAYS.some((item) => item.birth === birth);
+  const reviewItem = TW_V2_REVIEW_BIRTHDAYS.find((item) => item.birth === birth);
+  const hasNarrative = Boolean(reviewItem?.hasSample || reviewItem?.hasFull);
 
   return (
     <section className="gzh-next" aria-labelledby="gzh-next-title">
@@ -61,7 +62,12 @@ export function GzhTwFreeResultNext({ year, month, day }: GzhTwFreeResultNextPro
       <p className="gzh-report-note">{copy.languageNote}</p>
       {!hasNarrative ? (
         <p className="gzh-boundary">
-          此生日目前只有編碼、尚無中文完整敘事。請改用下方審閱生日切換，再打開完整報告。
+          此生日目前只有編碼、尚無中文 Free Sample／Full 敘事。請改用下方審閱生日切換，再打開長篇報告。
+        </p>
+      ) : null}
+      {reviewItem?.hasSample ? (
+        <p className="gzh-report-note">
+          本生日有完整 RC3 Free Sample（七章四碼長篇）。上方簡短映照不是 Sample Report 全文。
         </p>
       ) : null}
       <p className="gzh-boundary">{copy.holdNote}</p>

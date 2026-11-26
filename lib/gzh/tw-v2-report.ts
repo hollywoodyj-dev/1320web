@@ -2,6 +2,9 @@ import narrative1980 from "@/data/1320-tw-v2/1980-05-22.json";
 import narrative1982 from "@/data/1320-tw-v2/1982-02-03.json";
 import narrative2008 from "@/data/1320-tw-v2/2008-12-08.json";
 import narrative2013 from "@/data/1320-tw-v2/2013-06-12.json";
+import freeSample1980 from "@/data/1320-tw-v2/free-sample-1980-05-22.json";
+import freeSample1982 from "@/data/1320-tw-v2/free-sample-1982-02-03.json";
+import freeSample1983 from "@/data/1320-tw-v2/free-sample-1983-03-08.json";
 import { calculate1320Code } from "@/lib/calculate1320Code";
 import {
   approvedCustomerThreads,
@@ -45,26 +48,81 @@ const NARRATIVES: StoredNarrative[] = [
   narrative2013 as StoredNarrative,
 ];
 
-/** Preview-only review queue: birthdays that currently have Chinese narrative fixtures. */
-export const TW_V2_REVIEW_BIRTHDAYS = NARRATIVES.map((item) => {
-  const [year, month, day] = item.birth.split("-").map(Number);
-  return {
-    birth: item.birth,
-    year,
-    month,
-    day,
-    status: item.status,
-    label: item.birth.replace(/-/g, "."),
-    role:
-      item.status === "REFERENCE_SAMPLE"
-        ? "參考樣本"
-        : item.age_gate
-          ? "候選稿 · 未滿18內部"
-          : "編輯候選",
-    ageGate: Boolean(item.age_gate),
-    note: item.note ?? null,
-  };
-}) as ReadonlyArray<{
+/** Dedicated RC3 Free Sample gold narratives (7-chapter four-code longform). */
+const FREE_SAMPLE_NARRATIVES: StoredNarrative[] = [
+  freeSample1980 as StoredNarrative,
+  freeSample1982 as StoredNarrative,
+  freeSample1983 as StoredNarrative,
+];
+
+function reviewRole(item: StoredNarrative, kind: "full" | "sample" | "both"): string {
+  if (item.age_gate) return "候選稿 · 未滿18內部";
+  if (item.status === "REFERENCE_SAMPLE") return kind === "sample" ? "Free Sample 參考" : "參考樣本";
+  if (kind === "sample") return "Free Sample 候選";
+  return "編輯候選";
+}
+
+/** Preview-only review queue: birthdays with Full and/or Free Sample Chinese fixtures. */
+export const TW_V2_REVIEW_BIRTHDAYS = (() => {
+  const byBirth = new Map<
+    string,
+    {
+      birth: string;
+      year: number;
+      month: number;
+      day: number;
+      status: StoredNarrative["status"];
+      label: string;
+      role: string;
+      ageGate: boolean;
+      note: string | null;
+      hasFull: boolean;
+      hasSample: boolean;
+    }
+  >();
+
+  for (const item of NARRATIVES) {
+    const [year, month, day] = item.birth.split("-").map(Number);
+    byBirth.set(item.birth, {
+      birth: item.birth,
+      year,
+      month,
+      day,
+      status: item.status,
+      label: item.birth.replace(/-/g, "."),
+      role: reviewRole(item, "full"),
+      ageGate: Boolean(item.age_gate),
+      note: item.note ?? null,
+      hasFull: true,
+      hasSample: false,
+    });
+  }
+
+  for (const item of FREE_SAMPLE_NARRATIVES) {
+    const [year, month, day] = item.birth.split("-").map(Number);
+    const existing = byBirth.get(item.birth);
+    if (existing) {
+      existing.hasSample = true;
+      if (existing.status === "REFERENCE_SAMPLE") existing.role = "參考樣本 · Free Sample 金樣";
+      continue;
+    }
+    byBirth.set(item.birth, {
+      birth: item.birth,
+      year,
+      month,
+      day,
+      status: item.status,
+      label: item.birth.replace(/-/g, "."),
+      role: reviewRole(item, "sample"),
+      ageGate: Boolean(item.age_gate),
+      note: item.note ?? null,
+      hasFull: false,
+      hasSample: true,
+    });
+  }
+
+  return Array.from(byBirth.values()).sort((a, b) => a.birth.localeCompare(b.birth));
+})() as ReadonlyArray<{
   birth: string;
   year: number;
   month: number;
@@ -74,6 +132,8 @@ export const TW_V2_REVIEW_BIRTHDAYS = NARRATIVES.map((item) => {
   role: string;
   ageGate: boolean;
   note: string | null;
+  hasFull: boolean;
+  hasSample: boolean;
 }>;
 
 export type V2Product = "FULL" | "SAMPLE";
@@ -166,6 +226,11 @@ function narrativeFor(codes: string[]): StoredNarrative | null {
   return NARRATIVES.find((item) => item.codes.join("|") === signature) ?? null;
 }
 
+function freeSampleFor(codes: string[]): StoredNarrative | null {
+  const signature = codes.join("|");
+  return FREE_SAMPLE_NARRATIVES.find((item) => item.codes.join("|") === signature) ?? null;
+}
+
 function coverThemeFrom(overview: V2Chapter | undefined, snapshot: BlueprintSnapshot | null): string | null {
   if (snapshot?.theme) return snapshot.theme;
   const heading = overview?.blocks.find((block) => block.type === "h3");
@@ -219,6 +284,38 @@ export function buildTwV2Report(
     readerFocus: focus,
     days,
   };
+  if (product === "SAMPLE") {
+    const sample = freeSampleFor(codes);
+    if (!sample) {
+      return {
+        ...base,
+        status: "BLOCKED_NO_APPROVED_SOURCE",
+        codeMap: codeMapFromCodes(shownCodes),
+        snapshot: null,
+        coverTheme: null,
+        approvedThreads: [],
+        ageGate: null,
+        customerRender: "BLOCKED",
+        note: null,
+      };
+    }
+    const chapters = sample.chapters as V2Chapter[];
+    const namedRows = overviewTableRows(chapters);
+    return {
+      ...base,
+      status: sample.status,
+      preamble: sample.preamble,
+      chapters,
+      codeMap: codeMapFromCodes(shownCodes, namedRows),
+      snapshot: null,
+      coverTheme: null,
+      approvedThreads: approvedCustomerThreads(codes),
+      ageGate: sample.age_gate ?? null,
+      customerRender: sample.customer_render === "BLOCKED" ? "BLOCKED" : "PREVIEW_ONLY",
+      note: sample.note ?? null,
+    };
+  }
+
   const narrative = narrativeFor(codes);
   if (!narrative) {
     return {
@@ -236,13 +333,11 @@ export function buildTwV2Report(
   const chapters = withJournalBlanks(forProduct(narrative.chapters as V2Chapter[], product), product);
   const namedRows = overviewTableRows(chapters);
   const overview = chapters.find((chapter) => chapter.id === "02");
-  const snapshot = product === "FULL" ? snapshotFromChapter(overview) : null;
-  const preamble =
-    product === "SAMPLE" ? narrative.preamble.filter((paragraph) => !/S[4-9]-/.test(paragraph)) : narrative.preamble;
+  const snapshot = snapshotFromChapter(overview);
   return {
     ...base,
     status: narrative.status,
-    preamble,
+    preamble: narrative.preamble,
     chapters,
     codeMap: codeMapFromCodes(shownCodes, namedRows),
     snapshot,

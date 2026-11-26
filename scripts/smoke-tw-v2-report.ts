@@ -175,12 +175,32 @@ assert(["S1", "S3", "S4", "S5", "S2", "S0", "S7", "S6", "S8", "S9"].every((modul
 const sample = buildTwV2Report(1980, 5, 22, "SAMPLE", "工作與界限");
 assert(sample.status === "REFERENCE_SAMPLE", "sample product still uses the same narrative");
 if (sample.status !== "REFERENCE_SAMPLE") throw new Error("sample status");
+assert(
+  sample.chapters.map((chapter) => chapter.id).join(",") === "map,01,02,03,04,05,06,07",
+  "sample uses gold Free Sample chapter order",
+);
 assert(sample.chapters.every((chapter) => !["08", "14", "15"].includes(chapter.id)), "sample hides extension chapters");
 assert(sample.days === null, "sample has no seven-day map");
 assert(sample.snapshot === null, "sample has no full-only snapshot");
 assert(sample.readerFocus === "工作與界限", "reader focus stays labeled and separate");
 const sampleText = customerVisibleText(sample);
-assert(!sampleText.includes("S4-14") && !sampleText.includes("完美循環") && !sampleText.includes("專屬藍圖總覽"), "sample overview drops extension rows");
+assert(sampleText.includes("這個原型是什麼？"), "sample renders full per-code definition heading");
+assert(sampleText.includes("日常生活對照"), "sample renders daily-life example section");
+assert(
+  sampleText.includes("如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。"),
+  "sample keeps locked S2 safety sentence",
+);
+assert(sampleText.length >= 5500, "sample longform is not a short essence excerpt");
+assert(!sampleText.includes("S4-14") && !sampleText.includes("完美循環"), "sample omits Full-only S4 extension");
+
+const sample1983 = buildTwV2Report(1983, 3, 8, "SAMPLE");
+assert(sample1983.status === "EDITORIAL_CANDIDATE", "1983 Free Sample gold is available");
+assert(
+  sample1983.codes.join("|") === "S1-21|S3-01|S2-11|S0-12",
+  "1983 sample shows foundation four codes",
+);
+assert(customerVisibleText(sample1983).includes("整合者"), "1983 sample keeps its own archetypes");
+assert(buildTwV2Report(1983, 3, 8, "FULL").status === "BLOCKED_NO_APPROVED_SOURCE", "1983 Full remains unavailable");
 
 const blocked = buildTwV2Report(1991, 7, 15);
 assert(blocked.status === "BLOCKED_NO_APPROVED_SOURCE", "another date stays closed");
@@ -536,11 +556,16 @@ assert(difference.includes("價格與結帳流程不在這裡改動"), "differen
 assert(isTwV2ReportEnabled("www.1320soulcode.com") === false, "production host closed");
 assert(isTwV2ReportEnabled("localhost:3026") === true, "local reading open");
 
-assert(TW_V2_REVIEW_BIRTHDAYS.length === 4, "review queue lists four narrative birthdays");
+assert(TW_V2_REVIEW_BIRTHDAYS.length === 5, "review queue lists five narrative birthdays");
 assert(
   TW_V2_REVIEW_BIRTHDAYS.map((item) => item.birth).join("|") ===
-    "1980-05-22|1982-02-03|2008-12-08|2013-06-12",
-  "review queue keeps the known fixture birthdays",
+    "1980-05-22|1982-02-03|1983-03-08|2008-12-08|2013-06-12",
+  "review queue includes Free Sample gold birthdays",
+);
+assert(
+  TW_V2_REVIEW_BIRTHDAYS.find((item) => item.birth === "1983-03-08")?.hasSample === true &&
+    TW_V2_REVIEW_BIRTHDAYS.find((item) => item.birth === "1983-03-08")?.hasFull === false,
+  "1983 is sample-only in the review queue",
 );
 const reviewUi = fs.readFileSync(new URL("../components/gzh/gzh-tw-review-birthdays.tsx", import.meta.url), "utf8");
 assert(reviewUi.includes("TW_V2_REVIEW_BIRTHDAYS"), "review birthday UI is wired");

@@ -1,0 +1,43 @@
+{
+  "package_id": "1320-tw-free-sample-content-completeness-fix-rc3-2026-11-27",
+  "status": "PENDING_REVIEW",
+  "customer_publishable": false,
+  "customer_release_state": "HOLD",
+  "required_chapters": ["map", "01", "02", "03", "04", "05", "06", "07"],
+  "code_order": ["S1", "S3", "S2", "S0"],
+  "per_code_sections": [
+    "這個原型是什麼？",
+    "它在生命藍圖中的作用與目的",
+    "可以探索的力量",
+    "可能的內在張力與主要人生課題",
+    "日常生活對照（以下均為假設案例）",
+    "可帶走的領悟",
+    "留給自己的問題"
+  ],
+  "hypothetical_examples_per_code": 2,
+  "locked_s2_safety": "如果關係裡存在威脅、操控或傷害，保護自身安全比尋找任何『靈魂意義』更重要。",
+  "birthdays": [
+    {
+      "birth": "1980-05-22",
+      "runtime": "data/1320-tw-v2/free-sample-1980-05-22.json",
+      "source_md": "GOLD_STANDARD_FREE_SAMPLE_1980-05-22_RC3.md",
+      "codes": ["S1-18", "S3-03", "S2-27", "S0-07"]
+    },
+    {
+      "birth": "1982-02-03",
+      "runtime": "data/1320-tw-v2/free-sample-1982-02-03.json",
+      "source_md": "GOLD_STANDARD_FREE_SAMPLE_1982-02-03_RC3.md",
+      "codes": ["S1-20", "S3-01", "S2-05", "S0-05"]
+    },
+    {
+      "birth": "1983-03-08",
+      "runtime": "data/1320-tw-v2/free-sample-1983-03-08.json",
+      "source_md": "GOLD_STANDARD_FREE_SAMPLE_1983-03-08_RC3.md",
+      "codes": ["S1-21", "S3-01", "S2-11", "S0-12"],
+      "full_available": false
+    }
+  ],
+  "preview_route": "/tw-v2-report?product=sample",
+  "short_overview_route": "/tw/result",
+  "short_overview_label": "簡短映照（非 Free Sample 全文）"
+}

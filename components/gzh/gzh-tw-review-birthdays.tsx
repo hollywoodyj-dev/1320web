@@ -42,20 +42,24 @@ export function GzhTwReviewBirthdays({
                 {item.ageGate ? <span className="gzh-review-gate">未滿18 · 僅內部</span> : null}
               </div>
               <div className="gzh-review-actions">
-                <Link
-                  className={product === "FULL" && active ? "gzh-btn gzh-btn--navy gzh-btn--tiny" : "gzh-btn gzh-btn--outline-dark gzh-btn--tiny"}
-                  href={fullHref}
-                  aria-current={product === "FULL" && active ? "page" : undefined}
-                >
-                  完整報告
-                </Link>
-                <Link
-                  className={product === "SAMPLE" && active ? "gzh-btn gzh-btn--navy gzh-btn--tiny" : "gzh-btn gzh-btn--outline-dark gzh-btn--tiny"}
-                  href={sampleHref}
-                  aria-current={product === "SAMPLE" && active ? "page" : undefined}
-                >
-                  四碼試讀
-                </Link>
+                {item.hasFull ? (
+                  <Link
+                    className={product === "FULL" && active ? "gzh-btn gzh-btn--navy gzh-btn--tiny" : "gzh-btn gzh-btn--outline-dark gzh-btn--tiny"}
+                    href={fullHref}
+                    aria-current={product === "FULL" && active ? "page" : undefined}
+                  >
+                    完整報告
+                  </Link>
+                ) : null}
+                {item.hasSample ? (
+                  <Link
+                    className={product === "SAMPLE" && active ? "gzh-btn gzh-btn--navy gzh-btn--tiny" : "gzh-btn gzh-btn--outline-dark gzh-btn--tiny"}
+                    href={sampleHref}
+                    aria-current={product === "SAMPLE" && active ? "page" : undefined}
+                  >
+                    Free Sample
+                  </Link>
+                ) : null}
               </div>
             </li>
           );

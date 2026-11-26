@@ -118,8 +118,9 @@ export const GZH_TW_RESULT = {
   metaDescription:
     "依國曆生日看見四個部分：你原本的模樣、你怎麼表現、你的關係、你反覆回到的模式。",
   title: "你的生命映照",
-  freeEyebrow: "FREE SAMPLE · 免費四碼映照",
-  freeLead: "這是免費版：先完整打開基礎四碼。文字會比較精簡，是入口，不是完整報告。",
+  freeEyebrow: "SHORT MIRROR · 簡短映照",
+  freeLead:
+    "這是生日結果後的簡短映照／Code 概覽，不是完整 RC3 Free Sample Report。完整四碼長篇請用下方「中文四碼試讀」。",
   boundary: "這是一面鏡子，不是一張判決書。",
   birthPrefix: "國曆",
   parts: [
@@ -130,7 +131,8 @@ export const GZH_TW_RESULT = {
   ],
   mirrorLine: "文字是鏡子，不是判決。",
   mirrorBody: "你可以同意、不同意，或只是多看見一點自己的模式。",
-  fullReportNote: "這是免費的四個部分。完整中文報告可在下方 Preview 審閱；尚未正式核准，也不開放購買。",
+  fullReportNote:
+    "上方為簡短映照。完整 Free Sample（七章四碼長篇）與 Full Report 僅在受保護 Preview；尚未正式核准，也不開放購買。",
   missingDateTitle: "還沒有讀到生日",
   missingDateBody: "這個連結沒有可用的國曆生日。回到免費生命映照，再輸入一次。",
   missingDateCta: "回到免費生命映照",
@@ -139,7 +141,7 @@ export const GZH_TW_RESULT = {
   nextStep: {
     title: "免費版只是起點，完整藍圖還有更深的一層",
     body: "接下來可進入中文完整報告 Preview，供內部審閱。敘事仍可能是 PENDING／候選稿；不代表已正式核准。",
-    freeLabel: "免費四碼",
+    freeLabel: "簡短映照（本頁）",
     freeLayers: [
       { code: "S1", title: "靈魂本源" },
       { code: "S3", title: "靈魂振動" },
@@ -156,15 +158,16 @@ export const GZH_TW_RESULT = {
       { code: "S9", title: "回歸源頭" },
     ],
     includes: [
-      "S0–S9 完整十碼",
+      "Free Sample：七章四碼完整長篇（非本頁短文）",
+      "S0–S9 完整十碼 Full",
       "跨碼整合與 17 章閱讀結構",
       "七日練習與反思日誌",
       "中文 Preview（內部審閱）",
     ],
     languageNote:
-      "完整報告為繁體中文 Preview。僅部分生日有參考／候選敘事；其他生日會顯示編碼但正文可能尚未核准。",
+      "Free Sample 與 Full 皆為繁體中文 Preview。僅部分生日有金樣／候選敘事；其他生日快樂可算碼但正文可能尚未入庫。",
     primaryCta: "查看中文完整報告",
-    secondaryCta: "查看中文四碼試讀",
+    secondaryCta: "閱讀完整 Free Sample",
     holdNote: "僅供審閱 · 暫不提供購買／付款 · 顧客發布 HOLD",
   },
 } as const;

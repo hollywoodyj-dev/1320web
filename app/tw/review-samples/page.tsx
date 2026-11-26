@@ -46,25 +46,31 @@ export default async function TwReviewSamplesPage() {
             className="gzh-btn gzh-btn--navy"
             href="/tw-v2-report?year=1980&month=5&day=22&product=sample"
           >
-            1980 四碼試讀
+            1980 Free Sample
           </Link>
           <Link
             className="gzh-btn gzh-btn--outline-dark"
             href="/tw-v2-report?year=1980&month=5&day=22"
           >
-            1980 完整報告
+            1980 Full
           </Link>
           <Link
             className="gzh-btn gzh-btn--navy"
             href="/tw-v2-report?year=1982&month=2&day=3&product=sample"
           >
-            1982 四碼試讀
+            1982 Free Sample
           </Link>
           <Link
             className="gzh-btn gzh-btn--outline-dark"
             href="/tw-v2-report?year=1982&month=2&day=3"
           >
-            1982 完整報告
+            1982 Full
+          </Link>
+          <Link
+            className="gzh-btn gzh-btn--navy"
+            href="/tw-v2-report?year=1983&month=3&day=8&product=sample"
+          >
+            1983 Free Sample
           </Link>
         </div>
       </section>
